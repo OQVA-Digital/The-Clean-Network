@@ -193,6 +193,11 @@
         display: block;
     }
 
+    header nav.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
     .hambt {
         width: 3rem;
         height: 2.5rem;
@@ -203,9 +208,26 @@
     }
 
     .hambt span {
-        height: 0.3rem;
+        height: 0.4rem;
         background-color: var(--light);
         border-radius: 0.2rem;
+        transition: opacity 0.25s ease-out, transform 0.25s ease-out;
+    }
+
+    .hambt.close {
+    }
+
+    .hambt.close span:nth-child(1) {
+        transform: translateY(0.85rem) rotate(45deg);
+    }
+
+    .hambt.close span:nth-child(2) {
+        transform: translateY(-0.25rem) rotate(-45deg);
+    }
+
+    .hambt.close span:nth-child(3) {
+        opacity: 0;
+        transform: translateY(-220%);
     }
 
     header nav {
@@ -221,6 +243,8 @@
         padding: 2rem 0;
         max-height: 62vh;
         overflow: auto;
+        opacity: 0;
+        visibility: hidden;
     }
 
     header nav .cta {
@@ -323,23 +347,23 @@
     }
 
     .subsets .icon.indoor::after {
-        background-image: url("icons/indoor.svg");
+        background-image: url("./icons/indoor.svg");
     }
 
     .subsets .icon.outdoor::after {
-        background-image: url("icons/outdoor.svg");
+        background-image: url("./icons/outdoor.svg");
     }
 
     .subsets .icon.sectors::after {
-        background-image: url("icons/sectors.svg");
+        background-image: url("./icons/sectors.svg");
     }
 
     .subsets .icon.about::after {
-        background-image: url("icons/question.svg");
+        background-image: url("./icons/question.svg");
     }
 
     .subsets .icon.rates::after {
-        background-image: url("icons/star.svg");
+        background-image: url("./icons/star.svg");
     }
 
     .subnav > .flex {
@@ -390,6 +414,8 @@
             flex: 1;
             padding: 0;
             height: 100%;
+            opacity: 1;
+            visibility: visible;
         }
 
         header nav a {
@@ -450,6 +476,22 @@
             visibility: hidden;
         }
 
+        .subsets::before {
+            content: "";
+            position: absolute;
+            top: -1rem;
+            left: 0;
+            right: 0;
+            margin-inline: auto;
+            border-top: 0.7rem solid var(--light);
+            border-right: 0.7rem solid var(--light);
+            border-bottom: 0.7rem solid transparent;
+            border-left: 0.7rem solid transparent;
+            width: 0;
+            height: 0;
+            transform: translateY(0.5rem) rotate(-45deg);
+        }
+
         .subsets > div a {
             transition: background-color 0.3s ease;
         }
@@ -475,6 +517,38 @@
 </style>
 
 <script>
+    const menuBt = document.querySelector(".hambt");
+    const nav = document.querySelector("header nav");
+    const navBts = document.querySelectorAll("header nav a");
+
+    let showingMenu = false;
+
+    function toggleNav() {
+        if (showingMenu == false) {
+            nav.classList.add("show");
+            menuBt.classList.add("close");
+
+            showingMenu = true;
+        } else {
+            nav.classList.remove("show");
+            menuBt.classList.remove("close");
+
+            showingMenu = false;
+        }
+    }
+
+    menuBt.addEventListener("click", toggleNav);
+
+    for (let i = 0; i < navBts.length; i++) {
+        navBts[i].addEventListener("click", toggleNav);
+    }
+
+    window.addEventListener("scroll", function (e) {
+        if (showingMenu == true) {
+            toggleNav();
+        }
+    });
+
     const expandBts = document.querySelectorAll("header nav .expand");
 
     for (let i = 0; i < expandBts.length; i++) {
