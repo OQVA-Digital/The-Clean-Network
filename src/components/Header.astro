@@ -1,0 +1,488 @@
+---
+---
+
+<div class="stripe">
+    <div class="announcement">ANNOUNCEMENT OR OFFER</div>
+
+    <div class="ctnr">
+        <a href="#">London: 020 3411 0275</a>
+        <a href="#">Birmingham: 0121 3927529</a>
+    </div>
+</div>
+
+<header>
+    <div class="ctnr">
+        <a href="/index.html" class="logo_anchor">
+            <img src="tcn-logo-default.svg" alt="The Clean Network logo" />
+        </a>
+
+        <nav>
+            <div class="ctnr">
+                <a href="/index.html">Home</a>
+
+                <div class="subnav">
+                    <div class="flex">
+                        <a href="">Services</a>
+
+                        <button
+                            class="expand icon"
+                            type="button"
+                            aria-label="Expand navigation"
+                        >
+                        </button>
+                    </div>
+
+                    <div class="subsets">
+                        <div>
+                            <a href="#" class="heading indoor icon"
+                                >Indoor Cleaning</a
+                            >
+
+                            <hr />
+
+                            <a href="#">Floor</a>
+                            <a href="#">Desks & Furniture</a>
+                            <a href="#">Curtains & Blinds</a>
+                            <a href="#">Bathrooms</a>
+                            <a href="#">Kitchens</a>
+                            <a href="#">Lobbies & Reception Areas</a>
+                            <a href="#">Air Ducts & Vents</a>
+                            <a href="#">Post-construction</a>
+                        </div>
+
+                        <hr />
+
+                        <div>
+                            <a href="#" class="heading outdoor icon"
+                                >External Cleaning</a
+                            >
+
+                            <hr />
+
+                            <a href="#">Windows</a>
+                            <a href="#">Gutters & Roofs</a>
+                            <a href="#">Drains</a>
+                            <a href="#">Pressure Cleaning</a>
+                            <a href="#">Bins & Refuse Areas</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subnav">
+                    <div class="flex">
+                        <a href="">Sectors</a>
+
+                        <button
+                            class="expand icon"
+                            type="button"
+                            aria-label="Expand navigation"
+                        >
+                        </button>
+                    </div>
+
+                    <div class="subsets">
+                        <div>
+                            <a href="#" class="heading sectors icon">Sectors</a>
+
+                            <hr />
+
+                            <a href="#">Corporate Office Buildings</a>
+                            <a href="#">Small Offices</a>
+                            <a href="#">Medical & Dental</a>
+                            <a href="#">Architects Firms</a>
+                            <a href="#">Media & Design Agencies</a>
+                            <a href="#">Law Firms</a>
+                            <a href="#">Technology Companies</a>
+                            <a href="#">Financial Service Companies</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="">Locations</a>
+
+                <div class="subnav">
+                    <div class="flex">
+                        <a href="">About</a>
+
+                        <button
+                            class="expand icon"
+                            type="button"
+                            aria-label="Expand navigation"
+                        >
+                        </button>
+                    </div>
+
+                    <div class="subsets">
+                        <div>
+                            <a href="#" class="heading about icon">About Us</a>
+                            <a href="#" class="heading rates icon">Rates</a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="">Contact</a>
+
+                <a href="#" class="cta">Get a Free Quote</a>
+            </div>
+        </nav>
+
+        <button class="hambt" type="button" aria-label="Open navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>
+
+<style>
+    .stripe {
+        background-color: var(--primary-a);
+        text-align: center;
+        color: var(--light);
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        font-size: 1.1rem;
+        position: relative;
+    }
+
+    .stripe .announcement {
+        position: absolute;
+        left: 0;
+        height: 100%;
+        padding: 0 clamp(0rem, calc(8vw - 7rem), 4rem);
+        display: none;
+        background-color: var(--highlight);
+        align-items: center;
+        min-width: 19%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .stripe > .ctnr {
+        height: 2.5rem;
+        width: var(--mobile-width);
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: clamp(0rem, calc(9vw - 7rem), 3rem);
+    }
+
+    header {
+        background-color: var(--primary);
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: clamp(1rem, 15vmin, 8.5rem);
+        z-index: 4;
+        box-shadow: 0 1rem 3rem -1rem var(--light-b);
+    }
+
+    header > .ctnr {
+        width: var(--mobile-width);
+        margin-inline: auto;
+        display: flex;
+        height: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header .logo_anchor {
+        width: clamp(1rem, 26vmin, 15rem);
+        display: block;
+    }
+
+    .hambt {
+        width: 3rem;
+        height: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+
+    .hambt span {
+        height: 0.3rem;
+        background-color: var(--light);
+        border-radius: 0.2rem;
+    }
+
+    header nav {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: translateY(100%);
+        background-color: var(--light-a);
+        font-size: clamp(1.6rem, 1vw, 2rem);
+        color: var(--primary-a);
+        font-weight: 600;
+        padding: 2rem 0;
+        max-height: 62vh;
+        overflow: auto;
+    }
+
+    header nav .cta {
+        background-color: var(--highlight);
+        font-weight: 600;
+        padding: 1.2rem 1.5rem;
+        border-radius: 0.6rem;
+        border: 0.2rem solid var(--primary-c);
+        height: min-content;
+        color: var(--light);
+        position: sticky;
+        bottom: 0;
+        font-size: clamp(1.6rem, 1vw, 2rem);
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    header nav > .ctnr {
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+        align-items: end;
+        width: var(--mobile-width);
+        margin-inline: auto;
+        text-align: right;
+    }
+
+    header nav a {
+        padding: 0.8rem 0.6rem;
+    }
+
+    header nav > .ctnr > a:not(.cta),
+    .subnav > .flex > a:not(.cta) {
+        border-radius: 0.3rem;
+    }
+
+    .subsets > div a {
+        padding: 0.6rem;
+        white-space: nowrap;
+        display: block;
+        width: 100%;
+    }
+
+    header nav .subnav {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        position: relative;
+        height: 100%;
+        justify-content: center;
+    }
+
+    .subsets {
+        background-color: var(--light);
+        padding: 1.5rem 2rem 1.5rem 3rem;
+        border-radius: 0.8rem;
+        font-size: 0.9em;
+        font-weight: 500;
+        display: none;
+        flex-direction: column;
+        gap: clamp(2rem, 2vw, 4rem);
+        margin: 1rem 0 2rem;
+    }
+
+    .subsets > hr {
+        margin: 0;
+        background-color: var(--light-a);
+        flex: 1;
+        border: 0.05rem solid var(--light-a);
+    }
+
+    .subsets.visible {
+        display: flex;
+    }
+
+    .subsets > div {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .subsets .heading {
+        font-weight: 600;
+        position: relative;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+    }
+
+    .subsets .heading.icon::after {
+        content: "";
+        position: relative;
+        width: 1.3rem;
+        height: 1.3rem;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: block;
+    }
+
+    .subsets .icon.indoor::after {
+        background-image: url("icons/indoor.svg");
+    }
+
+    .subsets .icon.outdoor::after {
+        background-image: url("icons/outdoor.svg");
+    }
+
+    .subsets .icon.sectors::after {
+        background-image: url("icons/sectors.svg");
+    }
+
+    .subsets .icon.about::after {
+        background-image: url("icons/question.svg");
+    }
+
+    .subsets .icon.rates::after {
+        background-image: url("icons/star.svg");
+    }
+
+    .subnav > .flex {
+        align-items: center;
+    }
+
+    .subnav .expand {
+        color: var(--light);
+        margin-right: 0.6rem;
+        background-color: var(--light);
+        line-height: 1;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 0.2rem;
+        background-image: url(icons/plus.svg);
+        background-size: 1rem;
+    }
+
+    .subsets > div hr {
+        width: 2rem;
+        margin: 1rem;
+        border: unset;
+        height: 0.1rem;
+        background-color: var(--primary-c);
+    }
+
+    @media screen and (min-width: 900px) {
+        .subnav .expand,
+        .hambt {
+            display: none;
+        }
+
+        .stripe .announcement {
+            display: flex;
+        }
+
+        .stripe > .ctnr {
+            justify-content: right;
+        }
+
+        header nav {
+            position: relative;
+            transform: unset;
+            overflow: unset;
+            background-color: transparent;
+            color: var(--light);
+            font-weight: 500;
+            flex: 1;
+            padding: 0;
+            height: 100%;
+        }
+
+        header nav a {
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        /* Main header anchors */
+
+        header nav > .ctnr > a:not(.cta),
+        .subnav > .flex > a:not(.cta) {
+            transition: background-color 0.3s ease;
+            padding: 0.8rem clamp(0.6rem, 0.8vw, 1.6rem);
+        }
+
+        header nav > .ctnr > a:not(.cta):hover,
+        .subnav:hover > .flex > a:not(.cta) {
+            transition: background-color 0.1s ease;
+            background-color: var(--primary-b);
+        }
+
+        header nav .cta {
+            position: static;
+            margin-left: clamp(0rem, calc(8vw - 9rem), 6rem);
+            margin-top: unset;
+        }
+
+        header nav > .ctnr {
+            flex-direction: row;
+            text-align: unset;
+            justify-content: right;
+            width: unset;
+            gap: clamp(0rem, calc(8vw - 7rem), 4rem);
+            align-items: center;
+            height: 100%;
+        }
+
+        header nav .subnav {
+            align-items: center;
+        }
+
+        .subsets {
+            background-color: var(--light);
+            padding: 3rem 4rem;
+            border-radius: 0.8rem;
+            position: absolute;
+            color: var(--primary-a);
+            flex-direction: row;
+            bottom: 0;
+            margin: 0;
+            transform: translate(0%, calc(100% - 2rem));
+            box-shadow: 0 1rem 3rem -1rem var(--light-b);
+            display: flex;
+            transition: opacity 0.3s 0.2s ease, visibility 0.3s 0.2s ease,
+                transform 0.3s 0.2s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .subsets > div a {
+            transition: background-color 0.3s ease;
+        }
+
+        .subsets > div a:hover {
+            background-color: var(--light-d);
+            transition: background-color 0.1s ease;
+        }
+
+        .subnav:hover .subsets {
+            transition: opacity 0.2s ease, visibility 0.2s ease,
+                transform 0.2s ease;
+            opacity: 1;
+            visibility: visible;
+            z-index: 2;
+            transform: translate(0%, calc(100% - 1rem));
+        }
+
+        .subsets > div {
+            align-items: start;
+        }
+    }
+</style>
+
+<script>
+    const expandBts = document.querySelectorAll("header nav .expand");
+
+    for (let i = 0; i < expandBts.length; i++) {
+        expandBts[i].addEventListener("click", (e) => {
+            const target = e.currentTarget as HTMLElement;
+            target.parentElement.parentElement
+                .querySelector(".subsets")
+                .classList.toggle("visible");
+        });
+    }
+</script>
