@@ -1,0 +1,23 @@
+---
+type Props = CollectionEntry<"services">["data"];
+
+const { title, description } = Astro.props;
+
+import type { CollectionEntry } from "astro:content";
+import Header from "../../components/Header.astro";
+import BaseHead from "../../components/BaseHead.astro";
+---
+
+<html lang="en">
+    <head>
+        <BaseHead title={title} description={description} />
+
+        <script src="../scripts/share.js"></script>
+    </head>
+
+    <body>
+        <Header />
+
+        <h1>{title}</h1>
+    </body>
+</html>

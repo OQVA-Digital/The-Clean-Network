@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/HomeLayout.astro";
-import Card from "../components/Card.astro";
 // import Stripe from "../components/Stripe.astro";
 import Header from "../components/Header.astro";
 ---
@@ -19,91 +18,235 @@ import Header from "../components/Header.astro";
 						clients choose to stay with us at the end of their
 						contract.
 					</h2>
+
+					<div class="bt_ctnr flex">
+						<div class="ctas flex">
+							<a href="#" class="services">Know our Services</a>
+							<a href="#" class="quote">Get a Quote</a>
+						</div>
+
+						<div class="flex column">
+							<a href="#"><span>London:</span> 020 3411 0275</a>
+							<a href="#"><span>Birmingham:</span> 0121 3927529</a
+							>
+						</div>
+					</div>
+				</div>
+
+				<div class="showcase">
+					<img src="/images/office01.jpg" alt="Office photo" />
+				</div>
+			</div>
+
+			<div class="text_block">
+				<div class="ctnr">
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Nisi blanditiis quasi cum culpa, odit ipsam aliquid
+						quibusdam temporibus! Cupiditate voluptatum maiores
+						explicabo hic officia libero. Quam alias dolorem nostrum
+						reprehenderit.
+					</p>
 				</div>
 			</div>
 		</section>
-		<!-- <h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br
-			/>
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message
-			above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul> -->
+
+		<section class="clients">
+			<div class="ctnr">
+				<h3>Our clients include...</h3>
+
+				<div class="content">
+					<img src="client-logos/apptio.png" alt="Apptio logo" />
+					<img src="client-logos/outreach.png" alt="Outreach logo" />
+					<img
+						src="client-logos/the-salvation-army.png"
+						alt="The Salvation Army logo"
+					/>
+					<img
+						src="client-logos/spire-healthcare.png"
+						alt="Spire Healthcare logo"
+					/>
+					<img src="client-logos/xero.png" alt="Xero logo" />
+				</div>
+			</div>
+		</section>
+
+		<section class="services"></section>
 	</main>
 </Layout>
 
 <style>
 	main {
-		margin: auto;
-		padding: 1.5rem;
-		/* max-width: 60ch; */
 	}
 
-	section.intro {
+	.intro {
+		background-image: url("/images/office-bg01.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
 	}
 
-	section.intro > .ctnr {
+	.intro > .ctnr {
+		display: flex;
+		flex-direction: column;
+		gap: clamp(4rem, 8vw, 7rem);
+	}
+
+	.intro > .ctnr .content {
+		width: var(--mobile-width);
+		margin: clamp(3rem, 8vw, 6rem) auto 0;
+		display: flex;
+		flex-direction: column;
+		gap: clamp(1rem, 3vw, 2.5rem);
+	}
+
+	.intro h1 {
+		font-size: clamp(1rem, 9.5vmin, 6.2rem);
+		font-weight: 700;
+		line-height: 1.2;
+	}
+
+	.intro h2 {
+		font-size: clamp(1rem, 3.9vmin, 2.2rem);
+		font-weight: 600;
+		letter-spacing: 0;
+		line-height: 1.5;
+	}
+
+	.intro .bt_ctnr {
+		flex-flow: row wrap;
+		gap: 1.4rem;
+		align-items: center;
+	}
+
+	.intro .ctas {
+		gap: 1.4rem;
+		color: var(--light);
+		font-weight: 500;
+		font-size: clamp(1.3rem, 3.6vmin, 1.5rem);
+		line-height: 1;
+	}
+
+	.ctas a {
+		border-radius: 0.5rem;
+		padding: 1.3rem 1.9rem;
+		border: 0.2rem solid var(--light);
+	}
+
+	.intro .bt_ctnr .flex.column {
+		gap: 0.6rem;
+		font-weight: 600;
+		font-size: clamp(1.2rem, 3.2vmin, 1.4rem);
+	}
+
+	.intro .bt_ctnr .flex.column span {
+		color: var(--primary-a);
+		font-weight: 600;
+	}
+
+	.ctas .services {
+		background-color: var(--primary-a);
+	}
+
+	.ctas .quote {
+		background-color: var(--highlight);
+	}
+
+	.showcase {
+	}
+
+	.showcase img {
+		height: clamp(30rem, 50vw, 62rem);
+		width: 100%;
+		object-fit: cover;
+		object-position: center;
+		display: flex;
+	}
+
+	.intro .text_block {
+		background-color: var(--highlight);
+		padding: clamp(3rem, 10vmin, 6rem) 0;
+		color: var(--light);
+		font-size: clamp(1.5rem, 4vmin, 2.2rem);
+	}
+
+	.intro .text_block > .ctnr {
 		width: var(--mobile-width);
 		margin-inline: auto;
 	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
+
+	.intro .text_block p {
+		text-align: center;
+		max-width: 90rem;
+		margin-inline: auto;
+		line-height: 1.6;
 	}
 
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
+	section.clients {
 	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
+
+	.clients > .ctnr {
+		margin-inline: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: clamp(2rem, 3vw, 3rem);
+		align-items: center;
+		padding: clamp(4rem, 5vw, 6rem) 0 0;
 	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
+
+	.clients h3 {
+		font-size: clamp(2rem, 6vw, 2.8rem);
+		font-weight: 500;
+		color: var(--primary-a);
 	}
-	.instructions strong {
-		color: rgb(var(--accent));
+
+	.clients .content {
+		display: flex;
+		flex-direction: row;
+		gap: clamp(2rem, 7vw, 4rem);
+		overflow: auto;
+		padding: 0 2rem clamp(3rem, 5vw, 6rem);
 	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
+
+	section.services {
+		width: 100%;
+		min-height: 60rem;
+		background-color: var(--primary-a);
+	}
+
+	@media screen and (min-width: 900px) {
+		.intro > .ctnr {
+			flex-direction: row;
+			width: calc(100% - (100% - var(--mobile-width)) / 2);
+			margin-left: auto;
+			gap: 2rem;
+		}
+
+		.intro h1 {
+			font-size: clamp(5rem, calc(5.5vw - 2.6rem), 7rem);
+		}
+
+		.intro h2 {
+			font-size: clamp(1.8rem, 1.8vw, 2.2rem);
+			max-width: 65rem;
+		}
+
+		.intro > .ctnr .content {
+			margin: clamp(3rem, 7vw, 12rem) auto;
+			width: unset;
+			max-width: clamp(40rem, 50vw, 85rem);
+		}
+
+		.showcase {
+			flex: 1;
+		}
+
+		.showcase img {
+			height: 100%;
+			max-height: 80vh;
+			display: flex;
+		}
 	}
 </style>

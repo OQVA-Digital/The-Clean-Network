@@ -1,4 +1,6 @@
 ---
+import { getCollection } from "astro:content";
+const services = await getCollection("services");
 ---
 
 <div class="stripe">
@@ -40,14 +42,19 @@
 
                             <hr />
 
-                            <a href="#">Floor</a>
-                            <a href="#">Desks & Furniture</a>
-                            <a href="#">Curtains & Blinds</a>
-                            <a href="#">Bathrooms</a>
-                            <a href="#">Kitchens</a>
-                            <a href="#">Lobbies & Reception Areas</a>
-                            <a href="#">Air Ducts & Vents</a>
-                            <a href="#">Post-construction</a>
+                            {
+                                services.map((services) => (
+                                    <>
+                                        {services.data.type === "indoor" ? (
+                                            <a
+                                                href={`/services/${services.slug}/`}
+                                            >
+                                                {services.data.title}
+                                            </a>
+                                        ) : null}
+                                    </>
+                                ))
+                            }
                         </div>
 
                         <hr />
@@ -59,11 +66,25 @@
 
                             <hr />
 
-                            <a href="#">Windows</a>
+                            <!-- <a href="#">Windows</a>
                             <a href="#">Gutters & Roofs</a>
                             <a href="#">Drains</a>
                             <a href="#">Pressure Cleaning</a>
-                            <a href="#">Bins & Refuse Areas</a>
+                            <a href="#">Bins & Refuse Areas</a> -->
+
+                            {
+                                services.map((services) => (
+                                    <>
+                                        {services.data.type === "external" ? (
+                                            <a
+                                                href={`/services/${services.slug}/`}
+                                            >
+                                                {services.data.title}
+                                            </a>
+                                        ) : null}
+                                    </>
+                                ))
+                            }
                         </div>
                     </div>
                 </div>
@@ -174,9 +195,9 @@
         top: 0;
         left: 0;
         right: 0;
-        height: clamp(1rem, 15vmin, 8.5rem);
+        height: clamp(1rem, 15vmin, 7.5rem);
         z-index: 4;
-        box-shadow: 0 1rem 3rem -1rem var(--light-b);
+        /* box-shadow: 0 1rem 3rem -1rem var(--light-b); */
     }
 
     header > .ctnr {
@@ -236,7 +257,8 @@
         left: 0;
         right: 0;
         transform: translateY(100%);
-        background-color: var(--light-a);
+        background-color: rgb(227 227 255 / 75%);
+        backdrop-filter: blur(0.8rem);
         font-size: clamp(1.6rem, 1vw, 2rem);
         color: var(--primary-a);
         font-weight: 600;
@@ -245,11 +267,12 @@
         overflow: auto;
         opacity: 0;
         visibility: hidden;
+        overflow-y: scroll;
     }
 
     header nav .cta {
         background-color: var(--highlight);
-        font-weight: 600;
+        font-weight: 500;
         padding: 1.2rem 1.5rem;
         border-radius: 0.6rem;
         border: 0.2rem solid var(--primary-c);
@@ -347,23 +370,23 @@
     }
 
     .subsets .icon.indoor::after {
-        background-image: url("./icons/indoor.svg");
+        background-image: url("/icons/indoor.svg");
     }
 
     .subsets .icon.outdoor::after {
-        background-image: url("./icons/outdoor.svg");
+        background-image: url("/icons/outdoor.svg");
     }
 
     .subsets .icon.sectors::after {
-        background-image: url("./icons/sectors.svg");
+        background-image: url("/icons/sectors.svg");
     }
 
     .subsets .icon.about::after {
-        background-image: url("./icons/question.svg");
+        background-image: url("/icons/question.svg");
     }
 
     .subsets .icon.rates::after {
-        background-image: url("./icons/star.svg");
+        background-image: url("/icons/star.svg");
     }
 
     .subnav > .flex {
@@ -410,12 +433,13 @@
             overflow: unset;
             background-color: transparent;
             color: var(--light);
-            font-weight: 500;
+            font-weight: 400;
             flex: 1;
             padding: 0;
             height: 100%;
             opacity: 1;
             visibility: visible;
+            backdrop-filter: unset;
         }
 
         header nav a {

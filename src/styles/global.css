@@ -23,7 +23,7 @@
 @font-face {
     font-family: 'Rubik';
     src: url('/fonts/Rubik-VariableFont_wght.ttf');
-    font-weight: normal;
+    font-weight: 100 900;
     font-style: normal;
     font-display: swap;
 }
@@ -50,9 +50,8 @@ h6 {
 body {
     font-family: 'Rubik', sans-serif;
     background-color: var(--light);
-    letter-spacing: 0.06rem;
+    color: var(--dark);
     position: relative;
-    min-height: 300rem;
 }
 
 a {
@@ -130,6 +129,10 @@ button:not([type="submit"]):focus-visible {
 
 .flex {
     display: flex;
+}
+
+.flex.column {
+    flex-direction: column;
 }
 
 .icon {

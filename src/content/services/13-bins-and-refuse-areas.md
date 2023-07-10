@@ -1,7 +1,7 @@
 ---
-title: "Floor"
+title: "Bins & Refuse Areas"
 description: "Transform your brand with our identity-based framework. Boost success, develop clear customer avatars, and navigate market complexities. Start now!"
-type: "indoor"
+type: "external"
 heroImage: "/post-covers/your-brand-is-compression-of-sensation.jpg"
 ---
 

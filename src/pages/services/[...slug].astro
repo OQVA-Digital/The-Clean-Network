@@ -1,0 +1,21 @@
+---
+import { CollectionEntry, getCollection } from "astro:content";
+import SubpageLayout from "../../layouts/SubpageLayout.astro";
+
+export async function getStaticPaths() {
+    const posts = await getCollection("services");
+    return posts.map((post) => ({
+        params: { slug: post.slug },
+        props: post,
+    }));
+}
+type Props = CollectionEntry<"services">;
+
+const post = Astro.props;
+const { Content } = await post.render();
+---
+
+<SubpageLayout {...post.data}>
+    <h1>{post.data.title}</h1>
+    <Content />
+</SubpageLayout>
