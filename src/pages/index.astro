@@ -221,7 +221,7 @@ import Header from "../components/Header.astro";
 			flex-direction: row;
 			width: calc(100% - (100% - var(--mobile-width)) / 2);
 			margin-left: auto;
-			gap: 2rem;
+			gap: 0;
 		}
 
 		.intro h1 {
@@ -236,11 +236,12 @@ import Header from "../components/Header.astro";
 		.intro > .ctnr .content {
 			margin: clamp(3rem, 7vw, 12rem) auto;
 			width: unset;
-			max-width: clamp(40rem, 50vw, 85rem);
+			max-width: clamp(40rem, 46vw, 85rem);
 		}
 
 		.showcase {
 			flex: 1;
+			clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
 		}
 
 		.showcase img {
