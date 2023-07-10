@@ -31,6 +31,7 @@ const services = await getCollection("services");
                             type="button"
                             aria-label="Expand navigation"
                         >
+                            <span></span>
                         </button>
                     </div>
 
@@ -98,6 +99,7 @@ const services = await getCollection("services");
                             type="button"
                             aria-label="Expand navigation"
                         >
+                            <span></span>
                         </button>
                     </div>
 
@@ -130,6 +132,7 @@ const services = await getCollection("services");
                             type="button"
                             aria-label="Expand navigation"
                         >
+                            <span></span>
                         </button>
                     </div>
 
@@ -195,7 +198,7 @@ const services = await getCollection("services");
         top: 0;
         left: 0;
         right: 0;
-        height: clamp(1rem, 15vmin, 7.5rem);
+        height: clamp(1rem, 16vmin, 7.5rem);
         z-index: 4;
         /* box-shadow: 0 1rem 3rem -1rem var(--light-b); */
     }
@@ -210,7 +213,7 @@ const services = await getCollection("services");
     }
 
     header .logo_anchor {
-        width: clamp(1rem, 26vmin, 15rem);
+        width: clamp(1rem, 30vmin, 15rem);
         display: block;
     }
 
@@ -257,9 +260,9 @@ const services = await getCollection("services");
         left: 0;
         right: 0;
         transform: translateY(100%);
-        background-color: rgb(227 227 255 / 75%);
+        background-color: rgb(255 255 255 / 75%);
         backdrop-filter: blur(0.8rem);
-        font-size: clamp(1.6rem, 1vw, 2rem);
+        font-size: clamp(1.6rem, 5vw, 2rem);
         color: var(--primary-a);
         font-weight: 600;
         padding: 2rem 0;
@@ -273,7 +276,7 @@ const services = await getCollection("services");
     header nav .cta {
         background-color: var(--highlight);
         font-weight: 500;
-        padding: 1.2rem 1.5rem;
+        padding: clamp(0.8rem, 2vmin, 1.2rem) 1.5rem;
         border-radius: 0.6rem;
         border: 0.2rem solid var(--primary-c);
         height: min-content;
@@ -281,7 +284,7 @@ const services = await getCollection("services");
         position: sticky;
         bottom: 0;
         font-size: clamp(1.6rem, 1vw, 2rem);
-        margin-top: 2rem;
+        margin: 6rem 0 2rem;
         text-align: center;
     }
 
@@ -296,7 +299,10 @@ const services = await getCollection("services");
     }
 
     header nav a {
-        padding: 0.8rem 0.6rem;
+        padding: 0 0.6rem;
+        height: 4.5rem;
+        display: flex;
+        align-items: center;
     }
 
     header nav > .ctnr > a:not(.cta),
@@ -321,15 +327,16 @@ const services = await getCollection("services");
     }
 
     .subsets {
-        background-color: var(--light);
-        padding: 1.5rem 2rem 1.5rem 3rem;
-        border-radius: 0.8rem;
+        padding: 1rem 0rem 1.5rem 3rem;
         font-size: 0.9em;
         font-weight: 500;
         display: none;
         flex-direction: column;
         gap: clamp(2rem, 2vw, 4rem);
-        margin: 1rem 0 2rem;
+        margin: 0rem 0 3rem;
+        background-image: linear-gradient(40deg, var(--light), transparent);
+        background-attachment: fixed;
+        border-radius: 1.2rem 0 0 1.2rem;
     }
 
     .subsets > hr {
@@ -395,14 +402,27 @@ const services = await getCollection("services");
 
     .subnav .expand {
         color: var(--light);
-        margin-right: 0.6rem;
-        background-color: var(--light);
+        padding-right: 0.6rem;
         line-height: 1;
-        width: 2rem;
-        height: 2rem;
-        border-radius: 0.2rem;
-        background-image: url(icons/plus.svg);
-        background-size: 1rem;
+        width: 3rem;
+        height: 3.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: -0.6rem;
+    }
+
+    .subnav .expand span.active {
+        transform: translate(0%, 0%) rotate(225deg);
+    }
+
+    .subnav .expand span {
+        width: 0.5rem;
+        height: 0.5rem;
+        display: block;
+        border-bottom: 0.3rem solid var(--primary-a);
+        border-right: 0.3rem solid var(--primary-a);
+        transform: translate(0%, -50%) rotate(45deg);
     }
 
     .subsets > div hr {
@@ -440,12 +460,14 @@ const services = await getCollection("services");
             opacity: 1;
             visibility: visible;
             backdrop-filter: unset;
+            font-size: 1.8rem;
         }
 
         header nav a {
             display: flex;
             align-items: center;
             box-sizing: border-box;
+            height: unset;
         }
 
         /* Main header anchors */
@@ -464,8 +486,8 @@ const services = await getCollection("services");
 
         header nav .cta {
             position: static;
+            margin: unset;
             margin-left: clamp(0rem, calc(8vw - 9rem), 6rem);
-            margin-top: unset;
         }
 
         header nav > .ctnr {
@@ -581,6 +603,8 @@ const services = await getCollection("services");
             target.parentElement.parentElement
                 .querySelector(".subsets")
                 .classList.toggle("visible");
+
+            target.querySelector("span").classList.toggle("active");
         });
     }
 </script>
