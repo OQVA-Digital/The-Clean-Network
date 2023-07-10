@@ -205,6 +205,90 @@ declare module 'astro:content' {
   collection: "services";
   data: InferEntrySchema<"services">
 } & { render(): Render[".md"] };
+"02-desks-and-furniture.md": {
+	id: "02-desks-and-furniture.md";
+  slug: "02-desks-and-furniture";
+  body: string;
+  collection: "services";
+  data: InferEntrySchema<"services">
+} & { render(): Render[".md"] };
+"03-curtains-and-blinds.md": {
+	id: "03-curtains-and-blinds.md";
+  slug: "03-curtains-and-blinds";
+  body: string;
+  collection: "services";
+  data: InferEntrySchema<"services">
+} & { render(): Render[".md"] };
+"04-bathrooms.md": {
+	id: "04-bathrooms.md";
+  slug: "04-bathrooms";
+  body: string;
+  collection: "services";
+  data: InferEntrySchema<"services">
+} & { render(): Render[".md"] };
+"05-kitchens.md": {
+	id: "05-kitchens.md";
+  slug: "05-kitchens";
+  body: string;
+  collection: "services";
+  data: InferEntrySchema<"services">
+} & { render(): Render[".md"] };
+"06-lobbies-and-reception-areas.md": {
+	id: "06-lobbies-and-reception-areas.md";
+  slug: "06-lobbies-and-reception-areas";
+  body: string;
+  collection: "services";
+  data: InferEntrySchema<"services">
+} & { render(): Render[".md"] };
+"07-air-ducts-and-vents.md": {
+	id: "07-air-ducts-and-vents.md";
+  slug: "07-air-ducts-and-vents";
+  body: string;
+  collection: "services";
+  data: InferEntrySchema<"services">
+} & { render(): Render[".md"] };
+"08-post-construction.md": {
+	id: "08-post-construction.md";
+  slug: "08-post-construction";
+  body: string;
+  collection: "services";
+  data: InferEntrySchema<"services">
+} & { render(): Render[".md"] };
+"09-windows.md": {
+	id: "09-windows.md";
+  slug: "09-windows";
+  body: string;
+  collection: "services";
+  data: InferEntrySchema<"services">
+} & { render(): Render[".md"] };
+"10-gutters-and-roofs.md": {
+	id: "10-gutters-and-roofs.md";
+  slug: "10-gutters-and-roofs";
+  body: string;
+  collection: "services";
+  data: InferEntrySchema<"services">
+} & { render(): Render[".md"] };
+"11-drains.md": {
+	id: "11-drains.md";
+  slug: "11-drains";
+  body: string;
+  collection: "services";
+  data: InferEntrySchema<"services">
+} & { render(): Render[".md"] };
+"12-pressure-cleaning.md": {
+	id: "12-pressure-cleaning.md";
+  slug: "12-pressure-cleaning";
+  body: string;
+  collection: "services";
+  data: InferEntrySchema<"services">
+} & { render(): Render[".md"] };
+"13-bins-and-refuse-areas.md": {
+	id: "13-bins-and-refuse-areas.md";
+  slug: "13-bins-and-refuse-areas";
+  body: string;
+  collection: "services";
+  data: InferEntrySchema<"services">
+} & { render(): Render[".md"] };
 };
 
 	};
