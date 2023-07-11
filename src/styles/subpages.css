@@ -1,0 +1,4 @@
+main>.ctnr {
+    width: var(--mobile-width);
+    margin-inline: auto;
+}

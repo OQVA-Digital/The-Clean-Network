@@ -82,7 +82,7 @@ video {
 }
 
 ::-webkit-scrollbar {
-    width: 1rem;
+    width: 1.3rem;
     height: 1rem;
 }
 
@@ -141,6 +141,9 @@ button:not([type="submit"]):focus-visible {
     background-repeat: no-repeat;
 }
 
+hr {
+    border:unset;
+}
 
 
 

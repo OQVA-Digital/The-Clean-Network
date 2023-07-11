@@ -1,21 +1,49 @@
 ---
+import { getCollection } from "astro:content";
 type Props = CollectionEntry<"services">["data"];
+const services = await getCollection("services");
 
 const { title, description } = Astro.props;
 
 import type { CollectionEntry } from "astro:content";
 import Header from "../../components/Header.astro";
 import BaseHead from "../../components/BaseHead.astro";
+import Footer from "../../components/Footer.astro";
+
+import "../../styles/subpages.css"
 ---
 
 <html lang="en">
     <head>
-        <BaseHead title={title} description={description} />
+        <BaseHead title="Our Services · The Clean Network" description={description} />
     </head>
 
     <body>
         <Header />
 
-        <h1>{title}</h1>
+        <main>
+            <div class="ctnr">
+                <h1>{title}</h1>
+        
+                {
+                    services.map((services) => (
+                        <>
+                            <a
+                                href={`/services/${services.slug}/`}
+                            >
+                                {services.data.title}
+                            </a>
+                        </>
+                        <>
+                            <img
+                                src={services.data.image}
+                            />
+                        </>
+                    ))
+                }
+            </div>
+        </main>
+
+        <Footer />
     </body>
 </html>

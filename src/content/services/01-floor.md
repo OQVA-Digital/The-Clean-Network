@@ -2,7 +2,7 @@
 title: "Floor"
 description: "Transform your brand with our identity-based framework. Boost success, develop clear customer avatars, and navigate market complexities. Start now!"
 type: "indoor"
-heroImage: "/post-covers/your-brand-is-compression-of-sensation.jpg"
+image: "/images/service-placeholder.jpg"
 ---
 
 

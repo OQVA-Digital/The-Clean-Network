@@ -2,6 +2,9 @@
 import Layout from "../layouts/HomeLayout.astro";
 // import Stripe from "../components/Stripe.astro";
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { getCollection } from "astro:content";
+const services = await getCollection("services");
 ---
 
 <Layout title="The Clean Network - Commercial & Office Cleaning Services">
@@ -21,7 +24,7 @@ import Header from "../components/Header.astro";
 
 					<div class="bt_ctnr flex">
 						<div class="ctas flex">
-							<a href="#" class="services">Know our Services</a>
+							<a href="#" class="know_our_services">Know our Services</a>
 							<a href="#" class="quote">Get a Quote</a>
 						</div>
 
@@ -71,8 +74,105 @@ import Header from "../components/Header.astro";
 			</div>
 		</section>
 
-		<section class="services"></section>
+		<section class="services">
+			<div class="ctnr">
+				<div class="content">
+					<h2>Services</h2>
+
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laborum vel rerum eligendi sunt illum harum id, qui ullam.</p>
+
+					<a href="#" class="cta"><span></span> Check all services</a>
+
+					<hr>
+
+					<div class="subsets">
+						<div>
+							<a href="#" class="heading indoor icon"
+								>Indoor Cleaning <span class="icon"></span></a
+							>
+
+							{
+								services.map((services) => (
+									<>
+										{services.data.type === "indoor" ? (
+											<a
+												href={`/services/${services.slug}/`}
+											>
+												{services.data.title}
+											</a>
+										) : null}
+									</>
+								))
+							}
+						</div>
+
+						<hr />
+
+						<div>
+							<a href="#" class="heading outdoor icon"
+								>External Cleaning <span class="icon"></span></a
+							>
+
+							{
+								services.map((services) => (
+									<>
+										{services.data.type === "external" ? (
+											<a
+												href={`/services/${services.slug}/`}
+											>
+												{services.data.title}
+											</a>
+										) : null}
+									</>
+								))
+							}
+						</div>
+					</div>
+				</div>
+
+				<div class="image">
+					<img src="/images/office02.jpg" alt="Office photo" />
+				</div>
+			</div>
+		</section>
+
+		<section class="sectors">
+			<div class="ctnr">
+				<div class="content">
+					<h2>Sectors</h2>
+
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laborum vel rerum eligendi sunt illum harum id, qui ullam.</p>
+
+					<a href="#" class="cta"><span></span> Check all sectors</a>
+
+					<hr>
+
+					<div class="subsets">
+						<div>
+							{
+								services.map((services) => (
+									<>
+										{services.data.type === "indoor" ? (
+											<a
+												href={`/services/${services.slug}/`}
+											>
+												{services.data.title}
+											</a>
+										) : null}
+									</>
+								))
+							}
+						</div>
+					</div>
+				</div>
+
+				<div class="image">
+					<img src="/images/office03.jpg" alt="Office photo" />
+				</div>
+			</div>
+		</section>
 	</main>
+	<Footer />
 </Layout>
 
 <style>
@@ -90,7 +190,7 @@ import Header from "../components/Header.astro";
 	.intro > .ctnr {
 		display: flex;
 		flex-direction: column;
-		gap: clamp(4rem, 8vw, 7rem);
+    	gap: clamp(2rem,6vmin,7rem);
 	}
 
 	.intro > .ctnr .content {
@@ -98,7 +198,7 @@ import Header from "../components/Header.astro";
 		margin: clamp(3rem, 8vw, 6rem) auto 0;
 		display: flex;
 		flex-direction: column;
-		gap: clamp(1rem, 3vw, 2.5rem);
+		gap: clamp(1rem, 2vmin, 2.5rem);
 	}
 
 	.intro h1 {
@@ -110,7 +210,6 @@ import Header from "../components/Header.astro";
 	.intro h2 {
 		font-size: clamp(1rem, 3.9vmin, 2.2rem);
 		font-weight: 600;
-		letter-spacing: 0;
 		line-height: 1.5;
 	}
 
@@ -126,6 +225,7 @@ import Header from "../components/Header.astro";
 		font-weight: 500;
 		font-size: clamp(1.3rem, 3.6vmin, 1.5rem);
 		line-height: 1;
+    	margin-top: 0.5rem;
 	}
 
 	.ctas a {
@@ -145,7 +245,7 @@ import Header from "../components/Header.astro";
 		font-weight: 600;
 	}
 
-	.ctas .services {
+	.ctas .know_our_services {
 		background-color: var(--primary-a);
 	}
 
@@ -154,6 +254,7 @@ import Header from "../components/Header.astro";
 	}
 
 	.showcase {
+    	clip-path: polygon(0% 9%,100% 0%,100% 100%,0% 100%);
 	}
 
 	.showcase img {
@@ -168,7 +269,7 @@ import Header from "../components/Header.astro";
 		background-color: var(--highlight);
 		padding: clamp(3rem, 10vmin, 6rem) 0;
 		color: var(--light);
-		font-size: clamp(1.5rem, 4vmin, 2.2rem);
+    	font-size: clamp(1.5rem,4vmin,2.3rem);
 	}
 
 	.intro .text_block > .ctnr {
@@ -178,9 +279,10 @@ import Header from "../components/Header.astro";
 
 	.intro .text_block p {
 		text-align: center;
-		max-width: 90rem;
+    	max-width: 100rem;
 		margin-inline: auto;
 		line-height: 1.6;
+    	font-weight: 500;
 	}
 
 	section.clients {
@@ -191,13 +293,17 @@ import Header from "../components/Header.astro";
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		gap: clamp(2rem, 3vw, 3rem);
+		gap: clamp(2rem, 3vw, 4rem);
 		align-items: center;
-		padding: clamp(4rem, 5vw, 6rem) 0 0;
+		padding: clamp(4rem, 5vw, 5rem) 0 0;
+	}
+
+	.clients .content img {
+    	height: clamp(8rem, 10vw, 10rem);
 	}
 
 	.clients h3 {
-		font-size: clamp(2rem, 6vw, 2.8rem);
+		font-size: clamp(2rem, 6vw, 3.2rem);
 		font-weight: 500;
 		color: var(--primary-a);
 	}
@@ -207,13 +313,162 @@ import Header from "../components/Header.astro";
 		flex-direction: row;
 		gap: clamp(2rem, 9vw, 4rem);
 		overflow: auto;
-		padding: 0 2rem clamp(3rem, 5vw, 6rem);
+		padding: 0 calc((100% - var(--mobile-width)) / 2) clamp(3rem,5vw,5rem);
 	}
 
 	section.services {
 		width: 100%;
-		min-height: 60rem;
 		background-color: var(--primary-a);
+	}
+
+	section.sectors {
+		width: 100%;
+		background-color: var(--dark);
+	}
+
+	.services, .sectors {
+		color:var(--light);
+	}
+
+	.services > .ctnr, .sectors > .ctnr {
+		display: flex;
+    	flex-direction: column-reverse;
+	}
+
+	.services .content, .sectors .content {
+		width: var(--mobile-width);
+		margin-inline: auto;
+		padding: clamp(3rem,10vw,7rem) 0 clamp(3rem,12vw,7rem);
+		display: flex;
+		flex-direction: column;
+    	gap: clamp(1rem, 4vmin, 1.5rem);
+	}
+
+	.services h2, .sectors h2 {
+		font-size: clamp(2rem, 11vw, 6rem);
+		font-weight: 500;
+	}
+
+	.services h2::after, .sectors h2::after {
+		content:'';
+    	width: 2.5rem;
+		height: 3rem;
+		display: inline-block;
+		margin-left: 1rem;
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	.services h2::after {
+		background-image: url('/icons/services.svg');
+	}
+
+	.sectors h2::after {
+		background-image: url('/icons/sectors-grey.svg');
+	}
+
+	.services p, .sectors p {
+    	font-size: clamp(1.5rem,4vmin,2rem);
+    	max-width: 65rem;
+    	line-height: 1.5;
+	}
+
+	.services .content > hr, .sectors .content > hr, .services .subsets hr, .sectors .subsets hr {
+		width: 2rem;
+		margin: 1rem 0;
+		height:0.1rem;
+		background-color: rgb(248 248 255 / 20%);
+	}
+
+	.services .cta, .sectors .cta {
+		font-size: clamp(1.3rem,5vmin,2.1rem);
+		font-weight: 500;
+		letter-spacing: 0.05rem;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+    	width: fit-content;
+	}
+
+	.services .cta span, .sectors .cta span {
+		display: block;
+		border-bottom: 0.4rem solid var(--highlight);
+		border-right: 0.4rem solid var(--highlight);
+		border-top: 0.4rem solid transparent;
+		border-left: 0.4rem solid transparent;
+		transform: rotate(-45deg);
+	}
+
+	.services .image img, .sectors .image img {
+		width: 100%;
+		object-fit: cover;
+		object-position: center;
+		display: flex;
+    	height: clamp(30rem,50vw,62rem);
+	}
+
+	.services .subsets, .sectors .subsets {
+		display: flex;
+    	gap: clamp(1rem, 2vw, 2rem) 0;
+    	flex-flow: row wrap;
+	}
+
+	.services .subsets > div, .sectors .subsets > div {
+    	font-size: clamp(1.3rem,4.5vmin,2rem);
+	}
+
+	.services .subsets .heading, .sectors .subsets .heading {
+    	display: block;
+		color:var(--light);
+		font-size: 1em;
+    	margin-bottom: 0.4rem;
+    	font-weight: 500;
+	}
+
+	.services .subsets .heading .icon {
+		width: 1.3rem;
+		height: 1.3rem;
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		display: inline-block;
+		margin-left: 0.5rem;
+    	opacity: 0.24;
+	}
+
+	.services .subsets .indoor .icon {
+    	background-image: url(/icons/indoor.svg);
+	}
+
+	.services .subsets .outdoor .icon {
+    	background-image: url(/icons/outdoor.svg);
+	}
+
+	.services .subsets a, .sectors .subsets a {
+		font-size: 0.7em;
+    	color: var(--light-b);
+	}
+
+	.services .subsets a:not(.heading), .sectors .subsets a:not(.heading) {
+		transition: color 0.4s ease;
+	}
+
+	.services .subsets a:not(.heading):hover, .sectors .subsets a:not(.heading):hover {
+		color:var(--light);
+		transition: color 0s ease;
+	}
+
+	.services .subsets a:not(.heading):not(:last-child):after, .sectors .subsets a:not(.heading):not(:last-child):after {
+		content: "";
+		position: relative;
+		width: 0.3rem;
+		height: 0.3rem;
+		display: inline-block;
+		background-color: var(--light-b);
+		border-radius: 1rem;
+		margin: 0 0.4rem;
+		transform: translateY(-100%);
 	}
 
 	@media screen and (min-width: 900px) {
@@ -234,7 +489,7 @@ import Header from "../components/Header.astro";
 		}
 
 		.intro > .ctnr .content {
-			margin: clamp(3rem, 7vw, 12rem) auto;
+    		margin: clamp(3rem,9vw,13rem) auto;
 			width: unset;
 			max-width: clamp(40rem, 46vw, 85rem);
 		}
@@ -249,5 +504,42 @@ import Header from "../components/Header.astro";
 			max-height: 80vh;
 			display: flex;
 		}
+
+		.services > .ctnr, .sectors > .ctnr {
+			flex-direction: row;
+			width: calc(100% - (100% - var(--mobile-width)) / 2);
+			margin-left: auto;
+		}
+
+		.services .content, .sectors .content {
+    		margin-right: 5vw;
+			width: unset;
+			max-width: clamp(40rem,50vw,95rem);
+			flex: 1;
+		}
+
+		.services .image, .sectors .image {
+			flex: 1;
+			position: relative;
+		}
+
+		.services .image img, .sectors .image img {
+			height: 100%;
+			position: absolute;
+			inset: 0;
+		}
+
+		.services .subsets > div, .sectors .subsets > div {
+    		max-width: 50rem;
+			width: 45%;
+			flex: 1;
+		}
+
+		.services .subsets hr, .sectors .subsets hr {
+			width: 0.1rem;
+			height: auto;
+    		margin: 0 clamp(1rem, 2vw, 3rem);
+		}
+
 	}
 </style>
