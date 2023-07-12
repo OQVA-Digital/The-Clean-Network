@@ -96,13 +96,6 @@ video {
     background: var(--primary);
 }
 
-@font-face {
-    font-family: initial;
-    src: url('../assets/fonts/');
-    font-weight: 400;
-    font-style: normal;
-}
-
 main {
     position: relative;
     z-index: 1;
@@ -133,6 +126,11 @@ button:not([type="submit"]):focus-visible {
 
 .flex.column {
     flex-direction: column;
+}
+
+.flex.center {
+    align-items: center;
+    justify-content: center;
 }
 
 .icon {

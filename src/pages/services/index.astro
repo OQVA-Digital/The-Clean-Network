@@ -1,11 +1,10 @@
 ---
-import { getCollection } from "astro:content";
+import { CollectionEntry, getCollection } from "astro:content";
 type Props = CollectionEntry<"services">["data"];
 const services = await getCollection("services");
 
 const { title, description } = Astro.props;
 
-import type { CollectionEntry } from "astro:content";
 import Header from "../../components/Header.astro";
 import BaseHead from "../../components/BaseHead.astro";
 import Footer from "../../components/Footer.astro";
@@ -28,16 +27,19 @@ import "../../styles/subpages.css"
                 {
                     services.map((services) => (
                         <>
-                            <a
-                                href={`/services/${services.slug}/`}
-                            >
-                                {services.data.title}
-                            </a>
-                        </>
-                        <>
-                            <img
-                                src={services.data.image}
-                            />
+                            <section class="service_box">
+                                <div class="ctnr">
+                                    <div class="content">
+                                        <h2>
+                                            {services.data.title}
+                                        </h2>
+
+                                        <p>{services.data.description}</p>
+                                    </div>
+                                    
+                                    <img src={services.data.image}/>
+                                </div>
+                            </section>
                         </>
                     ))
                 }

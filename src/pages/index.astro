@@ -24,12 +24,14 @@ const services = await getCollection("services");
 
 					<div class="bt_ctnr flex">
 						<div class="ctas flex">
-							<a href="#" class="know_our_services">Know our Services</a>
-							<a href="#" class="quote">Get a Quote</a>
+							<a href="/services/" class="know_our_services">Know our Services</a>
+
+							<a href="#contact" class="quote">Get a Quote</a>
 						</div>
 
 						<div class="flex column">
 							<a href="#"><span>London:</span> 020 3411 0275</a>
+
 							<a href="#"><span>Birmingham:</span> 0121 3927529</a
 							>
 						</div>
@@ -74,14 +76,14 @@ const services = await getCollection("services");
 			</div>
 		</section>
 
-		<section class="services">
+		<section class="services panel">
 			<div class="ctnr">
 				<div class="content">
-					<h2>Services</h2>
+					<h3>Services</h3>
 
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laborum vel rerum eligendi sunt illum harum id, qui ullam.</p>
 
-					<a href="#" class="cta"><span></span> Check all services</a>
+					<a href="/services/" class="cta"><span></span> Check all services</a>
 
 					<hr>
 
@@ -136,10 +138,10 @@ const services = await getCollection("services");
 			</div>
 		</section>
 
-		<section class="sectors">
+		<section class="sectors panel">
 			<div class="ctnr">
 				<div class="content">
-					<h2>Sectors</h2>
+					<h3>Sectors</h3>
 
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laborum vel rerum eligendi sunt illum harum id, qui ullam.</p>
 
@@ -169,6 +171,75 @@ const services = await getCollection("services");
 				<div class="image">
 					<img src="/images/office03.jpg" alt="Office photo" />
 				</div>
+			</div>
+		</section>
+
+		<section class="locations panel">
+			<div class="ctnr">
+				<div class="content">
+					<h3>Locations</h3>
+
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque consequuntur autem natus, quod deleniti velit esse itaque odit quis expedita.</p>
+
+					<a href="#" class="cta"><span></span> Check our Locations</a>
+				</div>
+
+				<div class="image">
+					<img src="/images/customer01.jpg" alt="Customer photo" />
+				</div>
+			</div>
+		</section>
+
+		<section class="testimonials">
+			<div class="ctnr">
+				<div class="flex center">
+					<h3>What our clients have been saying</h3>
+				</div>
+
+				<div class="slider">
+					<div class="box">
+						<img src="/client-testimonials/01.jpg" alt="">
+					</div>
+					<div class="box">
+						<img src="/client-testimonials/02.jpg" alt="">
+					</div>
+					<div class="box">
+						<img src="/client-testimonials/03.jpg" alt="">
+					</div>
+					<div class="box">
+						<img src="/client-testimonials/04.jpg" alt="">
+					</div>
+				</div>
+
+				<script>
+
+					// TINY SLIDER 2
+					
+					var slider = tns({
+						container: '.testimonials .slider',
+						center: true,
+						items: 1,
+						slideBy: 'page',
+						speed: 300,
+						autoWidth:true,
+						controls:true,
+						controlsPosition:'bottom',
+						controlsText:["<", ">"],
+						navAsThumbnails:true,
+						loop: false,
+						
+					  });
+					</script>
+			</div>
+		</section>
+
+		<section class="rates">
+			<div class="ctnr">
+				<h3>Service Rates</h3>
+
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis ad sed quod delectus quasi optio, earum quidem explicabo?</p>
+
+				<a href="#" class="cta">Simulate with our <b>Rate Calculator</b></a>
 			</div>
 		</section>
 	</main>
@@ -223,7 +294,7 @@ const services = await getCollection("services");
 		gap: 1.4rem;
 		color: var(--light);
 		font-weight: 500;
-		font-size: clamp(1.3rem, 3.6vmin, 1.5rem);
+		font-size: clamp(1.3rem, 3.6vmin, 1.7rem);
 		line-height: 1;
     	margin-top: 0.5rem;
 	}
@@ -232,12 +303,23 @@ const services = await getCollection("services");
 		border-radius: 0.5rem;
 		padding: 1.3rem 1.9rem;
 		border: 0.2rem solid var(--light);
+    	box-shadow: inset 0 -1.2rem 1.5rem -1.5rem, 0 0.8rem 1rem -0.6rem var(--light-b);
+		transition: filter 0.5s ease;
+	}
+
+	.ctas a:hover {
+		filter:brightness(1.1);
+		transition: filter 0.1s ease;
 	}
 
 	.intro .bt_ctnr .flex.column {
 		gap: 0.6rem;
 		font-weight: 600;
 		font-size: clamp(1.2rem, 3.5vmin, 1.4rem);
+	}
+
+	.intro .bt_ctnr .flex.column a {
+		line-height: 1;
 	}
 
 	.intro .bt_ctnr .flex.column span {
@@ -269,7 +351,7 @@ const services = await getCollection("services");
 		background-color: var(--highlight);
 		padding: clamp(3rem, 10vmin, 6rem) 0;
 		color: var(--light);
-    	font-size: clamp(1.5rem,4vmin,2.3rem);
+    	font-size: clamp(1.5rem,4vmin,2.2rem);
 	}
 
 	.intro .text_block > .ctnr {
@@ -330,26 +412,26 @@ const services = await getCollection("services");
 		color:var(--light);
 	}
 
-	.services > .ctnr, .sectors > .ctnr {
+	.panel > .ctnr {
 		display: flex;
     	flex-direction: column-reverse;
 	}
 
-	.services .content, .sectors .content {
+	.panel .content {
 		width: var(--mobile-width);
 		margin-inline: auto;
-		padding: clamp(3rem,10vw,7rem) 0 clamp(3rem,12vw,7rem);
+    	padding: clamp(3rem,10vw,8rem) 0 clamp(3rem,12vw,8rem);
 		display: flex;
 		flex-direction: column;
     	gap: clamp(1rem, 4vmin, 1.5rem);
 	}
 
-	.services h2, .sectors h2 {
+	.panel h3 {
 		font-size: clamp(2rem, 11vw, 6rem);
 		font-weight: 500;
 	}
 
-	.services h2::after, .sectors h2::after {
+	.panel h2::after {
 		content:'';
     	width: 2.5rem;
 		height: 3rem;
@@ -368,20 +450,20 @@ const services = await getCollection("services");
 		background-image: url('/icons/sectors-grey.svg');
 	}
 
-	.services p, .sectors p {
+	.panel .content p {
     	font-size: clamp(1.5rem,4vmin,2rem);
     	max-width: 65rem;
     	line-height: 1.5;
 	}
 
-	.services .content > hr, .sectors .content > hr, .services .subsets hr, .sectors .subsets hr {
+	.panel .content > hr, .panel .subsets hr {
 		width: 2rem;
 		margin: 1rem 0;
 		height:0.1rem;
 		background-color: rgb(248 248 255 / 20%);
 	}
 
-	.services .cta, .sectors .cta {
+	.panel .cta {
 		font-size: clamp(1.3rem,5vmin,2.1rem);
 		font-weight: 500;
 		letter-spacing: 0.05rem;
@@ -389,9 +471,14 @@ const services = await getCollection("services");
 		align-items: center;
 		gap: 1rem;
     	width: fit-content;
+		text-underline-offset: 0.7rem;
 	}
 
-	.services .cta span, .sectors .cta span {
+	.panel .cta:hover {
+    	text-decoration: underline 0.2rem #ffffff33;
+	}
+
+	.panel .cta span {
 		display: block;
 		border-bottom: 0.4rem solid var(--highlight);
 		border-right: 0.4rem solid var(--highlight);
@@ -400,25 +487,32 @@ const services = await getCollection("services");
 		transform: rotate(-45deg);
 	}
 
-	.services .image img, .sectors .image img {
+	.locations.panel .cta span {
+		border-bottom: 0.4rem solid var(--dark);
+		border-right: 0.4rem solid var(--dark);
+	}
+
+	.panel .image img {
 		width: 100%;
 		object-fit: cover;
 		object-position: center;
 		display: flex;
     	height: clamp(30rem,50vw,62rem);
+    	background-color: rgba(255,255,255,0.2);
+    	max-height: 70vh;
 	}
 
-	.services .subsets, .sectors .subsets {
+	.panel .subsets {
 		display: flex;
     	gap: clamp(1rem, 2vw, 2rem) 0;
     	flex-flow: row wrap;
 	}
 
-	.services .subsets > div, .sectors .subsets > div {
+	.panel .subsets > div {
     	font-size: clamp(1.3rem,4.5vmin,2rem);
 	}
 
-	.services .subsets .heading, .sectors .subsets .heading {
+	.panel .subsets .heading {
     	display: block;
 		color:var(--light);
 		font-size: 1em;
@@ -445,21 +539,21 @@ const services = await getCollection("services");
     	background-image: url(/icons/outdoor.svg);
 	}
 
-	.services .subsets a, .sectors .subsets a {
+	.panel .subsets a {
 		font-size: 0.7em;
     	color: var(--light-b);
 	}
 
-	.services .subsets a:not(.heading), .sectors .subsets a:not(.heading) {
+	.panel .subsets a:not(.heading) {
 		transition: color 0.4s ease;
 	}
 
-	.services .subsets a:not(.heading):hover, .sectors .subsets a:not(.heading):hover {
+	.panel .subsets a:not(.heading):hover {
 		color:var(--light);
 		transition: color 0s ease;
 	}
 
-	.services .subsets a:not(.heading):not(:last-child):after, .sectors .subsets a:not(.heading):not(:last-child):after {
+	.panel .subsets a:not(.heading):not(:last-child):after {
 		content: "";
 		position: relative;
 		width: 0.3rem;
@@ -470,6 +564,136 @@ const services = await getCollection("services");
 		margin: 0 0.4rem;
 		transform: translateY(-100%);
 	}
+
+	section.locations {
+		background-color:var(--highlight);
+		color:var(--light)
+	}
+
+	.locations.panel .content {
+    	padding: clamp(3rem,10vw,13rem) 0 clamp(3rem,12vw,13rem);
+	}
+
+	section.testimonials {
+		background-color: var(--primary);
+		color:var(--light);
+		overflow: hidden;
+    	padding: clamp(3rem,10vw,5rem) 0 clamp(3rem,12vw,5rem);
+	}
+
+	.testimonials > .ctnr {
+    	max-width: clamp(9rem,100vw,110rem);
+		margin-inline: auto;
+	}
+
+	.testimonials h3 {
+		margin-inline: auto;
+		font-size: clamp(2rem,7vw,3.6rem);
+		text-align: center;
+		font-weight: 500;
+		background-color: var(--primary-b);
+		width: fit-content;
+    	padding: 0.4rem 1rem;
+		margin-bottom: 3rem;
+		max-width: 80vw;
+	}
+
+	.slider {
+		display: block;
+		gap:1rem;
+		max-width: var(--mobile-width);
+	}
+
+	.testimonials .slider .box {
+		box-sizing: border-box;
+		color: var(--light);
+		/* transition: opacity 1.5s ease; */
+		margin-inline: auto;
+	}
+
+	.testimonials .slider img {
+    	width: clamp(26rem, 80vw, 32rem);
+		border-radius: 0.9rem;
+		margin:0 1rem;
+	}
+
+	/* .testimonials .slider .box:not(.tns-slide-active) {
+		opacity: 0.1;
+	} */
+
+	.slider .tns-controls {
+		display: flex;
+		justify-content: center;
+	}
+
+	.slider .tns-controls button {
+		
+	}
+
+	section.rates {
+    	padding: clamp(3rem,10vw,8rem) 0 clamp(3rem,12vw,8rem);
+		background-image: url('/textures/dot-grid.jpg');
+		background-size: 30rem;
+	}
+
+	.rates > .ctnr {
+		width: var(--mobile-width);
+		margin-inline: auto;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		gap: 1.4rem;
+		align-items: center;
+	}
+
+	.rates h3 {
+		font-size: clamp(2rem,7vw,5rem);
+		color: var(--highlight);
+	}
+
+	.rates p {
+		font-size: clamp(1.5rem,4vmin,2rem);
+		max-width: 70rem;
+		line-height: 1.5;
+		margin-inline: auto;
+		font-weight: 500;
+	}
+
+	.rates .cta {
+		padding: 1.2rem 1.8rem 1.2rem 1.5rem;
+		background-color: var(--light);
+		border: 0.2rem solid var(--light-d);
+		font-size: clamp(1.5rem,4vmin,1.8rem);
+		border-radius: 0.3rem;
+		margin-top: 2rem;
+		display: inline-flex;
+		align-items: center;
+		font-weight: 500;
+		gap: 0.6rem;
+	}
+
+	.rates .cta::before {
+		content:'';
+		display: block;
+		border-bottom: 0.4rem solid var(--highlight);
+		border-right: 0.4rem solid var(--highlight);
+		border-top: 0.4rem solid transparent;
+		border-left: 0.4rem solid transparent;
+		transform: rotate(-45deg);
+		margin-right: 1rem;
+	}
+
+	.rates .cta b {
+		color: var(--highlight);
+	}
+
+
+
+
+
+
+
+
 
 	@media screen and (min-width: 900px) {
 		.intro > .ctnr {
@@ -505,37 +729,41 @@ const services = await getCollection("services");
 			display: flex;
 		}
 
-		.services > .ctnr, .sectors > .ctnr {
+		.panel > .ctnr {
 			flex-direction: row;
 			width: calc(100% - (100% - var(--mobile-width)) / 2);
 			margin-left: auto;
 		}
 
-		.services .content, .sectors .content {
+		.panel .content {
     		margin-right: 5vw;
 			width: unset;
 			max-width: clamp(40rem,50vw,95rem);
 			flex: 1;
 		}
 
-		.services .image, .sectors .image {
+		.locations.panel > .ctnr .content {
+    		max-width: clamp(40rem,30vw,95rem);
+		}
+
+		.panel .image {
 			flex: 1;
 			position: relative;
 		}
 
-		.services .image img, .sectors .image img {
+		.panel .image img {
 			height: 100%;
 			position: absolute;
 			inset: 0;
 		}
 
-		.services .subsets > div, .sectors .subsets > div {
+		.panel .subsets > div {
     		max-width: 50rem;
 			width: 45%;
 			flex: 1;
 		}
 
-		.services .subsets hr, .sectors .subsets hr {
+		.panel .subsets hr {
 			width: 0.1rem;
 			height: auto;
     		margin: 0 clamp(1rem, 2vw, 3rem);

@@ -14,13 +14,13 @@ const services = await getCollection("services");
 
 <header>
     <div class="ctnr">
-        <a href="/index.html" class="logo_anchor">
+        <a href="/" class="logo_anchor">
             <img src="/tcn-logo-default.svg" alt="The Clean Network logo" />
         </a>
 
         <nav>
             <div class="ctnr">
-                <a href="/index.html">Home</a>
+                <a href="/">Home</a>
 
                 <div class="subnav">
                     <div class="flex">
@@ -284,6 +284,13 @@ const services = await getCollection("services");
         bottom: 0;
         margin: 6rem 0 2rem;
         text-align: center;
+        box-shadow: inset 0 -1.2rem 2rem -1.8rem #fff;
+        transition: filter 0.5s ease;
+    }
+
+    header nav .cta:hover {
+        filter: brightness(1.1);
+        transition: filter 0.1s ease;
     }
 
     header nav > .ctnr {
@@ -546,8 +553,8 @@ const services = await getCollection("services");
         }
 
         .subnav:hover .subsets {
-            transition: opacity 0.2s ease, visibility 0.2s ease,
-                transform 0.2s ease;
+            transition: opacity 0.2s 0.1s ease, visibility 0.2s 0.1s ease,
+                transform 0.2s 0.1s ease;
             opacity: 1;
             visibility: visible;
             z-index: 2;
