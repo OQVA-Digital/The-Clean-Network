@@ -212,24 +212,9 @@ const services = await getCollection("services");
 				</div>
 
 				<script>
-
-					// TINY SLIDER 2
-					
-					var slider = tns({
-						container: '.testimonials .slider',
-						center: true,
-						items: 1,
-						slideBy: 'page',
-						speed: 300,
-						autoWidth:true,
-						controls:true,
-						controlsPosition:'bottom',
-						controlsText:["<", ">"],
-						navAsThumbnails:true,
-						loop: false,
-						
-					  });
-					</script>
+					import "../scripts/tiny-slider.js"
+					import "../styles/tiny-slider.css"
+				</script>
 			</div>
 		</section>
 
