@@ -174,7 +174,7 @@ const services = await getCollection("services");
 			</div>
 		</section>
 
-		<section class="locations panel">
+		<section class="locations panel" id="locations">
 			<div class="ctnr">
 				<div class="content">
 					<h3>Locations</h3>
@@ -307,7 +307,7 @@ const services = await getCollection("services");
 				</div>
 
 				<div class="map">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3140.0051940248136!2d-0.10620783391475411!3d51.52262576077149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761d37914708a9%3A0x153c94a1c878c6d1!2sClean%20Network!5e1!3m2!1sen!2sus!4v1689281322280!5m2!1sen!2sus" width="100" height="100" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=EC1M%204NH+(The%20Clean%20Network)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
 				</div>
 			</div>
 		</section>
@@ -325,6 +325,8 @@ const services = await getCollection("services");
 		background-size: cover;
 		background-position: center;
 		background-attachment: fixed;
+		/* background-color: var(--light-a);
+		background-blend-mode: luminosity; */
 	}
 
 	.intro > .ctnr {
@@ -481,36 +483,6 @@ const services = await getCollection("services");
 		color:var(--light);
 	}
 
-	.panel > .ctnr {
-		display: flex;
-    	flex-direction: column-reverse;
-	}
-
-	.panel .content {
-		width: var(--mobile-width);
-		margin-inline: auto;
-    	padding: clamp(3rem,10vw,8rem) 0 clamp(3rem,12vw,8rem);
-		display: flex;
-		flex-direction: column;
-    	gap: clamp(1rem, 4vmin, 1.5rem);
-	}
-
-	.panel h3 {
-		font-size: clamp(2rem, 11vw, 6rem);
-		font-weight: 500;
-	}
-
-	.panel h3::after {
-		content:'';
-    	width: 2.5rem;
-		height: 3rem;
-		display: inline-block;
-		margin-left: 1rem;
-		background-size: contain;
-		background-position: center;
-		background-repeat: no-repeat;
-	}
-
 	.services h3::after {
 		background-image: url('/icons/services.svg');
 	}
@@ -519,74 +491,9 @@ const services = await getCollection("services");
 		background-image: url('/icons/sectors-grey.svg');
 	}
 
-	.panel .content p {
-    	font-size: clamp(1.5rem,4vmin,2rem);
-    	max-width: 65rem;
-    	line-height: 1.5;
-	}
-
-	.panel .content > hr, .panel .subsets hr {
-		width: 2rem;
-		margin: 1rem 0;
-		height:0.1rem;
-		background-color: rgb(248 248 255 / 20%);
-	}
-
-	.panel .cta {
-		font-size: clamp(1.3rem,5vmin,2.2rem);
-		font-weight: 500;
-		letter-spacing: 0.05rem;
-		display: flex;
-		align-items: center;
-		gap: 1rem;
-    	width: fit-content;
-		text-underline-offset: 0.7rem;
-	}
-
-	.panel .cta:hover {
-    	text-decoration: underline 0.2rem #ffffff33;
-	}
-
-	.panel .cta span {
-		display: block;
-		border-bottom: 0.4rem solid var(--highlight);
-		border-right: 0.4rem solid var(--highlight);
-		border-top: 0.4rem solid transparent;
-		border-left: 0.4rem solid transparent;
-		transform: rotate(-45deg);
-	}
-
-	.locations.panel .cta span {
+	.locations.panel .cta span:first-of-type {
 		border-bottom: 0.4rem solid var(--dark);
 		border-right: 0.4rem solid var(--dark);
-	}
-
-	.panel .image img {
-		width: 100%;
-		object-fit: cover;
-		object-position: center;
-		display: flex;
-    	height: clamp(30rem,50vw,62rem);
-    	background-color: rgba(255,255,255,0.2);
-    	max-height: 76vh;
-	}
-
-	.panel .subsets {
-		display: flex;
-    	gap: clamp(1rem, 2vw, 2rem) 0;
-    	flex-flow: row wrap;
-	}
-
-	.panel .subsets > div {
-    	font-size: clamp(1.3rem,4.5vmin,2rem);
-	}
-
-	.panel .subsets .heading {
-    	display: block;
-		color:var(--light);
-		font-size: 1em;
-    	margin-bottom: 0.4rem;
-    	font-weight: 500;
 	}
 
 	.services .subsets .heading .icon {
@@ -608,32 +515,6 @@ const services = await getCollection("services");
     	background-image: url(/icons/outdoor.svg);
 	}
 
-	.panel .subsets a {
-		font-size: 0.7em;
-    	color: var(--light-b);
-	}
-
-	.panel .subsets a:not(.heading) {
-		transition: color 0.4s ease;
-	}
-
-	.panel .subsets a:not(.heading):hover {
-		color:var(--light);
-		transition: color 0s ease;
-	}
-
-	.panel .subsets a:not(.heading):not(:last-child):after {
-		content: "";
-		position: relative;
-		width: 0.3rem;
-		height: 0.3rem;
-		display: inline-block;
-		background-color: var(--light-b);
-		border-radius: 1rem;
-		margin: 0 0.4rem;
-		transform: translateY(-100%);
-	}
-
 	section.locations {
 		background-color:var(--highlight);
 		color:var(--light)
@@ -648,6 +529,27 @@ const services = await getCollection("services");
 		color:var(--light);
 		overflow: hidden;
     	padding: clamp(3rem,10vw,5rem) 0 clamp(3rem,12vw,5rem);
+		position:relative;
+	}
+
+	.testimonials::before, .testimonials::after {
+		content:'';
+		position:absolute;
+		top:0;
+		bottom:0;
+		width: clamp(2rem,11vw,10rem);
+		opacity: 0.8;
+    	z-index: 1;
+	}
+
+	.testimonials::before {
+		left: 0;
+    	background-image: linear-gradient(90deg, var(--primary-b), transparent);
+	}
+
+	.testimonials::after {
+		right: 0;
+    	background-image: linear-gradient(-90deg, var(--primary-b), transparent);
 	}
 
 	.testimonials > .ctnr {
@@ -664,7 +566,7 @@ const services = await getCollection("services");
 		background-color: var(--primary-b);
 		width: fit-content;
     	padding: 0.4rem 1rem;
-		margin-bottom: 3rem;
+		margin-bottom: 2rem;
 		max-width: 80vw;
 	}
 
@@ -701,7 +603,7 @@ const services = await getCollection("services");
 	}
 
 	section.rates {
-    	padding: clamp(3rem,13vw,7rem) 0;
+    	padding: clamp(3rem,13vw,7rem) 0 clamp(3rem,13vw,8rem);
 		background-image: url('/textures/dot-grid.jpg');
 		background-size: 30rem;
 	}
@@ -722,7 +624,7 @@ const services = await getCollection("services");
 	}
 
 	.rates p {
-		font-size: clamp(1.5rem,4vmin,2.2rem);
+    	font-size: clamp(1.5rem,3.7vw,2.2rem);
 		max-width: 75rem;
 		line-height: 1.5;
 		margin-inline: auto;
@@ -759,8 +661,7 @@ const services = await getCollection("services");
 
 	section.contact {
     	padding: clamp(3rem,16vw,8rem) 0;
-		background-color: var(--light-a);
-		background-blend-mode: luminosity;
+    	scroll-margin: clamp(1rem,16vmin,7.5rem);
 	}
 
 	.contact > .ctnr {
@@ -809,12 +710,17 @@ const services = await getCollection("services");
 	}
 
 	.find_us .map iframe {
-		width: clamp(10rem,85vw,60rem);
-		height: clamp(10rem,85vw,60rem);
+		width: clamp(10rem,85vmin,55rem);
+		height: clamp(10rem,85vmin,55rem);
 		display: flex;
 		margin: 0 auto 7rem;
 		border-radius: 2rem;
-		border: 0.2rem solid var(--primary);
+		/* border: 0.2rem solid var(--primary); */
+		background-color: var(--primary);
+	}
+
+	.find_us .content {
+
 	}
 
 
@@ -857,48 +763,17 @@ const services = await getCollection("services");
 			display: flex;
 		}
 
-		.panel > .ctnr {
-			flex-direction: row;
-			width: calc(100% - (100% - var(--mobile-width)) / 2);
-			margin-left: auto;
-		}
-
-		.panel .content {
-    		margin-right: 5vw;
-			width: unset;
-			max-width: clamp(40rem,50vw,95rem);
-			flex: 1;
-		}
-
-		.locations.panel > .ctnr .content {
-    		max-width: clamp(40rem,30vw,95rem);
-		}
-
-		.panel .image {
-			flex: 1;
-			position: relative;
-		}
-
-		.panel .image img {
-			height: 100%;
-			position: absolute;
-			inset: 0;
-		}
-
-		.panel .subsets > div {
-    		max-width: 50rem;
-			width: 45%;
-			flex: 1;
-		}
-
-		.panel .subsets hr {
-			width: 0.1rem;
-			height: auto;
-    		margin: 0 clamp(1rem, 2vw, 3rem);
-		}
-
 		.find_us .map iframe {
 			margin:0 auto;
+		}
+
+		.find_us > .ctnr {
+			flex-direction: row;
+		}
+
+		.panel.find_us .content {
+			margin: unset;
+    		max-width: clamp(40rem,33vw,95rem);
 		}
 
 	}

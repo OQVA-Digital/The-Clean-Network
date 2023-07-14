@@ -1,8 +1,8 @@
 ---
 title: "Curtains & Blinds"
-description: "Transform your brand with our identity-based framework. Boost success, develop clear customer avatars, and navigate market complexities. Start now!"
+description: "Refresh your window coverings with our thorough cleaning services. We eliminate dust, pollen, and odors from curtains and blinds, revitalizing your space. Experience a cleaner, healthier environment with our professional curtain and blind cleaning."
 type: "indoor"
-heroImage: "/post-covers/your-brand-is-compression-of-sensation.jpg"
+image: "/images/services/curtains-and-blinds.jpg"
 ---
 
 

@@ -1,8 +1,8 @@
 ---
 title: "Desks & Furniture"
-description: "Transform your brand with our identity-based framework. Boost success, develop clear customer avatars, and navigate market complexities. Start now!"
+description: "Extend the life of your office furniture with our comprehensive cleaning services. Our skilled team removes dust, dirt, and stains, preserving the cleanliness and appeal of your workspace. Trust us for expert desk and furniture cleaning that keeps your office looking its best."
 type: "indoor"
-heroImage: "/post-covers/your-brand-is-compression-of-sensation.jpg"
+image: "/images/services/desks-and-furniture.jpg"
 ---
 
 

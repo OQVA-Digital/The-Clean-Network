@@ -1,8 +1,8 @@
 ---
 title: "Post-construction"
-description: "Transform your brand with our identity-based framework. Boost success, develop clear customer avatars, and navigate market complexities. Start now!"
+description: "Complete your construction project with our efficient cleaning services. We remove debris, dust, and residue, leaving your space clean and ready to use. Trust us for meticulous post-construction clean-up."
 type: "indoor"
-heroImage: "/post-covers/your-brand-is-compression-of-sensation.jpg"
+image: "/images/services/post-construction.jpg"
 ---
 
 

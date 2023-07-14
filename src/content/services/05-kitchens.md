@@ -1,8 +1,9 @@
 ---
 title: "Kitchens"
-description: "Transform your brand with our identity-based framework. Boost success, develop clear customer avatars, and navigate market complexities. Start now!"
+description: "Enjoy a sparkling clean and grease-free kitchen with our expert services. Our skilled team uses industry-grade products to remove stubborn stains and sanitize surfaces. From countertops to appliances, we ensure a hygienic cooking space."
 type: "indoor"
 heroImage: "/post-covers/your-brand-is-compression-of-sensation.jpg"
+image: "/images/services/kitchen.jpg"
 ---
 
 

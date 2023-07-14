@@ -1,4 +1,10 @@
-main>.ctnr {
+/* main>.ctnr {
     width: var(--mobile-width);
     margin-inline: auto;
+} */
+
+@media screen and (min-width:850px) {
+    .panel .content {
+        max-width: clamp(40rem,35vw,95rem);
+    }
 }

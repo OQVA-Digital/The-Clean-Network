@@ -11,12 +11,12 @@
         </div>
 
         <nav>
-            <a href="#"><span></span>Home</a>
-            <a href="#"><span></span>Services</a>
-            <a href="#"><span></span>Sectors</a>
-            <a href="#"><span></span>Locations</a>
-            <a href="#"><span></span>About</a>
-            <a href="#"><span></span>contact_box</a>
+            <a href="/"><span></span>Home</a>
+            <a href="/services/"><span></span>Services</a>
+            <a href="/sectors/"><span></span>Sectors</a>
+            <a href="/locations/"><span></span>Locations</a>
+            <a href="/about/"><span></span>About</a>
+            <a href="/#contact"><span></span>contact</a>
         </nav>
 
         <div class="contact_box">
@@ -91,6 +91,7 @@
         flex-flow: row wrap;
         gap: 1.2rem 2rem;
         align-content: start;
+        max-width: 35vmax;
     }
 
     footer nav a {
@@ -116,7 +117,7 @@
     }
 
     
-	@media screen and (min-width: 900px) {
+	@media screen and (min-width: 850px) {
 
         footer nav {
             flex-direction: column;

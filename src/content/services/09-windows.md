@@ -1,8 +1,8 @@
 ---
 title: "Windows"
-description: "Transform your brand with our identity-based framework. Boost success, develop clear customer avatars, and navigate market complexities. Start now!"
+description: "Transform your view with our professional window cleaning. Our experts use streak-free solutions to remove dirt and smudges. Enjoy a pristine and bright environment with our exceptional service."
 type: "external"
-heroImage: "/post-covers/your-brand-is-compression-of-sensation.jpg"
+image: "/images/services/windows.jpg"
 ---
 
 

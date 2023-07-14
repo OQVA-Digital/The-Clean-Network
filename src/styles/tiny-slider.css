@@ -107,6 +107,7 @@
 .tns-controls button[disabled] {
     background-color: var(--primary-b);
     color:var(--light);
+    cursor: default;
 }
 
 .tns-lazy-img.tns-complete {

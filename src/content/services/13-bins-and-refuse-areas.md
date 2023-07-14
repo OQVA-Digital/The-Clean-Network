@@ -1,8 +1,8 @@
 ---
 title: "Bins & Refuse Areas"
-description: "Transform your brand with our identity-based framework. Boost success, develop clear customer avatars, and navigate market complexities. Start now!"
+description: "Maintain a clean environment with our bin and refuse area cleaning. Our rigorous techniques eliminate bacteria, prevent pests, and control odors. Trust us for hygienic and well-maintained bins and refuse areas."
 type: "external"
-heroImage: "/post-covers/your-brand-is-compression-of-sensation.jpg"
+image: "/images/services/bins-and-refuse-areas.jpg"
 ---
 
 

@@ -1,8 +1,8 @@
 ---
 title: "Air Ducts & Vents"
-description: "Transform your brand with our identity-based framework. Boost success, develop clear customer avatars, and navigate market complexities. Start now!"
+description: "Improve indoor air quality with our thorough air duct and vent cleaning. We remove dust, debris, and allergens, allowing you to breathe easier. Experience the benefits of our professional cleaning for a healthier environment."
 type: "indoor"
-heroImage: "/post-covers/your-brand-is-compression-of-sensation.jpg"
+image: "/images/services/air-ducts-and-vents.jpg"
 ---
 
 

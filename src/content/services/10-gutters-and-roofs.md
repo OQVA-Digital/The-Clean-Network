@@ -1,8 +1,8 @@
 ---
 title: "Gutters & Roofs"
-description: "Transform your brand with our identity-based framework. Boost success, develop clear customer avatars, and navigate market complexities. Start now!"
+description: "Protect your property with our reliable gutter and roof cleaning. We remove debris, ensuring proper water flow and preventing damage. Trust us to keep your gutters and roofs clean and functional."
 type: "external"
-heroImage: "/post-covers/your-brand-is-compression-of-sensation.jpg"
+image: "/images/services/gutters-and-roofs.jpg"
 ---
 
 

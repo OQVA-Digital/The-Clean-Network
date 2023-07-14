@@ -1,8 +1,8 @@
 ---
 title: "Drains"
-description: "Transform your brand with our identity-based framework. Boost success, develop clear customer avatars, and navigate market complexities. Start now!"
+description: "Ensure smooth drainage with our expert cleaning services. We tackle clogged drains using specialized tools, eliminating blockages and odors. Experience hassle-free drain maintenance with our professional cleaners."
 type: "external"
-heroImage: "/post-covers/your-brand-is-compression-of-sensation.jpg"
+image: "/images/services/drains.jpg"
 ---
 
 

@@ -1,8 +1,8 @@
 ---
 title: "Pressure Cleaning"
-description: "Transform your brand with our identity-based framework. Boost success, develop clear customer avatars, and navigate market complexities. Start now!"
+description: "Restore exterior surfaces with our high-pressure cleaning. Our powerful equipment and eco-friendly solutions remove dirt and stains from driveways, patios, and more. See a noticeable transformation with our rejuvenating service."
 type: "external"
-heroImage: "/post-covers/your-brand-is-compression-of-sensation.jpg"
+image: "/images/services/pressure-cleaning.jpg"
 ---
 
 

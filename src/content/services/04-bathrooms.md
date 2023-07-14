@@ -1,8 +1,8 @@
 ---
 title: "Bathrooms"
-description: "Transform your brand with our identity-based framework. Boost success, develop clear customer avatars, and navigate market complexities. Start now!"
+description: "Maintain pristine bathrooms with our specialized services. Our trained cleaners use high-quality disinfectants to eliminate germs and bacteria. From toilets to sinks, we leave your bathrooms fresh, hygienic, and inviting."
 type: "indoor"
-heroImage: "/post-covers/your-brand-is-compression-of-sensation.jpg"
+image: "/images/services/bathroom.jpg"
 ---
 
 
