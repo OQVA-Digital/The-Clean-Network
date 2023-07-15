@@ -1,9 +1,10 @@
 ---
-title: "Bins & Refuse Areas"
-description: "Maintain a clean environment with our bin and refuse area cleaning. Our rigorous techniques eliminate bacteria, prevent pests, and control odors. Trust us for hygienic and well-maintained bins and refuse areas."
-type: "external"
-image: "/images/services/bins-and-refuse-areas.jpg"
+title: "Floors"
+description: "Achieve spotless floors with our professional cleaning services. Our experts use top-notch equipment and eco-friendly products for deep cleaning and restoration. From hardwood to carpet, we offer tailored floor cleaning solutions for a fresh and inviting space."
+type: "indoor"
+image: "/images/services/floor.jpg"
 ---
+
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu aliquet nisi. **Sed tincidunt arcu erat, non tristique tellus varius quis.** Phasellus et imperdiet justo, id pretium arcu. Phasellus aliquet ex odio, at eleifend elit semper sit amet. Phasellus ut mattis dolor, sed consequat ipsum.
 

@@ -16,9 +16,81 @@ const { Content } = await services.render();
 ---
 
 <SubpageLayout {...services.data}>
-    <h1>{services.data.title}</h1>
-    
-    <Content />
+    <section class="intro">
 
-    <img src={services.data.image} alt="">
+        <div class="content">
+            <h1>{services.data.title} {String(services.data.title).includes('Cleaning') ? "" : "Cleaning"}</h1>
+    
+            <p>{services.data.description}</p>
+        </div>
+
+        <!-- <img src={services.data.image} alt={`Photo of ${services.data.title} cleaning service`}> -->
+
+        <div class="cover" style={`background-image: url(${services.data.image});`}></div>
+    
+    </section>
+
+    <!-- <hr> -->
+
+    <article>
+        <Content />
+
+        <a href="/#contact" class="cta" aria-label="Get a free quote for our cleaning services">Get a free quote</a>
+
+        <a href="/services/" class="back">Back to services</a>
+    </article>
 </SubpageLayout>
+
+
+<style>
+    .intro img {
+        height: clamp(5rem,60vmin,36rem);
+        object-fit: cover;
+        width: 100%;
+        object-position: center;
+    }
+
+    .intro .cover {
+        width: 100%;
+        height: clamp(5rem,91vmin,30rem);
+        background-position: 24% center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        margin-bottom: clamp(2rem,6vmin,5rem);
+    }
+
+    .intro .content, article {
+        width: clamp(9rem, 85vw, 85rem);
+        margin-inline: auto;
+    }
+
+    .intro .content {
+        margin: clamp(2rem,9vmin,4rem) auto;
+    }
+
+    .intro h1 {
+        font-size: clamp(2rem,9vw,5rem);
+        margin-bottom: 0.6rem;
+    }
+
+    .intro p {
+        font-size: clamp(1.5rem,3.6vmin,1.7rem);
+        font-weight: 400;
+        line-height: 1.4;
+        color: var(--grey);
+        /* text-align: justify; */
+    }
+
+    hr {
+        width: clamp(9rem,85vw,80rem);
+        margin-inline: auto;
+        margin-block: clamp(2rem,6vmin,3rem);
+        height: 0.1rem;
+        background-color: var(--light-a);
+    }
+
+    @media screen and (min-width:850px) {
+
+    }
+</style>

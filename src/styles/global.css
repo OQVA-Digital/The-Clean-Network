@@ -5,7 +5,7 @@
     --light-c: #ffe3dc;
     --light-d: #E6EEFF;
 
-    --grey: #666;
+    --grey: #667687;
 
     --dark: #2f363c;
 
@@ -176,7 +176,6 @@ form label {
     gap: 0.6rem;
     font-weight: 600;
     line-height: 1.4;
-    letter-spacing: 0.05rem;
     font-size: 1.6rem;
 }
 
@@ -311,30 +310,22 @@ body form button[type='submit'].submited {
     padding: clamp(3rem,10vmin,8rem) 0 clamp(3rem,12vmin,8rem);
     display: flex;
     flex-direction: column;
-    gap: clamp(1rem, 4vmin, 1.5rem);
+    gap: clamp(1rem, 2vmin, 1.5rem);
 }
 
-.panel h3, .panel .title {
+.panel h3 {
     font-size: clamp(2rem, 11vw, 6rem);
     font-weight: 500;
 }
 
-.panel h3::after {
-    content:'';
-    width: 2.5rem;
-    height: 3rem;
-    display: inline-block;
-    margin-left: 1rem;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+.panel .content p {
+    line-height: 1.5;
+    font-size: clamp(1.5rem,4vmin,2rem);
 }
 
-.panel .content p, .panel .description {
-    font-size: clamp(1.5rem,4vmin,2rem);
+/* .panel .content p, .panel .description {
     max-width: 65rem;
-    line-height: 1.5;
-}
+} */
 
 .panel .content > hr, .panel .subsets hr {
     width: 2rem;
@@ -376,6 +367,8 @@ body form button[type='submit'].submited {
     height: clamp(30rem,50vw,62rem);
     background-color: rgba(255,255,255,0.2);
     max-height: calc(100dvh - clamp(1rem,16vmin,7.5rem));
+    font-size: 2rem;
+    background-color: var(--light-d);
 }
 
 .panel .subsets {
@@ -385,11 +378,12 @@ body form button[type='submit'].submited {
 }
 
 .panel .subsets > div {
-    font-size: clamp(1.3rem,4.5vmin,2rem);
+    font-size: clamp(1.3rem,4.8vmin,2rem);
 }
 
 .panel .subsets .heading {
     display: block;
+    width: fit-content;
     color:var(--light);
     font-size: 1em;
     margin-bottom: 0.4rem;
@@ -479,24 +473,24 @@ body form button[type='submit'].submited {
 
 @media (min-width:1920px) {
     html {
-        font-size: 11px;
+        font-size: 13px;
     }
 }
 
 @media (min-width:2440px) {
     html {
-        font-size: 13px;
+        font-size: 16px;
     }
 }
 
 @media (min-width:3000px) {
     html {
-        font-size: 16px;
+        font-size: 17px;
     }
 }
 
 @media (min-width:4000px) {
     html {
-        font-size: 22px;
+        font-size: 28px;
     }
 }

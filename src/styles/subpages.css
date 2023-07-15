@@ -1,7 +1,86 @@
-/* main>.ctnr {
-    width: var(--mobile-width);
+main {
+    margin-bottom: clamp(4rem,18vw,10rem);
+}
+
+article p {
+    font-size: clamp(1.5rem,3.9vmin,1.8rem);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    /* text-align: justify; */
+}
+
+article p strong, article p em {
+    font-weight: 500;
+}
+
+article .cta {
+    display: block;
+    text-align: center;
+    padding: 1.2rem;
+    background-color: rgb(227 227 255 / 70%);
+    color: var(--primary-a);
+    font-size: 2rem;
+    border-radius: 0.3rem;
+    position: sticky;
+    bottom: 1.5rem;
+    font-weight: 600;
+    border: 0.1rem solid var(--light-d);
+    margin-top: 3rem;
+    backdrop-filter: blur(0.5rem);
+    transition: background-color 0.4s ease;
+    -webkit-transition: background-color 0.4s ease;
+    -moz-transition: background-color 0.4s ease;
+    -ms-transition: background-color 0.4s ease;
+    -o-transition: background-color 0.4s ease;
+}
+
+article .cta:hover {
+    background-color: rgb(245 245 255 / 80%);
+    transition: background-color 0.1s ease;
+    -webkit-transition: background-color 0.1s ease;
+    -moz-transition: background-color 0.1s ease;
+    -ms-transition: background-color 0.1s ease;
+    -o-transition: background-color 0.1s ease;
+}
+
+article a.back {
+    display: block;
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    color: var(--primary-a);
+    font-size: clamp(1.5rem,4vmin,1.8rem);
+    font-weight: 509;
+    text-align: center;
+    width: fit-content;
     margin-inline: auto;
-} */
+}
+
+article a.back::before {
+    content: "";
+    display: inline-block;
+    border-bottom: 0.4rem solid var(--light-b);
+    border-right: 0.4rem solid var(--light-b);
+    border-top: 0.4rem solid transparent;
+    border-left: 0.4rem solid transparent;
+    margin-right: 1rem;
+    transform: translateY(-0.2rem) rotate(135deg);
+    -webkit-transform: translateY(-0.2rem) rotate(135deg);
+    -moz-transform: translateY(-0.2rem) rotate(135deg);
+    -ms-transform: translateY(-0.2rem) rotate(135deg);
+    -o-transform: translateY(-0.2rem) rotate(135deg);
+}
+
+article a.back:hover {
+    color: var(--grey);
+}
+
+article img {
+    margin: clamp(3rem, 7vmin, 4rem) auto;
+    border-radius: 0.5rem;
+    width: clamp(9rem,85vw,80rem);
+    display: block;
+}
 
 @media screen and (min-width:850px) {
     .panel .content {

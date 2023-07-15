@@ -22,31 +22,81 @@ import "../../styles/subpages.css"
 
         <main>
             <div class="ctnr">
-                <h1>{title}</h1>
-        
-                {
-                    services.map((services) => (
-                        <>
-                            <section class="panel service_box">
-                                <div class="ctnr">
-                                    <div class="content">
-                                        <h2 class="title">
-                                            {services.data.title}
-                                        </h2>
+                <div class="intro">
+                    <h1>Our Services</h1>
+                </div>
+                
+                <div class="division" id="indoor">
+                    <h2>Indoor cleaning</h2>
 
-                                        <p class="description">{services.data.description}</p>
+                    <div class="flex">
+                        {
+                            services.map((services) => (
+                                <>
+                                {services.data.type === "indoor" ? (
+                                <section class="panel service_box">
+                                        <div class="ctnr">
+                                            <div class="content">
+                                                <h3>
+                                                    {services.data.title}
+                                                </h3>
+    
+                                                <p class="description">{services.data.description}</p>
+    
+                                                <a href={`/services/${services.slug}`} class="cta" aria-label={`Read more about ${services.data.title}`}><span></span> About <span class="lowercase">{services.data.title} {String(services.data.title).includes('Cleaning') ? "" : "Cleaning"} Service</span></a>
 
-                                        <a href={`/services/${services.slug}`} class="cta"><span></span> About <span class="lowercase">{services.data.title} {String(services.data.title).includes('Cleaning') ? "" : "Cleaning"} Service</span></a>
-                                    </div>
+                                                <a href="/#contact" class="quote" aria-label="Get a free quote for our cleaning services">Get a free quote</a>
+                                            </div>
+                                            
+                                            <div class="image">
+                                                <img src={services.data.image} loading="lazy" alt={`Photo of ${services.data.title} cleaning service`}/>
+                                            </div>
+                                        </div>
+                                    </section>
+                                ): null}
                                     
-				                    <div class="image">
-                                        <img src={services.data.image} loading="lazy" alt={`Photo of ${services.data.title} cleaning service`}/>
-                                    </div>
-                                </div>
-                            </section>
-                        </>
-                    ))
-                }
+                                </>
+                            ))
+                        }
+                    </div>
+                </div>
+
+                <hr>
+                
+                <div class="division" id="external">
+                    <h2>External cleaning</h2>
+
+                    <div class="flex">
+                        {
+                            services.map((services) => (
+                                <>
+                                {services.data.type === "external" ? (
+                                <section class="panel service_box">
+                                        <div class="ctnr">
+                                            <div class="content">
+                                                <h3>
+                                                    {services.data.title}
+                                                </h3>
+    
+                                                <p class="description">{services.data.description}</p>
+    
+                                                <a href={`/services/${services.slug}`} class="cta" aria-label={`Read more about ${services.data.title}`}><span></span> About <span class="lowercase">{services.data.title} {String(services.data.title).includes('Cleaning') ? "" : "Cleaning"} Service</span></a>
+
+                                                <a href="/#contact" class="quote" aria-label="Get a free quote for our cleaning services">Get a free quote</a>
+                                            </div>
+                                            
+                                            <div class="image">
+                                                <img src={services.data.image} loading="lazy" alt={`Photo of ${services.data.title} cleaning service`}/>
+                                            </div>
+                                        </div>
+                                    </section>
+                                ): null}
+                                    
+                                </>
+                            ))
+                        }
+                    </div>
+                </div>
             </div>
         </main>
 
@@ -55,23 +105,133 @@ import "../../styles/subpages.css"
 </html>
 
 <style>
+
+    main > .ctnr {
+    }
+
+    main > .ctnr > hr {
+        height: 0.1rem;
+        background-color: var(--light-a);
+        margin: clamp(4rem,18vw,10rem) 0 clamp(4rem,12vw,8rem);
+    }
+
+	.intro {
+		background-image: url("/images/office-bg01.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+	}
+
+    h1 {
+        font-size: clamp(2rem,10vw,6rem);
+        text-align: center;
+        padding: clamp(4rem,10vw,8rem) 0;
+        margin-bottom: 6rem;
+        color: var(--primary-a);
+    }
+
+    h2 {
+        font-size: clamp(1rem,4.2vmin,1.8rem);
+        background-color: rgb(248 248 255 / 75%);
+        position: sticky;
+        top: calc(clamp(1rem,16vmin,7.5rem) + 0.1rem);
+        padding: clamp(0.6rem,2vmin,1rem) clamp(1.2rem,4vmin,1.8rem);
+        backdrop-filter: blur(0.3rem);
+        margin: 2rem 0 0.5rem 0.1rem;
+        border-radius: 0 0.3rem 0.3rem 0;
+        box-shadow: 0 1rem 1rem -0.8rem rgb(248 248 255 / 40%);
+        z-index: 2;
+        color: var(--primary-a);
+        font-weight: 600;
+        border-right: 0.1rem solid var(--light);
+        border-bottom: 0.1rem solid var(--light);
+        width: fit-content;
+    }
+
+    h2::after {
+        content: "";
+        position: relative;
+        width: 1.3rem;
+        height: 1.3rem;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: inline-block;
+        margin-left: 1rem;
+    }
+
+    #indoor h2::after {
+        background-image: url(/icons/indoor.svg);
+    }
+
+    #external h2::after {
+        background-image: url(/icons/outdoor.svg);
+    }
+    .division {
+        scroll-margin: calc(clamp(1rem,16vmin,7.5rem) + 5rem);
+        width: var(--mobile-width);
+        margin-inline: auto;
+    }
+
+    .division > .flex {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+
     .panel {
-        background-image: linear-gradient(180deg, var(--light-a), transparent);
+        background-image: linear-gradient(160deg,var(--light-a),transparent 38%);
+        border: 0.1rem solid var(--light-a);
+        border-radius: 1.2rem;
+        overflow: hidden;
+        position: relative;
     }
+
     .panel > .ctnr {
-        margin-bottom: 3rem;
+        flex-direction: column;
     }
-    .panel .title {
-        font-size: clamp(2rem,10vw,5rem);
+
+    .panel .content {
+        width:85%;
+        padding: clamp(3rem,8vmin,8rem) 0 clamp(3rem,8vmin,8rem);
+    }
+
+    .panel h3 {
+        font-size: clamp(2rem,8.5vw,4.8rem);
         text-shadow: -0.6rem 0.6rem rgb(148 197 221 / 20%);
         font-weight: 600;
+        line-height: 1.1;
+        /* color:var(--primary-a); */
     }
+
     .panel .content .description {
-        font-size: clamp(1.5rem,4.2vmin,1.9rem);
+        font-size: clamp(1.5rem,3.8vmin,1.8rem);
+        color: var(--grey);
+        line-height: 1.4;
     }
 
     .panel .cta {
         font-weight: 600;
+        letter-spacing: 0;
+        font-size: clamp(1.3rem,5vmin,2.1rem);
+    }
+
+    .panel .quote {
+        font-size: clamp(1.4rem,4vw,1.8rem);
+        color: var(--primary-a);
+        font-weight: 600;
+        text-align: right;
+        padding: clamp(0.9rem,2.5vw,1.4rem) 1.4rem;
+        border-radius: 0.4rem;
+        position: absolute;
+        left: 1.5rem;
+        right: 1.5rem;
+        bottom: 1.5rem;
+        text-align: center;
+        border-top: 0.1rem solid var(--light-a);
+        background-color: rgb(248 248 255 / 75%);
+        backdrop-filter: blur(0.3rem);
     }
 
     .panel .cta:hover {
@@ -84,10 +244,33 @@ import "../../styles/subpages.css"
 
     @media screen and (min-width:850px) {
         .panel {
-            background-image: linear-gradient(-90deg, var(--light-d), transparent);
+            background-image: linear-gradient(175deg,var(--light-a),transparent 15%);
         }
         .panel > .ctnr {
-            border-bottom: 0.2rem solid var(--light-a);
+            flex-direction: row;
+        }
+
+        .panel .content {
+            max-width: clamp(40rem,30vw,95rem);
+            margin-inline: 4vw 6vw;
+        }
+        
+        .panel .quote {
+            max-width: calc(clamp(40rem,30vw,95rem) + 10vw);
+            box-sizing: border-box;
+            border-radius: unset;
+            background-color: transparent;
+            backdrop-filter: unset;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            transition: background-color 0.3s ease;
+            border-top: 0.1rem solid var(--light-a);
+        }
+
+        .panel .quote:hover {
+            background-color: var(--light-a);
+            transition: background-color 0.1s ease;
         }
     }
 </style>

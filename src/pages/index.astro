@@ -89,7 +89,7 @@ const services = await getCollection("services");
 
 					<div class="subsets">
 						<div>
-							<a href="#" class="heading indoor icon"
+							<a href="/services/#indoor" class="heading indoor"
 								>Indoor Cleaning <span class="icon"></span></a
 							>
 
@@ -111,7 +111,7 @@ const services = await getCollection("services");
 						<hr />
 
 						<div>
-							<a href="#" class="heading outdoor icon"
+							<a href="/services/#external" class="heading outdoor"
 								>External Cleaning <span class="icon"></span></a
 							>
 
@@ -307,7 +307,7 @@ const services = await getCollection("services");
 				</div>
 
 				<div class="map">
-					<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=EC1M%204NH+(The%20Clean%20Network)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+					<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" loading="lazy" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=EC1M%204NH+(The%20Clean%20Network)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
 				</div>
 			</div>
 		</section>
@@ -371,7 +371,7 @@ const services = await getCollection("services");
 	}
 
 	.ctas a {
-		border-radius: 0.5rem;
+		border-radius: 0.4rem;
 		padding: 1.3rem 1.9rem;
 		border: 0.2rem solid var(--light);
     	box-shadow: inset 0 -1.2rem 1.5rem -1.5rem, 0 0.8rem 1rem -0.6rem var(--light-b);
@@ -418,6 +418,17 @@ const services = await getCollection("services");
 		display: flex;
 	}
 
+	.panel h3::after {
+		content:'';
+		width: 2.5rem;
+		height: 3rem;
+		display: inline-block;
+		margin-left: 1rem;
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
 	.intro .text_block {
 		background-color: var(--highlight);
 		padding: clamp(3rem, 10vmin, 6rem) 0;
@@ -446,27 +457,27 @@ const services = await getCollection("services");
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		gap: clamp(2rem, 3vw, 4rem);
+    	gap: clamp(1rem,3vw,2.5rem);
 		align-items: center;
-		padding: clamp(4rem, 5vw, 5rem) 0 0;
+		padding: clamp(3rem, 5vw, 3.5rem) 0 0;
 	}
 
 	.clients .content img {
-    	height: clamp(8rem, 10vw, 10rem);
+    	height: clamp(8rem, 10vw, 9rem);
 	}
 
 	.clients h3 {
-		font-size: clamp(2rem, 6vw, 3.2rem);
-		font-weight: 500;
+		font-size: clamp(2rem,6.5vw,2.8rem);
+		font-weight: 600;
 		color: var(--primary-a);
 	}
 
 	.clients .content {
 		display: flex;
 		flex-direction: row;
-		gap: clamp(2rem, 9vw, 4rem);
+		gap: clamp(2rem, 9vw, 5rem);
 		overflow: auto;
-		padding: 0 calc((100% - var(--mobile-width)) / 2) clamp(3rem,5vw,5rem);
+		padding: 0 calc((100% - var(--mobile-width)) / 2) clamp(2rem,4vw,3.5rem);
 	}
 
 	section.services {
@@ -497,14 +508,15 @@ const services = await getCollection("services");
 	}
 
 	.services .subsets .heading .icon {
-		width: 1.3rem;
-		height: 1.3rem;
-		background-size: contain;
+		width: 1.5rem;
+		height: 1.5rem;
+		background-size: 50%;
 		background-position: center;
 		background-repeat: no-repeat;
 		display: inline-block;
 		margin-left: 0.5rem;
-    	opacity: 0.24;
+		background-color: var(--light);
+		border-radius: 0.3rem;
 	}
 
 	.services .subsets .indoor .icon {
@@ -538,7 +550,7 @@ const services = await getCollection("services");
 		top:0;
 		bottom:0;
 		width: clamp(2rem,11vw,10rem);
-		opacity: 0.8;
+		opacity: 0.6;
     	z-index: 1;
 	}
 
@@ -553,7 +565,6 @@ const services = await getCollection("services");
 	}
 
 	.testimonials > .ctnr {
-    	/* max-width: clamp(9rem,100vw,110rem); */
 		max-width: 100%;
 		margin-inline: auto;
 	}
@@ -588,10 +599,6 @@ const services = await getCollection("services");
 		border-radius: 0.9rem;
 		margin:0 1rem;
 	}
-
-	/* .testimonials .slider .box:not(.tns-slide-active) {
-		opacity: 0.1;
-	} */
 
 	.slider .tns-controls {
 		display: flex;
@@ -675,7 +682,7 @@ const services = await getCollection("services");
 
 	.contact h3 {
 		text-align: center;
-		font-size: clamp(2rem,8vw,5rem);
+		font-size: clamp(2rem,8vw,4.5rem);
 		color:var(--primary-a);
 		margin-bottom: 1rem;
 

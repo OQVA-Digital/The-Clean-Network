@@ -11,7 +11,7 @@ import "../styles/subpages.css";
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <BaseHead title={title} description={description} />
+        <BaseHead title={`${title} ${String(title).includes('Cleaning') ? "" : "Cleaning"} Service · The Clean Network`} description={description} />
     </head>
     <body>
         <Header />
