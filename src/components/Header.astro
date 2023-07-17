@@ -158,9 +158,11 @@ const sectors = await getCollection("sectors");
         </nav>
 
         <button class="hambt" type="button" aria-label="Open navigation menu">
-            <span></span>
-            <span></span>
-            <span></span>
+            <div class="ctnr">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </button>
     </div>
 </header>
@@ -200,7 +202,8 @@ const sectors = await getCollection("sectors");
     }
 
     header {
-        background-color: var(--primary);
+        background-color: rgb(46 163 242 / 90%);
+        backdrop-filter: blur(0.3rem);
         position: sticky;
         top: 0;
         left: 0;
@@ -228,14 +231,29 @@ const sectors = await getCollection("sectors");
         align-items: center;
     }
 
+    .logo_anchor > picture, .logo_anchor img {
+        height:100%;
+    }
+
     header nav.show {
         opacity: 1;
         visibility: visible;
     }
 
     .hambt {
-        width: 3rem;
-        height: 2.5rem;
+        width: clamp(1rem,16vmin,7.5rem);
+        height:clamp(1rem,16vmin,7.5rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: calc((clamp(1rem,16vmin,7.5rem) - 3rem) / -2);
+        z-index: 3;
+    }
+
+    .hambt > .ctnr {
+        width: clamp(2.5rem,9vw,3.5rem);
+        height: clamp(2rem,7vw,3rem);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -243,7 +261,7 @@ const sectors = await getCollection("sectors");
     }
 
     .hambt span {
-        height: 0.4rem;
+        height: 16%;
         background-color: var(--light);
         border-radius: 0.2rem;
         transition: opacity 0.25s ease-out, transform 0.25s ease-out;
@@ -253,7 +271,7 @@ const sectors = await getCollection("sectors");
     }
 
     .hambt.close span:nth-child(1) {
-        transform: translateY(1.1rem) rotate(45deg);
+        transform: translateY(1.2rem) rotate(45deg);
     }
 
     .hambt.close span:nth-child(2) {
@@ -328,7 +346,7 @@ const sectors = await getCollection("sectors");
     }
 
     .subsets {
-        padding: 1.5rem 1.5rem 2.5rem 3rem;
+        padding: 1.5rem 0 0 3rem;
         font-size: 0.9em;
         font-weight: 500;
         display: none;
@@ -514,7 +532,7 @@ const sectors = await getCollection("sectors");
         header nav > .ctnr > a:not(.cta):hover,
         .subnav:hover > .flex > a:not(.cta) {
             transition: background-color 0.1s ease;
-            background-color: var(--primary-b);
+            background-color: #4DB1FF;
         }
 
         header nav .subnav {

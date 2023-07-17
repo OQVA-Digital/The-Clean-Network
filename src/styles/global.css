@@ -65,6 +65,8 @@ img {
     max-width: 100%;
     height: auto;
     width: auto;
+    object-fit: contain;
+    object-position: center;
 }
 
 video {
@@ -155,46 +157,6 @@ hr {
     background-position: center;
 }
 
-.contact_box {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    font-size: clamp(1rem,4vmin,1.7rem);
-    line-height: 1.5;
-}
-
-.contact_box a {
-    display: flex;
-    gap:1rem;
-    align-items: center;
-    width: fit-content;
-}
-
-.contact_box a .icon {
-    width: 1.6rem;
-    height: 1.6rem;
-}
-
-.contact_box hr {
-    margin: 1.5rem 0;
-    width: 2rem;
-    height: 0.1rem;
-    background-color: rgb(248 248 255 / 20%);
-}
-
-.contact_box .email .icon {
-    background-image: url('/icons/mail.svg');
-}
-
-.contact_box .tel .icon {
-    background-image: url('/icons/tel.svg');
-}
-
-.contact_box .social {
-    display: flex;
-    gap:1.5rem;
-}
-
 .social .icon {
     width: 2rem;
     height: 2rem;
@@ -271,6 +233,10 @@ hr {
     width: 0;
     height: 0;
     margin-right: 0.5rem;
+}
+
+.panel .image {
+    background-color: var(--light-a);
 }
 
 .panel .image img {
@@ -361,11 +327,17 @@ hr {
         position: relative;
     }
 
+    .panel .image picture {
+        position: sticky;
+        top: clamp(1rem,16vmin,7.5rem);
+        display: block;
+    }
+
     .panel .image img {
         height: 50rem;
-        position: sticky;
-        inset: 0;
-        top: clamp(1rem,16vmin,7.5rem);
+    }
+
+    .panel .image picture, .panel .image img {
     }
 
     .panel .subsets > div {

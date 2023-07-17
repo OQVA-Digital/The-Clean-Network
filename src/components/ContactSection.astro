@@ -9,24 +9,24 @@
 
             <div class="flex">
                 <p>
-                    <label>First name: <input type="text" name="name" /></label>
+                    <label>First name: <input type="text" name="name" required/></label>
                 </p>
 
                 <p>
-                    <label>Last name: <input type="text" name="name" /></label>
+                    <label>Last name: <input type="text" name="name" required/></label>
                 </p>
             </div>
 
             <p>
-                <label>Email: <input type="email" name="email" /></label>
+                <label>Email: <input type="email" name="email" required/></label>
             </p>
 
             <p>
-                <label>Message: <textarea name="message"></textarea></label>
+                <label>Message: <textarea name="message" required></textarea></label>
             </p>
 
             <p>
-                <button type="submit">Request a quote</button>
+                <button type="submit" aria-label="Submit contact form">Request a quote</button>
             </p>
             </form>
     </div>
@@ -39,9 +39,11 @@
 <style>
 
 	section.contact {
-    	padding: clamp(3rem,16vw,8rem) 0;
+    	padding: clamp(3rem,19vw,9rem) 0;
     	scroll-margin: clamp(1rem,16vmin,7.5rem);
         background-color: var(--light-a);
+        position:relative;
+        z-index: 1;
 	}
 
 	.contact > .ctnr {
@@ -67,7 +69,7 @@
     /* Form defaults */
 
     form {
-        margin: 0 auto 2rem;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
         gap: clamp(1.5rem, 2vw, 2rem);
@@ -120,13 +122,6 @@
         max-height: 25rem;
     }
 
-    input[type='date'],
-    input[type='time'] {
-        line-height: 2.4;
-        padding: unset;
-        text-indent: clamp(0.8rem, 1vw, 1rem);
-    }
-
     form button[type='submit'] {
         display: block;
         margin: 0 auto;
@@ -142,6 +137,13 @@
         transform: translateY(50%);
         background-color: var(--light);
         position:relative;
+        box-shadow: 0 1.3rem 1rem -1rem var(--light-b);
+        transition: background-color 0.4s ease;
+    }
+
+    body form button[type='submit']:hover {
+        background-color: var(--light-a);
+        transition: background-color 0.1s ease;
     }
 
     form button[type='submit']::before, form button[type='submit']::after {
@@ -174,9 +176,10 @@
     }
 
     body form button[type='submit'].submited {
-        background-color: var(--c1);
-        color: var(--c2-b);
+        background-color: var(--light-a);
+        color: var(--highlight);
         font-weight: 600;
         pointer-events: none;
+        border-color: var(--highlight);
     }
 </style>

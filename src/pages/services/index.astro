@@ -3,7 +3,7 @@ import { CollectionEntry, getCollection } from "astro:content";
 type Props = CollectionEntry<"services">["data"];
 const services = await getCollection("services");
 
-const { title, description } = Astro.props;
+const { description } = Astro.props;
 
 import Header from "../../components/Header.astro";
 import BaseHead from "../../components/BaseHead.astro";

@@ -1,3 +1,7 @@
+---
+import ContactBox from "./ContactBox.astro";
+---
+
 <footer>
     <div class="ctnr">
         <div class="content">
@@ -22,35 +26,10 @@
             <a href="/sectors/"><span></span>Sectors</a>
             <a href="/locations/"><span></span>Locations</a>
             <a href="/about/"><span></span>About</a>
-            <a href="/#contact"><span></span>contact</a>
+            <a href="/contact/"><span></span>contact</a>
         </nav>
 
-        <div class="contact_box">
-            <a href="#" class="email">
-                <span class="icon"></span>
-                office@cleannetwork.co.uk
-            </a>
-            
-            <a href="#" class="tel">
-                <span class="icon"></span>
-                London: 020 3411 0275
-            </a>
-            
-            <a href="#" class="tel">
-                <span class="icon"></span>
-                Birmingham: 0121 3927529
-            </a>
-
-            <hr>
-
-            <div class="social">
-                <a href="#" class="icon instagram" title="Instagram"></a>
-
-                <a href="#" class="icon facebook" title="Facebook"></a>
-
-                <a href="#" class="icon linkedin" title="LinkedIn"></a>
-            </div>
-        </div>
+        <ContactBox />
     </div>
 </footer>
 
