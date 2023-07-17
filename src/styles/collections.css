@@ -1,0 +1,33 @@
+
+.heading_ctnr {
+    padding: clamp(4rem,10vw,6rem) 0;
+    margin-bottom: 8rem;
+    background-color: var(--light-a);
+}
+
+h1 {
+    font-size: clamp(2rem,10vw,6rem);
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--primary-a);
+}
+
+.heading_ctnr p {
+    display: block;
+    text-align: center;
+    margin-inline: auto;
+    width: clamp(9rem, 85vw, 70rem);
+    font-size: clamp(1.5rem,3.8vmin,1.8rem);
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+main > .ctnr {
+    margin-bottom: 9rem;
+}
+
+main > .ctnr > hr {
+    height: 0.1rem;
+    background-color: var(--light-a);
+    margin-block: 8rem 6rem;
+}

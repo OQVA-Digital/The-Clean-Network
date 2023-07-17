@@ -146,100 +146,14 @@ hr {
 
 
 
-/* Form defaults */
 
-
-form {
-    margin: 0 auto 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: clamp(1.5rem, 2vw, 2rem);
-    font-size: 1.45rem;
-    justify-content: space-evenly;
-    width: 100%;
+.default_bg {
+    background-image: url("/images/office-bg01.jpg");
+    background-image: image-set("/images/office-bg01.jpg", "/images/office-bg01.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
-
-form p {
-    flex: 1;
-    min-width: clamp(10rem, 62vw, 23rem);
-}
-
-form > .flex {
-    justify-content: space-between;
-    gap: clamp(1.5rem, 2vw, 2rem);
-    flex-flow: row wrap;
-}
-
-form label {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-    font-weight: 600;
-    line-height: 1.4;
-    font-size: 1.6rem;
-}
-
-input,
-textarea,
-select {
-    padding: clamp(0.8rem, 1vw, 1rem);
-    border-radius: 0.6rem;
-    border: unset;
-    background-color: var(--light-a);
-    font-size: 1em;
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-}
-
-textarea {
-    min-width: 100%;
-    width: 100%;
-    max-width: 100%;
-    min-height: 15rem;
-    height: 15rem;
-    max-height: 25rem;
-}
-
-input[type='date'],
-input[type='time'] {
-    line-height: 2.4;
-    padding: unset;
-    text-indent: clamp(0.8rem, 1vw, 1rem);
-}
-
-form button[type='submit'] {
-    display: block;
-    margin: 0 auto;
-    font-size: 1.8rem;
-    background-color: var(--c2-b);
-    color: var(--primary-a);
-    padding: 1.2rem 3rem;
-    border-radius: 0.6rem;
-    /* margin-top: clamp(2rem, 8vw, 3.5rem); */
-    cursor: pointer;
-    font-weight: 600;
-    border: 0.2rem solid var(--light-a);
-    transform: translateY(50%);
-    background-color: var(--light);
-}
-
-form button[type='submit'].disabled {
-    background-color: var(--c2-e);
-    font-weight: 500;
-    pointer-events: none;
-}
-
-body form button[type='submit'].submited {
-    background-color: var(--c1);
-    color: var(--c2-b);
-    font-weight: 600;
-    pointer-events: none;
-}
-
-
 
 .contact_box {
     display: flex;
@@ -473,24 +387,30 @@ body form button[type='submit'].submited {
 
 @media (min-width:1920px) {
     html {
-        font-size: 13px;
+        font-size: 11px;
     }
 }
 
 @media (min-width:2440px) {
     html {
-        font-size: 16px;
+        font-size: 12px;
     }
 }
 
 @media (min-width:3000px) {
     html {
-        font-size: 17px;
+        font-size: 14px;
     }
 }
 
 @media (min-width:4000px) {
     html {
-        font-size: 28px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width:5000px) {
+    html {
+        font-size: 19px;
     }
 }

@@ -1,0 +1,47 @@
+---
+import { CollectionEntry, getCollection } from "astro:content";
+import SubpageLayout from "../../layouts/SubpageLayout.astro";
+import ContactSection from "../../components/ContactSection.astro"
+
+export async function getStaticPaths() {
+    const sectors = await getCollection("sectors");
+    return sectors.map((sectors) => ({
+        params: { slug: sectors.slug },
+        props: sectors,
+    }));
+}
+type Props = CollectionEntry<"sectors">;
+
+const sectors = Astro.props;
+const { Content } = await sectors.render();
+
+import "../../styles/posts.css"
+---
+
+<SubpageLayout {...sectors.data}>
+    <section class="intro">
+
+        <div class="cover" style={`background-image: url(${sectors.data.image});`}></div>
+
+        <div class="content">
+            <h1>{sectors.data.title}</h1>
+    
+            <p>{sectors.data.description}</p>
+        </div>
+
+        <!-- <img src={sectors.data.image} alt={`Photo of ${sectors.data.title} cleaning service`}> -->
+
+        <hr>
+    
+    </section>
+
+    <article>
+        <Content />
+
+        <a href="/#contact" class="cta" aria-label="Get a free quote for our cleaning sectors">Get a free quote</a>
+
+        <a href="/sectors/" class="back">Back to sectors</a>
+    </article>
+
+    <ContactSection />
+</SubpageLayout>

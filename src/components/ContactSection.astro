@@ -1,0 +1,182 @@
+---
+
+---
+
+<section class="contact default_bg" id="contact">
+    <div class="ctnr">
+        <form name="contact" method="POST" data-netlify="true">
+            <h3>Get in touch</h3>
+
+            <div class="flex">
+                <p>
+                    <label>First name: <input type="text" name="name" /></label>
+                </p>
+
+                <p>
+                    <label>Last name: <input type="text" name="name" /></label>
+                </p>
+            </div>
+
+            <p>
+                <label>Email: <input type="email" name="email" /></label>
+            </p>
+
+            <p>
+                <label>Message: <textarea name="message"></textarea></label>
+            </p>
+
+            <p>
+                <button type="submit">Request a quote</button>
+            </p>
+            </form>
+    </div>
+
+    <script>
+        import "../scripts/form.js";
+    </script>
+</section>
+
+<style>
+
+	section.contact {
+    	padding: clamp(3rem,16vw,8rem) 0;
+    	scroll-margin: clamp(1rem,16vmin,7.5rem);
+        background-color: var(--light-a);
+	}
+
+	.contact > .ctnr {
+		width: clamp(9rem,85vw,62rem);
+		margin-inline: auto;
+		background-color: var(--light);
+		padding: clamp(3rem,9vw,5rem) clamp(2rem,6vw,6rem) 0;
+		box-sizing: border-box;
+		border-radius: 1rem;
+    	box-shadow: 0 1.3rem 1rem -1rem var(--light-b);
+        border: 0.1rem solid var(--light-a);
+	}
+
+	.contact h3 {
+		text-align: center;
+		font-size: clamp(2rem,8vw,4.5rem);
+		color:var(--primary-a);
+		margin-bottom: 1rem;
+
+	}
+
+
+    /* Form defaults */
+
+    form {
+        margin: 0 auto 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: clamp(1.5rem, 2vw, 2rem);
+        font-size: 1.45rem;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    form p {
+        flex: 1;
+        min-width: clamp(10rem, 62vw, 23rem);
+    }
+
+    form > .flex {
+        justify-content: space-between;
+        gap: clamp(1.5rem, 2vw, 2rem);
+        flex-flow: row wrap;
+    }
+
+    form label {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        font-weight: 600;
+        line-height: 1.4;
+        font-size: 1.6rem;
+    }
+
+    input,
+    textarea,
+    select {
+        padding: clamp(0.8rem, 1vw, 1rem);
+        border-radius: 0.6rem;
+        border: unset;
+        background-color: var(--light-a);
+        font-size: 1em;
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    textarea {
+        min-width: 100%;
+        width: 100%;
+        max-width: 100%;
+        min-height: 15rem;
+        height: 15rem;
+        max-height: 25rem;
+    }
+
+    input[type='date'],
+    input[type='time'] {
+        line-height: 2.4;
+        padding: unset;
+        text-indent: clamp(0.8rem, 1vw, 1rem);
+    }
+
+    form button[type='submit'] {
+        display: block;
+        margin: 0 auto;
+        font-size: 1.8rem;
+        background-color: var(--c2-b);
+        color: var(--primary-a);
+        padding: 1.2rem 3rem;
+        border-radius: 0.6rem;
+        /* margin-top: clamp(2rem, 8vw, 3.5rem); */
+        cursor: pointer;
+        font-weight: 600;
+        border: 0.2rem solid var(--light-a);
+        transform: translateY(50%);
+        background-color: var(--light);
+        position:relative;
+    }
+
+    form button[type='submit']::before, form button[type='submit']::after {
+        content:'';
+        border-bottom: 0.4rem solid var(--highlight);
+        border-right: 0.4rem solid var(--highlight);
+        border-top: 0.4rem solid transparent;
+        border-left: 0.4rem solid transparent;
+        transform: translateY(-50%) rotate(-45deg);
+        -webkit-transform: translateY(-50%) rotate(-45deg);
+        -moz-transform: translateY(-50%) rotate(-45deg);
+        -ms-transform: translateY(-50%) rotate(-45deg);
+        -o-transform: translateY(-50%) rotate(-45deg);
+        position:absolute;
+        top: 50%;
+    }
+
+    form button[type='submit']::before {
+        left: -1.8rem;
+    }
+
+    form button[type='submit']::after {
+        right: -1.4rem;
+    }
+
+    form button[type='submit'].disabled {
+        background-color: var(--c2-e);
+        font-weight: 500;
+        pointer-events: none;
+    }
+
+    body form button[type='submit'].submited {
+        background-color: var(--c1);
+        color: var(--c2-b);
+        font-weight: 600;
+        pointer-events: none;
+    }
+</style>

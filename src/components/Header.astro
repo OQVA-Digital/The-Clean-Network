@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 const services = await getCollection("services");
+const sectors = await getCollection("sectors");
 ---
 
 <div class="stripe">
@@ -15,7 +16,12 @@ const services = await getCollection("services");
 <header>
     <div class="ctnr">
         <a href="/" class="logo_anchor">
-            <img src="/tcn-logo-default.svg" alt="The Clean Network logo" />
+            <picture>
+                <!-- <source media="(min-width:650px)" srcset="/tcn-logo-360.png"> -->
+                <source media="(min-width:850px)" srcset="/logo/tcn-logo-720.webp">
+                <source media="(min-width:300px)" srcset="/logo/tcn-logo-360.webp">
+                <img src="/logo/tcn-logo-360.png" alt="The Clean Network logo">
+            </picture>
         </a>
 
         <nav>
@@ -86,7 +92,7 @@ const services = await getCollection("services");
 
                 <div class="subnav">
                     <div class="flex">
-                        <a href="">Sectors</a>
+                        <a href="/sectors/">Sectors</a>
 
                         <button
                             class="expand icon"
@@ -99,25 +105,32 @@ const services = await getCollection("services");
 
                     <div class="subsets">
                         <div>
-                            <!-- <a href="#" class="heading sectors icon">Sectors</a>
+                            <a href="/sectors/" class="heading sectors icon"
+                                >All Sectors</a
+                            >
 
-                            <hr /> -->
+                            <hr />
 
-                            <a href="#">Corporate Office Buildings</a>
-                            <a href="#">Small Offices</a>
-                            <a href="#">Medical & Dental</a>
-                            <a href="#">Architects Firms</a>
-                            <a href="#">Media & Design Agencies</a>
-                            <a href="#">Law Firms</a>
-                            <a href="#">Technology Companies</a>
-                            <a href="#">Financial Service Companies</a>
+                            {
+                                sectors.map((sectors) => (
+                                    <>
+                                        <a
+                                            href={`/sectors/${sectors.slug}/`}
+                                        >
+                                            {sectors.data.title}
+                                        </a>
+                                    </>
+                                ))
+                            }
                         </div>
                     </div>
                 </div>
 
                 <a href="/locations/">Locations</a>
+                
+                <a href="/about/">About</a>
 
-                <div class="subnav">
+                <!-- <div class="subnav">
                     <div class="flex">
                         <a href="/about/">About</a>
 
@@ -136,11 +149,11 @@ const services = await getCollection("services");
                             <a href="/about/" class="heading rates icon">Rates</a>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
-                <a href="/#contact">Contact</a>
+                <a href="/contact/">Contact</a>
 
-                <a href="/#contact" class="cta">Get a Free Quote</a>
+                <a href="/contact/" class="cta">Get a Free Quote</a>
             </div>
         </nav>
 
@@ -254,7 +267,7 @@ const services = await getCollection("services");
 
     header nav {
         width: calc(100% - (100% - var(--mobile-width)) / 2);
-        background-color: rgb(255 255 255 / 85%);
+        background-color: rgb(255 255 255 / 91%);
         font-size: clamp(1.6rem,5vw,2.2rem);
         backdrop-filter: blur(0.5rem);
         border-radius: 0 0 0 1.4rem;
@@ -273,7 +286,7 @@ const services = await getCollection("services");
     }
 
     header nav .cta {
-        padding: clamp(0.8rem,3vmin,1.2rem) 1.5rem;
+        padding: clamp(0.8rem,3vmin,1.2rem) clamp(0.9rem, 3vmin, 1.5rem);
         background-color: var(--highlight);
         font-size: clamp(1.8rem,1vw,2rem);
         font-weight: 500;
@@ -434,7 +447,7 @@ const services = await getCollection("services");
         background-color: var(--primary-c);
     }
 
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 850px) {
         .subnav .expand,
         .hambt {
             display: none;
@@ -461,7 +474,7 @@ const services = await getCollection("services");
             opacity: 1;
             visibility: visible;
             backdrop-filter: unset;
-            font-size: 1.8rem;
+            font-size: clamp(1.5rem, 3.8vmin, 1.8rem);
             box-shadow: unset;
         }
 
@@ -470,6 +483,24 @@ const services = await getCollection("services");
             align-items: center;
             box-sizing: border-box;
             height: unset;
+        }
+
+        header nav .cta {
+            position: static;
+            margin: unset;
+            margin-left: clamp(0rem, calc(8vw - 9rem), 6rem);
+            border: 0.2rem solid var(--primary-c);
+            font-size: clamp(1.5rem, 3.8vmin, 1.8rem);
+        }
+
+        header nav > .ctnr {
+            flex-direction: row;
+            text-align: unset;
+            justify-content: right;
+            width: unset;
+            gap: clamp(0rem,calc(6vw - 5rem),3.5rem);
+            align-items: center;
+            height: 100%;
         }
 
         /* Main header anchors */
@@ -484,23 +515,6 @@ const services = await getCollection("services");
         .subnav:hover > .flex > a:not(.cta) {
             transition: background-color 0.1s ease;
             background-color: var(--primary-b);
-        }
-
-        header nav .cta {
-            position: static;
-            margin: unset;
-            margin-left: clamp(0rem, calc(8vw - 9rem), 6rem);
-            border: 0.2rem solid var(--primary-c);
-        }
-
-        header nav > .ctnr {
-            flex-direction: row;
-            text-align: unset;
-            justify-content: right;
-            width: unset;
-            gap: clamp(0rem,calc(6vw - 6rem),4rem);
-            align-items: center;
-            height: 100%;
         }
 
         header nav .subnav {

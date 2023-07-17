@@ -3,14 +3,18 @@ import Layout from "../layouts/HomeLayout.astro";
 // import Stripe from "../components/Stripe.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import ContactSection from "../components/ContactSection.astro"
+
 import { getCollection } from "astro:content";
+
 const services = await getCollection("services");
+const sectors = await getCollection("sectors");
 ---
 
 <Layout title="The Clean Network - Commercial & Office Cleaning Services">
 	<Header />
 	<main>
-		<section class="intro">
+		<section class="intro default_bg">
 			<div class="ctnr">
 				<div class="content">
 					<h1>Commercial and Office Cleaning Services</h1>
@@ -39,7 +43,10 @@ const services = await getCollection("services");
 				</div>
 
 				<div class="showcase">
-					<img src="/images/office01.jpg" alt="Office photo" />
+					<picture>
+						<source srcset="/images/office01.webp">
+						<img src="/images/office01.jpg" alt="The Clean Network logo">
+					</picture>
 				</div>
 			</div>
 
@@ -133,7 +140,10 @@ const services = await getCollection("services");
 				</div>
 
 				<div class="image">
-					<img src="/images/office02.jpg" alt="Office photo" />
+					<picture>
+						<source srcset="/images/office02.webp">
+						<img src="/images/office02.jpg" alt="Office Photo">
+					</picture>
 				</div>
 			</div>
 		</section>
@@ -145,22 +155,20 @@ const services = await getCollection("services");
 
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laborum vel rerum eligendi sunt illum harum id, qui ullam.</p>
 
-					<a href="#" class="cta"><span></span> Check all sectors</a>
+					<a href="/sectors/" class="cta"><span></span> Check all sectors</a>
 
 					<hr>
 
 					<div class="subsets">
 						<div>
 							{
-								services.map((services) => (
+								sectors.map((sectors) => (
 									<>
-										{services.data.type === "indoor" ? (
-											<a
-												href={`/services/${services.slug}/`}
-											>
-												{services.data.title}
-											</a>
-										) : null}
+										<a
+											href={`/sectors/${sectors.slug}/`}
+										>
+											{sectors.data.title}
+										</a>
 									</>
 								))
 							}
@@ -169,7 +177,10 @@ const services = await getCollection("services");
 				</div>
 
 				<div class="image">
-					<img src="/images/office03.jpg" alt="Office photo" />
+					<picture>
+						<source srcset="/images/office03.webp">
+						<img src="/images/office03.jpg" alt="Office Photo">
+					</picture>
 				</div>
 			</div>
 		</section>
@@ -185,7 +196,10 @@ const services = await getCollection("services");
 				</div>
 
 				<div class="image">
-					<img src="/images/customer01.jpg" alt="Customer photo" />
+					<picture>
+						<source srcset="/images/customer01.webp">
+						<img src="/images/customer01.jpg" alt="Customer Photo">
+					</picture>
 				</div>
 			</div>
 		</section>
@@ -218,7 +232,7 @@ const services = await getCollection("services");
 			</div>
 		</section>
 
-		<section class="rates">
+		<!-- <section class="rates">
 			<div class="ctnr">
 				<h3>Service Rates</h3>
 
@@ -226,41 +240,9 @@ const services = await getCollection("services");
 
 				<a href="#" class="cta">Simulate with our <b>Rate Calculator</b></a>
 			</div>
-		</section>
+		</section> -->
 
-		<section class="contact" id="contact">
-			<div class="ctnr">
-				<form name="contact" method="POST" data-netlify="true">
-					<h3>Get in touch</h3>
-
-					<div class="flex">
-						<p>
-						  <label>First name: <input type="text" name="name" /></label>
-						</p>
-	
-						<p>
-						  <label>Last name: <input type="text" name="name" /></label>
-						</p>
-					</div>
-
-					<p>
-					  <label>Email: <input type="email" name="email" /></label>
-					</p>
-
-					<p>
-					  <label>Message: <textarea name="message"></textarea></label>
-					</p>
-
-					<p>
-					  <button type="submit">Request a quote</button>
-					</p>
-				  </form>
-			</div>
-
-			<script>
-				import "../scripts/form.js";
-			</script>
-		</section>
+		<ContactSection />
 
 		<section class="find_us panel">
 			<div class="ctnr">
@@ -317,16 +299,6 @@ const services = await getCollection("services");
 
 <style>
 	main {
-	}
-
-	.intro, .contact {
-		background-image: url("/images/office-bg01.jpg");
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-		background-attachment: fixed;
-		/* background-color: var(--light-a);
-		background-blend-mode: luminosity; */
 	}
 
 	.intro > .ctnr {
@@ -664,28 +636,6 @@ const services = await getCollection("services");
 
 	.rates .cta b {
 		color: var(--highlight);
-	}
-
-	section.contact {
-    	padding: clamp(3rem,16vw,8rem) 0;
-    	scroll-margin: clamp(1rem,16vmin,7.5rem);
-	}
-
-	.contact > .ctnr {
-		width: clamp(9rem,85vw,62rem);
-		margin-inline: auto;
-		background-color: var(--light);
-		padding: clamp(3rem,9vw,5rem) clamp(2rem,6vw,6rem) 0;
-		box-sizing: border-box;
-		border-radius: 1rem;
-	}
-
-	.contact h3 {
-		text-align: center;
-		font-size: clamp(2rem,8vw,4.5rem);
-		color:var(--primary-a);
-		margin-bottom: 1rem;
-
 	}
 
 	section.find_us {
