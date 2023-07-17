@@ -4,9 +4,9 @@ const serviceCollection = defineCollection({
     type: 'content', // v2.5.0 and later
     schema: z.object({
         title: z.string(),
-        description: z.string(),
+        description: z.string().optional(),
         type: z.string(),
-        image: z.string(),
+        image: z.string().optional(),
     }),
 });
 
@@ -14,8 +14,8 @@ const sectorsCollection = defineCollection({
     type: 'content', // v2.5.0 and later
     schema: z.object({
         title: z.string(),
-        description: z.string(),
-        image: z.string(),
+        description: z.string().optional(),
+        image: z.string().optional(),
     }),
 });
 
