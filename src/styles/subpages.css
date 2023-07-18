@@ -122,6 +122,7 @@ h2::after {
     .panel .content {
         max-width: clamp(40rem,30vw,95rem);
         margin-inline: 4vw 6vw;
+        padding-bottom: clamp(3rem,28vmin,15rem);
     }
     
     .panel .quote {

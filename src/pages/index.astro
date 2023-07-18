@@ -35,9 +35,9 @@ const sectors = await getCollection("sectors");
 						</div>
 
 						<div class="flex column">
-							<a href="#"><span>London:</span> 020 3411 0275</a>
+							<a href="tel:+44-020-3411-0275"><span>London:</span> 020 3411 0275</a>
 
-							<a href="#"><span>Birmingham:</span> 0121 3927529</a
+							<a href="tel:+44-0121-3927529"><span>Birmingham:</span> 0121 3927529</a
 							>
 						</div>
 					</div>
@@ -45,8 +45,9 @@ const sectors = await getCollection("sectors");
 
 				<div class="showcase">
 					<picture>
-						<source srcset="/images/office01.webp">
-						<img src="/images/office01.jpg" alt="The Clean Network logo">
+						<source media="(min-width:850px)" srcset="/images/office01.webp">
+						<source srcset="/images/office01-min.webp">
+						<img src="/images/office01.jpg" alt="The Clean Network logo" width="414" height="300">
 					</picture>
 				</div>
 			</div>
@@ -69,17 +70,21 @@ const sectors = await getCollection("sectors");
 				<h3>Our clients include...</h3>
 
 				<div class="content">
-					<img src="client-logos/apptio.png" alt="Apptio logo" />
-					<img src="client-logos/outreach.png" alt="Outreach logo" />
-					<img
-						src="client-logos/the-salvation-army.png"
-						alt="The Salvation Army logo"
-					/>
-					<img
-						src="client-logos/spire-healthcare.png"
-						alt="Spire Healthcare logo"
-					/>
-					<img src="client-logos/xero.png" alt="Xero logo" />
+					<img src="/client-logos/apptio.png" alt="Apptio logo" width="152" height="80"/>
+
+					<img src="/client-logos/outreach.png" alt="Outreach logo" width="152" height="80"/>
+
+					<picture>
+						<source srcset="/client-logos/the-salvation-army.webp">
+						<img src="/client-logos/the-salvation-army.png" alt="The Salvation Army logo" width="72" height="80">
+					</picture>
+
+					<img src="/client-logos/spire-healthcare.png" alt="Spire Healthcare logo" width="152" height="80"/>
+
+					<picture>
+						<source srcset="/client-logos/xero.webp">
+						<img src="/client-logos/xero.png" alt="Xero logo" width="80" height="80">
+					</picture>
 				</div>
 			</div>
 		</section>
@@ -142,8 +147,9 @@ const sectors = await getCollection("sectors");
 
 				<div class="image">
 					<picture>
-						<source srcset="/images/office02.webp">
-						<img src="/images/office02.jpg" alt="Office Photo">
+						<source media="(min-width:850px)" srcset="/images/office02.webp">
+						<source srcset="/images/office02-min.webp">
+						<img src="/images/office02.jpg" alt="Office Photo" width="414" height="300">
 					</picture>
 				</div>
 			</div>
@@ -179,8 +185,9 @@ const sectors = await getCollection("sectors");
 
 				<div class="image">
 					<picture>
-						<source srcset="/images/office03.webp">
-						<img src="/images/office03.jpg" alt="Office Photo">
+						<source media="(min-width:850px)" srcset="/images/office03.webp">
+						<source srcset="/images/office03-min.webp">
+						<img src="/images/office03.jpg" alt="Office Photo" width="415" height="300">
 					</picture>
 				</div>
 			</div>
@@ -198,8 +205,9 @@ const sectors = await getCollection("sectors");
 
 				<div class="image">
 					<picture>
-						<source srcset="/images/customer01.webp">
-						<img src="/images/customer01.jpg" alt="Customer Photo">
+						<source media="(min-width:850px)" srcset="/images/customer01.webp">
+						<source srcset="/images/customer01-min.webp">
+						<img src="/images/customer01.jpg" alt="Customer Photo" width="415" height="300">
 					</picture>
 				</div>
 			</div>
@@ -213,16 +221,28 @@ const sectors = await getCollection("sectors");
 
 				<div class="slider">
 					<div class="box">
-						<img src="/client-testimonials/01.jpg" alt="">
+						<picture>
+							<source srcset="/client-testimonials/01.webp">
+							<img src="/client-testimonials/01.jpg" alt="client testimonial" width="320" height="263">
+						</picture>
 					</div>
 					<div class="box">
-						<img src="/client-testimonials/02.jpg" alt="">
+						<picture>
+							<source srcset="/client-testimonials/02.webp">
+							<img src="/client-testimonials/02.jpg" alt="client testimonial" width="320" height="263">
+						</picture>
 					</div>
 					<div class="box">
-						<img src="/client-testimonials/03.jpg" alt="">
+						<picture>
+							<source srcset="/client-testimonials/03.webp">
+							<img src="/client-testimonials/03.jpg" alt="client testimonial" width="320" height="263">
+						</picture>
 					</div>
 					<div class="box">
-						<img src="/client-testimonials/04.jpg" alt="">
+						<picture>
+							<source srcset="/client-testimonials/04.webp">
+							<img src="/client-testimonials/04.jpg" alt="client testimonial" width="320" height="263">
+						</picture>
 					</div>
 				</div>
 
@@ -323,6 +343,7 @@ const sectors = await getCollection("sectors");
 		border: 0.2rem solid var(--light);
     	box-shadow: inset 0 -1.2rem 1.5rem -1.5rem, 0 0.8rem 1rem -0.6rem var(--light-b);
 		transition: filter 0.5s ease;
+		text-shadow: 0 0.1rem 0.8rem var(--dark);
 	}
 
 	.ctas a:hover {
@@ -409,10 +430,6 @@ const sectors = await getCollection("sectors");
 		padding: clamp(3rem, 5vw, 3.5rem) 0 0;
 	}
 
-	.clients .content img {
-    	height: clamp(8rem, 10vw, 9rem);
-	}
-
 	.clients h3 {
 		font-size: clamp(2rem,6.5vw,2.8rem);
 		font-weight: 600;
@@ -427,22 +444,29 @@ const sectors = await getCollection("sectors");
 		padding: 0 calc((100% - var(--mobile-width)) / 2) clamp(2rem,4vw,3.5rem);
 	}
 
+	.clients .content img, .clients .content picture {
+		height: clamp(8rem, 10vw, 9rem);
+		min-width: fit-content;
+	}
+
 	section.services {
 		width: 100%;
-		background-color: var(--primary-a);
+		background-color: var(--light-a);
+		color: var(--primary-a);
 	}
 
 	section.sectors {
 		width: 100%;
 		background-color: var(--dark);
-	}
-
-	.services, .sectors {
 		color:var(--light);
 	}
 
 	.services h3::after {
 		background-image: url('/icons/services.svg');
+	}
+
+	.services .content p {
+    	font-weight: 500;
 	}
 
 	.sectors h3::after {
@@ -452,6 +476,38 @@ const sectors = await getCollection("sectors");
 	.locations.panel .cta span:first-of-type {
 		border-bottom: 0.4rem solid var(--dark);
 		border-right: 0.4rem solid var(--dark);
+	}
+
+	.services .subsets .heading {
+    	color:var(--primary-a);
+	}
+
+	.services .subsets a:not(.heading) {
+		color: var(--primary-a);
+		font-weight: 500;
+		background-color: var(--light);
+    	border: 0.2rem solid var(--light);
+	}
+
+	.sectors .subsets a:not(.heading) {
+		background-color: var(--dark-a);
+    	border: 0.2rem solid var(--dark-a);
+	}
+
+	.services .content > hr, .services .subsets hr {
+    	background-color: rgb(16 106 166 / 30%);
+	}
+
+	.services h3 {
+    	font-weight: 600;
+	}
+
+	.sectors h3 {
+    	font-weight: 500;
+	}
+
+	.sectors .subsets .heading {
+		color:var(--light);
 	}
 
 	.services .subsets .heading .icon {
@@ -696,6 +752,10 @@ const sectors = await getCollection("sectors");
 			/* height: 100%; */
 			/* max-height: 80vh; */
 			display: flex;
+		}
+
+		.find_us .map {
+    		margin: 6rem 0;
 		}
 
 		.find_us .map iframe {

@@ -8,11 +8,13 @@
     --grey: #667687;
 
     --dark: #2f363c;
+    --dark-a:#394046;
 
     --primary: #2ea3f2;
     --primary-a: #106aa6;
     --primary-b: #48acff;
     --primary-c: #94c5dd;
+    --primary-d:#4f8ec1;
 
     --highlight: #f2713a;
 
@@ -191,12 +193,11 @@ hr {
 
 .panel h3 {
     font-size: clamp(2rem, 11vw, 6rem);
-    font-weight: 500;
 }
 
 .panel .content p {
     line-height: 1.5;
-    font-size: clamp(1.5rem,4vmin,2rem);
+    font-size: clamp(1.5rem,4vmin,1.9rem);
 }
 
 /* .panel .content p, .panel .description {
@@ -264,27 +265,42 @@ hr {
 .panel .subsets .heading {
     display: block;
     width: fit-content;
-    color:var(--light);
     font-size: 1em;
-    margin-bottom: 0.4rem;
+    margin-bottom: 1rem;
     font-weight: 500;
 }
 
 .panel .subsets a {
-    font-size: 0.7em;
+    font-size: 0.75em;
     color: var(--light-b);
 }
 
 .panel .subsets a:not(.heading) {
-    transition: color 0.4s ease;
+    margin-right: 0.7rem;
+    padding: 0 0.6rem;
+    line-height: 1.9;
+    transition: background-color 0.4s ease;
+    -webkit-transition: background-color 0.4s ease;
+    -moz-transition: background-color 0.4s ease;
+    -ms-transition: background-color 0.4s ease;
+    -o-transition: background-color 0.4s ease;
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
 }
 
 .panel .subsets a:not(.heading):hover {
-    color:var(--light);
-    transition: color 0s ease;
+    background-color:transparent;
+    transition: background-color 0s ease;
+    -webkit-transition: background-color 0s ease;
+    -moz-transition: background-color 0s ease;
+    -ms-transition: background-color 0s ease;
+    -o-transition: background-color 0s ease;
 }
 
-.panel .subsets a:not(.heading):not(:last-child):after {
+/* .panel .subsets a:not(.heading):not(:last-child):after {
     content: "";
     position: relative;
     width: 0.3rem;
@@ -294,7 +310,7 @@ hr {
     border-radius: 1rem;
     margin: 0 0.4rem;
     transform: translateY(-100%);
-}
+} */
 
 
 
@@ -352,7 +368,7 @@ hr {
     .panel .subsets hr {
         width: 0.1rem;
         height: auto;
-        margin: 0 clamp(1rem, 2vw, 3rem);
+        margin: 0 clamp(1rem, 2vw, 2rem);
     }
 }
 
