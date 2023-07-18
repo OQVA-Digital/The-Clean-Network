@@ -64,10 +64,10 @@ const { description } = Astro.props;
                     </div>
 
                     <div class="image">
-                        <picture>
+                        <!-- <picture>
                             <source srcset="/images/office01.webp">
                             <img src="/images/office01.jpg" alt="The Clean Network logo">
-                        </picture>
+                        </picture> -->
                     </div>
                 </div>
             </section>
@@ -94,7 +94,7 @@ const { description } = Astro.props;
     }
 
     h1 {
-        font-size: clamp(1rem,9.5vmin,6.2rem);
+        font-size: clamp(1rem,9.5vmin,5rem);
         font-weight: 700;
         line-height: 1.2;
         color: var(--dark);
@@ -164,13 +164,24 @@ const { description } = Astro.props;
         background-image: url('/icons/waste.svg');
     }
 
+    .ctnr .image {
+        width:100%;
+        height:clamp(30rem, 38vmin, 50rem);
+        background-image: url('/images/office02.jpg');
+        background-image: image-set(url('/images/office02.jpg') , url('/images/office02.jpg') );
+        background-size: cover;
+        background-position: center;
+    }
+
     @media screen and (min-width:850px) {
         .ctnr .image picture {
-            height:100%;
+            
         }
 
-        .ctnr .image img {
-            height: 100%;
+        .ctnr .image {
+            height: unset;
+            max-height: calc(100vh - (clamp(1rem,16vmin,7.5rem) * 2));
+            border-radius: 0 0 0 20vmin;
         }
 
         .bullets {

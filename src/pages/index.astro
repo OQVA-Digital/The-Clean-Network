@@ -12,7 +12,7 @@ const services = await getCollection("services");
 const sectors = await getCollection("sectors");
 ---
 
-<Layout title="The Clean Network - Commercial & Office Cleaning Services">
+<Layout title="The Clean Network - Commercial & Office Cleaning Services" description="COMMERCIAL & OFFICE CLEANING SERVICES The proof is in our numbers. We clean over 500 offices each day with our office cleaning services. 95% of our clients choose to stay with us at the end of their contract. View our Services Request your Quote Rated 5 out of 5 on Google Confidence guaranteed with over">
 	<Header />
 	<main>
 		<section class="intro default_bg">
@@ -649,6 +649,9 @@ const sectors = await getCollection("sectors");
 		border-radius: 2rem;
 		/* border: 0.2rem solid var(--primary); */
 		background-color: var(--primary);
+        background-image: url(/textures/dot-grid.jpg);
+        background-image: image-set(url(/textures/dot-grid.jpg) , url(/textures/dot-grid.webp) );
+        background-size: 40rem;
 	}
 
 	.find_us .content {

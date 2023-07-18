@@ -5,11 +5,11 @@ const sectors = await getCollection("sectors");
 ---
 
 <div class="stripe">
-    <div class="announcement">ANNOUNCEMENT OR OFFER</div>
+    <a href="/contact/" class="announcement">Contact us today for a free quote</a>
 
     <div class="ctnr">
-        <a href="#">London: 020 3411 0275</a>
-        <a href="#">Birmingham: 0121 3927529</a>
+        <a href="tel:+44-020-3411-0275">London: 020 3411 0275</a>
+        <a href="tel:+44-0121-3927529">Birmingham: 0121 3927529</a>
     </div>
 </div>
 
@@ -176,6 +176,11 @@ const sectors = await getCollection("sectors");
         letter-spacing: 0.1rem;
         font-size: 1.1rem;
         position: relative;
+    }
+
+    .stripe a:hover {
+        filter: brightness(1.1);
+        transition: filter 0.1s ease;
     }
 
     .stripe .announcement {
@@ -555,6 +560,7 @@ const sectors = await getCollection("sectors");
                 transform 0.3s 0.2s ease;
             opacity: 0;
             visibility: hidden;
+            border: 0.1rem solid var(--light-a);
         }
 
         .subsets::before {

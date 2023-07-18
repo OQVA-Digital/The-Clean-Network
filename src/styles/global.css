@@ -334,10 +334,13 @@ hr {
     }
 
     .panel .image img {
-        height: 50rem;
+        height: 100%;
     }
 
     .panel .image picture, .panel .image img {
+        position: absolute;
+        inset: 0;
+        max-height: unset;
     }
 
     .panel .subsets > div {
