@@ -95,17 +95,17 @@
 }
 
 .tns-controls button {
-    background-color: var(--light);
+    background-color: var(--primary);
     font-size: 1.8rem;
     border-radius: 0.4rem;
     font-weight: 800;
-    color: var(--primary-a);
+    color: var(--light);
     width: 3.5rem;
     height: 3.5rem;
 }
 
 .tns-controls button[disabled] {
-    background-color: var(--primary-b);
+    background-color: var(--light-b);
     color:var(--light);
     cursor: default;
 }
@@ -120,9 +120,9 @@
     transition: height 0s
 }
 
-.tns-ovh {
+/* .tns-ovh {
     overflow: hidden
-}
+} */
 
 .tns-visually-hidden {
     position: absolute;

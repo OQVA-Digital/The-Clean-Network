@@ -2,7 +2,7 @@
 title: "Bins & Refuse Areas"
 description: "Maintain a clean environment with our bin and refuse area cleaning. Our rigorous techniques eliminate bacteria, prevent pests, and control odors. Trust us for hygienic and well-maintained bins and refuse areas."
 type: "external"
-image: "/images/services/bins-and-refuse-areas.jpg"
+image: "/images/media/bins-and-refuse-areas.jpg"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu aliquet nisi. **Sed tincidunt arcu erat, non tristique tellus varius quis.** Phasellus et imperdiet justo, id pretium arcu. Phasellus aliquet ex odio, at eleifend elit semper sit amet. Phasellus ut mattis dolor, sed consequat ipsum.

@@ -20,7 +20,7 @@ const sectors = await getCollection("sectors");
                 <!-- <source media="(min-width:650px)" srcset="/tcn-logo-360.png"> -->
                 <source media="(min-width:850px)" srcset="/logo/tcn-logo-720.webp">
                 <source media="(min-width:300px)" srcset="/logo/tcn-logo-360.webp">
-                <img src="/logo/tcn-logo-360.png" alt="The Clean Network logo">
+                <img src="/logo/tcn-logo-360.png" alt="The Clean Network logo" width="125" height="66">
             </picture>
         </a>
 
@@ -240,11 +240,6 @@ const sectors = await getCollection("sectors");
         height:100%;
     }
 
-    header nav.show {
-        opacity: 1;
-        visibility: visible;
-    }
-
     .hambt {
         width: clamp(1rem,16vmin,7.5rem);
         height:clamp(1rem,16vmin,7.5rem);
@@ -269,7 +264,7 @@ const sectors = await getCollection("sectors");
         height: 16%;
         background-color: var(--light);
         border-radius: 0.2rem;
-        transition: opacity 0.25s ease-out, transform 0.25s ease-out;
+        transition: opacity 0.2s ease, transform 0.2s ease;
     }
 
     .hambt.close {
@@ -290,22 +285,33 @@ const sectors = await getCollection("sectors");
 
     header nav {
         width: calc(100% - (100% - var(--mobile-width)) / 2);
-        background-color: rgb(255 255 255 / 91%);
+        background-color: var(--light-d);
         font-size: clamp(1.6rem,5vw,2.2rem);
         backdrop-filter: blur(0.5rem);
         border-radius: 0 0 0 1.4rem;
-        transform: translateY(100%);
         padding: 2rem 2rem 2rem 0;
         color: var(--primary-a);
         box-sizing: border-box;
         position: absolute;
-        visibility: hidden;
         overflow-y: scroll;
         font-weight: 600;
         max-height: 62vh;
         bottom: -0.2rem;
-        opacity: 0;
         right: 0;
+        background-image: linear-gradient(230deg,var(--light),transparent 50%);
+        border-left: 0.1rem solid var(--light);
+        border-bottom: 0.1rem solid var(--light);
+        box-shadow: 0 1.2rem 2.9rem -1.2rem var(--grey);
+        transform: translateY(calc(100% - 1.2rem));
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+    }
+
+    header nav.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(100%);
     }
 
     header nav .cta {
@@ -500,6 +506,14 @@ const sectors = await getCollection("sectors");
             backdrop-filter: unset;
             font-size: clamp(1.5rem, 3.8vmin, 1.8rem);
             box-shadow: unset;
+            background-image: unset;
+            border: unset;
+        }
+
+        header nav.show {
+            opacity: unset;
+            visibility: unset;
+            transform: unset;
         }
 
         header nav a {

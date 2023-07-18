@@ -2,7 +2,7 @@
 title: "Pressure Cleaning"
 description: "Restore exterior surfaces with our high-pressure cleaning. Our powerful equipment and eco-friendly solutions remove dirt and stains from driveways, patios, and more. See a noticeable transformation with our rejuvenating service."
 type: "external"
-image: "/images/services/pressure-cleaning.jpg"
+image: "/images/media/pressure-cleaning.jpg"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu aliquet nisi. **Sed tincidunt arcu erat, non tristique tellus varius quis.** Phasellus et imperdiet justo, id pretium arcu. Phasellus aliquet ex odio, at eleifend elit semper sit amet. Phasellus ut mattis dolor, sed consequat ipsum.

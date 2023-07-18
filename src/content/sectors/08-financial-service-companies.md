@@ -1,7 +1,7 @@
 ---
 title: "Financial Service Companies"
 description: "Present a professional image with expert cleaning services for financial service companies. Customized solutions for polished and inviting spaces."
-image: "/images/sectors/financial-service-companies.jpg"
+image: "/images/media/financial-service-companies.jpg"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu aliquet nisi. **Sed tincidunt arcu erat, non tristique tellus varius quis.** Phasellus et imperdiet justo, id pretium arcu. Phasellus aliquet ex odio, at eleifend elit semper sit amet. Phasellus ut mattis dolor, sed consequat ipsum.

@@ -1,7 +1,7 @@
 ---
 title: "Small Offices"
 description: "Maintain an organized workspace with efficient cleaning services for small offices. Boost productivity and professionalism with our comprehensive solutions."
-image: "/images/sectors/small-offices.jpg"
+image: "/images/media/small-offices.jpg"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu aliquet nisi. **Sed tincidunt arcu erat, non tristique tellus varius quis.** Phasellus et imperdiet justo, id pretium arcu. Phasellus aliquet ex odio, at eleifend elit semper sit amet. Phasellus ut mattis dolor, sed consequat ipsum.

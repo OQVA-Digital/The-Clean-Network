@@ -2,7 +2,7 @@
 title: "Drains"
 description: "Ensure smooth drainage with our expert cleaning services. We tackle clogged drains using specialized tools, eliminating blockages and odors. Experience hassle-free drain maintenance with our professional cleaners."
 type: "external"
-image: "/images/services/drains.jpg"
+image: "/images/media/drains.jpg"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu aliquet nisi. **Sed tincidunt arcu erat, non tristique tellus varius quis.** Phasellus et imperdiet justo, id pretium arcu. Phasellus aliquet ex odio, at eleifend elit semper sit amet. Phasellus ut mattis dolor, sed consequat ipsum.

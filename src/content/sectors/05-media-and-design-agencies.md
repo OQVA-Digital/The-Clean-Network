@@ -1,7 +1,7 @@
 ---
 title: "Media and Design Agencies"
 description: "Inspire creativity with specialized cleaning services for media and design agencies. Clean and inviting spaces that foster innovation."
-image: "/images/sectors/media-and-design-agencies.jpg"
+image: "/images/media/media-and-design-agencies.jpg"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu aliquet nisi. **Sed tincidunt arcu erat, non tristique tellus varius quis.** Phasellus et imperdiet justo, id pretium arcu. Phasellus aliquet ex odio, at eleifend elit semper sit amet. Phasellus ut mattis dolor, sed consequat ipsum.

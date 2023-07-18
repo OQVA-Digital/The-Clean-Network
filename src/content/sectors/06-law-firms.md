@@ -1,7 +1,7 @@
 ---
 title: "Law Firms"
 description: "Maintain professionalism with meticulous cleaning services for law firms. Discreet and reliable solutions for clean and organized spaces."
-image: "/images/sectors/law-firms.jpg"
+image: "/images/media/law-firms.jpg"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu aliquet nisi. **Sed tincidunt arcu erat, non tristique tellus varius quis.** Phasellus et imperdiet justo, id pretium arcu. Phasellus aliquet ex odio, at eleifend elit semper sit amet. Phasellus ut mattis dolor, sed consequat ipsum.

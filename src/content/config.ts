@@ -19,7 +19,21 @@ const sectorsCollection = defineCollection({
     }),
 });
 
+const testimonialsCollection = defineCollection({
+    type: 'content', // v2.5.0 and later
+    schema: z.object({
+        avatar: z.string(),
+        name: z.string(),
+        description: z.string().optional(),
+        heading: z.string(),
+        paragraph01: z.string().optional(),
+        paragraph02: z.string().optional(),
+        paragraph03: z.string().optional(),
+    }),
+});
+
 export const collections = {
     'services': serviceCollection,
     'sectors': sectorsCollection,
+    'testimonials': testimonialsCollection,
 };

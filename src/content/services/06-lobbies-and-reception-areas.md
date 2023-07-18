@@ -2,7 +2,7 @@
 title: "Lobbies & Reception Areas"
 description: "Create a lasting impression with our meticulous cleaning services for lobbies and reception areas. Our team ensures professionalism and cleanliness in every detail. From dusting to maintaining cleanliness, we make your entrance welcoming."
 type: "indoor"
-image: "/images/services/loobies-and-reception-areas.jpg"
+image: "/images/media/loobies-and-reception-areas.jpg"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu aliquet nisi. **Sed tincidunt arcu erat, non tristique tellus varius quis.** Phasellus et imperdiet justo, id pretium arcu. Phasellus aliquet ex odio, at eleifend elit semper sit amet. Phasellus ut mattis dolor, sed consequat ipsum.

@@ -1,7 +1,7 @@
 ---
 title: "Corporate Office Buildings"
 description: "Elevate cleanliness in corporate offices with our professional services. Tailored solutions for a pristine environment that impresses employees and visitors."
-image: "/images/sectors/corporate-office-buildings.jpg"
+image: "/images/media/corporate-office-buildings.jpg"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu aliquet nisi. **Sed tincidunt arcu erat, non tristique tellus varius quis.** Phasellus et imperdiet justo, id pretium arcu. Phasellus aliquet ex odio, at eleifend elit semper sit amet. Phasellus ut mattis dolor, sed consequat ipsum.

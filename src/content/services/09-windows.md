@@ -2,7 +2,7 @@
 title: "Windows"
 description: "Transform your view with our professional window cleaning. Our experts use streak-free solutions to remove dirt and smudges. Enjoy a pristine and bright environment with our exceptional service."
 type: "external"
-image: "/images/services/windows.jpg"
+image: "/images/media/windows.jpg"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu aliquet nisi. **Sed tincidunt arcu erat, non tristique tellus varius quis.** Phasellus et imperdiet justo, id pretium arcu. Phasellus aliquet ex odio, at eleifend elit semper sit amet. Phasellus ut mattis dolor, sed consequat ipsum.

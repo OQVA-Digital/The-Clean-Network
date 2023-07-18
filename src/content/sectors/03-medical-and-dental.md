@@ -1,7 +1,7 @@
 ---
 title: "Medical & Dental"
 description: "Ensure a hygienic facility with specialized cleaning services for medical and dental offices. Sterile and safe environments for patients and staff."
-image: "/images/sectors/medical-and-dental.jpg"
+image: "/images/media/medical-and-dental.jpg"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu aliquet nisi. **Sed tincidunt arcu erat, non tristique tellus varius quis.** Phasellus et imperdiet justo, id pretium arcu. Phasellus aliquet ex odio, at eleifend elit semper sit amet. Phasellus ut mattis dolor, sed consequat ipsum.

@@ -1,7 +1,7 @@
 ---
 title: "Architects Firms"
 description: "Enhance presentation and functionality with expert cleaning services for architect firms. Tailored solutions for a clean and creative workspace."
-image: "/images/sectors/architects-firms.jpg"
+image: "/images/media/architects-firms.jpg"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu aliquet nisi. **Sed tincidunt arcu erat, non tristique tellus varius quis.** Phasellus et imperdiet justo, id pretium arcu. Phasellus aliquet ex odio, at eleifend elit semper sit amet. Phasellus ut mattis dolor, sed consequat ipsum.

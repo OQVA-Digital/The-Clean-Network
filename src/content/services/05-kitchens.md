@@ -3,7 +3,7 @@ title: "Kitchens"
 description: "Enjoy a sparkling clean and grease-free kitchen with our expert services. Our skilled team uses industry-grade products to remove stubborn stains and sanitize surfaces. From countertops to appliances, we ensure a hygienic cooking space."
 type: "indoor"
 heroImage: "/post-covers/your-brand-is-compression-of-sensation.jpg"
-image: "/images/services/kitchen.jpg"
+image: "/images/media/kitchen.jpg"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu aliquet nisi. **Sed tincidunt arcu erat, non tristique tellus varius quis.** Phasellus et imperdiet justo, id pretium arcu. Phasellus aliquet ex odio, at eleifend elit semper sit amet. Phasellus ut mattis dolor, sed consequat ipsum.

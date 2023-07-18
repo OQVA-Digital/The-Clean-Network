@@ -2,7 +2,7 @@
 title: "Gutters & Roofs"
 description: "Protect your property with our reliable gutter and roof cleaning. We remove debris, ensuring proper water flow and preventing damage. Trust us to keep your gutters and roofs clean and functional."
 type: "external"
-image: "/images/services/gutters-and-roofs.jpg"
+image: "/images/media/gutters-and-roofs.jpg"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu aliquet nisi. **Sed tincidunt arcu erat, non tristique tellus varius quis.** Phasellus et imperdiet justo, id pretium arcu. Phasellus aliquet ex odio, at eleifend elit semper sit amet. Phasellus ut mattis dolor, sed consequat ipsum.
