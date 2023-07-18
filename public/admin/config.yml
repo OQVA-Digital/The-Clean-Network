@@ -4,8 +4,8 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: "public/images/services" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/images/services" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: "public/images/media" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/media" # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
   - name: "services" # Used in routes, e.g., /admin/collections/blog
@@ -20,7 +20,7 @@ collections:
       - {label: "ServiceType", name: "type", widget: "select",  options: ["indoor", "external"]}
       - {label: "CoverImage", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
-      
+
   - name: "sectors" # Used in routes, e.g., /admin/collections/blog
     label: "Sector" # Used in the UI
     folder: "src/content/sectors" # The path to the folder where the documents are stored
@@ -32,3 +32,18 @@ collections:
       - {label: "Description", name: "description", widget: "string", required: false}
       - {label: "CoverImage", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+  
+  - name: "testimonials" # Used in routes, e.g., /admin/collections/blog
+    label: "Testimonial" # Used in the UI
+    folder: "src/content/testimonials" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      # - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Avatar", name: "avatar", widget: "image"}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Description", name: "description", widget: "string", required: false}
+      - {label: "Heading", name: "heading", widget: "text"}
+      - {label: "Paragraph01", name: "paragraph01", widget: "text", required: false}
+      - {label: "Paragraph02", name: "paragraph02", widget: "text", required: false}
+      - {label: "Paragraph03", name: "paragraph03", widget: "text", required: false}
