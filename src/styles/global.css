@@ -22,10 +22,6 @@
     --desktop-width: clamp(9rem, 85vw, 150rem);
 }
 
-html.sr .reveal {
-    visibility: hidden;
-}
-
 @font-face {
     font-family: 'Rubik';
     src: url('/fonts/Rubik-VariableFont_wght.ttf');
