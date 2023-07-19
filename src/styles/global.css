@@ -22,7 +22,7 @@
     --desktop-width: clamp(9rem, 85vw, 150rem);
 }
 
-.reveal {
+html.sr .reveal {
     visibility: hidden;
 }
 
