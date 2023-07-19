@@ -219,7 +219,7 @@
         -ms-transform: translateY(-50%);
         -o-transform: translateY(-50%);
         height: 20rem;
-        width: clamp(3.5rem, 4vw, 10rem);
+        width: clamp(3.5rem, 7vw, 8rem);
         z-index: 4;
 }
 

@@ -151,7 +151,24 @@ hr {
     border:unset;
 }
 
-
+noscript {
+    font-size: 2rem;
+    text-align: center;
+    display: block;
+    position: absolute;
+    background-color: var(--light);
+    z-index: 10;
+    color: var(--dark-a);
+    margin-inline: auto;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    border: 0.2rem solid var(--highlight);
+    max-width: 80%;
+    box-sizing: border-box;
+    inset: 0;
+    height: fit-content;
+    margin: auto;
+}
 
 
 
@@ -241,7 +258,7 @@ hr {
 }
 
 .panel .image {
-    background-color: var(--light-a);
+    /* background-color: var(--light-a); */
 }
 
 .panel .image img {
@@ -253,7 +270,7 @@ hr {
     background-color: rgba(255,255,255,0.2);
     max-height: calc(100dvh - clamp(1rem,16vmin,7.5rem));
     font-size: 2rem;
-    background-color: var(--light-d);
+    /* background-color: var(--light-d); */
 }
 
 .panel .subsets {

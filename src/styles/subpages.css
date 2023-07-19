@@ -43,8 +43,8 @@ h2::after {
 }
 
 .panel .content {
-    width:85%;
-    padding: clamp(3rem,8vmin,8rem) 0 clamp(3rem,8vmin,8rem);
+    width: 85%;
+    padding: clamp(3rem,8vmin,8rem) 0 clamp(2rem,5vmin,8rem);
 }
 
 .panel h3 {
@@ -55,6 +55,15 @@ h2::after {
     /* color:var(--primary-a); */
 }
 
+.division h2 + p {
+    font-size: 1.5rem;
+    color: var(--grey);
+    font-weight: 400;
+    line-height: 1.4;
+    font-style: italic;
+    margin-bottom: 1.2rem;
+}
+ 
 .panel .content .description {
     font-size: clamp(1.5rem,3.8vmin,1.8rem);
     color: var(--grey);
