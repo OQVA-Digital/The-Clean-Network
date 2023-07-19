@@ -1,0 +1,145 @@
+
+h2::after {
+    content: "";
+    position: relative;
+    width: 1.3rem;
+    height: 1.3rem;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+#indoor h2::after {
+    background-image: url(/icons/indoor.svg);
+}
+
+#external h2::after {
+    background-image: url(/icons/outdoor.svg);
+}
+
+.division {
+    scroll-margin: calc(clamp(1rem,16vmin,7.5rem) + 5rem);
+    width: var(--mobile-width);
+    margin-inline: auto;
+    margin-top: clamp(4rem, 5vw, 8rem);
+}
+
+.division > .flex {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.panel {
+    border: 0.1rem solid var(--light-a);
+    overflow: hidden;
+    position: relative;
+}
+
+.panel > .ctnr {
+    flex-direction: column;
+}
+
+.panel .content {
+    width:85%;
+    padding: clamp(3rem,8vmin,8rem) 0 clamp(3rem,8vmin,8rem);
+}
+
+.panel h3 {
+    font-size: clamp(2rem,8.5vw,4.8rem);
+    text-shadow: -0.6rem 0.6rem rgb(148 197 221 / 20%);
+    font-weight: 600;
+    line-height: 1.1;
+    /* color:var(--primary-a); */
+}
+
+.panel .content .description {
+    font-size: clamp(1.5rem,3.8vmin,1.8rem);
+    color: var(--grey);
+    line-height: 1.4;
+}
+
+.panel .cta {
+    font-weight: 600;
+    letter-spacing: 0;
+    font-size: clamp(1.3rem,5vmin,2.1rem);
+}
+
+.panel .quote {
+    font-size: clamp(1.4rem,4vw,1.8rem);
+    color: var(--primary-a);
+    font-weight: 600;
+    text-align: right;
+    padding: clamp(0.9rem,2.5vw,1.4rem) 1.4rem;
+    border-radius: 0.4rem;
+    position: absolute;
+    left: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    text-align: center;
+    border-top: 0.1rem solid var(--light-a);
+    background-color: rgb(248 248 255 / 75%);
+    backdrop-filter: blur(0.3rem);
+}
+
+.heading_ctnr {
+    padding: clamp(4rem,10vw,5rem) 0;
+    background-color: var(--light-a);
+}
+
+.heading_ctnr h1 {
+    font-size: clamp(2rem,10vw,6rem);
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--primary-a);
+}
+
+.heading_ctnr p {
+    display: block;
+    text-align: center;
+    margin-inline: auto;
+    width: clamp(9rem, 85vw, 70rem);
+    font-size: clamp(1.5rem,3.8vmin,1.8rem);
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.panel .cta:hover {
+    text-decoration-color: var(--light-a);
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+@media screen and (min-width:850px) {
+    .panel > .ctnr {
+        flex-direction: row;
+    }
+
+    .panel .content {
+        max-width: clamp(40rem,30vw,95rem);
+        margin-inline: 4vw 6vw;
+        padding-bottom: clamp(3rem,28vmin,15rem);
+    }
+    
+    .panel .quote {
+        max-width: calc(clamp(40rem,30vw,95rem) + 10vw);
+        box-sizing: border-box;
+        border-radius: unset;
+        background-color: transparent;
+        backdrop-filter: unset;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        transition: background-color 0.3s ease;
+        border-top: 0.1rem solid var(--light-a);
+    }
+
+    .panel .quote:hover {
+        background-color: var(--light-a);
+        transition: background-color 0.1s ease;
+    }
+}

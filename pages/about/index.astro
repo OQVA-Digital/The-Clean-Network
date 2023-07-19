@@ -1,0 +1,192 @@
+---
+import '../../styles/subpages.css'
+
+import Header from "../../components/Header.astro";
+import BaseHead from "../../components/BaseHead.astro";
+import Footer from "../../components/Footer.astro";
+import ContactSection from "../../components/ContactSection.astro"
+
+const { description } = Astro.props;
+---
+
+<html lang="en">
+    <head>
+        <BaseHead title="About Us · The Clean Network" description={description} />
+    </head>
+
+    <body>
+        <Header />
+
+        <main>
+            <section class="panel">
+                <div class="ctnr">
+                    <div class="content reveal">
+                        <h1>About <strong>The Clean Network</strong></h1>
+    
+                        <h2>Confidence guaranteed with over 25 years of experience.</h2>
+    
+                        <p>We are one of the leading office cleaning companies in London.</p>
+    
+                        <p>Our clients include top legal firms, prestigious financial institutions and media corporations, as well as growing entrepreneurial businesses across every industry.</p>
+    
+                        <p>Whatever industry you work in, we are truly passionate about obtaining impeccable cleaning results, so that you can provide the cleanest possible environment for your staff and your customers.</p>
+    
+                        <p>Our staff are all security vetted, and our cleaning team ensure that every job is approached with excellence & care. Regardless of the scale of the job from 1 hour to 10 hours a day, our excellent cleaning teams will work through a thorough cleaning checklist, producing excellent cleaning for your offices.</p>
+    
+                        <p>What’s more, we have a proactive onsite supervisor team to oversee our cleaning team, and to ensure cleaning remains at a high standard.</p>
+
+                        <ul class="bullets">
+                            <li>
+                                <span class="icon floor"></span>
+                                Specialist Floor & Carpet Cleaning Service
+                            </li>
+
+                            <li>
+                                <span class="icon cleaning"></span>
+                                Cleaning Service
+                            </li>
+
+                            <li>
+                                <span class="icon pest"></span>
+                                Pest Control
+                            </li>
+
+                            <li>
+                                <span class="icon hygiene"></span>
+                                Hygiene Services
+                            </li>
+
+                            <li>
+                                <span class="icon waste"></span>
+                                Waste Management
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="image reveal">
+                        <!-- <picture>
+                            <source srcset="/images/office01.webp">
+                            <img src="/images/office01.jpg" alt="The Clean Network logo">
+                        </picture> -->
+                    </div>
+                </div>
+            </section>
+
+            <ContactSection />
+        </main>
+
+        <Footer />
+    </body>
+</html>
+
+<style>
+
+    section > .ctnr {
+    }
+
+    section .content {
+        padding: clamp(3rem,10vmin,8rem) 0 clamp(3rem,12vmin,8rem);
+        margin-inline: auto;
+        width:var(--mobile-width);
+        display: block;
+        font-size: clamp(1.5rem,3.8vmin,1.8rem);
+        color: var(--grey);
+    }
+
+    h1 {
+        font-size: clamp(1rem,9.5vmin,5rem);
+        font-weight: 700;
+        line-height: 1.2;
+        color: var(--dark);
+    }
+
+    h1 strong {
+        font-weight: inherit;
+        color: var(--primary-a);
+    }
+
+    h2 {
+        font-size: clamp(1rem,5.3vmin,2.3rem);
+        font-weight: 600;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        color: var(--dark);
+    }
+
+    p {
+        line-height: 1.4;
+        /* margin-bottom: 0.9rem; */
+    }
+
+    .bullets {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        font-size: 1.2em;
+        color: var(--primary-a);
+        font-weight: 500;
+        line-height: 1.3;
+    }
+
+    .bullets li {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .bullets li .icon {
+        width: 3rem;
+        height: 3rem;
+        display: inline-block;
+    }
+
+    .icon.floor {
+        background-image: url('/icons/floor.svg');
+    }
+
+    .icon.cleaning {
+        background-image: url('/icons/bucket.svg');
+    }
+
+    .icon.pest {
+        background-image: url('/icons/pest.svg');
+    }
+
+    .icon.hygiene {
+        background-image: url('/icons/broom.svg');
+    }
+
+    .icon.waste {
+        background-image: url('/icons/waste.svg');
+    }
+
+    .ctnr .image {
+        width:100%;
+        height:clamp(30rem, 38vmin, 50rem);
+        background-image: url('/images/office02.jpg');
+        background-image: image-set(url('/images/office02.jpg') , url('/images/office02.jpg') );
+        background-size: cover;
+        background-position: center;
+    }
+
+    @media screen and (min-width:850px) {
+        .ctnr .image picture {
+            
+        }
+
+        .ctnr .image {
+            height: unset;
+            max-height: calc(100vh - (clamp(1rem,16vmin,7.5rem) * 2));
+            border-radius: 0 0 0 20vmin;
+        }
+
+        .bullets {
+            font-size: 1em;
+        }
+    }
+
+</style>

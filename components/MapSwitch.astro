@@ -1,0 +1,131 @@
+---
+
+---
+
+<div class="switch_ctnr">
+
+    <label class="switch">
+        <span class="london selected">London</span>
+        
+        <div class="flex">
+            <input type="checkbox">
+            <span class="switch_slider round"></span>
+        </div>
+
+        <span class="birmingham">Birmingham</span>
+    </label>
+</div>
+
+<style>
+
+	.switch_ctnr {
+        margin: 0 auto;
+        padding: 0.6rem 2rem;
+        background-color: var(--light);
+        border-radius: 5rem;
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: var(--primary-a);
+        border: 0.2rem solid var(--light-a);
+	}
+
+    .switch_ctnr .flex {
+        display: flex;
+    }
+
+	/* The switch - the box around the slider */
+	.switch {
+        position: relative;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+	}
+
+	/* Hide default HTML checkbox */
+	.switch input {
+		opacity: 0;
+		width: 0;
+		height: 0;
+        display: none;
+	}
+
+	/* The slider */
+	.switch_slider {
+        position: relative;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #2196F3;
+        -webkit-transition: .4s;
+        transition: .4s;
+        display: block;
+        width: 7rem;
+        margin: 0 auto;
+        height: 3rem;
+	}
+
+	.switch_slider:before {
+		position: absolute;
+		content: "";
+		height: 2.1rem;
+		width: 2.1rem;
+        left: 0.5rem;
+        bottom: 0.45rem;
+		background-color: white;
+		-webkit-transition: .4s;
+		transition: .4s;
+	}
+
+	.switch_ctnr label > span:not(.selected) {
+        opacity: 0.5;
+        cursor: pointer;
+	}
+
+	input:focus + .switch_slider {
+		box-shadow: 0 0 1px #2196F3;
+	}
+
+	input:checked + .switch_slider:before {
+        transform: translateX(3.9rem);
+	}
+
+	/* Rounded sliders */
+	.switch_slider.round {
+		border-radius: 4rem;
+	}
+
+	.switch_slider.round:before {
+		border-radius: 50%;
+	}
+</style>
+
+<script>
+    const iframeCtnr = document.querySelector('.iframe_ctnr')
+
+    const londonIframe = '<iframe width="100%" height="100%" title="Clean Network Locations map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" loading="lazy" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=EC1M%204NH+(The%20Clean%20Network)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>'
+
+    const birminghamIframe = '<iframe width="100%" height="100%" title="Clean Network Locations map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" loading="lazy" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=37%20Regents%20Place,%20Birmingham,%20B3%201UG+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>'
+
+    const mapSwitcher = document.querySelector('.switch input')
+
+    const londonLabel = document.querySelector('.switch_ctnr .london')
+
+    const mapIframe = document.querySelector('.map iframe')
+
+    const birminghamLabel = document.querySelector('.switch_ctnr .birmingham')
+
+    mapSwitcher.addEventListener('input', function() {
+        if(londonLabel.classList.contains('selected')) {
+            londonLabel.classList.remove('selected')
+            birminghamLabel.classList.add('selected')
+            iframeCtnr.innerHTML = birminghamIframe
+        } else if(birminghamLabel.classList.contains('selected')) {
+            birminghamLabel.classList.remove('selected')
+            londonLabel.classList.add('selected')
+            iframeCtnr.innerHTML = londonIframe
+        }
+    })
+</script>
