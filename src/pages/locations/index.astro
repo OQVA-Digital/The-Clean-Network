@@ -31,7 +31,7 @@ const { description } = Astro.props;
             </div>
 
             <div class="map">
-                <div class="contact_box_ctnr">
+                <div class="contact_box_ctnr reveal">
                     <ContactBox />
                 </div>
                 
@@ -120,6 +120,7 @@ const { description } = Astro.props;
 
         .iframe_ctnr {
             border: 0.8rem solid var(--light);
+            box-sizing: border-box;
         }
 
         .contact_box_ctnr {

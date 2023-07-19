@@ -301,7 +301,7 @@ const sectors = await getCollection("sectors");
         background-image: linear-gradient(230deg,var(--light),transparent 50%);
         border-left: 0.1rem solid var(--light);
         border-bottom: 0.1rem solid var(--light);
-        box-shadow: 0 1.2rem 2.9rem -1.2rem var(--grey);
+        box-shadow: 0 1.2rem 2.9rem -1.2rem rgb(102 118 135 / 60%);
         transform: translateY(calc(100% - 1.2rem));
         opacity: 0;
         visibility: hidden;
@@ -328,7 +328,7 @@ const sectors = await getCollection("sectors");
         text-align: center;
         box-shadow: inset 0 -1.2rem 2rem -1.8rem #fff;
         transition: filter 0.5s ease;
-		text-shadow: 0 0.1rem 0.8rem var(--dark);
+		text-shadow: 0 0.1rem 0.4rem var(--dark);
     }
 
     header nav .cta:hover {
@@ -547,6 +547,7 @@ const sectors = await getCollection("sectors");
         .subnav > .flex > a:not(.cta) {
             transition: background-color 0.3s ease;
             padding: 0.8rem clamp(0.6rem, 0.8vw, 1.6rem);
+            text-shadow: 0 0.1rem 0.3rem var(--primary-a);
         }
 
         header nav > .ctnr > a:not(.cta):hover,

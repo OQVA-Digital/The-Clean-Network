@@ -1,6 +1,6 @@
 :root {
     --light: #f8f8ff;
-    --light-a: #e3e3ff;
+    --light-a: #E9E9FF;
     --light-b: #bfbfd8;
     --light-c: #ffe3dc;
     --light-d: #E6EEFF;
@@ -20,6 +20,10 @@
 
     --mobile-width: clamp(9rem, 85vw, 260rem);
     --desktop-width: clamp(9rem, 85vw, 150rem);
+}
+
+.reveal {
+    visibility: hidden;
 }
 
 @font-face {
@@ -221,7 +225,7 @@ hr {
 }
 
 .panel .cta:hover {
-    text-decoration: underline 0.2rem #ffffff33;
+    text-decoration: underline 0.2rem rgb(102 118 135 / 30%);
 }
 
 .panel .cta span:first-of-type {
@@ -276,7 +280,7 @@ hr {
 }
 
 .panel .subsets a:not(.heading) {
-    margin: 0.4rem 0.7rem 0.4rem 0;
+    margin: 0.5rem 0.5rem 0.5rem 0;
     padding: 0 0.6rem;
     transition: background-color 0.4s ease;
     -webkit-transition: background-color 0.4s ease;
@@ -304,8 +308,8 @@ hr {
 /* Map switcher fix */
 
 .find_us .map iframe {
-    width: clamp(10rem,85vmin,55rem);
-    height: clamp(10rem,85vmin,55rem);
+    width: clamp(10rem,85vmin,48rem);
+    height: clamp(10rem,85vmin,48rem);
     display: flex;
     border-radius: 2rem;
     /* border: 0.2rem solid var(--primary); */
@@ -313,6 +317,7 @@ hr {
     background-image: url(/textures/dot-grid.jpg);
     background-image: image-set(url(/textures/dot-grid.jpg), url(/textures/dot-grid.webp));
     background-size: 40rem;
+    border: 0.2rem solid var(--light-b);
 }
 
 

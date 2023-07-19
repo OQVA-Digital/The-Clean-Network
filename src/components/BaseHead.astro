@@ -13,6 +13,16 @@ const { title, description } = Astro.props;
 import { SITE_TITLE, SITE_DESCRIPTION, OG_IMAGE } from "../consts";
 ---
 
+<!-- <script>
+    const allReveals = document.querySelectorAll<HTMLElement>('.reveal')
+
+    for(let i = 0;i<allReveals.length;i++) {
+        allReveals[i].style.visibility = 'hidden'
+    }
+</script> -->
+
+<script src="../scripts/scrollreveal.min.js"></script>
+
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width" />
 <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
@@ -22,7 +32,6 @@ import { SITE_TITLE, SITE_DESCRIPTION, OG_IMAGE } from "../consts";
 <title>{title}</title>
 <meta name="title" content={SITE_TITLE} />
 <meta name="description" content={SITE_DESCRIPTION} />
-
 
 <link rel="canonical" href={canonicalURL} />
 
