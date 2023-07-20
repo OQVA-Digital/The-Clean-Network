@@ -1,7 +1,10 @@
 ---
-title: "Technology Companies"
-description: "Keep technology companies running smoothly with tailored cleaning services. Address specialized equipment and workstations for a clean environment."
-image: "/images/media/technology-companies.jpg"
+order: 1
+title: Technology Companies
+description: Keep technology companies running smoothly with tailored cleaning
+  services. Address specialized equipment and workstations for a clean
+  environment.
+image: /images/media/technology-companies.jpg
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu aliquet nisi. **Sed tincidunt arcu erat, non tristique tellus varius quis.** Phasellus et imperdiet justo, id pretium arcu. Phasellus aliquet ex odio, at eleifend elit semper sit amet. Phasellus ut mattis dolor, sed consequat ipsum.
