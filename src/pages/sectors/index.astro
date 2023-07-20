@@ -1,9 +1,22 @@
 ---
 import { CollectionEntry, getCollection } from "astro:content";
 type Props = CollectionEntry<"sectors">["data"];
-const sectors = await getCollection("sectors");
 
-const { title, description } = Astro.props;
+const sectors = (await getCollection('sectors')).sort((a, b) => {
+    // Check if both items have an 'order' property
+    if (a.data.order !== undefined && b.data.order !== undefined) {
+        return a.data.order - b.data.order; // Sort by 'order' if both have it
+    } else if (a.data.order !== undefined) {
+        return -1; // 'a' has 'order', but 'b' doesn't, so 'a' comes first
+    } else if (b.data.order !== undefined) {
+        return 1; // 'b' has 'order', but 'a' doesn't, so 'b' comes first
+    } else {
+        // Both 'a' and 'b' don't have 'order', fallback to sorting by 'title'
+        return a.data.title.localeCompare(b.data.title);
+    }
+});
+
+const { description } = Astro.props;
 
 import Header from "../../components/Header.astro";
 import BaseHead from "../../components/BaseHead.astro";
