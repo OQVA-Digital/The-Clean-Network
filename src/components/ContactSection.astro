@@ -129,23 +129,24 @@
         margin: 0 auto;
         font-size: 1.8rem;
         background-color: var(--c2-b);
-        color: var(--primary-a);
+        color: var(--light);
         padding: 1.2rem 3rem;
         border-radius: 0.6rem;
         /* margin-top: clamp(2rem, 8vw, 3.5rem); */
         cursor: pointer;
-        font-weight: 600;
+        font-weight: 500;
         border: 0.2rem solid var(--light-a);
         transform: translateY(50%);
-        background-color: var(--light);
+        background-color: var(--highlight);
         position:relative;
         box-shadow: 0 1.3rem 1rem -1rem var(--light-b);
-        transition: background-color 0.4s ease;
+        transition: background-color 0.4s ease, color 0.4s ease;
     }
 
     body form button[type='submit']:hover {
-        background-color: var(--light-a);
-        transition: background-color 0.1s ease;
+        background-color: var(--dark-a);
+        transition: background-color 0.1s ease, color 0.1s ease;
+        color: var(--highlight);
     }
 
     form button[type='submit']::before, form button[type='submit']::after {

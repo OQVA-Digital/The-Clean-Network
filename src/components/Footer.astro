@@ -29,7 +29,19 @@ import ContactBox from "./ContactBox.astro";
             <a href="/contact/"><span></span>contact</a>
         </nav>
 
-        <ContactBox />
+        <div>
+            <ContactBox />
+
+            <hr>
+
+            <div class="nap_data">
+                <p>Clean Network</p>
+                <p>6-8 Knights Court</p>
+                <p>London EC1M 4NH</p>
+                <p>United Kingdom</p>
+                <p>020 3411 0275</p>
+            </div>
+        </div>
     </div>
 </footer>
 
@@ -99,6 +111,23 @@ import ContactBox from "./ContactBox.astro";
         border-bottom: 0.5rem solid var(--highlight);
         border-right: 0.5rem solid var(--highlight);
         transition: border 0s ease;
+    }
+
+    .nap_data {
+        opacity: 0.6;
+        font-weight: 300;
+        font-size: 0.9em;
+        letter-spacing: 0.1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    hr {
+        width: 2rem;
+        margin: 2rem 0;
+        height: 0.2rem;
+        background-color: rgb(248 248 255 / 10%);
     }
 
     

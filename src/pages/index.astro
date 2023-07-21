@@ -7,6 +7,8 @@ import ContactSection from "../components/ContactSection.astro"
 import ContactBox from "../components/ContactBox.astro";
 import MapSwitch from "../components/MapSwitch.astro";
 
+import { Schema } from "astro-seo-schema"
+
 import { getCollection } from "astro:content";
 
 const services = await getCollection("services");
@@ -40,8 +42,7 @@ const testimonials = await getCollection("testimonials");
 						<div class="flex column">
 							<a href="tel:+44-020-3411-0275"><span>London:</span> 020 3411 0275</a>
 
-							<a href="tel:+44-0121-3927529"><span>Birmingham:</span> 0121 3927529</a
-							>
+							<!-- <a href="tel:+44-0121-3927529"><span>Birmingham:</span> 0121 3927529</a> -->
 						</div>
 					</div>
 				</div>
@@ -265,6 +266,41 @@ const testimonials = await getCollection("testimonials");
 					}
 				</div>
 			</div>
+
+			<Schema
+				item={
+					{
+						"@context": "https://schema.org/",
+						"@type": "Review",
+						"itemReviewed": {
+						"@type": "LocalBusiness",
+						"image": "/og/social-image.jpg",
+						"name": "Clean Network",
+						"telephone": "+4402034110275",
+						"address" :{
+							"@type": "PostalAddress",
+							"streetAddress": "123 William St",
+							"addressLocality": "New York",
+							"addressRegion": "NY",
+							"postalCode": "10038",
+							"addressCountry": "US"
+						}
+						},
+						"reviewRating": {
+						"@type": "Rating",
+						"ratingValue": "4"
+						},
+						"name": "A good seafood place.",
+						"author": {
+						"@type": "Person",
+						"name": "Bob Smith"
+						},
+						"publisher": {
+						"@type": "Organization",
+						"name": "Clean Network"
+						}
+				}}
+			/>
 		</section>
 
 		<!-- <section class="rates">
@@ -284,12 +320,12 @@ const testimonials = await getCollection("testimonials");
 				<div class="content reveal">
 					<h3>Find us</h3>
 
-					<p>We’re based in the City of London & Birmingham City Centre so if you’d like us to pop over and give you a quote contact us using our details below. You’re also more than welcome to drop by our office too of course.</p>
+					<p>We’re based in the City of London, so if you’d like us to pop over and give you a quote contact us using our details below. You’re also more than welcome to drop by our office too of course.</p>
 
 					<div class="flex column">
 						<address><strong>London</strong>: 6-8 Knights Court, London, EC1M 4NH</address>
 	
-						<address><strong>Birmingham</strong>: 37 Regents Place, Birmingham, B3 1UG</address>
+						<!-- <address><strong>Birmingham</strong>: 37 Regents Place, Birmingham, B3 1UG</address> -->
 					</div>
 
 					<hr>
@@ -298,7 +334,7 @@ const testimonials = await getCollection("testimonials");
 				</div>
 
 				<div class="map reveal">
-					<MapSwitch/>
+					<!-- <MapSwitch/> -->
 
 					<div class="iframe_ctnr">
 						<noscript>You need to enable JavaScript on your browser to see this content.</noscript>
@@ -364,7 +400,7 @@ const testimonials = await getCollection("testimonials");
 		border: 0.2rem solid var(--light);
     	box-shadow: inset 0 -1.2rem 1.5rem -1.5rem, 0 0.8rem 1rem -0.6rem var(--light-b);
 		transition: filter 0.5s ease;
-		text-shadow: 0 0.1rem 0.4rem var(--dark);
+		text-shadow: 0 0.2rem 0rem rgb(47 54 60 / 38%);
 	}
 
 	.ctas a:hover {

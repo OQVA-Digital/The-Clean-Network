@@ -17,6 +17,7 @@
     --primary-d:#4f8ec1;
 
     --highlight: #f2713a;
+    --highlight-a:#fd601d;
 
     --mobile-width: clamp(9rem, 85vw, 260rem);
     --desktop-width: clamp(9rem, 85vw, 150rem);

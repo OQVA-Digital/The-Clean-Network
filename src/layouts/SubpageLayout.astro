@@ -4,6 +4,7 @@ const { title, description } = Astro.props;
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import BodyGTM from "../components/BodyGTM.astro";
 
 import "../styles/subpages.css";
 ---
@@ -14,6 +15,7 @@ import "../styles/subpages.css";
         <BaseHead title={`${title} ${String(title).includes('Cleaning') ? "" : "Cleaning"} Service · The Clean Network`} description={description} />
     </head>
     <body>
+        <BodyGTM/>
         <Header />
         
         <main>
@@ -23,6 +25,6 @@ import "../styles/subpages.css";
         <Footer />
 
         <!-- Position:sticky address bar fix -->
-        <div style="position: fixed;"></div>
+        <!-- <div style="position: fixed;"></div> -->
     </body>
 </html>

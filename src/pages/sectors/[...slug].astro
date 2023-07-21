@@ -16,6 +16,8 @@ const sectors = Astro.props;
 const { Content } = await sectors.render();
 
 import "../../styles/posts.css"
+
+import { Schema } from "astro-seo-schema"
 ---
 
 <SubpageLayout {...sectors.data}>
@@ -44,4 +46,25 @@ import "../../styles/posts.css"
     </article>
 
     <ContactSection />
+
+    <Schema
+        item={{
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: `${sectors.data.title} ${String(sectors.data.title).includes('Cleaning') ? " Service" : "Cleaning Service"}`,
+            image: `${sectors.data.image}`,
+            "author": [{
+                "@type": "Organization",
+                "name": "Clean Network"
+            }],
+            "publisher": {
+                "@type": "Organization",
+                "name": "Clean Network",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "/logo/tcn-logo-360.png"
+                }
+            }
+        }}
+    />
 </SubpageLayout>

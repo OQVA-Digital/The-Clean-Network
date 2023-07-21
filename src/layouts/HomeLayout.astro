@@ -4,6 +4,11 @@ const { title, description } = Astro.props;
 import "../styles/global.css";
 
 import BaseHead from "../components/BaseHead.astro";
+import BodyGTM from "../components/BodyGTM.astro";
+
+import { Schema } from "astro-seo-schema"
+
+const currentURL = new URL(Astro.request.url)
 ---
 
 <!DOCTYPE html>
@@ -13,6 +18,8 @@ import BaseHead from "../components/BaseHead.astro";
 		<script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 	</head>
 	<body>
+        <BodyGTM/>
+		
 		<slot />
 
 		<script>
@@ -26,5 +33,27 @@ import BaseHead from "../components/BaseHead.astro";
 				});
 			}
 		</script>
+
+		<Schema
+			item={{
+				"@context": "https://schema.org",
+				"@type": "DryCleaningOrLaundry",
+				"name": "The Clean Network",
+				"image": "/og/social-image.jpg",
+				"@id": currentURL,
+				"url": currentURL,
+				"telephone": [
+					"+4402034110275",
+					"+4401213927529"
+				],
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "EC1M 4NH",
+					"addressLocality": "London",
+					"addressRegion": "GB",
+					"addressCountry": "UK"
+				}  
+			}}
+		/>
 	</body>
 </html>
