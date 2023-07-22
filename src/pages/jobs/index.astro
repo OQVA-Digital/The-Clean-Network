@@ -1,26 +1,94 @@
 ---
-import '../../styles/subpages.css'
+// import '../../styles/subpages.css'
 
 import Header from "../../components/Header.astro";
 import BaseHead from "../../components/BaseHead.astro";
 import Footer from "../../components/Footer.astro";
-import ContactSection from "../../components/ContactSection.astro";
+import '../../styles/forms.css'
 
 const { description } = Astro.props;
+
+import { Schema } from "astro-seo-schema"
 ---
 
 <html lang="en">
     <head>
-        <BaseHead title="Contact Us · The Clean Network" description={description} />
+        <BaseHead title="Work With Us · The Clean Network" description={description} />
     </head>
 
     <body>
         <Header />
 
         <main>
-            <ContactSection />
+
+            <section class="contact default_bg" id="contact">
+                <div class="ctnr">
+                    <form name="contact" method="POST" data-netlify="true">
+                        <h1 class="title">Work with us</h1>
+
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa eveniet ab pariatur obcaecati dolores, ipsum maxime inventore officia explicabo quibusdam saepe.</p>
+            
+                        <div class="flex">
+                            <p>
+                                <label>First name: <input type="text" name="name" required/></label>
+                            </p>
+            
+                            <p>
+                                <label>Last name: <input type="text" name="name" required/></label>
+                            </p>
+                        </div>
+            
+                        <p>
+                            <label>Email: <input type="email" name="email" required/></label>
+                        </p>
+            
+                        <p>
+                            <label>Message: <textarea name="message" required></textarea></label>
+                        </p>
+            
+                        <p>
+                            <button type="submit" aria-label="Submit contact form">Request a quote</button>
+                                    
+                            <noscript>You need to enable JavaScript on your browser to submit emails.</noscript>
+                        </p>
+                        </form>
+                </div>
+            
+                <script>
+                    import "../../scripts/form.js";
+                </script>
+            </section>
         </main>
 
         <Footer />
+
+        <Schema
+            item={
+                {
+                "@context": "https://schema.org/",
+                "@type": "JobPosting",
+                "title": "Cleaner",
+                "description": "As a Corporate Cleaner at The Clean Network, you will be an integral part of our professional cleaning team, responsible for maintaining the cleanliness and hygiene of corporate premises in the London area. Your meticulous attention to detail and dedication to providing exceptional cleaning services will contribute to creating a clean and comfortable environment for our valued clients. You will work in various corporate settings, including offices, business centers, and commercial buildings, adhering to high standards of cleanliness and professionalism.",
+                "hiringOrganization" : {
+                    "@type": "Organization",
+                    "name": "The Clean Network",
+                    "sameAs": "https://cleannetwork.co.uk"
+                },
+                "industry": "Corporate Cleaning",
+                "employmentType": "CONTRACTOR",
+                "datePosted": "2023-07-24",
+                "validThrough": "",
+                "jobLocation": {
+                    "@type": "Place",
+                    "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "",
+                    "addressLocality": "London",
+                    "postalCode": "",
+                    "addressCountry": ""
+                    }
+                }
+                }}
+        />
     </body>
 </html>

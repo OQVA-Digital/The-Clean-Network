@@ -329,6 +329,7 @@ const sectors = await getCollection("sectors");
         box-shadow: inset 0 -1.2rem 2rem -1.8rem #fff;
         transition: filter 0.5s ease;
 		text-shadow: 0 0.2rem 0rem rgb(47 54 60 / 38%);
+        border: 0.2rem solid var(--highlight);
     }
 
     header nav .cta:hover {
@@ -527,7 +528,6 @@ const sectors = await getCollection("sectors");
             position: static;
             margin: unset;
             margin-left: clamp(0rem, calc(8vw - 9rem), 6rem);
-            border: 0.2rem solid var(--primary-c);
             font-size: clamp(1.5rem, 3.8vmin, 1.8rem);
         }
 

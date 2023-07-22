@@ -1,0 +1,82 @@
+---
+
+---
+
+<div class="bt_ctnr flex">
+    <div class="ctas flex">
+        <a href="/services/" class="know_our_services">Find out more</a>
+
+        <a href="#contact" class="cta">Get a Quote</a>
+    </div>
+
+    <div class="flex column">
+        <a href="tel:+44-020-3411-0275"><span>London:</span> 020 3411 0275</a>
+
+        <!-- <a href="tel:+44-0121-3927529"><span>Birmingham:</span> 0121 3927529</a> -->
+    </div>
+</div>
+
+<style>
+	.bt_ctnr {
+		flex-direction: column;
+    	gap: 1.6rem;
+	}
+
+    .ctas {
+        gap: 1.4rem;
+        color: var(--light);
+        font-weight: 500;
+        font-size: clamp(1.3rem,4vmin,1.8rem);
+        line-height: 1;
+        margin-top: 0.5rem;
+        letter-spacing: 0.04rem;
+    }
+
+    .ctas a {
+        border-radius: 0.4rem;
+        padding: 1.4rem 2rem;
+        border: 0.2rem solid var(--light);
+        box-shadow: inset 0 -1.2rem 1.5rem -1.5rem, 0 0.8rem 1rem -0.6rem var(--light-b);
+        transition: filter 0.5s ease;
+        text-shadow: 0 0.2rem 0rem rgb(47 54 60 / 38%);
+    }
+
+    .ctas a:hover {
+        filter:brightness(1.1);
+        transition: filter 0.1s ease;
+    }
+
+    .bt_ctnr .flex.column {
+        gap: 0.2rem;
+        font-weight: 600;
+        font-size: clamp(1.2rem,3.8vmin,1.6rem);
+        width: fit-content;
+    }
+
+    .bt_ctnr .flex.column a {
+        line-height: 1;
+        padding: 0.5rem;
+        transition: opacity 0.4s ease;
+        width: fit-content;
+    }
+
+    .bt_ctnr .flex.column a:hover {
+        opacity: 0.7;
+        transition: opacity 0s ease;
+    }
+
+    .bt_ctnr .flex.column span {
+        color: var(--primary-a);
+        font-weight: 600;
+    }
+
+    .ctas .know_our_services {
+        background-color: var(--primary-a);
+    }
+
+    .ctas .cta {
+        background-color: var(--highlight);
+        border: 0.2rem solid var(--highlight);
+    }
+
+</style>
