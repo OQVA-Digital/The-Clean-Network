@@ -15,6 +15,6 @@ With our flexible schedules, we can work around your office hours, causing minim
 
 Partnering with us means you can focus on what you do best - providing excellent care to your patients, while we ensure your work environment exemplifies cleanliness and hygiene. Our <strong>medical and dental office cleaning services in London</strong> are not only about maintaining cleanliness but also about enhancing your reputation and providing peace of mind to everyone who walks through your door.
 
-At The Clean Network, we are more than just a cleaning company. We are your partners in maintaining a healthy, safe, and clean environment. Why not see for yourself why <strong>medical and dental offices</strong> across <strong>London</strong> trust us for their cleaning needs?"
+At The Clean Network, we are more than just a cleaning company. We are your partners in maintaining a healthy, safe, and clean environment. Why not see for yourself why <strong>medical and dental offices</strong> across <strong>London</strong> trust us for their cleaning needs?
 
 Ready for a cleaner, safer medical or dental office? Get a free quote today.
