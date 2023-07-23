@@ -27,19 +27,15 @@ import { Schema } from "astro-seo-schema"
 
         <div class="cover" style={`background-image: url(${sectors.data.image});`}></div>
 
-        <div class="content">
-            <h1>{sectors.data.title}</h1>
-    
-            <p>{sectors.data.description}</p>
-        </div>
-
         <!-- <img src={sectors.data.image} alt={`Photo of ${sectors.data.title} cleaning service`}> -->
 
-        <hr>
+        <!-- <hr> -->
     
     </section>
 
     <article>
+        <h1>{sectors.data.title}</h1>
+
         <Content />
 
         <a href="/contact/" class="cta" aria-label="Get a free quote for our cleaning sectors">Get a free quote</a>

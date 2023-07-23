@@ -5,7 +5,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ContactSection from "../components/ContactSection.astro"
 import ContactBox from "../components/ContactBox.astro";
-import ButtonContainer from "../components/ButtonContainer.astro";
+import "../styles/button-ctnr.css";
 
 import { Schema } from "astro-seo-schema"
 
@@ -25,9 +25,21 @@ const testimonials = await getCollection("testimonials");
 				<div class="content reveal">
 					<h1>Commercial & Office Cleaning in London</h1>
 
-					<h2>Welcome to <strong>The Clean Network</strong> - trusted by over 500 offices in London each day. Discover the difference our professional office cleaning services can make. Why do 95% of our clients renew their contracts with us? Let us show you.</h2>
+					<h2>Welcome to <strong>The Clean Network</strong> - trusted by over 500 offices in London each day. Discover the difference our professional office cleaning services can make. <b>Why do 95% of our clients renew their contracts with us? <span class="highlight">Let us show you.</span></b></h2>
 
-					<ButtonContainer />
+					<div class="bt_ctnr flex">
+						<div class="ctas flex">
+							<a href="/services/" class="know_our_services">Find out more</a>
+					
+							<a href="#contact" class="cta">Get a Quote</a>
+						</div>
+					
+						<div class="flex column">
+							<a href="tel:+44-020-3411-0275"><span>London:</span> 020 3411 0275</a>
+					
+							<!-- <a href="tel:+44-0121-3927529"><span>Birmingham:</span> 0121 3927529</a> -->
+						</div>
+					</div>
 				</div>
 
 				<div class="showcase reveal">
@@ -41,7 +53,7 @@ const testimonials = await getCollection("testimonials");
 
 			<div class="text_block reveal">
 				<div class="ctnr">
-					<p>We're more than a cleaning company. We're your partners in creating a clean, healthy, and productive work environment. Our professional team caters to various sectors in London, ensuring your specific needs are met with meticulous attention to detail, unmatched reliability, and high industry standards. Experience the professionalism that keeps our clients coming back.</p>
+					<p>We're more than a cleaning company. <b>We're your partners in creating a clean, healthy, and productive work environment.</b> Our professional team caters to various sectors in London, ensuring your specific needs are met with meticulous attention to detail, unmatched reliability, and high industry standards. <b>Experience the professionalism that keeps our clients coming back.</b></p>
 				</div>
 			</div>
 		</section>
@@ -356,6 +368,11 @@ const testimonials = await getCollection("testimonials");
 		line-height: 1.5;
 	}
 
+	.intro h2 .highlight {
+		color: var(--highlight-a);
+		padding: 0.2rem 0.4rem;
+	}
+
 	.showcase {
     	clip-path: polygon(0% 9%,100% 0%,100% 100%,0% 100%);
 	}
@@ -415,6 +432,11 @@ const testimonials = await getCollection("testimonials");
 		padding: clamp(3rem, 10vmin, 6rem) 0;
 		color: var(--light);
     	font-size: clamp(1.5rem,4vmin,2.2rem);
+	}
+
+	.text_block b, .text_block strong {
+		font-weight: 500;
+		background-color: var(--highlight-a);
 	}
 
 	.intro .text_block > .ctnr {
@@ -552,7 +574,7 @@ const testimonials = await getCollection("testimonials");
 	}
 
 	.locations.panel .content {
-    	padding: clamp(3rem,10vw,13rem) 0 clamp(3rem,12vw,13rem);
+    	padding: clamp(3rem,10vw,9rem) 0 clamp(3rem,12vw,9rem);
 	}
 
 	section.testimonials {
@@ -590,7 +612,7 @@ const testimonials = await getCollection("testimonials");
 
 	.testimonials h3 {
 		margin-inline: auto;
-		font-size: clamp(2rem,6.2vw,3.2rem);
+		font-size: clamp(2rem,6.2vw,3.8rem);
 		text-align: center;
 		font-weight: 500;
 		width: fit-content;

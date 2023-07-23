@@ -47,7 +47,7 @@ import { Schema } from "astro-seo-schema"
                 <div class="heading_ctnr default_bg">
                     <h1>Commercial & Office Cleaning Services in London</h1>
 
-					<p>The Clean Network is here for all your commercial and office cleaning needs in London. We take pride in our range of professional cleaning services, all tailored to provide a clean, healthy, and productive work environment that leaves a lasting impression.</p>
+					<p><strong>The Clean Network</strong> is here for all your commercial and office cleaning needs in London. We take pride in our range of professional cleaning services, all <b>tailored to provide a clean, healthy, and productive work environment that leaves a lasting impression</b>.</p>
                 </div>
                 
                 <div class="division" id="indoor">
@@ -66,17 +66,16 @@ import { Schema } from "astro-seo-schema"
     
                                                 <p class="description">{sectors.data.description}</p>
     
-                                                <a href={`/sectors/${sectors.slug}`} class="cta" aria-label={`Read more about ${sectors.data.title}`}><span></span> About <span class="lowercase">{sectors.data.title} {String(sectors.data.title).includes('Cleaning') ? "" : "Cleaning"}</span></a>
+                                                <a href={`/sectors/${sectors.slug}`} class="cta" aria-label={`Read more about ${sectors.data.title}`}  title={`Read more about ${sectors.data.title}`}><span></span></a>
 
                                                 <a href="/contact/" class="quote" aria-label="Get a free quote for our cleaning sectors">Get a free quote</a>
                                             </div>
                                             
-                                            <div class="image">
+                                            <a href={`/sectors/${sectors.slug}`} class="image" aria-label={`Read more about ${sectors.data.title}`}  title={`Read more about ${sectors.data.title}`}>
                                                 <img src={sectors.data.image} loading="lazy" alt={`Photo of ${sectors.data.title} cleaning`}/>
-                                            </div>
+                                            </a>
                                         </div>
                                     </section>
-                                    
                                 </>
                             ))
                         }

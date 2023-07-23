@@ -6,6 +6,8 @@
     --light-d: #E6EEFF;
 
     --grey: #667687;
+    --grey-a: #4d637b;
+    --grey-b: #4a5867;
 
     --dark: #2f363c;
     --dark-a:#394046;
@@ -206,7 +208,7 @@ noscript {
     padding: clamp(3rem,7vmin,6rem) 0 clamp(3rem,9vmin,6rem);
     display: flex;
     flex-direction: column;
-    gap: clamp(1rem, 2vmin, 1.5rem);
+    gap: clamp(1rem, 2vmin, 1.2rem);
 }
 
 .panel h3 {
@@ -230,14 +232,13 @@ noscript {
 }
 .panel .cta span:first-of-type {
     display: inline-block;
-    border-bottom: 0.4rem solid var(--highlight);
-    border-right: 0.4rem solid var(--highlight);
-    border-top: 0.4rem solid transparent;
-    border-left: 0.4rem solid transparent;
-    transform: translateY(-40%) rotate(-45deg);
+    border-bottom: 0.5rem solid var(--highlight);
+    border-right: 0.5rem solid var(--highlight);
+    border-top: 0.5rem solid transparent;
+    border-left: 0.5rem solid transparent;
+    transform: translateX(calc(50% + -0.4rem)) rotate(-45deg);
     width: 0;
     height: 0;
-    margin-right: 0.5rem;
 }
 
 .panel .image img {

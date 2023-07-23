@@ -5,7 +5,7 @@ import Header from "../../components/Header.astro";
 import BaseHead from "../../components/BaseHead.astro";
 import Footer from "../../components/Footer.astro";
 import ContactSection from "../../components/ContactSection.astro"
-import ButtonContainer from "../../components/ButtonContainer.astro";
+import "../../styles/button-ctnr.css";
 
 const { description } = Astro.props;
 ---
@@ -40,7 +40,19 @@ const { description } = Astro.props;
 
                         <p><strong class="highlight">Partner with us and discover the difference The Clean Network can make.</strong></p>
 
-                        <ButtonContainer />
+                        <div class="bt_ctnr flex">
+                            <div class="ctas flex">
+                                <a href="#contact" class="cta">Get a Quote</a>
+
+                                <a href="/jobs/" class="job_cta">Work with us</a>
+                            </div>
+                        
+                            <div class="flex column">
+                                <a href="tel:+44-020-3411-0275"><span>London:</span> 020 3411 0275</a>
+                        
+                                <!-- <a href="tel:+44-0121-3927529"><span>Birmingham:</span> 0121 3927529</a> -->
+                            </div>
+                        </div>
 
                         <ul class="bullets">
                             <li>
@@ -68,8 +80,6 @@ const { description } = Astro.props;
                                 Waste Management
                             </li>
                         </ul>
-
-                        <a href="/jobs/">Work with us</a>
                     </div>
 
                     <div class="image reveal">
@@ -136,15 +146,13 @@ const { description } = Astro.props;
         color: var(--primary-a);
     }
 
-    .content a {
+    .ctas .job_cta {
         background-color: var(--light-a);
-        padding: 1.2rem 1.8rem;
-        width: fit-content;
-        border-radius: 0.3rem;
-        font-size: clamp(1.5rem,5vmin,1.9rem);
-        font-weight: 500;
         color: var(--primary-a);
         border: 0.1rem solid var(--light-b);
+        box-shadow: unset;
+        text-shadow: unset;
+        font-weight: 600;
     }
 
     .bullets {
