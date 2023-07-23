@@ -104,7 +104,8 @@ import { Schema } from "astro-seo-schema"
                                         <div class="ctnr">
                                             <div class="content">
                                                 <h3>
-                                                    {services.data.title}
+                                                    <a href={`/services/${services.slug}`} aria-label={`Read more about ${services.data.title}`}>{services.data.title}
+                                                    </a>
                                                 </h3>
     
                                                 <p class="description">{services.data.description}</p>
