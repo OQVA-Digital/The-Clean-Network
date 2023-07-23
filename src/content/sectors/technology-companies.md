@@ -1,5 +1,5 @@
 ---
-order: ""
+order: 1
 title: Technology Company Cleaning Services
 description: From start-ups to large tech corporations, we know the specific
   challenges that London's technology companies face when it comes to
