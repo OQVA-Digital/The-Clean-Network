@@ -29,13 +29,13 @@ h2::after {
 .division > .flex {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: clamp(4rem, 5vw, 6rem);
 }
 
 .panel {
     border: 0.1rem solid var(--light-a);
-    overflow: hidden;
     position: relative;
+    scroll-margin-top: 20rem;
 }
 
 .panel > .ctnr {
@@ -52,7 +52,24 @@ h2::after {
     text-shadow: -0.6rem 0.6rem rgb(148 197 221 / 20%);
     font-weight: 600;
     line-height: 1.1;
-    /* color:var(--primary-a); */
+    transition: color 0.4s ease;
+    -webkit-transition: color 0.4s ease;
+    -moz-transition: color 0.4s ease;
+    -ms-transition: color 0.4s ease;
+    -o-transition: color 0.4s ease;
+}
+
+.panel h3 a {
+    display: block;
+}
+
+.panel h3:hover {
+    color: var(--primary-a);
+    transition: color 0.1s ease;
+    -webkit-transition: color 0.1s ease;
+    -moz-transition: color 0.1s ease;
+    -ms-transition: color 0.1s ease;
+    -o-transition: color 0.1s ease;
 }
 
 .division h2 + p {
@@ -72,7 +89,24 @@ h2::after {
 .division .cta {
     font-weight: 600;
     letter-spacing: 0;
-    font-size: clamp(1.3rem,5vmin,2.1rem);
+    font-size: clamp(1.3rem,5vmin,2rem);
+    transition: background-color 0.4s ease;
+    -webkit-transition: background-color 0.4s ease;
+    -moz-transition: background-color 0.4s ease;
+    -ms-transition: background-color 0.4s ease;
+    -o-transition: background-color 0.4s ease;
+    width: fit-content;
+    padding: 0.6rem 1rem 0.6rem 0.5rem;
+    border-radius: 0.4rem;
+}
+
+.division .cta:hover {
+    background-color: var(--light-a);
+    transition: background-color 0.1s ease;
+    -webkit-transition: background-color 0.1s ease;
+    -moz-transition: background-color 0.1s ease;
+    -ms-transition: background-color 0.1s ease;
+    -o-transition: background-color 0.1s ease;
 }
 
 .panel .quote {
@@ -92,30 +126,36 @@ h2::after {
     backdrop-filter: blur(0.3rem);
 }
 
+.panel .image img {
+    border-radius: 0 0 1.2rem 1.2rem;
+    -webkit-border-radius: 0 0 1.2rem 1.2rem;
+    -moz-border-radius: 0 0 1.2rem 1.2rem;
+    -ms-border-radius: 0 0 1.2rem 1.2rem;
+    -o-border-radius: 0 0 1.2rem 1.2rem;
+}
+
 .heading_ctnr {
     padding: clamp(4rem,10vw,5rem) 0;
     background-color: var(--light-a);
 }
 
 .heading_ctnr h1 {
-    font-size: clamp(2rem,10vw,6rem);
+    font-size: clamp(2rem,10vw,5.5rem);
     text-align: center;
     margin-bottom: 1rem;
     color: var(--primary-a);
+    /* max-width: 105rem; */
+    margin-inline: auto;
 }
 
 .heading_ctnr p {
     display: block;
     text-align: center;
     margin-inline: auto;
-    width: clamp(9rem, 85vw, 70rem);
+    width: clamp(9rem, 85vw, 85rem);
     font-size: clamp(1.5rem,3.8vmin,1.8rem);
     line-height: 1.5;
     font-weight: 500;
-}
-
-.panel .cta:hover {
-    text-decoration-color: var(--light-a);
 }
 
 .lowercase {
@@ -149,5 +189,18 @@ h2::after {
     .panel .quote:hover {
         background-color: var(--light-a);
         transition: background-color 0.1s ease;
+        -webkit-transition: background-color 0.1s ease;
+        -moz-transition: background-color 0.1s ease;
+        -ms-transition: background-color 0.1s ease;
+        -o-transition: background-color 0.1s ease;
+}
+
+    .panel .image img {
+        height: 100%;
+        border-radius: 0 1.2rem 1.2rem 0;
+        -webkit-border-radius: 0 1.2rem 1.2rem 0;
+        -moz-border-radius: 0 1.2rem 1.2rem 0;
+        -ms-border-radius: 0 1.2rem 1.2rem 0;
+        -o-border-radius: 0 1.2rem 1.2rem 0;
     }
 }

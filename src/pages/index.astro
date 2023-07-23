@@ -75,7 +75,7 @@ const testimonials = await getCollection("testimonials");
 				<div class="content reveal">
 					<h3>Services</h3>
 
-					<p>At The Clean Network, we offer a comprehensive range of services. From offices to commercial spaces, our team is equipped with the latest technology and training to deliver impeccable results. Explore our services:</p>
+					<p>At The Clean Network, we offer a comprehensive range of services. From offices to commercial spaces, our team is equipped with the latest technology and training to deliver impeccable results.</p>
 
 					<a href="/services/" class="cta"><span></span> All services</a>
 
@@ -141,7 +141,7 @@ const testimonials = await getCollection("testimonials");
 				<div class="content reveal">
 					<h3>Sectors</h3>
 
-					<p>We understand that each sector has unique needs. That's why we specialise in providing tailored cleaning solutions to various sectors such as:</p>
+					<p>We understand that each place has unique needs. That's why we specialise in providing tailored cleaning solutions to various sectors.</p>
 
 					<a href="/sectors/" class="cta"><span></span> All sectors</a>
 
@@ -369,6 +369,14 @@ const testimonials = await getCollection("testimonials");
 		display: flex;
 	}
 
+	.panel.services, .panel.sectors {
+		width: clamp(9rem,91vw,275rem);
+		margin-inline: auto;
+		border-radius: 1.2rem;
+    	margin-bottom: clamp(2rem, 4vw, 4rem);
+    	border: 0.1rem solid rgb(191 191 216 / 30%);
+	}
+
 	.panel h3::after {
 		content:'';
 		width: 2.5rem;
@@ -378,6 +386,14 @@ const testimonials = await getCollection("testimonials");
 		background-size: contain;
 		background-position: center;
 		background-repeat: no-repeat;
+	}
+
+	.panel.services .image img, .panel.sectors .image img {
+		border-radius: 1.2rem 1.2rem 0 0;
+		-webkit-border-radius: 1.2rem 1.2rem 0 0;
+		-moz-border-radius: 1.2rem 1.2rem 0 0;
+		-ms-border-radius: 1.2rem 1.2rem 0 0;
+		-o-border-radius: 1.2rem 1.2rem 0 0;
 	}
 
 	.panel .cta {
@@ -415,6 +431,8 @@ const testimonials = await getCollection("testimonials");
 	}
 
 	section.clients {
+    	margin-bottom: clamp(2rem,8vw,5rem);
+		border-bottom: 0.2rem solid var(--light-a);
 	}
 
 	.clients > .ctnr {
@@ -447,13 +465,13 @@ const testimonials = await getCollection("testimonials");
 	}
 
 	section.services {
-		width: 100%;
+		/* width: 100%; */
 		background-color: var(--light-d);
 		color: var(--primary-a);
 	}
 
 	section.sectors {
-		width: 100%;
+		/* width: 100%; */
 		background-color: var(--dark);
 		color:var(--light);
 	}
@@ -529,7 +547,8 @@ const testimonials = await getCollection("testimonials");
 
 	section.locations {
 		background-color:var(--highlight);
-		color:var(--light)
+		color:var(--light);
+    	margin-top: 7rem;
 	}
 
 	.locations.panel .content {
@@ -592,8 +611,8 @@ const testimonials = await getCollection("testimonials");
 	.quotes {
 		position: absolute;
 		width: clamp(9rem,91vw,77rem);
-		height: clamp(60%,141vw,81%);
-		bottom: 2%;
+		height: clamp(60%,121vw,81%);
+		bottom: clamp(1rem, 10%, 7rem);
 		left: 0;
 		right: 0;
 		margin-inline: auto;
@@ -672,8 +691,8 @@ const testimonials = await getCollection("testimonials");
 	}
 
 	.testimonials .profile img {
-		width: clamp(7rem, 9vw, 10rem);
-		height: clamp(7rem, 9vw, 10rem);
+		width: clamp(7rem,9vw,9rem);
+		height: clamp(7rem,9vw,9rem);
 		border-radius: 50%;
 		border: 0.3rem solid var(--light-a);
 	}
@@ -731,10 +750,10 @@ const testimonials = await getCollection("testimonials");
 	}
 
 	.testimonials .heading {
-		font-size: clamp(1.8rem,4.8vmin,2.5rem);
+		font-size: clamp(1.8rem,4.8vmin,2.4rem);
 		margin-bottom: 1rem;
 		color: var(--primary-a);
-		font-weight: 400;
+		font-weight: 500;
 		line-height: 1.4;
 	}
 
@@ -767,7 +786,7 @@ const testimonials = await getCollection("testimonials");
 		
 	}
 
-	section.rates {
+	/* section.rates {
     	padding: clamp(3rem,13vw,7rem) 0 clamp(3rem,13vw,8rem);
 		background-image: url('/textures/dot-grid.jpg');
 		background-size: 30rem;
@@ -781,7 +800,7 @@ const testimonials = await getCollection("testimonials");
 		flex-direction: column;
 		gap: 1.4rem;
 		align-items: center;
-	}
+	} */
 
 	.rates h3 {
     	font-size: clamp(2rem,10vw,6rem);
@@ -854,7 +873,7 @@ const testimonials = await getCollection("testimonials");
 	}
 
 	.find_us .iframe_ctnr {
-    	margin: 1.5rem 0 7rem;
+    	margin: 0 0 7rem;
 		position: relative;
 		display: flex;
 		flex-direction: column;
@@ -906,8 +925,9 @@ const testimonials = await getCollection("testimonials");
     		margin: 0.6rem 0;
 		}
 
-		.locations .image img {
+		.locations .image {
 			border-radius: 24rem 0 0 0;
+    		overflow: hidden;
 		}
 
 		.testimonials::before, .testimonials::after {
@@ -934,6 +954,14 @@ const testimonials = await getCollection("testimonials");
 			margin: unset;
     		max-width: clamp(40rem,33vw,95rem);
     		/* padding: clamp(3rem,10vmin,6rem) 0 clamp(3rem,12vmin,6rem); */
+		}
+
+		.panel.services .image img, .panel.sectors .image img {
+			border-radius: 0 1.2rem 1.2rem 0;
+			-webkit-border-radius: 0 1.2rem 1.2rem 0;
+			-moz-border-radius: 0 1.2rem 1.2rem 0;
+			-ms-border-radius: 0 1.2rem 1.2rem 0;
+			-o-border-radius: 0 1.2rem 1.2rem 0;
 		}
 
 		.find_us .iframe_ctnr {

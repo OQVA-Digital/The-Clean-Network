@@ -34,7 +34,7 @@ import { Schema } from "astro-seo-schema"
 
 <html lang="en">
     <head>
-        <BaseHead title="Our Sectors · The Clean Network" description={description} />
+        <BaseHead title="Our Sectors · The Clean Network" description="Discover the range of commercial & office cleaning services offered by The Clean Network in London. Comprehensive, reliable, professional. Your sector, our expertise." />
     </head>
 
     <body>
@@ -45,9 +45,9 @@ import { Schema } from "astro-seo-schema"
         <main>
             <div class="ctnr">
                 <div class="heading_ctnr default_bg">
-                    <h1>Our Sectors</h1>
+                    <h1>Commercial & Office Cleaning Services in London</h1>
 
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam laborum vel rerum eligendi sunt illum harum id, qui ullam.</p>
+					<p>The Clean Network is here for all your commercial and office cleaning needs in London. We take pride in our range of professional cleaning services, all tailored to provide a clean, healthy, and productive work environment that leaves a lasting impression.</p>
                 </div>
                 
                 <div class="division" id="indoor">
@@ -55,22 +55,24 @@ import { Schema } from "astro-seo-schema"
                         {
                             sectors.map((sectors) => (
                                 <>
-                                <section class="panel reveal">
+                                <section class="panel reveal" id={(sectors.data.title).toLowerCase().replace(/\s+/g, '-')}>
                                         <div class="ctnr">
                                             <div class="content">
                                                 <h3>
-                                                    {sectors.data.title}
+                                                    <a href={`/sectors/${sectors.slug}`} aria-label={`Read more about ${sectors.data.title}`}>
+                                                        {sectors.data.title}
+                                                    </a>
                                                 </h3>
     
                                                 <p class="description">{sectors.data.description}</p>
     
-                                                <a href={`/sectors/${sectors.slug}`} class="cta" aria-label={`Read more about ${sectors.data.title}`}><span></span> About <span class="lowercase">{sectors.data.title} {String(sectors.data.title).includes('Cleaning') ? "" : "Cleaning"} Sector</span></a>
+                                                <a href={`/sectors/${sectors.slug}`} class="cta" aria-label={`Read more about ${sectors.data.title}`}><span></span> About <span class="lowercase">{sectors.data.title} {String(sectors.data.title).includes('Cleaning') ? "" : "Cleaning"}</span></a>
 
                                                 <a href="/contact/" class="quote" aria-label="Get a free quote for our cleaning sectors">Get a free quote</a>
                                             </div>
                                             
                                             <div class="image">
-                                                <img src={sectors.data.image} loading="lazy" alt={`Photo of ${sectors.data.title} cleaning sector`}/>
+                                                <img src={sectors.data.image} loading="lazy" alt={`Photo of ${sectors.data.title} cleaning`}/>
                                             </div>
                                         </div>
                                     </section>

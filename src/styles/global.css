@@ -171,7 +171,7 @@ noscript {
 
 .default_bg {
     background-image: url("/images/office-bg01.jpg");
-    background-image: image-set("/images/office-bg01.jpg", "/images/office-bg01.webp");
+    background-image: image-set("/images/office-bg01.webp", "/images/office-bg01.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -201,9 +201,9 @@ noscript {
 }
 
 .panel .content {
-    width: var(--mobile-width);
+    width: clamp(9rem, 80vw, 260rem);
     margin-inline: auto;
-    padding: clamp(3rem,10vmin,8rem) 0 clamp(3rem,12vmin,8rem);
+    padding: clamp(3rem,7vmin,6rem) 0 clamp(3rem,9vmin,6rem);
     display: flex;
     flex-direction: column;
     gap: clamp(1rem, 2vmin, 1.5rem);
@@ -215,7 +215,7 @@ noscript {
 
 .panel .content p {
     line-height: 1.5;
-    font-size: clamp(1.5rem,4vmin,1.9rem);
+    font-size: clamp(1.5rem,4vmin,1.8rem);
 }
 
 /* .panel .content p, .panel .description {
@@ -249,7 +249,6 @@ noscript {
     background-color: rgba(255,255,255,0.2);
     max-height: calc(100dvh - clamp(1rem,16vmin,7.5rem));
     font-size: 2rem;
-    /* background-color: var(--light-d); */
 }
 
 .panel .subsets {
@@ -304,7 +303,7 @@ noscript {
 /* Map switcher fix */
 
 .find_us .map iframe {
-    width: clamp(10rem,85vmin,48rem);
+    width: clamp(10rem,85vmin,160rem);
     height: clamp(10rem,85vmin,48rem);
     display: flex;
     border-radius: 2rem;
@@ -353,6 +352,11 @@ noscript {
 
     .panel .image img {
         height: 100%;
+        border-radius: 0 1.2rem 1.2rem 0;
+        -webkit-border-radius: 0 1.2rem 1.2rem 0;
+        -moz-border-radius: 0 1.2rem 1.2rem 0;
+        -ms-border-radius: 0 1.2rem 1.2rem 0;
+        -o-border-radius: 0 1.2rem 1.2rem 0;
     }
 
     .panel .image picture, .panel .image img {

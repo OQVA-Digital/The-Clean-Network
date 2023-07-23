@@ -12,7 +12,7 @@ const { description } = Astro.props;
 
 <html lang="en">
     <head>
-        <BaseHead title="About Us · The Clean Network" description={description} />
+        <BaseHead title="About The Clean Network - Who We Are" description="Discover who we are at The Clean Network. Learn about our history, our commitment to excellence, and why we're London's trusted cleaning service." />
     </head>
 
     <body>
@@ -24,17 +24,21 @@ const { description } = Astro.props;
                     <div class="content reveal">
                         <h1>About <strong>The Clean Network</strong></h1>
     
-                        <h2>Confidence guaranteed with over 25 years of experience.</h2>
+                        <h2>The Clean Network – Our Story, Our Values, Our Commitment</h2>
     
-                        <p>We are one of the leading office cleaning companies in London.</p>
+                        <p>We are one of the leading office <strong>cleaning companies in London</strong>.</p>
     
-                        <p>Our clients include top legal firms, prestigious financial institutions and media corporations, as well as growing entrepreneurial businesses across every industry.</p>
+                        <p>The Clean Network is your professional partner for commercial and office cleaning in London. Our story began with a singular mission - to provide businesses with <strong>reliable, high-standard cleaning services, instilling trust through our actions and maintaining a level of quality that speaks for itself.</strong></p>
     
-                        <p>Whatever industry you work in, we are truly passionate about obtaining impeccable cleaning results, so that you can provide the cleanest possible environment for your staff and your customers.</p>
+                        <p>Our philosophy is simple yet robust - cleanliness and productivity go hand in hand. A clean working environment not only enhances the well-being of your staff but also promotes efficiency, motivation, and a positive corporate image. <b>We have spent years perfecting our services and processes, continuously investing in our team to meet the evolving needs of businesses in London.</b></p>
     
-                        <p>Our staff are all security vetted, and our cleaning team ensure that every job is approached with excellence & care. Regardless of the scale of the job from 1 hour to 10 hours a day, our excellent cleaning teams will work through a thorough cleaning checklist, producing excellent cleaning for your offices.</p>
+                        <p>Today, we are proud to be the trusted choice of over <b>500 offices daily, from small offices to corporate office buildings, legal practices to technology companies, and more.</b> Our cleaning specialists understand the unique needs of each sector, delivering tailored services with meticulous attention to detail and the <b>highest standards</b>.</p>
     
-                        <p>What’s more, we have a proactive onsite supervisor team to oversee our cleaning team, and to ensure cleaning remains at a high standard.</p>
+                        <p>At The Clean Network, we believe in building strong, long-lasting relationships with our clients. <b>Our 95% contract renewal rate speaks volumes about the trust businesses place in our services and our consistent ability to deliver excellence.</b> We don’t just clean; we care for your workspace as if it were our own, bringing an unwavering commitment to cleanliness and hygiene to your door, every single day.</p>
+
+                        <p>Our team is our strength. Comprising skilled, dedicated professionals passionate about delivering top-tier service, we ensure every member of our team is thoroughly trained and equipped with the latest cleaning technology. As a company, <b>we are committed to providing a positive, supportive work environment where our team can excel</b>, reflecting our commitment to excellence in every task we undertake.</p>
+
+                        <p><strong class="highlight">Partner with us and discover the difference The Clean Network can make.</strong></p>
 
                         <ButtonContainer />
 
@@ -121,6 +125,15 @@ const { description } = Astro.props;
     p {
         line-height: 1.4;
         /* margin-bottom: 0.9rem; */
+    }
+
+    .panel .content p b, .panel .content p strong {
+        font-weight: 500;
+    }
+
+    .panel .content .highlight {
+        font-weight: 600;
+        color: var(--primary-a);
     }
 
     .content a {

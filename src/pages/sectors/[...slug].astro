@@ -23,6 +23,8 @@ import { Schema } from "astro-seo-schema"
 <SubpageLayout {...sectors.data}>
     <section class="intro">
 
+        <a href={`/sectors/#${(sectors.data.title).toLowerCase().replace(/\s+/g, '-')}`} class="back">Back to sectors</a>
+
         <div class="cover" style={`background-image: url(${sectors.data.image});`}></div>
 
         <div class="content">
@@ -37,12 +39,12 @@ import { Schema } from "astro-seo-schema"
     
     </section>
 
-    <article class="reveal">
+    <article>
         <Content />
 
         <a href="/contact/" class="cta" aria-label="Get a free quote for our cleaning sectors">Get a free quote</a>
 
-        <a href="/sectors/" class="back">Back to sectors</a>
+        <a href={`/sectors/#${(sectors.data.title).toLowerCase().replace(/\s+/g, '-')}`} class="back">Back to sectors</a>
     </article>
 
     <ContactSection />
