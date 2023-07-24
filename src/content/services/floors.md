@@ -1,10 +1,11 @@
 ---
 title: Floor & Carpet Cleaning Services
-description: Professional floor and carpet cleaning services are more than just
-  aesthetics; they are integral to maintaining a clean and healthy working
-  environment. At The Clean Network, we are experts in commercial floor cleaning
-  in London, delivering results that meet your unique needs and exceed your
-  expectations.
+description: Everyday foot traffic brings in a myriad of dirt and allergens,
+  especially onto carpets and rugs. The dust particles and grime can become
+  deeply embedded, making it harder for regular cleaning to be effective. Our
+  professional team uses the latest cleaning techniques and eco-friendly
+  products to ensure your carpets are not only clean but also healthy for your
+  employees and clients.
 type: indoor
 image: /images/media/floor.jpg
 ---
