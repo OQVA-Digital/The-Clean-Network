@@ -1,5 +1,5 @@
 ---
-const { title, description } = Astro.props;
+const { title, description, keywords } = Astro.props;
 
 import "../styles/global.css";
 
@@ -14,7 +14,7 @@ const currentURL = new URL(Astro.request.url)
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={title} description={description} keywords={keywords} />
 		<script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 	</head>
 	<body>

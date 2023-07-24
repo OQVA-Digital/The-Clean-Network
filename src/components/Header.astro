@@ -2,13 +2,15 @@
 import { getCollection } from "astro:content";
 const services = await getCollection("services");
 const sectors = await getCollection("sectors");
+
+import { LONDON_PHONE_NO, LONDON_PHONE_NO_HREF } from "../consts";
 ---
 
 <div class="stripe">
     <a href="/contact/" class="announcement">Contact us today for a free quote</a>
 
     <div class="ctnr">
-        <a href="tel:+44-020-3411-0275">London: 020 3411 0275</a>
+        <a href={`tel:${LONDON_PHONE_NO_HREF}`}>London: {LONDON_PHONE_NO}</a>
         <!-- <a href="tel:+44-0121-3927529">Birmingham: 0121 3927529</a> -->
     </div>
 </div>

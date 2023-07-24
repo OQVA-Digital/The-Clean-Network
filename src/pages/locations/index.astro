@@ -6,14 +6,15 @@ import BaseHead from "../../components/BaseHead.astro";
 import Footer from "../../components/Footer.astro";
 import ContactSection from "../../components/ContactSection.astro"
 import ContactBox from '../../components/ContactBox.astro';
-import MapSwitch from '../../components/MapSwitch.astro';
 
 const { description } = Astro.props;
+
+import { LOCATIONS_TITLE, LOCATIONS_DESCRIPTION, LOCATIONS_KEYWORDS, LOCATIONS_H1, LOCATIONS_INTRO_DESCRIPTION } from "../../consts";
 ---
 
 <html lang="en">
     <head>
-        <BaseHead title="Our Location · The Clean Network" description={description} />
+        <BaseHead title={LOCATIONS_TITLE} description={LOCATIONS_DESCRIPTION} keywords={LOCATIONS_KEYWORDS} />
     </head>
 
     <body>
@@ -22,9 +23,9 @@ const { description } = Astro.props;
         <main>
             <div class="heading_ctnr default_bg">
                 <div class="content">
-                    <h1>Our Locations</h1>
+                    <h1 set:html={LOCATIONS_H1}></h1>
     
-                    <p>Centrally located in the <b>City of London</b>, we're just a call away from providing your space with the professional cleaning service it deserves. <b>We’d be happy to come over and provide you with a quote.</b> Or feel free to drop by our office too.</p>
+                    <p set:html={LOCATIONS_INTRO_DESCRIPTION}></p>
                     
                     <!-- <div class="component_ctnr">
                         <MapSwitch/>

@@ -29,12 +29,12 @@ import "../../styles/collections.css"
 
 import { Schema } from "astro-seo-schema"
 
-import { SECTORS_TITLE, SECTORS_DESCRIPTION } from "../../consts";
+import { SECTORS_TITLE, SECTORS_DESCRIPTION, SECTORS_KEYWORDS, SECTORS_H1, SECTORS_INTRO_DESCRIPTION } from "../../consts";
 ---
 
 <html lang="en">
     <head>
-        <BaseHead title={SECTORS_TITLE} description={SECTORS_DESCRIPTION} />
+        <BaseHead title={SECTORS_TITLE} description={SECTORS_DESCRIPTION} keywords={SECTORS_KEYWORDS} />
     </head>
 
     <body>
@@ -46,9 +46,9 @@ import { SECTORS_TITLE, SECTORS_DESCRIPTION } from "../../consts";
             <div class="ctnr">
                 <div class="heading_ctnr default_bg">
                     <div class="content">
-                        <h1>Commercial & Office Cleaning Services in London</h1>
+                        <h1 set:html={SECTORS_H1}></h1>
     
-                        <p><strong>The Clean Network</strong> is here for all your commercial and office cleaning needs in London. We take pride in our range of professional cleaning services, all <b>tailored to provide a clean, healthy, and productive work environment that leaves a lasting impression</b>.</p>
+                        <p set:html={SECTORS_INTRO_DESCRIPTION}></p>
                     </div>
                 </div>
                 

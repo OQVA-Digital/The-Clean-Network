@@ -1,5 +1,7 @@
 ---
 import ContactBox from "./ContactBox.astro";
+
+import { FOOTER_DESCRIPTION, STREET, LONDON_PHONE_NO } from "../consts";
 ---
 
 <footer>
@@ -15,7 +17,7 @@ import ContactBox from "./ContactBox.astro";
                 </picture>
             </a>
             
-            <p>Our ethos is to provide high standards of cleaning with strong account management to ensure smooth day to day running of your cleaning contract at an affordable price.</p>
+            <p set:html={FOOTER_DESCRIPTION}></p>
 
             <p class="legal">Copyright © 2023 The Clean Network </p>
         </div>
@@ -36,10 +38,10 @@ import ContactBox from "./ContactBox.astro";
 
             <div class="nap_data">
                 <p>Clean Network</p>
-                <p>6-8 Knights Court</p>
+                <p set:html={STREET}></p>
                 <p>London EC1M 4NH</p>
                 <p>United Kingdom</p>
-                <p>020 3411 0275</p>
+                <p set:html={LONDON_PHONE_NO}></p>
             </div>
         </div>
     </div>

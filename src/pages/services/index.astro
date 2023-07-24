@@ -29,12 +29,12 @@ import "../../styles/collections.css"
 
 import { Schema } from "astro-seo-schema"
 
-import { SERVICES_TITLE, SERVICES_DESCRIPTION } from "../../consts";
+import { SERVICES_TITLE, SERVICES_DESCRIPTION, SERVICES_KEYWORDS, SERVICES_H1, SERVICES_INTRO_DESCRIPTION, INTERIOR_SERVICES_DESCRIPTION, EXTERIOR_SERVICES_DESCRIPTION } from "../../consts";
 ---
 
 <html lang="en">
     <head>
-        <BaseHead title={SERVICES_TITLE} description={SERVICES_DESCRIPTION} />
+        <BaseHead title={SERVICES_TITLE} description={SERVICES_DESCRIPTION} keywords={SERVICES_KEYWORDS} />
     </head>
 
     <body>
@@ -45,16 +45,16 @@ import { SERVICES_TITLE, SERVICES_DESCRIPTION } from "../../consts";
             <div class="ctnr">
                 <div class="heading_ctnr default_bg">
                     <div class="content">
-                        <h1>Commercial & Office Cleaning Services</h1>
+                        <h1 set:html={SERVICES_H1}></h1>
     
-                        <p><strong>Discover the breadth and depth of our cleaning expertise at The Clean Network.</strong> We offer a comprehensive range of interior and exterior commercial and office <strong>cleaning services in London</strong>, tailor-made to meet your unique needs and exceed your expectations.</p>
+                        <p set:html={SERVICES_INTRO_DESCRIPTION}></p>
                     </div>
                 </div>
                 
                 <div class="division" id="indoor">
                     <h2>Interior Cleaning Services</h2>
 
-                    <p>Our interior cleaning services are meticulously designed to ensure a clean, hygienic, and productive workspace.</p>
+                    <p set:html={INTERIOR_SERVICES_DESCRIPTION}></p>
 
                     <div class="flex">
                         {
@@ -97,7 +97,7 @@ import { SERVICES_TITLE, SERVICES_DESCRIPTION } from "../../consts";
                 <div class="division" id="external">
                     <h2>Exterior Cleaning Services</h2>
 
-                    <p>We extend our cleaning expertise beyond your building's interior.</p>
+                    <p set:html={EXTERIOR_SERVICES_DESCRIPTION}></p>
 
                     <div class="flex">
                         {

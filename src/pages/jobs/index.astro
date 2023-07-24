@@ -4,16 +4,18 @@
 import Header from "../../components/Header.astro";
 import BaseHead from "../../components/BaseHead.astro";
 import Footer from "../../components/Footer.astro";
+
 import '../../styles/forms.css'
+import '../../styles/jobs.css'
 
 import { Schema } from "astro-seo-schema"
 
-import { JOBS_TITLE, JOBS_DESCRIPTION } from "../../consts";
+import { JOBS_TITLE, JOBS_DESCRIPTION, JOBS_KEYWORDS, JOBS_H1, JOBS_TEXT_BODY } from "../../consts";
 ---
 
 <html lang="en">
     <head>
-        <BaseHead title={JOBS_TITLE} description={JOBS_DESCRIPTION} />
+        <BaseHead title={JOBS_TITLE} description={JOBS_DESCRIPTION} keywords={JOBS_KEYWORDS} />
     </head>
 
     <body>
@@ -22,17 +24,9 @@ import { JOBS_TITLE, JOBS_DESCRIPTION } from "../../consts";
         <main>
             <section class="intro">
                 <div class="ctnr">
-                    <h1>Office Cleaning Jobs</h1>
+                    <h1 set:html={JOBS_H1}></h1>
 
-                    <p>If you're seeking a rewarding career in commercial cleaning, you're in the right place. <strong>Based in London, we're proud to offer a range of job opportunities in office cleaning, right in your area.</strong></p>
-
-                    <p>At <strong>The Clean Network</strong>, we firmly believe that our team is our strength, and we're always on the lookout for dedicated individuals who share our <b>commitment to cleanliness, professionalism, and customer service.</b> As part of our team, you'll have the opportunity to work across various sectors in the city, from corporate offices to tech companies, and from legal practices to design studios. This variety ensures every day offers something different.</p>
-
-                    <p><strong>We're proud to offer competitive compensation, flexible scheduling, comprehensive training, and a supportive work environment.</strong> Whether you're an experienced cleaner looking for a new challenge or someone interested in starting a new career in commercial cleaning, we have a place for you.</p>
-
-                    <p><b class="highlight">Start your journey with us today.</b> Explore our office cleaning jobs in London and apply to become part of London's leading commercial cleaning company. We look forward to welcoming you to our network where high standards, reliability, and trust form the backbone of our success.</p>
-
-                    <p><b>To apply, please fill out the form below.</b> We can't wait to learn more about you!</p>
+                    <div class="body" set:html={JOBS_TEXT_BODY}></div>
                 </div>
             </section>
 
@@ -105,47 +99,3 @@ import { JOBS_TITLE, JOBS_DESCRIPTION } from "../../consts";
         />
     </body>
 </html>
-
-<style>
-    main section {
-
-    }
-
-    .intro > .ctnr {
-        width: clamp(9rem, 89vw, 80rem);
-        display: block;
-        margin-inline: auto;
-        padding: clamp(4rem, 9vw, 6rem) 0;
-    }
-
-    h1 {
-        font-size: clamp(1rem,8vmin,5rem);
-        font-weight: 700;
-        line-height: 1.2;
-        margin-bottom: 2rem;
-        color: var(--highlight);
-        text-decoration: underline 0.3rem var(--light-d);
-        text-underline-offset: 0.7rem;
-    }
-
-    .intro p {
-        line-height: 1.5;
-        font-size: clamp(1.5rem,4vmin,1.8rem);
-        color: var(--grey);
-        margin-bottom: 1.6rem;
-    }
-
-    .intro p b, .intro p strong {
-        font-weight: 500;
-    }
-
-    .intro p .highlight {
-        font-weight: 600;
-        color: var(--highlight);
-    }
-
-    @media screen and (min-width:850px) {
-        
-    }
-
-</style>
