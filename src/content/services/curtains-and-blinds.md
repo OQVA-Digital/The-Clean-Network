@@ -1,5 +1,5 @@
 ---
-title: Curtains & Blinds
+title: Blinds & Curtains Cleaning Services
 description: Refresh your window coverings with our thorough cleaning services.
   We eliminate dust, pollen, and odours from curtains and blinds, revitalising
   your space. Experience a cleaner, healthier environment with our professional
