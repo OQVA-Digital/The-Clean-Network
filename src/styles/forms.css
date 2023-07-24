@@ -9,7 +9,7 @@
 	}
 
 	.contact > .ctnr {
-		width: clamp(9rem,85vw,62rem);
+		width: clamp(9rem,89vw,62rem);
 		margin-inline: auto;
 		background-color: var(--light);
 		padding: clamp(3rem,9vw,5rem) clamp(2rem,6vw,6rem) 0;

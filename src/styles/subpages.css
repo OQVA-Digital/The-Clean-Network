@@ -21,7 +21,7 @@ h2::after {
 
 .division {
     scroll-margin: calc(clamp(1rem,16vmin,7.5rem) + 5rem);
-    width: var(--mobile-width);
+    width: var(--base-width);
     margin-inline: auto;
     margin-top: clamp(4rem, 5vw, 8rem);
 }
@@ -48,14 +48,14 @@ h2::after {
 }
  
 .panel .content .description {
-    font-size: clamp(1.5rem,3.8vmin,1.7rem);
+    font-size: clamp(1.5rem,3.8vmin,1.8rem);
     color: var(--grey);
     line-height: 1.4;
     margin-bottom: 1rem;
 }
 
 .panel h3 {
-    font-size: clamp(2rem,8.5vw,4.8rem);
+    font-size: clamp(2rem,10vw,4.8rem);
     /* text-shadow: -0.6rem 0.6rem rgb(148 197 221 / 20%); */
     font-weight: 600;
     line-height: 1.1;
@@ -64,7 +64,8 @@ h2::after {
     -moz-transition: color 0.4s ease;
     -ms-transition: color 0.4s ease;
     -o-transition: color 0.4s ease;
-    color:var(--grey-b)
+    color:var(--grey-b);
+    position:relative;
 }
 
 .panel h3:hover {
@@ -76,45 +77,34 @@ h2::after {
     -o-transition: color 0.1s ease;
 }
 
-.panel h3 a {
-    display: block;
-}
-
-.division h2 + p {
-    font-size: 1.5rem;
-    color: var(--grey);
-    font-weight: 400;
-    line-height: 1.4;
-    margin: 0.4rem 0 1.6rem;
-}
-
-.division .cta {
+.panel h3 .arrow {
+    content: '';
     font-weight: 600;
     letter-spacing: 0;
-    font-size: clamp(1.3rem,5vmin,2rem);
+    width: fit-content;
+    padding: 0.6rem 1rem 0.6rem 0.5rem;
+    border-radius: 0.4rem;
+    display: flex;
+    height: clamp(2.5rem, 7vmin, 4rem);
+    width: clamp(2.5rem, 7vmin, 4rem);
+    background-color: var(--light);
+    border-radius: 40rem;
+    margin-left: auto;
+    box-sizing: border-box;
+    border: 0.2rem solid var(--light-a);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: clamp(0.5rem, 1.5vmin, 0.9rem);
     transition: background-color 0.4s ease;
     -webkit-transition: background-color 0.4s ease;
     -moz-transition: background-color 0.4s ease;
     -ms-transition: background-color 0.4s ease;
     -o-transition: background-color 0.4s ease;
-    width: fit-content;
-    padding: 0.6rem 1rem 0.6rem 0.5rem;
-    border-radius: 0.4rem;
-    display: flex;
-    justify-content: center;
-    height: 4rem;
-    width: 4rem;
-    background-color: var(--light);
-    border-radius: 40rem;
-    align-items: center;
-    margin-bottom: -4rem;
-    z-index: 2;
-    margin-left: auto;
-    box-sizing: border-box;
-    border: 0.2rem solid var(--light-a);
 }
 
-.division .cta:hover {
+.panel h3:hover .arrow {
     background-color: var(--light-a);
     transition: background-color 0.1s ease;
     -webkit-transition: background-color 0.1s ease;
@@ -123,9 +113,35 @@ h2::after {
     -o-transition: background-color 0.1s ease;
 }
 
+.panel h3 .arrow span {
+    display: inline-block;
+    border-bottom: 0.5rem solid var(--highlight);
+    border-right: 0.5rem solid var(--highlight);
+    border-top: 0.5rem solid transparent;
+    border-left: 0.5rem solid transparent;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+}
+
+
+.panel h3 a {
+    /* display: block; */
+}
+
+.division h2 + p {
+    font-size: clamp(1.5rem, 4vmin, 1.7rem);
+    color: var(--grey);
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 0.4rem 0 1.6rem;
+}
+
 .panel .quote {
     font-size: clamp(1.4rem,4vw,1.8rem);
-    color: var(--grey-a);
+    color: var(--dark-a);
     font-weight: 600;
     text-align: right;
     padding: clamp(0.9rem,2.5vw,1.4rem) 1.4rem;
@@ -138,6 +154,7 @@ h2::after {
     border-top: 0.1rem solid var(--light-a);
     background-color: rgb(248 248 255 / 75%);
     backdrop-filter: blur(0.3rem);
+    z-index: 1;
 }
 
 .panel .image:hover {
@@ -175,18 +192,21 @@ h2::after {
 
 .heading_ctnr h1 {
     font-size: clamp(2rem,10vw,5.5rem);
-    text-align: center;
     margin-bottom: 1rem;
     color: var(--primary-a);
     /* max-width: 105rem; */
     margin-inline: auto;
 }
 
+.heading_ctnr .content {
+    width: var(--base-width);
+    margin-inline: auto;
+}
+
 .heading_ctnr p {
     display: block;
-    text-align: center;
     margin-inline: auto;
-    width: clamp(9rem, 85vw, 125rem);
+    width: clamp(9rem, 89vw, 125rem);
     font-size: clamp(1.5rem,3.8vmin,1.9rem);
     line-height: 1.5;
     font-weight: 500;
@@ -214,24 +234,29 @@ h2::after {
     .panel .content {
         max-width: clamp(40rem,30vw,95rem);
         margin-inline: 4vw 6vw;
-        padding-bottom: clamp(3rem,28vmin,15rem);
+        padding:clamp(3rem,12vmin,10rem) 0 clamp(3rem,12vmin,10rem);
+    }
+
+    .heading_ctnr .content {
+        text-align: center;
     }
     
     .panel .quote {
         max-width: calc(clamp(40rem,30vw,95rem) + 10vw);
         box-sizing: border-box;
-        border-radius: unset;
-        background-color: transparent;
         backdrop-filter: unset;
-        bottom: 0;
-        right: 0;
-        left: 0;
         transition: background-color 0.3s ease;
-        border-top: 0.1rem solid var(--light-a);
+        right: 3.5rem;
+        left: unset;
+        bottom: 2.5rem;
+        background-color: var(--light-a);
+        border-radius: 0.6rem;
+        border: 0.2rem solid var(--light);
+        color: var(--primary-a);
     }
 
     .panel .quote:hover {
-        background-color: var(--light-a);
+        background-color: var(--light);
         transition: background-color 0.1s ease;
         -webkit-transition: background-color 0.1s ease;
         -moz-transition: background-color 0.1s ease;

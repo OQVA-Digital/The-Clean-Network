@@ -224,7 +224,7 @@
 }
 
     .tns-controls button:first-of-type {
-        left: calc((100vw - var(--mobile-width)) / 2);
+        left: calc((100vw - var(--base-width)) / 2);
         /* border-radius: 0 2rem 2rem 0;
         -webkit-border-radius: 0 2rem 2rem 0;
         -moz-border-radius: 0 2rem 2rem 0;
@@ -233,7 +233,7 @@
 }
     
     .tns-controls button:last-of-type {
-        right: calc((100vw - var(--mobile-width)) / 2);
+        right: calc((100vw - var(--base-width)) / 2);
         /* border-radius: 2rem 0 0 2rem;
         -webkit-border-radius: 2rem 0 0 2rem;
         -moz-border-radius: 2rem 0 0 2rem;

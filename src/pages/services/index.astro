@@ -44,9 +44,11 @@ import { Schema } from "astro-seo-schema"
         <main>
             <div class="ctnr">
                 <div class="heading_ctnr default_bg">
-                    <h1>Commercial & Office Cleaning Services</h1>
-
-					<p><strong>Discover the breadth and depth of our cleaning expertise at The Clean Network.</strong> We offer a comprehensive range of interior and exterior commercial and office <strong>cleaning services in London</strong>, tailor-made to meet your unique needs and exceed your expectations.</p>
+                    <div class="content">
+                        <h1>Commercial & Office Cleaning Services</h1>
+    
+                        <p><strong>Discover the breadth and depth of our cleaning expertise at The Clean Network.</strong> We offer a comprehensive range of interior and exterior commercial and office <strong>cleaning services in London</strong>, tailor-made to meet your unique needs and exceed your expectations.</p>
+                    </div>
                 </div>
                 
                 <div class="division" id="indoor">
@@ -65,12 +67,14 @@ import { Schema } from "astro-seo-schema"
                                                 <h3>
                                                     <a href={`/services/${services.slug}`} aria-label={`Read more about ${services.data.title}`}>
                                                         {services.data.title}
+    
+                                                        <span class="arrow">
+                                                            <span></span>
+                                                        </span>
                                                     </a>
                                                 </h3>
     
                                                 <p class="description">{services.data.description}</p>
-    
-                                                <a href={`/services/${services.slug}`} class="cta" aria-label={`Read more about ${services.data.title}`} title={`Read more about ${services.data.title} Cleaning Services`}><span></span></a>
 
                                                 <a href="/contact/" class="quote" aria-label="Get a free quote for our cleaning services">Get a free quote</a>
                                             </div>
@@ -105,12 +109,14 @@ import { Schema } from "astro-seo-schema"
                                             <div class="content">
                                                 <h3>
                                                     <a href={`/services/${services.slug}`} aria-label={`Read more about ${services.data.title}`}>{services.data.title}
+    
+                                                    <span class="arrow">
+                                                        <span></span>
+                                                    </span>
                                                     </a>
                                                 </h3>
     
                                                 <p class="description">{services.data.description}</p>
-    
-                                                <a href={`/services/${services.slug}`} class="cta" aria-label={`Read more about ${services.data.title}`} title={`Read more about ${services.data.title} Cleaning Services`}><span></span></a>
 
                                                 <a href="/#contact" class="quote" aria-label="Get a free quote for our cleaning services">Get a free quote</a>
                                             </div>
