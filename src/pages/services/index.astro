@@ -18,8 +18,6 @@ const services = (await getCollection('services')).sort((a, b) => {
 
 const currentURL = new URL(Astro.request.url)
 
-const { title, description } = Astro.props;
-
 import Header from "../../components/Header.astro";
 import BaseHead from "../../components/BaseHead.astro";
 import Footer from "../../components/Footer.astro";
@@ -30,11 +28,13 @@ import "../../styles/subpages.css"
 import "../../styles/collections.css"
 
 import { Schema } from "astro-seo-schema"
+
+import { SERVICES_TITLE, SERVICES_DESCRIPTION } from "../../consts";
 ---
 
 <html lang="en">
     <head>
-        <BaseHead title="Commercial & Office Cleaning Services in London" description="Explore a wide range of professional commercial and office cleaning services by The Clean Network. Tailored solutions to meet your specific cleaning needs in London." />
+        <BaseHead title={SERVICES_TITLE} description={SERVICES_DESCRIPTION} />
     </head>
 
     <body>
@@ -76,7 +76,7 @@ import { Schema } from "astro-seo-schema"
     
                                                 <p class="description">{services.data.description}</p>
 
-                                                <a href="/contact/" class="quote" aria-label="Get a free quote for our cleaning services">Get a free quote</a>
+                                                <a href="/contact/" class="main cta" aria-label="Get a free quote for our cleaning services">Get a free quote</a>
                                             </div>
                                             
                                             <a href={`/services/${services.slug}`} class="image" aria-label={`Read more about ${services.data.title}`} title={`Read more about ${services.data.title} Cleaning Services`}>
@@ -118,7 +118,7 @@ import { Schema } from "astro-seo-schema"
     
                                                 <p class="description">{services.data.description}</p>
 
-                                                <a href="/#contact" class="quote" aria-label="Get a free quote for our cleaning services">Get a free quote</a>
+                                                <a href="/contact/" class="main cta" aria-label="Get a free quote for our cleaning services">Get a free quote</a>
                                             </div>
                                             
                                             <a href={`/services/${services.slug}`} class="image" aria-label={`Read more about ${services.data.title}`} title={`Read more about ${services.data.title} Cleaning Services`}>

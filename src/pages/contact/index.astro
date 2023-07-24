@@ -6,12 +6,12 @@ import BaseHead from "../../components/BaseHead.astro";
 import Footer from "../../components/Footer.astro";
 import ContactSection from "../../components/ContactSection.astro";
 
-const { description } = Astro.props;
+import { CONTACT_TITLE, CONTACT_DESCRIPTION } from "../../consts";
 ---
 
 <html lang="en">
     <head>
-        <BaseHead title="Contact Us · The Clean Network" description={description} />
+        <BaseHead title={CONTACT_TITLE} description={CONTACT_DESCRIPTION} />
     </head>
 
     <body>

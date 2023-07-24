@@ -7,12 +7,14 @@ import Footer from "../../components/Footer.astro";
 import ContactSection from "../../components/ContactSection.astro"
 import "../../styles/button-ctnr.css";
 
-const { description } = Astro.props;
+
+import { ABOUT_TITLE, ABOUT_DESCRIPTION } from "../../consts";
+
 ---
 
 <html lang="en">
     <head>
-        <BaseHead title="About The Clean Network - Who We Are" description="Discover who we are at The Clean Network. Learn about our history, our commitment to excellence, and why we're London's trusted cleaning service." />
+        <BaseHead title={ABOUT_TITLE} description={ABOUT_DESCRIPTION} />
     </head>
 
     <body>
