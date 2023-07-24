@@ -19,4 +19,4 @@ We take pride in our team of professionally trained and experienced cleaning spe
 
 Choosing The Clean Network for your drain cleaning needs in <strong>London</strong> means choosing a partner that values your business as much as you do. We work with a diverse range of businesses, from small offices to large corporate buildings, delivering the same high standard of cleaning and customer service. 
 
-It's time to stop worrying about drain issues disrupting your business. Get in touch with The Clean Network today to schedule your drain cleaning services and experience the peace of mind that comes with a clean, well-maintained workplace. <strong>Get a free quote</strong> now and let us take care of the rest. Trust us; we're here to help you maintain an optimal working environment.
+It's time to stop worrying about drain issues disrupting your business. Get in touch with The Clean Network today to schedule your drain cleaning services and experience the peace of mind that comes with a clean, well-maintained workplace. <strong>Get a free quote</strong> now and let us take care of the rest.
