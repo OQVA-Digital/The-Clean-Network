@@ -1,8 +1,9 @@
 ---
 title: Gutter & Roof Cleaning Services
-description: Protect your property with our reliable gutter and roof cleaning.
-  We remove debris, ensuring proper water flow and preventing damage. Trust us
-  to keep your gutters and roofs clean and functional.
+description: At The Clean Network, we specialise in commercial gutter cleaning
+  services and roof cleaning in London. Our highly trained, meticulous team uses
+  specialist equipment to deliver a top-notch, reliable cleaning service,
+  ensuring your building’s exterior stays in optimal condition.
 type: external
 image: /images/media/gutters-and-roofs.jpg
 ---
