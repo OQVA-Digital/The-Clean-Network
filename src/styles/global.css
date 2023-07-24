@@ -225,7 +225,6 @@ noscript {
 }
 
 .panel .content {
-    width: clamp(9rem, 80vw, 260rem);
     margin-inline: auto;
     padding: clamp(3rem,7vmin,6rem) 0 clamp(3rem,9vmin,6rem);
     display: flex;

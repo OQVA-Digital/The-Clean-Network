@@ -33,7 +33,6 @@ h2::after {
 }
 
 .panel {
-    border: 0.2rem solid var(--light-a);
     position: relative;
     scroll-margin-top: 20rem;
 }
@@ -149,16 +148,6 @@ h2::after {
     text-align: center;
     backdrop-filter: blur(0.3rem);
     z-index: 1;
-}
-
-.panel .image:hover {
-    filter: brightness(1.1);
-    -webkit-filter: brightness(1.1);
-    transition: filter 0.2s ease;
-    -webkit-transition: filter 0.2s ease;
-    -moz-transition: filter 0.2s ease;
-    -ms-transition: filter 0.2s ease;
-    -o-transition: filter 0.2s ease;
 }
 
 .panel .image {

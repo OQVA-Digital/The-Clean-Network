@@ -82,6 +82,10 @@ main {}
     margin-top: 0.6rem;
 }
 
+.panel .content {
+    width: clamp(9rem, 80vw, 260rem);
+}
+
 .panel .cta:hover {
     text-decoration: underline 0.2rem rgb(102 118 135 / 30%);
 }
