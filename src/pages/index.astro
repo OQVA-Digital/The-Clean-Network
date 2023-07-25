@@ -269,29 +269,19 @@ import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_H1, INTRO_H2, TEXT_BL
 						"itemReviewed": {
 						"@type": "LocalBusiness",
 						"image": "/og/social-image.jpg",
-						"name": "Clean Network",
+						"name": "The Clean Network",
 						"telephone": "+4402034110275",
 						"address" :{
 							"@type": "PostalAddress",
-							"streetAddress": "123 William St",
-							"addressLocality": "New York",
-							"addressRegion": "NY",
-							"postalCode": "10038",
-							"addressCountry": "US"
+							"streetAddress": "6-8 Knights Court",
+							"addressLocality": "London",
+							"postalCode": "EC1M 4NH",
+							"addressCountry": "UK"
 						}
-						},
-						"reviewRating": {
-						"@type": "Rating",
-						"ratingValue": "4"
-						},
-						"name": "A good seafood place.",
-						"author": {
-						"@type": "Person",
-						"name": "Bob Smith"
 						},
 						"publisher": {
 						"@type": "Organization",
-						"name": "Clean Network"
+						"name": "The Clean Network"
 						}
 				}}
 			/>
@@ -341,3 +331,27 @@ import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_H1, INTRO_H2, TEXT_BL
 	</main>
 	<Footer />
 </Layout>
+
+<script>
+	const queryString = window.location.search;
+	const urlParams = new URLSearchParams(queryString);
+
+	if(urlParams.get('redirected') === 'true') {
+		const redirWarning = document.createElement('aside')
+		redirWarning.classList.add('redir_warning')
+		redirWarning.innerHTML = "<p><span>Page not found!</span> You have been redirected to the home page.</p><button type='button' aria-label='close warning'><?xml version='1.0' encoding='UTF-8'?><svg id='Camada_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 23.21 23.21'><defs><style>.cls-1{fill:none;stroke:#2f363c;stroke-miterlimit:10;stroke-width:5px;}</style></defs><line class='cls-1' x1='2.12' y1='2.12' x2='21.09' y2='21.09'/><line class='cls-1' x1='21.09' y1='2.12' x2='2.12' y2='21.09'/></svg></button>"
+
+		document.body.appendChild(redirWarning)
+
+		redirWarning.classList.add('show')
+
+		document.querySelector('.redir_warning button').addEventListener('click', function() {
+			redirWarning.classList.remove('show')
+			clearTimeout(autoHideBt)
+		})
+
+		let autoHideBt = setTimeout(() => {
+			redirWarning.classList.remove('show')
+		}, 6000);
+	}
+</script>

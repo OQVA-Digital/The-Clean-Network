@@ -37,7 +37,7 @@ const currentURL = new URL(Astro.request.url)
 		<Schema
 			item={{
 				"@context": "https://schema.org",
-				"@type": "DryCleaningOrLaundry",
+				"@type": "LocalBusiness",
 				"name": "Clean Network",
 				"image": "/og/social-image.jpg",
 				"@id": currentURL,
@@ -48,9 +48,9 @@ const currentURL = new URL(Astro.request.url)
 				],
 				"address": {
 					"@type": "PostalAddress",
-					"streetAddress": "EC1M 4NH",
+					"streetAddress": "6-8 Knights Court",
 					"addressLocality": "London",
-					"addressRegion": "GB",
+					"postalCode": "EC1M 4NH",
 					"addressCountry": "UK"
 				}  
 			}}

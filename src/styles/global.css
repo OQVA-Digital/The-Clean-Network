@@ -302,7 +302,7 @@ noscript {
     object-fit: cover;
     object-position: center;
     display: flex;
-    height: clamp(30rem,50vw,62rem);
+    height: clamp(24rem,50vw,62rem);
     background-color: rgba(255,255,255,0.2);
     max-height: calc(100dvh - clamp(1rem,16vmin,7.5rem));
     font-size: 2rem;
