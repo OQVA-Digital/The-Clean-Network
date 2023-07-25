@@ -1,6 +1,6 @@
 ---
 order: 1
-title: Technology Company Cleaning Services
+title: Technology Company Cleaning
 description: From start-ups to large tech corporations, we know the specific
   challenges that London's technology companies face when it comes to
   cleanliness and hygiene. With the delicate equipment and the high-paced nature
