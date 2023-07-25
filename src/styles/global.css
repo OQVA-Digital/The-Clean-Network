@@ -25,6 +25,7 @@ html.sr .reveal {
     --grey: #667687;
     --grey-a: #4d637b;
     --grey-b: #4a5867;
+    --grey-c: #566f8b;
 
     --dark: #2f363c;
     --dark-a:#394046;
@@ -34,11 +35,12 @@ html.sr .reveal {
     --primary-b: #48acff;
     --primary-c: #94c5dd;
     --primary-d:#4f8ec1;
+    --primary-e: #0974bc;
 
     --highlight: #f2713a;
     --highlight-a:#fd601d;
 
-    --base-width: clamp(9rem, 89vw, 260rem);
+    --base-width: clamp(9rem, 89vw, 170rem);
 }
 
 @font-face {
@@ -106,7 +108,7 @@ video {
 
 ::-webkit-scrollbar {
     width: 2rem;
-    height: 1rem;
+    height: 2rem;
 }
 
 /* Track */
@@ -312,10 +314,6 @@ noscript {
     flex-flow: row wrap;
 }
 
-.panel .subsets > div {
-    font-size: clamp(1.3rem,4.8vmin,2rem);
-}
-
 .panel .subsets .heading {
     display: block;
     width: fit-content;
@@ -326,7 +324,7 @@ noscript {
 
 .panel .subsets a {
     font-size: 0.75em;
-    color: var(--light-b);
+    color: var(--light-d);
 }
 
 .panel .subsets a:not(.heading) {
@@ -420,16 +418,10 @@ noscript {
         max-height: unset;
     }
 
-    .panel .subsets > div {
-        max-width: 50rem;
-        width: 45%;
-        flex: 1;
-    }
-
     .panel .subsets hr {
         width: 0.1rem;
         height: auto;
-        margin: 0 clamp(1rem, 2vw, 2rem);
+        margin: 0 clamp(1rem, 3vw, 5rem) 0 clamp(1rem, 2vw, 2rem);
     }
 }
 

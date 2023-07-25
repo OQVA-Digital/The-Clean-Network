@@ -8,23 +8,30 @@ main {}
 
 .intro>.ctnr .content {
     width: var(--base-width);
-    margin: clamp(2rem, 7vw, 6rem) auto 0;
+    margin: clamp(2rem, 8vw, 6rem) auto 0;
     display: flex;
     flex-direction: column;
-    gap: clamp(1rem, 2vmin, 2.5rem);
+    gap: clamp(1rem, 3.5vmin, 2rem);
 }
 
 .intro h1 {
-    font-size: clamp(1rem, 9.5vmin, 6.2rem);
+    font-size: clamp(1rem, 8.5vmin, 6.2rem);
     font-weight: 700;
     line-height: 1.2;
-    max-width: 91%;
+    color: var(--primary-a);
 }
 
 .intro h2 {
-    font-size: clamp(1rem, 4.2vmin, 2.2rem);
+    font-size: clamp(1rem, 4vmin, 2.2rem);
     font-weight: 500;
-    line-height: 1.45;
+    line-height: 1.4;
+    max-width: 95%;
+    color: var(--grey-b);
+}
+
+.intro h2 b, .intro h2 strong {
+    font-weight: 600;
+    color: var(--dark-a);
 }
 
 .intro h2 .highlight {
@@ -37,7 +44,7 @@ main {}
 }
 
 .showcase img {
-    height: clamp(30rem, 129vmin, 60rem);
+    height: clamp(30rem, 110vmin, 60rem);
     max-height: 35vh;
     width: 100%;
     object-fit: cover;
@@ -45,12 +52,18 @@ main {}
     display: flex;
 }
 
+.panel_ctnr {
+    background-color: var(--light-d);
+    padding-block: clamp(2rem, 8vw, 5rem) clamp(2rem, 8vw, 6rem);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(4rem, 5vw, 5rem);
+}
+
 .panel.services, .panel.sectors {
-    width: clamp(9rem, 91vw, 275rem);
+    width: clamp(9rem, 91vw, 185rem);
     margin-inline: auto;
     border-radius: 1.2rem;
-    margin-bottom: clamp(2rem, 4vw, 4rem);
-    border: 0.1rem solid rgb(191 191 216 / 30%);
 }
 
 .panel h3::after {
@@ -83,11 +96,15 @@ main {}
 }
 
 .panel .content {
-    width: clamp(9rem, 80vw, 260rem);
+    width: clamp(9rem, 80vw, 170rem);
 }
 
 .panel .cta:hover {
     text-decoration: underline 0.2rem rgb(102 118 135 / 30%);
+}
+
+.panel .subsets > div {
+    font-size: clamp(1.3rem,4.8vmin,2rem);
 }
 
 
@@ -118,8 +135,8 @@ main {}
 }
 
 section.clients {
-    margin-bottom: clamp(2rem, 8vw, 5rem);
-    border-bottom: 0.2rem solid var(--light-a);
+    /* margin-bottom: clamp(2rem, 8vw, 5rem); */
+    /* border-bottom: 0.2rem solid var(--light-a); */
 }
 
 .clients>.ctnr {
@@ -152,14 +169,12 @@ section.clients {
 }
 
 section.services {
-    /* width: 100%; */
-    background-color: var(--light-d);
+    background-color: var(--light);
     color: var(--primary-a);
 }
 
 section.sectors {
-    /* width: 100%; */
-    background-color: var(--dark);
+    background-color: var(--grey-a);
     color: var(--light);
 }
 
@@ -187,17 +202,17 @@ section.sectors {
 .services .subsets a:not(.heading) {
     color: var(--primary-a);
     font-weight: 500;
-    background-color: var(--light);
-    border: 0.2rem solid var(--light);
+    background-color: var(--light-d);
+    border: 0.2rem solid var(--light-d);
 }
 
 .sectors .subsets a:not(.heading) {
-    background-color: var(--dark-a);
-    border: 0.2rem solid var(--dark-a);
+    background-color: var(--grey-c);
+    border: 0.2rem solid var(--grey-c);
 }
 
 .services .content>hr, .services .subsets hr {
-    background-color: rgb(16 106 166 / 30%);
+    background-color: rgb(16 106 166 / 15%);
 }
 
 .services h3 {
@@ -235,7 +250,6 @@ section.sectors {
 section.locations {
     background-color: var(--highlight);
     color: var(--light);
-    margin-top: 7rem;
 }
 
 .locations.panel .content {
@@ -277,13 +291,13 @@ section.testimonials {
 
 .testimonials h3 {
     margin-inline: auto;
-    font-size: clamp(2rem, 6.2vw, 3.8rem);
+    font-size: clamp(2rem, 6.5vmin, 3.8rem);
     text-align: center;
     font-weight: 500;
     width: fit-content;
     padding: 0.4rem 1rem;
     margin-bottom: 3rem;
-    max-width: 58vw;
+    max-width: 62vw;
     position: relative;
     z-index: 4;
     color: var(--highlight);
@@ -451,8 +465,8 @@ section.testimonials {
 
 .testimonials blockquote {
     margin: unset;
-    font-size: clamp(1.5rem, 3.6vmin, 1.7rem);
-    color: var(--dark-a);
+    font-size: clamp(1.5rem, 3.6vmin, 1.8rem);
+    color: var(--grey-c);
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -585,13 +599,14 @@ section.find_us {
     }
 
     .intro h1 {
-        font-size: clamp(5rem, calc(5.5vw - 2.6rem), 7rem);
+        font-size: clamp(4rem, calc(6vw - 2.6rem), 7rem);
         max-width: unset;
     }
 
     .intro h2 {
-        font-size: clamp(1.8rem, 1.8vw, 2rem);
+        font-size: clamp(1.6rem, calc(6vmin - 2.6rem), 2rem);
         max-width: clamp(10rem, 85%, 62rem);
+        line-height: 1.5;
     }
 
     .showcase {
@@ -603,10 +618,6 @@ section.find_us {
     .showcase img {
         max-height: unset;
         display: flex;
-    }
-
-    section.sectors {
-        margin: 0.6rem 0;
     }
 
     .locations .image {
@@ -641,7 +652,7 @@ section.find_us {
     }
 
     .panel.services, .panel.sectors {
-        width: clamp(9rem, 95vw, 275rem);
+        width: clamp(9rem, 95vw, 185rem);
     }
 
     .panel.services .image img, .panel.sectors .image img {
@@ -650,6 +661,12 @@ section.find_us {
         -moz-border-radius: 0 1.2rem 1.2rem 0;
         -ms-border-radius: 0 1.2rem 1.2rem 0;
         -o-border-radius: 0 1.2rem 1.2rem 0;
+    }
+
+    .panel .subsets > div {
+        flex: 1;
+        min-width: 25rem;
+        max-width: 56rem;
     }
 
     .find_us .iframe_ctnr {

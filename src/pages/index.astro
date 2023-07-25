@@ -85,109 +85,111 @@ import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_H1, INTRO_H2, TEXT_BL
 			</div>
 		</section>
 
-		<section class="services panel">
-			<div class="ctnr">
-				<div class="content reveal">
-					<h3>Services</h3>
-
-					<p set:html={SERVICES_SECTION_DESCRIPTION}></p>
-
-					<a href="/services/" class="cta"><span></span> All services</a>
-
-					<hr>
-
-					<div class="subsets">
-						<div>
-							<a href="/services/#indoor" class="heading indoor"
-								>Indoor Cleaning <span class="icon"></span></a
-							>
-
-							{
-								services.map((services) => (
-									<>
-										{services.data.type === "indoor" ? (
-											<a
-												href={`/services/${services.slug}/`}
-											>
-												{services.data.title}
-											</a>
-										) : null}
-									</>
-								))
-							}
-						</div>
-
-						<hr />
-
-						<div>
-							<a href="/services/#external" class="heading outdoor"
-								>External Cleaning <span class="icon"></span></a
-							>
-
-							{
-								services.map((services) => (
-									<>
-										{services.data.type === "external" ? (
-											<a
-												href={`/services/${services.slug}/`}
-											>
-												{services.data.title}
-											</a>
-										) : null}
-									</>
-								))
-							}
-						</div>
-					</div>
-				</div>
-
-				<div class="image reveal">
-					<picture>
-						<source media="(min-width:850px)" srcset="/images/office02.webp">
-						<source srcset="/images/office02-min.webp">
-						<img src="/images/office02.jpg" alt="Office Photo" width="414" height="300">
-					</picture>
-				</div>
-			</div>
-		</section>
-
-		<section class="sectors panel">
-			<div class="ctnr">
-				<div class="content reveal">
-					<h3>Sectors</h3>
-
-					<p set:html={SECTORS_SECTION_DESCRIPTION}></p>
-
-					<a href="/sectors/" class="cta"><span></span> All sectors</a>
-
-					<hr>
-
-					<div class="subsets">
-						<div>
-							{
-								sectors.map((sectors) => (
-									<>
-										<a
-											href={`/sectors/${sectors.slug}/`}
-										>
-											{sectors.data.title}
-										</a>
-									</>
-								))
-							}
+		<div class="panel_ctnr">
+			<section class="services panel">
+				<div class="ctnr">
+					<div class="content reveal">
+						<h3>Services</h3>
+	
+						<p set:html={SERVICES_SECTION_DESCRIPTION}></p>
+	
+						<a href="/services/" class="cta"><span></span> All services</a>
+	
+						<hr>
+	
+						<div class="subsets">
+							<div>
+								<a href="/services/#indoor" class="heading indoor"
+									>Indoor Cleaning <span class="icon"></span></a
+								>
+	
+								{
+									services.map((services) => (
+										<>
+											{services.data.type === "indoor" ? (
+												<a
+													href={`/services/${services.slug}/`}
+												>
+													{services.data.title}
+												</a>
+											) : null}
+										</>
+									))
+								}
+							</div>
+	
+							<hr />
+	
+							<div>
+								<a href="/services/#external" class="heading outdoor"
+									>External Cleaning <span class="icon"></span></a
+								>
+	
+								{
+									services.map((services) => (
+										<>
+											{services.data.type === "external" ? (
+												<a
+													href={`/services/${services.slug}/`}
+												>
+													{services.data.title}
+												</a>
+											) : null}
+										</>
+									))
+								}
+							</div>
 						</div>
 					</div>
+	
+					<div class="image reveal">
+						<picture>
+							<source media="(min-width:850px)" srcset="/images/office02.webp">
+							<source srcset="/images/office02-min.webp">
+							<img src="/images/office02.jpg" alt="Office Photo" width="414" height="300">
+						</picture>
+					</div>
 				</div>
-
-				<div class="image reveal">
-					<picture>
-						<source media="(min-width:850px)" srcset="/images/office03.webp">
-						<source srcset="/images/office03-min.webp">
-						<img src="/images/office03.jpg" alt="Office Photo" width="415" height="300">
-					</picture>
+			</section>
+	
+			<section class="sectors panel">
+				<div class="ctnr">
+					<div class="content reveal">
+						<h3>Sectors</h3>
+	
+						<p set:html={SECTORS_SECTION_DESCRIPTION}></p>
+	
+						<a href="/sectors/" class="cta"><span></span> All sectors</a>
+	
+						<hr>
+	
+						<div class="subsets">
+							<div>
+								{
+									sectors.map((sectors) => (
+										<>
+											<a
+												href={`/sectors/${sectors.slug}/`}
+											>
+												{sectors.data.title}
+											</a>
+										</>
+									))
+								}
+							</div>
+						</div>
+					</div>
+	
+					<div class="image reveal">
+						<picture>
+							<source media="(min-width:850px)" srcset="/images/office03.webp">
+							<source srcset="/images/office03-min.webp">
+							<img src="/images/office03.jpg" alt="Office Photo" width="415" height="300">
+						</picture>
+					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+		</div>
 
 		<section class="locations panel" id="locations">
 			<div class="ctnr">

@@ -175,8 +175,8 @@ import { LONDON_PHONE_NO, LONDON_PHONE_NO_HREF } from "../consts";
         text-align: center;
         color: var(--light);
         text-transform: uppercase;
-        letter-spacing: 0.1rem;
-        font-size: 1.1rem;
+        letter-spacing: 0.2rem;
+        font-size: 1.2rem;
         position: relative;
     }
 
@@ -204,7 +204,7 @@ import { LONDON_PHONE_NO, LONDON_PHONE_NO_HREF } from "../consts";
         margin-inline: auto;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         gap: clamp(0rem, calc(9vw - 7rem), 3rem);
     }
 
@@ -215,7 +215,7 @@ import { LONDON_PHONE_NO, LONDON_PHONE_NO_HREF } from "../consts";
         top: 0;
         left: 0;
         right: 0;
-        height: clamp(1rem, 16vmin, 7.5rem);
+        height: clamp(1rem,18vmin,7.5rem);
         z-index: 4;
         background-image: linear-gradient(0deg, var(--primary-b) 0%, transparent 38% );
         border-bottom: 0.2rem solid var(--primary);
@@ -232,7 +232,7 @@ import { LONDON_PHONE_NO, LONDON_PHONE_NO_HREF } from "../consts";
     }
 
     header .logo_anchor {
-        width: clamp(1rem,30vmin,15rem);
+        width: clamp(1rem,35vmin,15rem);
         display: flex;
         height: 100%;
         align-items: center;
@@ -243,19 +243,18 @@ import { LONDON_PHONE_NO, LONDON_PHONE_NO_HREF } from "../consts";
     }
 
     .hambt {
-        width: clamp(1rem,16vmin,7.5rem);
-        height:clamp(1rem,16vmin,7.5rem);
+        width: clamp(1rem,18vmin,7.5rem);
+        height:clamp(1rem,18vmin,7.5rem);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-right: calc((clamp(1rem,16vmin,7.5rem) - 3rem) / -2);
         z-index: 3;
     }
 
     .hambt > .ctnr {
-        width: clamp(2.5rem,9vw,3.5rem);
-        height: clamp(2rem,7vw,3rem);
+        width: clamp(2.5rem,10vw,4rem);
+        height: clamp(2rem,8vw,3.5rem);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -273,7 +272,7 @@ import { LONDON_PHONE_NO, LONDON_PHONE_NO_HREF } from "../consts";
     }
 
     .hambt.close span:nth-child(1) {
-        transform: translateY(1.2rem) rotate(45deg);
+        transform: translateY(1.4rem) rotate(45deg);
     }
 
     .hambt.close span:nth-child(2) {
@@ -300,7 +299,7 @@ import { LONDON_PHONE_NO, LONDON_PHONE_NO_HREF } from "../consts";
         max-height: 62vh;
         bottom: -0.2rem;
         right: 0;
-        background-image: linear-gradient(230deg,var(--light),transparent 50%);
+        background-image: linear-gradient(-140deg,var(--light),transparent 62%);
         border-left: 0.1rem solid var(--light);
         border-bottom: 0.1rem solid var(--light);
         box-shadow: 0 1.2rem 2.9rem -1.2rem rgb(102 118 135 / 60%);
