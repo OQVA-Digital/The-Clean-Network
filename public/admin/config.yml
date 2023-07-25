@@ -15,8 +15,10 @@ collections:
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Order", name: "order", widget: "number", required: false}
+      - {label: "Meta Title", name: "metaTitle", widget: "string", required: false}
+      - {label: "Meta Description",name: "metaDescription", widget: "string", pattern: ['^.{0,155}$', "155 characters maximum"], required: false}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "string", required: false}
+      - {label: "Description", name: "description", widget: "text", required: false}
       - {label: "ServiceType", name: "type", widget: "select",  options: ["indoor", "external"]}
       - {label: "CoverImage", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
@@ -28,8 +30,10 @@ collections:
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Order", name: "order", widget: "number", required: false}
+      - {label: "Meta Title", name: "metaTitle", widget: "string", required: false}
+      - {label: "Meta Description",name: "metaDescription", widget: "string", pattern: ['^.{0,155}$', "155 characters maximum"], required: false}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "string", required: false}
+      - {label: "Description", name: "description", widget: "text", required: false}
       - {label: "CoverImage", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
   
