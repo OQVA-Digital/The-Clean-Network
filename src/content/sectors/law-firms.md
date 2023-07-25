@@ -1,5 +1,5 @@
 ---
-title: Cleaning Services for Legal Practices in London
+title: Legal Practice Cleaning
 description: Your legal practice deserves the utmost attention and precision
   when it comes to cleanliness. At The Clean Network, we understand the specific
   needs and standards that law firms in London require. Our professional team is
