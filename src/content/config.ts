@@ -4,6 +4,8 @@ const serviceCollection = defineCollection({
     type: 'content', // v2.5.0 and later
     schema: z.object({
         order: z.number().optional(),
+        metaTitle: z.string().optional(),
+        metaDescription: z.string().optional(),
         title: z.string(),
         description: z.string().optional(),
         type: z.string(),
