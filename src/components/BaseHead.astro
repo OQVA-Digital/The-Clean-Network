@@ -12,6 +12,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const { title, description, keywords } = Astro.props;
 
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, OG_IMAGE } from "../consts";
+
+interface ScrollRevealObject {
+    reveal: (selector: string, options?: any) => void;
+}
+
+declare global {
+  function ScrollReveal(): ScrollRevealObject;
+}
 ---
 
 <script is:inline src="/scripts/scrollreveal.min.js"></script>

@@ -343,15 +343,25 @@ import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_H1, INTRO_H2, TEXT_BL
 
 		document.body.appendChild(redirWarning)
 
-		redirWarning.classList.add('show')
+		setTimeout(() => {
+			redirWarning.classList.add('show')
+		}, 300);
 
 		document.querySelector('.redir_warning button').addEventListener('click', function() {
 			redirWarning.classList.remove('show')
 			clearTimeout(autoHideBt)
+
+			setTimeout(() => {
+				document.querySelector('.redir_warning').remove()
+			}, 1400);
 		})
 
 		let autoHideBt = setTimeout(() => {
 			redirWarning.classList.remove('show')
+
+			setTimeout(() => {
+				document.querySelector('.redir_warning').remove()
+			}, 1400);
 		}, 6000);
 	}
 </script>
