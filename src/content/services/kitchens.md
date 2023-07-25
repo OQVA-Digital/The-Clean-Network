@@ -1,5 +1,5 @@
 ---
-title: Kitchens
+title: Office Kitchen Cleaning Services
 description: Maintaining a clean office kitchen has significant benefits—it
   boosts staff morale, enhances productivity, and upholds a professional image
   for any visiting clients. And it's not just about aesthetics; a clean kitchen
