@@ -1,5 +1,5 @@
 ---
-title: Windows
+title: Window Cleaning Services
 description: We understand that clean windows are more than just an aesthetic
   choice - they create a brighter, more positive environment that enhances
   productivity and boosts staff morale. Our window cleaning service employs
