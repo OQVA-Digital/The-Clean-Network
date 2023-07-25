@@ -6,12 +6,12 @@ import BaseHead from "../../components/BaseHead.astro";
 import Footer from "../../components/Footer.astro";
 import ContactSection from "../../components/ContactSection.astro";
 
-import { CONTACT_TITLE, CONTACT_DESCRIPTION, CONTACT_KEYWORDS } from "../../consts";
+import { SITE_DESCRIPTION, SITE_KEYWORDS, CONTACT_TITLE, CONTACT_DESCRIPTION, CONTACT_KEYWORDS } from "../../consts";
 ---
 
 <html lang="en">
     <head>
-        <BaseHead title={CONTACT_TITLE} description={CONTACT_DESCRIPTION} keywords={CONTACT_KEYWORDS} />
+        <BaseHead title={CONTACT_TITLE} description={CONTACT_DESCRIPTION ? CONTACT_DESCRIPTION : SITE_DESCRIPTION} keywords={CONTACT_KEYWORDS ? CONTACT_KEYWORDS : SITE_KEYWORDS} />
     </head>
 
     <body>

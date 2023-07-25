@@ -29,12 +29,14 @@ import "../../styles/collections.css"
 
 import { Schema } from "astro-seo-schema"
 
-import { SECTORS_TITLE, SECTORS_DESCRIPTION, SECTORS_KEYWORDS, SECTORS_H1, SECTORS_INTRO_DESCRIPTION } from "../../consts";
+import { SITE_KEYWORDS, SECTORS_TITLE, SECTORS_DESCRIPTION, SECTORS_KEYWORDS, SECTORS_H1, SECTORS_INTRO_DESCRIPTION } from "../../consts";
 ---
 
 <html lang="en">
     <head>
-        <BaseHead title={SECTORS_TITLE} description={SECTORS_DESCRIPTION} keywords={SECTORS_KEYWORDS} />
+        <BaseHead title={SECTORS_TITLE}
+        description={SECTORS_DESCRIPTION}
+        keywords={SECTORS_KEYWORDS ? SECTORS_KEYWORDS : SITE_KEYWORDS} />
     </head>
 
     <body>

@@ -62,7 +62,7 @@ export const SERVICES_TITLE = 'Commercial & Office Cleaning Services in London -
 
 export const SERVICES_DESCRIPTION = 'Explore a wide range of professional commercial and office cleaning services by The Clean Network. Tailored solutions to meet your specific cleaning needs in London.'
 
-export const SERVICES_KEYWORDS = "INSERT CONTENT"
+export const SERVICES_KEYWORDS = ""
 
 
     // CONTENT
@@ -89,7 +89,7 @@ export const SECTORS_TITLE = 'Commercial & Office Cleaning Services in London - 
 
 export const SECTORS_DESCRIPTION = 'Discover the range of commercial & office cleaning services offered by The Clean Network in London. Comprehensive, reliable, professional. Your sector, our expertise.'
 
-export const SECTORS_KEYWORDS = "INSERT CONTENT"
+export const SECTORS_KEYWORDS = ""
 
 
     // CONTENT
@@ -110,9 +110,9 @@ export const SECTORS_INTRO_DESCRIPTION = "<strong>The Clean Network</strong> is 
 
 export const CONTACT_TITLE = 'Contact Us · The Clean Network'
 
-export const CONTACT_DESCRIPTION = 'INSERT CONTENT'
+export const CONTACT_DESCRIPTION = ""
 
-export const CONTACT_KEYWORDS = "INSERT CONTENT"
+export const CONTACT_KEYWORDS = ""
 
 
 

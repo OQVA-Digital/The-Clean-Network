@@ -1,5 +1,5 @@
 ---
-const { title, description, keywords } = Astro.props;
+const { title, description, keywords, metaTitle, metaDescription, metaKeywords } = Astro.props;
 
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
@@ -8,13 +8,16 @@ import BodyGTM from "../components/BodyGTM.astro";
 
 import "../styles/subpages.css";
 
-import { SITE_KEYWORDS } from "../consts";
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS } from "../consts";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <BaseHead title={`${title} ${String(title).includes('Cleaning') ? "" : "Cleaning"} Service · The Clean Network`} description={description} keywords={SITE_KEYWORDS} />
+        <BaseHead
+        title={metaTitle ? metaTitle : SITE_TITLE}
+        description={metaDescription ? metaDescription : SITE_DESCRIPTION}
+        keywords={metaKeywords ? metaKeywords : SITE_KEYWORDS} />
     </head>
     <body>
         <BodyGTM/>
@@ -25,8 +28,5 @@ import { SITE_KEYWORDS } from "../consts";
         </main>
 
         <Footer />
-
-        <!-- Position:sticky address bar fix -->
-        <!-- <div style="position: fixed;"></div> -->
     </body>
 </html>
