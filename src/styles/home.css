@@ -11,7 +11,7 @@ main {}
     margin: clamp(2rem, 8vw, 6rem) auto 0;
     display: flex;
     flex-direction: column;
-    gap: clamp(1rem, 3.5vmin, 2rem);
+    gap: clamp(1rem, 3.5vmin, 1.8rem);
 }
 
 .intro h1 {
@@ -54,7 +54,7 @@ main {}
 
 .panel_ctnr {
     background-color: var(--light-d);
-    padding-block: clamp(2rem, 8vw, 5rem) clamp(2rem, 8vw, 6rem);
+    padding-block: clamp(2rem, 8vw, 5rem) clamp(2rem, 14vw, 6rem);
     display: flex;
     flex-direction: column;
     gap: clamp(4rem, 5vw, 5rem);
@@ -174,7 +174,7 @@ section.services {
 }
 
 section.sectors {
-    background-color: var(--grey-a);
+    background-color: var(--primary-a);
     color: var(--light);
 }
 
@@ -187,7 +187,7 @@ section.sectors {
 }
 
 .sectors h3::after {
-    background-image: url('/icons/sectors-grey.svg');
+    background-image: url('/icons/sectors.svg');
 }
 
 .locations.panel .cta span:first-of-type {
@@ -207,8 +207,8 @@ section.sectors {
 }
 
 .sectors .subsets a:not(.heading) {
-    background-color: var(--grey-c);
-    border: 0.2rem solid var(--grey-c);
+    background-color: var(--primary-e);
+    border: 0.2rem solid var(--primary-e);
 }
 
 .services .content>hr, .services .subsets hr {
@@ -256,11 +256,16 @@ section.locations {
     padding: clamp(3rem, 10vw, 9rem) 0 clamp(3rem, 12vw, 9rem);
 }
 
+.locations .image {
+    border-radius: 0 0 14rem 0;
+    overflow: hidden;
+}
+
 section.testimonials {
     background-color: var(--light);
     color: var(--dark-a);
     overflow: hidden;
-    padding: clamp(3rem, 10vw, 6rem) 0 clamp(3rem, 8vw, 6rem);
+    padding: 0 0 clamp(3rem, 8vw, 6rem);
     position: relative;
 }
 
@@ -289,15 +294,19 @@ section.testimonials {
     margin-inline: auto;
 }
 
+.testimonials .flex.center {
+    position:relative;
+    margin: clamp(3rem, 14vw, 7rem) 0 clamp(2rem, 4vw, 4rem);
+}
+
 .testimonials h3 {
     margin-inline: auto;
-    font-size: clamp(2rem, 6.5vmin, 3.8rem);
+    font-size: clamp(2rem, 7vmin, 3.5rem);
     text-align: center;
     font-weight: 500;
     width: fit-content;
     padding: 0.4rem 1rem;
-    margin-bottom: 3rem;
-    max-width: 62vw;
+    max-width: 70vw;
     position: relative;
     z-index: 4;
     color: var(--highlight);
@@ -311,20 +320,20 @@ section.testimonials {
 
 .quotes {
     position: absolute;
-    width: clamp(9rem, 91vw, 77rem);
-    height: clamp(60%, 121vw, 81%);
-    bottom: clamp(1rem, 10%, 7rem);
+    width: clamp(6rem, 67vw, 63rem);
     left: 0;
     right: 0;
     margin-inline: auto;
     z-index: 2;
+    opacity: 0.15;
+    height: 100%;
 }
 
 .quotes::after, .quotes::before {
     content: "";
     position: absolute;
-    width: clamp(5rem, 16vw, 10rem);
-    height: clamp(5rem, 16vw, 10rem);
+    width: clamp(2rem, 10vw, 6rem);
+    height: clamp(2rem, 10vw, 6rem);
     background-image: url(/icons/quote.svg);
     background-size: contain;
     background-position: center;
@@ -353,8 +362,9 @@ section.testimonials {
     margin-inline: clamp(2rem, 5vw, 10rem);
     border-radius: 2rem;
     padding: clamp(2rem, 8vmin, 4rem) clamp(2rem, 6vmin, 4rem) 1rem;
-    background-color: var(--light-d);
+    border: 0.1rem solid var(--light-a);
     position: relative;
+    box-shadow: 0 1.5rem 2rem -1rem var(--light-d);
 }
 
 .testimonials .box>.ctnr::before {
@@ -429,7 +439,7 @@ section.testimonials {
     bottom: -0.2rem;
     width: 100%;
     height: 3rem;
-    background-image: linear-gradient(0deg, var(--light-d) 15%, transparent);
+    background-image: linear-gradient(0deg, var(--light) 15%, transparent);
 }
 
 .testimonials q::before, .testimonials q::after {
@@ -465,7 +475,7 @@ section.testimonials {
 
 .testimonials blockquote {
     margin: unset;
-    font-size: clamp(1.5rem, 3.6vmin, 1.8rem);
+    font-size: clamp(1.5rem, 3.6vmin, 1.7rem);
     color: var(--grey-c);
     display: flex;
     flex-direction: column;
@@ -660,12 +670,13 @@ section.find_us {
     .intro h1 {
         font-size: clamp(4rem, calc(6vw - 2.6rem), 7rem);
         max-width: unset;
+        line-height: 1.15;
     }
 
     .intro h2 {
-        font-size: clamp(1.6rem, calc(6vmin - 2.6rem), 2rem);
+        font-size: clamp(1.6rem, calc(6vmin - 2.6rem), 1.9rem);
         max-width: clamp(10rem, 85%, 62rem);
-        line-height: 1.5;
+        line-height: 1.6;
     }
 
     .showcase {
@@ -681,7 +692,6 @@ section.find_us {
 
     .locations .image {
         border-radius: 24rem 0 0 0;
-        overflow: hidden;
     }
 
     .testimonials::before, .testimonials::after {

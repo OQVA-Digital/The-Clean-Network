@@ -10,7 +10,9 @@ import { LONDON_PHONE_NO, LONDON_PHONE_NO_HREF } from "../consts";
     <a href="/contact/" class="announcement">Contact us today for a free quote</a>
 
     <div class="ctnr">
-        <a href={`tel:${LONDON_PHONE_NO_HREF}`}>London: {LONDON_PHONE_NO}</a>
+        <a href={`tel:${LONDON_PHONE_NO_HREF}`} class="tel">
+            <span class="icon"></span>London: {LONDON_PHONE_NO}
+        </a>
         <!-- <a href="tel:+44-0121-3927529">Birmingham: 0121 3927529</a> -->
     </div>
 </div>
@@ -167,6 +169,10 @@ import { LONDON_PHONE_NO, LONDON_PHONE_NO_HREF } from "../consts";
             </div>
         </button>
     </div>
+    
+    <div class="shine_ctnr">
+        <div></div>
+    </div>
 </header>
 
 <style>
@@ -175,7 +181,7 @@ import { LONDON_PHONE_NO, LONDON_PHONE_NO_HREF } from "../consts";
         text-align: center;
         color: var(--light);
         text-transform: uppercase;
-        letter-spacing: 0.2rem;
+        letter-spacing: 0.15rem;
         font-size: 1.2rem;
         position: relative;
     }
@@ -208,6 +214,19 @@ import { LONDON_PHONE_NO, LONDON_PHONE_NO_HREF } from "../consts";
         gap: clamp(0rem, calc(9vw - 7rem), 3rem);
     }
 
+    .stripe .tel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem;
+    }
+
+    .stripe .tel .icon {
+        width: 1rem;
+        height: 1rem;
+        background-image: url(/icons/tel.svg);
+    }
+
     header {
         background-color: rgb(46 163 242 / 90%);
         backdrop-filter: blur(0.3rem);
@@ -220,6 +239,29 @@ import { LONDON_PHONE_NO, LONDON_PHONE_NO_HREF } from "../consts";
         background-image: linear-gradient(0deg, var(--primary-b) 0%, transparent 38% );
         border-bottom: 0.2rem solid var(--primary);
         /* padding-top: 0.2rem; */
+    }
+
+    .shine_ctnr {
+        position: absolute;
+        inset:0;
+        overflow: hidden;
+        pointer-events: none;
+    }
+
+    .shine_ctnr div {
+        background-image: linear-gradient(30deg,transparent 20%, #fff5,transparent 80%);
+        width: 100%;
+        height: 100%;
+        transform: translateX(-100%);
+        animation: shine 0.5s 0.3s linear 1;
+    }
+
+    @keyframes shine {
+        0% {
+            transform: translateX(-100%);
+        } 100% {
+            transform: translateX(100%);
+        }
     }
 
     header > .ctnr {
@@ -286,7 +328,7 @@ import { LONDON_PHONE_NO, LONDON_PHONE_NO_HREF } from "../consts";
 
     header nav {
         width: calc(100% - (100% - var(--base-width)) / 2);
-        background-color: rgb(230 238 255 / 94%);
+        background-color: rgb(230 238 255 / 96%);
         font-size: clamp(1.6rem,5vw,2.2rem);
         backdrop-filter: blur(0.5rem);
         border-radius: 0 0 0 1.4rem;
@@ -489,6 +531,11 @@ import { LONDON_PHONE_NO, LONDON_PHONE_NO_HREF } from "../consts";
             justify-content: right;
         }
 
+        .shine_ctnr div {
+            background-image: linear-gradient(30deg,transparent 20%,#fff4,transparent 80%);
+            animation: shine 0.6s 0.6s linear 1;
+        }
+
         header nav {
             position: relative;
             transform: unset;
@@ -558,8 +605,7 @@ import { LONDON_PHONE_NO, LONDON_PHONE_NO_HREF } from "../consts";
         }
 
         .subnav:hover .subsets {
-            transition: opacity 0.2s ease, visibility 0.2s ease,
-                transform 0.2s ease;
+            transition: opacity 0.2s ease, visibility 0.2s ease,transform 0.2s ease;
             opacity: 1;
             visibility: visible;
             z-index: 2;

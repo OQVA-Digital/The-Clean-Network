@@ -103,7 +103,7 @@ video {
 
 ::selection {
     color: var(--light);
-    background-color: var(--primary);
+    background-color: var(--primary-e);
 }
 
 ::-webkit-scrollbar {
@@ -231,7 +231,7 @@ noscript {
     padding: clamp(3rem,7vmin,6rem) 0 clamp(3rem,9vmin,6rem);
     display: flex;
     flex-direction: column;
-    gap: clamp(1rem, 2vmin, 1.2rem);
+    gap: clamp(0.5rem, 1.2vmin, 1.2rem);
 }
 
 .panel h3 {
