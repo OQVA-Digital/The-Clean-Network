@@ -40,7 +40,8 @@ html.sr .reveal {
     --highlight: #f2713a;
     --highlight-a:#fd601d;
 
-    --base-width: clamp(9rem, 89vw, 170rem);
+    --max-width: 170rem;
+    --base-width: clamp(9rem, 89vw, var(--max-width));
 }
 
 @font-face {
@@ -132,6 +133,7 @@ main {
     z-index: 1;
     flex: 1;
 }
+
 
 button {
     background-color: transparent;

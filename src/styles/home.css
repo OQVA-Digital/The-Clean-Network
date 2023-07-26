@@ -261,6 +261,14 @@ section.locations {
     overflow: hidden;
 }
 
+.locations .image img {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
 section.testimonials {
     background-color: var(--light);
     color: var(--dark-a);
@@ -320,7 +328,7 @@ section.testimonials {
 
 .quotes {
     position: absolute;
-    width: clamp(6rem, 67vw, 63rem);
+    width: clamp(6rem, 80vw, 63rem);
     left: 0;
     right: 0;
     margin-inline: auto;
