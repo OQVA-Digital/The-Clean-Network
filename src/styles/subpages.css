@@ -81,7 +81,6 @@ h2::after {
     font-weight: 600;
     letter-spacing: 0;
     width: fit-content;
-    padding: 0.6rem 1rem 0.6rem 0.5rem;
     border-radius: 0.4rem;
     display: flex;
     height: clamp(2.5rem, 7vmin, 3.5rem);
@@ -95,7 +94,7 @@ h2::after {
     justify-content: center;
     align-items: center;
     position: relative;
-    bottom: clamp(0.5rem, 1.5vmin, 1rem);
+    bottom: clamp(0.5rem, 1.8vmin, 1rem);
     transition: background-color 0.4s ease;
     -webkit-transition: background-color 0.4s ease;
     -moz-transition: background-color 0.4s ease;
@@ -114,15 +113,15 @@ h2::after {
 
 .panel h3 .arrow span {
     display: inline-block;
-    border-bottom: 0.5rem solid var(--highlight);
-    border-right: 0.5rem solid var(--highlight);
-    border-top: 0.5rem solid transparent;
-    border-left: 0.5rem solid transparent;
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
+    border-bottom: 0.4rem solid var(--highlight);
+    border-right: 0.4rem solid var(--highlight);
+    border-top: 0.4rem solid transparent;
+    border-left: 0.4rem solid transparent;
+    transform: translateX(-0.2rem) rotate(-45deg);
+    -webkit-transform: translateX(-0.2rem) rotate(-45deg);
+    -moz-transform: translateX(-0.2rem) rotate(-45deg);
+    -ms-transform: translateX(-0.2rem) rotate(-45deg);
+    -o-transform: translateX(-0.2rem) rotate(-45deg);
 }
 
 
