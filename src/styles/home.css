@@ -24,14 +24,14 @@ main {}
 
 .intro h2 {
     font-size: clamp(1rem, 4vmin, 2.2rem);
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.4;
     max-width: 95%;
     color: var(--grey-b);
 }
 
 .intro h2 b, .intro h2 strong {
-    font-weight: 600;
+    font-weight: 500;
     color: var(--dark-a);
 }
 
@@ -126,8 +126,8 @@ main {}
 }
 
 .panel .cta {
-    font-size: clamp(1.3rem, 6vmin, 2.2rem);
-    font-weight: 600;
+    font-size: clamp(1.3rem, 5vmin, 2.2rem);
+    font-weight: 400;
     letter-spacing: 0.05rem;
     width: fit-content;
     text-underline-offset: 0.7rem;
@@ -256,13 +256,16 @@ section.sectors {
     background-image: url('/icons/services.svg');
 }
 
+.panel .content p {
+    font-weight: 400;
+}
+
 .services .content p {
-    font-weight: 500;
     color: var(--grey-b);
 }
 
 .services .content p b, .services .content p strong {
-    font-weight: 600;
+    font-weight: 500;
     color: var(--primary-a);
 }
 
@@ -271,8 +274,8 @@ section.sectors {
 }
 
 .locations.panel .cta span:first-of-type {
-    border-bottom: 0.4rem solid var(--dark);
-    border-right: 0.4rem solid var(--dark);
+    border-bottom: 0.5rem solid var(--dark);
+    border-right: 0.5rem solid var(--dark);
 }
 
 .services .subsets .heading {
@@ -782,6 +785,10 @@ section.find_us {
 
     .panel .content {
         margin-bottom: unset;
+    }
+
+    .panel .image img {
+        background-color: rgba(255,255,255,0.2);
     }
 
     .panel .cta_ctnr {

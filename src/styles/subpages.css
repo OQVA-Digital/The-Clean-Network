@@ -161,6 +161,7 @@ h2::after {
 }
 
 .panel .image img {
+    background-color: var(--light-b);
     border-radius: 1.2rem 1.2rem 0 0;
     -webkit-border-radius: 1.2rem 1.2rem 0 0;
     -moz-border-radius: 1.2rem 1.2rem 0 0;

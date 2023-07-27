@@ -250,7 +250,7 @@ noscript {
 
 .panel .content p {
     line-height: 1.5;
-    font-size: clamp(1.2rem,4vmin,2rem);
+    font-size: clamp(1rem, 4vmin, 2rem);
     max-width: 68rem;
 }
 
@@ -314,7 +314,6 @@ noscript {
     object-position: center;
     display: flex;
     height: clamp(24rem,50vw,62rem);
-    background-color: rgba(255,255,255,0.2);
     max-height: calc(100dvh - clamp(1rem,16vmin,7.5rem));
     font-size: 2rem;
 }
