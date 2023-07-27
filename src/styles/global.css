@@ -246,13 +246,16 @@ noscript {
     display: flex;
     flex-direction: column;
     gap: clamp(0.5rem, 2vmin, 1.2rem);
-    margin-bottom: -2rem;
 }
 
 .panel .content p {
     line-height: 1.5;
     font-size: clamp(1.2rem,4vmin,2rem);
     max-width: 68rem;
+}
+
+.panel .content p b {
+    font-weight: 500;
 }
 
 .panel .content > hr, .panel .subsets hr {
@@ -413,7 +416,6 @@ noscript {
         max-width: clamp(40rem,50vw,95rem);
         flex: 1;
         padding-block: clamp(2rem,6vw,7rem) clamp(2rem,8vw,13rem);
-        margin-bottom: unset;
     }
 
     .locations.panel > .ctnr .content {

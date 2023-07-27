@@ -152,6 +152,10 @@ main {}
     background-color: var(--highlight-a);
 }
 
+.panel .content {
+    margin-bottom: -2rem;
+}
+
 .panel .content, .panel .cta_ctnr {
     width: clamp(9rem, 75vw, 170rem);
 }
@@ -254,6 +258,12 @@ section.sectors {
 
 .services .content p {
     font-weight: 500;
+    color: var(--grey-b);
+}
+
+.services .content p b, .services .content p strong {
+    font-weight: 600;
+    color: var(--primary-a);
 }
 
 .sectors h3::after {
@@ -768,6 +778,10 @@ section.find_us {
     .showcase img {
         max-height: unset;
         display: flex;
+    }
+
+    .panel .content {
+        margin-bottom: unset;
     }
 
     .panel .cta_ctnr {
