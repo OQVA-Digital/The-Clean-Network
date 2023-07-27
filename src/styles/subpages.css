@@ -50,7 +50,7 @@ h2::after {
     font-size: clamp(1.3rem,3.6vmin,1.8rem);
     color: var(--grey);
     line-height: 1.4;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .panel h3 {
