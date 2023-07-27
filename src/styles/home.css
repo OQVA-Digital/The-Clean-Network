@@ -37,7 +37,6 @@ main {}
 
 .intro h2 .highlight {
     color: var(--highlight-a);
-    padding: 0.2rem 0.4rem;
 }
 
 .showcase {
