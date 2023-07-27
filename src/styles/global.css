@@ -251,7 +251,7 @@ noscript {
 .panel .content p {
     line-height: 1.5;
     font-size: clamp(1rem, 4vmin, 2rem);
-    max-width: 68rem;
+    max-width: 66rem;
 }
 
 .panel .content p b {

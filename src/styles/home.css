@@ -125,9 +125,8 @@ main {}
 }
 
 .panel .cta {
-    font-size: clamp(1.3rem, 5vmin, 2.2rem);
-    font-weight: 400;
-    letter-spacing: 0.05rem;
+    font-size: clamp(1.3rem, 5vmin, 2rem);
+    font-weight: 500;
     width: fit-content;
     text-underline-offset: 0.7rem;
     line-height: 1.3;
