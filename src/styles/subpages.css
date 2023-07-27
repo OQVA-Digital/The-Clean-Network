@@ -23,13 +23,13 @@ h2::after {
     scroll-margin: calc(clamp(1rem,16vmin,7.5rem) + 5rem);
     width: var(--base-width);
     margin-inline: auto;
-    margin-top: clamp(4rem, 5vw, 8rem);
+    margin-top: clamp(2rem, 8vw, 5rem);
 }
 
 .division > .flex {
     display: flex;
     flex-direction: column;
-    gap: clamp(4rem, 5vw, 6rem);
+    gap: clamp(4rem, 12vw, 6rem);
 }
 
 .panel {
@@ -169,12 +169,12 @@ h2::after {
 }
 
 .heading_ctnr {
-    padding: clamp(4rem,10vw,5rem) 0;
+    padding: clamp(2rem, 8vw, 5rem) 0;
     background-color: var(--light-a);
 }
 
 .heading_ctnr h1 {
-    font-size: clamp(1rem, 8.5vmin, 6.2rem);
+    font-size: clamp(1rem, 8.5vmin, 5.5rem);
     margin-bottom: 1rem;
     color: var(--primary-a);
     /* max-width: 105rem; */
@@ -190,14 +190,14 @@ h2::after {
     display: block;
     margin-inline: auto;
     width: clamp(9rem, 89vw, 125rem);
-    font-size: clamp(1.5rem,3.8vmin,1.9rem);
-    line-height: 1.5;
-    font-weight: 500;
+    font-size: clamp(1.5rem,4vmin,1.9rem);
+    line-height: 1.45;
+    font-weight: 400;
     color: var(--grey-b);
 }
 
 .heading_ctnr p b, .heading_ctnr p strong {
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .lowercase {

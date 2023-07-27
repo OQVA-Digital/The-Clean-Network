@@ -208,7 +208,7 @@
         -ms-transform: translateY(0%);
         -o-transform: translateY(0%);
         display: unset;
-}
+    }
 
     .tns-controls button {
         position: absolute;
@@ -221,25 +221,15 @@
         height: 20rem;
         width: clamp(3.5rem, 7vw, 8rem);
         z-index: 4;
-}
+    }
 
     .tns-controls button:first-of-type {
         left: calc((100vw - var(--base-width)) / 2);
-        /* border-radius: 0 2rem 2rem 0;
-        -webkit-border-radius: 0 2rem 2rem 0;
-        -moz-border-radius: 0 2rem 2rem 0;
-        -ms-border-radius: 0 2rem 2rem 0;
-        -o-border-radius: 0 2rem 2rem 0; */
-}
+    }
     
     .tns-controls button:last-of-type {
         right: calc((100vw - var(--base-width)) / 2);
-        /* border-radius: 2rem 0 0 2rem;
-        -webkit-border-radius: 2rem 0 0 2rem;
-        -moz-border-radius: 2rem 0 0 2rem;
-        -ms-border-radius: 2rem 0 0 2rem;
-        -o-border-radius: 2rem 0 0 2rem; */
-}
+    }
 
     .tns-controls button {
         background-color:rgb(46 163 242 / 70%);
@@ -254,7 +244,7 @@
         -moz-transition: background-color 0.3s ease;
         -ms-transition: background-color 0.3s ease;
         -o-transition: background-color 0.3s ease;
-}
+    }
 
     .tns-controls button:not([disabled]):hover {
         background-color:var(--primary-b);
@@ -263,5 +253,5 @@
         -moz-transition: background-color 0.1s ease;
         -ms-transition: background-color 0.1s ease;
         -o-transition: background-color 0.1s ease;
-}
+    }
 }

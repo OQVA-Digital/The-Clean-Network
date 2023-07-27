@@ -52,6 +52,8 @@ import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_H1, INTRO_H2, TEXT_BL
 						<img src="/images/office01.jpg" alt="The Clean Network logo" width="414" height="300">
 					</picture>
 				</div>
+
+				<a href="#scroll" class="scroll_bt" title="Scroll for more" aria-label="Click to scroll for more"><span></span></a>
 			</div>
 
 			<div class="text_block">
@@ -85,17 +87,19 @@ import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_H1, INTRO_H2, TEXT_BL
 			</div>
 		</section>
 
-		<div class="panel_ctnr">
+		<div class="panel_ctnr reveal" id="scroll">
 			<section class="services panel">
 				<div class="ctnr">
-					<div class="content reveal">
-						<h3>Services</h3>
+					<div class="cta_ctnr">
+						<a href="/services/" class="cta" aria-label="View all services"><span></span> All services</a>
+					</div>
+
+					<div class="content">
+						<a href="/services/" aria-label="View all services"><h3>Services</h3></a>
 	
 						<p set:html={SERVICES_SECTION_DESCRIPTION}></p>
 	
-						<a href="/services/" class="cta"><span></span> All services</a>
-	
-						<hr>
+						<!-- <hr>
 	
 						<div class="subsets">
 							<div>
@@ -139,29 +143,31 @@ import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_H1, INTRO_H2, TEXT_BL
 									))
 								}
 							</div>
-						</div>
+						</div> -->
 					</div>
 	
-					<div class="image reveal">
+					<a href="/services/" aria-label="View all services" class="image">
 						<picture>
 							<source media="(min-width:850px)" srcset="/images/office02.webp">
 							<source srcset="/images/office02-min.webp">
 							<img src="/images/office02.jpg" alt="Office Photo" width="414" height="300">
 						</picture>
-					</div>
+					</a>
 				</div>
 			</section>
 	
-			<section class="sectors panel">
+			<section class="sectors panel reveal">
 				<div class="ctnr">
-					<div class="content reveal">
-						<h3>Sectors</h3>
+					<div class="cta_ctnr">
+						<a href="/sectors/" class="cta" aria-label="View all sectors"><span></span> All sectors</a>
+					</div>
+
+					<div class="content">
+						<a href="/sectors/" aria-label="View all sectors"><h3>Sectors</h3></a>
 	
 						<p set:html={SECTORS_SECTION_DESCRIPTION}></p>
 	
-						<a href="/sectors/" class="cta"><span></span> All sectors</a>
-	
-						<hr>
+						<!-- <hr>
 	
 						<div class="subsets">
 							<div>
@@ -177,23 +183,23 @@ import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_H1, INTRO_H2, TEXT_BL
 									))
 								}
 							</div>
-						</div>
+						</div> -->
 					</div>
 	
-					<div class="image reveal">
+					<a href="/sectors/" aria-label="View all sectors" class="image">
 						<picture>
 							<source media="(min-width:850px)" srcset="/images/office03.webp">
 							<source srcset="/images/office03-min.webp">
 							<img src="/images/office03.jpg" alt="Office Photo" width="415" height="300">
 						</picture>
-					</div>
+					</a>
 				</div>
 			</section>
 		</div>
 
-		<section class="locations panel" id="locations">
+		<section class="locations panel reveal" id="locations">
 			<div class="ctnr">
-				<div class="content reveal">
+				<div class="content">
 					<h3>Locations</h3>
 
 					<p set:html={LOCATIONS_SECTION_DESCRIPTION}></p>

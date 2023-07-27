@@ -42,6 +42,8 @@ html.sr .reveal {
 
     --max-width: 170rem;
     --base-width: clamp(9rem, 89vw, var(--max-width));
+
+    --header-height: clamp(1rem,18vmin,7.5rem);
 }
 
 @font-face {
@@ -71,6 +73,10 @@ h6 {
     cursor: default;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    width: fit-content;
+}
+
 body {
     font-family: 'Rubik', sans-serif;
     background-color: var(--light);
@@ -82,6 +88,11 @@ a {
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
     color: unset;
+    cursor: pointer;
+}
+
+a h1, a h2, a h3, a h4, a h5, h5 {
+    cursor: pointer;
 }
 
 img {
@@ -226,28 +237,23 @@ noscript {
 .panel > .ctnr {
     display: flex;
     flex-direction: column-reverse;
+    position: relative;
 }
 
 .panel .content {
     margin-inline: auto;
-    padding: clamp(3rem,7vmin,6rem) 0 clamp(3rem,9vmin,6rem);
+    padding: clamp(2rem,6vw,7rem) 0 0;
     display: flex;
     flex-direction: column;
-    gap: clamp(0.5rem, 1.2vmin, 1.2rem);
-}
-
-.panel h3 {
-    font-size: clamp(2rem, 11vw, 6rem);
+    gap: clamp(0.5rem, 2vmin, 1.2rem);
+    margin-bottom: -2rem;
 }
 
 .panel .content p {
     line-height: 1.5;
-    font-size: clamp(1.5rem,4vmin,1.8rem);
+    font-size: clamp(1.2rem,4vmin,2rem);
+    max-width: 68rem;
 }
-
-/* .panel .content p, .panel .description {
-    max-width: 65rem;
-} */
 
 .panel .content > hr, .panel .subsets hr {
     width: 2rem;
@@ -308,6 +314,24 @@ noscript {
     background-color: rgba(255,255,255,0.2);
     max-height: calc(100dvh - clamp(1rem,16vmin,7.5rem));
     font-size: 2rem;
+}
+
+.panel a.image {
+    transition: filter 0.2s ease;
+    -webkit-transition: filter 0.2s ease;
+    -moz-transition: filter 0.2s ease;
+    -ms-transition: filter 0.2s ease;
+    -o-transition: filter 0.2s ease;
+}
+
+.panel a.image:hover {
+    filter: brightness(1.1);
+    -webkit-filter: brightness(1.1);
+    transition: filter 0.2s ease;
+    -webkit-transition: filter 0.2s ease;
+    -moz-transition: filter 0.2s ease;
+    -ms-transition: filter 0.2s ease;
+    -o-transition: filter 0.2s ease;
 }
 
 .panel .subsets {
@@ -384,10 +408,12 @@ noscript {
     }
 
     .panel .content {
-        margin-right: 5vw;
+        margin-inline: clamp(4rem, 5vw, 8rem);
         width: unset;
         max-width: clamp(40rem,50vw,95rem);
         flex: 1;
+        padding-block: clamp(2rem,6vw,7rem) clamp(2rem,8vw,13rem);
+        margin-bottom: unset;
     }
 
     .locations.panel > .ctnr .content {

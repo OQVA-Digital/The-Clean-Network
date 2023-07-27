@@ -16,7 +16,7 @@
 
 .ctas a {
     border-radius: 0.4rem;
-    padding: 1.4rem 2rem;
+    padding: clamp(1rem, 4vw, 1.5rem) clamp(1rem, 5vw, 2.5rem);
     border: 0.2rem solid var(--light);
     box-shadow: inset 0 -1.2rem 1.5rem -1.5rem, 0 0.8rem 1rem -0.6rem var(--light-b);
     transition: filter 0.5s ease;
