@@ -15,14 +15,14 @@ const currentURL = new URL(Astro.request.url)
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} keywords={keywords} />
-		<script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+		<!-- <script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> -->
 	</head>
 	<body>
         <BodyGTM/>
 		
 		<slot />
 
-		<script>
+		<!-- <script>
 			if (window.netlifyIdentity) {
 				window.netlifyIdentity.on("init", user => {
 				if (!user) {
@@ -32,7 +32,7 @@ const currentURL = new URL(Astro.request.url)
 				}
 				});
 			}
-		</script>
+		</script> -->
 
 		<Schema
 			item={{
