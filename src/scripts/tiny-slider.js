@@ -13,4 +13,18 @@ var slider = tns({
     controlsText:["<", ">"],
     navAsThumbnails:true,
     loop: false,
-  });
+});
+
+var slider = tns({
+    container: '.benefits .slider',
+    center: true,
+    items: 1,
+    slideBy: 'page',
+    speed: 600,
+    autoWidth:true,
+    controls:true,
+    controlsPosition:'bottom',
+    controlsText:["<", ">"],
+    navAsThumbnails:true,
+    loop: false,
+});

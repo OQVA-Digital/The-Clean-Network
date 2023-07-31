@@ -12,11 +12,25 @@ import { Schema } from "astro-seo-schema"
 
 import { getCollection } from "astro:content";
 
-const services = await getCollection("services");
-const sectors = await getCollection("sectors");
+// const services = await getCollection("services");
+// const sectors = await getCollection("sectors");
 const testimonials = await getCollection("testimonials");
 
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_H1, INTRO_H2, TEXT_BLOCK, SERVICES_SECTION_DESCRIPTION, SECTORS_SECTION_DESCRIPTION, LOCATIONS_SECTION_DESCRIPTION, FULL_ADDRESS, LONDON_PHONE_NO, LONDON_PHONE_NO_HREF } from "../consts";
+
+const benefits = (await getCollection('benefits')).sort((a, b) => {
+    // Check if both items have an 'order' property
+    if (a.data.order !== undefined && b.data.order !== undefined) {
+        return a.data.order - b.data.order; // Sort by 'order' if both have it
+    } else if (a.data.order !== undefined) {
+        return -1; // 'a' has 'order', but 'b' doesn't, so 'a' comes first
+    } else if (b.data.order !== undefined) {
+        return 1; // 'b' has 'order', but 'a' doesn't, so 'b' comes first
+    } else {
+        // Both 'a' and 'b' don't have 'order', fallback to sorting by 'title'
+        return a.data.title.localeCompare(b.data.title);
+    }
+});
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}  keywords={SITE_KEYWORDS}>
@@ -55,10 +69,39 @@ import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_H1, INTRO_H2, TEXT_BL
 
 				<a href="#scroll" class="scroll_bt" title="Scroll for more" aria-label="Click to scroll for more"><span></span></a>
 			</div>
+		</section>
 
-			<div class="text_block">
-				<div class="ctnr reveal">
-					<p set:html={TEXT_BLOCK}></p>
+		<script>
+			import "../scripts/tiny-slider.js"
+			import "../styles/tiny-slider.css"
+		</script>
+
+		<section class="benefits">
+			<div class="ctnr reveal">
+				<h3>Why The Clean Network</h3>
+
+				<p>{benefits.length} reasons to choose <b>The Clean Network</b> cleaning services:</p>
+
+				<div class="slider">
+					{
+						benefits.map((benefits) => (
+							<>
+								<div class="box">
+									<div class="ctnr">
+										{benefits.data.icon == "" ? "" : (<img src={benefits.data.icon} class="icon" alt=""/>)}
+										
+										<h4 set:html={benefits.data.title}class="title"></h4>
+
+										{benefits.data.paragraph01 == "" ? null : (<p set:html={benefits.data.paragraph01}></p>)}
+										
+										{benefits.data.paragraph02 == "" ? null : (<p set:html={benefits.data.paragraph02}></p>)}
+										
+										{benefits.data.paragraph03 == "" ? null : (<p set:html={benefits.data.paragraph03}></p>)}
+									</div>
+								</div>
+							</>
+						))
+					}
 				</div>
 			</div>
 		</section>
@@ -200,11 +243,11 @@ import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_H1, INTRO_H2, TEXT_BL
 		<section class="locations panel reveal" id="locations">
 			<div class="ctnr">
 				<div class="content">
-					<h3>Locations</h3>
+					<h3>Location</h3>
 
 					<p set:html={LOCATIONS_SECTION_DESCRIPTION}></p>
 
-					<a href="/locations/" class="cta"><span></span> Our Locations</a>
+					<a href="/locations/" class="cta"><span></span> Our Location</a>
 				</div>
 
 				<div class="image reveal">
@@ -224,11 +267,6 @@ import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_H1, INTRO_H2, TEXT_BL
 
 					<div class="quotes"></div>
 				</div>
-
-				<script>
-					import "../scripts/tiny-slider.js"
-					import "../styles/tiny-slider.css"
-				</script>
 
 				<div class="slider">
 					{
@@ -250,11 +288,11 @@ import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_H1, INTRO_H2, TEXT_BL
 											<p class="heading">{testimonials.data.heading}</p>
 											
 											<blockquote>
-												{testimonials.data.paragraph01 == "" ? null : (<p>{testimonials.data.paragraph01}</p>)}
+												{testimonials.data.paragraph01 == "" ? null : (<p set:html={testimonials.data.paragraph01}></p>)}
 												
-												{testimonials.data.paragraph02 == "" ? null : (<p>{testimonials.data.paragraph02}</p>)}
+												{testimonials.data.paragraph02 == "" ? null : (<p set:html={testimonials.data.paragraph02}></p>)}
 												
-												{testimonials.data.paragraph03 == "" ? null : (<p>{testimonials.data.paragraph03}</p>)}
+												{testimonials.data.paragraph03 == "" ? null : (<p set:html={testimonials.data.paragraph03}></p>)}
 											</blockquote>
 
 											<div class="gradient"></div>

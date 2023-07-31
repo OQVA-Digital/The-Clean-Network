@@ -67,7 +67,7 @@ main {}
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: inset 0 0.8rem 1.5rem -1.1rem var(--dark);
+    /* box-shadow: inset 0 0.8rem 1.5rem -1.1rem var(--dark); */
     border-radius: 3rem;
     -webkit-border-radius: 3rem;
     -moz-border-radius: 3rem;
@@ -180,35 +180,90 @@ main {}
 }
 
 
-.intro .text_block {
+.benefits {
     background-color: var(--highlight);
     padding: clamp(3rem, 10vmin, 6rem) 0;
     color: var(--light);
     font-size: clamp(1.5rem, 4vmin, 2.2rem);
     background-image: linear-gradient(340deg, #ff9162, transparent 38%);
+    overflow: hidden;
+    position: relative;
 }
 
-.text_block b, .text_block strong {
+.benefits>.ctnr {
+    /* width: var(--base-width);
+    margin-inline: auto;
+    max-width: 100%; */
+}
+
+.benefits p {
+    /* text-align: center;
+    max-width: 130rem;
+    margin-inline: auto;
+    line-height: 1.6;
+    font-weight: 400; */
+}
+
+.benefits h3 {
+    margin-inline: auto;
+    font-size: clamp(2rem, 10vmin, 3.5rem);
+    text-align: center;
+    font-weight: 500;
+    width: fit-content;
+    padding: 0.4rem 1rem;
+    max-width: 70vw;
+    margin-bottom: 1rem;
+}
+
+.benefits h3 + p {
+    padding: 0 1rem;
+    text-align: center;
+    width: var(--base-width);
+    margin-inline: auto;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.benefits .box {
+    width: clamp(9rem, 95vw, 60rem);
+    text-align: center;
+}
+
+.benefits .box .icon {
+    width: clamp(2rem, 10vw, 5rem);
+    margin: -6rem 0 1rem;
+}
+
+.benefits .box .title {
+    font-size: clamp(2.8rem, 6vw, 3.2rem);
+    color: var(--highlight-a);
+    font-weight: 500;
+    margin-bottom: 1rem;
+    margin-inline: auto;
+}
+
+.benefits .box p {
+    font-size: clamp(1.6rem, 3.8vmin, 1.7rem);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.benefits .box > .ctnr {
+    margin-inline: clamp(2rem, 5vw, 4rem);
+    background-color: var(--light-a);
+    position: relative;
+    padding: 3rem;
+    border-radius: 1.2rem;
+    color: var(--dark-a);
+}
+
+.benefits b, .benefits strong {
     font-weight: 500;
     background-color: var(--highlight-a);
 }
 
-.intro .text_block>.ctnr {
-    width: var(--base-width);
-    margin-inline: auto;
-}
-
-.intro .text_block p {
-    text-align: center;
-    max-width: 130rem;
-    margin-inline: auto;
-    line-height: 1.6;
-    font-weight: 400;
-}
-
 section.clients {
-    /* margin-bottom: clamp(2rem, 8vw, 5rem); */
-    /* border-bottom: 0.2rem solid var(--light-a); */
+    
 }
 
 .clients>.ctnr {
@@ -334,7 +389,7 @@ section.locations {
 }
 
 .locations.panel .content {
-    padding: clamp(3rem, 10vw, 9rem) 0 clamp(3rem, 12vw, 9rem);
+    padding: clamp(3rem, 10vw, 9rem) 0 clamp(3rem, 15vw, 9rem);
 }
 
 .locations .image {
@@ -766,7 +821,7 @@ section.find_us {
 
     .intro h2 {
         font-size: clamp(1.9rem, calc(4.8vw - 2.6rem), 2rem);
-        max-width: clamp(10rem, 94%, 74rem);
+        max-width: clamp(10rem, 88%, 74rem);
         line-height: 1.6;
     }
 
@@ -779,6 +834,10 @@ section.find_us {
     .showcase img {
         max-height: unset;
         display: flex;
+    }
+    
+    .scroll_bt {
+        right: calc((100VW - var(--base-width)) / 2);
     }
 
     .panel .content {

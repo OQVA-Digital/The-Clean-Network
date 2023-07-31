@@ -25,7 +25,7 @@
 		color:var(--primary-a);
 	}
 
-    .title + p {
+    form .title + p {
         text-align: center;
         margin: 0 auto 3rem;
         line-height: 1.5;
