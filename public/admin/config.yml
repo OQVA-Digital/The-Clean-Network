@@ -53,3 +53,18 @@ collections:
       - {label: "Paragraph01", name: "paragraph01", widget: "text", required: false}
       - {label: "Paragraph02", name: "paragraph02", widget: "text", required: false}
       - {label: "Paragraph03", name: "paragraph03", widget: "text", required: false}
+  
+
+  - name: "benefits" # Used in routes, e.g., /admin/collections/blog
+    label: "Benefits" # Used in the UI
+    folder: "src/content/benefits" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      # - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Order", name: "order", widget: "number", required: false}
+      - {label: "Icon", name: "icon", widget: "image", required: false}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Paragraph01", name: "paragraph01", widget: "text", required: false}
+      - {label: "Paragraph02", name: "paragraph02", widget: "text", required: false}
+      - {label: "Paragraph03", name: "paragraph03", widget: "text", required: false}
