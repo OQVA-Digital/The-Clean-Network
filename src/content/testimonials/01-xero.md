@@ -1,9 +1,13 @@
 ---
-name: "Xero"
-description: "Accounting Software Company"
-heading: "I couldn't be happier with the results. "
-paragraph01: "They brought all the necessary equipment and supplies, ensuring that they were well-prepared for the job."
-paragraph02: "Not only did they take care of the obvious areas like floors and surfaces, but they also tackled those hard-to-reach spots that often get neglected."
+avatar: /images/media/wallacespace-logo-ret-1.png
+name: The Wallace Space
+description: On demand spaces when you need them
+heading: The Clean Network provide our spaces daily with a high level of
+  cleaning, care, and communication.
+paragraph01: >
+  Any issues that may arise are swiftly communicated and handled attentively.
+  The management of the contract by Ben and the team is always professional and
+  empathetic which is honestly a breath of fresh air.
+paragraph02: All deeper cleans are effectively executed and the results have delighted us.
 paragraph03: ""
-avatar: "/images/media/xero.png"
 ---
