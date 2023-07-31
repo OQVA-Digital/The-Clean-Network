@@ -44,7 +44,7 @@ const benefitcsCollection = defineCollection({
     type: 'content', // v2.5.0 and later
     schema: z.object({
         order: z.number().optional(),
-        icon: z.string(),
+        icon: z.string().optional(),
         title: z.string(),
         paragraph01: z.string().optional(),
         paragraph02: z.string().optional(),
