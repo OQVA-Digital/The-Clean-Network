@@ -1,5 +1,5 @@
 ---
-avatar: /images/media/twl_linear-rgb-wht.svg
+avatar: /images/media/twl_linear-rgb-wht-copy.png
 name: The Workers' League
 description: Coworking Space
 heading: >
