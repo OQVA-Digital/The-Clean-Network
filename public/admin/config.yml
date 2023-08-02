@@ -65,6 +65,3 @@ collections:
       - {label: "Order", name: "order", widget: "number", required: false}
       - {label: "Icon", name: "icon", widget: "image", required: false}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Paragraph01", name: "paragraph01", widget: "text", required: false}
-      - {label: "Paragraph02", name: "paragraph02", widget: "text", required: false}
-      - {label: "Paragraph03", name: "paragraph03", widget: "text", required: false}
