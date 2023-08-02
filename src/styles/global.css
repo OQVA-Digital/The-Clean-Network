@@ -285,6 +285,8 @@ noscript {
     border: 0.2rem solid var(--highlight);
     box-shadow: inset 0 -1.2rem 2rem -1.8rem #fff;
     text-shadow: 0 0.2rem 0rem rgb(47 54 60 / 38%);
+    border-radius: 0.4rem;
+    padding: clamp(1rem, 4vw, 1.5rem) clamp(1rem, 5vw, 2.5rem);
     transition: filter 0.3s ease;
     -webkit-transition: filter 0.3s ease;
     -moz-transition: filter 0.3s ease;

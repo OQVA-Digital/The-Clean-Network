@@ -71,39 +71,28 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 			</div>
 		</section>
 
-		<script>
-			import "../scripts/tiny-slider.js"
-			import "../styles/tiny-slider.css"
-		</script>
-
 		<section class="benefits">
-			<div class="ctnr reveal">
+			<div class="ctnr">
 				<h3>Why The Clean Network</h3>
 
 				<p>{benefits.length} reasons to choose <b>The Clean Network</b> cleaning services:</p>
 
-				<div class="slider">
+				<div class="bullets">
 					{
 						benefits.map((benefits) => (
 							<>
-								<div class="box">
-									<div class="ctnr">
-										{benefits.data.icon == "" ? "" : (<img src={benefits.data.icon} class="icon" alt=""/>)}
-										
-										<h4 set:html={benefits.data.title}class="title"></h4>
-
-										{benefits.data.paragraph01 == "" ? null : (<p set:html={benefits.data.paragraph01}></p>)}
-										
-										{benefits.data.paragraph02 == "" ? null : (<p set:html={benefits.data.paragraph02}></p>)}
-										
-										{benefits.data.paragraph03 == "" ? null : (<p set:html={benefits.data.paragraph03}></p>)}
-									</div>
+								<div class="box reveal">
+									{benefits.data.icon == "" ? "" : (<img src={benefits.data.icon} class="icon" alt={`${(benefits.data.title).replace( /(<([^>]+)>)/ig, '')} icon`}/>)}
+									
+									<h4 set:html={benefits.data.title}class="title"></h4>
 								</div>
 							</>
 						))
 					}
 				</div>
 			</div>
+				
+			<a href="#contact" class="main cta">Get a Free Quote</a>
 		</section>
 
 		<section class="clients reveal">
@@ -261,6 +250,11 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 		</section>
 
 		<section class="testimonials">
+			<script>
+				import "../scripts/tiny-slider.js"
+				import "../styles/tiny-slider.css"
+			</script>
+
 			<div class="ctnr">
 				<div class="flex center">
 					<h3>What our clients have been saying</h3>
