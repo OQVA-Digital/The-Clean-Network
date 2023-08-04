@@ -1,4 +1,8 @@
 ---
+metaTitle: Commercial Post-construction Cleaning Services - The Clean Network
+metaDescription: Post-construction Cleaning Services are a vital final step
+  before you can fully enjoy your newly constructed or renovated space.
+metaKeywords: post construction cleaning services, after building, tile and grout, london
 title: Post-construction Cleaning Services
 description: When the construction crew leaves, they often leave behind debris,
   dust, and a mess that needs a professional touch. That's where we come in. Our
