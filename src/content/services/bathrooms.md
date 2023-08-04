@@ -1,4 +1,9 @@
 ---
+metaTitle: Office Bathroom & Toilet Cleaning Services - The Clean Network
+metaDescription: A clean bathroom is not only a pleasure to use but also a
+  reflection of your business’s attention to detail and care for its employees
+  and visitors.
+metaKeywords: commercial bathroom cleaning services, london
 title: Bathroom & Toilet Cleaning Services
 description: A clean, hygienic, and fresh-smelling bathroom is not only a
   pleasure to use but also a reflection of your business's attention to detail
