@@ -1,4 +1,9 @@
 ---
+metaTitle: Commercial Lobby & Reception Cleaning Services - The Clean Network
+metaDescription: First impressions matter. When your clients step into your
+  office, the freshness of your lobby and reception area set the tone for their
+  entire visit.
+metaKeywords: lobby cleaning, reception area, offices, london
 title: Lobby & Reception Cleaning Services
 description: First impressions matter. When your clients step into your office,
   the cleanliness and freshness of your lobby and reception area set the tone
