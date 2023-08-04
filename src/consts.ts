@@ -85,7 +85,7 @@ export const EXTERIOR_SERVICES_DESCRIPTION = "We extend our cleaning expertise b
 
     // META
 
-export const SECTORS_TITLE = 'Commercial & Office Cleaning Services in London - The Clean Network'
+export const SECTORS_TITLE = 'Sectors We Work With - The Clean Network'
 
 export const SECTORS_DESCRIPTION = 'Discover the range of commercial & office cleaning services offered by The Clean Network in London. Comprehensive, reliable, professional. Your sector, our expertise.'
 
@@ -126,9 +126,9 @@ export const CONTACT_KEYWORDS = ""
 
 export const ABOUT_TITLE = 'About The Clean Network - Who We Are'
 
-export const ABOUT_DESCRIPTION = "Discover who we are at The Clean Network. Learn about our history, our commitment to excellence, and why we're London's trusted cleaning service."
+export const ABOUT_DESCRIPTION = "We are one of the leading office cleaning companies in London. The Clean Network is your professional partner for commercial and office cleaning in London"
 
-export const ABOUT_KEYWORDS = "INSERT CONTENT"
+export const ABOUT_KEYWORDS = ""
 
 
     // CONTENT
@@ -186,7 +186,7 @@ export const JOBS_TEXT_BODY = `<p>If you're seeking a rewarding career in commer
 
     // META
 
-export const LOCATIONS_TITLE = 'Our Locations · The Clean Network'
+export const LOCATIONS_TITLE = 'Our Location · The Clean Network'
 
 export const LOCATIONS_DESCRIPTION = "INSERT CONTENT"
 
@@ -195,7 +195,7 @@ export const LOCATIONS_KEYWORDS = "INSERT CONTENT"
 
     // CONTENT
 
-export const LOCATIONS_H1 = "Our Locations"
+export const LOCATIONS_H1 = "Our Location"
 
 export const LOCATIONS_INTRO_DESCRIPTION = "Centrally located in the <b>City of London</b>, we're just a call away from providing your space with the professional cleaning service it deserves. <b>We’d be happy to come over and provide you with a quote.</b> Or feel free to drop by our office too."
 

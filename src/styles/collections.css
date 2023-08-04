@@ -26,7 +26,6 @@ h2 {
     box-shadow: 0 1rem 1rem -0.8rem rgb(248 248 255 / 40%);
     z-index: 2;
     color: var(--primary-a);
-    font-weight: 600;
     border-right: 0.1rem solid var(--light);
     border-bottom: 0.1rem solid var(--light);
     width: fit-content;

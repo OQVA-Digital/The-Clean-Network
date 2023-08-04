@@ -325,7 +325,6 @@ section.clients {
 
 .clients h3 {
     font-size: clamp(2rem, 6.5vw, 2.8rem);
-    font-weight: 600;
     color: var(--primary-a);
 }
 
@@ -398,10 +397,6 @@ section.sectors {
     background-color: rgb(16 106 166 / 15%);
 }
 
-.services h3 {
-    font-weight: 600;
-}
-
 .sectors h3 {
     font-weight: 500;
 }
@@ -428,6 +423,42 @@ section.sectors {
 
 .services .subsets .outdoor .icon {
     background-image: url(/icons/outdoor.svg);
+}
+
+section.text {
+    width: clamp(9rem, 84vw, 133rem);
+    margin-inline: auto;
+    text-align: center;
+    margin-block: 2rem;
+}
+
+section.text>.ctnr {
+    
+}
+
+section.text h3 {
+    margin-inline: auto;
+    font-size: clamp(2rem, 7vmin, 3.8rem);
+    color: var(--primary-e);
+}
+
+section.text p {
+    margin-bottom: 1.4rem;
+    line-height: 1.4;
+    font-size: clamp(1.5rem, 3.8vmin, 1.8rem);
+    color: var(--grey-b);
+}
+
+section.text p b, section.text p strong {
+    font-weight: 500;
+    color: var(--grey-a);
+}
+
+section.text .cta {
+    display: block;
+    margin-top: 2rem;
+    max-width: 20rem;
+    margin-inline: auto;
 }
 
 section.locations {
@@ -701,7 +732,7 @@ section.testimonials {
     flex-direction: column;
     gap: 1.4rem;
     align-items: center;
-} */
+}
 
 .rates h3 {
     font-size: clamp(2rem, 10vw, 6rem);
@@ -742,7 +773,7 @@ section.testimonials {
 
 .rates .cta b {
     color: var(--highlight);
-}
+} */
 
 section.find_us {
     background-color: var(--primary-a);

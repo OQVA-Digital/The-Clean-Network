@@ -9,13 +9,13 @@ import ContactSection from "../../components/ContactSection.astro"
 import "../../styles/button-ctnr.css";
 
 
-import { ABOUT_TITLE, ABOUT_DESCRIPTION, ABOUT_KEYWORDS, ABOUT_H1, ABOUT_H2, ABOUT_TEXT_BODY } from "../../consts";
+import { SITE_DESCRIPTION, SITE_KEYWORDS, ABOUT_TITLE, ABOUT_DESCRIPTION, ABOUT_KEYWORDS, ABOUT_H1, ABOUT_H2, ABOUT_TEXT_BODY } from "../../consts";
 
 ---
 
 <html lang="en">
     <head>
-        <BaseHead title={ABOUT_TITLE} description={ABOUT_DESCRIPTION} keywords={ABOUT_KEYWORDS} />
+        <BaseHead title={ABOUT_TITLE} description={ABOUT_DESCRIPTION ? ABOUT_DESCRIPTION : SITE_DESCRIPTION} keywords={ABOUT_KEYWORDS ? ABOUT_KEYWORDS : SITE_KEYWORDS} />
     </head>
 
     <body>

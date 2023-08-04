@@ -46,13 +46,13 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 
 					<div class="bt_ctnr flex">
 						<div class="ctas flex">
-							<a href="/services/" class="know_our_services">Find out more</a>
+							<a href="/services/" class="know_our_services" aria-label="Find out more about our services">Find out more</a>
 					
-							<a href="#contact" class="cta">Get a Quote</a>
+							<a href="#contact" class="cta" aria-label="Get a quote">Get a Quote</a>
 						</div>
 					
 						<div class="flex column">
-							<a href={`tel:${LONDON_PHONE_NO_HREF}`}><span>London:</span> {LONDON_PHONE_NO}</a>
+							<a href={`tel:${LONDON_PHONE_NO_HREF}`} aria-label="Call us"><span>London:</span> {LONDON_PHONE_NO}</a>
 					
 							<!-- <a href="tel:+44-0121-3927529"><span>Birmingham:</span> 0121 3927529</a> -->
 						</div>
@@ -92,7 +92,7 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 				</div>
 			</div>
 				
-			<a href="#contact" class="main cta">Get a Free Quote</a>
+			<a href="#contact" class="main cta" aria-label="Get a free quote">Get a Free Quote</a>
 		</section>
 
 		<section class="clients reveal">
@@ -227,6 +227,22 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 					</a>
 				</div>
 			</section>
+
+			<section class="text reveal">
+				<h3>Daily Office Cleaning Services London</h3> 
+
+				<p><strong>Office cleaning</strong> is now more important than ever due to the recent pandemic. We want your employees to feel at ease about coming into the workplace.</p>
+				
+				<p><strong>Our daily office cleaning services are provided 7 days a week</strong> – and take place inside or outside of office hours as you require.</p>
+				
+				<p>You can also choose to include <b>weekly, monthly or seasonal tasks</b> from cleaning glass partitions to clearing office kitchen fridges.</p>
+				
+				<p>We also understand that no two clients are the same, <b>we tailor our office cleaning contracts accordingly.</b></p>
+				
+				<p>Whether it’s a <b>large office</b> in London which requires a large cleaning contract with many hours daily or a <b>smaller office</b> in South West London which only needs attention for a few hours a week, <b>we create and deliver a cost-effective contract to suit you and your team.</b></p>
+				
+				<a href="#contact" class="main cta" aria-label="Get a free quote">Get a Free Quote</a>
+			</section>
 		</div>
 
 		<section class="locations panel reveal" id="locations">
@@ -236,7 +252,7 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 
 					<p set:html={LOCATIONS_SECTION_DESCRIPTION}></p>
 
-					<a href="/locations/" class="cta"><span></span> Our Location</a>
+					<a href="/locations/" class="cta" aria-label="See our location"><span></span> Our Location</a>
 				</div>
 
 				<div class="image reveal">
@@ -365,7 +381,7 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 					<div class="iframe_ctnr">
 						<noscript>You need to enable JavaScript on your browser to see this content.</noscript>
 
-						<iframe width="100%" height="100%" title="Clean Network Locations map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" loading="lazy" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=EC1M%204NH+(The%20Clean%20Network)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+						<iframe width="100%" height="100%" title="The Clean Network Locations map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" loading="lazy" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=EC1M%204NH+(The%20Clean%20Network)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
 					</div>
 				</div>
 			</div>

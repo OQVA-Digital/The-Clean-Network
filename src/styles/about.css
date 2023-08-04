@@ -32,7 +32,6 @@ h1 strong {
 
 h2 {
     font-size: clamp(1rem,5.3vmin,2.3rem);
-    font-weight: 600;
     line-height: 1.2;
     margin-bottom: 1rem;
     color: var(--dark);
