@@ -1,4 +1,10 @@
 ---
+heroImage: /post-covers/your-brand-is-compression-of-sensation.jpg
+metaTitle: Office Kitchen Cleaning Services - The Clean Network
+metaDescription: Your office kitchen is more than just a space for meals—it’s a
+  gathering point, a place of interaction, and an integral part of your working
+  environment.
+metaKeywords: office kitchen cleaning, fridge, london
 title: Office Kitchen Cleaning Services
 description: Maintaining a clean office kitchen has significant benefits—it
   boosts staff morale, enhances productivity, and upholds a professional image
@@ -7,7 +13,6 @@ description: Maintaining a clean office kitchen has significant benefits—it
   However, regular upkeep can be a challenge with the day-to-day business
   operations demanding your attention.
 type: indoor
-heroImage: /post-covers/your-brand-is-compression-of-sensation.jpg
 image: /images/media/kitchen.jpg
 ---
 Your office kitchen is more than just a space for meals—it’s a gathering point, a place of conversation and camaraderie, and an integral part of your working environment. At The Clean Network, we understand the significance of this space, which is why we are committed to providing comprehensive <strong>office kitchen cleaning</strong> services in <strong>London</strong>.
