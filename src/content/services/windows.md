@@ -1,4 +1,9 @@
 ---
+metaTitle: Commercial Window Cleaning Services in London - The Clean Network
+metaDescription: "With the hustle and bustle of the city, it’s easy for your
+  office windows to lose their clarity and shine. This is where The Clean
+  Network comes in. "
+metaKeywords: commercial window cleaning, london
 title: Window Cleaning Services
 description: We understand that clean windows are more than just an aesthetic
   choice - they create a brighter, more positive environment that enhances
