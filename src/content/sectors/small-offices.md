@@ -1,4 +1,8 @@
 ---
+metaTitle: Small Office Cleaning Services in London - The Clean Network
+metaDescription: The Clean Network is your partner in maintaining an immaculate,
+  healthy, and productive small office environment in London.
+metaKeywords: small offices, cleaning services, london
 title: Small Office Cleaning
 description: The Clean Network is your partner in maintaining an immaculate,
   healthy, and productive small office environment in London. We understand that
