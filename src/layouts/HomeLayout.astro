@@ -4,7 +4,7 @@ const { title, description, keywords } = Astro.props;
 import "../styles/global.css";
 
 import BaseHead from "../components/BaseHead.astro";
-import BodyGTM from "../components/BodyGTM.astro";
+// import BodyGTM from "../components/BodyGTM.astro";
 
 import { Schema } from "astro-seo-schema"
 
@@ -18,7 +18,7 @@ const currentURL = new URL(Astro.request.url)
 		<!-- <script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> -->
 	</head>
 	<body>
-        <BodyGTM/>
+        <!-- <BodyGTM/> -->
 		
 		<slot />
 
