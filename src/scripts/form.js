@@ -21,12 +21,12 @@ function success() {
     
     submitBt.innerHTML = "Submitted successfully. Thank you!"
 
-    submitBt.classList.add('submited')
+    submitBt.classList.add('submitted')
 
     setTimeout(() => {
         submitBt.innerHTML = "Submit again"
   
-      submitBt.classList.remove('submited')
+      submitBt.classList.remove('submitted')
     }, 6000);
 }
   
