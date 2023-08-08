@@ -19,20 +19,12 @@ const docLanguage = document.documentElement.lang
 
 function success() {
     
-    if(docLanguage == 'en') {
-        submitBt.innerHTML = "Submitted successfully. Thank you!"
-    } else if(docLanguage == 'uk') {
-        submitBt.innerHTML = "Надіслано успішно. Дякую тобі!"
-    }
+    submitBt.innerHTML = "Submitted successfully. Thank you!"
 
     submitBt.classList.add('submited')
 
     setTimeout(() => {
-      if(docLanguage == 'en') {
-          submitBt.innerHTML = "Send again"
-      } else if(docLanguage == 'uk') {
-          submitBt.innerHTML = "відправити знову"
-      }
+        submitBt.innerHTML = "Submit again"
   
       submitBt.classList.remove('submited')
     }, 6000);
