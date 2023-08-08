@@ -144,7 +144,7 @@
         pointer-events: none;
     }
 
-    body form button[type='submit'].submited {
+    body form button[type='submit'].submitted {
         background-color: var(--light-a);
         color: var(--highlight);
         font-weight: 600;

@@ -213,3 +213,71 @@ export const FOOTER_DESCRIPTION = "Our ethos is to provide high standards of cle
 
 
 
+// PRIVACY POLICY
+
+    // META
+    
+export const PRIVACY_TITLE = 'Privacy Policy - The Clean Network'
+
+export const PRIVACY_DESCRIPTION = 'This policy relates to the processing of personal data as undertaken by The Clean Network, the trading name of The Clean Network Limited.'
+
+export const PRIVACY_KEYWORDS = "Privacy Policy, Clean Network"
+
+
+
+    // CONTENT
+
+export const PRIVACY_H1 = "Privacy Policy"
+
+export const PRIVACY_TEXT = `
+<p><b>The Clean Network</b> is a registered business no: <b>09308063</b> registered office <b>12 Hatherley Road, Sidcup, Kent, DA14 4DT</b></p>
+
+<p>This privacy policy sets out how The Clean Network Limited uses and protects any personal information.</p>
+
+<p>We are committed to ensuring that your privacy is protected and that we collect personal information fairly and transparently. Should we ask you to provide certain information by which you can be identified, then you can be assured that will only be using it in accordance with this privacy statement. We may change policy from time to time and will update this policy accordingly.</p>
+
+<h2>What information is collected?</h2>
+
+<p>We may collect the following information:</p>
+
+<p>Information relating to your position in your company, for example your job title, place of work and role</p>
+
+<p>If you are a company director, we may also process data relating to your directorship that is in the public domain</p>
+
+<p>If you make an enquiry about our products or services whether via our website, telephone or email we will collect information about you in order to respond to your enquiry</p>
+
+<h2>Contact information including email address</h2>
+
+<p>Demographic information such as postcode, preferences and interests</p>
+<p>Other information relevant to your employment with and/or relationship with All Square Limited.</p>
+
+<h2>The information we collect allows us to:</h2>
+
+<p>Communicate effectively with you when responding to enquiries
+Provide you with information on other products and services if you choose to receive such information</p>
+
+<p>Provide our services to you based on accurate information</p>
+<p>Maintain accurate and concise internal records</p>
+<p>Comply with HR, Financial and legal requirements</p>
+<p>For All Square Limited employees, we may periodically send important information that may affect your day to day job and other company matters and announcements.</p>
+
+<h2>How we use cookies</h2>
+
+<p>A cookie is a small file which asks permission to be placed on your computer’s hard drive. Once you agree, the file is added, and the cookie helps analyse web traffic or lets you know when you visit a particular site. Cookies allow web applications to respond to you as an individual. The web application can tailor its operations to your needs, likes and dislikes by gathering and remembering information about your preferences.</p>
+
+<p>We use traffic log cookies to identify which pages are being used. This helps us analyse data about webpage traffic and improve our website in order to tailor it to customer needs. We only use this information for statistical analysis purposes and then the data is removed from the system.</p>
+
+<p>Overall, cookies help us provide you with a better website by enabling us to monitor which pages you find useful and which you do not. A cookie in no way gives us access to your computer or any information about you, other than the data you choose to share with us.</p>
+
+<p>You can choose to accept or decline cookies. Most web browsers automatically accept cookies, but you can usually modify your browser setting to decline cookies if you prefer. This may prevent you from taking full advantage of the website.</p>
+
+<h2>Disclosing your information</h2>
+
+<p>In line with <b>GDPR Article 6(1)(c)</b>, we may pass on your personal information and exchange any of your details if we have a legal obligation to do so, or in order to enforce or apply our contract terms and conditions or other agreements.</p>
+
+<h2>Controlling your personal information</h2>
+
+<p>You may request details of personal information which we hold about you under the General Data Protection Regulation (GDPR) and ask. If you would like a copy of the information held on you please write to <b>The Clean Network Limited, Floor 3, 6-8 Bonhill Street London EC2A 4BX</b>.</p>
+
+<p>If you believe that any information we are holding on you is incorrect or incomplete, please write to or email us as soon as possible at office@cleannetwork.co.uk. We will promptly correct any information found to be incorrect.</p>
+`
