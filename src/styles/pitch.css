@@ -209,6 +209,7 @@ a.down span svg {
     width: calc(var(--pitch-width) + ((100% - var(--pitch-width)) / 2));
     margin-left: auto;
     padding-inline: 1rem 4rem;
+    padding-block: clamp(2rem, 12vw, 5rem);
     text-align: right;
     box-sizing: border-box;
     min-height: clamp(10rem, 55vmax, 60rem);
