@@ -218,7 +218,6 @@ a.down span svg {
     background-image: linear-gradient(215deg, #ffffffaa 0, transparent 50%), url(/LPs/pitch-deck/bg01.jpg);
     background-size: cover;
     background-position: center;
-    background-attachment: scroll, fixed;
     border-radius: clamp(1rem, 4vw, 15rem) 0 0 clamp(5rem, 15vw, 15rem);
     -webkit-border-radius: clamp(1rem, 4vw, 15rem) 0 0 clamp(5rem, 15vw, 15rem);
     -moz-border-radius: clamp(1rem, 4vw, 15rem) 0 0 clamp(5rem, 15vw, 15rem);
