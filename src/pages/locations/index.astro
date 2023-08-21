@@ -1,56 +1,44 @@
 ---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
 import '../../styles/subpages.css'
 
-import Header from "../../components/Header.astro";
-import BaseHead from "../../components/BaseHead.astro";
-import Footer from "../../components/Footer.astro";
 import ContactSection from "../../components/ContactSection.astro"
 import ContactBox from '../../components/ContactBox.astro';
-
-const { description } = Astro.props;
 
 import { LOCATIONS_TITLE, LOCATIONS_DESCRIPTION, LOCATIONS_KEYWORDS, LOCATIONS_H1, LOCATIONS_INTRO_DESCRIPTION } from "../../consts";
 ---
 
-<html lang="en">
-    <head>
-        <BaseHead title={LOCATIONS_TITLE} description={LOCATIONS_DESCRIPTION} keywords={LOCATIONS_KEYWORDS} />
-    </head>
 
-    <body>
-        <Header />
+<BaseLayout title={LOCATIONS_TITLE} description={LOCATIONS_DESCRIPTION} keywords={LOCATIONS_KEYWORDS} >
+    <main>
+        <div class="heading_ctnr default_bg">
+            <div class="content reveal">
+                <h1 set:html={LOCATIONS_H1}></h1>
 
-        <main>
-            <div class="heading_ctnr default_bg">
-                <div class="content reveal">
-                    <h1 set:html={LOCATIONS_H1}></h1>
-    
-                    <p set:html={LOCATIONS_INTRO_DESCRIPTION}></p>
-                    
-                    <!-- <div class="component_ctnr">
-                        <MapSwitch/>
-                    </div> -->
-                </div>
-            </div>
-
-            <div class="map">
-                <noscript>You need to enable JavaScript on your browser to see this content.</noscript>
-
-                <div class="contact_box_ctnr reveal">
-                    <ContactBox />
-                </div>
+                <p set:html={LOCATIONS_INTRO_DESCRIPTION}></p>
                 
-                <div class="iframe_ctnr">
-                    <iframe width="100%" height="100%" title="The Clean Network Location map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=EC1M%204NH+(The%20Clean%20Network)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-                </div>
+                <!-- <div class="component_ctnr">
+                    <MapSwitch/>
+                </div> -->
             </div>
+        </div>
 
-            <ContactSection />
-        </main>
+        <div class="map">
+            <noscript>You need to enable JavaScript on your browser to see this content.</noscript>
 
-        <Footer />
-    </body>
-</html>
+            <div class="contact_box_ctnr reveal">
+                <ContactBox />
+            </div>
+            
+            <div class="iframe_ctnr">
+                <iframe width="100%" height="100%" title="The Clean Network Location map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=EC1M%204NH+(The%20Clean%20Network)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            </div>
+        </div>
+
+        <ContactSection />
+    </main>
+</BaseLayout>
 
 <style>
     .map {

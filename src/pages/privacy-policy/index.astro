@@ -1,38 +1,21 @@
 ---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
 import '../../styles/subpages.css'
-
-import Header from "../../components/Header.astro";
-import BaseHead from "../../components/BaseHead.astro";
-import Footer from "../../components/Footer.astro";
-
-const { description } = Astro.props;
 
 import { PRIVACY_TITLE, PRIVACY_DESCRIPTION, PRIVACY_KEYWORDS, PRIVACY_TEXT, PRIVACY_H1 } from "../../consts";
 ---
 
-<html lang="en">
-    <head>
-        <BaseHead title={PRIVACY_TITLE} description={PRIVACY_DESCRIPTION} keywords={PRIVACY_KEYWORDS} />
-    </head>
+<BaseLayout title={PRIVACY_TITLE} description={PRIVACY_DESCRIPTION} keywords={PRIVACY_KEYWORDS}>
+    <main>
+        <div class="heading_ctnr default_bg">
+            <div class="content reveal">
+                <h1 set:html={PRIVACY_H1}></h1>
 
-    <body>
-        <Header />
-
-        <main>
-            <div class="heading_ctnr default_bg">
-                <div class="content reveal">
-                    <h1 set:html={PRIVACY_H1}></h1>
-    
-                    <p set:html={PRIVACY_DESCRIPTION}></p>
-                </div>
+                <p set:html={PRIVACY_DESCRIPTION}></p>
             </div>
+        </div>
 
-            <div class="txt_ctnr" set:html={PRIVACY_TEXT}></div>
-        </main>
-
-        <Footer />
-    </body>
-</html>
-
-<style>
-</style>
+        <div class="txt_ctnr" set:html={PRIVACY_TEXT}></div>
+    </main>
+</BaseLayout>

@@ -1,26 +1,15 @@
 ---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
 import '../../styles/subpages.css'
 
-import Header from "../../components/Header.astro";
-import BaseHead from "../../components/BaseHead.astro";
-import Footer from "../../components/Footer.astro";
 import ContactSection from "../../components/ContactSection.astro";
 
 import { SITE_DESCRIPTION, SITE_KEYWORDS, CONTACT_TITLE, CONTACT_DESCRIPTION, CONTACT_KEYWORDS } from "../../consts";
 ---
 
-<html lang="en">
-    <head>
-        <BaseHead title={CONTACT_TITLE} description={CONTACT_DESCRIPTION ? CONTACT_DESCRIPTION : SITE_DESCRIPTION} keywords={CONTACT_KEYWORDS ? CONTACT_KEYWORDS : SITE_KEYWORDS} />
-    </head>
-
-    <body>
-        <Header />
-
-        <main>
-            <ContactSection />
-        </main>
-
-        <Footer />
-    </body>
-</html>
+<BaseLayout title={CONTACT_TITLE} description={CONTACT_DESCRIPTION ? CONTACT_DESCRIPTION : SITE_DESCRIPTION} keywords={CONTACT_KEYWORDS ? CONTACT_KEYWORDS : SITE_KEYWORDS}>
+    <main>
+        <ContactSection />
+    </main>
+</BaseLayout>

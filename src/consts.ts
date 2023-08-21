@@ -161,7 +161,7 @@ export const JOBS_TITLE = 'Office Cleaning Jobs in London - The Clean Network'
 
 export const JOBS_DESCRIPTION = "Looking for office cleaning jobs in London? Join The Clean Network, London's leading commercial cleaning company. Explore our job opportunities near you. Apply now!"
 
-export const JOBS_KEYWORDS = "INSERT CONTENT"
+export const JOBS_KEYWORDS = "cleaning job offers, cleaning work, cleaning job in london"
 
 
     // CONTENT
@@ -188,9 +188,9 @@ export const JOBS_TEXT_BODY = `<p>If you're seeking a rewarding career in commer
 
 export const LOCATIONS_TITLE = 'Our Location · The Clean Network'
 
-export const LOCATIONS_DESCRIPTION = "INSERT CONTENT"
+export const LOCATIONS_DESCRIPTION = ""
 
-export const LOCATIONS_KEYWORDS = "INSERT CONTENT"
+export const LOCATIONS_KEYWORDS = ""
 
 
     // CONTENT

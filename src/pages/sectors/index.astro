@@ -18,11 +18,8 @@ const sectors = (await getCollection('sectors')).sort((a, b) => {
 
 const currentURL = new URL(Astro.request.url)
 
-import Header from "../../components/Header.astro";
-import BaseHead from "../../components/BaseHead.astro";
-import Footer from "../../components/Footer.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 import ContactSection from "../../components/ContactSection.astro"
-// import BodyGTM from "../../components/BodyGTM.astro";
 
 import "../../styles/subpages.css"
 import "../../styles/collections.css"
@@ -32,88 +29,75 @@ import { Schema } from "astro-seo-schema"
 import { SITE_KEYWORDS, SECTORS_TITLE, SECTORS_DESCRIPTION, SECTORS_KEYWORDS, SECTORS_H1, SECTORS_INTRO_DESCRIPTION } from "../../consts";
 ---
 
-<html lang="en">
-    <head>
-        <BaseHead title={SECTORS_TITLE}
-        description={SECTORS_DESCRIPTION}
-        keywords={SECTORS_KEYWORDS ? SECTORS_KEYWORDS : SITE_KEYWORDS} />
-    </head>
 
-    <body>
-        <!-- <BodyGTM/> -->
+<BaseLayout title={SECTORS_TITLE} description={SECTORS_DESCRIPTION} keywords={SECTORS_KEYWORDS ? SECTORS_KEYWORDS : SITE_KEYWORDS}>
+    <main>
+        <div class="ctnr">
+            <div class="heading_ctnr default_bg">
+                <div class="content reveal">
+                    <h1 set:html={SECTORS_H1}></h1>
 
-        <Header />
-
-        <main>
-            <div class="ctnr">
-                <div class="heading_ctnr default_bg">
-                    <div class="content reveal">
-                        <h1 set:html={SECTORS_H1}></h1>
-    
-                        <p set:html={SECTORS_INTRO_DESCRIPTION}></p>
-                    </div>
-                </div>
-                
-                <div class="division" id="indoor">
-                    <div class="flex">
-                        {
-                            sectors.map((sectors) => (
-                                <>
-                                <section class="panel reveal" id={(sectors.data.title).toLowerCase().replace(/\s+/g, '-')}>
-                                        <div class="ctnr">
-                                            <div class="content">
-                                                <h3>
-                                                    <a href={`/sectors/${sectors.slug}`} aria-label={`Read more about ${sectors.data.title}`}>
-                                                        {sectors.data.title}
-    
-                                                        <span class="arrow">
-                                                            <span></span>
-                                                        </span>
-                                                    </a>
-                                                </h3>
-    
-                                                <p class="description">{sectors.data.description}</p>
-
-                                                <a href="/contact/" class="main cta" aria-label="Get a free quote for our cleaning sectors">Get a free quote</a>
-                                            </div>
-                                            
-                                            <a href={`/sectors/${sectors.slug}`} class="image" aria-label={`Read more about ${sectors.data.title}`}  title={`Read more about ${sectors.data.title}`}>
-                                                <img src={sectors.data.image} loading="lazy" alt={`Photo of ${sectors.data.title} cleaning`}/>
-                                            </a>
-                                        </div>
-                                    </section>
-                                </>
-                            ))
-                        }
-                    </div>
+                    <p set:html={SECTORS_INTRO_DESCRIPTION}></p>
                 </div>
             </div>
-        </main>
+            
+            <div class="division" id="indoor">
+                <div class="flex">
+                    {
+                        sectors.map((sectors) => (
+                            <>
+                            <section class="panel reveal" id={(sectors.data.title).toLowerCase().replace(/\s+/g, '-')}>
+                                    <div class="ctnr">
+                                        <div class="content">
+                                            <h3>
+                                                <a href={`/sectors/${sectors.slug}`} aria-label={`Read more about ${sectors.data.title}`}>
+                                                    {sectors.data.title}
 
-        <ContactSection />
+                                                    <span class="arrow">
+                                                        <span></span>
+                                                    </span>
+                                                </a>
+                                            </h3>
 
-        <Footer />
+                                            <p class="description">{sectors.data.description}</p>
 
-        <Schema
-            item={{
-                "@context": "https://schema.org",
-                "@type": "LocalBusiness",
-                "name": "The Clean Network | Sectors",
-                "image": "/og/social-image.jpg",
-                "@id": currentURL,
-                "url": currentURL,
-                "telephone": [
-                    "+4402034110275"
-                ],
-                "address": {
-					"@type": "PostalAddress",
-					"streetAddress": "6-8 Knights Court",
-                    "postalCode": "EC1M 4NH",
-					"addressLocality": "London",
-					"addressRegion": "GB",
-					"addressCountry": "UK"
-                }  
-            }}
-        />
-    </body>
-</html>
+                                            <a href="/contact/" class="main cta" aria-label="Get a free quote for our cleaning sectors">Get a free quote</a>
+                                        </div>
+                                        
+                                        <a href={`/sectors/${sectors.slug}`} class="image" aria-label={`Read more about ${sectors.data.title}`}  title={`Read more about ${sectors.data.title}`}>
+                                            <img src={sectors.data.image} loading="lazy" alt={`Photo of ${sectors.data.title} cleaning`}/>
+                                        </a>
+                                    </div>
+                                </section>
+                            </>
+                        ))
+                    }
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <ContactSection />
+
+    <Schema
+        item={{
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "The Clean Network | Sectors",
+            "image": "/og/social-image.jpg",
+            "@id": currentURL,
+            "url": currentURL,
+            "telephone": [
+                "+4402034110275"
+            ],
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "6-8 Knights Court",
+                "postalCode": "EC1M 4NH",
+                "addressLocality": "London",
+                "addressRegion": "GB",
+                "addressCountry": "UK"
+            }  
+        }}
+    />
+</BaseLayout>

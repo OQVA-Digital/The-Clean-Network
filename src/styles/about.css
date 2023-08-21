@@ -1,8 +1,5 @@
 
 
-section > .ctnr {
-}
-
 section .content {
     padding: clamp(3rem,10vmin,8rem) 0 clamp(3rem,12vmin,8rem);
     margin-inline: auto;

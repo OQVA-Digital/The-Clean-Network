@@ -186,6 +186,7 @@ button:not([type="submit"]):focus-visible {
 
 hr {
     border:unset;
+    margin: unset;
 }
 
 noscript {
