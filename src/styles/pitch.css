@@ -452,9 +452,10 @@ ul.boxes li {
 }
 
 .clients .gallery img {
-    width: clamp(10rem, 50vw, 20rem);
-    max-height: clamp(10rem, 70vw, 11rem);
-    min-width: fit-content;
+    min-width: clamp(10rem,50vw,20rem);
+    max-height: clamp(10rem,70vw,11rem);
+    width: fit-content;
+    max-width: clamp(10rem,50vw,20rem);
 }
 
 .growth_plans {
