@@ -1,0 +1,4 @@
+/protected/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  Basic-Auth: TCN:L0nd0n
