@@ -1,425 +1,223 @@
 ---
-import Layout from "../layouts/HomeLayout.astro";
-// import MapSwitch from "../components/MapSwitch.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import ContactSection from "../components/ContactSection.astro"
-import ContactBox from "../components/ContactBox.astro";
-import "../styles/button-ctnr.css";
-import "../styles/home.css"
+import '../styles/main.css'
+import '../styles/contact-form.css'
 
-import { Schema } from "astro-seo-schema"
-
-import { getCollection } from "astro:content";
-
-// const services = await getCollection("services");
-// const sectors = await getCollection("sectors");
-const testimonials = await getCollection("testimonials");
-
-import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_H1, INTRO_H2, TEXT_BLOCK, SERVICES_SECTION_DESCRIPTION, SECTORS_SECTION_DESCRIPTION, LOCATIONS_SECTION_DESCRIPTION, FULL_ADDRESS, LONDON_PHONE_NO, LONDON_PHONE_NO_HREF } from "../consts";
-
-const benefits = (await getCollection('benefits')).sort((a, b) => {
-    // Check if both items have an 'order' property
-    if (a.data.order !== undefined && b.data.order !== undefined) {
-        return a.data.order - b.data.order; // Sort by 'order' if both have it
-    } else if (a.data.order !== undefined) {
-        return -1; // 'a' has 'order', but 'b' doesn't, so 'a' comes first
-    } else if (b.data.order !== undefined) {
-        return 1; // 'b' has 'order', but 'a' doesn't, so 'b' comes first
-    } else {
-        // Both 'a' and 'b' don't have 'order', fallback to sorting by 'title'
-        return a.data.title.localeCompare(b.data.title);
-    }
-});
+import Layout from '../layouts/Layout.astro';
+import ContactForm from '../components/ContactForm.astro';
 ---
 
-<Layout title={SITE_TITLE} description={SITE_DESCRIPTION}  keywords={SITE_KEYWORDS}>
+<Layout>
+    <script>
+        import '../scripts/nav_menu.js'
+    </script>
 
-	<Header />
-	<main>
-		<section class="intro default_bg">
-			<div class="ctnr">
-				<div class="content reveal">
-					<h1 set:html={SITE_H1}></h1>
+    <section class="sec1">
 
-					<h2 set:html={INTRO_H2}></h2>
+        <header>
+            <picture class="logo" loading="lazy">
+                <source srcset="/logo/logo.webp" type="image/webp" width="224" height="70">
+                <source srcset="/logo/logo.png" type="image/png" width="224" height="70">
+                <img src="/logo/logo.png" alt="Globe" draggable="false" width="224" height="70">
+            </picture>
 
-					<div class="bt_ctnr flex">
-						<div class="ctas flex">
-							<a href="/services/" class="know_our_services" aria-label="Find out more about our services">Find out more</a>
-					
-							<a href="#contact" class="cta" aria-label="Get a quote">Get a Quote</a>
-						</div>
-					
-						<div class="flex column">
-							<a href={`tel:${LONDON_PHONE_NO_HREF}`} aria-label="Call us"><span>London:</span> {LONDON_PHONE_NO}</a>
-					
-							<!-- <a href="tel:+44-0121-3927529"><span>Birmingham:</span> 0121 3927529</a> -->
-						</div>
-					</div>
-				</div>
+            <button class="hambt" aria-label="Open menu button">
+                <div></div>
+            </button>
 
-				<div class="showcase reveal">
-					<picture>
-						<source media="(min-width:850px)" srcset="/images/office01.webp">
-						<source srcset="/images/office01-min.webp">
-						<img src="/images/office01.jpg" alt="The Clean Network logo" width="414" height="300">
-					</picture>
-				</div>
+            <div class="exit_bg"></div>
+    
+            <menu>
+                <a href="/">HOME</a>
+                <button class="contact_bt" type="button" aria-label="Contact button">CONTACT</button>
+                <a href="/portfolio/">PORTFOLIO</a>
+            </menu>
+        </header>
+    </section>
 
-				<a href="#scroll" class="scroll_bt" title="Scroll for more" aria-label="Click to scroll for more"><span></span></a>
-			</div>
-		</section>
 
-		<section class="benefits">
-			<div class="ctnr">
-				<h3>Why The Clean Network</h3>
+    <section class="sec2">
+        <div class="ctnr">
+            <div class="globe_div">
+                <div class="globe01">
+                    <picture class="rotating" loading="lazy">
+                        <source srcset="/home/globe01_words.webp" type="image/webp" width="331" height="331">
+                        <source srcset="/home/globe01_words.png" type="image/png" width="331" height="331">
+                        <img src="/home/globe01_words.png" alt="Globe" draggable="false" width="331" height="331">
+                    </picture>
 
-				<p>{benefits.length} reasons to choose <b>The Clean Network</b> cleaning services:</p>
+                    <picture loading="lazy">
+                        <source srcset="/home/globe01.webp" type="image/webp" width="331" height="331">
+                        <source srcset="/home/globe01.png" type="image/png" width="331" height="331">
+                        <img src="/home/globe01.png" alt="Globe" draggable="false" width="331" height="331">
+                    </picture>
+                </div>
+                <!-- <img class="brand" src="/home/brand.png" alt="BRAND" draggable="false"> -->
 
-				<div class="bullets">
-					{
-						benefits.map((benefits) => (
-							<>
-								<div class="box reveal">
-									{benefits.data.icon == "" ? "" : (<img src={benefits.data.icon} class="icon" alt={`${(benefits.data.title).replace( /(<([^>]+)>)/ig, '')} icon`}/>)}
-									
-									<h4 set:html={benefits.data.title}class="title"></h4>
-								</div>
-							</>
-						))
-					}
-				</div>
-			</div>
-				
-			<a href="#contact" class="main cta" aria-label="Get a free quote">Get a Free Quote</a>
-		</section>
+                <picture class="brand" loading="lazy">
+                    <source srcset="/home/brand.webp" type="image/webp" width="352" height="58">
+                    <source srcset="/home/brand.png" type="image/png" width="352" height="58">
+                    <img src="/home/brand.png" alt="BRAND" draggable="false" width="352" height="58">
+                </picture>
+            </div>
 
-		<section class="clients reveal">
-			<div class="ctnr">
-				<h3>Our clients include...</h3>
+            <h1>We're a <b>boutique digital agency</b> that believes in weaving meaning into everything we create; we dive into the depth of your brand to <b>empower individuals with tools for their own identity journey</b>.</h1>
 
-				<div class="content">
-					<img src="/client-logos/apptio.png" alt="Apptio logo" width="152" height="80"/>
+            <p><b>Our philosophy?</b> Each organization's purpose is to enable its audience to discover, express, and celebrate their unique selves.</p>
 
-					<img src="/client-logos/outreach.png" alt="Outreach logo" width="152" height="80"/>
+            <p>Your brand isn't just your product, service, or logo — it's a story, a shared language, a tribe. We help you tell that story and foster that tribe. Let's create something meaningful together.</p>
 
-					<picture>
-						<source srcset="/client-logos/the-salvation-army.webp">
-						<img src="/client-logos/the-salvation-army.png" alt="The Salvation Army logo" width="72" height="80">
-					</picture>
+            <!-- <h1>We believe that the key to a <b>successful content strategy</b> is simple: make it <b>personal</b>, make it <b>unique</b>, and make it <b>entertaining</b>.</h1>
 
-					<img src="/client-logos/spire-healthcare.png" alt="Spire Healthcare logo" width="152" height="80"/>
+            <p>We don't just make videos, <b>we craft stories that inspire</b>. We don't just build websites, we create digital experiences that captivate. And we don't just manage social media, we <b>create communities that engage</b>.</p>
 
-					<picture>
-						<source srcset="/client-logos/xero.webp">
-						<img src="/client-logos/xero.png" alt="Xero logo" width="80" height="80">
-					</picture>
-				</div>
-			</div>
-		</section>
+            <p><b>Our mission is to help you stand out from the noise and make a real impact with your content.</b> Whether you're a large business looking to win the content game, an entrepreneur looking for digital services, or an operator looking to scale your existing business, we're here to help you find the brand that exist in what you already do.</p> -->
 
-		<div class="panel_ctnr reveal" id="scroll">
-			<section class="services panel">
-				<div class="ctnr">
-					<div class="cta_ctnr">
-						<a href="/services/" class="cta" aria-label="View all services"><span></span> All services</a>
-					</div>
+            <p><b>So, what are you waiting for? <button type="button" aria-label="Contact button" class="contact_bt">Let's create an unforgettable brand.</button></b></p>
 
-					<div class="content">
-						<a href="/services/" aria-label="View all services"><h3>Services</h3></a>
-	
-						<p set:html={SERVICES_SECTION_DESCRIPTION}></p>
-	
-						<!-- <hr>
-	
-						<div class="subsets">
-							<div>
-								<a href="/services/#indoor" class="heading indoor"
-									>Indoor Cleaning <span class="icon"></span></a
-								>
-	
-								{
-									services.map((services) => (
-										<>
-											{services.data.type === "indoor" ? (
-												<a
-													href={`/services/${services.slug}/`}
-												>
-													{services.data.title}
-												</a>
-											) : null}
-										</>
-									))
-								}
-							</div>
-	
-							<hr />
-	
-							<div>
-								<a href="/services/#external" class="heading outdoor"
-									>External Cleaning <span class="icon"></span></a
-								>
-	
-								{
-									services.map((services) => (
-										<>
-											{services.data.type === "external" ? (
-												<a
-													href={`/services/${services.slug}/`}
-												>
-													{services.data.title}
-												</a>
-											) : null}
-										</>
-									))
-								}
-							</div>
-						</div> -->
-					</div>
-	
-					<a href="/services/" aria-label="View all services" class="image">
-						<picture>
-							<source media="(min-width:850px)" srcset="/images/office02.webp">
-							<source srcset="/images/office02-min.webp">
-							<img src="/images/office02.jpg" alt="Office Photo" width="414" height="300">
-						</picture>
-					</a>
-				</div>
-			</section>
-	
-			<section class="sectors panel reveal">
-				<div class="ctnr">
-					<div class="cta_ctnr">
-						<a href="/sectors/" class="cta" aria-label="View all sectors"><span></span> All sectors</a>
-					</div>
+            <!-- <h1><b>We believe</b> the sole differentiating factor in a digital world is <strong>brand</strong>.</h1>
 
-					<div class="content">
-						<a href="/sectors/" aria-label="View all sectors"><h3>Sectors</h3></a>
-	
-						<p set:html={SECTORS_SECTION_DESCRIPTION}></p>
-	
-						<!-- <hr>
-	
-						<div class="subsets">
-							<div>
-								{
-									sectors.map((sectors) => (
-										<>
-											<a
-												href={`/sectors/${sectors.slug}/`}
-											>
-												{sectors.data.title}
-											</a>
-										</>
-									))
-								}
-							</div>
-						</div> -->
-					</div>
-	
-					<a href="/sectors/" aria-label="View all sectors" class="image">
-						<picture>
-							<source media="(min-width:850px)" srcset="/images/office03.webp">
-							<source srcset="/images/office03-min.webp">
-							<img src="/images/office03.jpg" alt="Office Photo" width="415" height="300">
-						</picture>
-					</a>
-				</div>
-			</section>
+            <p>OQVA is a full house communication agency with the sole objective to help you and your business discover and amplify the brand already present within the culture of what you do.</p>
 
-			<section class="text reveal">
-				<h3>Daily Office Cleaning Services London</h3> 
+            <p>Our fundamental drive is to populate the world with original, inspiring, and culturally significant ideas. </p> -->
 
-				<p><strong>Office cleaning</strong> is now more important than ever due to the recent pandemic. We want your employees to feel at ease about coming into the workplace.</p>
-				
-				<p><strong>Our daily office cleaning services are provided 7 days a week</strong> – and take place inside or outside of office hours as you require.</p>
-				
-				<p>You can also choose to include <b>weekly, monthly or seasonal tasks</b> from cleaning glass partitions to clearing office kitchen fridges.</p>
-				
-				<p>We also understand that no two clients are the same, <b>we tailor our office cleaning contracts accordingly.</b></p>
-				
-				<p>Whether it’s a <b>large office</b> in London which requires a large cleaning contract with many hours daily or a <b>smaller office</b> in South West London which only needs attention for a few hours a week, <b>we create and deliver a cost-effective contract to suit you and your team.</b></p>
-				
-				<a href="#contact" class="main cta" aria-label="Get a free quote">Get a Free Quote</a>
-			</section>
-		</div>
+            <picture class="globe02" loading="lazy">
+                <source srcset="/home/globe02-mobile.webp" type="image/webp" width="331" height="380" media="(max-width:600px)">
+                <source srcset="/home/globe02-desktop.webp" type="image/webp" width="448" height="514" media="(min-width:600px)">
 
-		<section class="locations panel reveal" id="locations">
-			<div class="ctnr">
-				<div class="content">
-					<h3>Location</h3>
+                <source srcset="/home/globe02-mobile.png" type="image/png" width="331" height="380" media="(max-width:600px)">
+                <source srcset="/home/globe02-desktop.png" type="image/png" width="448" height="514" media="(min-width:600px)">
 
-					<p set:html={LOCATIONS_SECTION_DESCRIPTION}></p>
+                <img src="/home/globe02.png" alt="Globe 2" draggable="false" width="331" height="380">
+            </picture>
+        </div>
+    </section>
 
-					<a href="/locations/" class="cta" aria-label="See our location"><span></span> Our Location</a>
-				</div>
+    <section class="sec3">
+        <div class="ctnr">
+            <h2>We believe that <b>diverse culture</b> is a requirement for innovation and a <b>better world</b>.</h2>
 
-				<div class="image reveal">
-					<picture>
-						<source media="(min-width:850px)" srcset="/images/customer01.webp">
-						<source srcset="/images/customer01-min.webp">
-						<img src="/images/customer01.jpg" alt="Customer Photo" width="415" height="300">
-					</picture>
-				</div>
-			</div>
-		</section>
+            <div class="txt">
+                <p>At OQVA, we’re not your typical digital agency, we embrace a unique philosophy: every organization exists to provide the individual tools to build their own identity. We design experiences that resonate on a personal level, triggering emotions and sparking conversations. From cutting-edge websites to engaging digital content, our creations are born from a deep understanding of your audience’s deepest desires and aspirations.</p>
+    
+                <p>With us, you’re getting more than a service — you’re entering a partnership. Together, we’ll build a brand that goes beyond selling, to tell a story, spark a conversation, and foster a community.</p>
+            </div>
+        </div>
+    </section>
 
-		<section class="testimonials">
-			<script>
-				import "../scripts/tiny-slider.js"
-				import "../styles/tiny-slider.css"
-			</script>
+    <section class="sec4">
 
-			<div class="ctnr">
-				<div class="flex center">
-					<h3>What our clients have been saying</h3>
+        <picture class="car_marketing" loading="lazy">
+            <source srcset="/home/car-mobile.webp" type="image/webp" width="373" height="230" media="(max-width:600px)">
+            <source srcset="/home/car-desktop.webp" type="image/webp" width="990" height="611" media="(min-width:600px)">
+            <source srcset="/home/car-mobile.png" type="image/png" width="373" height="230" media="(max-width:600px)">
+            <source srcset="/home/car-desktop.png" type="image/png" width="990" height="611" media="(min-width:600px)">
+            <img src="/home/car.png" alt="car composition" draggable="false" width="373" height="230">
+        </picture>
 
-					<div class="quotes"></div>
-				</div>
+        <h2>We specialise in crafting digital experiences that empower and resonate. Our services include:</h2>
 
-				<div class="slider">
-					{
-						testimonials.map((testimonials) => (
-							<>
-								<div class="box">
-									<div class="ctnr">
-										<div class="profile">
-											<img src={testimonials.data.avatar} alt={`${testimonials.data.name}'s avatar'`}/>
+        <div class="services">
+            <article>
+                <h3>Brand Strategy</h3>
+                <p>We delve into the soul of your brand to build strategies that empower your audience, fostering a sense of belonging and collective aspiration.</p>
+            </article>
+            
+            <article>
+                <h3>Website Design & Development</h3>
+                <p>More than creating visually stunning websites, we design digital platforms that are immersive, interactive, and intimately connected to your brand’s essence.</p>
+            </article>
+            
+            <article>
+                <h3>Digital Content Creation</h3>
+                <p>Our content isn’t just about conveying information — it's about sparking connections, conversations, and community.</p>
+            </article>
+        </div>
 
-											<div class="flex">
-												<p class="name">{testimonials.data.name}</p>
+        <div class="contact">
+            <p>Ready to create something meaningful? We’re excited to meet you. Let’s explore the potential of your brand together, uncovering the core essence that will resonate with your audience. Reach out today, and let’s start crafting your unique story.</p>
 
-												<p class="description">{testimonials.data.description}</p>
-											</div>
-										</div>
-										
-										<div class="content">
-											<p class="heading">{testimonials.data.heading}</p>
-											
-											<blockquote>
-												{testimonials.data.paragraph01 == "" ? null : (<p set:html={testimonials.data.paragraph01}></p>)}
-												
-												{testimonials.data.paragraph02 == "" ? null : (<p set:html={testimonials.data.paragraph02}></p>)}
-												
-												{testimonials.data.paragraph03 == "" ? null : (<p set:html={testimonials.data.paragraph03}></p>)}
-											</blockquote>
+            <button class="contact_bt" type="button" aria-label="Contact button">Contact us</button>
+        </div>
 
-											<div class="gradient"></div>
-										</div>
-									</div>
-								</div>
-							</>
-						))
-					}
-				</div>
-			</div>
+        <!-- <h3 class="services">We provide a full range of services, including:
+        </h3> -->
 
-			<Schema
-				item={
-					{
-						"@context": "https://schema.org/",
-						"@type": "Review",
-						"itemReviewed": {
-						"@type": "LocalBusiness",
-						"image": "/og/social-image.jpg",
-						"name": "The Clean Network",
-						"telephone": "+4402034110275",
-						"address" :{
-							"@type": "PostalAddress",
-							"streetAddress": "6-8 Knights Court",
-							"addressLocality": "London",
-							"postalCode": "EC1M 4NH",
-							"addressCountry": "UK"
-							}
-						},
-						"author": {
-							"@type": "Organization",
-							"name": "The Clean Network"
-						},
-						"publisher": {
-						"@type": "Organization",
-						"name": "The Clean Network"
-						}
-				}}
-			/>
-		</section>
+        <!-- <span>creative/cultural positioning - narrative crafting - PR - organic - paid marketing - high end content creation - full stack digital - community management - web3 (tokenisation & NFTs)</span> -->
+    
+        <!-- <span>Content strategy development · Creative consultation · Research and audience analysis · Brand image and messaging consulting ·  Pre-production planning and script writing · Video production · Post-production and delivery of Content As A Service · Library of elements and assets for exponential reach · Social media content creation and management · Website and digital asset creation · Content optimisation and analytics · Ongoing content creation and management.</span> -->
+    </section>
 
-		<!-- <section class="rates">
-			<div class="ctnr">
-				<h3>Service Rates</h3>
+    <section class="form_sec">
 
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis ad sed quod delectus quasi optio, earum quidem explicabo?</p>
+    </section>
 
-				<a href="#" class="cta">Simulate with our <b>Rate Calculator</b></a>
-			</div>
-		</section> -->
+    <footer>
+        Made by 
+        <picture loading="lazy">
+            <source srcset="/logo/logo.webp" type="image/webp" width="96" height="30">
+            <source srcset="/logo/logo.png" type="image/png" width="96" height="30">
+            <img src="/logo/logo.png" alt="Logo" draggable="false" width="96" height="30">
+        </picture>
+    </footer>
 
-		<ContactSection />
-
-		<section class="find_us panel">
-			<div class="ctnr">
-				<div class="content reveal">
-					<h3>Find us</h3>
-
-					<p>You'll find us right at the heart of the city, ready to serve the vibrant London community. Our location:</p>
-
-					<div class="flex column">
-						<address><strong>London</strong>: {FULL_ADDRESS}</address>
-	
-						<!-- <address><strong>Birmingham</strong>: 37 Regents Place, Birmingham, B3 1UG</address> -->
-					</div>
-
-					<hr>
-
-					<ContactBox />
-				</div>
-
-				<div class="map reveal">
-					<!-- <MapSwitch/> -->
-
-					<div class="iframe_ctnr">
-						<noscript>You need to enable JavaScript on your browser to see this content.</noscript>
-
-						<iframe width="100%" height="100%" title="The Clean Network Locations map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" loading="lazy" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=EC1M%204NH+(The%20Clean%20Network)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-					</div>
-				</div>
-			</div>
-		</section>
-	</main>
-	<Footer />
+    <ContactForm/>
 </Layout>
 
-<script>
-	const queryString = window.location.search;
-	const urlParams = new URLSearchParams(queryString);
 
-	if(urlParams.get('redirected') === 'true') {
-		const redirWarning = document.createElement('aside')
-		redirWarning.classList.add('redir_warning')
-		redirWarning.innerHTML = "<p><span>Page not found!</span> You have been redirected to the home page.</p><button type='button' aria-label='close warning'><?xml version='1.0' encoding='UTF-8'?><svg id='Camada_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 23.21 23.21'><defs><style>.cls-1{fill:none;stroke:#2f363c;stroke-miterlimit:10;stroke-width:5px;}</style></defs><line class='cls-1' x1='2.12' y1='2.12' x2='21.09' y2='21.09'/><line class='cls-1' x1='21.09' y1='2.12' x2='2.12' y2='21.09'/></svg></button>"
-
-		document.body.appendChild(redirWarning)
-
-		setTimeout(() => {
-			redirWarning.classList.add('show')
-		}, 300);
-
-		document.querySelector('.redir_warning button').addEventListener('click', function() {
-			redirWarning.classList.remove('show')
-			clearTimeout(autoHideBt)
-
-			setTimeout(() => {
-				document.querySelector('.redir_warning').remove()
-			}, 1400);
-		})
-
-		let autoHideBt = setTimeout(() => {
-			redirWarning.classList.remove('show')
-
-			setTimeout(() => {
-				document.querySelector('.redir_warning').remove()
-			}, 1400);
-		}, 6000);
+<style>
+	body {
+		font-family: 'Tablon', sans-serif;
+		overflow-x: hidden;
 	}
-</script>
+
+	body .logo {
+		margin: 0 auto;
+		display: block;
+		width: clamp(12rem, 60vw, 14rem);
+		object-fit: contain;
+	}
+
+	h1 {
+		text-transform: uppercase;
+		font-weight: 600;
+		width: var(--width2);
+		margin: 0 auto;
+		font-size: clamp(1.1rem, 5.7vmin, 2.4rem);
+		letter-spacing: 0.1rem;
+	}
+
+	footer {
+		background-color: var(--light);
+		color: var(--dark);
+		font-weight: 600;
+		display: flex;
+		justify-content: center;
+		gap: 0.9rem;
+		padding: 1rem 0;
+		align-items: center;
+		letter-spacing: 3px;
+	}
+
+	footer picture {
+		width: 6rem;
+	}
+
+
+
+	@media (min-width:700px) {
+
+		.logo {
+			margin: 0;
+		}
+
+		h1 {
+			margin: 0;
+			max-width: 50rem;
+		}
+
+		footer {
+			padding: 0.5rem 0;
+		}
+	}
+
+</style>

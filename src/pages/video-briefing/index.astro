@@ -1,0 +1,162 @@
+---
+    import Layout from '../../layouts/Layout.astro'
+
+    import '../../styles/main.css'
+    import '../../styles/form-page.css'
+    import '../../styles/global.css'
+---
+
+<Layout title='Video Briefing - OQVA Digital'>
+    <script>
+        import '../../scripts/form-page-submit.js'
+    </script>
+
+    <section class="intro_sec">
+        <div class="container">
+            <div>
+                <img class="logo" src="/logo/logo-w.svg" alt="logo OQVA" draggable="false" oncontextmenu="return false">
+                <h1>This document will aid us in developing a clear understanding of your vision for this video.</h1>
+                <a href="#form">Let's start</a>
+            </div>
+        </div>
+        <div class="graphic01"></div>
+    </section>
+
+    <section class="form_section">
+
+        <div class="graphic02"></div>
+        <div class="graphic03"></div>
+        <div class="graphic04"></div>
+        <div class="graphic05"></div>
+
+        <form name="video-briefing-form" method="POST" data-netlify="true" id="form">
+            <div class="primary_inputs">
+                <div class="row_inputs">
+                    <p>
+                        <label>
+                            <input value="" oninput="this.setAttribute('value', this.value)" type="text" name="first-name" id="first-name-id" required/>
+    
+                            <span class="over_label">First name</span>
+                        </label>
+                    </p>
+    
+                    <p>
+                        <label>
+                            <input value="" type="text" name="surname" required/>
+    
+                            <span class="over_label">Surname</span>
+                        </label>
+                    </p>
+                </div>
+
+                <p>
+                    <label>
+                        <input value="" type="text" name="company-name" required/>
+
+                        <span class="over_label">Company</span>
+                    </label>
+                </p>
+
+                <div class="row_inputs">
+                    <p>
+                        <label>
+                            <input value="" type="email" name="contact-email" required/>
+
+                            <span class="over_label">E-mail</span>
+                        </label>
+                    </p>
+
+                    <p>
+                        <label>
+                            <input value="" type="tel" name="contact-phone" required/>
+
+                            <span class="over_label">Phone no.</span>
+                        </label>
+                    </p>
+                </div>
+
+                <script>
+                    const primaryInputs = document.querySelectorAll('.primary_inputs input')
+
+                    for(let i=0;i<primaryInputs.length;i++) {
+                        primaryInputs[i].addEventListener('input', function(event) {
+                            event.target.setAttribute('value', event.target.value)
+                        })
+                    }
+                </script>
+            </div>
+
+            <span class="divider_info">Don't skimp on information. Fill in the columns and press 'submit' when you're sure.</span>
+
+            <div class="input_boxes_ctnr">
+                <p>
+                    <label>
+                        <span><b>1.</b> What are you using this content for?</span>
+                        
+                        <textarea name="01-what-are-you-using-this-content-for" spellcheck="false" required></textarea>
+                    </label>
+                </p>
+                
+                <p>
+                    <label>
+                        <span><b>2.</b> What is important to you from this content?</span> 
+                        
+                        <textarea name="02-what-is-important-to-you-from-this-content" spellcheck="false" required></textarea>
+                    </label>
+                </p>
+                
+                <p>
+                    <label>
+                        <span><b>3.</b> What are you looking to achieve with this content?</span> 
+                        
+                        <textarea name="03-what-are-you-looking-to-achieve-with-this-content" spellcheck="false" required></textarea>
+                    </label>
+                </p>
+                
+                <p>
+                    <label>
+                        <span><b>4.</b> What is the message you want to relay to the audience?</span> 
+                        
+                        <textarea name="04-what-is-the-message-you-want-to-relay-to-the-audience" spellcheck="false" required></textarea>
+                    </label>
+                </p>
+                
+                <p>
+                    <label>
+                        <span><b>5.</b> What is the one action you want the audience to take from the video?</span> 
+                        
+                        <textarea name="05-what-is-the-one-action-you-want-the-audience-to-take-from-the-video" spellcheck="false" required></textarea>
+                    </label>
+                </p>
+                
+                <p>
+                    <label>
+                        <span><b>6.</b> What platforms will you be using this video for?</span> 
+                        
+                        <textarea name="06-what-platforms-will-you-be-using-this-video-for" spellcheck="false" required></textarea>
+                    </label>
+                </p>
+                
+                <p>
+                    <label>
+                        <span><b>7.</b> How long do you want the video to be?</span> 
+                        
+                        <textarea name="07-how-long-do-you-want-the-video-to-be" spellcheck="false" required></textarea>
+                    </label>
+                </p>
+            </div>
+
+            <p>
+              <button type="submit">Submit</button>
+            </p>
+          </form>
+    </section>
+        
+    <footer>
+        <p>Thanks so much, feel free to get in touch to clarify any of the questions you have yourself — we’re happy to work through this together!</p>
+  
+        <a href="https://oqva.digital" target="_blank">OQVA.DIGITAL</a>
+  
+        <a href="mailto:contact@oqva.digital">contact@oqva.digital</a>
+    </footer>
+</Layout>

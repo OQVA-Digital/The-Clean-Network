@@ -1,0 +1,29 @@
+---
+    import Layout from "../../../layouts/Layout.astro";
+---
+
+<Layout>
+    <div class="ctnr">
+        <video src="/LPs/reels/email-preview/OQVA_Reels_Restaurants_01.mov" poster="/LPs/reels/email-preview/poster.jpg" playsinline controls loop></video>
+    </div>
+</Layout>
+
+<style>
+    .ctnr {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: black;
+    }
+
+    video {
+        background-color: #333;
+    }
+
+    @media screen and (min-width:900px) {
+        video {
+            height: 62vh;
+        }
+    }
+</style>

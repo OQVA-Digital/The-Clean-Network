@@ -1,0 +1,177 @@
+---
+import Layout from '../../layouts/Layout.astro'
+
+import '../../styles/identity.css'
+import '../../styles/contact-form.css'
+
+import ContactForm from '../../components/ContactForm.astro'
+---
+
+<Layout title='Identity'>
+
+    <div class="cursor">
+        <div></div>
+    </div>
+
+    <section class="bgimg sec01">
+        <p class="reveal">Imagine</p>
+
+        <a href="#s2" class="arrow"></a>
+    </section>
+
+    <section class="bgimg sec02" id="s2">
+        <div class="ctnr">
+            <p class="reveal">for a moment, that you are standing at the edge of a vast, uncharted universe, a place where the only limits are the ones you impose upon yourself.
+
+            <span class="big reveal">Here, you are free to be whoever you want to be,</span>
+
+            <span class="right reveal">to live your life on your own terms, to create a persona that is uniquely your own. It's an intoxicating feeling, one that fills you with a sense of possibility and adventure, and as you step forward, you can't help but feel a thrill of excitement in your chest.</span>
+            </p>
+        </div>
+
+        <a href="#s3" class="arrow"></a>
+    </section>
+
+    <section class="bgimg sec03" id="s3">
+        <div class="ctnr">
+            <p>
+                <span class="txtshadow reveal">The first thing you notice is the sheer amount of</span>
+    
+                <span class="big">detail</span>
+                
+                <span class="right txtshadow reveal">that goes into creating your identity. Every decision you make, from the food you eat to the clothes you wear, is a deliberate and purposeful choice, one that will shape the way others see you. It's like building a sculpture, slowly chipping away at the excess until all that remains is a work of art that reflects your true self.</span>
+            </p>
+        </div>
+
+        <a href="#s4" class="arrow"></a>
+    </section>
+
+    <section class="bgimg sec04" id="s4">
+        <div class="ctnr">
+            <p class="reveal">It's not just about the things you do, but also the things you don't do. You must make sacrifices, give up the parts of yourself that don't fit with the image you want to project, in order to make room for the things that do. It's a painful process, one that requires a level of honesty and introspection that is often uncomfortable. But the rewards are worth it - the sense of clarity and purpose that comes from knowing who you truly are is unlike anything you've ever experienced.</p>
+        </div>
+    </section>
+
+    <section class="bgimg sec05">
+        <div class="ctnr">
+            <p>
+                <span class="big reveal">Exploring this universe,</span>
+                <span class="left txtshadow reveal">you begin to see the world around you in a new light. You notice how others are struggling to find their own identities, how they're buffeted by the winds of circumstance and the expectations of others; and you realise that the price to pay for ultimate freedom is the bravery required to pursue it.</span>
+            </p>
+    
+            <p><span class="right txtshadow reveal">There may be times when the weight of your own expectations can feel crushing, when you question whether you're really living up to your true potential. But even in those moments, there's a sense of excitement, of possibility, of knowing that you're on a journey of self-discovery that will never truly be complete.</span></p>
+
+            <a href="#s6" class="arrow"></a>
+        </div>
+    </section>
+
+    <section class="bgimg sec06" id="s6">
+        <div class="ctnr">
+            <p><span class="big reveal">The truth is;</span> <span class="reveal">you have lived in this world your entire life.</span></p>
+        </div>
+
+        <a href="#s7" class="arrow"></a>
+    </section>
+
+    <section class="sec07">
+        <div class="ctnr">
+            <p>
+                <span class="big" id="s7">All of us have.</span>
+                <span class="reveal">
+                    <span class="left">But from this moment you have something that many others don't - agency, the power to create your own destiny.</span>
+                    <a class="cta contact_bt" role="button">Book a Free Consultation</a>
+                </span>
+            </p>
+        </div>
+    </section>
+
+    <section class="bgimg sec08">
+        <div class="ctnr">
+            <p class="reveal">
+                <span class="big">So come on in, take a closer look.</span>
+                <span>It's not for the faint of heart, but for those who are brave enough to take the leap, it's an adventure that will last a lifetime.</span>
+            </p>
+
+            <div class="cta contact_bt" role="button">Book a Free Consultation</div>
+        </div>
+    </section>
+
+    <footer>
+        <a class="logo_anchor">
+            <img src="/logo/logo-w.svg" draggable="false">
+        </a>
+    </footer>
+
+    <ContactForm/>
+
+</Layout>
+
+<script is:inline>
+
+    var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    const cursorRounded = document.querySelector('.cursor');
+    
+    if(!isSafari) {
+
+        const moveCursor = (e)=> {
+            const mouseY = e.clientY;
+            const mouseX = e.clientX;
+            
+            cursorRounded.style.transform = `translate3d(${mouseX - 32}px, ${mouseY - 32}px, 0)`;
+        }
+
+        window.addEventListener('mousemove', moveCursor)
+
+        window.addEventListener('mousedown', moveCursor)
+
+        
+        const clickables = document.querySelectorAll('a, button, div[role=button], .out_area')
+        const cursorDot = document.querySelector('.cursor div')
+
+        for(let i=0;i<clickables.length;i++) {
+            clickables[i].addEventListener('mouseover', function() {
+                cursorDot.style.transform = 'scale(15)'
+            })
+
+            clickables[i].addEventListener('mouseout', function() {
+                cursorDot.style.transform = 'scale(1)'
+            })
+        }
+
+        document.body.addEventListener('mousedown', function() {
+                cursorDot.style.transform = 'scale(4)'
+        })
+
+        document.body.addEventListener('mouseup', function() {
+                cursorDot.style.transform = 'scale(1)'
+        })
+
+        const allHoverEls = document.querySelectorAll('body, label, input, textarea, body .form_ctnr form button, a')
+
+        for(let i=0;i<allHoverEls.length;i++) {
+            allHoverEls[i].style.cursor = "none"
+        }
+
+    } else {
+        cursorRounded.style.display = 'none';
+    }
+
+
+    document.onreadystatechange = function () {
+        if (document.readyState == "complete") {
+            setTimeout(() => {
+                if(scrollY < 300) {
+                        scrollTo(null, window.innerHeight)
+                }
+            }, 2000);
+        }
+    }
+
+
+    ScrollReveal().reveal('.reveal', {
+        duration: 1500,
+        easing: 'ease',
+        distance: '40px'
+    });
+</script>

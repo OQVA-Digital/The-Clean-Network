@@ -1,0 +1,227 @@
+---
+import { CollectionEntry, getCollection } from "astro:content";
+
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+    const sndartist = await getCollection("sndartist");
+    return sndartist.map((sndartist) => ({
+        params: { slug: sndartist.data.customSlug },
+        props: sndartist,
+    }));
+}
+
+const underdogs = await getCollection("underdogs");
+
+type Props = CollectionEntry<"sndartist">;
+
+const sndartist = Astro.props;
+
+import '../../styles/swallows-n-daggers.css'
+
+import Logo from "../../components/Logo.astro";
+
+---
+
+<Layout {...sndartist.data} title={sndartist.data.metaTitle} description={sndartist.data.metaDescription} keywords={sndartist.data.metaKeywords}>
+    <script>
+        ScrollReveal().reveal('.reveal', {
+            distance: '0.3rem',
+            origin: 'bottom',
+            opacity: 0,
+            duration:800,
+            easing: 'ease',
+        });
+        
+        ScrollReveal().reveal('.reveal_in_steps', {
+            distance: '0.3rem',
+            origin: 'bottom',
+            opacity: 0,
+            duration:600,
+            easing: 'ease',
+            interval:200,
+        });
+        
+        ScrollReveal().reveal('.reveal_in_fast_steps', {
+            distance: '0.3rem',
+            origin: 'bottom',
+            opacity: 0,
+            duration:800,
+            easing: 'ease',
+            interval:100,
+        });
+    </script>
+    <section class="intro">
+        <div class="ctnr">
+            <!-- <img src="/LPs/swallows-n-daggers/logo.svg" alt="Swallows & Daggers Logo" class="logo" width="190" height="61"> -->
+            
+            <Logo logoColor="#ffffff"></Logo>
+
+            <h1>
+                <span class="small">
+                    <span class="highlight">{sndartist.data.name}</span>, welcome to the
+                </span>
+                <span class="big">Under<br>dog</span>
+                <span class="medium">Revolution.</span>
+            </h1>
+
+            <p class="txt">At <span class="highlight">Swallows & Daggers</span>, we’re more than just a brand; we're a movement. Rooted deeply in the authentic tattoo culture, <strong>we champion the tales and triumphs of underdogs worldwide.</strong></p>
+
+            <a href="#down" class="main cta">Learn More</a>
+        </div>
+    </section>
+
+    <section class="brand_legacy" id="down">
+        <div class="right_ctnr">
+            <img class="cover" src="/LPs/swallows-n-daggers/photo01.jpg" alt="Tattooing photo">
+
+            <div class="content reveal">
+                <h2>Our Brand Legacy</h2>
+    
+                <p>Birthed from the rebellious spirit of tattoo culture, we've evolved into a fortress for outcasts, rebels, and <b>those who dare to challenge the status quo</b>.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="underdog_select">
+        <div class="ctnr">
+            <h2 class="reveal">Celebrating the Unsung</h2>
+
+            <p class="reveal"><strong>We're on a mission to tell the stories of mavericks, visionaries, and trailblazers.</strong></p>
+
+            <p class="reveal">From <b>Paulo Freire's</b> transformative education to <b>Peter Singer's</b> ethical revolutions, these are tales that inspire, resonate, and remind us of the power of defiance.</p>
+
+            <div class="underdogs">
+                {
+                    underdogs.map((underdog) => (
+                        <div class="box reveal_in_fast_steps">
+                            <img class="thumbnail" src={underdog.data.thumbnail} alt={`${underdog.data.name}'s thumbnail`} loading="lazy" width="150" height="150" />
+                
+                            <div class="content">
+                                <p class="name">{underdog.data.name}</p>
+                                <p class="description">{underdog.data.description}</p>
+                            </div>
+                
+                            {underdog.data.taken ? (
+                                <span class="taken">
+                                    Taken {underdog.data.takenBy != "" ? `by: ${underdog.data.takenBy}` : ""}
+                                </span>
+                            ) : ""}
+                        </div>
+                    ))
+                }
+                
+
+                {underdogs.length > 3 ? (
+                    <button class="expand"><span class="gradient"></span>Expand list</button>
+
+                    <script>
+                        const underdogsCtnr = document.querySelector('.underdogs')
+
+                        const expandBt = document.querySelector('.underdogs .expand')
+
+                        let isExpanded = false;
+                        
+                        expandBt.addEventListener('click', function() {
+                            underdogsCtnr.classList.toggle('expanded')
+                            expandBt.classList.toggle('expanded')
+
+                            if(isExpanded) {
+                                expandBt.innerHTML = 'Expand list'
+                                isExpanded = false
+                            } else {
+                                expandBt.innerHTML = 'Contract list'
+                                isExpanded = true
+                            }
+                        })
+                    </script>
+                ) : ""}
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="invite">
+        <div class="ctnr">
+            <h2 class="reveal">Visualizing Triumph</h2>
+
+            <p class="reveal">We invite you, <span class="highlight">{sndartist.data.name}</span>, to breathe life into these stories, capturing their essence, emotions, and ethos through your art. </p>
+
+            <!-- <a href="#down" class="main cta">Call To Action</a> -->
+        </div>
+    </section>
+
+    <section class="tale_to_triumph">
+        <div class="ctnr">
+            <h2 class="reveal">From tale to tattoo-inspired triumph</h2>
+
+            <ul class="content">
+                <li class="box reveal_in_steps">
+                    <p>1. Choose an underdog: Select a story that resonates.</p>
+                </li>
+                <li class="box reveal_in_steps">
+                    <p>2. Create: Design a visual representation inspired by their journey.</p>
+                </li>
+                <li class="box reveal_in_steps">
+                    <p>3. Showcase: Watch your artwork transform into animations and limited edition products.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="beyond_the_ink">
+        <div class="ctnr">
+            <h2 class="reveal">Beyond the Ink</h2>
+
+            <ul>
+                <li class="box"><span class="highlight reveal_in_steps">Exposure:</span> Showcase your talent to our audience of 50K+ loyal followers and the broader community.</li>
+                
+                <li class="box"><span class="highlight reveal_in_steps">Legacy:</span> Align with powerful narratives that inspire and endure.</li>
+                
+                <li class="box"><span class="highlight reveal_in_steps">Compensation:</span> Competitive payment for your artistry and potential royalties from product sales.</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section class="crafting_the_masterpiece">
+        <div class="ctnr">
+            <h2>Crafting the Masterpiece</h2>
+
+            <ul>
+                <li class="reveal_in_steps">1. Discussion & Finalization: Agreeing on a theme and approach.</li>
+                
+                <li class="reveal_in_steps">2. Sketch & Feedback: A collaborative process to ensure alignment.</li>
+                
+                <li class="reveal_in_steps">3. Final Artwork: Delivering the piece that captures the underdog spirit.</li>
+
+                <li class="reveal_in_steps">4. Promotion: Launching the narrative and art on our platforms.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="crafting_the_future">
+        <div class="ctnr">
+            <h2>Crafting the Future, <span class="highlight">Respectfully</span></h2>
+
+            <p>We believe in mutual respect. While we’ll exclusively feature your artwork in our collaborations, you’ll retain rights as the creator. <b>We're open to discussions about specifics.</b></p>
+        </div>
+    </section>
+
+    <section class="ink_the_revolution">
+        <div class="ctnr">
+            <h2 class="reveal">Ink The Revolution</h2>
+    
+            <p class="reveal">This is more than a collaboration; <span class="highlight">it's a call to arms.</span> Let's champion the tales of underdogs together, one story, one artwork at a time.</p>
+    
+            <!-- <a href="#down" class="main cta">Call To Action</a> -->
+        </div>
+    </section>
+
+    <section class="your_thoughts_matter">
+        <div class="ctnr">
+            <h2>Your Thoughts Matter</h2>
+
+            <p>We value your perspective. Let's discuss any questions, ideas, or thoughts you might have.</p>
+        </div>
+    </section>
+</Layout>

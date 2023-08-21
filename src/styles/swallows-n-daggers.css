@@ -1,0 +1,783 @@
+:root {
+    --snd-dark: #1f1f21;
+
+    --snd-light: #dddddd;
+
+    --snd-primary: #3d1ddd;
+    --snd-primary-l1: #3d1ddd;
+
+    --snd-highlight: #dec71d;
+    
+    --base-width:clamp(13rem, 85vw, 88rem);
+}
+
+@font-face {
+    font-family: Quantico;
+    src: url(/fonts/swallows-n-daggers/Quantico-Regular.ttf);
+    font-display: swap;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Quantico;
+    src: url(/fonts/swallows-n-daggers/Quantico-Italic.ttf);
+    font-display: swap;
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Quantico;
+    src: url(/fonts/swallows-n-daggers/Quantico-Bold.ttf);
+    font-display: swap;
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: Quantico;
+    src: url(/fonts/swallows-n-daggers/Quantico-BoldItalic.ttf);
+    font-display: swap;
+    font-weight: 800;
+    font-style: italic;
+}
+
+
+body {
+    font-family: 'Quantico', sans-serif;
+    font-weight: 800;
+    background-color:var(--snd-dark);
+    color:var(--light);
+    line-height: 1.2;
+}
+
+section.intro {
+    background-color:var(--snd-dark);
+    color:var(--light);
+    padding-block:clamp(2rem, 3.5vw, 4rem) clamp(4rem, 22vw, 6rem);
+    text-align: center;
+}
+
+section > .ctnr {
+    width:var(--base-width);
+    margin-inline: auto;
+}
+
+.right_ctnr {
+    width:calc(var(--base-width) + ((100% - var(--base-width)) / 2));
+    margin-left: auto;
+}
+
+.intro > .ctnr {
+    gap: clamp(1.5rem, 9vw, 2rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro .logo {
+    width: clamp(5rem, 50vw, 14rem);
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+
+}
+
+h1 .highlight {
+    color: var(--snd-highlight);
+}
+
+h1 .small {
+    font-size: clamp(1rem, 4.5vw, 1.9rem);
+    font-weight: 400;
+}
+
+h1 .big {
+    display: block;
+    font-size: clamp(4.5rem, 27.5vw, 13rem);
+    text-transform: uppercase;
+    line-height: 0.85;
+    font-weight: 800;
+    background: url(/LPs/swallows-n-daggers/h1-bg.jpg) 0 0 / cover no-repeat;
+    color: #de466c;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position: center bottom;
+    color: var(--light);
+    letter-spacing: -0.3rem;
+}
+
+h1 .medium {
+    font-size: clamp(2.4rem, 12vw, 5.4rem);
+    line-height: 1;
+    margin-top: calc(clamp(1rem, 8vw, 2.2rem) * -1);
+    display: block;
+}
+
+.intro .txt {
+    font-weight: 400;
+    max-width: 55rem;
+    font-size: clamp(1rem, 4.5vw, 1.7rem);
+    line-height: 1.5;
+}
+
+.intro .txt .highlight {
+    color: var(--snd-highlight);
+}
+
+.main.cta {
+    font-size: 1.2rem;
+    background-color: var(--snd-primary);
+    clip-path: polygon(0% 0%, calc(100% - 1rem) 0%, 100% calc(0% + 1rem), 100% 100%, calc(0% + 1rem) 100%, 0% calc(100% - 1rem));
+    padding: 0.7rem 3rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+    -moz-transition: background-color 0.3s ease, color 0.3s ease;
+    -ms-transition: background-color 0.3s ease, color 0.3s ease;
+    -o-transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.main.cta:hover {
+    background-color: var(--snd-highlight);
+    color: var(--dark-c);
+    transition: background-color 0.1s ease, color 0.1s ease;
+    -webkit-transition: background-color 0.1s ease, color 0.1s ease;
+    -moz-transition: background-color 0.1s ease, color 0.1s ease;
+    -ms-transition: background-color 0.1s ease, color 0.1s ease;
+    -o-transition: background-color 0.1s ease, color 0.1s ease;
+}
+
+section.brand_legacy {
+    background-color: var(--snd-primary);
+    color:var(--light);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 2rem 100%, 0 calc(100% - 2rem));
+    margin-bottom: -2rem;
+}
+
+.brand_legacy .right_ctnr {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.brand_legacy .cover {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 2rem 100%, 0 calc(100% - 2rem));
+}
+
+.brand_legacy .content {
+    margin-block: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    gap: 0.5rem;
+    max-width: 42rem;
+    margin-right: auto;
+}
+
+section h2 {
+    text-transform: uppercase;
+    letter-spacing: 0.06rem;
+}
+
+.brand_legacy h2 {
+    font-size: clamp(1rem, 8vmin, 3rem);
+}
+
+.brand_legacy .content p {
+    font-weight: 100;
+    font-size: clamp(1rem, 5vmin, 2rem);
+    margin-inline: 1rem 2rem;
+    line-height: 1.4;
+}
+
+section.underdog_select {
+    background-color: var(--light);
+    color:var(--snd-dark);
+    padding-block: calc(clamp(2rem, 7vw, 8rem) + 2rem) clamp(2rem, 7vw, 8rem);
+}
+
+.underdog_select h2 {
+    font-size: clamp(1rem, 11vw, 3.3rem);
+    color:var(--snd-primary);
+    line-height: 1.1;
+}
+
+.underdog_select .ctnr > p {
+    font-size: clamp(1rem, 4vmin, 1.8rem);
+    font-weight: 400;
+    max-width: 73rem;
+    line-height: 1.4;
+}
+
+.underdog_select .ctnr > h2 + p {
+    margin-block: 1rem;
+    font-size: calc(clamp(0.8rem, 3.8vw, 1.4rem) * 1.6);
+    /* max-width: 19rem; */
+    line-height: 1.35;
+}
+
+.underdogs {
+    display: flex;
+    flex-flow: row wrap;
+    gap: clamp(1rem, 3vw, 1.5rem);
+    margin-top: clamp(1rem, 5vw, 3rem);
+    max-height: 45vh;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.underdogs.expanded {
+    max-height: 200rem;
+    overflow: initial;
+}
+
+.underdogs .box {
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    background-color: var(--snd-light);
+    padding-right: 1rem;
+    flex: 1;
+    min-width: clamp(10rem, 50vw, 22rem);
+    max-width: 28rem;
+    transition: background-color 0.5s ease;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    -ms-transition: background-color 0.5s ease;
+    -o-transition: background-color 0.5s ease;
+    border: 0.1rem solid var(--snd-light);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0.9rem 100%, 0 calc(100% - 0.9rem));
+}
+
+.underdogs .box:hover {
+    background-color: var(--light);
+    transition: background-color 0.1s ease;
+    -webkit-transition: background-color 0.1s ease;
+    -moz-transition: background-color 0.1s ease;
+    -ms-transition: background-color 0.1s ease;
+    -o-transition: background-color 0.1s ease;
+}
+
+.underdogs .box .content {
+    margin-block: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.1rem;
+    flex: 1;
+}
+
+.underdogs .name {
+    font-size: clamp(1.3rem, 5vw, 1.6rem);
+}
+
+.underdogs .description {
+    font-size: clamp(0.75rem, 2.2vmin, 1rem);
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+.underdogs .thumbnail {
+    width: clamp(6rem, 7vw, 10rem);
+    height: clamp(6rem, 7vw, 10rem);
+    background-color: var(--snd-dark);
+    object-fit: cover;
+    object-position: center;
+}
+
+.underdogs .taken {
+    position: absolute;
+    top: -0.1rem;
+    right: 0;
+    background-color: var(--snd-dark);
+    color: var(--light);
+    font-weight: 100;
+    padding: 0.2rem 0.6rem;
+    font-size: clamp(0.4rem, 2vw, 0.7rem);
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0.3rem 100%, 0 calc(100% - 0.3rem));
+}
+
+.underdogs .taken span {
+    display: block;
+    transform: skewX(15deg);
+    -webkit-transform: skewX(15deg);
+    -moz-transform: skewX(15deg);
+    -ms-transform: skewX(15deg);
+    -o-transform: skewX(15deg);
+}
+
+.underdogs .expand {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding-block: 4rem 1rem;
+    background-image: linear-gradient(0deg, var(--light) 30%, transparent);
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    text-decoration: underline;
+    width: 100%;
+}
+
+.underdogs .expand:hover {
+    color:var(--snd-primary)
+}
+
+.underdogs .expand.expanded {
+    position: sticky;
+    margin-top: -2rem;
+    padding-block: 2rem 1rem;
+}
+
+section.invite {
+    background-color: var(--snd-dark);
+    color:var(--light);
+    text-align: center;
+    padding-block: clamp(3rem, 21vw, 9rem);
+    background-image: url(/LPs/swallows-n-daggers/dark-blur-bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.invite h2 {
+    font-size: clamp(1rem, 11vw, 4.8rem);
+    line-height: 1.1;
+}
+
+.invite .highlight {
+    color:var(--snd-primary);
+    background-color:var(--light);
+    font-weight: 800;
+    padding-inline: 0.2rem;
+    font-style: italic;
+}
+
+.invite h2 + p {
+    margin-block: clamp(1.4rem, 5vw, 2rem) 0;
+    font-weight: 400;
+    font-size: clamp(1.3rem, 5vw, 2.2rem);
+    line-height: 1.4;
+    max-width: 73rem;
+    margin-inline: auto;
+}
+
+
+section.tale_to_triumph {
+    color:var(--light);
+    background-color:var(--snd-primary);
+    padding-block: clamp(3rem, 13vw, 6rem);
+}
+
+.tale_to_triumph > .ctnr {
+
+}
+
+.tale_to_triumph h2 {
+    text-align: center;
+    font-size: clamp(1rem, 9vmin, 2.6rem);
+    margin-bottom: clamp(2rem, 4vw, 2.5rem);
+}
+
+.tale_to_triumph .content {
+    display: flex;
+    flex-flow: row wrap;
+    gap: clamp(1rem, 3vw, 2rem);
+    align-items: start;
+}
+
+.tale_to_triumph .content .box {
+    background-color: var(--snd-dark);
+    padding: clamp(1.2rem, 4vw, 1.7rem) clamp(1.5rem, 4vw, 2.5rem);
+    font-size: clamp(1.3rem, 5.2vw, 1.5rem);
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.4;
+    position: relative;
+    flex: 1;
+    display: flex;
+    min-width: clamp(5rem, 60vw, 19rem);
+}
+
+ul .box {
+    /* clip-path: polygon(0.6rem 0, calc(100% - 0.6rem) 0, 100% 0.6rem, 100% calc(100% - 0.6rem), calc(100% - 0.6rem) 100%, 0.6rem 100%, 0% calc(100% - 0.6rem), 0% 0.6rem); */
+}
+
+.tale_to_triumph .content .box:first-of-type:before, .tale_to_triumph .content .box:first-of-type:after, .tale_to_triumph .content .box:nth-of-type(2):after, .tale_to_triumph .content .box:last-of-type:after {
+    content: '';
+    position: absolute;
+}
+
+.tale_to_triumph .content .box:first-of-type:before {
+    top: 50%;
+    right: calc(100%);
+    width: calc((100vw - var(--base-width)) / 2);
+    height: 0.3rem;
+    background-color: var(--snd-dark);
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.tale_to_triumph .content .box:first-of-type:after, .tale_to_triumph .content .box:nth-of-type(2):after {
+    bottom: calc(clamp(1rem, 3vw, 2rem) * -1);
+    width: 0.3rem;
+    height: clamp(1rem, 3vw, 2rem);
+    background-color: var(--snd-dark);
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+}
+
+.tale_to_triumph .content .box:nth-of-type(2):after {
+    
+}
+
+.tale_to_triumph .content .box:last-of-type:after {
+    top: 50%;
+    left: calc(100%);
+    width: calc((100vw - var(--base-width)) / 2);
+    height: 0.3rem;
+    background-color: var(--snd-dark);
+    transform: translateY(-50%);
+}
+
+section.beyond_the_ink {
+    text-align: center;
+    padding-block: clamp(3rem, 5vw, 6rem);
+}
+
+.beyond_the_ink > .ctnr {
+
+}
+
+.beyond_the_ink h2 {
+    text-align: center;
+    font-size: clamp(1rem, 9vmin, 2.6rem);
+    margin-bottom: clamp(2rem, 4vw, 2rem);
+    color:var(--snd-highlight)
+}
+
+.beyond_the_ink ul {
+    font-weight: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 53rem;
+    margin-inline: auto;
+}
+
+.beyond_the_ink li {
+    font-size: clamp(1rem, 4.5vw, 1.7rem);
+    line-height: 1.6;
+}
+
+.beyond_the_ink li .highlight {
+    background-color: var(--light);
+    color:var(--snd-dark);
+    font-weight: 800;
+    padding-inline: 0.2rem;
+}
+
+section.crafting_the_masterpiece {
+    padding-block: 0 clamp(3rem, 13vw, 6rem);
+}
+
+.crafting_the_masterpiece h2 {
+    text-align: center;
+    font-size: clamp(1rem, 9vmin, 2.6rem);
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.crafting_the_masterpiece ul {
+    display: flex;
+    flex-flow: row wrap;
+    gap: clamp(1rem, 7vw, 5rem);
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.crafting_the_masterpiece ul li {
+    background-color: var(--snd-primary);
+    color: var(--light);
+    padding: clamp(1.2rem, 4vw, 1.7rem) clamp(1.5rem, 4vw, 2.5rem);
+    font-size: clamp(1.3rem, 5.2vw, 1.5rem);
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.4;
+    position: relative;
+    flex: 1;
+    display: flex;
+    min-width: clamp(13.6rem, 23vw, 25rem);
+    align-items: center;
+}
+
+.crafting_the_masterpiece li::after {
+    content:'';
+    position: absolute;
+}
+
+.crafting_the_masterpiece li:not(:last-of-type):after {
+    height: clamp(1rem, 7vw, 5rem);
+    width: 0.3rem;
+    background-color: var(--light);
+    bottom: calc(clamp(1rem, 7vw, 5rem) * -1);
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.crafting_the_masterpiece li:nth-of-type(1):after {
+    left: 25%;
+}
+
+.crafting_the_masterpiece li:nth-of-type(2):after {
+    left: 50%;
+}
+
+.crafting_the_masterpiece li:nth-of-type(3):after {
+    left: 75%;
+}
+
+section.crafting_the_future {
+    background-color: var(--snd-primary);
+    color:var(--light);
+    text-align: center;
+    padding-block: clamp(3rem, 13vw, 6rem);
+}
+
+.crafting_the_future h2 {
+    font-size: clamp(1rem, 10vmin, 2.6rem);
+    margin-bottom: clamp(2rem, 3vw, 2rem);
+}
+
+.crafting_the_future h2 .highlight {
+    color:var(--snd-highlight)
+}
+
+.crafting_the_future p {
+    font-size: clamp(1rem, 5.4vmin, 1.8rem);
+    font-weight: 400;
+    max-width: 58rem;
+    margin-inline: auto;
+    line-height: 1.4;
+}
+
+.ink_the_revolution {
+    text-align: center;
+    padding-block: clamp(3rem, 33vw, 12rem);
+    background-image: url(/LPs/swallows-n-daggers/models01.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+}
+
+.ink_the_revolution h2 {
+    text-transform: unset;
+    font-size: clamp(1rem, 16vmin, 9rem);
+    line-height: 1;
+}
+
+.ink_the_revolution p {
+    max-width: 55rem;
+    margin-inline: auto;
+    font-weight: 600;
+    font-size: clamp(1rem, 5.6vmin, 2.2rem);
+    margin-block: clamp(1.4rem, 5vw, 1rem) clamp(1.4rem, 5vw, 2rem);
+    line-height: 1.4;
+}
+
+.ink_the_revolution p .highlight {
+    color:var(--snd-highlight)
+}
+
+.ink_the_revolution .cta {
+
+}
+
+.your_thoughts_matter {
+    background-color: var(--light);
+    color: var(--snd-dark);
+    padding-block: clamp(3rem, 45vmax, 13rem);
+    box-sizing: border-box;
+}
+
+.your_thoughts_matter .ctnr {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.your_thoughts_matter h2 {
+    font-size: clamp(1rem, 16vmin, 9rem);
+    flex: 0;
+    line-height: 1.1;
+    background: url(/LPs/swallows-n-daggers/models01.jpg) 0 0 / cover no-repeat;
+    color: #de466c;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position: center bottom;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top center;
+    letter-spacing: -0.1rem;
+}
+
+.your_thoughts_matter p {
+    font-size: clamp(1rem, 5.4vmin, 1.8rem);
+    line-height: 1.4;
+    flex: 1;
+    max-width: 29rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:700px) {
+    h1 .big {
+        font-size: clamp(5.6rem, 15vw, 15rem);
+    }
+
+    h1 .medium {
+        margin-top: calc(clamp(1rem, 4.1vw, 4.1rem) * -1);
+        font-size: clamp(3rem, 6.3vw, 6.2rem);
+    }
+
+    h1 .big br {
+        display: none;
+    }
+
+    .brand_legacy .right_ctnr {
+        flex-flow: row-reverse wrap;
+    }
+
+    .brand_legacy .cover {
+        margin-block: -2rem;
+        width: 50vw;
+        max-width: 50vw;
+        height: clamp(10rem, 28vw, 65vh);
+        object-fit: cover;
+    }
+
+    .underdog_select .ctnr > h2 + p {
+        max-width: unset;
+        font-size: clamp(1rem, 4.5vw, 1.8rem);
+    }
+
+    .underdog_select h2, .underdog_select .ctnr > p {
+        text-align: center;
+    }
+
+    .underdog_select .ctnr > p {
+        margin-inline: auto;
+    }
+
+    .tale_to_triumph .content .box:first-of-type:after, .tale_to_triumph .content .box:nth-of-type(2):after {
+        height: 0.3rem;
+        width: clamp(1rem, 3vw, 2rem);
+        bottom: unset;
+        left: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-inline: unset;
+        right: unset;
+    }
+
+    .crafting_the_masterpiece ul {
+        position: relative;
+    }
+
+    .crafting_the_masterpiece ul::before {
+        /* content: '';
+        position: absolute;
+        height: 0.3rem;
+        width: calc(50% + 2.8rem);
+        background-color: var(--light);
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin-inline: auto;
+        transform: translateY(-50%); */
+    }
+
+    .crafting_the_masterpiece li:nth-of-type(1):after {
+        left:100%;
+        bottom:50%;
+        height: 0.3rem;
+        width: clamp(1rem, 7vw, 5rem);
+        transform: translateY(50%);
+        -webkit-transform: translateY(50%);
+        -moz-transform: translateY(50%);
+        -ms-transform: translateY(50%);
+        -o-transform: translateY(50%);
+    }
+    
+    .crafting_the_masterpiece li:nth-of-type(2):after {
+        height: calc(clamp(1rem, 7vw, 5rem) / 2);
+        top: 100%;
+    }
+
+    .crafting_the_masterpiece li:nth-of-type(2):before {
+        content: '';
+        position: absolute;
+        height: 0.3rem;
+        width: calc((var(--base-width) / 2) + (clamp(1rem, 7vw, 5rem) / 2) + 0.15rem);
+        background-color: var(--light);
+        bottom: calc(clamp(1rem, 7vw, 5rem) * -0.5);
+        right: 50%;
+    }
+
+    .crafting_the_masterpiece li:nth-of-type(3):before {
+        content:'';
+        position: absolute;
+        width: 0.3rem;
+        height: calc(clamp(1rem, 7vw, 5rem) / 2);
+        bottom: 100%;
+        background-color: var(--light);
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+    }
+    
+    .crafting_the_masterpiece li:nth-of-type(3):after {
+        left:100%;
+        bottom:50%;
+        height: 0.3rem;
+        width: clamp(1rem, 7vw, 5rem);
+        transform: translateY(50%);
+        -webkit-transform: translateY(50%);
+        -moz-transform: translateY(50%);
+        -ms-transform: translateY(50%);
+        -o-transform: translateY(50%);
+    }
+    
+}

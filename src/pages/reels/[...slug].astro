@@ -1,0 +1,274 @@
+---
+import { CollectionEntry, getCollection } from "astro:content";
+
+import Layout from "../../layouts/Layout.astro";
+
+import ReelDash from "../../components/ReelDash.astro"
+
+export async function getStaticPaths() {
+    const reels = await getCollection("reels");
+    return reels.map((reels) => ({
+        params: { slug: reels.data.customSlug },
+        props: reels,
+    }));
+}
+type Props = CollectionEntry<"reels">;
+
+const reels = Astro.props;
+// const { Content } = await reels.render();
+
+import '../../styles/reels_lp.css'
+
+---
+
+<Layout {...reels.data} title={reels.data.metaTitle} description={reels.data.metaDescription} keywords={reels.data.metaKeywords}>
+    <script>
+        ScrollReveal().reveal('.reveal', {
+            distance: '0.3rem',
+            origin: 'left',
+            opacity: 0,
+            duration:600,
+            easing: 'ease',
+        });
+        
+        ScrollReveal().reveal('.reveal_in_steps', {
+            distance: '0.3rem',
+            origin: 'left',
+            opacity: 0,
+            duration:600,
+            easing: 'ease',
+            interval:250,
+        });
+    </script>
+
+    <header>
+        <div class="ctnr">
+            <img src="/logo/logo-b.svg" alt="OQVA logo" class="logo" draggable="false" width="112" height="35">
+            
+            <button type="button" class="main cta" aria-label="Get My Reels Now">Get My Reels Now</button>
+        </div>
+    </header>
+    <section class="intro">
+        <div class="ctnr">
+            <ReelDash Class="left"/>
+            <ReelDash Class="right"/>
+            
+            <h1 set:html={`
+                <span class="small">
+                    <span class="reveal_in_steps">Elevate your</span> 
+                    <span class="flex">
+                        <span class="big pink reveal_in_steps">${reels.data.businessName}'s</span> 
+                        <span class="smaller reveal_in_steps">
+                            Social Media with Our 
+                            <br>
+                            Special Offer:
+                        </span>
+                    </span>
+                </span>
+                
+                <span class="detach">
+                    <span class="highlight">
+                        <span class="reveal_in_steps">5 Professional</span> 
+                        <span class="big yellow reveal_in_steps">Instagram Reels</span> 
+                        <span class="reveal_in_steps">for</span> 
+                        <span class="pink reveal_in_steps">£1,000</span>
+                    </span>
+                    <button type="button" class="delivery reveal_in_steps">Delivered in 72 Hours, Guaranteed</button>
+                </span>
+
+            `}></h1>
+
+            <a href="#about" class="down_bt">
+                <span class="reveal_in_steps">Find out more</span>
+                <span class="reveal_in_steps">Find out more</span>
+                <span class="reveal_in_steps">Find out more</span>
+            </a>
+
+            <div class="smartphone_video_ctnr">
+                <img class="ui" src="/LPs/reels/reels-UI-template.png" alt="Reels UI Template" width="105" height="169">
+
+                <video src={reels.data.smartphoneVideo} autoplay muted loop playsinline></video>
+
+                <picture  class="hand">
+                    <source srcset="/LPs/reels/held-smartphone.webp" type="image/webp" media="(min-width:700px)">
+                    <source srcset="/LPs/reels/held-smartphone-small.webp" type="image/webp">
+                    <source srcset="/LPs/reels/held-smartphone.png" type="image/png" media="(min-width:700px)">
+                    <source srcset="/LPs/reels/held-smartphone-small.png" type="image/png">
+                    <img src="/LPs/reels/held-smartphone.png" alt="Hand holding smartphone" draggable="false" width="144" height="156">
+                </picture>
+            </div>
+        </div>
+    </section>
+
+    <section class="text_block_ctnr light" id="about">
+        <div class="ctnr">
+            <ReelDash/>
+    
+            <video class="video_bg lazy" autoplay muted loop playsinline>
+                <source data-src={reels.data.firstSectionBGVideo}>
+            </video>
+    
+            <div class="content reveal">
+                <p set:html={reels.data.belowIntroBox}></p>
+                
+                <button type="button" class="main cta" aria-label="Get My Reels Now">Get My Reels Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="reasons">
+        <div class="ctnr">
+            <ReelDash/>
+            
+            <div class="content">
+                <h2 class="reveal_in_steps">Why Choose OQVA?</h2>
+    
+                <div class="ctnr">
+                    <ul>
+    
+                        <li class="reveal_in_steps">
+                            <h3 set:html={reels.data.reason01Heading}></h3>
+                            <p set:html={reels.data.reason01Text}></p>
+                        </li>
+                        
+                        <li class="reveal_in_steps">
+                            <h3 set:html={reels.data.reason02Heading}></h3>
+                            <p set:html={reels.data.reason02Text}></p>
+                        </li>
+                        
+                        <li class="reveal_in_steps">
+                            <h3 set:html={reels.data.reason03Heading}></h3>
+                            <p set:html={reels.data.reason03Text}></p>
+                        </li>
+        
+                        {
+                            reels.data.reason04Heading ? (
+                                <li class="reveal">
+                                    <h3 set:html={reels.data.reason04Heading}></h3>
+                                    <p set:html={reels.data.reason04Text}></p>
+                                </li>
+                            ) : ""
+                        }
+                    </ul>
+        
+                    <video class="reveal lazy" autoplay muted loop playsinline width="245" height="257">
+                        <source data-src={reels.data.secondSectionLeftVideo}>
+                    </video>
+    
+                    <video class="reveal lazy" autoplay muted loop playsinline width="245" height="257">
+                        <source data-src={reels.data.secondSectionRightVideo}>
+                    </video>
+                </div>
+    
+                <p class="reveal">As a <strong>full-service digital agency</strong>, we not only provide exceptional video production but also offer comprehensive solutions in brand positioning, design, web development, and content production. <b>Whatever your needs, we have the expertise to deliver.</b></p>
+                    
+                <button type="button" class="main cta" aria-label="Get My Reels Now">Get My Reels Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="text_block_ctnr dark" id="about">
+        <div class="ctnr">
+            <ReelDash/>
+    
+            <video class="video_bg lazy" autoplay muted loop playsinline>
+                <source data-src={reels.data.thirdSectionBGVideo}>
+            </video>
+    
+            <div class="content reveal">
+                <h2 set:html={reels.data.darkBlockHeading}></h2>
+
+                <p set:html={reels.data.darkBlockSubheading}></p>
+                
+                <button type="button" class="main cta" aria-label="Get My Reels Now">Get My Reels Now</button>
+
+                {reels.data.darkBlockSubscript ? (<p class="sub" set:html={reels.data.darkBlockSubscript}></p>) : ""}
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="ctnr">
+            <img src="/logo/logo-w.svg" alt="OQVA logo" class="logo" draggable="false" width="240" height="74">
+
+            <!-- <div class="social">
+                <a href="#" class="instagram icon"></a>
+                <a href="#" class="facebook icon"></a>
+                <a href="#" class="linkedin icon"></a>
+            </div> -->
+
+            <div class="contact">
+                <a href="mailto:reels@oqva.digital" title="email us" aria-label="send an email to reels@oqva.digital">reels@oqva.digital</a>
+                <!-- <a href="#">41 1234 5678</a> -->
+            </div>
+        </div>
+    </footer>
+
+    <dialog>
+        <form name={`${reels.data.businessName.toLowerCase()}-reels-LP`} method="POST" data-netlify="true">
+            <p>
+                <label>First Name: <input type="text" name="name" required /></label>
+            </p>
+            <p>
+                <label>Surname: <input type="text" name="name" /></label>
+            </p>
+            <p>
+                <label>Phone Number: <input type="tel" name="phone" /></label>
+            </p>
+            <p>
+                <label>Your Email: <input type="email" name="email" /></label>
+            </p>
+            <p>
+                <button type="submit" aria-label="Submit form">Submit</button>
+            </p>
+        </form>
+
+        <button value="cancel" formmethod="dialog" aria-label="Close dialog">
+            <?xml version="1.0" encoding="UTF-8"?><svg id="Camada_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.82 14.82"><defs><style>.close_stroke{fill:none;stroke:#39393c;stroke-miterlimit:10;stroke-width:3px;}</style></defs><line class="close_stroke" x1="1.06" y1="1.06" x2="13.76" y2="13.76"/><line class="close_stroke" x1="13.76" y1="1.06" x2="1.06" y2="13.76"/></svg>
+        </button>
+    </dialog>
+
+    <script>
+        const showButton = document.querySelectorAll(".main.cta, button.delivery");
+        const dialog = document.querySelector("dialog");
+        const submitBt = document.querySelector("form button[type='submit']")
+        const closeBt = document.querySelector("dialog button[value='cancel']")
+
+        for(let i=0;i<showButton.length;i++) {
+            showButton[i].addEventListener("click", () => {
+                dialog.showModal();
+            });
+        }
+
+        closeBt.addEventListener("click", (event) => {
+            dialog.close();
+        });
+
+        import '../../scripts/form.js'
+
+        const introVideo = document.querySelector('.intro video')
+
+        introVideo.addEventListener('loadeddata', function() {
+            var videos = [].slice.call(document.querySelectorAll("video.lazy"));
+
+            var videoObserver = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(function(video) {
+                for (var source in video.target.children) {
+                    var videoSource = video.target.children[source];
+                    if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                    videoSource.src = videoSource.dataset.src;
+                    }
+                }
+        
+                    video.target.load();
+                    video.target.classList.remove("lazy");
+                    videoObserver.unobserve(video.target);
+                });
+            });
+        
+                videos.forEach(function(video) {
+                videoObserver.observe(video);
+            });
+        })
+    </script>
+</Layout>

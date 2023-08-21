@@ -15,18 +15,16 @@ const handleSubmit = (event) => {
 
 const submitBt = document.querySelector('form button[type="submit"]')
 
-const docLanguage = document.documentElement.lang
-
 function success() {
     
     submitBt.innerHTML = "Submitted successfully. Thank you!"
 
-    submitBt.classList.add('submitted')
+    submitBt.classList.add('submited')
 
     setTimeout(() => {
-        submitBt.innerHTML = "Submit again"
+      submitBt.innerHTML = "Send again"
   
-      submitBt.classList.remove('submitted')
+      submitBt.classList.remove('submited')
     }, 6000);
 }
   
