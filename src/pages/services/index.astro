@@ -1,0 +1,165 @@
+---
+import { CollectionEntry, getCollection } from "astro:content";
+type Props = CollectionEntry<"services">["data"];
+
+const services = (await getCollection('services')).sort((a, b) => {
+    // Check if both items have an 'order' property
+    if (a.data.order !== undefined && b.data.order !== undefined) {
+        return a.data.order - b.data.order; // Sort by 'order' if both have it
+    } else if (a.data.order !== undefined) {
+        return -1; // 'a' has 'order', but 'b' doesn't, so 'a' comes first
+    } else if (b.data.order !== undefined) {
+        return 1; // 'b' has 'order', but 'a' doesn't, so 'b' comes first
+    } else {
+        // Both 'a' and 'b' don't have 'order', fallback to sorting by 'title'
+        return a.data.title.localeCompare(b.data.title);
+    }
+});
+
+const currentURL = new URL(Astro.request.url)
+
+import Header from "../../components/Header.astro";
+import BaseHead from "../../components/BaseHead.astro";
+import Footer from "../../components/Footer.astro";
+import ContactSection from "../../components/ContactSection.astro"
+
+import "../../styles/subpages.css"
+import "../../styles/collections.css"
+
+import { Schema } from "astro-seo-schema"
+
+import { SITE_KEYWORDS, SERVICES_TITLE, SERVICES_DESCRIPTION, SERVICES_KEYWORDS, SERVICES_H1, SERVICES_INTRO_DESCRIPTION, INTERIOR_SERVICES_DESCRIPTION, EXTERIOR_SERVICES_DESCRIPTION } from "../../consts";
+---
+
+<html lang="en">
+    <head>
+        <BaseHead title={SERVICES_TITLE}
+        description={SERVICES_DESCRIPTION}
+        keywords={SERVICES_KEYWORDS ? SERVICES_KEYWORDS : SITE_KEYWORDS} />
+    </head>
+
+    <body>
+        <Header />
+
+        <main>
+            <div class="ctnr">
+                <div class="heading_ctnr default_bg">
+                    <div class="content reveal">
+                        <h1 set:html={SERVICES_H1}></h1>
+    
+                        <p set:html={SERVICES_INTRO_DESCRIPTION}></p>
+                    </div>
+                </div>
+                
+                <div class="division" id="indoor">
+                    <h2>Interior Cleaning Services</h2>
+
+                    <p set:html={INTERIOR_SERVICES_DESCRIPTION}></p>
+
+                    <div class="flex">
+                        {
+                            services.map((services) => (
+                                <>
+                                {services.data.type === "indoor" ? (
+                                <section class="panel reveal" id={(services.data.title).toLowerCase().replace(/\s+/g, '-')}>
+                                        <div class="ctnr">
+                                            <div class="content">
+                                                <h3>
+                                                    <a href={`/services/${services.slug}`} aria-label={`Read more about ${services.data.title}`}>
+                                                        {services.data.title}
+    
+                                                        <span class="arrow">
+                                                            <span></span>
+                                                        </span>
+                                                    </a>
+                                                </h3>
+    
+                                                <p class="description">{services.data.description}</p>
+
+                                                <a href="/contact/" class="main cta" aria-label="Get a free quote for our cleaning services">Get a free quote</a>
+                                            </div>
+                                            
+                                            <a href={`/services/${services.slug}`} class="image" aria-label={`Read more about ${services.data.title}`} title={`Read more about ${services.data.title} Cleaning Services`}>
+                                                <img src={services.data.image} loading="lazy" alt={`Photo of ${services.data.title} cleaning service`}/>
+                                            </a>
+                                        </div>
+                                    </section>
+                                ): null}
+                                    
+                                </>
+                            ))
+                        }
+                    </div>
+                </div>
+
+                <hr>
+                
+                <div class="division" id="external">
+                    <h2>Exterior Cleaning Services</h2>
+
+                    <p set:html={EXTERIOR_SERVICES_DESCRIPTION}></p>
+
+                    <div class="flex">
+                        {
+                            services.map((services) => (
+                                <>
+                                {services.data.type === "external" ? (
+                                <section class="panel reveal" id={(services.data.title).toLowerCase().replace(/\s+/g, '-')}>
+                                        <div class="ctnr">
+                                            <div class="content">
+                                                <h3>
+                                                    <a href={`/services/${services.slug}`} aria-label={`Read more about ${services.data.title}`}>{services.data.title}
+    
+                                                    <span class="arrow">
+                                                        <span></span>
+                                                    </span>
+                                                    </a>
+                                                </h3>
+    
+                                                <p class="description">{services.data.description}</p>
+
+                                                <a href="/contact/" class="main cta" aria-label="Get a free quote for our cleaning services">Get a free quote</a>
+                                            </div>
+                                            
+                                            <a href={`/services/${services.slug}`} class="image" aria-label={`Read more about ${services.data.title}`} title={`Read more about ${services.data.title} Cleaning Services`}>
+                                                <img src={services.data.image} loading="lazy" alt={`Photo of ${services.data.title} cleaning service`}/>
+                                            </a>
+                                        </div>
+                                    </section>
+                                ): null}
+                                    
+                                </>
+                            ))
+                        }
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <ContactSection />
+
+        <Footer />
+
+        <Schema
+            item={{
+                "@context": "https://schema.org",
+                "@type": "LocalBusiness",
+                "name": "The Clean Network",
+                "image": "/og/social-image.jpg",
+                "@id": currentURL,
+                "url": currentURL,
+                "telephone": [
+                    "+4402034110275"
+                ],
+                "address": {
+					"@type": "PostalAddress",
+					"streetAddress": "6-8 Knights Court",
+                    "postalCode": "EC1M 4NH",
+					"addressLocality": "London",
+					"addressRegion": "GB",
+					"addressCountry": "UK"
+                }  
+            }}
+        />
+    </body>
+</html>

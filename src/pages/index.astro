@@ -1,0 +1,425 @@
+---
+import Layout from "../layouts/HomeLayout.astro";
+// import MapSwitch from "../components/MapSwitch.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import ContactSection from "../components/ContactSection.astro"
+import ContactBox from "../components/ContactBox.astro";
+import "../styles/button-ctnr.css";
+import "../styles/home.css"
+
+import { Schema } from "astro-seo-schema"
+
+import { getCollection } from "astro:content";
+
+// const services = await getCollection("services");
+// const sectors = await getCollection("sectors");
+const testimonials = await getCollection("testimonials");
+
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_H1, INTRO_H2, TEXT_BLOCK, SERVICES_SECTION_DESCRIPTION, SECTORS_SECTION_DESCRIPTION, LOCATIONS_SECTION_DESCRIPTION, FULL_ADDRESS, LONDON_PHONE_NO, LONDON_PHONE_NO_HREF } from "../consts";
+
+const benefits = (await getCollection('benefits')).sort((a, b) => {
+    // Check if both items have an 'order' property
+    if (a.data.order !== undefined && b.data.order !== undefined) {
+        return a.data.order - b.data.order; // Sort by 'order' if both have it
+    } else if (a.data.order !== undefined) {
+        return -1; // 'a' has 'order', but 'b' doesn't, so 'a' comes first
+    } else if (b.data.order !== undefined) {
+        return 1; // 'b' has 'order', but 'a' doesn't, so 'b' comes first
+    } else {
+        // Both 'a' and 'b' don't have 'order', fallback to sorting by 'title'
+        return a.data.title.localeCompare(b.data.title);
+    }
+});
+---
+
+<Layout title={SITE_TITLE} description={SITE_DESCRIPTION}  keywords={SITE_KEYWORDS}>
+
+	<Header />
+	<main>
+		<section class="intro default_bg">
+			<div class="ctnr">
+				<div class="content reveal">
+					<h1 set:html={SITE_H1}></h1>
+
+					<h2 set:html={INTRO_H2}></h2>
+
+					<div class="bt_ctnr flex">
+						<div class="ctas flex">
+							<a href="/services/" class="know_our_services" aria-label="Find out more about our services">Find out more</a>
+					
+							<a href="#contact" class="cta" aria-label="Get a quote">Get a Quote</a>
+						</div>
+					
+						<div class="flex column">
+							<a href={`tel:${LONDON_PHONE_NO_HREF}`} aria-label="Call us"><span>London:</span> {LONDON_PHONE_NO}</a>
+					
+							<!-- <a href="tel:+44-0121-3927529"><span>Birmingham:</span> 0121 3927529</a> -->
+						</div>
+					</div>
+				</div>
+
+				<div class="showcase reveal">
+					<picture>
+						<source media="(min-width:850px)" srcset="/images/office01.webp">
+						<source srcset="/images/office01-min.webp">
+						<img src="/images/office01.jpg" alt="The Clean Network logo" width="414" height="300">
+					</picture>
+				</div>
+
+				<a href="#scroll" class="scroll_bt" title="Scroll for more" aria-label="Click to scroll for more"><span></span></a>
+			</div>
+		</section>
+
+		<section class="benefits">
+			<div class="ctnr">
+				<h3>Why The Clean Network</h3>
+
+				<p>{benefits.length} reasons to choose <b>The Clean Network</b> cleaning services:</p>
+
+				<div class="bullets">
+					{
+						benefits.map((benefits) => (
+							<>
+								<div class="box reveal">
+									{benefits.data.icon == "" ? "" : (<img src={benefits.data.icon} class="icon" alt={`${(benefits.data.title).replace( /(<([^>]+)>)/ig, '')} icon`}/>)}
+									
+									<h4 set:html={benefits.data.title}class="title"></h4>
+								</div>
+							</>
+						))
+					}
+				</div>
+			</div>
+				
+			<a href="#contact" class="main cta" aria-label="Get a free quote">Get a Free Quote</a>
+		</section>
+
+		<section class="clients reveal">
+			<div class="ctnr">
+				<h3>Our clients include...</h3>
+
+				<div class="content">
+					<img src="/client-logos/apptio.png" alt="Apptio logo" width="152" height="80"/>
+
+					<img src="/client-logos/outreach.png" alt="Outreach logo" width="152" height="80"/>
+
+					<picture>
+						<source srcset="/client-logos/the-salvation-army.webp">
+						<img src="/client-logos/the-salvation-army.png" alt="The Salvation Army logo" width="72" height="80">
+					</picture>
+
+					<img src="/client-logos/spire-healthcare.png" alt="Spire Healthcare logo" width="152" height="80"/>
+
+					<picture>
+						<source srcset="/client-logos/xero.webp">
+						<img src="/client-logos/xero.png" alt="Xero logo" width="80" height="80">
+					</picture>
+				</div>
+			</div>
+		</section>
+
+		<div class="panel_ctnr reveal" id="scroll">
+			<section class="services panel">
+				<div class="ctnr">
+					<div class="cta_ctnr">
+						<a href="/services/" class="cta" aria-label="View all services"><span></span> All services</a>
+					</div>
+
+					<div class="content">
+						<a href="/services/" aria-label="View all services"><h3>Services</h3></a>
+	
+						<p set:html={SERVICES_SECTION_DESCRIPTION}></p>
+	
+						<!-- <hr>
+	
+						<div class="subsets">
+							<div>
+								<a href="/services/#indoor" class="heading indoor"
+									>Indoor Cleaning <span class="icon"></span></a
+								>
+	
+								{
+									services.map((services) => (
+										<>
+											{services.data.type === "indoor" ? (
+												<a
+													href={`/services/${services.slug}/`}
+												>
+													{services.data.title}
+												</a>
+											) : null}
+										</>
+									))
+								}
+							</div>
+	
+							<hr />
+	
+							<div>
+								<a href="/services/#external" class="heading outdoor"
+									>External Cleaning <span class="icon"></span></a
+								>
+	
+								{
+									services.map((services) => (
+										<>
+											{services.data.type === "external" ? (
+												<a
+													href={`/services/${services.slug}/`}
+												>
+													{services.data.title}
+												</a>
+											) : null}
+										</>
+									))
+								}
+							</div>
+						</div> -->
+					</div>
+	
+					<a href="/services/" aria-label="View all services" class="image">
+						<picture>
+							<source media="(min-width:850px)" srcset="/images/office02.webp">
+							<source srcset="/images/office02-min.webp">
+							<img src="/images/office02.jpg" alt="Office Photo" width="414" height="300">
+						</picture>
+					</a>
+				</div>
+			</section>
+	
+			<section class="sectors panel reveal">
+				<div class="ctnr">
+					<div class="cta_ctnr">
+						<a href="/sectors/" class="cta" aria-label="View all sectors"><span></span> All sectors</a>
+					</div>
+
+					<div class="content">
+						<a href="/sectors/" aria-label="View all sectors"><h3>Sectors</h3></a>
+	
+						<p set:html={SECTORS_SECTION_DESCRIPTION}></p>
+	
+						<!-- <hr>
+	
+						<div class="subsets">
+							<div>
+								{
+									sectors.map((sectors) => (
+										<>
+											<a
+												href={`/sectors/${sectors.slug}/`}
+											>
+												{sectors.data.title}
+											</a>
+										</>
+									))
+								}
+							</div>
+						</div> -->
+					</div>
+	
+					<a href="/sectors/" aria-label="View all sectors" class="image">
+						<picture>
+							<source media="(min-width:850px)" srcset="/images/office03.webp">
+							<source srcset="/images/office03-min.webp">
+							<img src="/images/office03.jpg" alt="Office Photo" width="415" height="300">
+						</picture>
+					</a>
+				</div>
+			</section>
+
+			<section class="text reveal">
+				<h3>Daily Office Cleaning Services London</h3> 
+
+				<p><strong>Office cleaning</strong> is now more important than ever due to the recent pandemic. We want your employees to feel at ease about coming into the workplace.</p>
+				
+				<p><strong>Our daily office cleaning services are provided 7 days a week</strong> – and take place inside or outside of office hours as you require.</p>
+				
+				<p>You can also choose to include <b>weekly, monthly or seasonal tasks</b> from cleaning glass partitions to clearing office kitchen fridges.</p>
+				
+				<p>We also understand that no two clients are the same, <b>we tailor our office cleaning contracts accordingly.</b></p>
+				
+				<p>Whether it’s a <b>large office</b> in London which requires a large cleaning contract with many hours daily or a <b>smaller office</b> in South West London which only needs attention for a few hours a week, <b>we create and deliver a cost-effective contract to suit you and your team.</b></p>
+				
+				<a href="#contact" class="main cta" aria-label="Get a free quote">Get a Free Quote</a>
+			</section>
+		</div>
+
+		<section class="locations panel reveal" id="locations">
+			<div class="ctnr">
+				<div class="content">
+					<h3>Location</h3>
+
+					<p set:html={LOCATIONS_SECTION_DESCRIPTION}></p>
+
+					<a href="/locations/" class="cta" aria-label="See our location"><span></span> Our Location</a>
+				</div>
+
+				<div class="image reveal">
+					<picture>
+						<source media="(min-width:850px)" srcset="/images/customer01.webp">
+						<source srcset="/images/customer01-min.webp">
+						<img src="/images/customer01.jpg" alt="Customer Photo" width="415" height="300">
+					</picture>
+				</div>
+			</div>
+		</section>
+
+		<section class="testimonials">
+			<script>
+				import "../scripts/tiny-slider.js"
+				import "../styles/tiny-slider.css"
+			</script>
+
+			<div class="ctnr">
+				<div class="flex center">
+					<h3>What our clients have been saying</h3>
+
+					<div class="quotes"></div>
+				</div>
+
+				<div class="slider">
+					{
+						testimonials.map((testimonials) => (
+							<>
+								<div class="box">
+									<div class="ctnr">
+										<div class="profile">
+											<img src={testimonials.data.avatar} alt={`${testimonials.data.name}'s avatar'`}/>
+
+											<div class="flex">
+												<p class="name">{testimonials.data.name}</p>
+
+												<p class="description">{testimonials.data.description}</p>
+											</div>
+										</div>
+										
+										<div class="content">
+											<p class="heading">{testimonials.data.heading}</p>
+											
+											<blockquote>
+												{testimonials.data.paragraph01 == "" ? null : (<p set:html={testimonials.data.paragraph01}></p>)}
+												
+												{testimonials.data.paragraph02 == "" ? null : (<p set:html={testimonials.data.paragraph02}></p>)}
+												
+												{testimonials.data.paragraph03 == "" ? null : (<p set:html={testimonials.data.paragraph03}></p>)}
+											</blockquote>
+
+											<div class="gradient"></div>
+										</div>
+									</div>
+								</div>
+							</>
+						))
+					}
+				</div>
+			</div>
+
+			<Schema
+				item={
+					{
+						"@context": "https://schema.org/",
+						"@type": "Review",
+						"itemReviewed": {
+						"@type": "LocalBusiness",
+						"image": "/og/social-image.jpg",
+						"name": "The Clean Network",
+						"telephone": "+4402034110275",
+						"address" :{
+							"@type": "PostalAddress",
+							"streetAddress": "6-8 Knights Court",
+							"addressLocality": "London",
+							"postalCode": "EC1M 4NH",
+							"addressCountry": "UK"
+							}
+						},
+						"author": {
+							"@type": "Organization",
+							"name": "The Clean Network"
+						},
+						"publisher": {
+						"@type": "Organization",
+						"name": "The Clean Network"
+						}
+				}}
+			/>
+		</section>
+
+		<!-- <section class="rates">
+			<div class="ctnr">
+				<h3>Service Rates</h3>
+
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis ad sed quod delectus quasi optio, earum quidem explicabo?</p>
+
+				<a href="#" class="cta">Simulate with our <b>Rate Calculator</b></a>
+			</div>
+		</section> -->
+
+		<ContactSection />
+
+		<section class="find_us panel">
+			<div class="ctnr">
+				<div class="content reveal">
+					<h3>Find us</h3>
+
+					<p>You'll find us right at the heart of the city, ready to serve the vibrant London community. Our location:</p>
+
+					<div class="flex column">
+						<address><strong>London</strong>: {FULL_ADDRESS}</address>
+	
+						<!-- <address><strong>Birmingham</strong>: 37 Regents Place, Birmingham, B3 1UG</address> -->
+					</div>
+
+					<hr>
+
+					<ContactBox />
+				</div>
+
+				<div class="map reveal">
+					<!-- <MapSwitch/> -->
+
+					<div class="iframe_ctnr">
+						<noscript>You need to enable JavaScript on your browser to see this content.</noscript>
+
+						<iframe width="100%" height="100%" title="The Clean Network Locations map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" loading="lazy" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=EC1M%204NH+(The%20Clean%20Network)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<Footer />
+</Layout>
+
+<script>
+	const queryString = window.location.search;
+	const urlParams = new URLSearchParams(queryString);
+
+	if(urlParams.get('redirected') === 'true') {
+		const redirWarning = document.createElement('aside')
+		redirWarning.classList.add('redir_warning')
+		redirWarning.innerHTML = "<p><span>Page not found!</span> You have been redirected to the home page.</p><button type='button' aria-label='close warning'><?xml version='1.0' encoding='UTF-8'?><svg id='Camada_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 23.21 23.21'><defs><style>.cls-1{fill:none;stroke:#2f363c;stroke-miterlimit:10;stroke-width:5px;}</style></defs><line class='cls-1' x1='2.12' y1='2.12' x2='21.09' y2='21.09'/><line class='cls-1' x1='21.09' y1='2.12' x2='2.12' y2='21.09'/></svg></button>"
+
+		document.body.appendChild(redirWarning)
+
+		setTimeout(() => {
+			redirWarning.classList.add('show')
+		}, 300);
+
+		document.querySelector('.redir_warning button').addEventListener('click', function() {
+			redirWarning.classList.remove('show')
+			clearTimeout(autoHideBt)
+
+			setTimeout(() => {
+				document.querySelector('.redir_warning').remove()
+			}, 1400);
+		})
+
+		let autoHideBt = setTimeout(() => {
+			redirWarning.classList.remove('show')
+
+			setTimeout(() => {
+				document.querySelector('.redir_warning').remove()
+			}, 1400);
+		}, 6000);
+	}
+</script>

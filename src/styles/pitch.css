@@ -1,0 +1,632 @@
+
+:root {
+    --pitch-width: clamp(9rem, 82vw, var(--max-width));
+}
+
+body {
+    line-height: 1.4;
+}
+
+header {
+    /* background-color: var(--light-a); */
+    backdrop-filter: blur(0.3rem);
+    /* height: calc(var(--header-height) * 1.6); */
+    z-index: 4;    padding-top: 4rem;
+}
+
+/* header > .ctnr {
+    width: var(--base-width);
+    margin-inline: auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+} */
+
+.logo_anchor > picture, .logo_anchor img {
+    height:100%;
+}
+
+section {
+    padding-block: clamp(3rem, 16vw, 10rem) 0;
+    box-sizing: border-box;
+}
+
+section > .ctnr {
+    width: var(--pitch-width);
+    margin-inline: auto;
+}
+
+section h3 ~ hr, section h4 ~ hr {
+    width: 7rem;
+    margin-block: clamp(4rem, 15vw, 7rem) 3rem;
+    height: 0.3rem;
+    border: unset;
+    background-color: var(--light-a);
+    margin-inline: unset;
+    border-radius: 0.3rem;
+}
+
+section .content > .flex {
+    flex-flow: row wrap;
+    gap: clamp(0rem, 3vw, 5rem);
+}
+
+section .content .box {
+    flex: 1;
+    min-width: 19rem;
+    padding: 3rem 3rem 3rem;
+    background-color: var(--light-d);
+    box-sizing: border-box;
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+}
+
+section .content .box p {
+    font-size: clamp(1.7rem, 4vw, 1.8rem);
+    font-weight: 450;
+    color: var(--grey-b);
+}
+
+section .content .box p:not(:first-of-type) {
+    margin-top: 1rem;
+}
+
+section .content .box h4 {
+    margin-top: 0;
+}
+
+.intro {
+    padding-bottom: clamp(3rem, 16vw, 10rem);
+    background-color: var(--light-d);
+    color: var(--primary);
+    min-height: clamp(30rem, 80vh, 65rem);
+    min-height: clamp(30rem, 80svh, 65rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    border-bottom: 0.1rem solid #CDF;
+    background-image: url(/images/office-bg01.jpg), linear-gradient(-15deg, rgb(72 172 255 / 40%), transparent clamp(12rem, 60vw, 35rem));
+    background-image: linear-gradient(-15deg, rgb(72 172 255 / 40%), transparent clamp(12rem, 60vw, 35rem)), image-set(url(/images/office-bg01.webp) , url(/images/office-bg01.jpg) );
+    background-blend-mode: luminosity;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.intro .logo {
+    width: clamp(1rem,25vmin,12rem);
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.intro h1 {
+    font-size: clamp(1rem, 16vw, 14rem);
+    font-weight: 600;
+    max-width: 90rem;
+    line-height: 1;
+    margin-block: 2rem 1rem;
+}
+
+.intro h1 sup {
+    font-size: clamp(1rem, 6vw, 4.5rem);
+    color: var(--primary-c);
+    font-weight: 500;
+    transform: translateY(-40%);
+    display: inline-block;
+}
+
+.intro h2 {
+    font-size: clamp(1rem, 6vw, 3rem);
+    font-weight: 450;
+}
+
+/* p.url {
+
+} */
+
+a.down {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+a.down span {
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+    background-color: var(--primary-b);
+    width: 3.5rem;
+    height: 3.5rem;
+    transition: transform 0.4s ease;
+    -webkit-transition: transform 0.4s ease;
+    -moz-transition: transform 0.4s ease;
+    -ms-transition: transform 0.4s ease;
+    -o-transition: transform 0.4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a.down:hover span {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transition: transform 0.1s ease;
+    -webkit-transition: transform 0.1s ease;
+    -moz-transition: transform 0.1s ease;
+    -ms-transition: transform 0.1s ease;
+    -o-transition: transform 0.1s ease;
+}
+
+a.down span svg {
+    width: 38%;
+}
+
+.minor_subheader {
+    background-color: var(--light-d);
+    padding: clamp(2rem, 6vw, 4rem) clamp(3rem, 5vw, 6rem);
+    box-sizing: border-box;
+    color: var(--primary);
+    border-radius: 0.5rem;
+    border-left: 0.6rem solid var(--primary);
+    margin-bottom: 3.5rem;
+}
+
+.minor_subheader h2 {
+    font-size: clamp(4rem, 11vw, 7rem);
+    line-height: 1.1;
+}
+
+.minor_subheader p {
+    font-size: clamp(1.7rem, 4vw, 2rem);
+    margin-top: 1rem;
+}
+
+.minor_subheader p b {
+    font-weight: 500;
+    color: var(--primary-a);
+}
+
+.subheader {
+    background-color: var(--primary);
+    color: var(--light);
+    border-left: unset;
+    margin-bottom: clamp(4rem, 15vw, 6rem);
+    width: calc(var(--pitch-width) + ((100% - var(--pitch-width)) / 2));
+    margin-left: auto;
+    padding-inline: 1rem 4rem;
+    text-align: right;
+    box-sizing: border-box;
+    min-height: clamp(10rem, 55vmax, 60rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: linear-gradient(215deg, #ffffffaa 0, transparent 50%), url(/LPs/pitch-deck/bg01.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll, fixed;
+    border-radius: clamp(1rem, 4vw, 15rem) 0 0 clamp(5rem, 15vw, 15rem);
+    -webkit-border-radius: clamp(1rem, 4vw, 15rem) 0 0 clamp(5rem, 15vw, 15rem);
+    -moz-border-radius: clamp(1rem, 4vw, 15rem) 0 0 clamp(5rem, 15vw, 15rem);
+    -ms-border-radius: clamp(1rem, 4vw, 15rem) 0 0 clamp(5rem, 15vw, 15rem);
+    -o-border-radius: clamp(1rem, 4vw, 15rem) 0 0 clamp(5rem, 15vw, 15rem);
+}
+
+.subheader h2 {
+    font-size: clamp(4rem, 15vw, 14rem);
+    line-height: 1;
+    margin-bottom: 2rem;
+    width: unset;
+    max-width: 100rem;
+    /* text-shadow: -1.8rem -1.2rem 2.5rem var(--primary-b); */
+}
+
+.subheader h2.smaller {
+    font-size: clamp(4rem, 13vw, 14rem);
+}
+
+.subheader h2 sup {
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    color: var(--light);
+    font-weight: 300;
+    transform: translateY(-40%);
+    display: inline-block;
+}
+
+.subheader p {
+    font-size: clamp(1.6rem, 5vw, 2.1rem);
+    font-weight: 450;
+    margin-top: 1rem;
+    line-height: 1.5;
+    margin-left: auto;
+}
+
+.subheader p b {
+    font-weight: 450;
+    background-color: var(--primary-b);
+}
+
+.operations .subheader p {
+    max-width: clamp(10rem, 85%, 50rem);
+}
+
+h2 sup {
+
+}
+
+ul {
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+    padding: 1rem 1.6rem;
+    border-radius: 0.4rem;
+    border: 0.2rem solid var(--light-a);
+    font-size: clamp(1.7rem, 4vw, 1.8rem);
+    position: relative;
+    box-sizing: border-box;
+    font-weight: 450;
+}
+
+li:hover:before {
+    border-color: var(--highlight);
+    transition: border-color 0s ease;
+    -webkit-transition: border-color 0s ease;
+    -moz-transition: border-color 0s ease;
+    -ms-transition: border-color 0s ease;
+    -o-transition: border-color 0s ease;
+}
+
+li::before {
+    content: '';
+    position: absolute;
+    left: -0.1rem;
+    top: -0.1rem;
+    border-radius: 0.2rem 0 0 0;
+    -webkit-border-radius: 0.2rem 0 0 0;
+    -moz-border-radius: 0.2rem 0 0 0;
+    -ms-border-radius: 0.2rem 0 0 0;
+    -o-border-radius: 0.2rem 0 0 0;
+    border-top: 0.4rem solid var(--primary-b);
+    border-left: 0.4rem solid var(--primary-b);
+    width: 0.6rem;
+    height: 0.6rem;
+    transition: border-color 0.5s ease;
+    -webkit-transition: border-color 0.5s ease;
+    -moz-transition: border-color 0.5s ease;
+    -ms-transition: border-color 0.5s ease;
+    -o-transition: border-color 0.5s ease;
+}
+
+li b {
+    font-weight: 500;
+    color: var(--primary-a);
+}
+
+.team_structure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-block: 2rem 0;
+    font-weight: 500;
+    background-color: var(--light-a);
+    padding: clamp(3rem, 12vw, 6rem) clamp(3rem, 5vw, 6rem);
+    border-radius: 2rem;
+}
+
+.team_structure .layer {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* gap: 2rem; */
+}
+
+.team_structure hr {
+    height: clamp(2rem, 4vw, 2.5rem);
+    width: 0.2rem;
+    background-color: var(--primary);
+}
+
+.team_structure .positions {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    border-radius: 0.8rem;
+    background-color: var(--light-a);
+    justify-content: center;
+    border: 0.2rem solid #FFF;
+}
+
+
+
+.team_structure .sector {
+    background-color: var(--primary);
+    color: var(--light);
+    width: fit-content;
+    padding: 1rem 2rem;
+    font-weight: 400;
+    border-radius: 0.4rem;
+}
+
+.team_structure .positions p {
+    /*flex: 1;
+    */min-width: clamp(1rem, 50vw, 20rem);
+    color: var(--grey-a);
+    font-size: clamp(1.5rem, 5vw, 1.8rem);
+    width: fit-content;
+    background-color: var(--light);
+    border-radius: 3rem;
+    padding: 0.5rem;
+    border: 0.2rem solid var(--light);
+    transition: border-color 0.4s 0.1s ease;
+    -webkit-transition: border-color 0.4s 0.1s ease;
+    -moz-transition: border-color 0.4s 0.1s ease;
+    -ms-transition: border-color 0.4s 0.1s ease;
+    -o-transition: border-color 0.4s 0.1s ease;
+    box-sizing: border-box;
+}
+
+.team_structure .positions p:hover {
+    border-color: #CDF;
+    transition: border-color 0s 0s ease;
+    -webkit-transition: border-color 0s 0s ease;
+    -moz-transition: border-color 0s 0s ease;
+    -ms-transition: border-color 0s 0s ease;
+    -o-transition: border-color 0s 0s ease;
+}
+
+.team_structure .positions.generic p {
+    width: clamp(4.5rem, 13vw, 6rem);
+    min-width: unset;
+    height: clamp(4.5rem, 13vw, 6rem);
+    background-image: url(/icons/profile.svg);
+    background-size: 35%;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: unset;
+}
+
+.operations {
+    /* padding-top: 0; */
+}
+
+h2 .small {
+    color: var(--primary-a);
+    display: block;
+    font-size: 0.55em;
+}
+
+section .content h3 {
+    font-size: clamp(3.4rem, 11vw, 4rem);
+    color: var(--primary);
+    margin-block: 0 1rem;
+    line-height: 1.1;
+}
+
+section .content h3 .icon {
+    width: clamp(2.2rem, 3vw, 2.6rem);
+    height: clamp(2.2rem, 3vw, 2.6rem);
+    margin-right: 1rem;
+}
+
+section .content h3 .icon path {
+    fill:#2ea3f2;stroke-width:0px;
+}
+
+section .content h4 {
+    font-size: clamp(2.5rem, 8vw, 2.5rem);
+    color: var(--primary-a);
+    margin-block: 2rem 1rem;
+    line-height: 1.2;
+    font-weight: 550;
+}
+
+section .content h3 + p {
+    margin-bottom: 2rem;
+    color: var(--grey-c);
+    font-size: clamp(1.7rem, 4.5vw, 2rem);
+    max-width: 100rem;
+    font-weight: 450;
+}
+
+section .content h3 + p b {
+    color: var(--primary-a);
+    font-weight: 500;
+}
+
+section .content p {
+    font-size: clamp(1.5rem, 4vw, 1.8rem);
+}
+
+ul.boxes {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2rem;
+    margin-top: 2.5rem;
+    color: var(--grey-b);
+}
+
+ul.boxes li {
+    flex: 1;
+    min-width: clamp(19rem, 50vw, 33rem);
+    padding: 2rem clamp(2rem, 2vw, 3rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.why_tcn ul.boxes li {
+    min-width: clamp(19rem, 40vw, 50rem);
+}
+
+.why_tcn .content p {
+    font-size: clamp(1.5rem, 4.5vw, 2rem);
+}
+
+.clients {
+
+}
+
+.clients .gallery {
+    display: flex;
+    flex-direction: row;
+    gap: clamp(2rem,9vw,5rem);
+    overflow: auto;
+    padding: 0 calc((100% - var(--pitch-width)) / 2) clamp(2rem,4vw,3.5rem);
+}
+
+.clients .gallery img {
+    min-width: clamp(10rem,50vw,20rem);
+    max-height: clamp(10rem,70vw,11rem);
+    width: fit-content;
+    max-width: clamp(10rem,50vw,20rem);
+}
+
+.growth_plans {
+
+}
+
+.growth_plans h2 {
+    font-size: clamp(4rem, 15vw, 11rem);
+}
+
+.growth_plans .subheader p {
+    max-width: 70rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:850px) {
+    .subheader {
+        margin-left: unset;
+        padding-left: calc((100% - var(--pitch-width)) / 2);
+        text-align: left;
+        border-radius: 0 clamp(1rem, 4vw, 2rem) clamp(5rem, 15vw, 11rem) 0;
+        -webkit-border-radius: 0 clamp(1rem, 4vw, 2rem) clamp(5rem, 15vw, 11rem) 0;
+        -moz-border-radius: 0 clamp(1rem, 4vw, 2rem) clamp(5rem, 15vw, 11rem) 0;
+        -ms-border-radius: 0 clamp(1rem, 4vw, 2rem) clamp(5rem, 15vw, 11rem) 0;
+        -o-border-radius: 0 clamp(1rem, 4vw, 2rem) clamp(5rem, 15vw, 11rem) 0;
+}
+
+    .clients .gallery {
+        justify-content: center;
+    }
+
+    .subheader p {
+        margin-left: unset;
+    }
+
+    .team_structure .positions {
+        border: unset;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+        position: relative;
+        flex-flow: row;
+        padding: 2.3rem 0 0;
+        background-color: transparent;
+    }
+
+    .team_structure hr {
+        background-color: transparent;
+        background-image: linear-gradient(0deg, var(--primary), transparent);
+    }
+
+    .team_structure .positions p {
+        border-radius: 8rem;
+        padding: 1rem clamp(0rem, 2vw, 3rem);
+        position: relative;
+        min-width: unset;
+        flex: unset;
+        width: clamp(5rem, 14vw, 20rem);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--light);
+    }
+
+    .team_structure .positions p::after, .team_structure .positions p::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-inline: auto;
+        background-color: var(--primary);
+    }
+
+    .team_structure .positions:not(:first-of-type) p::before {
+        top: -0.4rem;
+        width: 0.7rem;
+        height: 0.7rem;
+        border-radius: 1rem;
+    }
+
+    .team_structure .positions:not(:first-of-type) p::after {
+        top: 0;
+        height: 2.3rem;
+        width: 0.2rem;
+        transform: translateY(-100%);
+    }
+
+    .team_structure .positions:not(:first-of-type):before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 0.2rem;
+        width: 100%;
+        background-image: linear-gradient(90deg, transparent, var(--primary) 7rem, var(--primary) calc(100% - 7rem), transparent);
+    }
+
+    .team_structure .layer {
+        margin-bottom: 2rem;
+    }
+}
