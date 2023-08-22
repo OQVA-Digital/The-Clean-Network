@@ -27,7 +27,7 @@ header {
 }
 
 section {
-    padding-block: clamp(3rem, 16vw, 10rem) 0;
+    padding-block: clamp(3rem, 16vw, 8rem) 0;
     box-sizing: border-box;
 }
 
@@ -55,7 +55,7 @@ section .content .box {
     flex: 1;
     min-width: 19rem;
     padding: 3rem 3rem 3rem;
-    background-color: var(--light-d);
+    border: 0.2rem solid var(--light-a);
     box-sizing: border-box;
     border-radius: 0.4rem;
     -webkit-border-radius: 0.4rem;
@@ -66,8 +66,9 @@ section .content .box {
 
 section .content .box p {
     font-size: clamp(1.7rem, 4vw, 1.8rem);
-    font-weight: 450;
+    font-weight: 400;
     color: var(--grey-b);
+    line-height: 1.5;
 }
 
 section .content .box p:not(:first-of-type) {
@@ -79,7 +80,7 @@ section .content .box h4 {
 }
 
 .intro {
-    padding-bottom: clamp(3rem, 16vw, 10rem);
+    padding-bottom: clamp(3rem, 16vw, 12rem);
     background-color: var(--light-d);
     color: var(--primary);
     min-height: clamp(30rem, 80vh, 65rem);
@@ -94,11 +95,10 @@ section .content .box h4 {
     background-blend-mode: luminosity;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
 }
 
 .intro .logo {
-    width: clamp(1rem,25vmin,12rem);
+    width: clamp(1rem,24vmin,12rem);
     display: flex;
     height: 100%;
     align-items: center;
@@ -121,7 +121,7 @@ section .content .box h4 {
 }
 
 .intro h2 {
-    font-size: clamp(1rem, 6vw, 3rem);
+    font-size: clamp(1rem, 4.8vw, 3rem);
     font-weight: 450;
 }
 
@@ -208,7 +208,7 @@ a.down span svg {
     margin-bottom: clamp(4rem, 15vw, 6rem);
     width: calc(var(--pitch-width) + ((100% - var(--pitch-width)) / 2));
     margin-left: auto;
-    padding-inline: 1rem 4rem;
+    padding-inline: 2rem 4rem;
     padding-block: clamp(2rem, 12vw, 5rem);
     text-align: right;
     box-sizing: border-box;
@@ -427,9 +427,10 @@ section .content h3 {
 }
 
 section .content h3 .icon {
-    width: clamp(2.2rem, 3vw, 2.6rem);
-    height: clamp(2.2rem, 3vw, 2.6rem);
+    width: clamp(2.2rem, 8vw, 3rem);
+    height: clamp(2.2rem, 6vw, 2.6rem);
     margin-right: 1rem;
+    margin-bottom: 0.2rem;
 }
 
 section .content h3 .icon path {
@@ -437,8 +438,8 @@ section .content h3 .icon path {
 }
 
 section .content h4 {
-    font-size: clamp(2.5rem, 8vw, 2.5rem);
-    color: var(--primary-a);
+    font-size: clamp(2.5rem, 8vw, 2.8rem);
+    color: var(--grey-c);
     margin-block: 2rem 1rem;
     line-height: 1.2;
     font-weight: 550;
