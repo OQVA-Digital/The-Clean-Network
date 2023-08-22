@@ -1,4 +1,8 @@
 
+.intro {
+    position: relative;
+}
+
 .intro img {
     height: clamp(5rem,38vmin,36rem);
     object-fit: cover;
