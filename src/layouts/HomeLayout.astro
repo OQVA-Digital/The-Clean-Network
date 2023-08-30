@@ -8,6 +8,8 @@ import BaseHead from "../components/BaseHead.astro";
 import { Schema } from "astro-seo-schema"
 
 const currentURL = new URL(Astro.request.url)
+
+import CookieConsentBanner from "../components/CookieConsentBanner.astro";
 ---
 
 <!DOCTYPE html>
@@ -38,5 +40,7 @@ const currentURL = new URL(Astro.request.url)
 				}  
 			}}
 		/>
+		
+        <CookieConsentBanner></CookieConsentBanner>
 	</body>
 </html>

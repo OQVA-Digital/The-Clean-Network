@@ -1,0 +1,175 @@
+---
+
+---
+
+<div id="cookie-consent-banner" class="cookie-consent-banner">
+    <div class="flex">
+        <div class="content">
+            <h3>Cookie settings</h3>
+            <p>We use cookies to provide you with the best possible experience. They also allow us to analyze user behavior in order to constantly improve the website for you.</p>
+        </div>
+    
+        <div class="options">
+            <div class="bt_ctnr">
+                <button id="btn-accept-all" class="cookie-consent-button accept">Accept All</button>
+                <button id="btn-accept-some" class="cookie-consent-button accept_selection">Accept Selection</button>
+                <button id="btn-reject-all" class="cookie-consent-button reject">Reject All</button>
+            </div>
+        
+            <div class="cookie-consent-options">
+            <label><input id="consent-necessary" type="checkbox" value="Necessary" checked disabled>Necessary</label>
+            <label><input id="consent-analytics" type="checkbox" value="Analytics" checked>Analytics</label>
+            <label><input id="consent-preferences" type="checkbox" value="Preferences" checked>Preferences</label>
+            <label><input id="consent-marketing" type="checkbox" value="Marketing">Marketing</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    import "../scripts/consent.js"
+</script>
+
+<style>
+
+.cookie-consent-banner {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--primary-e);
+    color: var(--light);
+    padding: 2rem clamp(1.3rem,5vw,4rem) 2rem;
+    text-align: center;
+    z-index: 11;
+    margin-inline: auto;
+    border-top: 0.3rem solid var(--primary);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cookie-consent-banner > .flex {
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.cookie-consent-banner .content {
+    flex: 1;
+    min-width: 30rem;
+    max-width: 57rem;
+    height: fit-content;
+}
+
+.cookie-consent-banner .options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.cookie-consent-banner h3 {
+    /* color: var(--primary-c); */
+    font-size: clamp(1.6rem,7vw,3rem);
+    margin-bottom: 0.7rem;
+    font-weight: 600;
+    line-height: 1;
+    width: auto;
+}
+
+.cookie-consent-banner h3 + p {
+    font-weight: 400;
+    line-height: 1.4;
+    margin-inline: auto;
+    font-size: clamp(0.8rem,3.4vw,1.5rem);
+    /* max-width: 80vw; */
+}
+
+.cookie-consent-banner .bt_ctnr {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+.cookie-consent-button {
+    border: none;
+    padding: 0.9rem 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 500;
+    flex: 1;
+    transition: box-shadow 0.15s ease;
+    color: var(--primary-a);
+    border: 0.1rem solid transparent;
+}
+
+.cookie-consent-button:hover {
+    box-shadow: 0 0 1rem var(--primary-b);
+}
+
+.cookie-consent-button:active {
+    opacity: .5;
+}
+
+.cookie-consent-button.accept {
+    background-color: var(--light);
+    min-width: 100%;
+}
+
+.cookie-consent-button.accept_selection {
+    border-color: var(--primary);
+    color: var(--light);
+}
+
+.cookie-consent-button.reject {
+    background-color: var(--primary-a);
+    color: var(--light);
+}
+
+.cookie-consent-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cookie-consent-options label {
+    margin: 0 clamp(0rem, 1vw, 1rem);
+    font-size: 14px;
+}
+
+.cookie-consent-options input {
+    margin-right: 5px;
+}
+
+
+
+
+@media screen and (min-width:900px) {
+    .cookie-consent-button.accept {
+        min-width: unset;
+    }
+
+    .cookie-consent-button {
+        flex: unset;    
+        padding-inline: 3rem;
+    }
+
+    .cookie-consent-banner .content {
+        text-align: left;
+    }
+
+    .cookie-consent-banner > .flex {
+        justify-content: space-between;
+        max-width: var(--base-width);
+        margin-inline: auto;
+    }
+}
+
+</style>
