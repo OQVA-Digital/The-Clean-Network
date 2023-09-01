@@ -12,6 +12,6 @@
   "dependencies": {
     "@astrojs/sitemap": "^1.4.0",
     "astro": "^3.0.5",
-    "astro-seo-schema": "^2.2.0"
+    "astro-seo-schema": "^3.0.0"
   }
 }
