@@ -10,26 +10,9 @@ declare module 'astro:content' {
 
 declare module 'astro:content' {
 	export { z } from 'astro/zod';
-	export type CollectionEntry<C extends keyof AnyEntryMap> = AnyEntryMap[C][keyof AnyEntryMap[C]];
 
-	// TODO: Remove this when having this fallback is no longer relevant. 2.3? 3.0? - erika, 2023-04-04
-	/**
-	 * @deprecated
-	 * `astro:content` no longer provide `image()`.
-	 *
-	 * Please use it through `schema`, like such:
-	 * ```ts
-	 * import { defineCollection, z } from "astro:content";
-	 *
-	 * defineCollection({
-	 *   schema: ({ image }) =>
-	 *     z.object({
-	 *       image: image(),
-	 *     }),
-	 * });
-	 * ```
-	 */
-	export const image: never;
+	type Flatten<T> = T extends { [K: string]: infer U } ? U : never;
+	export type CollectionEntry<C extends keyof AnyEntryMap> = Flatten<AnyEntryMap[C]>;
 
 	// This needs to be in sync with ImageMetadata
 	export type ImageFunction = () => import('astro/zod').ZodObject<{
@@ -44,19 +27,16 @@ declare module 'astro:content' {
 				import('astro/zod').ZodLiteral<'tiff'>,
 				import('astro/zod').ZodLiteral<'webp'>,
 				import('astro/zod').ZodLiteral<'gif'>,
-				import('astro/zod').ZodLiteral<'svg'>
+				import('astro/zod').ZodLiteral<'svg'>,
 			]
 		>;
 	}>;
 
 	type BaseSchemaWithoutEffects =
 		| import('astro/zod').AnyZodObject
-		| import('astro/zod').ZodUnion<import('astro/zod').AnyZodObject[]>
+		| import('astro/zod').ZodUnion<[BaseSchemaWithoutEffects, ...BaseSchemaWithoutEffects[]]>
 		| import('astro/zod').ZodDiscriminatedUnion<string, import('astro/zod').AnyZodObject[]>
-		| import('astro/zod').ZodIntersection<
-				import('astro/zod').AnyZodObject,
-				import('astro/zod').AnyZodObject
-		  >;
+		| import('astro/zod').ZodIntersection<BaseSchemaWithoutEffects, BaseSchemaWithoutEffects>;
 
 	type BaseSchema =
 		| BaseSchemaWithoutEffects
@@ -87,7 +67,7 @@ declare module 'astro:content' {
 
 	export function getEntryBySlug<
 		C extends keyof ContentEntryMap,
-		E extends ValidContentEntrySlug<C> | (string & {})
+		E extends ValidContentEntrySlug<C> | (string & {}),
 	>(
 		collection: C,
 		// Note that this has to accept a regular string too, for SSR
@@ -112,7 +92,7 @@ declare module 'astro:content' {
 
 	export function getEntry<
 		C extends keyof ContentEntryMap,
-		E extends ValidContentEntrySlug<C> | (string & {})
+		E extends ValidContentEntrySlug<C> | (string & {}),
 	>(entry: {
 		collection: C;
 		slug: E;
@@ -121,7 +101,7 @@ declare module 'astro:content' {
 		: Promise<CollectionEntry<C> | undefined>;
 	export function getEntry<
 		C extends keyof DataEntryMap,
-		E extends keyof DataEntryMap[C] | (string & {})
+		E extends keyof DataEntryMap[C] | (string & {}),
 	>(entry: {
 		collection: C;
 		id: E;
@@ -130,7 +110,7 @@ declare module 'astro:content' {
 		: Promise<CollectionEntry<C> | undefined>;
 	export function getEntry<
 		C extends keyof ContentEntryMap,
-		E extends ValidContentEntrySlug<C> | (string & {})
+		E extends ValidContentEntrySlug<C> | (string & {}),
 	>(
 		collection: C,
 		slug: E
@@ -139,7 +119,7 @@ declare module 'astro:content' {
 		: Promise<CollectionEntry<C> | undefined>;
 	export function getEntry<
 		C extends keyof DataEntryMap,
-		E extends keyof DataEntryMap[C] | (string & {})
+		E extends keyof DataEntryMap[C] | (string & {}),
 	>(
 		collection: C,
 		id: E
@@ -188,106 +168,208 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"sectors": {
-"1-corporate-office-buildings.md": {
-	id: "1-corporate-office-buildings.md";
-  slug: "1-corporate-office-buildings";
+		"benefits": {
+"consistently-good-cleaning.md": {
+	id: "consistently-good-cleaning.md";
+  slug: "consistently-good-cleaning";
+  body: string;
+  collection: "benefits";
+  data: InferEntrySchema<"benefits">
+} & { render(): Render[".md"] };
+"environmental-innovators.md": {
+	id: "environmental-innovators.md";
+  slug: "environmental-innovators";
+  body: string;
+  collection: "benefits";
+  data: InferEntrySchema<"benefits">
+} & { render(): Render[".md"] };
+"established-20-years.md": {
+	id: "established-20-years.md";
+  slug: "established-20-years";
+  body: string;
+  collection: "benefits";
+  data: InferEntrySchema<"benefits">
+} & { render(): Render[".md"] };
+"ethical-employer-and-accredited.md": {
+	id: "ethical-employer-and-accredited.md";
+  slug: "ethical-employer-and-accredited";
+  body: string;
+  collection: "benefits";
+  data: InferEntrySchema<"benefits">
+} & { render(): Render[".md"] };
+"peace-of-mind.md": {
+	id: "peace-of-mind.md";
+  slug: "peace-of-mind";
+  body: string;
+  collection: "benefits";
+  data: InferEntrySchema<"benefits">
+} & { render(): Render[".md"] };
+};
+"sectors": {
+"architects-firms.md": {
+	id: "architects-firms.md";
+  slug: "architects-firms";
+  body: string;
+  collection: "sectors";
+  data: InferEntrySchema<"sectors">
+} & { render(): Render[".md"] };
+"corporate-office-buildings.md": {
+	id: "corporate-office-buildings.md";
+  slug: "corporate-office-buildings";
+  body: string;
+  collection: "sectors";
+  data: InferEntrySchema<"sectors">
+} & { render(): Render[".md"] };
+"financial-service-companies.md": {
+	id: "financial-service-companies.md";
+  slug: "financial-service-companies";
+  body: string;
+  collection: "sectors";
+  data: InferEntrySchema<"sectors">
+} & { render(): Render[".md"] };
+"law-firms.md": {
+	id: "law-firms.md";
+  slug: "law-firms";
+  body: string;
+  collection: "sectors";
+  data: InferEntrySchema<"sectors">
+} & { render(): Render[".md"] };
+"media-and-design-agencies.md": {
+	id: "media-and-design-agencies.md";
+  slug: "media-and-design-agencies";
+  body: string;
+  collection: "sectors";
+  data: InferEntrySchema<"sectors">
+} & { render(): Render[".md"] };
+"medical-and-dental.md": {
+	id: "medical-and-dental.md";
+  slug: "medical-and-dental";
+  body: string;
+  collection: "sectors";
+  data: InferEntrySchema<"sectors">
+} & { render(): Render[".md"] };
+"small-offices.md": {
+	id: "small-offices.md";
+  slug: "small-offices";
+  body: string;
+  collection: "sectors";
+  data: InferEntrySchema<"sectors">
+} & { render(): Render[".md"] };
+"technology-companies.md": {
+	id: "technology-companies.md";
+  slug: "technology-companies";
   body: string;
   collection: "sectors";
   data: InferEntrySchema<"sectors">
 } & { render(): Render[".md"] };
 };
 "services": {
-"01-floor.md": {
-	id: "01-floor.md";
-  slug: "01-floor";
+"air-ducts-and-vents.md": {
+	id: "air-ducts-and-vents.md";
+  slug: "air-ducts-and-vents";
   body: string;
   collection: "services";
   data: InferEntrySchema<"services">
 } & { render(): Render[".md"] };
-"02-desks-and-furniture.md": {
-	id: "02-desks-and-furniture.md";
-  slug: "02-desks-and-furniture";
+"bathrooms.md": {
+	id: "bathrooms.md";
+  slug: "bathrooms";
   body: string;
   collection: "services";
   data: InferEntrySchema<"services">
 } & { render(): Render[".md"] };
-"03-curtains-and-blinds.md": {
-	id: "03-curtains-and-blinds.md";
-  slug: "03-curtains-and-blinds";
+"bins-and-refuse-areas.md": {
+	id: "bins-and-refuse-areas.md";
+  slug: "bins-and-refuse-areas";
   body: string;
   collection: "services";
   data: InferEntrySchema<"services">
 } & { render(): Render[".md"] };
-"04-bathrooms.md": {
-	id: "04-bathrooms.md";
-  slug: "04-bathrooms";
+"curtains-and-blinds.md": {
+	id: "curtains-and-blinds.md";
+  slug: "curtains-and-blinds";
   body: string;
   collection: "services";
   data: InferEntrySchema<"services">
 } & { render(): Render[".md"] };
-"05-kitchens.md": {
-	id: "05-kitchens.md";
-  slug: "05-kitchens";
+"desks-and-furniture.md": {
+	id: "desks-and-furniture.md";
+  slug: "desks-and-furniture";
   body: string;
   collection: "services";
   data: InferEntrySchema<"services">
 } & { render(): Render[".md"] };
-"06-lobbies-and-reception-areas.md": {
-	id: "06-lobbies-and-reception-areas.md";
-  slug: "06-lobbies-and-reception-areas";
+"drains.md": {
+	id: "drains.md";
+  slug: "drains";
   body: string;
   collection: "services";
   data: InferEntrySchema<"services">
 } & { render(): Render[".md"] };
-"07-air-ducts-and-vents.md": {
-	id: "07-air-ducts-and-vents.md";
-  slug: "07-air-ducts-and-vents";
+"floors.md": {
+	id: "floors.md";
+  slug: "floors";
   body: string;
   collection: "services";
   data: InferEntrySchema<"services">
 } & { render(): Render[".md"] };
-"08-post-construction.md": {
-	id: "08-post-construction.md";
-  slug: "08-post-construction";
+"gutters-and-roofs.md": {
+	id: "gutters-and-roofs.md";
+  slug: "gutters-and-roofs";
   body: string;
   collection: "services";
   data: InferEntrySchema<"services">
 } & { render(): Render[".md"] };
-"09-windows.md": {
-	id: "09-windows.md";
-  slug: "09-windows";
+"kitchens.md": {
+	id: "kitchens.md";
+  slug: "kitchens";
   body: string;
   collection: "services";
   data: InferEntrySchema<"services">
 } & { render(): Render[".md"] };
-"10-gutters-and-roofs.md": {
-	id: "10-gutters-and-roofs.md";
-  slug: "10-gutters-and-roofs";
+"lobbies-and-reception-areas.md": {
+	id: "lobbies-and-reception-areas.md";
+  slug: "lobbies-and-reception-areas";
   body: string;
   collection: "services";
   data: InferEntrySchema<"services">
 } & { render(): Render[".md"] };
-"11-drains.md": {
-	id: "11-drains.md";
-  slug: "11-drains";
+"post-construction.md": {
+	id: "post-construction.md";
+  slug: "post-construction";
   body: string;
   collection: "services";
   data: InferEntrySchema<"services">
 } & { render(): Render[".md"] };
-"12-pressure-cleaning.md": {
-	id: "12-pressure-cleaning.md";
-  slug: "12-pressure-cleaning";
+"pressure-cleaning.md": {
+	id: "pressure-cleaning.md";
+  slug: "pressure-cleaning";
   body: string;
   collection: "services";
   data: InferEntrySchema<"services">
 } & { render(): Render[".md"] };
-"13-bins-and-refuse-areas.md": {
-	id: "13-bins-and-refuse-areas.md";
-  slug: "13-bins-and-refuse-areas";
+"windows.md": {
+	id: "windows.md";
+  slug: "windows";
   body: string;
   collection: "services";
   data: InferEntrySchema<"services">
+} & { render(): Render[".md"] };
+};
+"testimonials": {
+"01-xero.md": {
+	id: "01-xero.md";
+  slug: "01-xero";
+  body: string;
+  collection: "testimonials";
+  data: InferEntrySchema<"testimonials">
+} & { render(): Render[".md"] };
+"02-lorem.md": {
+	id: "02-lorem.md";
+  slug: "02-lorem";
+  body: string;
+  collection: "testimonials";
+  data: InferEntrySchema<"testimonials">
 } & { render(): Render[".md"] };
 };
 

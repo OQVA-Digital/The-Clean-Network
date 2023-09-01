@@ -10,6 +10,8 @@ import { Schema } from "astro-seo-schema"
 const currentURL = new URL(Astro.request.url)
 
 import CookieConsentBanner from "../components/CookieConsentBanner.astro";
+
+import OQVABadge from "../components/OQVABadge.astro";
 ---
 
 <!DOCTYPE html>
@@ -42,5 +44,6 @@ import CookieConsentBanner from "../components/CookieConsentBanner.astro";
 		/>
 		
         <CookieConsentBanner></CookieConsentBanner>
+        <OQVABadge></OQVABadge>
 	</body>
 </html>
