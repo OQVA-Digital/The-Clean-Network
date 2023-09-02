@@ -10,6 +10,8 @@ import Footer from "../../components/Footer.astro";
 import ContactSection from "../../components/ContactSection.astro"
 import "../../styles/button-ctnr.css";
 
+import {TEL, TEL_HREF} from '../../consts';
+
 
 import { SITE_DESCRIPTION, SITE_KEYWORDS, ABOUT_TITLE, ABOUT_DESCRIPTION, ABOUT_KEYWORDS, ABOUT_H1, ABOUT_H2, ABOUT_TEXT_BODY } from "../../consts";
 
@@ -34,7 +36,7 @@ import { SITE_DESCRIPTION, SITE_KEYWORDS, ABOUT_TITLE, ABOUT_DESCRIPTION, ABOUT_
                         </div>
                     
                         <div class="flex column">
-                            <a href="tel:+44-020-3411-0275"><span>London:</span> 020 3411 0275</a>
+                            <a href=`tel:${TEL_HREF}`><span>London:</span>{TEL}</a>
 
                             <a href="/privacy-policy/"><span>Privacy Policy</span></a>
                     

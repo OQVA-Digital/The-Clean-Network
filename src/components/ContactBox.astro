@@ -1,17 +1,17 @@
 ---
-import { LONDON_PHONE_NO, LONDON_PHONE_NO_HREF } from "../consts";
+import { TEL, TEL_HREF, EMAIL } from "../consts";
 ---
 					
 
 <div class="contact_box">
-    <a href="mailto:office@cleannetwork.co.uk" class="email">
+    <a href=`mailto:${EMAIL}` class="email">
         <span class="icon"></span>
-        office@cleannetwork.co.uk
+        {EMAIL}
     </a>
     
-    <a href={`tel:${LONDON_PHONE_NO_HREF}`} class="tel">
+    <a href={`tel:${TEL_HREF}`} class="tel">
         <span class="icon"></span>
-        London: {LONDON_PHONE_NO}
+        London: {TEL}
     </a>
     
     <!-- <a href="tel:+44-0121-3927529" class="tel">

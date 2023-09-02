@@ -3,15 +3,15 @@ import { getCollection } from "astro:content";
 const services = await getCollection("services");
 const sectors = await getCollection("sectors");
 
-import { LONDON_PHONE_NO, LONDON_PHONE_NO_HREF } from "../consts";
+import { TEL, TEL_HREF } from "../consts";
 ---
 
 <div class="stripe">
     <a href="/contact/" class="announcement">Contact us today for a free quote</a>
 
     <div class="ctnr">
-        <a href={`tel:${LONDON_PHONE_NO_HREF}`} class="tel">
-            <span class="icon"></span>London: {LONDON_PHONE_NO}
+        <a href={`tel:${TEL_HREF}`} class="tel">
+            <span class="icon"></span>London: {TEL}
         </a>
         <!-- <a href="tel:+44-0121-3927529">Birmingham: 0121 3927529</a> -->
     </div>
@@ -47,9 +47,7 @@ import { LONDON_PHONE_NO, LONDON_PHONE_NO_HREF } from "../consts";
 
                     <div class="subsets">
                         <div>
-                            <a href="/services/#indoor" class="heading indoor icon"
-                                >Indoor Cleaning</a
-                            >
+                            <a href="/services/#indoor" class="heading indoor icon">Indoor Cleaning</a>
 
                             <hr />
 

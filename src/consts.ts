@@ -4,10 +4,16 @@ export const FULL_ADDRESS = "6-8 Knights Court, London, EC1M 4NH"
 
 export const STREET = "6-8 Knights Court"
 
-export const LONDON_PHONE_NO = "020 3411 0275"
 
-export const LONDON_PHONE_NO_HREF = "+44-020-3411-0275"
+export const TEL = "020 8135 4786"
 
+export const TEL_INTERNATIONAL = "+44 20 8135 4786"
+
+export const TEL_HREF = "+442081354786"
+
+
+
+export const EMAIL = "office@cleannetwork.co.uk"
 
 
 

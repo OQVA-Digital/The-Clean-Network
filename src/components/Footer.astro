@@ -1,7 +1,7 @@
 ---
 import ContactBox from "./ContactBox.astro";
 
-import { FOOTER_DESCRIPTION, STREET, LONDON_PHONE_NO } from "../consts";
+import { FOOTER_DESCRIPTION, STREET, TEL } from "../consts";
 ---
 
 <footer>
@@ -42,7 +42,7 @@ import { FOOTER_DESCRIPTION, STREET, LONDON_PHONE_NO } from "../consts";
                 <p set:html={STREET}></p>
                 <p>London EC1M 4NH</p>
                 <p>United Kingdom</p>
-                <p set:html={LONDON_PHONE_NO}></p>
+                <p set:html={TEL}></p>
             </div>
         </div>
     </div>
