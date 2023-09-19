@@ -438,6 +438,7 @@ section.text>.ctnr {
 
 section.text h3 {
     margin-inline: auto;
+    margin-bottom: 2rem;
     font-size: clamp(2rem, 7vmin, 3.8rem);
     color: var(--primary-e);
 }
