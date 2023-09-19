@@ -21,7 +21,18 @@ With our team of highly trained professionals, we have built a reputation for re
 
 Our <strong>lobby cleaning</strong> service focuses on high-traffic areas that require extra attention. These include entranceways, walkways, and waiting areas, where we ensure floors are spotless, surfaces are dust-free, and upholstery is fresh and clean. We understand that each lobby has its unique needs, and we tailor our approach to meet those requirements.
 
-We believe that a clean reception area is more than just a clean space. It's a statement about your business and its commitment to excellence. Our <strong>reception area cleaning</strong> services include thorough cleaning of front desks, seating areas, and all the frequently touched surfaces. We also pay attention to the details that often go unnoticed, ensuring that everything from your lighting fixtures to your door handles is clean and polished.
+We believe that a clean reception area is more than just a clean space. It's a statement about your business and its commitment to excellence. Our <strong>reception area cleaning</strong> services include thorough cleaning of front desks, seating areas, and all the frequently touched surfaces. We also pay attention to the details that often go unnoticed, ensuring that everything from your lighting fixtures to your door handles is clean and polished.\
+\
+**What does the service consist of? Our office lobby and reception area cleaning can include:**
+
+* Floors: sweep, mop, vacuum and polish
+* Clean reception furniture: dust, wipedown, polish and vacuum upholstery
+* Empty rubbish
+* Clean skirting or kickboards
+* Dust and clean window ledges
+* Tidy magazines, cushions, sale literature
+* Polish elevator buttons and doors
+* Clean and polish rails and handles (incl. entrance door)
 
 Located in the heart of <strong>London</strong>, we understand the needs of a wide range of office environments. Whether you're running a small startup or a large corporate office, our team is equipped to handle your cleaning needs with efficiency and discretion. We work around your schedule, ensuring minimal disruption to your daily operations while providing a clean, healthy, and productive working environment.
 

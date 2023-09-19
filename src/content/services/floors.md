@@ -22,6 +22,23 @@ We understand the nuances of different flooring materials. For your <strong>hard
 
 Let's not forget about the <strong>floor mats</strong> that often take the brunt of the dirt. We ensure they are thoroughly cleaned and disinfected, contributing to a cleaner, healthier office environment.
 
+**What does the service consist of? Our office floor and carpet cleaning can include:**
+
+* Stripping, sealing, and waxing
+* Scrubbing and buffing
+* Refinishing
+* Encapsulation and bonnet cleaning (low-moisture)
+* Hot and cold water extraction
+* Shampooing
+* Allergen removal
+* Spot removal
+
+**Floor and carpet cleaning benefits:**
+
+* Longer life out of your flooring
+* Allergen reducing: health benefits for team
+* Improved appearance
+
 Choosing The Clean Network for your floor cleaning needs means entrusting the task to a team of professionals who are committed to excellence. We aim to provide a service that not only cleans but also maintains the integrity of your flooring, ensuring a longer lifespan and an impressive appearance for your office space.
 
 Experience the difference a professional floor and carpet cleaning service can make in your office environment in <strong>London</strong>. Reach out to us for a free quote and let us help you maintain a clean and healthy workspace.

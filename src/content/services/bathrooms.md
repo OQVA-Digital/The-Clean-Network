@@ -19,7 +19,24 @@ Our dedicated team of professionals specialises in <strong>commercial bathroom c
 
 Using state-of-the-art equipment and environmentally friendly cleaning products, we effectively tackle dirt, grime, and bacteria, leaving your bathrooms not only visually clean but hygienically clean as well. Our team's expertise combined with our commitment to high standards ensures we deliver reliable, exceptional cleaning results every time. 
 
-Partner with <strong>The Clean Network</strong> for your office bathroom and toilet cleaning needs, and benefit from a clean, healthy, and fresh-smelling bathroom that positively reflects on your business. We offer flexible schedules to minimise disruption to your operations, ensuring we work around your timetable and not the other way around.
+Partner with <strong>The Clean Network</strong> for your office bathroom and toilet cleaning needs, and benefit from a clean, healthy, and fresh-smelling bathroom that positively reflects on your business. We offer flexible schedules to minimise disruption to your operations, ensuring we work around your timetable and not the other way around.\
+\
+**What does the service consist of? Our office bathroom cleaning can include:**
+
+* Clean toilets and urinals
+* Clean sinks, fixtures - incl. door handles - and countertops
+* Sweep/mop floors
+* Clean/polish mirrors
+* Clean/polish dispensers and driers
+* Clean partitions and walls
+* Empty rubbish
+
+**Stock bathroom supplies:** 
+
+* Toilet paper
+* Hand towels
+* Hand soap
+* Air freshener
 
 Whether you're a small business or a large corporate office in <strong>London</strong>, our cleaning services are designed to meet your specific needs. We take pride in offering a personalised, professional, and reliable service. 
 
