@@ -1,5 +1,5 @@
 ---
-metaTitle: Office Bathroom & Toilet Cleaning Services - The Clean Network
+metaTitle: "Office Bathroom & Toilet Cleaning Services in Central London - The Clean Network"
 metaDescription: A clean bathroom is not only a pleasure to use but also a
   reflection of your business’s attention to detail and care for its employees
   and visitors.

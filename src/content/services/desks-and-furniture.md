@@ -1,5 +1,5 @@
 ---
-metaTitle: Office Furniture & Desk Cleaning Services in London - The Clean Network
+metaTitle: "Office Furniture & Desk Cleaning Services in Central London - The Clean Network"
 metaDescription: You’re likely spending more than a third of your day at your
   workspace. We understand how crucial a clean workspace is to your productivity
   and well-being.

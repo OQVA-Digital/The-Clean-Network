@@ -1,6 +1,5 @@
 ---
-heroImage: /post-covers/your-brand-is-compression-of-sensation.jpg
-metaTitle: Office Kitchen Cleaning Services - The Clean Network
+metaTitle: "Office Kitchen Cleaning Services in Central Central London - The Clean Network"
 metaDescription: Your office kitchen is more than just a space for meals—it’s a
   gathering point, a place of interaction, and an integral part of your working
   environment.

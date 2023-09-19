@@ -21,7 +21,7 @@ export const EMAIL = "office@cleannetwork.co.uk"
 
     // META
 
-export const SITE_TITLE = 'Professional Commercial & Office Cleaning in London - The Clean Network';
+export const SITE_TITLE = 'The Clean Network: A Central London Commercial & Office Cleaning Company';
 
 export const SITE_DESCRIPTION = "The Clean Network, London's trusted partner in professional commercial and office cleaning. Reliable, high standards, tailored to your needs. See why 95% of our clients stay.";
 
@@ -32,11 +32,11 @@ export const SITE_KEYWORDS = "commercial cleaning, office cleaning, London, serv
 
 export const SITE_H1 = 'Commercial & Office Cleaning in London'
 
-export const INTRO_H2 = 'Welcome to <strong>The Clean Network</strong> - trusted by over 500 offices in London each day. Discover the difference our professional office cleaning services can make. <b>Why do 95% of our clients renew their contracts with us? <span class="highlight">Let us show you.</span></b>'
+export const INTRO_H2 = 'Welcome to <strong>The Clean Network</strong> - an office cleaning company trusted by over 500 sites in Central London each day. Discover the difference our professional office cleaning services can make. <b>Why do 95% of our clients renew their contracts with us? <span class="highlight">Let us show you.</span></b>'
 
 export const TEXT_BLOCK = "We're more than a cleaning company. <b>We're your partners in creating a clean, healthy, and productive work environment.</b> Our professional team caters to various sectors in London, ensuring your specific needs are met with meticulous attention to detail, unmatched reliability, and high industry standards. <b>Experience the professionalism that keeps our clients coming back.</b>"
 
-export const SERVICES_SECTION_DESCRIPTION = "At <strong>The Clean Network</strong>, we offer a comprehensive range of services. From offices to commercial spaces, our team is equipped with the latest technology and training to deliver impeccable results."
+export const SERVICES_SECTION_DESCRIPTION = "At <strong>The Clean Network</strong>, from the West End, Clerkenwell, Farringdon and Islington to the City of London and Shoreditch, we offer a comprehensive range of cleaning services throughout Central London. From offices to commercial spaces, our team is equipped with the latest technology and training to deliver impeccable results."
 
 export const SECTORS_SECTION_DESCRIPTION = "<b>We understand that each place has unique needs.</b> That's why we specialise in providing tailored cleaning solutions to various sectors."
 
@@ -64,7 +64,7 @@ export const OG_IMAGE = '/og/social-image.jpg'
 
     // META
 
-export const SERVICES_TITLE = 'Commercial & Office Cleaning Services in London - The Clean Network'
+export const SERVICES_TITLE = 'Commercial & Office Cleaning Services in Central London - The Clean Network'
 
 export const SERVICES_DESCRIPTION = 'Explore a wide range of professional commercial and office cleaning services by The Clean Network. Tailored solutions to meet your specific cleaning needs in London.'
 

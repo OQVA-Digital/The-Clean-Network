@@ -1,5 +1,5 @@
 ---
-metaTitle: Commercial Floor & Carpet Cleaning Services in London - The Clean Network
+metaTitle: "Commercial Floor & Carpet Cleaning Services in Central London - The Clean Network"
 metaDescription: Commercial floor cleaning services are essential to maintain
   the professional appeal and hygiene of your office.
 metaKeywords: commercial floor cleaning services, carpet, office, rugs, hardwood

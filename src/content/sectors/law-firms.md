@@ -1,5 +1,5 @@
 ---
-metaTitle: Office Cleaning Services for Legal Practices in London - The Clean Network
+metaTitle: "Office Cleaning Services for Legal Practices in Central London - The Clean Network"
 metaDescription: "Your legal practice deserves the utmost precision when it
   comes to cleanliness. We understand the specific needs that law firms in
   London require. "
