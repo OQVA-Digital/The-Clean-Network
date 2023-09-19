@@ -108,7 +108,7 @@ article h1 {
     border-radius: 0.6rem;
     color: var(--dark-a);
     line-height: 1.2;
-    margin-inline: auto;
+    /* margin-inline: auto; */
     margin-bottom: 1.2rem;
 }
 
