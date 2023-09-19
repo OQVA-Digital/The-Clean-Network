@@ -86,6 +86,8 @@ article {
     box-sizing: border-box;
     border: 0.1rem solid var(--light-a);
     /* box-shadow: 0 1rem 2rem -1rem var(--light-b); */
+    position: relative;
+    z-index: 2;
 }
 
 article ul, article ol {
