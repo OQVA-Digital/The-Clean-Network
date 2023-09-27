@@ -20,9 +20,9 @@
 }
 
 .recommendations ul li {
-    background-color: var(--light-a);
+    background-color: var(--light-d);
     border-radius: 1rem;
-    border: 0.1rem solid var(--light-a);
+    border: 0.1rem solid var(--light-d);
     flex: 1;
     min-width: clamp(20rem, 70vw, 30rem);
     overflow: hidden;

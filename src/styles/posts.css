@@ -164,7 +164,7 @@ article p strong, article p em {
 .content_ctnr > hr {
     width: 100%;
     height: 1.2rem;
-    background-color: var(--light-a);
+    background-color: var(--light-d);
     margin-block: 6rem;
 }
 

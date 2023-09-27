@@ -12,7 +12,7 @@ section.intro {
 .intro .content {
     width: clamp(9rem, 83vw, var(--max-width));
     margin-inline: auto;
-    padding-block: 2rem;
+    padding-block: 7rem 2rem;
 }
 
 .intro h1.big {
