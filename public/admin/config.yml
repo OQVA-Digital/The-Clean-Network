@@ -76,3 +76,4 @@ collections:
       - {label: "Publish Date", name: "pubDate", widget: "datetime", format: "MMM DD YYYY"}
       - {label: "Category", name: "category", widget: "select", options: ["cleaning", "health-and-environment", "efficiency"], multiple: false}
       - {label: "HeroImage", name: "heroImage", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
