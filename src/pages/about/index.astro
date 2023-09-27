@@ -4,9 +4,6 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import '../../styles/subpages.css'
 import '../../styles/about.css'
 
-import Header from "../../components/Header.astro";
-import BaseHead from "../../components/BaseHead.astro";
-import Footer from "../../components/Footer.astro";
 import ContactSection from "../../components/ContactSection.astro"
 import "../../styles/button-ctnr.css";
 
@@ -19,7 +16,7 @@ import { SITE_DESCRIPTION, SITE_KEYWORDS, ABOUT_TITLE, ABOUT_DESCRIPTION, ABOUT_
 
 <BaseLayout title={ABOUT_TITLE} description={ABOUT_DESCRIPTION ? ABOUT_DESCRIPTION : SITE_DESCRIPTION} keywords={ABOUT_KEYWORDS ? ABOUT_KEYWORDS : SITE_KEYWORDS}>
     <main>
-        <section class="panel">
+        <section class="panel scroll_margin_top">
             <div class="ctnr">
                 <div class="content reveal">
                     <h1 set:html={ABOUT_H1}></h1>

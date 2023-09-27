@@ -1,5 +1,5 @@
 ---
-import { CollectionEntry, getCollection } from "astro:content";
+import { type CollectionEntry, getCollection } from "astro:content";
 type Props = CollectionEntry<"sectors">["data"];
 
 const sectors = (await getCollection('sectors')).sort((a, b) => {
@@ -46,7 +46,7 @@ import { SITE_KEYWORDS, SECTORS_TITLE, SECTORS_DESCRIPTION, SECTORS_KEYWORDS, SE
                     {
                         sectors.map((sectors) => (
                             <>
-                            <section class="panel reveal" id={(sectors.data.title).toLowerCase().replace(/\s+/g, '-')}>
+                            <section class="panel scroll_margin_top reveal" id={(sectors.data.title).toLowerCase().replace(/\s+/g, '-')}>
                                     <div class="ctnr">
                                         <div class="content">
                                             <h3>

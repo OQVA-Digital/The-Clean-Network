@@ -1,19 +1,19 @@
 backend:
   name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
+  branch: main
 
 publish_mode: editorial_workflow
 
-media_folder: "public/images/media" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/images/media" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: "public/images/media"
+public_folder: "/images/media"
 
 collections:
-  - name: "services" # Used in routes, e.g., /admin/collections/blog
-    label: "Service" # Used in the UI
-    folder: "src/content/services" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
+  - name: "services"
+    label: "Service"
+    folder: "src/content/services" 
+    create: true 
+    slug: "{{slug}}" 
+    fields: 
       - {label: "Order", name: "order", widget: "number", required: false}
       - {label: "Meta Title", name: "metaTitle", widget: "string", required: false}
       - {label: "Meta Description", name: "metaDescription", widget: "string", pattern: ['^.{0,155}$', "155 characters maximum"], required: false}
@@ -24,12 +24,12 @@ collections:
       - {label: "CoverImage", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
 
-  - name: "sectors" # Used in routes, e.g., /admin/collections/blog
-    label: "Sector" # Used in the UI
-    folder: "src/content/sectors" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
+  - name: "sectors"
+    label: "Sector"
+    folder: "src/content/sectors"
+    create: true
+    slug: "{{slug}}"
+    fields:
       - {label: "Order", name: "order", widget: "number", required: false}
       - {label: "Meta Title", name: "metaTitle", widget: "string", required: false}
       - {label: "Meta Description", name: "metaDescription", widget: "string", pattern: ['^.{0,155}$', "155 characters maximum"], required: false}
@@ -39,13 +39,12 @@ collections:
       - {label: "CoverImage", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
   
-  - name: "testimonials" # Used in routes, e.g., /admin/collections/blog
-    label: "Testimonial" # Used in the UI
-    folder: "src/content/testimonials" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      # - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+  - name: "testimonials"
+    label: "Testimonial"
+    folder: "src/content/testimonials"
+    create: true
+    slug: "{{slug}}"
+    fields:
       - {label: "Avatar", name: "avatar", widget: "image"}
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Description", name: "description", widget: "string", required: false}
@@ -55,13 +54,25 @@ collections:
       - {label: "Paragraph03", name: "paragraph03", widget: "text", required: false}
   
 
-  - name: "benefits" # Used in routes, e.g., /admin/collections/blog
-    label: "Benefits" # Used in the UI
-    folder: "src/content/benefits" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      # - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+  - name: "benefits"
+    label: "Benefits"
+    folder: "src/content/benefits"
+    create: true
+    slug: "{{slug}}"
+    fields: 
       - {label: "Order", name: "order", widget: "number", required: false}
       - {label: "Icon", name: "icon", widget: "image", required: false}
       - {label: "Title", name: "title", widget: "string"}
+
+
+  - name: "blog"
+    label: "Blog Post"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Publish Date", name: "pubDate", widget: "datetime", format: "MMM DD YYYY"}
+      - {label: "Category", name: "category", widget: "select", options: ["cleaning", "health-and-environment", "efficiency"], multiple: false}
+      - {label: "HeroImage", name: "heroImage", widget: "image"}

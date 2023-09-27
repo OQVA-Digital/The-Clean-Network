@@ -205,6 +205,71 @@ declare module 'astro:content' {
   data: InferEntrySchema<"benefits">
 } & { render(): Render[".md"] };
 };
+"blog": {
+"blog-post-01.md": {
+	id: "blog-post-01.md";
+  slug: "blog-post-01";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"blog-post-02.md": {
+	id: "blog-post-02.md";
+  slug: "blog-post-02";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"blog-post-03.md": {
+	id: "blog-post-03.md";
+  slug: "blog-post-03";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"blog-post-04.md": {
+	id: "blog-post-04.md";
+  slug: "blog-post-04";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"blog-post-05.md": {
+	id: "blog-post-05.md";
+  slug: "blog-post-05";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"blog-post-06.md": {
+	id: "blog-post-06.md";
+  slug: "blog-post-06";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"blog-post-07.md": {
+	id: "blog-post-07.md";
+  slug: "blog-post-07";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"blog-post-08.md": {
+	id: "blog-post-08.md";
+  slug: "blog-post-08";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"blog-post-09.md": {
+	id: "blog-post-09.md";
+  slug: "blog-post-09";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+};
 "sectors": {
 "architects-firms.md": {
 	id: "architects-firms.md";

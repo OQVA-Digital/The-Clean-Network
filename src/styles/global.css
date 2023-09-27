@@ -42,6 +42,7 @@ html.sr .reveal {
 
     --max-width: 170rem;
     --base-width: clamp(9rem, 89vw, var(--max-width));
+    --base-width-overflow: calc((100% - var(--base-width)) / 2);
 
     --header-height: clamp(1rem,18vmin,7.5rem);
 }
@@ -146,6 +147,10 @@ main {
     flex: 1;
 }
 
+.center_base_width {
+    width: var(--base-width);
+    margin-inline: auto;
+}
 
 button {
     background-color: transparent;
@@ -208,6 +213,9 @@ noscript {
     margin: auto;
 }
 
+.scroll_margin_top {
+    scroll-margin-top: calc(var(--header-height) + 4rem);
+}
 
 
 .default_bg {

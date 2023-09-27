@@ -1,5 +1,5 @@
 ---
-import { CollectionEntry, getCollection } from "astro:content";
+import { type CollectionEntry, getCollection } from "astro:content";
 type Props = CollectionEntry<"services">["data"];
 
 const services = (await getCollection('services')).sort((a, b) => {
@@ -62,7 +62,7 @@ import { SITE_KEYWORDS, SERVICES_TITLE, SERVICES_DESCRIPTION, SERVICES_KEYWORDS,
                             services.map((services) => (
                                 <>
                                 {services.data.type === "indoor" ? (
-                                <section class="panel reveal" id={(services.data.title).toLowerCase().replace(/\s+/g, '-')}>
+                                <section class="panel reveal scroll_margin_top" id={(services.data.title).toLowerCase().replace(/\s+/g, '-')}>
                                         <div class="ctnr">
                                             <div class="content">
                                                 <h3>
@@ -105,7 +105,7 @@ import { SITE_KEYWORDS, SERVICES_TITLE, SERVICES_DESCRIPTION, SERVICES_KEYWORDS,
                             services.map((services) => (
                                 <>
                                 {services.data.type === "external" ? (
-                                <section class="panel reveal" id={(services.data.title).toLowerCase().replace(/\s+/g, '-')}>
+                                <section class="panel reveal scroll_margin_top" id={(services.data.title).toLowerCase().replace(/\s+/g, '-')}>
                                         <div class="ctnr">
                                             <div class="content">
                                                 <h3>

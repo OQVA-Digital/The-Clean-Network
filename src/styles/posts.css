@@ -3,12 +3,12 @@
     position: relative;
 }
 
-.intro img {
+/* .intro img {
     height: clamp(5rem,38vmin,36rem);
     object-fit: cover;
     width: 100%;
     object-position: center;
-}
+} */
 
 .intro .cover {
     width: 100%;
@@ -20,6 +20,17 @@
     /* background-attachment: fixed; */
     background-color: var(--light-d);
     /* box-shadow: inset 0 -16rem 10rem -16rem var(--primary-b); */
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.intro .cover img {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .intro .content {
@@ -44,7 +55,7 @@
     background-color: var(--light-a);
 }
 
-.intro .back {
+/* .intro .back {
     position: absolute;
     left: 0;
     top: 2rem;
@@ -71,23 +82,30 @@
     -moz-transition: background-color 0.1s ease;
     -ms-transition: background-color 0.1s ease;
     -o-transition: background-color 0.1s ease;
-}
+} */
 
-article {
-    font-size: clamp(1.5rem,3.9vmin,1.75rem);
-    width: clamp(9rem, 91vw, 80rem);
+.content_ctnr {
+    width: clamp(9rem, 91vw, 87rem);
     margin-inline: auto;
     margin-bottom: clamp(4rem,18vw,10rem);
     margin-top: calc(clamp(10rem, 55vw, 45rem) * -1);
     background-color: rgb(248 248 255 / 85%);
     backdrop-filter: blur(0.5rem);
     border-radius: 1.2rem;
-    padding: clamp(3rem, 5vmin, 4rem) clamp(2.5rem, 6vmin, 5rem);
     box-sizing: border-box;
     border: 0.1rem solid var(--light-a);
     /* box-shadow: 0 1rem 2rem -1rem var(--light-b); */
     position: relative;
     z-index: 2;
+}
+
+.content_ctnr article {
+    font-size: clamp(1.5rem,3.9vmin,1.65rem);
+    padding: clamp(3rem, 5vmin, 4rem) clamp(2.5rem, 6vmin, 5rem) 0;
+}
+
+.content_ctnr .cta_ctnr {
+    margin-block: clamp(3rem, 5vmin, 4rem);
 }
 
 article ul, article ol {
@@ -121,15 +139,16 @@ article p strong, article p em {
     font-weight: 500;
 }
 
-article .cta {
+.content_ctnr .main.cta {
     display: block;
     padding: 1.2rem;
     position: sticky;
     bottom: 1.5rem;
     margin-top: 3rem;
+    margin-inline: clamp(2.5rem, 6vmin, 5rem);
 }
 
-article a.back {
+.content_ctnr a.back {
     display: block;
     padding: 1rem;
     font-size: 1.5rem;
@@ -142,7 +161,14 @@ article a.back {
     margin-inline: auto;
 }
 
-article a.back::before, .intro a.back::before {
+.content_ctnr > hr {
+    width: 100%;
+    height: 1.2rem;
+    background-color: var(--light-a);
+    margin-block: 6rem;
+}
+
+/* article a.back::before, .intro a.back::before {
     content: "";
     display: inline-block;
     border-bottom: 0.4rem solid var(--light-b);
@@ -159,7 +185,7 @@ article a.back::before, .intro a.back::before {
 
 article a.back:hover {
     color: var(--grey);
-}
+} */
 
 article img {
     margin: clamp(3rem, 7vmin, 4rem) auto;

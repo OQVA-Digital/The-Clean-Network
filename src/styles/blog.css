@@ -1,0 +1,165 @@
+:root {
+    --article-width: clamp(9rem, 89vw, 68rem);
+}
+
+ul, li {
+    padding: 0;
+    list-style: none;
+    margin-block: 0;
+}
+
+.article_width {
+    width: var(--article-width);
+    margin-inline: auto;
+}
+
+.back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    width: fit-content;
+    z-index: 2;
+    background-color: var(--light-d);
+    padding: clamp(1rem, 3vw, 1.3rem) 2rem clamp(1rem, 3vw, 1.3rem) var(--base-width-overflow);
+    font-size: clamp(1.3rem, 4vw, 1.6rem);
+    font-weight: 500;
+    color: var(--primary-d);
+    border-radius: 0 0 0.4rem 0;
+    transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    border-right: 0.2rem solid var(--light-a);
+    border-bottom: 0.2rem solid var(--light-a);
+}
+
+.back:hover {
+    background-color: var(--light);
+    transition: background-color 0s ease;
+    -webkit-transition: background-color 0s ease;
+    -moz-transition: background-color 0s ease;
+    -ms-transition: background-color 0s ease;
+    -o-transition: background-color 0s ease;
+}
+
+.back span {
+
+}
+
+.back .icon {
+    width: 0.4rem;
+    height: 0.4rem;
+    transform: rotate(45deg);
+    border-left: 0.3rem solid;
+    border-bottom: 0.3rem solid;
+    border-color: var(--light-b);
+}
+
+time {
+    font-size: clamp(1.2rem, 3vw, 1.3rem);
+    color: var(--primary-d);
+    font-weight: 500;
+}
+
+.over_heading {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    gap: 0 0.7rem;
+    margin-bottom: 0.4rem;
+    font-size: clamp(1.2rem, 3vw, 1.3rem);
+}
+
+.over_heading hr {
+    width: 0.3rem;
+    height: 0.3rem;
+    background-color: var(--grey);
+    border-radius: 1rem;
+}
+
+.over_heading .category_indicator {
+    color: var(--grey);
+    font-weight: 500;
+}
+
+a.category_indicator:hover {
+    color: var(--dark-a);
+}
+
+.read_more {
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: clamp(1.3rem, 3.5vw, 1.6rem);
+    color: var(--primary-d);
+    font-weight: 500;
+    background-color: var(--light);
+    padding: 0.3rem 0.9rem;
+    border-radius: 0.3rem;
+    border: 0.2rem solid var(--light-a);
+    transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+}
+
+.read_more:hover {
+    background-color: var(--light-a);
+    transition: background-color 0s ease;
+    -webkit-transition: background-color 0s ease;
+    -moz-transition: background-color 0s ease;
+    -ms-transition: background-color 0s ease;
+    -o-transition: background-color 0s ease;
+}
+
+.posts li {
+    background-color: var(--light-a);
+    border-radius: 1rem;
+    /* border: 0.2rem solid var(--light-a); */
+    transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+}
+
+.posts li:hover {
+    background-color: var(--light);
+    transition: background-color 0s ease;
+    -webkit-transition: background-color 0s ease;
+    -moz-transition: background-color 0s ease;
+    -ms-transition: background-color 0s ease;
+    -o-transition: background-color 0s ease;
+}
+
+.posts li .title {
+    font-size: clamp(1.2rem, 6vw, 3rem);
+    margin-block: 0.2rem 0.7rem;
+    color: var(--dark-a);
+    transition: color 0.3s ease;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+}
+
+.posts li a:hover .title {
+    color:var(--primary-e);
+    transition: color 0.2s ease;
+    -webkit-transition: color 0.2s ease;
+    -moz-transition: color 0.2s ease;
+    -ms-transition: color 0.2s ease;
+    -o-transition: color 0.2s ease;
+}
+
+
+
+
+
+@media screen and (min-width:1000px) {
+    .back {
+        position: absolute;
+    }
+}

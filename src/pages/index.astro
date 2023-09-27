@@ -5,6 +5,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ContactSection from "../components/ContactSection.astro"
 import ContactBox from "../components/ContactBox.astro";
+
 import "../styles/button-ctnr.css";
 import "../styles/home.css"
 
@@ -119,8 +120,8 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 			</div>
 		</section>
 
-		<div class="panel_ctnr reveal" id="scroll">
-			<section class="services panel">
+		<div class="panel_ctnr scroll_margin_top reveal" id="scroll">
+			<section class="services panel scroll_margin_top">
 				<div class="ctnr">
 					<div class="cta_ctnr">
 						<a href="/services/" class="cta" aria-label="View all services"><span></span> All services</a>

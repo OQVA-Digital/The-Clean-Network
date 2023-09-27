@@ -1,0 +1,103 @@
+.recommendations {
+    padding-inline: clamp(2.5rem, 6vmin, 5rem);
+    margin-bottom: 6rem;
+}
+
+.recommendations .heading {
+    text-align: center;
+    display: block;
+    font-weight: 500;
+    color: var(--primary-e);
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    margin-bottom: 2rem;
+}
+
+.recommendations ul {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.recommendations ul li {
+    background-color: var(--light-a);
+    border-radius: 1rem;
+    border: 0.1rem solid var(--light-a);
+    flex: 1;
+    min-width: clamp(20rem, 70vw, 30rem);
+    overflow: hidden;
+}
+
+.recommendations ul li > .ctnr {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.recommendations ul li .content {
+    padding: clamp(1rem, 4vw, 2.2rem) 0 clamp(1rem, 4vw, 1.6rem) clamp(1rem, 4vw, 3.3rem);
+    flex: 1;
+    min-width: 15rem;
+}
+
+.recommendations ul li .hero {
+    width: clamp(8rem, 30vw, 20rem);
+    min-height: clamp(8rem, 30vw, 20rem);
+}
+
+.recommendations ul li .hero img {
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.recommendations li .title {
+    font-weight: 600;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    color: var(--dark-a);
+    cursor: pointer;
+}
+
+
+
+@media screen and (min-width:1000px) {
+    .recommendations {
+        padding-inline: unset;
+    }
+
+    .recommendations li:first-child {
+        border-radius: 0 1rem 1rem 0;
+        -webkit-border-radius: 0 1rem 1rem 0;
+        -moz-border-radius: 0 1rem 1rem 0;
+        -ms-border-radius: 0 1rem 1rem 0;
+        -o-border-radius: 0 1rem 1rem 0;
+        border-left: none;
+    }
+
+    .recommendations li:first-child .content {
+        text-align: right;
+        padding: clamp(1rem, 4vw, 2.2rem) clamp(1rem, 4vw, 1.3rem) clamp(1rem, 4vw, 1.6rem) 0;
+    }
+
+    .recommendations li:first-child .over_heading {
+        justify-content: flex-end;
+    }
+
+    .recommendations li:last-child {
+        border-radius: 1rem 0 0 1rem;
+        -webkit-border-radius: 1rem 0 0 1rem;
+        -moz-border-radius: 1rem 0 0 1rem;
+        -ms-border-radius: 1rem 0 0 1rem;
+        -o-border-radius: 1rem 0 0 1rem;
+        border-right: none;
+}
+
+    .recommendations li:last-child > .ctnr {
+        flex-flow: row-reverse wrap;
+    }
+
+    .recommendations li:last-child .content {
+        padding: clamp(1rem, 4vw, 2.2rem) 0 clamp(1rem, 4vw, 1.6rem) clamp(1rem, 4vw, 1.3rem);
+    }
+}

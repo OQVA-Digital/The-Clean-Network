@@ -1,0 +1,166 @@
+---
+import { getCollection } from 'astro:content';
+import FormattedDate from '../../components/FormattedDate.astro';
+import BackBt from '../../components/BackBt.astro';
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) =>  b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+import '../../styles/blog.css'
+import '../../styles/blog-home.css'
+import '../../styles/blog-collection.css'
+---
+
+<BaseLayout title="Blog | OQVA Digital">
+
+	<main>
+		<BackBt url={`/`} label="Return Home"/>
+
+		<section class="intro">
+			<div class="ctnr">
+				<div class="content reveal">
+					<h1 class="big"><sup>The Clean Network's </sup>Blog</h1>
+	
+					<h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore similique nisi culpa, voluptatum possimus veritatis corrupti.</h2>
+
+					<a href="#posts" aria-label="Check our posts">Check Posts</a>
+				</div>
+
+				<img src="/images/media/test.jpg" class="reveal" alt="Hero blog image">
+			</div>
+		</section>
+
+		<div class="intro_copy">
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, <b>nascetur ridiculus mus</b>. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+	
+			<p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. <strong>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</strong> Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. <b>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.</b> Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget</p>
+		</div>
+		
+		<section class="scroll_margin_top" id="posts">
+			<div class="center_base_width">
+				<div class="subset">
+					<a href="/blog/cleaning/" class="caption">Cleaning</a>
+
+					<ul class="posts">
+						{
+							posts.slice(0, 13).map((post) => (
+								<>
+								{post.data.category == "cleaning" ? (
+									<li id={(post.data.title).toLowerCase().replace(/\s+/g, '-')} class="scroll_margin_top">
+										<div class="ctnr reveal">
+											<div class="content">
+												<div class="ctnr">
+													<FormattedDate date={post.data.pubDate} />
+				
+													<a href={`/blog/${post.slug}/`}>
+														<h3 class="title">{post.data.title}</h3>
+													</a>
+
+													{post.data.description ? (
+														<p class="description">{post.data.description}</p>
+													) : null}
+	
+													<a href={`/blog/${post.slug}/`} class="read_more">Read more</a>
+												</div>
+											</div>
+			
+											<a class="hero" href={`/blog/${post.slug}/`}>
+												<img src={post.data.heroImage} alt={post.data.description} loading="lazy"/>
+											</a>
+										</div>
+									</li>
+								) : null}
+								</>
+							))
+						}
+					</ul>
+
+					<a href="/blog/cleaning" class="check_all">Check All Cleaning Posts</a>
+				</div>
+
+				<div class="subset">
+					<a href="/blog/health-and-environment/" class="caption">Health & Environment</a>
+
+					<ul class="posts">
+						{
+							posts.map((post) => (
+								<>
+								{post.data.category == "health-and-environment" ? (
+									<li id={(post.data.title).toLowerCase().replace(/\s+/g, '-')} class="scroll_margin_top">
+										<div class="ctnr reveal">
+											<div class="content">
+												<div class="ctnr">
+													<FormattedDate date={post.data.pubDate} />
+				
+													<a href={`/blog/${post.slug}/`}>
+														<h3 class="title">{post.data.title}</h3>
+													</a>
+	
+													{post.data.description ? (
+														<p class="description">{post.data.description}</p>
+													) : null}
+	
+													<a href={`/blog/${post.slug}/`} class="read_more">Read more</a>
+												</div>
+											</div>
+			
+											<a class="hero" href={`/blog/${post.slug}/`}>
+												<img src={post.data.heroImage} alt={post.data.description} loading="lazy"/>
+											</a>
+										</div>
+									</li>
+								) : null}
+								</>
+							))
+						}
+					</ul>
+	
+					<a href="/blog/health-and-environment" class="check_all">Check All Health & Environment Posts</a>
+				</div>
+
+				<div class="subset">
+					<a href="/blog/efficiency/" class="caption">Efficiency</a>
+
+					<ul class="posts">
+						{
+							posts.map((post) => (
+								<>
+								{post.data.category == "efficiency" ? (
+									<li id={(post.data.title).toLowerCase().replace(/\s+/g, '-')} class="scroll_margin_top">
+										<div class="ctnr reveal">
+											<div class="content">
+												<div class="ctnr">
+													<FormattedDate date={post.data.pubDate} />
+				
+													<a href={`/blog/${post.slug}/`}>
+														<h3 class="title">{post.data.title}</h3>
+													</a>
+	
+													{post.data.description ? (
+														<p class="description">{post.data.description}</p>
+													) : null}
+	
+													<a href={`/blog/${post.slug}/`} class="read_more">Read more</a>
+												</div>
+											</div>
+			
+											<a class="hero" href={`/blog/${post.slug}/`}>
+												<img src={post.data.heroImage} alt={post.data.description} loading="lazy"/>
+											</a>
+										</div>
+									</li>
+								) : null}
+								</>
+							))
+						}
+					</ul>
+	
+					<a href="/blog/efficiency" class="check_all">Check All Efficiency Posts</a>
+				</div>
+			</div>
+		</section>
+	</main>
+</BaseLayout>

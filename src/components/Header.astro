@@ -33,11 +33,11 @@ import { TEL, TEL_HREF } from "../consts";
                 <a href="/">Home</a>
 
                 <div class="subnav">
-                    <div class="flex">
+                    <div class="flex expand">
                         <a href="/services/">Services</a>
 
                         <button
-                            class="expand icon"
+                            class="icon"
                             type="button"
                             aria-label="Expand navigation"
                         >
@@ -92,12 +92,14 @@ import { TEL, TEL_HREF } from "../consts";
                     </div>
                 </div>
 
+                <a href="/sectors/">Sectors</a>
+
                 <!-- <div class="subnav">
-                    <div class="flex">
-                        <a href="/sectors/">Sectors</a>
+                    <div class="flex expand">
+                        <a href="/blog/">Blog</a>
 
                         <button
-                            class="expand icon"
+                            class="icon"
                             type="button"
                             aria-label="Expand navigation"
                         >
@@ -107,53 +109,28 @@ import { TEL, TEL_HREF } from "../consts";
 
                     <div class="subsets">
                         <div>
-                            <a href="/sectors/" class="heading sectors icon"
-                                >All Sectors</a
-                            >
+                            <a href={`/blog/cleaning/`}>
+                                Cleaning
+                            </a>
+                            
+                            <hr>
 
-                            <hr />
-
-                            {
-                                sectors.map((sectors) => (
-                                    <>
-                                        <a
-                                            href={`/sectors/${sectors.slug}/`}
-                                        >
-                                            {sectors.data.title}
-                                        </a>
-                                    </>
-                                ))
-                            }
+                            <a href={`/blog/health-and-environment/`}>
+                                Health & Environment
+                            </a>
+                            
+                            <hr>
+                            
+                            <a href={`/blog/efficiency/`}>
+                                Efficiency
+                            </a>
                         </div>
                     </div>
                 </div> -->
-
-                <a href="/sectors/">Sectors</a>
 
                 <a href="/locations/">Location</a>
                 
                 <a href="/about/">About</a>
-
-                <!-- <div class="subnav">
-                    <div class="flex">
-                        <a href="/about/">About</a>
-
-                        <button
-                            class="expand icon"
-                            type="button"
-                            aria-label="Expand navigation"
-                        >
-                            <span></span>
-                        </button>
-                    </div>
-
-                    <div class="subsets">
-                        <div>
-                            <a href="/about/" class="heading about icon">About Us</a>
-                            <a href="/about/" class="heading rates icon">Rates</a>
-                        </div>
-                    </div>
-                </div> -->
 
                 <a href="/contact/">Contact</a>
 
@@ -184,6 +161,7 @@ import { TEL, TEL_HREF } from "../consts";
         letter-spacing: 0.15rem;
         font-size: 1.2rem;
         position: relative;
+        z-index: 1;
     }
 
     .stripe a:hover {
@@ -295,8 +273,8 @@ import { TEL, TEL_HREF } from "../consts";
     }
 
     .hambt > .ctnr {
-        width: clamp(2.5rem,10vw,4rem);
-        height: clamp(2rem,8vw,3.5rem);
+        width: clamp(2.5rem,9vw,4rem);
+        height: clamp(2rem,7vw,3.5rem);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -314,7 +292,7 @@ import { TEL, TEL_HREF } from "../consts";
     }
 
     .hambt.close span:nth-child(1) {
-        transform: translateY(1.4rem) rotate(45deg);
+        transform: translateY(270%) rotate(45deg);
     }
 
     .hambt.close span:nth-child(2) {
@@ -485,7 +463,7 @@ import { TEL, TEL_HREF } from "../consts";
         align-items: center;
     }
 
-    .subnav .expand {
+    .subnav .expand button {
         color: var(--light);
         padding-right: 0.6rem;
         line-height: 1;
@@ -497,7 +475,7 @@ import { TEL, TEL_HREF } from "../consts";
         margin-right: -0.6rem;
     }
 
-    .subnav .expand span {
+    .subnav .expand button span {
         display: block;
         border-bottom: 0.5rem solid var(--highlight);
         border-right: 0.5rem solid var(--highlight);
@@ -506,7 +484,7 @@ import { TEL, TEL_HREF } from "../consts";
         transform: translate(50%, 0%) rotate(135deg);
     }
 
-    .subnav .expand span.active {
+    .subnav .expand button span.active {
         transform: translate(0%, -50%) rotate(45deg);
     }
 
@@ -518,7 +496,7 @@ import { TEL, TEL_HREF } from "../consts";
     }
 
     @media screen and (min-width: 850px) {
-        .subnav .expand,
+        .subnav .expand button,
         .hambt {
             display: none;
         }
@@ -580,7 +558,7 @@ import { TEL, TEL_HREF } from "../consts";
             text-align: unset;
             justify-content: right;
             width: unset;
-            gap: clamp(0rem,calc(6vw - 5rem),3.5rem);
+            gap: clamp(0rem,calc(6vw - 5rem),3rem);
             align-items: center;
             height: 100%;
         }
@@ -714,7 +692,7 @@ import { TEL, TEL_HREF } from "../consts";
     for (let i = 0; i < expandBts.length; i++) {
         expandBts[i].addEventListener("click", (e) => {
             const target = e.currentTarget as HTMLElement;
-            target.parentElement.parentElement
+            target.parentElement
                 .querySelector(".subsets")
                 .classList.toggle("visible");
 

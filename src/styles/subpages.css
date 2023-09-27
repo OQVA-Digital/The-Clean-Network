@@ -34,7 +34,6 @@ h2::after {
 
 .panel {
     position: relative;
-    scroll-margin-top: 20rem;
 }
 
 .panel > .ctnr {

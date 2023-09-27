@@ -3,6 +3,8 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import SubpageLayout from "../../layouts/BaseLayout.astro";
 import ContactSection from "../../components/ContactSection.astro"
 
+import BackBt from "../../components/BackBt.astro";
+
 export async function getStaticPaths() {
     const services = await getCollection("services");
     return services.map((services) => ({
@@ -15,6 +17,7 @@ type Props = CollectionEntry<"services">;
 const services = Astro.props;
 const { Content } = await services.render();
 
+import "../../styles/subpages.css"
 import "../../styles/posts.css"
 
 import { Schema } from "astro-seo-schema"
@@ -22,10 +25,11 @@ import { Schema } from "astro-seo-schema"
 
 <SubpageLayout {...services.data}>
     <section class="intro">
+        <BackBt url={`/services/#${(services.data.title).toLowerCase().replace(/\s+/g, '-')}`} label="Other services"/>
 
-        <a href={`/services/#${(services.data.title).toLowerCase().replace(/\s+/g, '-')}`} class="back">Other services</a>
-
-        <div class="cover" style={`background-image: url(${services.data.image});`}></div>
+        <div class="cover">
+			<img src={services.data.image} alt={services.data.description} loading="lazy"/>
+        </div>
 
         <!-- <img src={services.data.image} alt={`Photo of ${services.data.title} cleaning service`}> -->
 
@@ -33,15 +37,19 @@ import { Schema } from "astro-seo-schema"
     
     </section>
 
-    <article>
-        <h1>{services.data.title} {String(services.data.title).includes('Cleaning') ? "" : "Cleaning"}</h1>
+    <div class="content_ctnr">
+        <article class="reveal">
+            <h1>{services.data.title} {String(services.data.title).includes('Cleaning') ? "" : "Cleaning"}</h1>
 
-        <Content />
+            <Content />
+        </article>
 
-        <a href="/contact/" class="main cta" aria-label="Get a free quote for our cleaning services">Get a free quote</a>
+        <div class="cta_ctnr">
+            <a href="/contact/" class="main cta" aria-label="Get a free quote for our cleaning services">Get a free quote</a>
 
-        <a href={`/services/#${(services.data.title).toLowerCase().replace(/\s+/g, '-')}`} class="back">Other services</a>
-    </article>
+            <a href={`/services/#${(services.data.title).toLowerCase().replace(/\s+/g, '-')}`} class="back">Other services</a>
+        </div>
+    </div>
 
     <ContactSection />
 

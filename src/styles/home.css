@@ -92,7 +92,6 @@ main {}
     display: flex;
     flex-direction: column;
     gap: clamp(4rem, 5vw, 5rem);
-    scroll-margin-top: var(--header-height);
 }
 
 .panel.services, .panel.sectors {

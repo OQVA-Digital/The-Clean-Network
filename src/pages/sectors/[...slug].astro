@@ -1,7 +1,8 @@
 ---
-import { CollectionEntry, getCollection } from "astro:content";
+import { type CollectionEntry, getCollection } from "astro:content";
 import SubpageLayout from "../../layouts/BaseLayout.astro";
 import ContactSection from "../../components/ContactSection.astro"
+import BackBt from "../../components/BackBt.astro";
 
 export async function getStaticPaths() {
     const sectors = await getCollection("sectors");
@@ -15,6 +16,7 @@ type Props = CollectionEntry<"sectors">;
 const sectors = Astro.props;
 const { Content } = await sectors.render();
 
+import "../../styles/subpages.css"
 import "../../styles/posts.css"
 
 import { Schema } from "astro-seo-schema"
@@ -22,26 +24,27 @@ import { Schema } from "astro-seo-schema"
 
 <SubpageLayout {...sectors.data}>
     <section class="intro">
+        <BackBt url={`/sectors/#${(sectors.data.title).toLowerCase().replace(/\s+/g, '-')}`} label="Other sectors"/>
 
-        <a href={`/sectors/#${(sectors.data.title).toLowerCase().replace(/\s+/g, '-')}`} class="back">Other sectors</a>
-
-        <div class="cover" style={`background-image: url(${sectors.data.image});`}></div>
-
-        <!-- <img src={sectors.data.image} alt={`Photo of ${sectors.data.title} cleaning service`}> -->
-
-        <!-- <hr> -->
+        <div class="cover">
+			<img src={sectors.data.image} alt={sectors.data.description} loading="lazy"/>
+        </div>
     
     </section>
 
-    <article>
-        <h1>{sectors.data.title}</h1>
+    <div class="content_ctnr">
+        <article class="reveal">
+            <h1>{sectors.data.title}</h1>
 
-        <Content />
+            <Content />
+        </article>
 
-        <a href="/contact/" class="main cta" aria-label="Get a free quote for our cleaning sectors">Get a free quote</a>
-
-        <a href={`/sectors/#${(sectors.data.title).toLowerCase().replace(/\s+/g, '-')}`} class="back">Other sectors</a>
-    </article>
+        <div class="cta_ctnr">
+            <a href="/contact/" class="main cta" aria-label="Get a free quote for our cleaning sectors">Get a free quote</a>
+    
+            <a href={`/sectors/#${(sectors.data.title).toLowerCase().replace(/\s+/g, '-')}`} class="back">Other sectors</a>
+        </div>
+    </div>
 
     <ContactSection />
 
