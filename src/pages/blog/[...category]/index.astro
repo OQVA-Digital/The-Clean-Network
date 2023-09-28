@@ -31,11 +31,13 @@ import '../../../styles/blog-post.css'
 	<section class="intro">
 		<div class="ctnr">
 			<div class="content reveal">
+				<sup><a href="/blog/">Blog category</a></sup>
+
 				<h1 class="category_heading">{category == 'cleaning' ? "Cleaning" : category == 'health-and-environment' ? "Health & Environment" : category == 'efficiency' ? "Efficiency" : null}</h1>
 
 				<h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore similique nisi culpa, voluptatum possimus veritatis corrupti.</h2>
 
-				<a href="#posts" aria-label="Check our posts">Check Posts</a>
+				<a href="#posts" class="cta" aria-label="Check our posts">Check Posts</a>
 			</div>
 
 			<img src={posts[0].data.heroImage} class="reveal" alt={posts[0].data.description ? posts[0].data.description : "Blog hero image"}>
@@ -87,6 +89,8 @@ import '../../../styles/blog-post.css'
 			))
 		}
 	</ul>
+
+	<a href="/blog/">Check All Posts</a>
 </BaseLayout>
 
 

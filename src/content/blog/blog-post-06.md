@@ -3,7 +3,7 @@ title: Blog Post 06 Blog Post 06 Blog Post 06 Blog Post 06
 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore similique nisi culpa, voluptatum possimus veritatis corrupti."
 category: "efficiency"
 pubDate: Jan 06 2023
-heroImage: /images/media/test.jpg
+heroImage: /images/media/gutters-and-roofs.jpg
 ---
 Now, I know GCSE results are the talk of the town lately. Those young minds are polishing up their academic achievements, just like how we polish up those dingy floors. So, let's mop up the curiosity and roll out the insights on floor cleaning in schools, starting businesses, and the essence of good old hard work.
 

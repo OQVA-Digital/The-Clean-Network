@@ -3,7 +3,7 @@ title: Blog Post 02
 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore similique nisi culpa, voluptatum possimus veritatis corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit."
 category: "health-and-environment"
 pubDate: Jan 02 2023
-heroImage: /images/media/test.jpg
+heroImage: /images/media/windows.jpg
 ---
 Now, I know GCSE results are the talk of the town lately. Those young minds are polishing up their academic achievements, just like how we polish up those dingy floors. So, let's mop up the curiosity and roll out the insights on floor cleaning in schools, starting businesses, and the essence of good old hard work.
 

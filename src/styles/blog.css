@@ -40,6 +40,11 @@ time {
     font-weight: 500;
 }
 
+a.category_indicator {
+    text-decoration: underline;
+    text-underline-offset: 0.2rem;
+}
+
 a.category_indicator:hover {
     color: var(--dark-a);
 }

@@ -28,7 +28,7 @@ import { Schema } from "astro-seo-schema"
         <BackBt url={`/services/#${(services.data.title).toLowerCase().replace(/\s+/g, '-')}`} label="Other services"/>
 
         <div class="cover">
-			<img src={services.data.image} alt={services.data.description} loading="lazy"/>
+			<img src={services.data.image} alt={services.data.description} class="reveal" loading="lazy"/>
         </div>
 
         <!-- <img src={services.data.image} alt={`Photo of ${services.data.title} cleaning service`}> -->
