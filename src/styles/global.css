@@ -44,7 +44,7 @@ html.sr .reveal {
     --base-width: clamp(9rem, 89vw, var(--max-width));
     --base-width-overflow: calc((100% - var(--base-width)) / 2);
 
-    --header-height: clamp(1rem,18vmin,7.5rem);
+    --header-height: clamp(1rem,16vmin,7.5rem);
 }
 
 @font-face {
