@@ -15,7 +15,7 @@
 .recommendations ul {
     display: flex;
     flex-flow: row wrap;
-    gap: 2rem;
+    gap: clamp(2rem, 3vw, 3rem);
     align-items: flex-start;
 }
 

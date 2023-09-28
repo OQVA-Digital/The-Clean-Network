@@ -1,5 +1,6 @@
 ---
 title: Blog Post 02
+author: "Lorem Ipsum"
 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore similique nisi culpa, voluptatum possimus veritatis corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit."
 category: "health-and-environment"
 pubDate: Jan 02 2023

@@ -115,4 +115,12 @@ a.category_indicator:hover {
     -o-transition: color 0.2s ease;
 }
 
+.author {
+    color: var(--grey);
+    font-weight: 500;
+}
 
+.author cite {
+    color: var(--dark-a);
+    font-style: normal;
+}

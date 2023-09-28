@@ -1,5 +1,6 @@
 ---
 title: Blog Post 06 Blog Post 06 Blog Post 06 Blog Post 06
+author: "Lorem Ipsum"
 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore similique nisi culpa, voluptatum possimus veritatis corrupti."
 category: "efficiency"
 pubDate: Jan 06 2023

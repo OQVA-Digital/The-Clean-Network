@@ -46,9 +46,9 @@ import { Schema } from "astro-seo-schema"
 
         <div class="cta_ctnr">
             <a href="/contact/" class="main cta" aria-label="Get a free quote for our cleaning services">Get a free quote</a>
-
-            <a href={`/services/#${(services.data.title).toLowerCase().replace(/\s+/g, '-')}`} class="back">Other services</a>
         </div>
+
+        <a href={`/services/#${(services.data.title).toLowerCase().replace(/\s+/g, '-')}`} class="back">Other services</a>
     </div>
 
     <ContactSection />

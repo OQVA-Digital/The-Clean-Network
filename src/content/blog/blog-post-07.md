@@ -1,5 +1,6 @@
 ---
 title: Blog Post 07
+author: "Lorem Ipsum"
 description: "Inventore similique nisi culpa, voluptatum possimus veritatis corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore similique nisi culpa, voluptatum possimus veritatis corrupti."
 category: "cleaning"
 pubDate: Jan 07 2023

@@ -104,10 +104,6 @@
     padding: clamp(3rem, 5vmin, 4rem) clamp(2.5rem, 6vmin, 5rem) 0;
 }
 
-.content_ctnr .cta_ctnr {
-    margin-block: clamp(3rem, 5vmin, 4rem);
-}
-
 article ul, article ol {
     padding: 0 0 0 4rem;
     margin-block: 3rem;
@@ -142,17 +138,21 @@ article p strong, article p em {
 .content_ctnr .main.cta {
     display: block;
     padding: 1.2rem;
-    position: sticky;
-    bottom: 1.5rem;
     margin-top: 3rem;
     margin-inline: clamp(2.5rem, 6vmin, 5rem);
+}
+
+.content_ctnr .cta_ctnr {
+    margin-block: clamp(3rem, 5vmin, 4rem) 2rem;
+    position: sticky;
+    bottom: 1.5rem;
 }
 
 .content_ctnr a.back {
     display: block;
     padding: 1rem;
     font-size: 1.5rem;
-    margin-top: 1.5rem;
+    margin-bottom: 2rem;
     color: var(--primary-a);
     font-size: clamp(1.5rem,4vmin,1.8rem);
     font-weight: 500;

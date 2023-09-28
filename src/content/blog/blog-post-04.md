@@ -1,5 +1,6 @@
 ---
 title: Blog Post 04 Blog Post 04 Blog Post 04 Blog Post 04
+author: "Lorem Ipsum"
 description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore similique nisi culpa, voluptatum possimus veritatis corrupti."
 category: "cleaning"
 pubDate: Jan 04 2023

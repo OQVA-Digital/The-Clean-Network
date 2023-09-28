@@ -65,11 +65,15 @@ while(firstRandomPos == secondRandomPos) {
     <div class="content_ctnr">
         <article class="reveal">
             <div class="over_heading">
-                <FormattedDate date={post.data.pubDate} />
+                <div class="author">by <cite>{post.data.author}</cite></div>
     
                 <hr/>
     
                 <a href={`/blog/${post.data.category}`} class="category_indicator" aria-label="Check same category posts" title="Check category">{post.data.category == 'cleaning' ? 'Cleaning' : post.data.category == 'health-and-environment' ? 'Health & Environment' : post.data.category == 'efficiency' ? "Efficiency" : null}</a>
+
+                <hr>
+
+                <FormattedDate date={post.data.pubDate} />
             </div>
     
             <h1>{post.data.title}</h1>
@@ -151,8 +155,8 @@ while(firstRandomPos == secondRandomPos) {
             headline: `${post.data.title}`,
             image: `${post.data.heroImage}`,
             "author": [{
-                "@type": "Organization",
-                "name": "The Clean Network"
+                "@type": "Person",
+                "name": `${post.data.author}`
             }],
             "publisher": {
                 "@type": "Organization",
