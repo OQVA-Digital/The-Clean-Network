@@ -29,8 +29,18 @@ const posts = (await getCollection('blog')).sort(
 	(a, b) =>  b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
+
 let firstRandomPos = Math.floor(Math.random() * posts.length)
 let secondRandomPos = Math.floor(Math.random() * posts.length)
+
+
+while (posts[firstRandomPos].data.title == post.data.title) {
+    firstRandomPos = Math.floor(Math.random() * posts.length)
+}
+
+while (posts[secondRandomPos].data.title == post.data.title) {
+    secondRandomPos = Math.floor(Math.random() * posts.length)
+}
 
 while(firstRandomPos == secondRandomPos) {
     secondRandomPos = Math.floor(Math.random() * posts.length)
