@@ -8,24 +8,28 @@
     display: block;
     font-weight: 500;
     color: var(--primary-e);
-    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-size: clamp(2rem, 5vw, 2.8rem);
     margin-bottom: 2rem;
 }
 
 .recommendations ul {
     display: flex;
-    flex-flow: row wrap;
-    gap: clamp(2rem, 3vw, 3rem);
-    align-items: flex-start;
+    flex-direction: column;
+    gap: clamp(1rem, 6vw, 2rem);
+    /* align-items: flex-start; */
 }
 
 .recommendations ul li {
     background-color: var(--light-d);
-    border-radius: 1rem;
     border: 0.1rem solid var(--light-d);
     flex: 1;
     min-width: clamp(20rem, 70vw, 30rem);
     overflow: hidden;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
 }
 
 .recommendations ul li > .ctnr {
@@ -41,8 +45,8 @@
 }
 
 .recommendations ul li .hero {
-    width: clamp(8rem, 30vw, 20rem);
-    min-height: clamp(8rem, 30vw, 20rem);
+    width: clamp(8rem, 30vw, 26rem);
+    min-height: clamp(8rem, 30vw, 15rem);
 }
 
 .recommendations ul li .hero img {
@@ -62,7 +66,7 @@
 
 
 @media screen and (min-width:1000px) {
-    .recommendations {
+    /* .recommendations {
         padding-inline: unset;
     }
 
@@ -99,5 +103,5 @@
 
     .recommendations li:last-child .content {
         padding: clamp(1rem, 4vw, 2.2rem) 0 clamp(1rem, 4vw, 1.6rem) 0;
-    }
+    } */
 }

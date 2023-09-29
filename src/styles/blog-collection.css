@@ -301,7 +301,8 @@ section.intro {
         -moz-border-radius: 0 0 0 4rem;
         -ms-border-radius: 0 0 0 4rem;
         -o-border-radius: 0 0 0 4rem;
-        /* box-shadow: -4rem -5rem 9rem 0 var(--light-b); */
+        max-height: 71vh;
+        object-fit: cover;
 }
 
     .posts li .hero {

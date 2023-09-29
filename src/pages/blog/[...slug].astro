@@ -32,18 +32,13 @@ const posts = (await getCollection('blog')).sort(
 
 let firstRandomPos = Math.floor(Math.random() * posts.length)
 let secondRandomPos = Math.floor(Math.random() * posts.length)
+let thirdRandomPos = Math.floor(Math.random() * posts.length)
 
 
-while (posts[firstRandomPos].data.title == post.data.title) {
+while (posts[firstRandomPos].data.title == post.data.title && posts[secondRandomPos].data.title == post.data.title && posts[thirdRandomPos].data.title == post.data.title && firstRandomPos == secondRandomPos && thirdRandomPos == secondRandomPos && thirdRandomPos == firstRandomPos) {
     firstRandomPos = Math.floor(Math.random() * posts.length)
-}
-
-while (posts[secondRandomPos].data.title == post.data.title) {
     secondRandomPos = Math.floor(Math.random() * posts.length)
-}
-
-while(firstRandomPos == secondRandomPos) {
-    secondRandomPos = Math.floor(Math.random() * posts.length)
+    thirdRandomPos = Math.floor(Math.random() * posts.length)
 }
 
 ---
@@ -84,7 +79,7 @@ while(firstRandomPos == secondRandomPos) {
         <hr>
     
         <aside class="recommendations reveal">
-            <span class="heading">Read more</span>
+            <span class="heading">You might also like</span>
 
             <ul class="posts">
                 <li id={(posts[firstRandomPos].data.title).toLowerCase().replace(/\s+/g, '-')} class="scroll_margin_top">
@@ -135,6 +130,32 @@ while(firstRandomPos == secondRandomPos) {
 
                         <a class="hero" href={`/blog/${posts[secondRandomPos].slug}/`}>
                             <img src={posts[secondRandomPos].data.heroImage} alt={posts[secondRandomPos].data.description} loading="lazy"/>
+                        </a>
+                    </div>
+                </li>
+
+                <li id={(posts[thirdRandomPos].data.title).toLowerCase().replace(/\s+/g, '-')} class="scroll_margin_top">
+                    <div class="ctnr">
+                        <div class="content">
+                            <div class="ctnr">
+                                    <div class="over_heading">
+                                        <FormattedDate date={posts[thirdRandomPos].data.pubDate} />
+
+                                        <hr/>
+
+                                        <p class="category_indicator">{posts[thirdRandomPos].data.category == 'cleaning' ? 'Cleaning' : posts[thirdRandomPos].data.category == 'health-and-environment' ? 'Health & Environment' : posts[thirdRandomPos].data.category == 'efficiency' ? "Efficiency" : null}</p>
+                                    </div>
+
+                                <a href={`/blog/${posts[thirdRandomPos].slug}/`}>
+                                    <p class="title">{posts[thirdRandomPos].data.title}</p>
+                                </a>
+
+                                <a href={`/blog/${posts[thirdRandomPos].slug}/`} class="read_more">Read more</a>
+                            </div>
+                        </div>
+
+                        <a class="hero" href={`/blog/${posts[thirdRandomPos].slug}/`}>
+                            <img src={posts[thirdRandomPos].data.heroImage} alt={posts[thirdRandomPos].data.description} loading="lazy"/>
                         </a>
                     </div>
                 </li>

@@ -5,6 +5,11 @@ import FormattedDate from '../../../components/FormattedDate.astro';
 
 import { type CollectionEntry, getCollection } from 'astro:content';
 
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) =>  b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
 export function getStaticPaths() {
   return [
     {params: {category: 'cleaning'}},
@@ -12,8 +17,6 @@ export function getStaticPaths() {
     {params: {category: 'efficiency'}},
   ];
 }
-
-const posts = await getCollection('blog')
 
 const { category } = Astro.params;
 
@@ -40,7 +43,7 @@ import '../../../styles/blog-post.css'
 				<a href="#posts" class="cta" aria-label="Check our posts">Check Posts</a>
 			</div>
 
-			<img src={posts[0].data.heroImage} class="reveal" alt={posts[0].data.description ? posts[0].data.description : "Blog hero image"}>
+			<img src={posts.find(post => post.data.category.includes(category)).data.heroImage} class="reveal" alt={posts[0].data.description ? posts[0].data.description : "Blog hero image"}>
 		</div>
 	</section>
 
