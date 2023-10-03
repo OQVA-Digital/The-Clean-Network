@@ -12,9 +12,11 @@ const posts = (await getCollection('blog')).sort(
 import '../../styles/blog.css'
 import '../../styles/blog-home.css'
 import '../../styles/blog-collection.css'
+
+import { Schema } from "astro-seo-schema"
 ---
 
-<BaseLayout title="Blog | OQVA Digital">
+<BaseLayout title="Blog | The Clean Network">
 
 	<main>
 		<BackBt url={`/`} label="Return Home"/>
@@ -40,9 +42,9 @@ import '../../styles/blog-collection.css'
 
 
 			<div class="anchors" title="See Posts">
-				<a href="/blog#cleaning">Cleaning</a>
-				<a href="/blog#health-and-environment">Health & Environment posts</a>
-				<a href="/blog#efficiency">Efficiency</a>
+				<a href="#cleaning">Cleaning</a>
+				<a href="#health-and-environment">Health & Environment posts</a>
+				<a href="#efficiency">Efficiency</a>
 			</div>
 		</div>
 		
@@ -180,4 +182,14 @@ import '../../styles/blog-collection.css'
 			</div>
 		</section>
 	</main>
+
+    <Schema
+        item={{
+			"@context": "https://schema.org",
+			"@type": "Blog",
+			"@id": "tcn-blog",
+			"description": "The Clean Network, London's trusted partner in professional commercial and office cleaning. Reliable, high standards, tailored to your needs. See why 95% of our clients stay.",
+			"name": "The Clean Network Blog"
+		  }}
+    />
 </BaseLayout>

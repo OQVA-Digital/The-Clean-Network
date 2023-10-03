@@ -25,6 +25,8 @@ import BackBt from '../../../components/BackBt.astro';
 import '../../../styles/blog.css'
 import '../../../styles/blog-collection.css'
 import '../../../styles/blog-post.css'
+
+import { Schema } from "astro-seo-schema"
 ---
 
 <BaseLayout title={category}>
@@ -66,7 +68,7 @@ import '../../../styles/blog-post.css'
 											<div class="over_heading">
 												<FormattedDate date={post.data.pubDate} />
 
-												<hr>
+												<hr/>
 
 												<div class="author">by <cite>{post.data.author}</cite></div>
 									
@@ -119,6 +121,16 @@ import '../../../styles/blog-post.css'
 	
 		<a class="check_all" href="/blog#posts">Check All Posts</a>
 	</div>
+
+    <Schema
+        item={{
+			"@context": "https://schema.org",
+			"@type": "Blog",
+			"@id": "tcn-blog",
+			"description": "The Clean Network, London's trusted partner in professional commercial and office cleaning. Reliable, high standards, tailored to your needs. See why 95% of our clients stay.",
+			"name": "The Clean Network Blog"
+		  }}
+    />
 </BaseLayout>
 
 
