@@ -1,5 +1,5 @@
 
-html.sr .reveal {
+html.sr .reveal, html.sr .reveal_interval01, html.sr .reveal_delay, html.sr .reveal_tag {
     visibility: hidden;
 }
 
