@@ -39,7 +39,7 @@ section.intro {
     width: auto;
     font-weight: 400;
     margin-block: 1rem 1.5rem;
-    line-height: 1.4;
+    line-height: 1.5;
     max-width: 40rem;
 }
 
@@ -206,30 +206,34 @@ section.intro {
     color: var(--grey);
     max-width: 58rem;
     line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
 }
 
 .subset .check_all {
-    width: fit-content;
+    width: 100%;
     text-align: center;
-    background-color: var(--light-a);
+    background-color: var(--light-d);
     padding: 1.2rem 3rem;
     color: var(--primary-e);
     font-size: clamp(1.4rem, 4vw, 1.7rem);
-    border-radius: 0.6rem 0.6rem 0 0;
+    border-radius: 0.6rem;
     box-sizing: border-box;
     font-weight: 500;
     margin-inline: auto;
     display: block;
     position: sticky;
-    bottom: 0;
-    margin-top: 3rem;
+    bottom: 1rem;
+    margin-block: 3rem clamp(1rem, 3vw, 3rem);
     transition: background-color 0.3s ease, border-color 0.3s ease;
     -webkit-transition: background-color 0.3s ease, border-color 0.3s ease;
     -moz-transition: background-color 0.3s ease, border-color 0.3s ease;
     -ms-transition: background-color 0.3s ease, border-color 0.3s ease;
     -o-transition: background-color 0.3s ease, border-color 0.3s ease;
     border: 0.2rem solid var(--light);
-    border-bottom: unset;
 }
 
 .subset .check_all:hover {
@@ -243,10 +247,10 @@ section.intro {
 }
 
 .intro_copy {
-    font-size: clamp(1.5rem, 4vw, 1.65rem);
+    font-size: clamp(1.5rem, 4vw, 1.7rem);
     text-align: center;
     margin-bottom: 6rem;
-    line-height: 1.5;
+    line-height: 1.6;
     font-weight: 400;
     width: clamp(9rem, 89vw, 124rem);
     margin-inline: auto;
@@ -263,10 +267,44 @@ section.intro {
     color: var(--primary-e);
 }
 
+.intro_copy .anchors {
+    display: flex;
+    flex-flow: row wrap;
+    gap: clamp(1rem, 3vw, 1.6rem);
+    justify-content: center;
+}
 
+.intro_copy .anchors a {
+    text-align: center;
+    background-color: var(--light-d);
+    padding: 1.2rem clamp(0.7rem, 2vw, 4rem);
+    color: var(--primary-e);
+    font-size: clamp(1.4rem, 4vw, 1.7rem);
+    border-radius: 0.6rem;
+    box-sizing: border-box;
+    font-weight: 500;
+    display: block;
+    position: sticky;
+    bottom: 1rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease, border-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease, border-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease, border-color 0.3s ease;
+    -o-transition: background-color 0.3s ease, border-color 0.3s ease;
+    border: 0.2rem solid var(--light);
+    flex: 1;
+    min-width: 20rem;
+}
 
-
-
+.intro_copy .anchors a:hover {
+    background-color: var(--light);
+    border-color: var(--light-a);
+    transition: background-color 0s ease, border-color 0s ease;
+    -webkit-transition: background-color 0s ease, border-color 0s ease;
+    -moz-transition: background-color 0s ease, border-color 0s ease;
+    -ms-transition: background-color 0s ease, border-color 0s ease;
+    -o-transition: background-color 0s ease, border-color 0s ease;
+}
 
 
 
@@ -303,7 +341,7 @@ section.intro {
         -o-border-radius: 0 0 0 4rem;
         max-height: 71vh;
         object-fit: cover;
-}
+    }
 
     .posts li .hero {
         border-radius: 0 1rem 1rem 0;
@@ -315,5 +353,9 @@ section.intro {
 
     .posts li .content > .ctnr {
         max-width: clamp(20rem, 40vw, 70rem);
+    }
+
+    .intro_copy .anchors a {
+        flex: unset;
     }
 }

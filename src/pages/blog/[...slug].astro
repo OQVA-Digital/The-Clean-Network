@@ -30,25 +30,34 @@ const posts = (await getCollection('blog')).sort(
 );
 
 
-let firstRandomPos = Math.floor(Math.random() * posts.length)
-let secondRandomPos = Math.floor(Math.random() * posts.length)
-let thirdRandomPos = Math.floor(Math.random() * posts.length)
 
+let postCategory = post.data.category;
+let postTitle = post.data.title;
 
-while (posts[firstRandomPos].data.title == post.data.title && posts[secondRandomPos].data.title == post.data.title && posts[thirdRandomPos].data.title == post.data.title && firstRandomPos == secondRandomPos && thirdRandomPos == secondRandomPos && thirdRandomPos == firstRandomPos) {
-    firstRandomPos = Math.floor(Math.random() * posts.length)
-    secondRandomPos = Math.floor(Math.random() * posts.length)
-    thirdRandomPos = Math.floor(Math.random() * posts.length)
+let filteredPosts = posts.filter(p => p.data.category === postCategory && p.data.title !== post.data.title);
+
+let firstRandomPos = 0
+let secondRandomPos = 0
+let thirdRandomPos = 0
+    console.log(filteredPosts[firstRandomPos].data.title == postTitle)
+
+while (filteredPosts[firstRandomPos].data.title == postTitle || filteredPosts[secondRandomPos].data.title == postTitle || filteredPosts[thirdRandomPos].data.title == postTitle || (firstRandomPos == secondRandomPos || thirdRandomPos == secondRandomPos || thirdRandomPos == firstRandomPos)) {
+    firstRandomPos = Math.floor(Math.random() * filteredPosts.length)
+    secondRandomPos = Math.floor(Math.random() * filteredPosts.length)
+    thirdRandomPos = Math.floor(Math.random() * filteredPosts.length)
 }
+
+
+
 
 ---
 
 <SubpageLayout {...post.data}>
     <section class="intro">
-        <BackBt url={`/blog/${post.data.category}#${(post.data.title).toLowerCase().replace(/\s+/g, '-')}`} label="Return to Category"/>
+        <BackBt url={`/blog/${post.data.category}#${(post.data.title).toLowerCase().replace(/\s+/g, '-')}`} label="Return to category"/>
 
         <div class="cover">
-			<img src={post.data.heroImage} alt={post.data.description} loading="lazy" class="reveal"/>
+			<img src={post.data.heroImage} alt={post.data.description} loading="lazy" class="reveal_delay"/>
 		</div>
 
         <!-- <img src={post.data.image} alt={`Photo of ${post.data.title} cleaning service`}> -->
@@ -60,102 +69,130 @@ while (posts[firstRandomPos].data.title == post.data.title && posts[secondRandom
     <div class="content_ctnr">
         <article class="reveal">
             <div class="over_heading">
+				<FormattedDate date={post.data.pubDate} />
+
+				<hr>
+
                 <div class="author">by <cite>{post.data.author}</cite></div>
     
                 <hr/>
     
-                <a href={`/blog/${post.data.category}`} class="category_indicator" aria-label="Check same category posts" title="Check category">{post.data.category == 'cleaning' ? 'Cleaning' : post.data.category == 'health-and-environment' ? 'Health & Environment' : post.data.category == 'efficiency' ? "Efficiency" : null}</a>
-
-                <hr>
-
-                <FormattedDate date={post.data.pubDate} />
+                <a href={`/blog/${post.data.category}`} class="category_indicator" aria-label="Check same category posts" title="see category">{post.data.category == 'cleaning' ? 'Cleaning' : post.data.category == 'health-and-environment' ? 'Health & Environment' : post.data.category == 'efficiency' ? "Efficiency" : null}</a>
             </div>
     
             <h1>{post.data.title}</h1>
     
-            <Content />
+            {post.data.tags ? (
+                <ul class="tags">
+                    {post.data.tags.map(item => (
+                        <li>
+                            {item == "Bathroom" ? (
+                                <a href={`/services/bathrooms`} class="reveal_tag">{item}</a>
+                            ) : (
+                                <p class="reveal_tag">{item}</p>
+                            )}
+                        </li>
+                    ))}
+                </ul>
+            ) : null}
+
+            <div class="post_content">
+                <Content />
+            </div>
         </article>
 
         <hr>
     
         <aside class="recommendations reveal">
-            <span class="heading">You might also like</span>
+            <span class="tangent_heading">You might also like</span>
 
             <ul class="posts">
-                <li id={(posts[firstRandomPos].data.title).toLowerCase().replace(/\s+/g, '-')} class="scroll_margin_top">
+                <li id={(filteredPosts[firstRandomPos].data.title).toLowerCase().replace(/\s+/g, '-')} class="scroll_margin_top reveal_delay2">
                     <div class="ctnr">
                         <div class="content">
                             <div class="ctnr">
                                     <div class="over_heading">
-                                        <FormattedDate date={posts[firstRandomPos].data.pubDate} />
+                                        <FormattedDate date={filteredPosts[firstRandomPos].data.pubDate} />
 
                                         <hr/>
 
-                                        <p class="category_indicator">{posts[firstRandomPos].data.category == 'cleaning' ? 'Cleaning' : posts[firstRandomPos].data.category == 'health-and-environment' ? 'Health & Environment' : posts[firstRandomPos].data.category == 'efficiency' ? "Efficiency" : null}</p>
+                                        <p class="category_indicator">{filteredPosts[firstRandomPos].data.category == 'cleaning' ? 'Cleaning' : filteredPosts[firstRandomPos].data.category == 'health-and-environment' ? 'Health & Environment' : filteredPosts[firstRandomPos].data.category == 'efficiency' ? "Efficiency" : null}</p>
                                     </div>
 
-                                <a href={`/blog/${posts[firstRandomPos].slug}/`}>
-                                    <p class="title">{posts[firstRandomPos].data.title}</p>
+                                <a href={`/blog/${filteredPosts[firstRandomPos].slug}/`}>
+                                    <p class="title">{filteredPosts[firstRandomPos].data.title}</p>
                                 </a>
+	
+                                {post.data.description ? (
+                                    <p class="description">{post.data.description}</p>
+                                ) : null}
 
-                                <a href={`/blog/${posts[firstRandomPos].slug}/`} class="read_more">Read more</a>
+                                <a href={`/blog/${filteredPosts[firstRandomPos].slug}/`} class="read_more">Read more</a>
                             </div>
                         </div>
 
-                        <a class="hero" href={`/blog/${posts[firstRandomPos].slug}/`}>
-                            <img src={posts[firstRandomPos].data.heroImage} alt={posts[firstRandomPos].data.description} loading="lazy"/>
+                        <a class="hero" href={`/blog/${filteredPosts[firstRandomPos].slug}/`}>
+                            <img src={filteredPosts[firstRandomPos].data.heroImage} alt={filteredPosts[firstRandomPos].data.description} loading="lazy"/>
                         </a>
                     </div>
                 </li>
 
-                <li id={(posts[secondRandomPos].data.title).toLowerCase().replace(/\s+/g, '-')} class="scroll_margin_top">
+                <li id={(filteredPosts[secondRandomPos].data.title).toLowerCase().replace(/\s+/g, '-')} class="scroll_margin_top reveal_delay2">
                     <div class="ctnr">
                         <div class="content">
                             <div class="ctnr">
                                     <div class="over_heading">
-                                        <FormattedDate date={posts[secondRandomPos].data.pubDate} />
+                                        <FormattedDate date={filteredPosts[secondRandomPos].data.pubDate} />
 
                                         <hr/>
 
-                                        <p class="category_indicator">{posts[secondRandomPos].data.category == 'cleaning' ? 'Cleaning' : posts[secondRandomPos].data.category == 'health-and-environment' ? 'Health & Environment' : posts[secondRandomPos].data.category == 'efficiency' ? "Efficiency" : null}</p>
+                                        <p class="category_indicator">{filteredPosts[secondRandomPos].data.category == 'cleaning' ? 'Cleaning' : filteredPosts[secondRandomPos].data.category == 'health-and-environment' ? 'Health & Environment' : filteredPosts[secondRandomPos].data.category == 'efficiency' ? "Efficiency" : null}</p>
                                     </div>
 
-                                <a href={`/blog/${posts[secondRandomPos].slug}/`}>
-                                    <p class="title">{posts[secondRandomPos].data.title}</p>
+                                <a href={`/blog/${filteredPosts[secondRandomPos].slug}/`}>
+                                    <p class="title">{filteredPosts[secondRandomPos].data.title}</p>
                                 </a>
+	
+                                {post.data.description ? (
+                                    <p class="description">{post.data.description}</p>
+                                ) : null}
 
-                                <a href={`/blog/${posts[secondRandomPos].slug}/`} class="read_more">Read more</a>
+                                <a href={`/blog/${filteredPosts[secondRandomPos].slug}/`} class="read_more">Read more</a>
                             </div>
                         </div>
 
-                        <a class="hero" href={`/blog/${posts[secondRandomPos].slug}/`}>
-                            <img src={posts[secondRandomPos].data.heroImage} alt={posts[secondRandomPos].data.description} loading="lazy"/>
+                        <a class="hero" href={`/blog/${filteredPosts[secondRandomPos].slug}/`}>
+                            <img src={filteredPosts[secondRandomPos].data.heroImage} alt={filteredPosts[secondRandomPos].data.description} loading="lazy"/>
                         </a>
                     </div>
                 </li>
 
-                <li id={(posts[thirdRandomPos].data.title).toLowerCase().replace(/\s+/g, '-')} class="scroll_margin_top">
+                <li id={(filteredPosts[thirdRandomPos].data.title).toLowerCase().replace(/\s+/g, '-')} class="scroll_margin_top reveal_delay2">
                     <div class="ctnr">
                         <div class="content">
                             <div class="ctnr">
                                     <div class="over_heading">
-                                        <FormattedDate date={posts[thirdRandomPos].data.pubDate} />
+                                        <FormattedDate date={filteredPosts[thirdRandomPos].data.pubDate} />
 
                                         <hr/>
 
-                                        <p class="category_indicator">{posts[thirdRandomPos].data.category == 'cleaning' ? 'Cleaning' : posts[thirdRandomPos].data.category == 'health-and-environment' ? 'Health & Environment' : posts[thirdRandomPos].data.category == 'efficiency' ? "Efficiency" : null}</p>
+                                        <p class="category_indicator">{filteredPosts[thirdRandomPos].data.category == 'cleaning' ? 'Cleaning' : filteredPosts[thirdRandomPos].data.category == 'health-and-environment' ? 'Health & Environment' : filteredPosts[thirdRandomPos].data.category == 'efficiency' ? "Efficiency" : null}</p>
                                     </div>
 
-                                <a href={`/blog/${posts[thirdRandomPos].slug}/`}>
-                                    <p class="title">{posts[thirdRandomPos].data.title}</p>
+                                <a href={`/blog/${filteredPosts[thirdRandomPos].slug}/`}>
+                                    <p class="title">{filteredPosts[thirdRandomPos].data.title}</p>
                                 </a>
+	
+                                {post.data.description ? (
+                                    <p class="description">{post.data.description}</p>
+                                ) : null}
 
-                                <a href={`/blog/${posts[thirdRandomPos].slug}/`} class="read_more">Read more</a>
+                                <a href={`/blog/${filteredPosts[thirdRandomPos].slug}/`} class="read_more">Read more</a>
                             </div>
                         </div>
 
-                        <a class="hero" href={`/blog/${posts[thirdRandomPos].slug}/`}>
-                            <img src={posts[thirdRandomPos].data.heroImage} alt={posts[thirdRandomPos].data.description} loading="lazy"/>
+                        <a class="hero" href={`/blog/${filteredPosts[thirdRandomPos].slug}/`}>
+                            <img src={filteredPosts[thirdRandomPos].data.heroImage} alt={filteredPosts[thirdRandomPos].data.description} loading="lazy"/>
                         </a>
                     </div>
                 </li>
@@ -164,6 +201,24 @@ while (posts[firstRandomPos].data.title == post.data.title && posts[secondRandom
 
         <div class="cta_ctnr">
             <a href="/contact/" class="main cta" aria-label="Get a free quote for our cleaning services">Get a free quote</a>
+        </div>
+    </div>
+
+    <div class="category_nav">
+        <span class="tangent_heading">Explore categories</span>
+
+        <div class="flex">
+            {post.data.category != "cleaning" ? (
+                <a href="/blog/cleaning/">Cleaning</a>
+            ) : null}
+
+            {post.data.category != "health-and-environment" ? (
+                <a href="/blog/health-and-environment/">Health & Environment</a>
+            ) : null}
+
+            {post.data.category != "efficiency" ? (
+                <a href="/blog/efficiency/">Efficiency</a>
+            ) : null}
         </div>
     </div>
 

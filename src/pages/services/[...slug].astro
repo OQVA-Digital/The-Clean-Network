@@ -2,6 +2,7 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import SubpageLayout from "../../layouts/BaseLayout.astro";
 import ContactSection from "../../components/ContactSection.astro"
+import BlogStripe from "../../components/BlogStripe.astro";
 
 import BackBt from "../../components/BackBt.astro";
 
@@ -28,7 +29,7 @@ import { Schema } from "astro-seo-schema"
         <BackBt url={`/services/#${(services.data.title).toLowerCase().replace(/\s+/g, '-')}`} label="Other services"/>
 
         <div class="cover">
-			<img src={services.data.image} alt={services.data.description} class="reveal" loading="lazy"/>
+			<img src={services.data.image} alt={services.data.description} class="reveal_delay" loading="lazy"/>
         </div>
 
         <!-- <img src={services.data.image} alt={`Photo of ${services.data.title} cleaning service`}> -->
@@ -41,7 +42,9 @@ import { Schema } from "astro-seo-schema"
         <article class="reveal">
             <h1>{services.data.title} {String(services.data.title).includes('Cleaning') ? "" : "Cleaning"}</h1>
 
-            <Content />
+            <div class="post_content">
+                <Content />
+            </div>
         </article>
 
         <div class="cta_ctnr">
@@ -52,6 +55,8 @@ import { Schema } from "astro-seo-schema"
     </div>
 
     <ContactSection />
+
+    <BlogStripe/>
 
     <Schema
         item={{

@@ -124,3 +124,156 @@ a.category_indicator:hover {
     color: var(--dark-a);
     font-style: normal;
 }
+
+.tangent_heading {
+    text-align: center;
+    display: block;
+    font-weight: 500;
+    color: var(--primary-e);
+    font-size: clamp(2rem, 6vw, 2.8rem);
+    margin-bottom: 2rem;
+}
+
+.category_nav {
+    margin-bottom: 4rem;
+}
+
+.category_nav .flex {
+    justify-content: center;
+    gap: 2rem;
+}
+
+.category_nav a {
+    flex: 1;
+    padding: clamp(1rem, 3vw, 3rem) clamp(1rem, 2vw, 3rem);
+    font-size: clamp(1.3rem, 4vw, 1.6rem);
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    color: var(--grey-a);
+    border-radius: 0.3rem;
+    background-color: var(--light-d);
+    gap: 1rem;
+    border: 0.2rem solid var(--light-d);
+    transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+}
+
+.category_nav a:hover {
+    background-color: var(--light);
+    transition: background-color 0s ease;
+    -webkit-transition: background-color 0s ease;
+    -moz-transition: background-color 0s ease;
+    -ms-transition: background-color 0s ease;
+    -o-transition: background-color 0s ease;
+}
+
+.category_nav a::before {
+    content:'';
+    position: relative;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-left: 0.3rem solid;
+    border-bottom: 0.3rem solid;
+    border-color: var(--light-b);
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+.category_nav a:last-of-type {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    border-radius: 0 0 0 1rem;
+    -webkit-border-radius: 0 0 0 1rem;
+    -moz-border-radius: 0 0 0 1rem;
+    -ms-border-radius: 0 0 0 1rem;
+    -o-border-radius: 0 0 0 1rem;
+}
+
+.category_nav a:last-of-type:before {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+}
+
+.category_nav a:first-of-type {
+    text-align: right;
+    justify-content: right;
+    border-radius: 0 1rem 0 0;
+    -webkit-border-radius: 0 1rem 0 0;
+    -moz-border-radius: 0 1rem 0 0;
+    -ms-border-radius: 0 1rem 0 0;
+    -o-border-radius: 0 1rem 0 0;
+}
+
+.tags {
+    display: flex;
+    gap: 0.7rem 1rem;
+    flex-flow: row wrap;
+    margin-block: 0 2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--grey-b);
+}
+
+.tags li p, .tags li a  {
+    padding: 0.3rem 1rem;
+    background-color: var(--light);
+    border-radius: 0.4rem;
+    display: flex;
+    position: relative;
+    border: 0.2rem solid var(--light);
+}
+
+.tags li a::after {
+    content: '';
+    position: absolute;
+    right: 0.1rem;
+    top: 0.1rem;
+    border-top: 0.3rem solid;
+    border-right: 0.3rem solid;
+    border-color: var(--highlight);
+    border-bottom: 0.3rem solid transparent;
+    border-left: 0.3rem solid transparent;
+    transition: border-color 0.3s ease;
+    -webkit-transition: border-color 0.3s ease;
+    -moz-transition: border-color 0.3s ease;
+    -ms-transition: border-color 0.3s ease;
+    -o-transition: border-color 0.3s ease;
+}
+
+.tags li a {
+    transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+}
+
+.tags li a:hover {
+    background-color: var(--light-a);
+    transition: background-color 0s ease;
+    -webkit-transition: background-color 0s ease;
+    -moz-transition: background-color 0s ease;
+    -ms-transition: background-color 0s ease;
+    -o-transition: background-color 0s ease;
+}
+
+.tags li a:hover:after {
+    border-color: var(--highlight-a);
+    border-bottom: 0.3rem solid transparent;
+    border-left: 0.3rem solid transparent;
+    transition: border-color 0s ease;
+    -webkit-transition: border-color 0s ease;
+    -moz-transition: border-color 0s ease;
+    -ms-transition: border-color 0s ease;
+    -o-transition: border-color 0s ease;
+}

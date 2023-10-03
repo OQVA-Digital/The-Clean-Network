@@ -65,10 +65,14 @@ import '../../../styles/blog-post.css'
 										<div class="ctnr">
 											<div class="over_heading">
 												<FormattedDate date={post.data.pubDate} />
-	
+
+												<hr>
+
+												<div class="author">by <cite>{post.data.author}</cite></div>
+									
 												<hr/>
-	
-												<p class="category_indicator">{category == 'cleaning' ? 'Cleaning' : category == 'health-and-environment' ? 'Health & Environment' : category == 'efficiency' ? "Efficiency" : null}</p>
+									
+												<p class="category_indicator" aria-label="Check same category posts">{category == 'cleaning' ? 'Cleaning' : category == 'health-and-environment' ? 'Health & Environment' : category == 'efficiency' ? "Efficiency" : null}</p>
 											</div>
 	
 											<a href={`/blog/${post.slug}/`}>
@@ -93,6 +97,25 @@ import '../../../styles/blog-post.css'
 				))
 			}
 		</ul>
+
+		<div class="category_nav">
+			<span class="tangent_heading">Explore categories</span>
+	
+			<div class="flex">
+				{category != "cleaning" ? (
+					<a href="/blog/cleaning/">Cleaning</a>
+				) : null}
+	
+				{category != "health-and-environment" ? (
+					<a href="/blog/health-and-environment/">Health & Environment</a>
+				) : null}
+	
+				{category != "efficiency" ? (
+					<a href="/blog/efficiency/">Efficiency</a>
+				) : null}
+			</div>
+		</div>
+	
 	
 		<a class="check_all" href="/blog#posts">Check All Posts</a>
 	</div>
@@ -101,6 +124,6 @@ import '../../../styles/blog-post.css'
 
 <style>
 	.posts {
-		margin-bottom: 10rem;
+		margin-bottom: 5rem;
 	}
 </style>

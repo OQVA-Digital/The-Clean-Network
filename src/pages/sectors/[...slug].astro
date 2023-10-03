@@ -27,7 +27,7 @@ import { Schema } from "astro-seo-schema"
         <BackBt url={`/sectors/#${(sectors.data.title).toLowerCase().replace(/\s+/g, '-')}`} label="Other sectors"/>
 
         <div class="cover">
-			<img src={sectors.data.image} alt={sectors.data.description} loading="lazy" class="reveal"/>
+			<img src={sectors.data.image} alt={sectors.data.description} class="reveal_delay" loading="lazy"/>
         </div>
     
     </section>
@@ -36,7 +36,9 @@ import { Schema } from "astro-seo-schema"
         <article class="reveal">
             <h1>{sectors.data.title}</h1>
 
-            <Content />
+            <div class="post_content">
+                <Content />
+            </div>
         </article>
 
         <div class="cta_ctnr">

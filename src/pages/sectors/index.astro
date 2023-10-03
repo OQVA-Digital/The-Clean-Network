@@ -21,6 +21,8 @@ const currentURL = new URL(Astro.request.url)
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ContactSection from "../../components/ContactSection.astro"
 
+import BlogStripe from "../../components/BlogStripe.astro";
+
 import "../../styles/subpages.css"
 import "../../styles/collections.css"
 
@@ -78,6 +80,8 @@ import { SITE_KEYWORDS, SECTORS_TITLE, SECTORS_DESCRIPTION, SECTORS_KEYWORDS, SE
     </main>
 
     <ContactSection />
+
+    <BlogStripe/>
 
     <Schema
         item={{

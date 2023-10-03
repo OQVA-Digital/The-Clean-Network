@@ -1,15 +1,6 @@
 .recommendations {
     padding-inline: clamp(2.5rem, 6vmin, 5rem);
-    margin-bottom: 6rem;
-}
-
-.recommendations .heading {
-    text-align: center;
-    display: block;
-    font-weight: 500;
-    color: var(--primary-e);
-    font-size: clamp(2rem, 5vw, 2.8rem);
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 .recommendations ul {
@@ -39,7 +30,7 @@
 }
 
 .recommendations ul li .content {
-    padding: clamp(1rem, 4vw, 2.2rem) 0 clamp(1rem, 4vw, 1.6rem) clamp(1rem, 4vw, 3.3rem);
+    padding: clamp(1rem, 5vw, 2.6rem) 0 clamp(1rem, 4vw, 1.6rem) clamp(1rem, 4vw, 3.3rem);
     flex: 1;
     min-width: 15rem;
 }
@@ -56,6 +47,17 @@
     object-position: center;
 }
 
+.recommendations .description {
+    font-size: clamp(1.3rem, 4vw, 1.6rem);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: var(--grey-c);
+    line-height: 1.3;
+}
+
 .recommendations li .title {
     font-weight: 600;
     font-size: clamp(2rem, 5vw, 2.5rem);
@@ -63,45 +65,3 @@
     cursor: pointer;
 }
 
-
-
-@media screen and (min-width:1000px) {
-    /* .recommendations {
-        padding-inline: unset;
-    }
-
-    .recommendations li:first-child {
-        border-radius: 0 1rem 1rem 0;
-        -webkit-border-radius: 0 1rem 1rem 0;
-        -moz-border-radius: 0 1rem 1rem 0;
-        -ms-border-radius: 0 1rem 1rem 0;
-        -o-border-radius: 0 1rem 1rem 0;
-        border-left: none;
-    }
-
-    .recommendations li:first-child .content {
-        text-align: right;
-        padding: clamp(1rem, 4vw, 2.2rem) 0 clamp(1rem, 4vw, 1.6rem) 0;
-    }
-
-    .recommendations li:first-child .over_heading {
-        justify-content: flex-end;
-    }
-
-    .recommendations li:last-child {
-        border-radius: 1rem 0 0 1rem;
-        -webkit-border-radius: 1rem 0 0 1rem;
-        -moz-border-radius: 1rem 0 0 1rem;
-        -ms-border-radius: 1rem 0 0 1rem;
-        -o-border-radius: 1rem 0 0 1rem;
-        border-right: none;
-}
-
-    .recommendations li:last-child > .ctnr {
-        flex-flow: row-reverse wrap;
-    }
-
-    .recommendations li:last-child .content {
-        padding: clamp(1rem, 4vw, 2.2rem) 0 clamp(1rem, 4vw, 1.6rem) 0;
-    } */
-}

@@ -37,11 +37,18 @@ import '../../styles/blog-collection.css'
 			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, <b>nascetur ridiculus mus</b>. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
 	
 			<p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. <strong>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</strong> Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. <b>Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum.</b> Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget</p>
+
+
+			<div class="anchors" title="See Posts">
+				<a href="/blog#cleaning">Cleaning</a>
+				<a href="/blog#health-and-environment">Health & Environment posts</a>
+				<a href="/blog#efficiency">Efficiency</a>
+			</div>
 		</div>
 		
 		<section class="scroll_margin_top" id="posts">
 			<div class="center_base_width">
-				<div class="subset">
+				<div class="subset scroll_margin_top" id="cleaning">
 					<a href="/blog/cleaning/" class="caption">Cleaning</a>
 
 					<ul class="posts">
@@ -53,7 +60,17 @@ import '../../styles/blog-collection.css'
 										<div class="ctnr reveal">
 											<div class="content">
 												<div class="ctnr">
-													<FormattedDate date={post.data.pubDate} />
+													<div class="over_heading">
+														<FormattedDate date={post.data.pubDate} />
+
+														<hr/>
+
+														<div class="author">by <cite>{post.data.author}</cite></div>
+											
+														<hr/>
+											
+														<a href={`/blog/${post.data.category}`} class="category_indicator" aria-label="Check same category posts" title="see category">{post.data.category == 'cleaning' ? 'Cleaning' : post.data.category == 'health-and-environment' ? 'Health & Environment' : post.data.category == 'efficiency' ? "Efficiency" : null}</a>
+													</div>
 				
 													<a href={`/blog/${post.slug}/`}>
 														<h3 class="title">{post.data.title}</h3>
@@ -81,7 +98,7 @@ import '../../styles/blog-collection.css'
 					<a href="/blog/cleaning" class="check_all">Check All Cleaning Posts</a>
 				</div>
 
-				<div class="subset">
+				<div class="subset scroll_margin_top" id="health-and-environment">
 					<a href="/blog/health-and-environment/" class="caption">Health & Environment</a>
 
 					<ul class="posts">
@@ -121,7 +138,7 @@ import '../../styles/blog-collection.css'
 					<a href="/blog/health-and-environment" class="check_all">Check All Health & Environment Posts</a>
 				</div>
 
-				<div class="subset">
+				<div class="subset scroll_margin_top" id="efficiency">
 					<a href="/blog/efficiency/" class="caption">Efficiency</a>
 
 					<ul class="posts">
