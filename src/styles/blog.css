@@ -216,12 +216,12 @@ a.category_indicator:hover {
 
 .tags {
     display: flex;
-    gap: clamp(0.6rem, 1vw, 0.7rem) clamp(0.6rem, 1vw, 1rem);
+    gap: clamp(0.6rem, 1vw, 0.7rem) clamp(0.5rem, 1vw, 0.6rem);
     flex-flow: row wrap;
     margin-block: 0 2rem;
     font-size: clamp(1.2rem, 2.6vw, 1.3rem);
-    font-weight: 600;
-    color: var(--grey-b);
+    font-weight: 500;
+    color: var(--grey);
     max-height: clamp(8rem, 15vw, 18rem);
     overflow-y: auto;
 }
@@ -236,12 +236,12 @@ a.category_indicator:hover {
 }
 
 .tags li p, .tags li a  {
-    padding: 0.3rem clamp(0.6rem, 1vw, 1rem);
+    padding: 0.1rem 0.7rem;
     background-color: var(--light);
     border-radius: 0.4rem;
     display: flex;
     position: relative;
-    border: 0.2rem solid var(--light-a);
+    /* border: 0.2rem solid var(--light-a); */
 }
 
 .tags li a::after {
@@ -251,7 +251,7 @@ a.category_indicator:hover {
     top: 0.1rem;
     border-top: 0.3rem solid;
     border-right: 0.3rem solid;
-    border-color: var(--highlight);
+    border-color: var(--primary-b);
     border-bottom: 0.3rem solid transparent;
     border-left: 0.3rem solid transparent;
     transition: border-color 0.3s ease;
@@ -262,20 +262,21 @@ a.category_indicator:hover {
 }
 
 .tags li a {
-    transition: background-color 0.3s ease;
-    -webkit-transition: background-color 0.3s ease;
-    -moz-transition: background-color 0.3s ease;
-    -ms-transition: background-color 0.3s ease;
-    -o-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+    -moz-transition: background-color 0.3s ease, color 0.3s ease;
+    -ms-transition: background-color 0.3s ease, color 0.3s ease;
+    -o-transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .tags li a:hover {
     background-color: var(--light-a);
-    transition: background-color 0s ease;
-    -webkit-transition: background-color 0s ease;
-    -moz-transition: background-color 0s ease;
-    -ms-transition: background-color 0s ease;
-    -o-transition: background-color 0s ease;
+    color: var(--dark);
+    transition: background-color 0s ease, color 0s ease;
+    -webkit-transition: background-color 0s ease, color 0s ease;
+    -moz-transition: background-color 0s ease, color 0s ease;
+    -ms-transition: background-color 0s ease, color 0s ease;
+    -o-transition: background-color 0s ease, color 0s ease;
 }
 
 .tags li a:hover:after {

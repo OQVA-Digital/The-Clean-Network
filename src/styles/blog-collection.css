@@ -81,10 +81,15 @@ section.intro {
 .intro sup a {
     font-size: clamp(1.5rem, 4vw, 1.7rem);
     color: var(--primary);
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: clamp(0.3rem, 0.8vw, 0.5rem);
     display: inline-block;
     opacity: 0.8;
+    text-underline-offset: 0.2rem;
+}
+
+.intro sup a:hover {
+    text-decoration: underline;
 }
 
 .intro .cta:hover {

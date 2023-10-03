@@ -1,12 +1,13 @@
 ---
 title: "First Test - Blog Post #01"
+standFirst: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id similique doloribus eius officiis saepe consectetur, blanditiis molestiae officia accusantium recusandae nulla eos atque totam dolorem hic placeat provident odio ipsa!"
 author: "Lorem Ipsum"
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
   veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
   commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
   esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-  non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 pubDate: Sep 27 2023
 category: health-and-environment
 tags:
@@ -19,9 +20,6 @@ tags:
   - Professional Cleaners
   - Workplace Hygiene
   - Office Maintenance
-  - Commercial Cleanliness
-  - Cleaning Checklist
-  - Eco-Friendly Cleaning
 heroImage: /images/media/corporate-office-buildings.jpg
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend posuere nunc, a egestas est fringilla maximus. Donec eu gravida sapien. Integer et eros est. Fusce scelerisque orci dui, sed ornare nibh lobortis sed. Donec vestibulum porta luctus. Morbi vulputate, arcu id faucibus blandit, sem urna volutpat nunc, ut pharetra metus tellus eu nunc. Morbi consectetur lacus quis nunc pulvinar, et elementum felis aliquam. Suspendisse blandit, arcu eget viverra venenatis, tellus massa consectetur metus, eleifend malesuada dui nisi at nibh.

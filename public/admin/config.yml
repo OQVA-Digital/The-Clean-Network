@@ -72,6 +72,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Standfirst", name: "standFirst", widget: "text"}
       - {label: "Author", name: "author", widget: "string"}
       - {label: "Tags", name: "tags", widget: "select", options: ["External", "Indoor", "Bathroom", "Kitchen", "Floor & Carpet", "Post-construction", "Windows", "Blind & Curtains", "Customer Satisfaction"], multiple: true, required: false}
       - {label: "Description", name: "description", widget: "text"}

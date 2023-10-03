@@ -3,6 +3,7 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import SubpageLayout from "../../layouts/BaseLayout.astro";
 import ContactSection from "../../components/ContactSection.astro"
 import BackBt from "../../components/BackBt.astro";
+import BlogStripe from "../../components/BlogStripe.astro";
 
 export async function getStaticPaths() {
     const sectors = await getCollection("sectors");
@@ -43,12 +44,14 @@ import { Schema } from "astro-seo-schema"
 
         <div class="cta_ctnr">
             <a href="/contact/" class="main cta" aria-label="Get a free quote for our cleaning sectors">Get a free quote</a>
-    
-            <a href={`/sectors/#${(sectors.data.title).toLowerCase().replace(/\s+/g, '-')}`} class="back">Other sectors</a>
         </div>
+    
+        <a href={`/sectors/#${(sectors.data.title).toLowerCase().replace(/\s+/g, '-')}`} class="back">Other sectors</a>
     </div>
 
     <ContactSection />
+
+    <BlogStripe/>
 
     <Schema
         item={{

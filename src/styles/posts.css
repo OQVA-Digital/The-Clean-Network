@@ -88,7 +88,7 @@
     width: clamp(9rem, 91vw, 87rem);
     margin-inline: auto;
     margin-bottom: clamp(4rem,18vw,6rem);
-    margin-top: calc(clamp(10rem, 55vw, 45rem) * -1);
+    margin-top: calc(clamp(10rem, 55vw, 50rem) * -1);
     background-color: rgb(248 248 255 / 85%);
     backdrop-filter: blur(0.5rem);
     border-radius: 1.2rem;
@@ -127,7 +127,21 @@ article h1 {
     color: var(--dark-a);
     line-height: 1.2;
     /* margin-inline: auto; */
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.standfirst {
+    font-size: 1.25em;
+    color: var(--grey-a);
+    font-weight: 420;
+}
+
+.standfirst + hr {
+    margin-block: 2rem;
+    height: 0.4rem;
+    background-color: var(--primary-d);
+    width: 4rem;
+    border-radius: 0.1rem;
 }
 
 .content_ctnr .post_content p {

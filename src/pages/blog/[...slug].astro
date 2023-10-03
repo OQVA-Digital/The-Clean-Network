@@ -97,6 +97,12 @@ while (filteredPosts[firstRandomPos].data.title == postTitle || filteredPosts[se
             ) : null}
 
             <div class="post_content">
+                {post.data.standFirst ? (
+                    <p class="standfirst">{post.data.standFirst}</p>
+
+                    <hr/>
+                ) : null}
+
                 <Content />
             </div>
         </article>

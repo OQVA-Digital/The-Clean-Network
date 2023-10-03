@@ -122,6 +122,8 @@ p {
         height: unset;
         max-height: calc(100vh - (clamp(1rem,16vmin,7.5rem) * 2));
         border-radius: 0 0 0 20vmin;
+        position: sticky;
+        top: var(--header-height);
     }
 
     .bullets {
