@@ -216,21 +216,32 @@ a.category_indicator:hover {
 
 .tags {
     display: flex;
-    gap: 0.7rem 1rem;
+    gap: clamp(0.6rem, 1vw, 0.7rem) clamp(0.6rem, 1vw, 1rem);
     flex-flow: row wrap;
     margin-block: 0 2rem;
-    font-size: 1.3rem;
+    font-size: clamp(1.2rem, 2.6vw, 1.3rem);
     font-weight: 600;
     color: var(--grey-b);
+    max-height: clamp(8rem, 15vw, 18rem);
+    overflow-y: auto;
+}
+
+.tags::-webkit-scrollbar {
+    width: 0.4rem;
+}
+
+.tags::-webkit-scrollbar-thumb {
+    background-color:var(--light-b);
+    border:unset;
 }
 
 .tags li p, .tags li a  {
-    padding: 0.3rem 1rem;
+    padding: 0.3rem clamp(0.6rem, 1vw, 1rem);
     background-color: var(--light);
     border-radius: 0.4rem;
     display: flex;
     position: relative;
-    border: 0.2rem solid var(--light);
+    border: 0.2rem solid var(--light-a);
 }
 
 .tags li a::after {

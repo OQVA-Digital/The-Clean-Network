@@ -22,12 +22,6 @@ tags:
   - Commercial Cleanliness
   - Cleaning Checklist
   - Eco-Friendly Cleaning
-  - Green Cleaning
-  - Office Sanitization
-  - Office Organization
-  - Commercial Disinfection
-  - Office Tidying
-  - Workspace Clean-Up
 heroImage: /images/media/corporate-office-buildings.jpg
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend posuere nunc, a egestas est fringilla maximus. Donec eu gravida sapien. Integer et eros est. Fusce scelerisque orci dui, sed ornare nibh lobortis sed. Donec vestibulum porta luctus. Morbi vulputate, arcu id faucibus blandit, sem urna volutpat nunc, ut pharetra metus tellus eu nunc. Morbi consectetur lacus quis nunc pulvinar, et elementum felis aliquam. Suspendisse blandit, arcu eget viverra venenatis, tellus massa consectetur metus, eleifend malesuada dui nisi at nibh.
