@@ -252,7 +252,7 @@ article img {
 }
 
 .recommendations ul li .hero {
-    width: clamp(8rem, 30vw, 26rem);
+    width: clamp(8rem, 24vw, 26rem);
     min-height: clamp(8rem, 30vw, 15rem);
 }
 
@@ -263,8 +263,15 @@ article img {
     object-position: center;
 }
 
+.recommendations li .title {
+    font-weight: 600;
+    font-size: clamp(1.9rem, 4vw, 2.5rem);
+    color: var(--dark-a);
+    cursor: pointer;
+}
+
 .recommendations .description {
-    font-size: clamp(1.3rem, 4vw, 1.6rem);
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -272,13 +279,6 @@ article img {
     -webkit-box-orient: vertical;
     color: var(--grey-c);
     line-height: 1.3;
-}
-
-.recommendations li .title {
-    font-weight: 600;
-    font-size: clamp(2rem, 5vw, 2.5rem);
-    color: var(--dark-a);
-    cursor: pointer;
 }
 
 
