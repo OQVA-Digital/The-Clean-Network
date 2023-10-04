@@ -22,6 +22,7 @@ const { category } = Astro.params;
 
 import BackBt from '../../../components/BackBt.astro';
 
+import '../../../styles/content.css'
 import '../../../styles/blog.css'
 import '../../../styles/blog-collection.css'
 import '../../../styles/blog-post.css'
@@ -99,28 +100,28 @@ import { Schema } from "astro-seo-schema"
 				))
 			}
 		</ul>
-
-		<div class="category_nav">
-			<span class="tangent_heading">Explore categories</span>
-	
-			<div class="flex">
-				{category != "cleaning" ? (
-					<a href="/blog/cleaning/">Cleaning</a>
-				) : null}
-	
-				{category != "health-and-environment" ? (
-					<a href="/blog/health-and-environment/">Health & Environment</a>
-				) : null}
-	
-				{category != "efficiency" ? (
-					<a href="/blog/efficiency/">Efficiency</a>
-				) : null}
-			</div>
-		</div>
-	
-	
-		<a class="check_all" href="/blog#posts">Check All Posts</a>
 	</div>
+
+	<div class="category_nav">
+		<span class="tangent_content_heading">Explore categories</span>
+
+		<div class="flex">
+			{category != "cleaning" ? (
+				<a href="/blog/cleaning/">Cleaning</a>
+			) : null}
+
+			{category != "health-and-environment" ? (
+				<a href="/blog/health-and-environment/">Health & Environment</a>
+			) : null}
+
+			{category != "efficiency" ? (
+				<a href="/blog/efficiency/">Efficiency</a>
+			) : null}
+		</div>
+	</div>
+
+
+	<a class="check_all" href="/blog#posts">Check All Posts</a>
 
     <Schema
         item={{

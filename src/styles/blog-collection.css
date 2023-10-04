@@ -112,7 +112,7 @@ section.intro {
     gap: clamp(2rem, 2vw, 3rem);
 }
 
-.category_posts_ctnr .check_all {
+.check_all {
     width: fit-content;
     display: block;
     text-align: center;

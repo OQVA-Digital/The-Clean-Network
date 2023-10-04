@@ -7,46 +7,150 @@ import BlogStripe from "../../components/BlogStripe.astro";
 
 export async function getStaticPaths() {
     const sectors = await getCollection("sectors");
-    return sectors.map((sectors) => ({
-        params: { slug: sectors.slug },
-        props: sectors,
+    return sectors.map((sector) => ({
+        params: { slug: sector.slug },
+        props: sector,
     }));
 }
 type Props = CollectionEntry<"sectors">;
 
-const sectors = Astro.props;
-const { Content } = await sectors.render();
+const sector = Astro.props;
+const { Content } = await sector.render();
 
+import "../../styles/content.css"
 import "../../styles/subpages.css"
 import "../../styles/posts.css"
 
 import { Schema } from "astro-seo-schema"
+
+const sectors = (await getCollection('sectors')).sort((a, b) => {
+    // Check if both items have an 'order' property
+    if (a.data.order !== undefined && b.data.order !== undefined) {
+        return a.data.order - b.data.order; // Sort by 'order' if both have it
+    } else if (a.data.order !== undefined) {
+        return -1; // 'a' has 'order', but 'b' doesn't, so 'a' comes first
+    } else if (b.data.order !== undefined) {
+        return 1; // 'b' has 'order', but 'a' doesn't, so 'b' comes first
+    } else {
+        // Both 'a' and 'b' don't have 'order', fallback to sorting by 'title'
+        return a.data.title.localeCompare(b.data.title);
+    }
+});
+
+
+let sectorTitle = sector.data.title;
+
+let filteredSector = sectors.filter(p => p.data.title !== sectorTitle);
+
+let firstRandomPos = 0
+let secondRandomPos = 0
+let thirdRandomPos = 0
+
+while (filteredSector[firstRandomPos].data.title == sectorTitle || filteredSector[secondRandomPos].data.title == sectorTitle || filteredSector[thirdRandomPos].data.title == sectorTitle || (firstRandomPos == secondRandomPos || thirdRandomPos == secondRandomPos || thirdRandomPos == firstRandomPos)) {
+    firstRandomPos = Math.floor(Math.random() * filteredSector.length)
+    secondRandomPos = Math.floor(Math.random() * filteredSector.length)
+    thirdRandomPos = Math.floor(Math.random() * filteredSector.length)
+}
 ---
 
-<SubpageLayout {...sectors.data}>
+<SubpageLayout {...sector.data}>
     <section class="intro">
-        <BackBt url={`/sectors/#${(sectors.data.title).toLowerCase().replace(/\s+/g, '-')}`} label="Other sectors"/>
+        <BackBt url={`/sectors/#${(sector.data.title).toLowerCase().replace(/\s+/g, '-')}`} label="Other sectors"/>
 
         <div class="cover">
-			<img src={sectors.data.image} alt={sectors.data.description} class="reveal_delay" loading="lazy"/>
+			<img src={sector.data.image} alt={sector.data.description} class="reveal_delay" loading="lazy"/>
         </div>
     
     </section>
 
     <div class="content_ctnr">
         <article class="reveal">
-            <h1>{sectors.data.title}</h1>
+            <h1>{sector.data.title}</h1>
 
             <div class="post_content">
                 <Content />
             </div>
         </article>
 
+        <hr>
+    
+        <aside class="recommendations reveal">
+            <span class="tangent_content_heading">Other Sectors</span>
+
+            <ul class="posts">
+                <li id={(filteredSector[firstRandomPos].data.title).toLowerCase().replace(/\s+/g, '-')} class="scroll_margin_top reveal_delay2">
+                    <div class="ctnr">
+                        <div class="content">
+                            <div class="ctnr">
+                                <a href={`/sectors/${filteredSector[firstRandomPos].slug}/`}>
+                                    <p class="title">{filteredSector[firstRandomPos].data.title}</p>
+                                </a>
+	
+                                {filteredSector[firstRandomPos].data.description ? (
+                                    <p class="description">{filteredSector[firstRandomPos].data.description}</p>
+                                ) : null}
+
+                                <a href={`/sectors/${filteredSector[firstRandomPos].slug}/`} class="read_more">Read more</a>
+                            </div>
+                        </div>
+
+                        <a class="hero" href={`/sectors/${filteredSector[firstRandomPos].slug}/`}>
+                            <img src={filteredSector[firstRandomPos].data.image} alt={filteredSector[firstRandomPos].data.description} loading="lazy" draggable="false"/>
+                        </a>
+                    </div>
+                </li>
+
+                <li id={(filteredSector[secondRandomPos].data.title).toLowerCase().replace(/\s+/g, '-')} class="scroll_margin_top reveal_delay2">
+                    <div class="ctnr">
+                        <div class="content">
+                            <div class="ctnr">
+                                <a href={`/sectors/${filteredSector[secondRandomPos].slug}/`}>
+                                    <p class="title">{filteredSector[secondRandomPos].data.title}</p>
+                                </a>
+	
+                                {filteredSector[secondRandomPos].data.description ? (
+                                    <p class="description">{filteredSector[secondRandomPos].data.description}</p>
+                                ) : null}
+
+                                <a href={`/sectors/${filteredSector[secondRandomPos].slug}/`} class="read_more">Read more</a>
+                            </div>
+                        </div>
+
+                        <a class="hero" href={`/sectors/${filteredSector[secondRandomPos].slug}/`}>
+                            <img src={filteredSector[secondRandomPos].data.image} alt={filteredSector[secondRandomPos].data.description} loading="lazy" draggable="false"/>
+                        </a>
+                    </div>
+                </li>
+
+                <li id={(filteredSector[thirdRandomPos].data.title).toLowerCase().replace(/\s+/g, '-')} class="scroll_margin_top reveal_delay2">
+                    <div class="ctnr">
+                        <div class="content">
+                            <div class="ctnr">
+                                <a href={`/sectors/${filteredSector[thirdRandomPos].slug}/`}>
+                                    <p class="title">{filteredSector[thirdRandomPos].data.title}</p>
+                                </a>
+	
+                                {filteredSector[thirdRandomPos].data.description ? (
+                                    <p class="description">{filteredSector[thirdRandomPos].data.description}</p>
+                                ) : null}
+
+                                <a href={`/sectors/${filteredSector[thirdRandomPos].slug}/`} class="read_more">Read more</a>
+                            </div>
+                        </div>
+
+                        <a class="hero" href={`/sectors/${filteredSector[thirdRandomPos].slug}/`}>
+                            <img src={filteredSector[thirdRandomPos].data.image} alt={filteredSector[thirdRandomPos].data.description} loading="lazy" draggable="false"/>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </aside>
+    
+        <a href="/sectors/" class="back">All Sectors</a>
+
         <div class="cta_ctnr">
             <a href="/contact/" class="main cta" aria-label="Get a free quote for our cleaning sectors">Get a free quote</a>
         </div>
-    
-        <a href={`/sectors/#${(sectors.data.title).toLowerCase().replace(/\s+/g, '-')}`} class="back">Other sectors</a>
     </div>
 
     <ContactSection />
@@ -57,8 +161,8 @@ import { Schema } from "astro-seo-schema"
         item={{
             "@context": "https://schema.org",
             "@type": "Article",
-            headline: `${sectors.data.title} ${String(sectors.data.title).includes('Cleaning') ? " Service" : "Cleaning Service"}`,
-            image: `${sectors.data.image}`,
+            headline: `${sector.data.title} ${String(sector.data.title).includes('Cleaning') ? " Service" : "Cleaning Service"}`,
+            image: `${sector.data.image}`,
             "author": [{
                 "@type": "Organization",
                 "name": "The Clean Network"

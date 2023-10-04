@@ -189,6 +189,21 @@ button:not([type="submit"]):focus-visible {
     background-repeat: no-repeat;
 }
 
+ul, li {
+    padding: 0;
+    list-style: none;
+    margin-block: 0;
+}
+
+.tangent_content_heading {
+    text-align: center;
+    display: block;
+    font-weight: 500;
+    color: var(--primary-e);
+    font-size: clamp(2rem, 6vw, 2.8rem);
+    margin-bottom: 2rem;
+}
+
 hr {
     border:unset;
     margin: unset;

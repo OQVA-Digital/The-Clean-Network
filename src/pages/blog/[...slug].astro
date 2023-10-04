@@ -19,6 +19,7 @@ type Props = CollectionEntry<"blog">;
 const post = Astro.props;
 const { Content } = await post.render();
 
+import "../../styles/content.css"
 import "../../styles/blog.css"
 import "../../styles/posts.css"
 import "../../styles/blog-post.css"
@@ -39,7 +40,6 @@ let filteredPosts = posts.filter(p => p.data.category === postCategory && p.data
 let firstRandomPos = 0
 let secondRandomPos = 0
 let thirdRandomPos = 0
-    console.log(filteredPosts[firstRandomPos].data.title == postTitle)
 
 while (filteredPosts[firstRandomPos].data.title == postTitle || filteredPosts[secondRandomPos].data.title == postTitle || filteredPosts[thirdRandomPos].data.title == postTitle || (firstRandomPos == secondRandomPos || thirdRandomPos == secondRandomPos || thirdRandomPos == firstRandomPos)) {
     firstRandomPos = Math.floor(Math.random() * filteredPosts.length)
@@ -57,7 +57,7 @@ while (filteredPosts[firstRandomPos].data.title == postTitle || filteredPosts[se
         <BackBt url={`/blog/${post.data.category}#${(post.data.title).toLowerCase().replace(/\s+/g, '-')}`} label="Return to category"/>
 
         <div class="cover">
-			<img src={post.data.heroImage} alt={post.data.description} loading="lazy" class="reveal_delay"/>
+			<img src={post.data.heroImage} alt={post.data.description} loading="lazy" draggable="false" class="reveal_delay"/>
 		</div>
 
         <!-- <img src={post.data.image} alt={`Photo of ${post.data.title} cleaning service`}> -->
@@ -110,7 +110,7 @@ while (filteredPosts[firstRandomPos].data.title == postTitle || filteredPosts[se
         <hr>
     
         <aside class="recommendations reveal">
-            <span class="tangent_heading">You might also like</span>
+            <span class="tangent_content_heading">You might also like</span>
 
             <ul class="posts">
                 <li id={(filteredPosts[firstRandomPos].data.title).toLowerCase().replace(/\s+/g, '-')} class="scroll_margin_top reveal_delay2">
@@ -129,8 +129,8 @@ while (filteredPosts[firstRandomPos].data.title == postTitle || filteredPosts[se
                                     <p class="title">{filteredPosts[firstRandomPos].data.title}</p>
                                 </a>
 	
-                                {post.data.description ? (
-                                    <p class="description">{post.data.description}</p>
+                                {filteredPosts[firstRandomPos].data.description ? (
+                                    <p class="description">{filteredPosts[firstRandomPos].data.description}</p>
                                 ) : null}
 
                                 <a href={`/blog/${filteredPosts[firstRandomPos].slug}/`} class="read_more">Read more</a>
@@ -138,7 +138,7 @@ while (filteredPosts[firstRandomPos].data.title == postTitle || filteredPosts[se
                         </div>
 
                         <a class="hero" href={`/blog/${filteredPosts[firstRandomPos].slug}/`}>
-                            <img src={filteredPosts[firstRandomPos].data.heroImage} alt={filteredPosts[firstRandomPos].data.description} loading="lazy"/>
+                            <img src={filteredPosts[firstRandomPos].data.heroImage} alt={filteredPosts[firstRandomPos].data.description} loading="lazy" draggable="false"/>
                         </a>
                     </div>
                 </li>
@@ -159,8 +159,8 @@ while (filteredPosts[firstRandomPos].data.title == postTitle || filteredPosts[se
                                     <p class="title">{filteredPosts[secondRandomPos].data.title}</p>
                                 </a>
 	
-                                {post.data.description ? (
-                                    <p class="description">{post.data.description}</p>
+                                {filteredPosts[secondRandomPos].data.description ? (
+                                    <p class="description">{filteredPosts[secondRandomPos].data.description}</p>
                                 ) : null}
 
                                 <a href={`/blog/${filteredPosts[secondRandomPos].slug}/`} class="read_more">Read more</a>
@@ -168,7 +168,7 @@ while (filteredPosts[firstRandomPos].data.title == postTitle || filteredPosts[se
                         </div>
 
                         <a class="hero" href={`/blog/${filteredPosts[secondRandomPos].slug}/`}>
-                            <img src={filteredPosts[secondRandomPos].data.heroImage} alt={filteredPosts[secondRandomPos].data.description} loading="lazy"/>
+                            <img src={filteredPosts[secondRandomPos].data.heroImage} alt={filteredPosts[secondRandomPos].data.description} loading="lazy" draggable="false"/>
                         </a>
                     </div>
                 </li>
@@ -189,8 +189,8 @@ while (filteredPosts[firstRandomPos].data.title == postTitle || filteredPosts[se
                                     <p class="title">{filteredPosts[thirdRandomPos].data.title}</p>
                                 </a>
 	
-                                {post.data.description ? (
-                                    <p class="description">{post.data.description}</p>
+                                {filteredPosts[thirdRandomPos].data.description ? (
+                                    <p class="description">{filteredPosts[thirdRandomPos].data.description}</p>
                                 ) : null}
 
                                 <a href={`/blog/${filteredPosts[thirdRandomPos].slug}/`} class="read_more">Read more</a>
@@ -198,7 +198,7 @@ while (filteredPosts[firstRandomPos].data.title == postTitle || filteredPosts[se
                         </div>
 
                         <a class="hero" href={`/blog/${filteredPosts[thirdRandomPos].slug}/`}>
-                            <img src={filteredPosts[thirdRandomPos].data.heroImage} alt={filteredPosts[thirdRandomPos].data.description} loading="lazy"/>
+                            <img src={filteredPosts[thirdRandomPos].data.heroImage} alt={filteredPosts[thirdRandomPos].data.description} loading="lazy" draggable="false"/>
                         </a>
                     </div>
                 </li>
@@ -211,7 +211,7 @@ while (filteredPosts[firstRandomPos].data.title == postTitle || filteredPosts[se
     </div>
 
     <div class="category_nav">
-        <span class="tangent_heading">Explore categories</span>
+        <span class="tangent_content_heading">Explore categories</span>
 
         <div class="flex">
             {post.data.category != "cleaning" ? (

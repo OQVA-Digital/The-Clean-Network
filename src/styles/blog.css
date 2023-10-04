@@ -2,12 +2,6 @@
     --article-width: clamp(9rem, 89vw, 68rem);
 }
 
-ul, li {
-    padding: 0;
-    list-style: none;
-    margin-block: 0;
-}
-
 .article_width {
     width: var(--article-width);
     margin-inline: auto;
@@ -49,72 +43,6 @@ a.category_indicator:hover {
     color: var(--dark-a);
 }
 
-.read_more {
-    margin-top: 1rem;
-    display: inline-block;
-    font-size: clamp(1.3rem, 3.5vw, 1.6rem);
-    color: var(--primary-d);
-    font-weight: 500;
-    background-color: var(--light);
-    padding: 0.3rem 0.9rem;
-    border-radius: 0.3rem;
-    border: 0.2rem solid var(--light-d);
-    transition: background-color 0.3s ease;
-    -webkit-transition: background-color 0.3s ease;
-    -moz-transition: background-color 0.3s ease;
-    -ms-transition: background-color 0.3s ease;
-    -o-transition: background-color 0.3s ease;
-}
-
-.read_more:hover {
-    background-color: var(--light-d);
-    transition: background-color 0s ease;
-    -webkit-transition: background-color 0s ease;
-    -moz-transition: background-color 0s ease;
-    -ms-transition: background-color 0s ease;
-    -o-transition: background-color 0s ease;
-}
-
-.posts li {
-    background-color: var(--light-d);
-    border-radius: 1rem;
-    /* border: 0.2rem solid var(--light-a); */
-    transition: background-color 0.3s ease;
-    -webkit-transition: background-color 0.3s ease;
-    -moz-transition: background-color 0.3s ease;
-    -ms-transition: background-color 0.3s ease;
-    -o-transition: background-color 0.3s ease;
-}
-
-.posts li:hover {
-    background-color: var(--light);
-    transition: background-color 0s ease;
-    -webkit-transition: background-color 0s ease;
-    -moz-transition: background-color 0s ease;
-    -ms-transition: background-color 0s ease;
-    -o-transition: background-color 0s ease;
-}
-
-.posts li .title {
-    font-size: clamp(1.2rem, 6vw, 3rem);
-    margin-block: 0.2rem 0.7rem;
-    color: var(--dark-a);
-    transition: color 0.3s ease;
-    -webkit-transition: color 0.3s ease;
-    -moz-transition: color 0.3s ease;
-    -ms-transition: color 0.3s ease;
-    -o-transition: color 0.3s ease;
-}
-
-.posts li a:hover .title {
-    color:var(--primary-e);
-    transition: color 0.2s ease;
-    -webkit-transition: color 0.2s ease;
-    -moz-transition: color 0.2s ease;
-    -ms-transition: color 0.2s ease;
-    -o-transition: color 0.2s ease;
-}
-
 .author {
     color: var(--grey);
     font-weight: 500;
@@ -123,15 +51,6 @@ a.category_indicator:hover {
 .author cite {
     color: var(--dark-a);
     font-style: normal;
-}
-
-.tangent_heading {
-    text-align: center;
-    display: block;
-    font-weight: 500;
-    color: var(--primary-e);
-    font-size: clamp(2rem, 6vw, 2.8rem);
-    margin-bottom: 2rem;
 }
 
 .category_nav {

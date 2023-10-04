@@ -9,6 +9,7 @@ const posts = (await getCollection('blog')).sort(
 	(a, b) =>  b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
+import '../../styles/content.css'
 import '../../styles/blog.css'
 import '../../styles/blog-home.css'
 import '../../styles/blog-collection.css'
