@@ -25,6 +25,7 @@ import "../../styles/posts.css"
 import "../../styles/blog-post.css"
 
 import { Schema } from "astro-seo-schema"
+import EndingBlogNav from "../../components/EndingBlogNav.astro";
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) =>  b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -210,23 +211,7 @@ while (filteredPosts[firstRandomPos].data.title == postTitle || filteredPosts[se
         </div>
     </div>
 
-    <div class="category_nav">
-        <span class="tangent_content_heading">Explore categories</span>
-
-        <div class="flex">
-            {post.data.category != "cleaning" ? (
-                <a href="/blog/cleaning/">Cleaning</a>
-            ) : null}
-
-            {post.data.category != "health-and-environment" ? (
-                <a href="/blog/health-and-environment/">Health & Environment</a>
-            ) : null}
-
-            {post.data.category != "efficiency" ? (
-                <a href="/blog/efficiency/">Efficiency</a>
-            ) : null}
-        </div>
-    </div>
+    <EndingBlogNav category={post.data.category}/>
 
     <ContactSection />
 

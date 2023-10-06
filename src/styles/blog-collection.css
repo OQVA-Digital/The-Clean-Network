@@ -112,21 +112,6 @@ section.intro {
     gap: clamp(2rem, 2vw, 3rem);
 }
 
-.check_all {
-    width: fit-content;
-    display: block;
-    text-align: center;
-    padding: 1.4rem clamp(2rem, 5vw, 6rem);
-    box-sizing: border-box;
-    background-color: var(--primary-e);
-    font-size: clamp(1.3rem, 4vw, 1.6rem);
-    font-weight: 400;
-    color: var(--light);
-    margin-bottom: 5rem;
-    border-radius: 0.4rem;
-    margin-inline: auto;
-}
-
 .category_posts_ctnr {
 
 }
@@ -209,7 +194,7 @@ section.intro {
 .posts li .description {
     font-size: clamp(1.3rem,3.8vmin,1.65rem);
     color: var(--grey);
-    max-width: 58rem;
+    max-width: 64rem;
     line-height: 1.4;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -343,7 +328,7 @@ section.intro {
 }
 
 .blog_nav a.disabled {
-    background-color: var(--light-a);
+    background-color: var(--light-d);
     border-color: transparent;
     pointer-events: none;
     color: var(--light-b);

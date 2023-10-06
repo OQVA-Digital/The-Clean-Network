@@ -3,6 +3,8 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 import FormattedDate from '../../../components/FormattedDate.astro';
 
+import EndingBlogNav from '../../../components/EndingBlogNav.astro';
+
 import { type CollectionEntry, getCollection } from 'astro:content';
 
 
@@ -102,26 +104,7 @@ import { Schema } from "astro-seo-schema"
 		</ul>
 	</div>
 
-	<div class="category_nav">
-		<span class="tangent_content_heading">Explore categories</span>
-
-		<div class="flex">
-			{category != "cleaning" ? (
-				<a href="/blog/cleaning/">Cleaning</a>
-			) : null}
-
-			{category != "health-and-environment" ? (
-				<a href="/blog/health-and-environment/">Health & Environment</a>
-			) : null}
-
-			{category != "efficiency" ? (
-				<a href="/blog/efficiency/">Efficiency</a>
-			) : null}
-		</div>
-	</div>
-
-
-	<a class="check_all" href="/blog#posts">Check All Posts</a>
+	<EndingBlogNav category={category}/>
 
     <Schema
         item={{

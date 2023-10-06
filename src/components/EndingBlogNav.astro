@@ -1,0 +1,126 @@
+---
+
+const { category } = Astro.props;
+
+---
+
+<div class="category_nav">
+    <span class="tangent_content_heading">Explore categories</span>
+
+    <div class="flex">
+        {category != "cleaning" ? (
+            <a href="/blog/cleaning/">Cleaning</a>
+        ) : null}
+
+        {category != "health-and-environment" ? (
+            <a href="/blog/health-and-environment/">Health & Environment</a>
+        ) : null}
+
+        {category != "efficiency" ? (
+            <a href="/blog/efficiency/">Efficiency</a>
+        ) : null}
+    </div>
+</div>
+
+<a class="check_all" href="/blog/1">Check All Posts</a>
+
+<style>
+
+    .category_nav {
+        margin-bottom: 2.5rem;
+    }
+    
+    .category_nav .flex {
+        justify-content: center;
+        gap: 2rem;
+    }
+    
+    .category_nav a {
+        flex: 1;
+        padding: clamp(1rem, 3vw, 3rem) clamp(1rem, 5vw, 5rem);
+        font-size: clamp(1.3rem, 4vw, 1.6rem);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 500;
+        color: var(--grey-a);
+        border-radius: 0.3rem;
+        background-color: var(--light-d);
+        gap: 1rem;
+        border: 0.2rem solid var(--light-d);
+        transition: background-color 0.3s ease;
+        -webkit-transition: background-color 0.3s ease;
+        -moz-transition: background-color 0.3s ease;
+        -ms-transition: background-color 0.3s ease;
+        -o-transition: background-color 0.3s ease;
+    }
+    
+    .category_nav a:hover {
+        background-color: var(--light);
+        transition: background-color 0s ease;
+        -webkit-transition: background-color 0s ease;
+        -moz-transition: background-color 0s ease;
+        -ms-transition: background-color 0s ease;
+        -o-transition: background-color 0s ease;
+    }
+    
+    .category_nav a::before {
+        content:'';
+        position: relative;
+        width: 0.4rem;
+        height: 0.4rem;
+        border-left: 0.3rem solid;
+        border-bottom: 0.3rem solid;
+        border-color: var(--light-b);
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+    }
+    
+    .category_nav a:last-of-type {
+        flex-direction: row-reverse;
+        /* justify-content: flex-end; */
+        border-radius: 0 0 0 1rem;
+        -webkit-border-radius: 0 0 0 1rem;
+        -moz-border-radius: 0 0 0 1rem;
+        -ms-border-radius: 0 0 0 1rem;
+        -o-border-radius: 0 0 0 1rem;
+        border-right: 0;
+    }
+    
+    .category_nav a:last-of-type:before {
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+        -moz-transform: rotate(-135deg);
+        -ms-transform: rotate(-135deg);
+        -o-transform: rotate(-135deg);
+    }
+    
+    .category_nav a:first-of-type {
+        text-align: right;
+        /* justify-content: right; */
+        border-radius: 0 1rem 0 0;
+        -webkit-border-radius: 0 1rem 0 0;
+        -moz-border-radius: 0 1rem 0 0;
+        -ms-border-radius: 0 1rem 0 0;
+        -o-border-radius: 0 1rem 0 0;
+        border-left:0;
+    }
+
+    .check_all {
+        width: fit-content;
+        display: block;
+        text-align: center;
+        padding: 1.4rem clamp(2rem, 5vw, 6rem);
+        box-sizing: border-box;
+        background-color: var(--primary-e);
+        font-size: clamp(1.3rem, 4vw, 1.6rem);
+        font-weight: 400;
+        color: var(--light);
+        margin-bottom: 5rem;
+        border-radius: 0.4rem;
+        margin-inline: auto;
+    }
+</style>
