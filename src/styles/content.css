@@ -46,7 +46,7 @@
 
 .posts li .title {
     font-size: clamp(1.2rem, 6vw, 3rem);
-    margin-block: 0.2rem 0.7rem;
+    margin-block: 0.2rem clamp(0.3rem, 1vw, 0.6rem);
     color: var(--dark-a);
     transition: color 0.3s ease;
     -webkit-transition: color 0.3s ease;

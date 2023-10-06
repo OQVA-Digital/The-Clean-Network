@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+import FormattedDate from '../../components/FormattedDate.astro';
+
+import { type CollectionEntry, getCollection } from 'astro:content';
+
+
+export async function getStaticPaths({ paginate }) {
+
+	const posts = (await getCollection('blog')).sort(
+		(a, b) =>  b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+	);
+  return paginate(posts, { pageSize: 6 })
+}
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) =>  b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const { page } = Astro.props;
+
+import BackBt from '../../components/BackBt.astro';
+
+import '../../styles/content.css'
+import '../../styles/blog.css'
+import '../../styles/blog-collection.css'
+import '../../styles/blog-post.css'
+
+import { Schema } from "astro-seo-schema"
+---
+
+<BaseLayout title={page.currentPage}>
+
+	<BackBt url={`/blog/`} label="Blog Home"/>
+
+	<div class="category_posts_ctnr center_base_width">
+				
+		<h1 class="counter_title">Page {page.currentPage} - All Categories</h1>
+
+		<ul class="posts scroll_margin_top" id="posts">
+			{
+				page.data.map((post) => (
+					<>
+						<li id={(post.data.title).toLowerCase().replace(/\s+/g, '-')} class="scroll_margin_top reveal">
+							<div class="ctnr">
+								<div class="content">
+									<div class="ctnr">
+										<div class="over_heading">
+											<FormattedDate date={post.data.pubDate} />
+
+											<hr/>
+
+											<div class="author">by <cite>{post.data.author}</cite></div>
+								
+											<hr/>
+								
+											<a href={`/blog/${post.data.category}`} class="category_indicator" aria-label="Check same category posts">{post.data.category == 'cleaning' ? 'Cleaning' : post.data.category == 'health-and-environment' ? 'Health & Environment' : post.data.category == 'efficiency' ? "Efficiency" : null}</a>
+										</div>
+
+										<a href={`/blog/${post.slug}/`}>
+											<h3 class="title">{post.data.title}</h3>
+										</a>
+
+										{post.data.description ? (
+											<p class="description">{post.data.description}</p>
+										) : null}
+
+										<a href={`/blog/${post.slug}/`} class="read_more">Read more</a>
+									</div>
+								</div>
+
+								<a class="hero" href={`/blog/${post.slug}/`}>
+									<img src={post.data.heroImage} alt={post.data.description} loading="lazy"/>
+								</a>
+							</div>
+						</li>
+					</>
+				))
+			}
+		</ul>
+
+		<div class="blog_nav">
+			<div class="flex">
+				{page.url.prev ? <a href={page.url.prev}>Previous</a> : <a href={page.url.prev} class="disabled">Previous</a>}
+				
+				<span class="counter">{page.currentPage} of {page.lastPage}</span>
+	
+				{page.url.next ? <a href={page.url.next}>Next</a> : <a href={page.url.next} class="disabled">Next</a>}
+			</div>
+		</div>
+	</div>
+
+    <Schema
+        item={{
+			"@context": "https://schema.org",
+			"@type": "Blog",
+			"@id": "tcn-blog",
+			"description": "The Clean Network, London's trusted partner in professional commercial and office cleaning. Reliable, high standards, tailored to your needs. See why 95% of our clients stay.",
+			"name": "The Clean Network Blog"
+		  }}
+    />
+</BaseLayout>
+
+
+<style>
+	.posts {
+		margin-bottom: 5rem;
+	}
+</style>
