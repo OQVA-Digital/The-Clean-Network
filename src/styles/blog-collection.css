@@ -316,7 +316,6 @@ section.intro {
     bottom: 1.5rem;
     padding: 1.5rem;
     backdrop-filter: blur(1rem);
-    border: 0.1rem solid var(--light);
     border-radius: 0.4rem;
     background-color: rgba(255,255,255,0.6);
     box-sizing: border-box;
@@ -357,8 +356,8 @@ section.intro {
 }
 
 .counter_title {
-    margin-block: 10rem 2rem;
-    font-size: clamp(1.2rem, 6vw, 3rem);
+    margin-block: clamp(6rem, 10vw, 10rem) clamp(1rem, 2vw, 2rem);
+    font-size: clamp(1.2rem, 5vw, 2.6rem);
     color: var(--primary-e);
 }
 
