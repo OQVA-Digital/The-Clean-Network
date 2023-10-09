@@ -46,7 +46,7 @@ h2::after {
 }
  
 .panel .content .description {
-    font-size: clamp(1.3rem,3.6vmin,1.8rem);
+    font-size: clamp(1.3rem,3.6vmin,1.7rem);
     color: var(--grey);
     line-height: 1.4;
     margin-bottom: 1rem;
@@ -159,11 +159,6 @@ h2::after {
 
 .panel .image img {
     background-color: var(--light-b);
-    border-radius: 1.2rem 1.2rem 0 0;
-    -webkit-border-radius: 1.2rem 1.2rem 0 0;
-    -moz-border-radius: 1.2rem 1.2rem 0 0;
-    -ms-border-radius: 1.2rem 1.2rem 0 0;
-    -o-border-radius: 1.2rem 1.2rem 0 0;
 }
 
 .heading_ctnr {
@@ -269,10 +264,5 @@ main > .txt_ctnr h2 {
 
     .panel .image img {
         height: 100%;
-        border-radius: 0 1.2rem 1.2rem 0;
-        -webkit-border-radius: 0 1.2rem 1.2rem 0;
-        -moz-border-radius: 0 1.2rem 1.2rem 0;
-        -ms-border-radius: 0 1.2rem 1.2rem 0;
-        -o-border-radius: 0 1.2rem 1.2rem 0;
     }
 }

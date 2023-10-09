@@ -9,7 +9,7 @@ main {}
 
 .intro>.ctnr .content {
     width: var(--base-width);
-    margin: clamp(2rem, 10vw, 6rem) auto 0;
+    margin: clamp(2rem, 8vw, 6rem) auto 0;
     display: flex;
     flex-direction: column;
     gap: clamp(1rem, 3vmin, 1.8rem);
@@ -23,15 +23,15 @@ main {}
 }
 
 .intro h2 {
-    font-size: clamp(1rem, 4.2vmin, 2.2rem);
-    font-weight: 500;
+    font-size: clamp(1rem, 4.4vmin, 2.2rem);
+    font-weight: 400;
     line-height: 1.5;
     max-width: 95%;
-    color: var(--grey-b);
+    color: var(--dark);
 }
 
 .intro h2 b, .intro h2 strong {
-    font-weight: inherit;
+    font-weight: 500;
     color: var(--dark);
 }
 
@@ -88,16 +88,16 @@ main {}
 
 .panel_ctnr {
     background-color: var(--light-d);
-    padding-block: clamp(2rem, 8vw, 5rem) clamp(2rem, 14vw, 6rem);
+    padding-block: clamp(2rem, 8vw, 5rem) 0;
     display: flex;
     flex-direction: column;
-    gap: clamp(4rem, 5vw, 5rem);
+    /* gap: clamp(4rem, 5vw, 5rem); */
 }
 
 .panel.services, .panel.sectors {
-    width: clamp(9rem, 91vw, 185rem);
+    /* width: clamp(9rem, 91vw, 185rem);
     margin-inline: auto;
-    border-radius: 1.2rem;
+    border-radius: 1.2rem; */
 }
 
 .panel h3 {
@@ -116,11 +116,7 @@ main {}
 }
 
 .panel.services .image img, .panel.sectors .image img {
-    border-radius: 1.2rem 1.2rem 0 0;
-    -webkit-border-radius: 1.2rem 1.2rem 0 0;
-    -moz-border-radius: 1.2rem 1.2rem 0 0;
-    -ms-border-radius: 1.2rem 1.2rem 0 0;
-    -o-border-radius: 1.2rem 1.2rem 0 0;
+    
 }
 
 .panel .cta {
@@ -161,7 +157,7 @@ main {}
     margin-inline: auto;
     position: sticky;
     bottom: 3rem;
-    margin-block: 4rem;
+    margin-block: 4rem 6rem;
 }
 
 .panel .cta:hover {
@@ -196,7 +192,7 @@ main {}
 
 .benefits h3 {
     margin-inline: auto;
-    font-size: clamp(2rem, 7vmin, 3.5rem);
+    font-size: clamp(2rem, 7vmin, 4rem);
     text-align: center;
     font-weight: 500;
     width: fit-content;
@@ -296,11 +292,11 @@ main {}
     box-sizing: border-box;
     position: sticky;
     bottom: 2rem;
-    border-radius: 0.6rem;
-    -webkit-border-radius: 0.6rem;
-    -moz-border-radius: 0.6rem;
-    -ms-border-radius: 0.6rem;
-    -o-border-radius: 0.6rem;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
 }
 
 .benefits h3 + p b, .benefits h3 + p strong {
@@ -309,7 +305,8 @@ main {}
 }
 
 section.clients {
-    
+    background-color: var(--light-d);
+    padding-block: clamp(3rem, 14vw, 7rem) 2rem;
 }
 
 .clients>.ctnr {
@@ -317,22 +314,30 @@ section.clients {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: clamp(1rem, 3vw, 2.5rem);
+    gap: clamp(1rem, 2vw, 1.5rem);
     align-items: center;
-    padding: clamp(3rem, 5vw, 4.5rem) 0 0;
+    max-width: var(--base-width);
+    width: fit-content;
+    background-color: var(--light);
+    border-radius: 2rem;
+    box-sizing: border-box;
 }
 
 .clients h3 {
-    font-size: clamp(2rem, 6.5vw, 2.8rem);
-    color: var(--primary-a);
+    font-size: clamp(2rem, 6.5vw, 2.2rem);
+    color: var(--dark);
+    transform: translateY(-60%);
+    font-weight: 500;
 }
 
 .clients .content {
     display: flex;
     flex-direction: row;
-    gap: clamp(2rem, 9vw, 5rem);
+    gap: clamp(2rem, 9vw, 6rem);
     overflow: auto;
-    padding: 0 calc((100% - var(--base-width)) / 2) clamp(2rem, 4vw, 4.5rem);
+    padding: 0 calc((100% - var(--base-width)) / 2) clamp(2rem, 4vw, 3.5rem);
+    padding-inline: clamp(2rem, 8vw, 5rem);
+    box-sizing: border-box;
 }
 
 .clients .content img, .clients .content picture {
@@ -428,7 +433,7 @@ section.text {
     width: clamp(9rem, 84vw, 133rem);
     margin-inline: auto;
     text-align: center;
-    margin-block: clamp(2rem, 5vw, 5rem);
+    margin-block: clamp(2rem, 15vw, 12rem);
 }
 
 section.text>.ctnr {
@@ -445,7 +450,7 @@ section.text h3 {
 section.text p {
     margin-bottom: 1.4rem;
     line-height: 1.4;
-    font-size: clamp(1.5rem, 3.8vmin, 1.9rem);
+    font-size: clamp(1.5rem, 4.2vmin, 1.9rem);
     color: var(--grey-b);
 }
 
@@ -983,15 +988,11 @@ section.find_us {
     }
 
     .panel.services, .panel.sectors {
-        width: var(--base-width);
+        /* width: var(--base-width); */
     }
 
     .panel.services .image img, .panel.sectors .image img {
-        border-radius: 0 1.2rem 1.2rem 0;
-        -webkit-border-radius: 0 1.2rem 1.2rem 0;
-        -moz-border-radius: 0 1.2rem 1.2rem 0;
-        -ms-border-radius: 0 1.2rem 1.2rem 0;
-        -o-border-radius: 0 1.2rem 1.2rem 0;
+        
     }
 
     .panel .subsets > div {

@@ -275,7 +275,7 @@ noscript {
 
 .panel .content p {
     line-height: 1.5;
-    font-size: clamp(1rem, 4vmin, 1.75rem);
+    font-size: clamp(1rem, 4vmin, 1.9rem);
     max-width: 66rem;
 }
 
@@ -461,11 +461,6 @@ noscript {
 
     .panel .image img {
         height: 100%;
-        border-radius: 0 1.2rem 1.2rem 0;
-        -webkit-border-radius: 0 1.2rem 1.2rem 0;
-        -moz-border-radius: 0 1.2rem 1.2rem 0;
-        -ms-border-radius: 0 1.2rem 1.2rem 0;
-        -o-border-radius: 0 1.2rem 1.2rem 0;
     }
 
     .panel .image picture, .panel .image img {
