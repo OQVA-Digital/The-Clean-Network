@@ -124,60 +124,12 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 		<div class="panel_ctnr scroll_margin_top reveal" id="scroll">
 			<section class="services panel scroll_margin_top">
 				<div class="ctnr">
-					<div class="cta_ctnr">
-						<a href="/services/" class="cta" aria-label="View all services"><span></span> All services</a>
-					</div>
-
 					<div class="content">
 						<a href="/services/" aria-label="View all services"><h3>Services</h3></a>
 	
 						<p set:html={SERVICES_SECTION_DESCRIPTION}></p>
-	
-						<!-- <hr>
-	
-						<div class="subsets">
-							<div>
-								<a href="/services/#indoor" class="heading indoor"
-									>Indoor Cleaning <span class="icon"></span></a
-								>
-	
-								{
-									services.map((services) => (
-										<>
-											{services.data.type === "indoor" ? (
-												<a
-													href={`/services/${services.slug}/`}
-												>
-													{services.data.title}
-												</a>
-											) : null}
-										</>
-									))
-								}
-							</div>
-	
-							<hr />
-	
-							<div>
-								<a href="/services/#external" class="heading outdoor"
-									>External Cleaning <span class="icon"></span></a
-								>
-	
-								{
-									services.map((services) => (
-										<>
-											{services.data.type === "external" ? (
-												<a
-													href={`/services/${services.slug}/`}
-												>
-													{services.data.title}
-												</a>
-											) : null}
-										</>
-									))
-								}
-							</div>
-						</div> -->
+						
+						<a href="/services/" class="cta" aria-label="View all services"><span></span> All services</a>
 					</div>
 	
 					<a href="/services/" aria-label="View all services" class="image">
@@ -192,32 +144,12 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 	
 			<section class="sectors panel reveal">
 				<div class="ctnr">
-					<div class="cta_ctnr">
-						<a href="/sectors/" class="cta" aria-label="View all sectors"><span></span> All sectors</a>
-					</div>
-
 					<div class="content">
 						<a href="/sectors/" aria-label="View all sectors"><h3>Sectors</h3></a>
 	
 						<p set:html={SECTORS_SECTION_DESCRIPTION}></p>
-	
-						<!-- <hr>
-	
-						<div class="subsets">
-							<div>
-								{
-									sectors.map((sectors) => (
-										<>
-											<a
-												href={`/sectors/${sectors.slug}/`}
-											>
-												{sectors.data.title}
-											</a>
-										</>
-									))
-								}
-							</div>
-						</div> -->
+
+						<a href="/sectors/" class="cta" aria-label="View all sectors"><span></span> All sectors</a>
 					</div>
 	
 					<a href="/sectors/" aria-label="View all sectors" class="image">
@@ -346,16 +278,6 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 				}}
 			/>
 		</section>
-
-		<!-- <section class="rates">
-			<div class="ctnr">
-				<h3>Service Rates</h3>
-
-				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis ad sed quod delectus quasi optio, earum quidem explicabo?</p>
-
-				<a href="#" class="cta">Simulate with our <b>Rate Calculator</b></a>
-			</div>
-		</section> -->
 
 		<ContactSection />
 

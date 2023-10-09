@@ -32,7 +32,7 @@ export const SITE_KEYWORDS = "commercial cleaning, office cleaning, London, serv
 
     // CONTENT
 
-export const SITE_H1 = 'Commercial & Office Cleaning in London'
+export const SITE_H1 = 'Commercial & Office Cleaning in <span>London</span>'
 
 export const INTRO_H2 = 'Welcome to <strong>The Clean Network</strong> - an office cleaning company trusted by over 500 sites in Central London each day. Discover the difference our professional office cleaning services can make. <b>Why do 95% of our clients renew their contracts with us? <span class="highlight">Let us show you.</span></b>'
 

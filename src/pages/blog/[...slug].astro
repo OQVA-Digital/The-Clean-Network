@@ -33,23 +33,20 @@ const posts = (await getCollection('blog')).sort(
 
 
 
-let postCategory = post.data.category;
-let postTitle = post.data.title;
+// let postCategory = post.data.category;
+// let postTitle = post.data.title;
 
-let filteredPosts = posts.filter(p => p.data.category === postCategory && p.data.title !== post.data.title);
+// let filteredPosts = posts.filter(p => p.data.category === postCategory && p.data.title !== post.data.title);
 
-let firstRandomPos = 0
-let secondRandomPos = 0
-let thirdRandomPos = 0
+// let firstRandomPos = 0
+// let secondRandomPos = 0
+// let thirdRandomPos = 0
 
-while (filteredPosts[firstRandomPos].data.title == postTitle || filteredPosts[secondRandomPos].data.title == postTitle || filteredPosts[thirdRandomPos].data.title == postTitle || (firstRandomPos == secondRandomPos || thirdRandomPos == secondRandomPos || thirdRandomPos == firstRandomPos)) {
-    firstRandomPos = Math.floor(Math.random() * filteredPosts.length)
-    secondRandomPos = Math.floor(Math.random() * filteredPosts.length)
-    thirdRandomPos = Math.floor(Math.random() * filteredPosts.length)
-}
-
-
-
+// while (filteredPosts[firstRandomPos].data.title == postTitle || filteredPosts[secondRandomPos].data.title == postTitle || filteredPosts[thirdRandomPos].data.title == postTitle || (firstRandomPos == secondRandomPos || thirdRandomPos == secondRandomPos || thirdRandomPos == firstRandomPos)) {
+//     firstRandomPos = Math.floor(Math.random() * filteredPosts.length)
+//     secondRandomPos = Math.floor(Math.random() * filteredPosts.length)
+//     thirdRandomPos = Math.floor(Math.random() * filteredPosts.length)
+// }
 
 ---
 
@@ -108,7 +105,7 @@ while (filteredPosts[firstRandomPos].data.title == postTitle || filteredPosts[se
             </div>
         </article>
 
-        <hr>
+        <!-- <hr>
     
         <aside class="recommendations reveal">
             <span class="tangent_content_heading">You might also like</span>
@@ -204,14 +201,14 @@ while (filteredPosts[firstRandomPos].data.title == postTitle || filteredPosts[se
                     </div>
                 </li>
             </ul>
-        </aside>
+        </aside> -->
 
         <div class="cta_ctnr">
             <a href="/contact/" class="main cta" aria-label="Get a free quote for our cleaning services">Get a free quote</a>
         </div>
     </div>
 
-    <EndingBlogNav category={post.data.category}/>
+    <!-- <EndingBlogNav category={post.data.category}/> -->
 
     <ContactSection />
 

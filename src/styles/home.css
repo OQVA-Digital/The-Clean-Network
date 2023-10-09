@@ -19,6 +19,9 @@ main {}
     font-size: clamp(1rem, 8.5vmin, 6.2rem);
     font-weight: 700;
     line-height: 1.2;
+}
+
+.intro h1 span {
     color: var(--primary-a);
 }
 
@@ -88,10 +91,8 @@ main {}
 
 .panel_ctnr {
     background-color: var(--light-d);
-    padding-block: clamp(2rem, 8vw, 5rem) 0;
     display: flex;
     flex-direction: column;
-    /* gap: clamp(4rem, 5vw, 5rem); */
 }
 
 .panel.services, .panel.sectors {
@@ -146,18 +147,12 @@ main {}
 }
 
 .panel .content {
-    margin-bottom: -2rem;
-}
-
-.panel .content, .panel .cta_ctnr {
     width: clamp(9rem, 75vw, 170rem);
 }
 
-.panel .cta_ctnr {
-    margin-inline: auto;
+.panel .cta {
     position: sticky;
     bottom: 3rem;
-    margin-block: 4rem 6rem;
 }
 
 .panel .cta:hover {
@@ -306,7 +301,7 @@ main {}
 
 section.clients {
     background-color: var(--light-d);
-    padding-block: clamp(3rem, 14vw, 7rem) 2rem;
+    padding-block: clamp(3rem, 16vw, 9rem);
 }
 
 .clients>.ctnr {
@@ -360,11 +355,11 @@ section.sectors {
 }
 
 .panel .content p {
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .services .content p {
-    color: var(--grey-b);
+    color: var(--dark);
 }
 
 .services .content p b, .services .content p strong {
@@ -932,8 +927,8 @@ section.find_us {
     }
 
     .panel .cta_ctnr {
-        position: absolute;
-        margin-inline: clamp(4rem, 5vw, 8rem);
+        /* position: absolute; */
+        /* margin-inline: clamp(4rem, 5vw, 8rem); */
         margin-block: 0;
         bottom: calc(clamp(2rem,8vw,13rem) - 5rem);
     }
