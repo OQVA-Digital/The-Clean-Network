@@ -20,7 +20,7 @@ description: A sustainable office building is more than an eco-friendly badge.
   differentiation.
 pubDate: Oct 09 2023
 category: health-and-environment
-heroImage: /images/media/sustainable-office-buildings.jpg
+heroImage: /images/media/sustainable-office-buildings-min.jpg
 ---
 ## **The Personal Benefits of a Sustainable Office Building**
 
