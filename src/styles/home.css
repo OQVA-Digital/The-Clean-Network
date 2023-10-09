@@ -3,13 +3,13 @@ main {}
 .intro>.ctnr {
     display: flex;
     flex-direction: column;
-    gap: clamp(1rem, 1vw, 7rem);
+    gap: clamp(1rem, 7vw, 7rem);
     position: relative;
 }
 
 .intro>.ctnr .content {
     width: var(--base-width);
-    margin: clamp(2rem, 6vw, 6rem) auto 0;
+    margin: clamp(2rem, 10vw, 6rem) auto 0;
     display: flex;
     flex-direction: column;
     gap: clamp(1rem, 3vmin, 1.8rem);
@@ -44,7 +44,7 @@ main {}
 }
 
 .showcase img {
-    height: clamp(30rem, 110vmin, 60rem);
+    height: clamp(30rem, 110vmin, 66rem);
     max-height: 35vh;
     width: 100%;
     object-fit: cover;
@@ -181,7 +181,7 @@ main {}
 
 .benefits {
     background-color: var(--highlight);
-    padding: clamp(3rem, 10vmin, 5rem) 0 clamp(3rem, 10vmin, 6rem);
+    padding: clamp(3rem, 10vmin, 7rem) 0 clamp(3rem, 10vmin, 8rem);
     color: var(--light);
     font-size: clamp(1.5rem, 4vmin, 2.2rem);
     /* overflow: hidden;
@@ -319,7 +319,7 @@ section.clients {
     justify-content: center;
     gap: clamp(1rem, 3vw, 2.5rem);
     align-items: center;
-    padding: clamp(3rem, 5vw, 3.5rem) 0 0;
+    padding: clamp(3rem, 5vw, 4.5rem) 0 0;
 }
 
 .clients h3 {
@@ -332,7 +332,7 @@ section.clients {
     flex-direction: row;
     gap: clamp(2rem, 9vw, 5rem);
     overflow: auto;
-    padding: 0 calc((100% - var(--base-width)) / 2) clamp(2rem, 4vw, 3.5rem);
+    padding: 0 calc((100% - var(--base-width)) / 2) clamp(2rem, 4vw, 4.5rem);
 }
 
 .clients .content img, .clients .content picture {

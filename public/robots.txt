@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /blog/
+Disallow: /blog
 
 Sitemap: https://cleannetwork.co.uk/sitemap-index.xml
