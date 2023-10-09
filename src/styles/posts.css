@@ -47,6 +47,27 @@
     text-align: center;
 }
 
+h2 {
+    margin-block: 5rem 1.3rem;
+    font-size: 1.6em;
+}
+
+h3, h4, h5 {
+    margin-block: 3.3rem 1.3rem;
+}
+
+h3 {
+    font-size: 1.3em;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+h5 {
+    font-size: 1.1em;
+}
+
 .intro hr {
     width: clamp(9rem,89vw,80rem);
     margin-inline: auto;
@@ -106,13 +127,14 @@
 
 .content_ctnr .post_content ul, .content_ctnr .post_content ol {
     padding: 0 0 0 4rem;
-    margin-block: 1rem 2rem;
+    margin-block: 1rem 3rem;
     list-style: initial;
 }
 
 .content_ctnr .post_content li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     list-style: initial;
+    line-height: 1.55;
 }
 
 .content_ctnr .post_content {

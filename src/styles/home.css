@@ -44,7 +44,7 @@ main {}
 }
 
 .showcase img {
-    height: clamp(30rem, 110vmin, 66rem);
+    height: clamp(30rem, 110vmin, 64rem);
     max-height: 35vh;
     width: 100%;
     object-fit: cover;
@@ -428,7 +428,7 @@ section.text {
     width: clamp(9rem, 84vw, 133rem);
     margin-inline: auto;
     text-align: center;
-    margin-block: 2rem;
+    margin-block: clamp(2rem, 5vw, 5rem);
 }
 
 section.text>.ctnr {
@@ -438,14 +438,14 @@ section.text>.ctnr {
 section.text h3 {
     margin-inline: auto;
     margin-bottom: 2rem;
-    font-size: clamp(2rem, 7vmin, 3.8rem);
+    font-size: clamp(2rem, 7vmin, 4.4rem);
     color: var(--primary-e);
 }
 
 section.text p {
     margin-bottom: 1.4rem;
     line-height: 1.4;
-    font-size: clamp(1.5rem, 3.8vmin, 1.8rem);
+    font-size: clamp(1.5rem, 3.8vmin, 1.9rem);
     color: var(--grey-b);
 }
 
