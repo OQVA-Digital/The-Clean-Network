@@ -297,13 +297,6 @@ declare module 'astro:content' {
   collection: "blog";
   data: any
 } & { render(): Render[".md"] };
-"how-to-make-your-office-building-more-sustainable.md": {
-	id: "how-to-make-your-office-building-more-sustainable.md";
-  slug: "how-to-make-your-office-building-more-sustainable";
-  body: string;
-  collection: "blog";
-  data: any
-} & { render(): Render[".md"] };
 };
 "sectors": {
 "architects-firms.md": {
