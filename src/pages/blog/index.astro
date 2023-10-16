@@ -72,7 +72,7 @@ import { Schema } from "astro-seo-schema"
 											
 														<hr/>
 											
-														<a href={`/blog/${post.data.category}`} class="category_indicator" aria-label="Check same category posts" title="see category">{post.data.category == 'cleaning' ? 'Cleaning' : post.data.category == 'health-and-environment' ? 'Health & Environment' : post.data.category == 'efficiency' ? "Efficiency" : null}</a>
+														<a href={`/blog/${post.data.category}`} class="category_indicator" aria-label="Check same category posts" title="see category">Cleaning</a>
 													</div>
 				
 													<a href={`/blog/${post.slug}/`}>
@@ -113,7 +113,17 @@ import { Schema } from "astro-seo-schema"
 										<div class="ctnr reveal">
 											<div class="content">
 												<div class="ctnr">
-													<FormattedDate date={post.data.pubDate} />
+													<div class="over_heading">
+														<FormattedDate date={post.data.pubDate} />
+
+														<hr/>
+
+														<div class="author">{post.data.authorImage ? (<img src={post.data.authorImage} alt={`${post.data.author} profile picture`}/>) : "by"} <cite>{post.data.author}</cite></div>
+											
+														<hr/>
+											
+														<a href={`/blog/${post.data.category}`} class="category_indicator" aria-label="Check same category posts" title="see category">Health & Environment</a>
+													</div>
 				
 													<a href={`/blog/${post.slug}/`}>
 														<h3 class="title">{post.data.title}</h3>
@@ -153,7 +163,17 @@ import { Schema } from "astro-seo-schema"
 										<div class="ctnr reveal">
 											<div class="content">
 												<div class="ctnr">
-													<FormattedDate date={post.data.pubDate} />
+													<div class="over_heading">
+														<div class="author">{post.data.authorImage ? (<img src={post.data.authorImage} alt={`${post.data.author} profile picture`}/>) : "by"} <cite> {post.data.author}</cite></div>
+
+														<hr/>
+
+														<FormattedDate date={post.data.pubDate} />
+
+														<hr/>
+											
+														<a href={`/blog/${post.data.category}`} class="category_indicator" aria-label="Check same category posts" title="see category">Efficiency</a>
+													</div>
 				
 													<a href={`/blog/${post.slug}/`}>
 														<h3 class="title">{post.data.title}</h3>

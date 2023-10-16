@@ -47,7 +47,7 @@ a.category_indicator:hover {
     color: var(--grey);
     font-weight: 500;
     display: flex;
-    gap: 0.7rem;
+    gap: 0.3rem;
     align-items: center;
 }
 
