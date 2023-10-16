@@ -9,6 +9,7 @@ standFirst: The concept of sustainability in office buildings isn't merely about
   elevate mood, boost productivity, and offer a sense of pride in one's work
   environment.
 author: The Clean Network
+authorImage: "adsdlkasmko"
 tags:
   - Customer Satisfaction
 description: A sustainable office building is more than an eco-friendly badge.

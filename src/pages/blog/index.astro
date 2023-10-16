@@ -68,7 +68,7 @@ import { Schema } from "astro-seo-schema"
 
 														<hr/>
 
-														<div class="author">by <cite>{post.data.author}</cite></div>
+														<div class="author">{post.data.authorImage ? (<img src={post.data.authorImage} alt={`${post.data.author} profile picture`}/>) : "by"} <cite>{post.data.author}</cite></div>
 											
 														<hr/>
 											

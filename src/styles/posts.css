@@ -229,7 +229,7 @@ article a.back:hover {
     color: var(--grey);
 } */
 
-article img {
+.post_content img {
     margin: clamp(3rem, 7vmin, 4rem) auto;
     border-radius: 0.5rem;
     width: clamp(9rem,89vw,75rem);

@@ -46,11 +46,25 @@ a.category_indicator:hover {
 .author {
     color: var(--grey);
     font-weight: 500;
+    display: flex;
+    gap: 0.7rem;
+    align-items: center;
 }
 
 .author cite {
     color: var(--dark-a);
     font-style: normal;
+}
+
+.author img {
+    position: relative;
+    display: inline;
+    min-width: 2rem;
+    max-width: 50%;
+    height: 2rem;
+    background-color: var(--light-a);
+    border-radius: 10rem;
+    overflow: hidden;
 }
 
 .tags {
