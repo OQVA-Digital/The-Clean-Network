@@ -67,13 +67,13 @@ const posts = (await getCollection('blog')).sort(
     <div class="content_ctnr">
         <article class="reveal">
             <div class="over_heading">
-				<FormattedDate date={post.data.pubDate} />
-
-				<hr>
-
                 <div class="author">{post.data.authorImage ? (<img src={post.data.authorImage} alt={`${post.data.author} profile picture`}/>) : "by"} <cite>{post.data.author}</cite></div>
     
                 <hr/>
+
+				<FormattedDate date={post.data.pubDate} />
+
+				<hr>
     
                 <a href={`/blog/${post.data.category}`} class="category_indicator" aria-label="Check same category posts" title="see category">{post.data.category == 'cleaning' ? 'Cleaning' : post.data.category == 'health-and-environment' ? 'Health & Environment' : post.data.category == 'efficiency' ? "Efficiency" : null}</a>
             </div>

@@ -47,12 +47,13 @@ import { Schema } from "astro-seo-schema"
 								<div class="content">
 									<div class="ctnr">
 										<div class="over_heading">
-											<FormattedDate date={post.data.pubDate} />
+
+											<div class="author">{post.data.authorImage ? (<img src={post.data.authorImage} alt={`${post.data.author} profile picture`}/>) : "by"} <cite>{post.data.author}</cite></div>
 
 											<hr/>
 
-											<div class="author">{post.data.authorImage ? (<img src={post.data.authorImage} alt={`${post.data.author} profile picture`}/>) : "by"} <cite>{post.data.author}</cite></div>
-								
+											<FormattedDate date={post.data.pubDate} />
+
 											<hr/>
 								
 											<a href={`/blog/${post.data.category}`} class="category_indicator" aria-label="Check same category posts">{post.data.category == 'cleaning' ? 'Cleaning' : post.data.category == 'health-and-environment' ? 'Health & Environment' : post.data.category == 'efficiency' ? "Efficiency" : null}</a>
