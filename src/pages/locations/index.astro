@@ -36,7 +36,9 @@ import { LOCATIONS_TITLE, LOCATIONS_DESCRIPTION, LOCATIONS_KEYWORDS, LOCATIONS_H
             </div>
         </div>
 
-        <ContactSection />
+        <div class="contact_ctnr">
+            <ContactSection />
+        </div>
     </main>
 </BaseLayout>
 
@@ -93,6 +95,11 @@ import { LOCATIONS_TITLE, LOCATIONS_DESCRIPTION, LOCATIONS_KEYWORDS, LOCATIONS_H
         height: 100%;
     }
 
+    .contact_ctnr {
+        box-shadow: 0 -10rem 12rem -7rem var(--light-b);
+        position: relative;
+    }
+
     .component_ctnr {
         display: flex;
         transform: translateY(50%);
@@ -114,6 +121,7 @@ import { LOCATIONS_TITLE, LOCATIONS_DESCRIPTION, LOCATIONS_KEYWORDS, LOCATIONS_H
         .iframe_ctnr {
             border: 0.8rem solid var(--light);
             box-sizing: border-box;
+            height: calc(100% - var(--header-height));
         }
 
         .contact_box_ctnr {

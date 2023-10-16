@@ -1,5 +1,5 @@
 ---
 order: 5
-icon: "/icons/pro-white.svg"
+icon: "/icons/pro.svg"
 title: "<b>Peace of mind</b> with fully vetted, English-speaking & uniformed operatives"
 ---

@@ -41,8 +41,8 @@ html.sr .reveal, html.sr .reveal_interval01, html.sr .reveal_delay, html.sr .rev
     --highlight-a:#fd601d;
 
     --max-width: 170rem;
-    --base-width: clamp(9rem, 89vw, var(--max-width));
-    --base-width-overflow: calc((100% - var(--base-width)) / 2);
+    --base-width: clamp(9rem, 86vw, var(--max-width));
+    --base-width-overflow: calc((100vw - var(--base-width)) / 2);
 
     --header-height: clamp(1rem,17vmin,7.5rem);
 }
@@ -121,7 +121,7 @@ video {
 }
 
 ::-webkit-scrollbar {
-    width: 2rem;
+    width: 2.3rem;
     height: 2rem;
 }
 
@@ -232,6 +232,11 @@ noscript {
     scroll-margin-top: calc(var(--header-height) + 4rem);
 }
 
+picture img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
 
 .default_bg {
     background-image: url("/images/office-bg01.jpg");
@@ -263,31 +268,6 @@ noscript {
     display: flex;
     flex-direction: column-reverse;
     position: relative;
-}
-
-.panel .content {
-    margin-inline: auto;
-    padding-block: clamp(2rem,10vw,7rem);
-    display: flex;
-    flex-direction: column;
-    gap: clamp(0.5rem, 2vmin, 1.2rem);
-}
-
-.panel .content p {
-    line-height: 1.5;
-    font-size: clamp(1rem, 4vmin, 2rem);
-    max-width: 66rem;
-}
-
-.panel .content p b {
-    font-weight: 400;
-}
-
-.panel .content > hr, .panel .subsets hr {
-    width: 2rem;
-    margin: 1rem 0;
-    height:0.1rem;
-    background-color: rgb(248 248 255 / 20%);
 }
 .panel .cta span:first-of-type {
     display: inline-block;
@@ -333,16 +313,6 @@ noscript {
 
 .cta {
     border-radius: 0.3rem;
-}
-
-.panel .image img {
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: flex;
-    height: clamp(24rem,50vw,62rem);
-    max-height: calc(100dvh - clamp(1rem,16vmin,7.5rem));
-    font-size: 2rem;
 }
 
 .panel a.image {
@@ -408,22 +378,6 @@ noscript {
 }
 
 
-/* Map switcher fix */
-
-.find_us .map iframe {
-    width: clamp(10rem,85vmin,160rem);
-    height: clamp(10rem,85vmin,48rem);
-    display: flex;
-    border-radius: 2rem;
-    /* border: 0.2rem solid var(--primary); */
-    background-color: var(--primary);
-    background-image: url(/textures/dot-grid.jpg);
-    background-image: image-set(url(/textures/dot-grid.jpg), url(/textures/dot-grid.webp));
-    background-size: 40rem;
-    border: 0.2rem solid var(--light-b);
-}
-
-
 
 
 
@@ -436,37 +390,9 @@ noscript {
         margin-left: auto;
     }
 
-    .panel .content {
-        margin-inline: clamp(4rem, 5vw, 8rem);
-        width: unset;
-        max-width: clamp(40rem,50vw,95rem);
-        flex: 1;
-        padding-block: clamp(2rem,6vw,9rem);
-    }
-
-    .locations.panel > .ctnr .content {
-        max-width: clamp(40rem,30vw,95rem);
-    }
-
     .panel .image {
         flex: 1;
         position: relative;
-    }
-
-    .panel .image picture {
-        position: sticky;
-        top: clamp(1rem,16vmin,7.5rem);
-        display: block;
-    }
-
-    .panel .image img {
-        height: 100%;
-    }
-
-    .panel .image picture, .panel .image img {
-        position: absolute;
-        inset: 0;
-        max-height: unset;
     }
 
     .panel .subsets hr {

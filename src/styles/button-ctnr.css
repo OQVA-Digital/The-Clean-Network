@@ -10,7 +10,7 @@
     font-weight: 500;
     font-size: clamp(1.3rem,4.2vmin,1.8rem);
     line-height: 1;
-    margin-top: 0.5rem;
+    /* margin-top: 0.5rem; */
     letter-spacing: 0.04rem;
 }
 

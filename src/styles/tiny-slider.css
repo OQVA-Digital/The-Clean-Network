@@ -93,15 +93,10 @@
     display: flex;
     justify-content: center;
     gap: 2rem;
-    margin: 0 auto;
+    margin: 2rem auto 0;
     right: 0;
     left: 0;
     z-index: 3;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
 }
 
 .tns-controls button {
@@ -232,8 +227,7 @@
     }
 
     .tns-controls button {
-        background-color:rgb(46 163 242 / 70%);
-        backdrop-filter: blur(0.4rem);
+        background-color:var(--primary);
         border-radius: 0.8rem;
         -webkit-border-radius: 0.8rem;
         -moz-border-radius: 0.8rem;

@@ -159,6 +159,11 @@ h2::after {
 
 .panel .image img {
     background-color: var(--light-b);
+    border-radius: 1.2rem 1.2rem 0 0;
+    -webkit-border-radius: 1.2rem 1.2rem 0 0;
+    -moz-border-radius: 1.2rem 1.2rem 0 0;
+    -ms-border-radius: 1.2rem 1.2rem 0 0;
+    -o-border-radius: 1.2rem 1.2rem 0 0;
 }
 
 .heading_ctnr {
@@ -264,5 +269,10 @@ main > .txt_ctnr h2 {
 
     .panel .image img {
         height: 100%;
+        border-radius: 0 1.2rem 1.2rem 0;
+        -webkit-border-radius: 0 1.2rem 1.2rem 0;
+        -moz-border-radius: 0 1.2rem 1.2rem 0;
+        -ms-border-radius: 0 1.2rem 1.2rem 0;
+        -o-border-radius: 0 1.2rem 1.2rem 0;
     }
 }
