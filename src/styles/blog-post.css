@@ -5,7 +5,7 @@
     left: 0;
     top: 0;
     transform: translateY(-60%);
-    border: 0.4rem solid var(--light);
+    border: 0.2rem solid var(--light);
     margin-left: clamp(2.5rem,6vmin,5rem);
     min-width: clamp(5rem, 10vw, 7rem);
     max-width: clamp(5rem, 10vw, 7rem);
