@@ -59,9 +59,9 @@ a.category_indicator:hover {
 .author img {
     position: relative;
     display: inline;
-    min-width: 2rem;
+    min-width: 3rem;
     max-width: 50%;
-    height: 2rem;
+    height: 3rem;
     background-color: var(--light-a);
     border-radius: 10rem;
     overflow: hidden;
