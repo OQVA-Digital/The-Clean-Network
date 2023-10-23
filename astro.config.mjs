@@ -2,8 +2,12 @@ import { defineConfig } from 'astro/config';
 
 import sitemap from "@astrojs/sitemap";
 
-// https://astro.build/config
+const baseURL = 'https://cleannetwork.co.uk/'
+
 export default defineConfig({
-  site: 'https://cleannetwork.co.uk/',
+  site: baseURL,
+  redirects: {
+    'thecleannetwork.co.uk/': 'cleannetwork.co.uk/'
+  },
   integrations: [sitemap()]
 });
