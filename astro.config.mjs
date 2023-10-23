@@ -6,8 +6,5 @@ const baseURL = 'https://cleannetwork.co.uk/'
 
 export default defineConfig({
   site: baseURL,
-  redirects: {
-    'thecleannetwork.co.uk/': 'cleannetwork.co.uk/'
-  },
   integrations: [sitemap()]
 });
