@@ -219,6 +219,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"how-to-make-your-office-building-more-sustainable-1.md": {
+	id: "how-to-make-your-office-building-more-sustainable-1.md";
+  slug: "how-to-make-your-office-building-more-sustainable-1";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "how-to-make-your-office-building-more-sustainable-CLEANING.md": {
 	id: "how-to-make-your-office-building-more-sustainable-CLEANING.md";
   slug: "how-to-make-your-office-building-more-sustainable-cleaning";
