@@ -16,7 +16,7 @@
             return 1; // 'b' has 'order', but 'a' doesn't, so 'b' comes first
         } else {
             // Both 'a' and 'b' don't have 'order', fallback to sorting by 'title'
-            return a.data.question.localeCompare(b.data.question);
+            return a.data.title.localeCompare(b.data.title);
         }
     });
 
@@ -102,6 +102,62 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Our vetting process includes ID and reference checks, followed by two interviews to ensure we collaborate with reliable individuals."
+          }
+        }, {
+          "@type": "Question",
+          "name": "What about cleaning materials and products?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We can provide materials and equipment to you at an extra monthly charge. Or of course you can provide."
+          }
+        }, {
+          "@type": "Question",
+          "name": "Can I have the same office cleaner consistently?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we arrange a regular cleaner for your site for consistency."
+          }
+        }, {
+          "@type": "Question",
+          "name": "What if the cleaner damages something?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We strive to compensate you in the event of damage."
+          }
+        }, {
+          "@type": "Question",
+          "name": "Can I request a different cleaner?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Certainly, we can arrange a change upon your request"
+          }
+        }, {
+          "@type": "Question",
+          "name": "What if the cleaner is unavailable?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We'll inform you and send a replacement."
+          }
+        }, {
+          "@type": "Question",
+          "name": "What if I'm dissatisfied with the cleaning service?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We'll arrange a visit from a Quality Control Manager for assessment and provide a replacement cleaner if necessary."
+          }
+        }, {
+          "@type": "Question",
+          "name": "How do I pay for the service?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Payment options include bank transfer, standing order, direct debit (weekly or fortnightly), or credit card."
+          }
+        }, {
+          "@type": "Question",
+          "name": "How long does office cleaning take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Duration depends on factors like size, frequency, and condition. Contact us for a free cleaning quote with required timings for your site."
           }
         }
     ]
