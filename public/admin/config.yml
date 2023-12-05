@@ -86,8 +86,8 @@ collections:
     label: "FAQ"
     folder: "src/content/faq"
     create: true
-    slug: "{{question}}"
+    slug: "{{slug}}"
     fields:
       - {label: "Order", name: "order", widget: "number", required: false}
-      - {label: "Question", name: "question", widget: "text"}
+      - {label: "Question", name: "title", widget: "text"}
       - {label: "Answer", name: "answer", widget: "text"}

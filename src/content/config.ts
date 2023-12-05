@@ -73,7 +73,7 @@ const faqCollection = defineCollection({
     type: 'content',
     schema: z.object({
         order: z.number().optional(),
-        question: z.string(),
+        title: z.string(),
         answer: z.string(),
     }),
 });
