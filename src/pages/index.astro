@@ -6,6 +6,7 @@ import Footer from "../components/Footer.astro";
 import ContactSection from "../components/ContactSection.astro"
 import ContactBox from "../components/ContactBox.astro";
 import BlogStripe from "../components/BlogStripe.astro";
+import FAQ from "../components/FAQ.astro";
 
 import "../styles/button-ctnr.css";
 import "../styles/home.css"
@@ -39,7 +40,7 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 
 	<Header />
 	<main>
-		<section class="intro">
+		<section class="intro squares_bg">
 			<div class="ctnr">
 				<div class="content reveal">
 					<h1 set:html={SITE_H1}></h1>
@@ -83,7 +84,7 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 					{
 						benefits.map((benefits) => (
 							<>
-								<div class="box reveal_interval01">
+								<div class="box squares_bg reveal_interval01">
 									{benefits.data.icon == "" ? "" : (<img src={benefits.data.icon} class="icon" alt={`${(benefits.data.title).replace( /(<([^>]+)>)/ig, '')} icon`}/>)}
 									
 									<h4 set:html={benefits.data.title}class="title"></h4>
@@ -129,7 +130,7 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 	
 						<p set:html={SERVICES_SECTION_DESCRIPTION}></p>
 						
-						<a href="/services/" class="cta" aria-label="View all services"><span></span> All services</a>
+						<a href="/services/" class="cta light" aria-label="View all services"><span></span> All services</a>
 					</div>
 	
 					<picture>
@@ -147,7 +148,7 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 	
 						<p set:html={SECTORS_SECTION_DESCRIPTION}></p>
 
-						<a href="/sectors/" class="cta" aria-label="View all sectors"><span></span> All sectors</a>
+						<a href="/sectors/" class="cta light" aria-label="View all sectors"><span></span> All sectors</a>
 					</div>
 	
 					<picture>
@@ -173,14 +174,14 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 			<a href="/contact/" class="main cta" aria-label="Get a free quote">Get a Free Quote</a>
 		</section>
 
-		<section class="featured locations reveal" id="locations">
+		<section class="featured locations squares_bg reveal" id="locations">
 			<div class="ctnr">
 				<div class="content">
 					<h3>Location</h3>
 
 					<p set:html={LOCATIONS_SECTION_DESCRIPTION}></p>
 
-					<a href="/locations/" class="cta" aria-label="See our location"><span></span> Our Location</a>
+					<a href="/locations/" class="cta light" aria-label="See our location"><span></span> Our Location</a>
 
 					<p>You'll find us right at the heart of the city, ready to serve the vibrant London community. Our location:</p>
 
@@ -227,7 +228,7 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 										<div class="box_ctnr">
 											<sup>What our clients have been saying...</sup>
 
-											<div class="profile">
+											<div class="profile squares_bg">
 												<img src={testimonials.data.avatar} alt={`${testimonials.data.name}'s avatar'`}/>
 
 												<div class="flex">
@@ -263,7 +264,7 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 			<Schema
 				item={
 					{
-						"@context": "https://schema.org/",
+						"@context": "https://schema.org",
 						"@type": "Review",
 						"itemReviewed": {
 						"@type": "LocalBusiness",
@@ -288,6 +289,16 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 						}
 				}}
 			/>
+		</section>
+
+		<section class="faq scroll_margin_top" id="faq">
+			<div class="ctnr">
+				<h3>Frequently Asked Questions</h3>
+
+				<FAQ expanded="false" max="5"/>
+
+				<a href="/FAQ/" class="check_all">Check the Full FAQ</a>
+			</div>
 		</section>
 
 		<ContactSection />

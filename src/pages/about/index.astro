@@ -5,7 +5,6 @@ import '../../styles/subpages.css'
 import '../../styles/about.css'
 
 import ContactSection from "../../components/ContactSection.astro"
-import "../../styles/button-ctnr.css";
 
 import {TEL, TEL_HREF} from '../../consts';
 
@@ -16,7 +15,7 @@ import { SITE_DESCRIPTION, SITE_KEYWORDS, ABOUT_TITLE, ABOUT_DESCRIPTION, ABOUT_
 
 <BaseLayout title={ABOUT_TITLE} description={ABOUT_DESCRIPTION ? ABOUT_DESCRIPTION : SITE_DESCRIPTION} keywords={ABOUT_KEYWORDS ? ABOUT_KEYWORDS : SITE_KEYWORDS}>
     <main>
-        <section class="panel scroll_margin_top">
+        <section class="scroll_margin_top">
             <div class="ctnr">
                 <div class="content reveal">
                     <h1 set:html={ABOUT_H1}></h1>
@@ -25,11 +24,14 @@ import { SITE_DESCRIPTION, SITE_KEYWORDS, ABOUT_TITLE, ABOUT_DESCRIPTION, ABOUT_
 
                     <div class="body" set:html={ABOUT_TEXT_BODY}></div>
 
-                    <div class="bt_ctnr flex">
-                        <div class="ctas flex">
-                            <a href="#contact" class="cta">Get a Quote</a>
+                    <a href="/FAQ/" class="faq cta">Frequently Asked Questions</a>
 
-                            <a href="/jobs/" class="job_cta">Work with us</a>
+                    <div class="bt_ctnr">
+
+                        <div class="ctas flex">
+                            <a href="#contact" class="quote cta">Get a Quote</a>
+
+                            <a href="/jobs/" class="job cta">Work with us</a>
                         </div>
                     
                         <div class="flex column">

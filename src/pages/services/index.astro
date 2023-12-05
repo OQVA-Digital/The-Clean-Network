@@ -45,7 +45,7 @@ import { SITE_KEYWORDS, SERVICES_TITLE, SERVICES_DESCRIPTION, SERVICES_KEYWORDS,
 
         <main>
             <div class="ctnr">
-                <div class="heading_ctnr default_bg">
+                <div class="heading_ctnr squares_bg">
                     <div class="content reveal">
                         <h1 set:html={SERVICES_H1}></h1>
     
@@ -63,7 +63,7 @@ import { SITE_KEYWORDS, SERVICES_TITLE, SERVICES_DESCRIPTION, SERVICES_KEYWORDS,
                             services.map((services) => (
                                 <>
                                 {services.data.type === "indoor" ? (
-                                <section class="panel card reveal scroll_margin_top" id={(services.data.title).toLowerCase().replace(/\s+/g, '-')}>
+                                <section class="panel card squares_bg reveal scroll_margin_top" id={(services.data.title).toLowerCase().replace(/\s+/g, '-')}>
                                         <div class="ctnr">
                                             <div class="content">
                                                 <h3>

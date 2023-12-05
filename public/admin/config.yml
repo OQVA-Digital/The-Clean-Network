@@ -81,3 +81,13 @@ collections:
       - {label: "Category", name: "category", widget: "select", options: ["cleaning", "health-and-environment", "efficiency"], multiple: false}
       - {label: "HeroImage", name: "heroImage", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
+      
+  - name: "faq"
+    label: "FAQ"
+    folder: "src/content/faq"
+    create: true
+    slug: "{{question}}"
+    fields:
+      - {label: "Order", name: "order", widget: "number", required: false}
+      - {label: "Question", name: "question", widget: "text"}
+      - {label: "Answer", name: "answer", widget: "text"}

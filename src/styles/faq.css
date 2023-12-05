@@ -1,0 +1,157 @@
+main {
+}
+
+main > .ctnr {
+    width: clamp(9rem, 86vw, 90rem);
+    margin-inline: auto;
+    padding-block: clamp(2rem, 9vw, 6rem);
+}
+
+.faq_list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.faq_list li {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light);
+    border: 0.2rem solid var(--light-d);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+.faq_list .question {
+    color: var(--grey-a);
+    font-size: clamp(1rem, 4.7vw, 2rem);
+    font-weight: 550;
+    background-color: var(--light-d);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    background-size: 1.5rem;
+    padding-block: clamp(1rem, 3vw, 1.6rem);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+}
+
+.faq_list .question:hover {
+    background-color: var(--light);
+    transition: background-color 0s ease;
+    -webkit-transition: background-color 0s ease;
+    -moz-transition: background-color 0s ease;
+    -ms-transition: background-color 0s ease;
+    -o-transition: background-color 0s ease;
+}
+
+.faq_list .question p {
+    cursor: pointer;
+}
+
+.faq_list li > div {
+    padding-inline: clamp(2rem, 4vw, 3rem);
+}
+
+.faq_list .question .icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--light);
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+    border: 0.2rem solid var(--light-a);
+    position: relative;
+}
+
+.faq_list .question .icon div {
+    position: absolute;
+    background-color: var(--primary-a);
+    width: 1.2rem;
+    height: 0.35rem;
+    inset: 0;
+    margin: auto;
+    border-radius: 0.1rem;
+    -webkit-border-radius: 0.1rem;
+    -moz-border-radius: 0.1rem;
+    -ms-border-radius: 0.1rem;
+    -o-border-radius: 0.1rem;
+}
+
+.faq_list .question .icon .minus {
+
+}
+
+.faq_list .icon .plus {
+    transition: transform 0.3s ease-out;
+    -webkit-transition: transform 0.3s ease-out;
+    -moz-transition: transform 0.3s ease-out;
+    -ms-transition: transform 0.3s ease-out;
+    -o-transition: transform 0.3s ease-out;
+}
+
+.faq_list li:not(.expanded) .question .icon .plus {
+    transform: rotate(-270deg);
+    -webkit-transform: rotate(-270deg);
+    -moz-transform: rotate(-270deg);
+    -ms-transform: rotate(-270deg);
+    -o-transform: rotate(-270deg);
+}
+
+.faq_list li.expanded .question .icon .plus {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
+
+.faq_list .answer {
+    font-size: clamp(1rem, 4.2vw, 1.8rem);
+    line-height: 1.4;
+    font-weight: 450;
+    color: var(--grey-b);
+    overflow-y: hidden;
+    transition: max-height 0.3s ease;
+    -webkit-transition: max-height 0.3s ease;
+    -moz-transition: max-height 0.3s ease;
+    -ms-transition: max-height 0.3s ease;
+    -o-transition: max-height 0.3s ease;
+    border-radius: 0 0 1rem 1rem;
+    -webkit-border-radius: 0 0 1rem 1rem;
+    -moz-border-radius: 0 0 1rem 1rem;
+    -ms-border-radius: 0 0 1rem 1rem;
+    -o-border-radius: 0 0 1rem 1rem;
+    position: relative;
+}
+
+.faq_list .answer::after {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    bottom: 0;
+    height: 2rem;
+    background-image: linear-gradient(0deg, var(--light), transparent);
+    z-index: 3;
+}
+
+.faq_list .answer p {
+    padding-block: clamp(1rem, 2vw, 1.2rem) clamp(1rem, 4vw, 1.6rem);
+}

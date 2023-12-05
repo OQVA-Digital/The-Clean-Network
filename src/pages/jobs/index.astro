@@ -27,20 +27,20 @@ import { JOBS_TITLE, JOBS_DESCRIPTION, JOBS_KEYWORDS, JOBS_H1, JOBS_TEXT_BODY } 
         
                     <div class="flex">
                         <p>
-                            <label>First name: <input type="text" name="name" required/></label>
+                            <label>First name: <input class="squares_bg" type="text" name="name" required/></label>
                         </p>
         
                         <p>
-                            <label>Last name: <input type="text" name="name" required/></label>
+                            <label>Last name: <input class="squares_bg" type="text" name="name" required/></label>
                         </p>
                     </div>
         
                     <p>
-                        <label>Email: <input type="email" name="email" required/></label>
+                        <label>Email: <input class="squares_bg" type="email" name="email" required/></label>
                     </p>
         
                     <p>
-                        <label>Message: <textarea name="message" required></textarea></label>
+                        <label>Message: <textarea class="squares_bg" name="message" required></textarea></label>
                     </p>
         
                     <p>
@@ -60,7 +60,7 @@ import { JOBS_TITLE, JOBS_DESCRIPTION, JOBS_KEYWORDS, JOBS_H1, JOBS_TEXT_BODY } 
     <Schema
         item={
             {
-            "@context": "https://schema.org/",
+            "@context": "https://schema.org",
             "@type": "JobPosting",
             "title": "Cleaner",
             "description": "As a Corporate Cleaner at The Clean Network, you will be an integral part of our professional cleaning team, responsible for maintaining the cleanliness and hygiene of corporate premises in the London area. Your meticulous attention to detail and dedication to providing exceptional cleaning services will contribute to creating a clean and comfortable environment for our valued clients. You will work in various corporate settings, including offices, business centers, and commercial buildings, adhering to high standards of cleanliness and professionalism.",

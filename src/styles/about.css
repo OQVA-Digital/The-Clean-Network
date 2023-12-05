@@ -1,18 +1,31 @@
+section {
+    
+}
 
+section > .ctnr {
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+}
 
 section .content {
     padding: clamp(3rem,10vmin,8rem) 0 clamp(3rem,12vmin,8rem);
     margin-inline: auto;
-    width:var(--base-width);
+    width: var(--base-width);
     display: block;
     font-size: clamp(1.5rem,3.8vmin,1.8rem);
     color: var(--grey);
+    width: var(--base-width);
+    max-width: clamp(40rem,32vw,95rem);
+    margin-inline: auto;
+    padding: clamp(3rem,8vmin,7rem) 0 clamp(3rem,12vmin,9rem);
 }
 
 section .content .body {
     display: flex;
     flex-direction: column;
     gap: clamp(1rem,2vmin,1.2rem);
+    margin-bottom: 2rem;
 }
 
 h1 {
@@ -30,25 +43,33 @@ h1 strong {
 h2 {
     font-size: clamp(1rem,5.3vmin,2.3rem);
     line-height: 1.2;
-    margin-bottom: 1rem;
+    margin-block: 0.6rem 2rem;
     color: var(--dark);
 }
 
-p {
-    line-height: 1.4;
+section p {
+    line-height: 1.5;
     /* margin-bottom: 0.9rem; */
 }
 
-.panel .content p b, .panel .content p strong {
+section .content p b, section .content p strong {
     font-weight: 500;
 }
 
-.panel .content .highlight {
+section .content .highlight {
     font-weight: 600;
     color: var(--primary-a);
 }
 
-.ctas .job_cta {
+.bt_ctnr, .bt_ctnr .ctas {
+    margin-bottom: 2rem;
+}
+
+.ctas {
+    gap: 2rem;
+}
+
+.job.cta {
     background-color: var(--light-a);
     color: var(--primary-a);
     border: 0.1rem solid var(--light-b);
@@ -56,6 +77,16 @@ p {
     text-shadow: unset;
     font-weight: 600;
     box-shadow: inset 0 -1.2rem 1.5rem -1.5rem var(--light-b), 0 0.8rem 1rem -0.6rem var(--light-b);
+}
+
+.faq.cta {
+    margin-bottom: 2rem;
+    background-color: var(--primary-a);
+    color: var(--light);
+    font-weight: 500;
+    position: sticky;
+    bottom: 1rem;
+    box-shadow: inset 0 -1.2rem 1.5rem -1.5rem, 0 0.8rem 1rem -0.6rem var(--light-b);
 }
 
 .bullets {
@@ -128,5 +159,18 @@ p {
 
     .bullets {
         font-size: 1em;
+    }
+
+    section > .ctnr {
+        flex-direction: row;
+        width: calc(100% - (100% - var(--base-width)) / 2);
+        margin-left: auto;
+    }
+    
+    section .content {
+        max-width: clamp(40rem,45vw,100rem);
+        margin-inline: 0 6vw;
+        padding: clamp(3rem,12vmin,7rem) 0 clamp(3rem,12vmin,9rem);
+        width: unset;
     }
 }

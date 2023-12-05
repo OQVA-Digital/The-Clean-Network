@@ -14,11 +14,23 @@ export async function getStaticPaths({ paginate }) {
   return paginate(posts, { pageSize: 6 })
 }
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) =>  b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+// const posts = (await getCollection('blog')).sort(
+// 	(a, b) =>  b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+// );
 
 const { page } = Astro.props;
+
+interface Props {
+  page?: {
+    url?: {
+      next?: string;
+      prev?: string;
+    };
+    data?: any;
+    lastPage?: number;
+    currentPage?: number;
+  };
+}
 
 import BackBt from '../../components/BackBt.astro';
 

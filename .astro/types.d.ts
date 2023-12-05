@@ -262,6 +262,85 @@ declare module 'astro:content' {
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
 };
+"faq": {
+"can-i-have-the-same-office-cleaner-consistently.md": {
+	id: "can-i-have-the-same-office-cleaner-consistently.md";
+  slug: "can-i-have-the-same-office-cleaner-consistently";
+  body: string;
+  collection: "faq";
+  data: InferEntrySchema<"faq">
+} & { render(): Render[".md"] };
+"can-i-request-a-different-cleaner.md": {
+	id: "can-i-request-a-different-cleaner.md";
+  slug: "can-i-request-a-different-cleaner";
+  body: string;
+  collection: "faq";
+  data: InferEntrySchema<"faq">
+} & { render(): Render[".md"] };
+"how-are-office-cleaners-vetted.md": {
+	id: "how-are-office-cleaners-vetted.md";
+  slug: "how-are-office-cleaners-vetted";
+  body: string;
+  collection: "faq";
+  data: InferEntrySchema<"faq">
+} & { render(): Render[".md"] };
+"how-do-i-pay-for-the-service.md": {
+	id: "how-do-i-pay-for-the-service.md";
+  slug: "how-do-i-pay-for-the-service";
+  body: string;
+  collection: "faq";
+  data: InferEntrySchema<"faq">
+} & { render(): Render[".md"] };
+"how-long-does-office-cleaning-take.md": {
+	id: "how-long-does-office-cleaning-take.md";
+  slug: "how-long-does-office-cleaning-take";
+  body: string;
+  collection: "faq";
+  data: InferEntrySchema<"faq">
+} & { render(): Render[".md"] };
+"what-about-cleaning-materials-and-products.md": {
+	id: "what-about-cleaning-materials-and-products.md";
+  slug: "what-about-cleaning-materials-and-products";
+  body: string;
+  collection: "faq";
+  data: InferEntrySchema<"faq">
+} & { render(): Render[".md"] };
+"what-if-im-dissatisfied-with-the-cleaning-service.md": {
+	id: "what-if-im-dissatisfied-with-the-cleaning-service.md";
+  slug: "what-if-im-dissatisfied-with-the-cleaning-service";
+  body: string;
+  collection: "faq";
+  data: InferEntrySchema<"faq">
+} & { render(): Render[".md"] };
+"what-if-the-cleaner-damages-something.md": {
+	id: "what-if-the-cleaner-damages-something.md";
+  slug: "what-if-the-cleaner-damages-something";
+  body: string;
+  collection: "faq";
+  data: InferEntrySchema<"faq">
+} & { render(): Render[".md"] };
+"what-if-the-cleaner-is-unavailable.md": {
+	id: "what-if-the-cleaner-is-unavailable.md";
+  slug: "what-if-the-cleaner-is-unavailable";
+  body: string;
+  collection: "faq";
+  data: InferEntrySchema<"faq">
+} & { render(): Render[".md"] };
+"what-is-included-in-the-office-cleaning-service.md": {
+	id: "what-is-included-in-the-office-cleaning-service.md";
+  slug: "what-is-included-in-the-office-cleaning-service";
+  body: string;
+  collection: "faq";
+  data: InferEntrySchema<"faq">
+} & { render(): Render[".md"] };
+"will-office-cleaning-disrupt-work.md": {
+	id: "will-office-cleaning-disrupt-work.md";
+  slug: "will-office-cleaning-disrupt-work";
+  body: string;
+  collection: "faq";
+  data: InferEntrySchema<"faq">
+} & { render(): Render[".md"] };
+};
 "sectors": {
 "architects-firms.md": {
 	id: "architects-firms.md";

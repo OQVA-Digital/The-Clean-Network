@@ -227,6 +227,7 @@ main {}
 
 .services_and_sectors .content a {
     width: fit-content;
+    border-color: var(--light-a);
 }
 
 .services_and_sectors .content p {
@@ -605,7 +606,7 @@ section.locations {
 }
 
 .locations .content p {
-    line-height: 1.5;
+    line-height: 1.6;
     font-size: clamp(1rem,4vmin,1.8rem);
     max-width: 66rem;
 }
@@ -704,7 +705,7 @@ section.testimonials {
     margin-inline: auto;
     overflow: hidden;
     background-color: var(--light);
-    padding: clamp(3rem, 30vw, 15rem) 0 clamp(3rem, 25vw, 15rem);
+    padding: clamp(3rem, 30vw, 15rem) 0 clamp(3rem, 25vw, 10rem);
 }
 
 .testimonials .box_ctnr {
@@ -887,6 +888,82 @@ section.testimonials {
     gap: 1rem;
     line-height: 1.5;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+section.faq {
+    background-color: var(--light-d);
+}
+
+.faq > .ctnr {
+    width: clamp(9rem, 86vw, 90rem);
+    margin-inline: auto;
+    padding-block: clamp(2rem, 9vw, 6rem) clamp(2rem, 15vw, 12rem);
+}
+
+.faq_list li {
+    box-shadow: 0 1rem 1rem -0.5rem var(--light-a);
+    border-color: var(--light);
+}
+
+.faq h3 {
+    margin-inline: auto;
+    margin-bottom: clamp(1.5rem, 4vw, 3rem);
+    font-size: clamp(2rem, 7vmin, 4.4rem);
+    color: var(--primary-e);
+    text-align: center;
+}
+
+.faq .check_all {
+    text-align: center;
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary-a);
+    padding: 1.3rem 3rem;
+    margin-top: 3rem;
+    border-radius: 0.4rem;
+    border: 0.2rem solid var(--light);
+    margin-inline: auto;
+    background-color: var(--light);
+    transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+}
+
+.faq .check_all:hover {
+    background-color: var(--light-d);
+    transition: background-color 0s ease;
+    -webkit-transition: background-color 0s ease;
+    -moz-transition: background-color 0s ease;
+    -ms-transition: background-color 0s ease;
+    -o-transition: background-color 0s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* .testimonials .slider img {
     width: clamp(26rem, 80vw, 32rem);

@@ -18,7 +18,7 @@ const blogCollection = defineCollection({
 });
 
 const serviceCollection = defineCollection({
-    type: 'content', // v2.5.0 and later
+    type: 'content',
     schema: z.object({
         order: z.number().optional(),
         metaTitle: z.string().optional(),
@@ -32,7 +32,7 @@ const serviceCollection = defineCollection({
 });
 
 const sectorsCollection = defineCollection({
-    type: 'content', // v2.5.0 and later
+    type: 'content',
     schema: z.object({
         order: z.number().optional(),
         metaTitle: z.string().optional(),
@@ -45,7 +45,7 @@ const sectorsCollection = defineCollection({
 });
 
 const testimonialsCollection = defineCollection({
-    type: 'content', // v2.5.0 and later
+    type: 'content',
     schema: z.object({
         avatar: z.string(),
         name: z.string(),
@@ -58,7 +58,7 @@ const testimonialsCollection = defineCollection({
 });
 
 const benefitcsCollection = defineCollection({
-    type: 'content', // v2.5.0 and later
+    type: 'content',
     schema: z.object({
         order: z.number().optional(),
         icon: z.string().optional(),
@@ -69,10 +69,20 @@ const benefitcsCollection = defineCollection({
     }),
 });
 
+const faqCollection = defineCollection({
+    type: 'content',
+    schema: z.object({
+        order: z.number().optional(),
+        question: z.string(),
+        answer: z.string(),
+    }),
+});
+
 export const collections = {
     'services': serviceCollection,
     'sectors': sectorsCollection,
     'testimonials': testimonialsCollection,
     'benefits': benefitcsCollection,
     'blog': blogCollection,
+    'faq': faqCollection,
 };

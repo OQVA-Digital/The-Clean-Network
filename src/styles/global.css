@@ -61,6 +61,11 @@ html {
     overflow-x: hidden;
 }
 
+.squares_bg {
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Camada_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25.5 25.5'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;stroke:%23fff;stroke-miterlimit:10;%7D%3C/style%3E%3C/defs%3E%3Cpolyline class='cls-1' points='25 0 25 25 0 25'/%3E%3C/svg%3E");
+    background-size: 2rem;
+}
+
 html,
 body,
 p,
@@ -121,7 +126,7 @@ video {
 }
 
 ::-webkit-scrollbar {
-    width: 2.3rem;
+    width: 2rem;
     height: 2rem;
 }
 
@@ -133,12 +138,13 @@ video {
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: var(--primary);
-    border-radius: 0.8rem;
-    -webkit-border-radius: 0.8rem;
-    -moz-border-radius: 0.8rem;
-    -ms-border-radius: 0.8rem;
-    -o-border-radius: 0.8rem;
+    border-radius: 0.8rem 0 0 0.8rem;
+    -webkit-border-radius: 0.8rem 0 0 0.8rem;
+    -moz-border-radius: 0.8rem 0 0 0.8rem;
+    -ms-border-radius: 0.8rem 0 0 0.8rem;
+    -o-border-radius: 0.8rem 0 0 0.8rem;
     border:0.6rem solid var(--light);
+    border-right: unset;
 }
 
 main {
@@ -312,8 +318,35 @@ picture img {
 }
 
 .cta {
-    border-radius: 0.3rem;
+    display: block;
+    padding: clamp(1rem, 4vw, 1.5rem) clamp(1rem, 5vw, 2.5rem);
+    border: 0.2rem solid;
+    transition: filter 0.5s ease;
+    text-shadow: 0 0.2rem 0rem rgb(47 54 60 / 38%);
+    text-align: center;
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
 }
+
+.cta:hover {
+    filter:brightness(1.1);
+    transition: filter 0.1s ease;
+}
+
+.cta.light {
+    text-shadow: unset;
+}
+
+.quote.cta {
+    background-color: var(--highlight);
+    border: 0.2rem solid var(--highlight);
+    color: var(--light);
+    font-weight: 500;
+}
+
 
 .panel a.image {
     transition: filter 0.2s ease;

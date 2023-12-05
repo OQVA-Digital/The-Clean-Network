@@ -1,0 +1,109 @@
+---
+    import '../styles/faq.css'
+
+    import { Schema } from "astro-seo-schema"
+
+    import { type CollectionEntry, getCollection } from "astro:content";
+    // type Props = CollectionEntry<"faq">["data"];
+
+    const faq = (await getCollection('faq')).sort((a, b) => {
+        // Check if both items have an 'order' property
+        if (a.data.order !== undefined && b.data.order !== undefined) {
+            return a.data.order - b.data.order; // Sort by 'order' if both have it
+        } else if (a.data.order !== undefined) {
+            return -1; // 'a' has 'order', but 'b' doesn't, so 'a' comes first
+        } else if (b.data.order !== undefined) {
+            return 1; // 'b' has 'order', but 'a' doesn't, so 'b' comes first
+        } else {
+            // Both 'a' and 'b' don't have 'order', fallback to sorting by 'title'
+            return a.data.question.localeCompare(b.data.question);
+        }
+    });
+
+    export interface FAQProps {
+        expanded: string;
+        max: string;
+    }
+
+
+    const { expanded, max } = Astro.props;
+---
+
+
+<ul class="faq_list">
+    {
+        faq.slice(0, max).map((questions) => (
+            <>
+            <li class={expanded == "true" ? "expanded" : null}>
+                <div class="question squares_bg" role="button">
+                    <p set:html={questions.data.question}></p>
+
+                    <div class="icon">
+                        <div class="minus"></div>
+                        <div class="plus"></div>
+                    </div>
+                </div>
+
+                <div class="answer">
+                    <p set:html={questions.data.answer}></p>
+                </div>
+            </li>
+            </>
+        ))
+    }
+</ul>
+
+<script is:inline>
+    const FAQs = document.querySelectorAll('.question')
+    const answers = document.querySelectorAll('.answer')
+    
+    // initialize hiding
+    setTimeout(() => {
+        for(let i = 0; i < FAQs.length; i++) {
+            if(FAQs[i].parentElement.classList.contains('expanded')) {
+                answers[i].style.maxHeight = answers[i].scrollHeight + 'px'
+            } else {
+                answers[i].style.maxHeight = 0
+            }
+        }
+    }, 300);
+
+    for(let i = 0; i < FAQs.length; i++) {
+        FAQs[i].addEventListener('click', function() {
+            if(this.parentElement.classList.contains('expanded')) {
+                this.parentElement.classList.remove('expanded')
+
+                answers[i].style.maxHeight = 0
+            } else {
+                this.parentElement.classList.add('expanded')
+
+                answers[i].style.maxHeight = answers[i].scrollHeight + 'px'
+            }
+        })
+    }
+</script>
+
+
+<Schema
+    item={{
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+          "@type": "Question",
+          "name": "What is included in the office cleaning service?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our cleaners adhere to a prioritised checklist established during the booking process."
+          }
+        }, {
+          "@type": "Question",
+          "name": "How are office cleaners vetted?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our vetting process includes ID and reference checks, followed by two interviews to ensure we collaborate with reliable individuals."
+          }
+        }
+    ]
+    }}
+/>

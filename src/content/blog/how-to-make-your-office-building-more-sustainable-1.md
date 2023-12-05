@@ -6,7 +6,7 @@ standFirst: The concept of sustainability in office buildings isn't merely about
   functionality. Imagine walking into a workspace bathed in natural light, with
   fresh air to breathe and a design that aligns with human ergonomics. Such a
   space doesn't just look good, it feels good! It can elevate mood, boost
-  productivity, and offer a sense of pride in one's work environment. 
+  productivity, and offer a sense of pride in one's work environment.
 author: James Taylor
 authorImage: /images/media/james-taylor-author.jpg
 tags:
@@ -18,7 +18,7 @@ description: The concept of sustainability in office buildings isn't merely
   light, with fresh air to breathe and a design that aligns with human
   ergonomics. Such a space doesn't just look good, it feels good! It can elevate
   mood, boost productivity, and offer a sense of pride in one's work
-  environment. 
+  environment.
 pubDate: Oct 18 2023
 category: health-and-environment
 heroImage: /images/media/sustainable-office-buildings-min.jpg
