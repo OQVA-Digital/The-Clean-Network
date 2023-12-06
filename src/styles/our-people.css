@@ -26,6 +26,7 @@ section.our_people {
 
 .our_people .bullets b, .our_people .bullets strong {
     color: var(--primary-a);
+    text-shadow: -0.1rem 0.1rem var(--light);
 }
 
 .our_people > .ctnr > .flex {

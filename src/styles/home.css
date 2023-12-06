@@ -716,8 +716,8 @@ section.testimonials {
     font-size: 1.6rem;
     margin-bottom: 1rem;
     display: block;
-    color: var(--light-b);
-    font-weight: 400;
+    color: var(--grey-a);
+    font-weight: 450;
     width: fit-content;
     border-radius: 2rem;
     font-style: italic;
@@ -800,8 +800,9 @@ section.testimonials {
 
 .testimonials .description {
     font-size: clamp(1rem, 4vw, 1.5rem);
-    color: var(--grey);
+    color: var(--grey-b);
     max-width: 50vw;
+    font-weight: 450;
 }
 
 .testimonials .profile img {
