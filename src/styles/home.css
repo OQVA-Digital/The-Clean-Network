@@ -387,8 +387,7 @@ main {}
 }
 
 .benefits h3 + p b, .benefits h3 + p strong {
-    font-weight: 500;
-    background-color: var(--light-a);
+    font-weight: 550;
     color: var(--primary-e);
 }
 
