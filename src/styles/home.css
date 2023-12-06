@@ -64,7 +64,7 @@ main {}
     margin-inline: auto;
     border-radius: 0.8rem;
     border: 0.2rem solid var(--light-a);
-    margin-bottom: 4rem;
+    margin-bottom: 9rem;
 }
 
 .scroll_bt {
@@ -139,7 +139,7 @@ main {}
 .services_and_sectors section {
     min-width: clamp(20rem, 58vw, 50rem);
     flex: 1;
-    padding-top: clamp(4rem, 25vw, 10rem);
+    padding-top: clamp(4rem, 21vw, 10rem);
 }
 
 .services_and_sectors .services {
@@ -257,7 +257,7 @@ main {}
 
 .benefits {
     background-color: var(--light);
-    padding: clamp(3rem, 11vmin, 11rem) 0 clamp(3rem, 11vmin, 7rem);
+    padding: clamp(3rem, 15vmin, 11rem) 0 clamp(3rem, 11vmin, 7rem);
     color: var(--grey-a);
     font-size: clamp(1.5rem, 4vmin, 2.2rem);
 }

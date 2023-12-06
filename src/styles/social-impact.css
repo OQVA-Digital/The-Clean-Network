@@ -1,7 +1,7 @@
 section.social_impact {
     padding-block: clamp(2rem, 8vw, 5rem);
     background-color: var(--highlight);
-    width: clamp(10rem, 96vw, 190rem);
+    width: var(--exceeded-width);
     margin-inline: auto;
     border-radius: 2rem;
 }

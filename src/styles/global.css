@@ -44,6 +44,8 @@ html.sr .reveal, html.sr .reveal_interval01, html.sr .reveal_delay, html.sr .rev
     --base-width: clamp(9rem, 86vw, var(--max-width));
     --base-width-overflow: calc((100vw - var(--base-width)) / 2);
 
+    --exceeded-width:clamp(10rem, 96vw, 190rem);
+
     --header-height: clamp(1rem,17vmin,7.5rem);
 }
 
