@@ -1,34 +1,30 @@
-section.our_people {
-
-}
-
-.our_people > .ctnr {
+.our_policies > .ctnr {
     width: var(--base-width);
     margin-inline: auto;
-    padding-block: clamp(2rem, 9vw, 8rem) clamp(2rem, 30vw, 18rem);
+    padding-block: clamp(2rem, 22vw, 15rem) clamp(2rem, 30vw, 18rem);
 }
 
-.our_people h3 {
+.our_policies h3 {
     font-size: clamp(2rem, 9vmin, 5rem);
     color: var(--primary-e);
     width: 100%;
 }
 
-.our_people h4 {
+.our_policies h4 {
     font-size: clamp(2rem, 5vmin, 2.5rem);
     width: 100%;
     color: var(--primary-e);
 }
 
-.our_people b, .our_people strong {
+.our_policies b, .our_policies strong {
     font-weight: 500;
 }
 
-.our_people .bullets b, .our_people .bullets strong {
+.our_policies .bullets b, .our_policies .bullets strong {
     color: var(--primary-a);
 }
 
-.our_people > .ctnr > .flex {
+.our_policies > .ctnr > .flex {
     flex-flow: row wrap;
     line-height: 1.6;
     font-size: clamp(1rem,4vmin,1.8rem);
@@ -36,37 +32,57 @@ section.our_people {
     gap: clamp(2rem, 7vw, 9rem);
 }
 
-.our_people .text, .our_people .bullets {
+.our_policies ul {
+    padding-inline-start: 3rem;
+    list-style: disc;
+}
+
+.our_policies li {
+    list-style: disc;
+    margin-bottom: 0.6rem;
+}
+
+.our_policies .text li p {
+    margin-bottom: unset;
+}
+
+.our_policies .text, .our_policies .bullets {
     flex: 1;
 }
 
-.our_people .text {
+.our_policies .text {
     flex: 1;
     min-width: clamp(2rem, 85vw, 45rem);
     /* max-width: clamp(2rem, 85vw, 65rem); */
 }
 
-.our_people .text p {
+.our_policies .text p, .our_policies .text ul {
     margin-bottom: clamp(1.5rem, 3vw, 2rem);
 }
 
-.our_people .bullets {
+.our_policies .environmental_policy {
     min-width: clamp(2rem, 85vw, 45rem);
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    gap: clamp(2rem, 3vw, 3rem);
 }
 
-.our_people .bullets > .ctnr {
-    padding: clamp(2rem, 7vw, 3rem);
+.our_policies .bullets {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 2vw, 2rem);
+    margin-block: 2rem;
+}
+
+.our_policies .bullets > .ctnr {
+    padding: clamp(1rem, 3vw, 1rem) clamp(1rem, 4vw, 2rem);
     background-color: var(--light-d);
     box-sizing: border-box;
     border-radius: 1rem;
     border: 0.2rem solid var(--light-a);
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--primary-a);
 }
 
-.our_people .bullets .heading {
+.our_policies .bullets .heading {
     font-weight: 550;
     font-size: 1.3em;
     color: var(--primary-a);
@@ -76,12 +92,12 @@ section.our_people {
     align-items: center;
 }
 
-.our_people .bullets .heading svg {
+.our_policies .bullets .heading svg {
     width: 2.2rem;
     margin-right: 1rem;
 }
 
-.our_people .bullets p:not(.heading) {
+.our_policies .bullets p:not(.heading) {
     
 }
 
@@ -89,7 +105,7 @@ section.our_people {
 
 
 @media screen and (min-width: 850px) {
-    .our_people .text, .our_people .bullets {
+    .our_policies .text, .our_policies .environmental_policy {
         flex: 1;
         position: sticky;
         /* top: calc(var(--header-height) + calc(12vw - 12rem)); */
@@ -97,15 +113,15 @@ section.our_people {
         min-width: clamp(2rem, 35vw, 45rem);
     }
 
-    .our_people > .ctnr > .flex {
+    .our_policies > .ctnr > .flex {
         justify-content: space-between;
     }
 
-    .our_people h3 {
+    .our_policies h3 {
         
     }
 
-    .our_people .text {
+    .our_policies .text {
         min-width: clamp(30rem, 35vw, 45rem);
         max-width: clamp(30rem, 40vw, 65rem);
     }

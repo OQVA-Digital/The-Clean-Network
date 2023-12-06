@@ -9,6 +9,7 @@ import BlogStripe from "../components/BlogStripe.astro";
 import FAQ from "../components/FAQ.astro";
 import OurPeople from "../components/OurPeople.astro";
 import SocialImpact from "../components/SocialImpact.astro";
+import OurPolicies from "../components/OurPolicies.astro";
 
 import "../styles/button-ctnr.css";
 import "../styles/home.css"
@@ -306,6 +307,8 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 		<OurPeople/>
 
 		<SocialImpact/>
+
+		<OurPolicies/>
 
 		<ContactSection />
 
