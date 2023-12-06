@@ -34,7 +34,7 @@
     {
         faq.slice(0, max).map((questions) => (
             <>
-            <li class={expanded == "true" ? "expanded" : null}>
+            <li class={expanded == "true" ? "expanded reveal" : "reveal"}>
                 <div class="question squares_bg" role="button">
                     <p set:html={questions.data.title}></p>
 

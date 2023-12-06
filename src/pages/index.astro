@@ -7,6 +7,8 @@ import ContactSection from "../components/ContactSection.astro"
 import ContactBox from "../components/ContactBox.astro";
 import BlogStripe from "../components/BlogStripe.astro";
 import FAQ from "../components/FAQ.astro";
+import OurPeople from "../components/OurPeople.astro";
+import SocialImpact from "../components/SocialImpact.astro";
 
 import "../styles/button-ctnr.css";
 import "../styles/home.css"
@@ -300,6 +302,10 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 				<a href="/FAQ/" class="check_all">Check the Full FAQ</a>
 			</div>
 		</section>
+
+		<OurPeople/>
+
+		<SocialImpact/>
 
 		<ContactSection />
 

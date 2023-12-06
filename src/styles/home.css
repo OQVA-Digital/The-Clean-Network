@@ -901,6 +901,11 @@ section.testimonials {
 
 
 
+
+
+
+
+
 section.faq {
     background-color: var(--light-d);
 }
@@ -908,7 +913,7 @@ section.faq {
 .faq > .ctnr {
     width: clamp(9rem, 86vw, 90rem);
     margin-inline: auto;
-    padding-block: clamp(2rem, 9vw, 6rem) clamp(2rem, 15vw, 12rem);
+    padding-block: clamp(2rem, 9vw, 8rem) clamp(2rem, 15vw, 10rem);
 }
 
 .faq_list li {
@@ -916,15 +921,21 @@ section.faq {
     border-color: var(--light);
 }
 
+.faq_list {
+    gap: 2rem;
+}
+
 .faq h3 {
     margin-inline: auto;
     margin-bottom: clamp(1.5rem, 4vw, 3rem);
-    font-size: clamp(2rem, 7vmin, 4.4rem);
+    font-size: clamp(2rem, 8vmin, 4.4rem);
     color: var(--primary-e);
     text-align: center;
 }
 
 .faq .check_all {
+    position: sticky;
+    bottom: 1rem;
     text-align: center;
     display: block;
     font-size: 1.8rem;
@@ -951,6 +962,10 @@ section.faq {
     -ms-transition: background-color 0s ease;
     -o-transition: background-color 0s ease;
 }
+
+
+
+
 
 
 

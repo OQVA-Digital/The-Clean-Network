@@ -84,7 +84,7 @@
     }
 
     input.squares_bg, textarea.squares_bg, select.squares_bg {
-        background-size: 1.5rem;
+        background-size: clamp(1.2rem, 2vw, 1.5rem);
     }
 
     textarea {

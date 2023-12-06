@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 const services = await getCollection("services");
-const sectors = await getCollection("sectors");
+// const sectors = await getCollection("sectors");
 
 import { TEL, TEL_HREF } from "../consts";
 ---
@@ -206,7 +206,7 @@ import { TEL, TEL_HREF } from "../consts";
     }
 
     header {
-        background-color: rgb(46 163 242 / 90%);
+        background-color: rgb(46 163 242 / 95%);
         backdrop-filter: blur(0.3rem);
         position: sticky;
         top: 0;
@@ -496,7 +496,15 @@ import { TEL, TEL_HREF } from "../consts";
         background-color: var(--primary-c);
     }
 
-    @media screen and (min-width: 850px) {
+
+
+
+
+
+
+
+
+    @media screen and (min-width: 1100px) {
         .subnav .expand button,
         .hambt {
             display: none;
