@@ -105,17 +105,30 @@ console.log(Astro.url)
             // WEBSITE
             "@type":"WebSite",
             "name":`${BRAND_NAME}`,
+            "@id":`${Astro.url}`,
             "url":`${Astro.url.origin}`,
                 // ORGANIZATION
                 "publisher":{
                 "@type":"Organization",
                 "name":`${BRAND_NAME}`,
+				"image": "/og/social-image.jpg",
                 "legalName":`${LEGAL_NAME}`,
                 "url":`${Astro.url}`,
-                "@id":`${Astro.url}`,
-                    "sameAs":[
+				"telephone": [
+					"+4402034110275",
+					"+4401213927529"
+				],
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "6-8 Bonhill Street",
+                    "addressRegion": "London",
+					"addressLocality": "London",
+					"postalCode": "EC2A 4BX",
+					"addressCountry": "UK"
+				},
+                "sameAs":[
                     `${GOV_REGISTRY ? GOV_REGISTRY : ""}`
-                    ]
+                ]
                 }
             }
     }}

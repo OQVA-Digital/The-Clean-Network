@@ -5,10 +5,6 @@ import "../styles/global.css";
 
 import BaseHead from "../components/BaseHead.astro";
 
-import { Schema } from "astro-seo-schema"
-
-const currentURL = new URL(Astro.request.url)
-
 import CookieConsentBanner from "../components/CookieConsentBanner.astro";
 
 import OQVABadge from "../components/OQVABadge.astro";
@@ -21,27 +17,6 @@ import OQVABadge from "../components/OQVABadge.astro";
 	</head>
 	<body>
 		<slot />
-		<Schema
-			item={{
-				"@context": "https://schema.org",
-				"@type": "LocalBusiness",
-				"name": "The Clean Network",
-				"image": "/og/social-image.jpg",
-				"@id": currentURL,
-				"url": currentURL,
-				"telephone": [
-					"+4402034110275",
-					"+4401213927529"
-				],
-				"address": {
-					"@type": "PostalAddress",
-					"streetAddress": "6-8 Bonhill Street",
-					"addressLocality": "London",
-					"postalCode": "EC2A 4BX",
-					"addressCountry": "UK"
-				}  
-			}}
-		/>
 		
         <CookieConsentBanner></CookieConsentBanner>
         <OQVABadge/>
