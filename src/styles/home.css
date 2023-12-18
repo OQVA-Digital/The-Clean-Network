@@ -704,7 +704,7 @@ section.testimonials {
     margin-inline: auto;
     overflow: hidden;
     background-color: var(--light);
-    padding: clamp(3rem, 30vw, 15rem) 0 clamp(3rem, 25vw, 10rem);
+    padding: clamp(3rem, 30vw, 17rem) 0 clamp(3rem, 25vw, 13rem);
 }
 
 .testimonials .box_ctnr {

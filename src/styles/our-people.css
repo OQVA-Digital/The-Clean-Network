@@ -5,7 +5,7 @@ section.our_people {
 .our_people > .ctnr {
     width: var(--base-width);
     margin-inline: auto;
-    padding-block: clamp(2rem, 9vw, 8rem) clamp(2rem, 30vw, 18rem);
+    padding-block: clamp(2rem, 9vw, 12rem) clamp(2rem, 30vw, 22rem);
 }
 
 .our_people h3 {

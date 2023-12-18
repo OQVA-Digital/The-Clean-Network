@@ -1,7 +1,7 @@
 .our_policies > .ctnr {
     width: var(--base-width);
     margin-inline: auto;
-    padding-block: clamp(2rem, 30vw, 15rem) clamp(2rem, 20vw, 12rem);
+    padding-block: clamp(2rem, 30vw, 17rem) clamp(2rem, 20vw, 14rem);
 }
 
 .our_policies h3 {
