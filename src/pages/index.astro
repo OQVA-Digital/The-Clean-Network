@@ -139,7 +139,7 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 					<picture>
 						<source media="(min-width:850px)" srcset="/images/office02.webp">
 						<source srcset="/images/office02-min.webp">
-						<img src="/images/office02.jpg" alt="Office Photo" width="414" height="300">
+						<img src="/images/office02.jpg" alt="Clean office" width="414" height="300">
 					</picture>
 				</div>
 			</section>
@@ -157,7 +157,7 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 					<picture>
 						<source media="(min-width:850px)" srcset="/images/office03.webp">
 						<source srcset="/images/office03-min.webp">
-						<img src="/images/office03.jpg" alt="Office Photo" width="415" height="300">
+						<img src="/images/office03.jpg" alt="Clean office" width="415" height="300">
 					</picture>
 				</div>
 			</section>
@@ -266,30 +266,30 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 
 			<Schema
 				item={
-					{
-						"@context": "https://schema.org",
-						"@type": "Review",
-						"itemReviewed": {
-						"@type": "LocalBusiness",
-						"image": "/og/social-image.jpg",
-						"name": "The Clean Network",
-						"telephone": "+4402034110275",
-						"address" :{
-							"@type": "PostalAddress",
-							"streetAddress": "6-8 Bonhill Street",
-							"addressLocality": "London",
-							"postalCode": "EC2A 4BX",
-							"addressCountry": "UK"
-							}
-						},
-						"author": {
-							"@type": "Organization",
-							"name": "The Clean Network"
-						},
-						"publisher": {
+				{
+					"@context": "https://schema.org",
+					"@type": "Review",
+					"itemReviewed": {
+					"@type": "LocalBusiness",
+					"image": "/og/social-image.jpg",
+					"name": "The Clean Network",
+					"telephone": "+4402034110275",
+					"address" :{
+						"@type": "PostalAddress",
+						"streetAddress": "6-8 Bonhill Street",
+						"addressLocality": "London",
+						"postalCode": "EC2A 4BX",
+						"addressCountry": "UK"
+						}
+					},
+					"author": {
 						"@type": "Organization",
 						"name": "The Clean Network"
-						}
+					},
+					"publisher": {
+					"@type": "Organization",
+					"name": "The Clean Network"
+					}
 				}}
 			/>
 		</section>
@@ -315,6 +315,42 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 		<BlogStripe/>
 	</main>
 	<Footer />
+
+	<Schema
+		item={
+		{
+			"@context": "https://schema.org",
+			"@type": "WebPage",
+			"name":"The Clean Network: A Central London Commercial & Office Cleaning Company",
+			"url":`${Astro.url}`,
+			"description":"The Clean Network, London's trusted partner in professional commercial and office cleaning. Reliable, high standards, tailored to your needs. See why 95% of our clients stay.",
+		}
+		}
+	/>
+
+	<Schema
+		item={
+		{
+			"@context": "https://schema.org",
+			"@type":"WebSite",
+			"name":"The Clean Network",
+			"url":`${Astro.url}`,
+		}
+		}
+	/>
+
+	<Schema
+		item={
+		{
+			"@context": "https://schema.org",
+			"@type":"Organization",
+			"name":"The Clean Network",
+			"legalName":"The Clean Network",
+			"url":`${Astro.url}`,
+			"@id":`${Astro.url}`,
+		}
+		}
+	/>
 </Layout>
 
 <script>
