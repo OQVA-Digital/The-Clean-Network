@@ -315,42 +315,6 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 		<BlogStripe/>
 	</main>
 	<Footer />
-
-	<Schema
-		item={
-		{
-			"@context": "https://schema.org",
-			"@type": "WebPage",
-			"name":"The Clean Network: A Central London Commercial & Office Cleaning Company",
-			"url":`${Astro.url}`,
-			"description":"The Clean Network, London's trusted partner in professional commercial and office cleaning. Reliable, high standards, tailored to your needs. See why 95% of our clients stay.",
-		}
-		}
-	/>
-
-	<Schema
-		item={
-		{
-			"@context": "https://schema.org",
-			"@type":"WebSite",
-			"name":"The Clean Network",
-			"url":`${Astro.url}`,
-		}
-		}
-	/>
-
-	<Schema
-		item={
-		{
-			"@context": "https://schema.org",
-			"@type":"Organization",
-			"name":"The Clean Network",
-			"legalName":"The Clean Network",
-			"url":`${Astro.url}`,
-			"@id":`${Astro.url}`,
-		}
-		}
-	/>
 </Layout>
 
 <script>

@@ -11,7 +11,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const { title, description, keywords } = Astro.props;
 
-import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, OG_IMAGE } from "../consts";
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, OG_IMAGE, BRAND_NAME, GOV_REGISTRY, LEGAL_NAME } from "../consts";
 
 interface ScrollRevealObject {
     reveal: (selector: string, options?: any) => void;
@@ -20,6 +20,10 @@ interface ScrollRevealObject {
 declare global {
   function ScrollReveal(): ScrollRevealObject;
 }
+
+import { Schema } from "astro-seo-schema";
+
+console.log(Astro.url)
 ---
 
 <script is:inline src="/scripts/scrollreveal.min.js"></script>
@@ -86,3 +90,33 @@ declare global {
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={SITE_DESCRIPTION} />
 <meta property="twitter:image" content={OG_IMAGE} />
+
+
+
+<Schema
+    item={{
+        // WEBPAGE
+        "@context": "https://schema.org",
+        "@type":"WebPage",
+        "name":`${SITE_TITLE}`,
+        "url":`${Astro.url}`,
+        "description":`${SITE_DESCRIPTION}`,
+        "isPartOf":{
+            // WEBSITE
+            "@type":"WebSite",
+            "name":`${BRAND_NAME}`,
+            "url":`${Astro.url.origin}`,
+                // ORGANIZATION
+                "publisher":{
+                "@type":"Organization",
+                "name":`${BRAND_NAME}`,
+                "legalName":`${LEGAL_NAME}`,
+                "url":`${Astro.url}`,
+                "@id":`${Astro.url}`,
+                    "sameAs":[
+                    `${GOV_REGISTRY ? GOV_REGISTRY : ""}`
+                    ]
+                }
+            }
+    }}
+/>

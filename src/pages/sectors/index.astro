@@ -16,8 +16,6 @@ const sectors = (await getCollection('sectors')).sort((a, b) => {
     }
 });
 
-const currentURL = new URL(Astro.request.url)
-
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ContactSection from "../../components/ContactSection.astro"
 
@@ -89,8 +87,8 @@ import { SITE_KEYWORDS, SECTORS_TITLE, SECTORS_DESCRIPTION, SECTORS_KEYWORDS, SE
             "@type": "LocalBusiness",
             "name": "The Clean Network | Sectors",
             "image": "/og/social-image.jpg",
-            "@id": currentURL,
-            "url": currentURL,
+            "@id": `${Astro.url}`,
+            "url": `${Astro.url}`,
             "telephone": [
                 "+4402034110275"
             ],

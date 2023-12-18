@@ -17,6 +17,11 @@ export const TEL_HREF = "+442081354786"
 
 export const EMAIL = "office@cleannetwork.co.uk"
 
+export const BRAND_NAME = 'Clean Network'
+
+export const GOV_REGISTRY = 'https://find-and-update.company-information.service.gov.uk/company/09308063'
+export const LEGAL_NAME = 'The Clean Works Limited'
+
 
 
 // HOME PAGE
