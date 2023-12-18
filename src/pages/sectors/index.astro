@@ -24,8 +24,6 @@ import BlogStripe from "../../components/BlogStripe.astro";
 import "../../styles/subpages.css"
 import "../../styles/collections.css"
 
-import { Schema } from "astro-seo-schema"
-
 import { SITE_KEYWORDS, SECTORS_TITLE, SECTORS_DESCRIPTION, SECTORS_KEYWORDS, SECTORS_H1, SECTORS_INTRO_DESCRIPTION } from "../../consts";
 ---
 
@@ -80,26 +78,4 @@ import { SITE_KEYWORDS, SECTORS_TITLE, SECTORS_DESCRIPTION, SECTORS_KEYWORDS, SE
     <ContactSection />
 
     <BlogStripe/>
-
-    <Schema
-        item={{
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "The Clean Network | Sectors",
-            "image": "/og/social-image.jpg",
-            "@id": `${Astro.url}`,
-            "url": `${Astro.url}`,
-            "telephone": [
-                "+4402034110275"
-            ],
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "6-8 Bonhill Street",
-                "postalCode": "EC2A 4BX",
-                "addressLocality": "London",
-                "addressRegion": "GB",
-                "addressCountry": "UK"
-            }  
-        }}
-    />
 </BaseLayout>
