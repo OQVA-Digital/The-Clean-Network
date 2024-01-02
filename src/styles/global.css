@@ -100,6 +100,20 @@ a {
     cursor: pointer;
 }
 
+p a {
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+    background-color: var(--light-d);
+    text-decoration-color: var(--primary-c);
+    -moz-text-decoration-color: var(--primary-c);
+}
+
+p a:hover {
+    background-color: transparent;
+    text-decoration-color: var(--primary);
+    -moz-text-decoration-color: var(--primary);
+}
+
 a h1, a h2, a h3, a h4, a h5, h5 {
     cursor: pointer;
 }
