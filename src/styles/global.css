@@ -103,6 +103,7 @@ a {
 p a {
     text-decoration: underline;
     text-underline-offset: 0.3rem;
+    text-decoration-thickness: 0.2rem;
     background-color: var(--light-d);
     text-decoration-color: var(--primary-c);
     -moz-text-decoration-color: var(--primary-c);

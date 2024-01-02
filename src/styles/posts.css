@@ -208,6 +208,11 @@ article h1 {
     margin-block: clamp(8rem, 20vw, 10rem);
 }
 
+.content_ctnr p a {
+    font-weight: 450;
+    color: var(--primary-a);
+}
+
 /* article a.back::before, .intro a.back::before {
     content: "";
     display: inline-block;
