@@ -4,6 +4,7 @@ import SubpageLayout from "../../layouts/BaseLayout.astro";
 import ContactSection from "../../components/ContactSection.astro"
 import BackBt from "../../components/BackBt.astro";
 import BlogStripe from "../../components/BlogStripe.astro";
+import PricingCTA from "../../components/PricingCTA.astro";
 
 export async function getStaticPaths() {
     const sectors = await getCollection("sectors");
@@ -69,6 +70,18 @@ while (filteredSector[firstRandomPos].data.title == sectorTitle || filteredSecto
 
             <div class="post_content">
                 <Content />
+
+                {sector.data.minWeeklyHours && sector.data.hourlyPrice ? (
+                    <PricingCTA
+                        intro={sector.data.pricingParagraphIntro}
+                        job={sector.data.title}
+                        minimumHours={sector.data.minWeeklyHours}
+                        price={sector.data.hourlyPrice}/>
+                ) : null}
+            </div>
+
+            <div class="cta_ctnr">
+                <a href="/contact/" class="main cta" aria-label="Get a free quote for our cleaning sectors">Get a free quote</a>
             </div>
         </article>
 
@@ -147,10 +160,6 @@ while (filteredSector[firstRandomPos].data.title == sectorTitle || filteredSecto
         </aside>
     
         <a href="/sectors/" class="back">All Sectors</a>
-
-        <div class="cta_ctnr">
-            <a href="/contact/" class="main cta" aria-label="Get a free quote for our cleaning sectors">Get a free quote</a>
-        </div>
     </div>
 
     <ContactSection />

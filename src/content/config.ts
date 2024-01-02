@@ -30,7 +30,7 @@ const serviceCollection = defineCollection({
         image: z.string().optional(),
         hourlyPrice:z.string().optional(),
         pricingParagraphIntro:z.string().optional(),
-        pricingMinHours:z.string().optional(),
+        minWeeklyHours:z.string().optional(),
     }),
 });
 
@@ -46,7 +46,7 @@ const sectorsCollection = defineCollection({
         image: z.string().optional(),
         hourlyPrice:z.string().optional(),
         pricingParagraphIntro:z.string().optional(),
-        pricingMinHours:z.string().optional(),
+        minWeeklyHours:z.string().optional(),
     }),
 });
 

@@ -77,13 +77,17 @@ while (filteredServices[firstRandomPos].data.title == serviceTitle || filteredSe
             <div class="post_content">
                 <Content />
 
-                {service.data.pricingMinHours && service.data.hourlyPrice ? (
+                {service.data.minWeeklyHours && service.data.hourlyPrice ? (
                     <PricingCTA
                         intro={service.data.pricingParagraphIntro}
                         job={service.data.title}
-                        minimumHours={service.data.pricingMinHours}
+                        minimumHours={service.data.minWeeklyHours}
                         price={service.data.hourlyPrice}/>
                 ) : null}
+            </div>
+
+            <div class="cta_ctnr">
+                <a href="/contact/" class="main cta" aria-label="Get a free quote for our cleaning services">Get a free quote</a>
             </div>
         </article>
 
@@ -162,10 +166,6 @@ while (filteredServices[firstRandomPos].data.title == serviceTitle || filteredSe
         </aside>
     
         <a href="/services/" class="back">All Services</a>
-
-        <div class="cta_ctnr">
-            <a href="/contact/" class="main cta" aria-label="Get a free quote for our cleaning services">Get a free quote</a>
-        </div>
     </div>
 
     <ContactSection />
