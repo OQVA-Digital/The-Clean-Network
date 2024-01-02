@@ -1,5 +1,5 @@
 ---
-metaTitle: "Commercial Post-construction Cleaning Services - The Clean Network"
+metaTitle: Commercial Post-construction Cleaning Services - The Clean Network
 metaDescription: Post-construction Cleaning Services are a vital final step
   before you can fully enjoy your newly constructed or renovated space.
 metaKeywords: post construction cleaning services, after building, tile and grout, london
@@ -25,9 +25,9 @@ We understand the pressures and challenges that come with construction projects,
 * Floors: swept, vacuumed and mopped
 * Clean all hardware: doorknobs, light switches, light fittings
 * Clear and clean doors and doorframes
-* Remove scuff marks on the walls or paint drops on the floors
-* Cleaning and dusting of windows, window sills, and window tracks
-* Grates and vents dusting
+* Remove scuff marks on the walls or paint drops on the [floors](https://cleannetwork.co.uk/services/floors/)
+* Cleaning and dusting of [windows](https://cleannetwork.co.uk/services/windows/), window sills, and window tracks
+* Grates and [vents dusting](https://cleannetwork.co.uk/services/air-ducts-and-vents/)
 
 **Bathrooms**
 
