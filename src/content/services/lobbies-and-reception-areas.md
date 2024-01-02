@@ -1,5 +1,5 @@
 ---
-metaTitle: "Commercial Lobby & Reception Cleaning Services - The Clean Network"
+metaTitle: Commercial Lobby & Reception Cleaning Services - The Clean Network
 metaDescription: First impressions matter. When your clients step into your
   office, the freshness of your lobby and reception area set the tone for their
   entire visit.
@@ -19,7 +19,7 @@ image: /images/media/loobies-and-reception-areas.jpg
 
 With our team of highly trained professionals, we have built a reputation for reliability and high standards. We take pride in delivering services that exceed expectations and meet the unique needs of your business. From regular dusting and vacuuming to deep cleaning and sanitising, we provide comprehensive cleaning services that leave your lobby and reception areas sparkling and inviting.
 
-Our <strong>lobby cleaning</strong> service focuses on high-traffic areas that require extra attention. These include entranceways, walkways, and waiting areas, where we ensure floors are spotless, surfaces are dust-free, and upholstery is fresh and clean. We understand that each lobby has its unique needs, and we tailor our approach to meet those requirements.
+Our <strong>lobby cleaning</strong> service focuses on high-traffic areas that require extra attention. These include entranceways, walkways, and waiting areas, where we ensure [floors](https://cleannetwork.co.uk/services/floors/) are spotless, surfaces are dust-free, and upholstery is fresh and clean. We understand that each lobby has its unique needs, and we tailor our approach to meet those requirements.
 
 We believe that a clean reception area is more than just a clean space. It's a statement about your business and its commitment to excellence. Our <strong>reception area cleaning</strong> services include thorough cleaning of front desks, seating areas, and all the frequently touched surfaces. We also pay attention to the details that often go unnoticed, ensuring that everything from your lighting fixtures to your door handles is clean and polished.\
 \
