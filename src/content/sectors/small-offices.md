@@ -1,5 +1,5 @@
 ---
-metaTitle: "Small Office Cleaning Services in Central London - The Clean Network"
+metaTitle: Small Office Cleaning Services in Central London - The Clean Network
 metaDescription: The Clean Network is your partner in maintaining an immaculate,
   healthy, and productive small office environment in London.
 metaKeywords: small offices, cleaning services, london
@@ -14,7 +14,7 @@ image: /images/media/small-offices.jpg
 ---
 The Clean Network is your partner in maintaining an immaculate, healthy, and productive <strong>small office</strong> environment in <strong>London</strong>. We understand that your office is more than just a space. It's a place where creativity thrives, where ideas turn into realities, and where your business grows. That's why we're committed to providing professional, reliable, and high-quality <strong>cleaning services</strong> tailored to your <strong>small office's</strong> unique needs.
 
-Our <strong>small office cleaning services</strong> are not just about neatness - they're about creating a positive and motivating atmosphere for your team. We pay attention to the details, cleaning areas often overlooked but make a significant difference to your office's overall cleanliness and hygiene. Whether it's regular dusting, sanitising shared areas, vacuum cleaning carpets, or wiping down surfaces, we bring a comprehensive approach to our cleaning tasks.
+Our <strong>small office cleaning services</strong> are not just about neatness - they're about creating a positive and motivating atmosphere for your team. We pay attention to the details, cleaning areas often overlooked but make a significant difference to your office's overall cleanliness and hygiene. Whether it's regular dusting, [sanitising shared areas](https://cleannetwork.co.uk/services/lobbies-and-reception-areas/), [vacuum cleaning carpets](https://cleannetwork.co.uk/services/floors/), or wiping down surfaces, we bring a comprehensive approach to our cleaning tasks.
 
 We understand how a clean office reflects on your business, and that's why we're here to ensure that every corner of your office space is spotlessly clean and germ-free. With our professional team by your side, you'll not only ensure a clean workspace but also demonstrate your commitment to your team's well-being.
 
