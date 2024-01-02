@@ -16,7 +16,7 @@ image: /images/media/bathroom.jpg
 ---
 A clean, hygienic, and fresh-smelling bathroom is not only a pleasure to use but also a reflection of your business's attention to detail and care for its employees and visitors. At <strong>The Clean Network</strong>, we understand the importance of maintaining a clean, healthy, and pleasant working environment. 
 
-Our dedicated team of professionals specialises in <strong>commercial bathroom cleaning services</strong>, providing comprehensive and meticulous service tailored to your specific needs. From the toilets to the sinks, from the floors to the mirrors, no detail is too small for us. We make sure each bathroom in your London office is sparkling clean and free from harmful germs and bacteria.
+Our dedicated team of professionals specialises in <strong>commercial bathroom cleaning services</strong>, providing comprehensive and meticulous service tailored to your specific needs. From the toilets to the sinks, from [the floors](https://cleannetwork.co.uk/services/floors/) to the mirrors, no detail is too small for us. We make sure each bathroom in your London office is sparkling clean and free from harmful germs and bacteria.
 
 Using state-of-the-art equipment and environmentally friendly cleaning products, we effectively tackle dirt, grime, and bacteria, leaving your bathrooms not only visually clean but hygienically clean as well. Our team's expertise combined with our commitment to high standards ensures we deliver reliable, exceptional cleaning results every time. 
 
