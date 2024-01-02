@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "thecleannetwork.co.uk/*"
-  to = "cleannetwork.co.uk/:splat"
+  from = "https://thecleannetwork.co.uk/*"
+  to = "https://cleannetwork.co.uk/:splat"
   status = 301
   force = true
