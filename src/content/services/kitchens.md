@@ -1,5 +1,5 @@
 ---
-metaTitle: "Office Kitchen Cleaning Services in Central Central London - The Clean Network"
+metaTitle: Office Kitchen Cleaning Services in Central Central London - The Clean Network
 metaDescription: Your office kitchen is more than just a space for meals—it’s a
   gathering point, a place of interaction, and an integral part of your working
   environment.
@@ -24,7 +24,7 @@ This is where The Clean Network steps in. We specialise in deep cleaning all are
 
 * General tidy-up
 * Surface cleaning: wipedown and sanitising of countertops and backsplashes
-* Sanitise touchpoints: door handles, cupboards, windows and other regularly touched areas
+* Sanitise touchpoints: door handles, cupboards, [windows](https://cleannetwork.co.uk/services/windows/) and other regularly touched areas
 * Dusting: surfaces and hard-to-reach spots
 * Floors: sweeping and mopping
 * Sink cleaning: basin and taps (keeping metal bright and shiny); flush out faucet and drains
