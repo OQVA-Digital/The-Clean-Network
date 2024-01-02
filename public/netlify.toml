@@ -1,10 +1,10 @@
 [[redirects]]
   from = "https://thecleannetwork.co.uk/*"
-  to = "https://cleannetwork.co.uk/:splat"
+  to = "https://www.cleannetwork.co.uk/:splat"
   status = 301
   force = true
 [[redirects]]
   from = "https://www.thecleannetwork.co.uk/*"
-  to = "https://cleannetwork.co.uk/:splat"
+  to = "https://www.cleannetwork.co.uk/:splat"
   status = 301
   force = true
