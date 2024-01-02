@@ -1,5 +1,6 @@
 ---
-metaTitle: "Corporate Office Building Cleaning Services in Central London - The Clean Network"
+metaTitle: Corporate Office Building Cleaning Services in Central London - The
+  Clean Network
 metaDescription: Creating a clean and healthy work environment is crucial in
   maintaining a productive and motivated workforce, especially in corporate
   office buildings.
@@ -16,7 +17,7 @@ Creating a clean and healthy work environment is crucial in maintaining a produc
 
 Maintaining cleanliness in <strong>corporate buildings</strong> often requires more than just routine dusting and vacuuming. Our <strong>cleaning services</strong> cater to the multifaceted requirements of large office spaces, which often house hundreds of employees. Our team is trained to pay attention to every detail, ensuring a clean and sanitized environment that reflects your business's professionalism and commitment to employee welfare.
 
-From spotless workstations and pristine common areas to gleaming bathrooms and kitchen spaces, we take care of all aspects of your office. Our services extend to hard-to-reach areas, ensuring comprehensive cleaning that leaves no spot untouched. We employ advanced techniques and industry-grade equipment to deliver an exceptional level of cleanliness.
+From spotless workstations and [pristine common areas](https://cleannetwork.co.uk/services/lobbies-and-reception-areas/) to [gleaming bathrooms](https://cleannetwork.co.uk/services/bathrooms/) and [kitchen spaces](https://cleannetwork.co.uk/services/kitchens/), we take care of all aspects of your office. Our services extend to hard-to-reach areas, ensuring comprehensive cleaning that leaves no spot untouched. We employ advanced techniques and industry-grade equipment to deliver an exceptional level of cleanliness.
 
 Our expertise extends to various sectors, including <strong>corporate offices</strong>, small offices, medical and dental offices, architects, media and designers, legal practices, technology companies, and financial services. However, it's our ability to adapt our services to each client's unique needs that truly sets us apart.
 
