@@ -21,7 +21,10 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "text", required: false}
       - {label: "ServiceType", name: "type", widget: "select",  options: ["indoor", "external"]}
-      - {label: "CoverImage", name: "image", widget: "image", required: false}
+      - {label: "Cover Image", name: "image", widget: "image", required: false}
+      - {label: "Hourly Price (£)", name: "hourlyPrice", widget: "number", required: false}
+      - {label: "Minimum Hours", name: "pricingMinHours", widget: "number", required: false}
+      - {label: "Pricing Paragraph Intro", name: "pricingParagraphIntro", widget: "text", default: "Are you ready to elevate your office’s cleanliness to a whole new level?", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "sectors"
@@ -36,7 +39,10 @@ collections:
       - {label: "Meta Keywords", name: "metaKeywords", widget: "string", pattern: ['^.{0,350}$', "350 characters maximum"], required: false}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "text", required: false}
-      - {label: "CoverImage", name: "image", widget: "image", required: false}
+      - {label: "Cover Image", name: "image", widget: "image", required: false}
+      - {label: "Hourly Price (£)", name: "hourlyPrice", widget: "number", required: false}
+      - {label: "Minimum Hours", name: "pricingMinHours", widget: "number", required: false}
+      - {label: "Pricing Paragraph Intro", name: "pricingParagraphIntro", widget: "text", default: "Are you ready to elevate your office’s cleanliness to a whole new level?", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
   
   - name: "testimonials"

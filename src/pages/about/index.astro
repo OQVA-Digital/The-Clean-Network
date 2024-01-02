@@ -5,6 +5,9 @@ import '../../styles/subpages.css'
 import '../../styles/about.css'
 
 import ContactSection from "../../components/ContactSection.astro"
+import OurPeople from "../../components/OurPeople.astro";
+import SocialImpact from "../../components/SocialImpact.astro";
+import OurPolicies from "../../components/OurPolicies.astro";
 
 import {TEL, TEL_HREF} from '../../consts';
 
@@ -16,7 +19,7 @@ import { SITE_DESCRIPTION, SITE_KEYWORDS, ABOUT_TITLE, ABOUT_DESCRIPTION, ABOUT_
 <BaseLayout title={ABOUT_TITLE} description={ABOUT_DESCRIPTION ? ABOUT_DESCRIPTION : SITE_DESCRIPTION} keywords={ABOUT_KEYWORDS ? ABOUT_KEYWORDS : SITE_KEYWORDS}>
     <main>
         <section class="scroll_margin_top">
-            <div class="ctnr">
+            <div class="intro ctnr">
                 <div class="content reveal">
                     <h1 set:html={ABOUT_H1}></h1>
 
@@ -78,6 +81,12 @@ import { SITE_DESCRIPTION, SITE_KEYWORDS, ABOUT_TITLE, ABOUT_DESCRIPTION, ABOUT_
                     </picture> -->
                 </div>
             </div>
+
+            <OurPeople/>
+    
+            <SocialImpact/>
+    
+            <OurPolicies/>
         </section>
 
         <ContactSection />

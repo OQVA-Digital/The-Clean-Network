@@ -2,7 +2,7 @@ section {
     
 }
 
-section > .ctnr {
+section > .intro.ctnr {
     display: flex;
     flex-direction: column-reverse;
     position: relative;
@@ -161,7 +161,7 @@ section .content .highlight {
         font-size: 1em;
     }
 
-    section > .ctnr {
+    section > .intro.ctnr {
         flex-direction: row;
         width: calc(100% - (100% - var(--base-width)) / 2);
         margin-left: auto;

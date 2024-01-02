@@ -28,6 +28,9 @@ const serviceCollection = defineCollection({
         description: z.string().optional(),
         type: z.string(),
         image: z.string().optional(),
+        hourlyPrice:z.string().optional(),
+        pricingParagraphIntro:z.string().optional(),
+        pricingMinHours:z.string().optional(),
     }),
 });
 
@@ -41,6 +44,9 @@ const sectorsCollection = defineCollection({
         title: z.string(),
         description: z.string().optional(),
         image: z.string().optional(),
+        hourlyPrice:z.string().optional(),
+        pricingParagraphIntro:z.string().optional(),
+        pricingMinHours:z.string().optional(),
     }),
 });
 

@@ -22,7 +22,7 @@ import { getCollection } from "astro:content";
 // const sectors = await getCollection("sectors");
 const testimonials = await getCollection("testimonials");
 
-import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_H1, INTRO_H2, TEXT_BLOCK, SERVICES_SECTION_DESCRIPTION, SECTORS_SECTION_DESCRIPTION, LOCATIONS_SECTION_DESCRIPTION, FULL_ADDRESS, TEL, TEL_HREF, TEL_INTERNATIONAL } from "../consts";
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, SITE_H1, INTRO_H2, TEXT_BLOCK, SERVICES_SECTION_DESCRIPTION, SECTORS_SECTION_DESCRIPTION, LOCATIONS_SECTION_DESCRIPTION, FULL_ADDRESS, TEL, TEL_HREF, TEL_INTERNATIONAL, STREET, POSTAL_CODE } from "../consts";
 
 const benefits = (await getCollection('benefits')).sort((a, b) => {
     // Check if both items have an 'order' property
@@ -276,9 +276,9 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 					"telephone": "+4402034110275",
 					"address" :{
 						"@type": "PostalAddress",
-						"streetAddress": "6-8 Bonhill Street",
+						"streetAddress":` ${STREET}`,
 						"addressLocality": "London",
-						"postalCode": "EC2A 4BX",
+						"postalCode": `${POSTAL_CODE}`,
 						"addressCountry": "UK"
 						}
 					},
@@ -303,12 +303,6 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 				<a href="/FAQ/" class="check_all">Check the Full FAQ</a>
 			</div>
 		</section>
-
-		<OurPeople/>
-
-		<SocialImpact/>
-
-		<OurPolicies/>
 
 		<ContactSection />
 

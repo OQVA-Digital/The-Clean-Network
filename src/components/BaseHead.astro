@@ -11,7 +11,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const { title, description, keywords } = Astro.props;
 
-import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, OG_IMAGE, BRAND_NAME, GOV_REGISTRY, LEGAL_NAME } from "../consts";
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS, OG_IMAGE, BRAND_NAME, GOV_REGISTRY, LEGAL_NAME, STREET, POSTAL_CODE } from "../consts";
 
 interface ScrollRevealObject {
     reveal: (selector: string, options?: any) => void;
@@ -116,12 +116,17 @@ import { Schema } from "astro-seo-schema";
 					"+4402034110275",
 					"+4401213927529"
 				],
+                "areaServed": {
+                    "@type": "City",
+                    "name": "London",
+                    "sameAs": "https://en.wikipedia.org/wiki/London"
+                },
 				"address": {
 					"@type": "PostalAddress",
-					"streetAddress": "6-8 Bonhill Street",
+					"streetAddress": `${STREET}`,
                     "addressRegion": "London",
 					"addressLocality": "London",
-					"postalCode": "EC2A 4BX",
+					"postalCode": `${POSTAL_CODE}`,
 					"addressCountry": "UK"
 				},
                 "sameAs":[

@@ -23,6 +23,7 @@ import "../../styles/subpages.css"
 import "../../styles/posts.css"
 
 import { Schema } from "astro-seo-schema"
+import PricingCTA from "../../components/PricingCTA.astro";
 
 const services = (await getCollection('services')).sort((a, b) => {
     // Check if both items have an 'order' property
@@ -75,6 +76,14 @@ while (filteredServices[firstRandomPos].data.title == serviceTitle || filteredSe
 
             <div class="post_content">
                 <Content />
+
+                {service.data.pricingMinHours && service.data.hourlyPrice ? (
+                    <PricingCTA
+                        intro={service.data.pricingParagraphIntro}
+                        job={service.data.title}
+                        minimumHours={service.data.pricingMinHours}
+                        price={service.data.hourlyPrice}/>
+                ) : null}
             </div>
         </article>
 
@@ -166,9 +175,9 @@ while (filteredServices[firstRandomPos].data.title == serviceTitle || filteredSe
     <Schema
         item={{
             "@context": "https://schema.org",
-            "@type": "Article",
-            headline: `${service.data.title} ${String(service.data.title).includes('Cleaning') ? " Service" : "Cleaning Service"}`,
-            image: `${service.data.image}`,
+            "@type": "Service",
+            "headline": `${service.data.title} ${String(service.data.title).includes('Cleaning') ? " Service" : "Cleaning Service"}`,
+            "image": `${service.data.image}`,
             "author": [{
                 "@type": "Organization",
                 "name": "The Clean Network"
@@ -180,7 +189,12 @@ while (filteredServices[firstRandomPos].data.title == serviceTitle || filteredSe
                     "@type": "ImageObject",
                     "url": "/logo/tcn-logo-360.png"
                 }
-            }
+            },
+            "areaServed": {
+                "@type": "City",
+                "name": "London",
+                "sameAs": "https://en.wikipedia.org/wiki/London"
+            },
         }}
     />
 </SubpageLayout>
