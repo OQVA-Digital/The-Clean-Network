@@ -103,11 +103,11 @@ while (filteredSector[firstRandomPos].data.title == sectorTitle || filteredSecto
                                     <p class="description">{filteredSector[firstRandomPos].data.description}</p>
                                 ) : null}
 
-                                <a href={`/sectors/${filteredSector[firstRandomPos].slug}/`} class="read_more">Read more</a>
+                                <a href={`/sectors/${filteredSector[firstRandomPos].slug}/`} class="read_more" aria-label=`Read more about ${filteredSector[firstRandomPos].data.title}`>Read more</a>
                             </div>
                         </div>
 
-                        <a class="hero" href={`/sectors/${filteredSector[firstRandomPos].slug}/`}>
+                        <a class="hero" href={`/sectors/${filteredSector[firstRandomPos].slug}/`} aria-label=`Read more about ${filteredSector[firstRandomPos].data.title}`>
                             <img src={filteredSector[firstRandomPos].data.image} alt={filteredSector[firstRandomPos].data.description} loading="lazy" draggable="false"/>
                         </a>
                     </div>
@@ -125,11 +125,11 @@ while (filteredSector[firstRandomPos].data.title == sectorTitle || filteredSecto
                                     <p class="description">{filteredSector[secondRandomPos].data.description}</p>
                                 ) : null}
 
-                                <a href={`/sectors/${filteredSector[secondRandomPos].slug}/`} class="read_more">Read more</a>
+                                <a href={`/sectors/${filteredSector[secondRandomPos].slug}/`} class="read_more" aria-label=`Read more about ${filteredSector[secondRandomPos].data.title}`>Read more</a>
                             </div>
                         </div>
 
-                        <a class="hero" href={`/sectors/${filteredSector[secondRandomPos].slug}/`}>
+                        <a class="hero" href={`/sectors/${filteredSector[secondRandomPos].slug}/`} aria-label=`Read more about ${filteredSector[secondRandomPos].data.title}`>
                             <img src={filteredSector[secondRandomPos].data.image} alt={filteredSector[secondRandomPos].data.description} loading="lazy" draggable="false"/>
                         </a>
                     </div>
@@ -147,11 +147,11 @@ while (filteredSector[firstRandomPos].data.title == sectorTitle || filteredSecto
                                     <p class="description">{filteredSector[thirdRandomPos].data.description}</p>
                                 ) : null}
 
-                                <a href={`/sectors/${filteredSector[thirdRandomPos].slug}/`} class="read_more">Read more</a>
+                                <a href={`/sectors/${filteredSector[thirdRandomPos].slug}/`} class="read_more" aria-label=`Read more about ${filteredSector[thirdRandomPos].data.title}`>Read more</a>
                             </div>
                         </div>
 
-                        <a class="hero" href={`/sectors/${filteredSector[thirdRandomPos].slug}/`}>
+                        <a class="hero" href={`/sectors/${filteredSector[thirdRandomPos].slug}/`} aria-label=`Read more about ${filteredSector[thirdRandomPos].data.title}`>
                             <img src={filteredSector[thirdRandomPos].data.image} alt={filteredSector[thirdRandomPos].data.description} loading="lazy" draggable="false"/>
                         </a>
                     </div>
@@ -159,7 +159,7 @@ while (filteredSector[firstRandomPos].data.title == sectorTitle || filteredSecto
             </ul>
         </aside>
     
-        <a href="/sectors/" class="back">All Sectors</a>
+        <a href="/sectors/" class="back" aria-label="Check All Sectors">All Sectors</a>
     </div>
 
     <ContactSection />

@@ -1,11 +1,16 @@
 ---
     import '../styles/forms.css'
+    const { contactPage } = Astro.props;
 ---
 
 <section class="contact default_bg" id="contact">
     <div class="ctnr reveal">
         <form name="contact" method="POST" data-netlify="true">
-            <h3 class="title">Get in touch</h3>
+            {contactPage == "true" ? (
+                <h3 class="title">Get in touch</h3>
+            ) : (
+                <span class="title">Get in touch</span>
+            )}
 
             <div class="flex">
                 <p>

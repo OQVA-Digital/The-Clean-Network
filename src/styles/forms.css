@@ -24,6 +24,7 @@
 		font-size: clamp(2rem,8vw,4.5rem);
 		color:var(--primary-a);
         width: auto;
+        font-weight: 600;
 	}
 
     form .title + p {
