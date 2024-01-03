@@ -5,7 +5,7 @@
 <div id="cookie-consent-banner" class="cookie-consent-banner">
     <div class="flex">
         <div class="content">
-            <h3>Cookie settings</h3>
+            <span class="title">Cookie settings</span>
             <p>We use cookies to provide you with the best possible experience. They also allow us to analyze user behavior in order to constantly improve the website for you.</p>
         </div>
     
@@ -70,7 +70,7 @@
     gap: 1rem;
 }
 
-.cookie-consent-banner h3 {
+.cookie-consent-banner .title {
     /* color: var(--primary-c); */
     font-size: clamp(1.6rem,7vw,3rem);
     margin-bottom: 0.7rem;
@@ -79,7 +79,7 @@
     width: auto;
 }
 
-.cookie-consent-banner h3 + p {
+.cookie-consent-banner .title + p {
     font-weight: 400;
     line-height: 1.4;
     margin-inline: auto;
