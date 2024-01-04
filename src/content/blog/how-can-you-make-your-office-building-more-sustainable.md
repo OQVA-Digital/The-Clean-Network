@@ -51,7 +51,7 @@ You can subcontract the task to a third party or invest in sustainability softwa
 it’s still essential to understand the issues. If you opt to DIY there is plenty of information
 and support online. For an overview, [BREEAM ratings](https://bregroup.com/products/breeam/) are a gold standard for buildings’
 environmental impact in 10 areas, including energy, waste, transport, and ecology.
-\[WWF’s sustainable office guide](<https://www.wwf.org.uk/sites/default/files/2020-
+[WWF’s sustainable office guide](<https://www.wwf.org.uk/sites/default/files/2020-
 12/Sustainable%20Office%20Guide%20WWF%202020.pdf>) includes a worksheet for calculating emissions, and the
 [Better Building Partnership Responsible Property Management Toolkit](https://www.betterbuildingspartnership.co.uk/toolkits) provides detailed
 advice and checklists for achieving more sustainable energy and water use, travel, and
