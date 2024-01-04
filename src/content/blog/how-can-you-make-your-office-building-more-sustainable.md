@@ -6,7 +6,8 @@ standFirst: >-
 
   increasingly tied into brand image and the ability to attract the right people.
 author: Charles Harris
-tags: null
+tags:
+  - Customer Satisfaction
 description: >-
   Nowadays, businesses can’t afford to ignore their environmental and social
   impact – it’s
