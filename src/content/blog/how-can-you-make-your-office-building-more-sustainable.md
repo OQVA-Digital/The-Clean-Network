@@ -30,7 +30,7 @@ Not necessarily. But a more sustainable office does go much deeper than hanging 
 certificate in reception. It comes from understanding how well the business is performing
 today, and establishing a set of clear, achievable goals.
 
-Start with your office building – after all, buildings generate nearly [80 per cent of London’s
+Start with your office building – after all, buildings generate nearly \[80 per cent of London’s
 carbon emissions, according to the Mayor](<https://www.london.gov.uk/MAYOR%20ANNOUNCES%20PLANS%20FOR%20NEW%20BUIL
 DINGS%20TO%20IMPROVE%20LONDON%20AIR%20QUALITY>). It’s important to identify its specific features and
 needs because any changes must work with these.
@@ -50,7 +50,7 @@ You can subcontract the task to a third party or invest in sustainability softwa
 it’s still essential to understand the issues. If you opt to DIY there is plenty of information
 and support online. For an overview, [BREEAM ratings](https://bregroup.com/products/breeam/) are a gold standard for buildings’
 environmental impact in 10 areas, including energy, waste, transport, and ecology.
-[WWF’s sustainable office guide](<https://www.wwf.org.uk/sites/default/files/2020-
+\[WWF’s sustainable office guide](<https://www.wwf.org.uk/sites/default/files/2020-
 12/Sustainable%20Office%20Guide%20WWF%202020.pdf>) includes a worksheet for calculating emissions, and the
 [Better Building Partnership Responsible Property Management Toolkit](https://www.betterbuildingspartnership.co.uk/toolkits) provides detailed
 advice and checklists for achieving more sustainable energy and water use, travel, and
