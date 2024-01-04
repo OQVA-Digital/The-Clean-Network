@@ -1,6 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
-import SubpageLayout from "../../layouts/BaseLayout.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 import ContactSection from "../../components/ContactSection.astro"
 
 import FormattedDate from '../../components/FormattedDate.astro';
@@ -50,9 +50,10 @@ const posts = (await getCollection('blog')).sort(
 
 ---
 
-<SubpageLayout {...post.data}>
+<BaseLayout {...post.data}>
     <section class="intro">
-        <BackBt url={`/blog/${post.data.category}#${(post.data.title).toLowerCase().replace(/\s+/g, '-')}`} label="Return to category"/>
+        <!-- <BackBt url={`/blog/${post.data.category}#${(post.data.title).toLowerCase().replace(/\s+/g, '-')}`} label="Return to category"/> -->
+        <BackBt url="/blog/" label="Return to blog"/>
 
         <div class="cover">
 			<img src={post.data.heroImage} alt={post.data.description} loading="lazy" draggable="false" class="reveal_delay"/>
@@ -210,7 +211,7 @@ const posts = (await getCollection('blog')).sort(
 
     <!-- <EndingBlogNav category={post.data.category}/> -->
 
-    <ContactSection contactPage="false" />
+    <ContactSection/>
 
     <Schema
         item={{
@@ -232,4 +233,4 @@ const posts = (await getCollection('blog')).sort(
             }
         }}
     />
-</SubpageLayout>
+</BaseLayout>

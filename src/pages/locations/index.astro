@@ -10,7 +10,7 @@ import { LOCATIONS_TITLE, LOCATIONS_DESCRIPTION, LOCATIONS_KEYWORDS, LOCATIONS_H
 ---
 
 
-<BaseLayout title={LOCATIONS_TITLE} description={LOCATIONS_DESCRIPTION} keywords={LOCATIONS_KEYWORDS} >
+<BaseLayout title={LOCATIONS_TITLE} description={LOCATIONS_DESCRIPTION} keywords={LOCATIONS_KEYWORDS} endContactSection="false">
     <main>
         <div class="heading_ctnr squares_bg">
             <div class="content reveal">
@@ -37,7 +37,7 @@ import { LOCATIONS_TITLE, LOCATIONS_DESCRIPTION, LOCATIONS_KEYWORDS, LOCATIONS_H
         </div>
 
         <div class="contact_ctnr">
-            <ContactSection contactPage="false" />
+            <ContactSection/>
         </div>
     </main>
 </BaseLayout>

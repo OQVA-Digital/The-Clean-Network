@@ -597,7 +597,7 @@ section.locations {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
-    padding-bottom: 4rem;
+    padding-bottom: clamp(8rem, 19vw, 11rem);
 }
 
 .locations h3 {
@@ -1075,7 +1075,7 @@ section.find_us {
     }
 
     .intro>.ctnr .content {
-        margin: clamp(3rem, 9vmin, 9rem) auto clamp(3rem, 9vmin, 9rem) 0;
+        margin: clamp(3rem, 9vmin, 5rem) auto clamp(3rem, 9vmin, 6rem) 0;
         width: unset;
         max-width: clamp(40rem, 50vw, 84rem);
     }
@@ -1101,8 +1101,8 @@ section.find_us {
     .showcase img {
         max-height: unset;
         display: flex;
-        margin-bottom: -3rem;
-        height: clamp(20rem, 77vmin, 62rem);
+        margin-bottom: -5rem;
+        height: clamp(20rem, 120vmin, 62rem);
         border-radius: 0 0 0 10rem;
         border: unset;
     }

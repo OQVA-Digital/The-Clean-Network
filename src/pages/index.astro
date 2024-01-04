@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/HomeLayout.astro";
+import Layout from "../layouts/BaseLayout.astro";
 // import MapSwitch from "../components/MapSwitch.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
@@ -40,8 +40,6 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}  keywords={SITE_KEYWORDS}>
-
-	<Header />
 	<main>
 		<section class="intro squares_bg">
 			<div class="ctnr">
@@ -304,11 +302,8 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 			</div>
 		</section>
 
-		<ContactSection contactPage="false"/>
-
 		<BlogStripe/>
 	</main>
-	<Footer />
 </Layout>
 
 <script>

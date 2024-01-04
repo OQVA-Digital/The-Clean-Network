@@ -25,6 +25,7 @@ section.intro {
     color: var(--primary-e);
     max-width: 50rem;
     line-height: 1;
+    margin-bottom: 2rem;
 }
 
 .intro h1 sup {
@@ -35,9 +36,9 @@ section.intro {
 }
 
 .intro h2 {
-    font-size: clamp(1rem, 4vw, 1.9rem);
+    font-size: clamp(1rem, 4vw, 1.8rem);
     width: auto;
-    font-weight: 400;
+    font-weight: 450;
     margin-block: 1rem 1.5rem;
     line-height: 1.5;
     max-width: 40rem;
@@ -64,6 +65,7 @@ section.intro {
     align-items: center;
     justify-content: center;
     gap: 0.8rem;
+    text-shadow: unset;
 }
 
 .intro .cta::before {

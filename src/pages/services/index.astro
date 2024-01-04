@@ -16,11 +16,7 @@ const services = (await getCollection('services')).sort((a, b) => {
     }
 });
 
-import Header from "../../components/Header.astro";
-import BaseHead from "../../components/BaseHead.astro";
-import Footer from "../../components/Footer.astro";
-import ContactSection from "../../components/ContactSection.astro"
-import OQVABadge from "../../components/OQVABadge.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogStripe from "../../components/BlogStripe.astro";
 
 import "../../styles/subpages.css"
@@ -29,16 +25,7 @@ import "../../styles/collections.css"
 import { SITE_KEYWORDS, SERVICES_TITLE, SERVICES_DESCRIPTION, SERVICES_KEYWORDS, SERVICES_H1, SERVICES_INTRO_DESCRIPTION, INTERIOR_SERVICES_DESCRIPTION, EXTERIOR_SERVICES_DESCRIPTION } from "../../consts";
 ---
 
-<html lang="en">
-    <head>
-        <BaseHead title={SERVICES_TITLE}
-        description={SERVICES_DESCRIPTION}
-        keywords={SERVICES_KEYWORDS ? SERVICES_KEYWORDS : SITE_KEYWORDS} />
-    </head>
-
-    <body>
-        <Header />
-
+<BaseLayout title={SERVICES_TITLE} description={SERVICES_DESCRIPTION} keywords={SERVICES_KEYWORDS ? SERVICES_KEYWORDS : SITE_KEYWORDS}>
         <main>
             <div class="ctnr">
                 <div class="heading_ctnr squares_bg">
@@ -133,13 +120,6 @@ import { SITE_KEYWORDS, SERVICES_TITLE, SERVICES_DESCRIPTION, SERVICES_KEYWORDS,
                 </div>
             </div>
         </main>
-
-        <ContactSection contactPage="false" />
-
+        
 		<BlogStripe/>
-
-        <Footer />
-
-        <OQVABadge/>
-    </body>
-</html>
+</BaseLayout>

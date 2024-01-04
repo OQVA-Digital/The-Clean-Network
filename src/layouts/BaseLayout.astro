@@ -1,9 +1,10 @@
 ---
-const { title, description, keywords, metaTitle, metaDescription, metaKeywords } = Astro.props;
+const { title, description, keywords, endContactSection } = Astro.props;
 
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import ContactSection from "../components/ContactSection.astro";
 
 import OQVABadge from "../components/OQVABadge.astro";
 
@@ -16,13 +17,18 @@ import CookieConsentBanner from "../components/CookieConsentBanner.astro";
 <html lang="en">
     <head>
         <BaseHead
-        title={metaTitle ? metaTitle : SITE_TITLE}
-        description={metaDescription ? metaDescription : SITE_DESCRIPTION}
+        title={title ? title : SITE_TITLE}
+        description={description ? description : SITE_DESCRIPTION}
         keywords={keywords ? keywords : SITE_KEYWORDS} />
     </head>
     <body>
         <Header />
         <slot />
+
+        {endContactSection != "false" ? (
+            <ContactSection/>
+        ) : null}
+
         <Footer />
 
         <CookieConsentBanner></CookieConsentBanner>

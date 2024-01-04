@@ -68,12 +68,10 @@
         font-size: 1.6rem;
     }
 
-    input,
-    textarea,
-    select {
+    input, textarea, select {
         padding: clamp(0.8rem, 1vw, 1rem);
         border-radius: 0.6rem;
-        border: unset;
+        border: 0.2rem solid var(--light-a);
         background-color: var(--light-a);
         font-size: 1em;
         box-sizing: border-box;
@@ -82,6 +80,24 @@
         min-width: 100%;
         max-width: 100%;
         font-family: inherit;
+        transition: background-color 0.4s ease;
+        -webkit-transition: background-color 0.4s ease;
+        -moz-transition: background-color 0.4s ease;
+        -ms-transition: background-color 0.4s ease;
+        -o-transition: background-color 0.4s ease;
+}
+
+    input:hover, textarea:hover, select:hover {
+        background-color: var(--light);
+        transition: background-color 0.2s ease;
+        -webkit-transition: background-color 0.2s ease;
+        -moz-transition: background-color 0.2s ease;
+        -ms-transition: background-color 0.2s ease;
+        -o-transition: background-color 0.2s ease;
+    }
+
+    input:focus-visible, textarea:focus-visible, select:focus-visible {
+        outline: 0.1rem solid var(--light-b);
     }
 
     input.squares_bg, textarea.squares_bg, select.squares_bg {

@@ -180,86 +180,51 @@ declare module 'astro:content' {
   slug: "consistently-good-cleaning";
   body: string;
   collection: "benefits";
-  data: InferEntrySchema<"benefits">
+  data: any
 } & { render(): Render[".md"] };
 "environmental-innovators.md": {
 	id: "environmental-innovators.md";
   slug: "environmental-innovators";
   body: string;
   collection: "benefits";
-  data: InferEntrySchema<"benefits">
+  data: any
 } & { render(): Render[".md"] };
 "established-20-years.md": {
 	id: "established-20-years.md";
   slug: "established-20-years";
   body: string;
   collection: "benefits";
-  data: InferEntrySchema<"benefits">
+  data: any
 } & { render(): Render[".md"] };
 "ethical-employer-and-accredited.md": {
 	id: "ethical-employer-and-accredited.md";
   slug: "ethical-employer-and-accredited";
   body: string;
   collection: "benefits";
-  data: InferEntrySchema<"benefits">
+  data: any
 } & { render(): Render[".md"] };
 "peace-of-mind.md": {
 	id: "peace-of-mind.md";
   slug: "peace-of-mind";
   body: string;
   collection: "benefits";
-  data: InferEntrySchema<"benefits">
+  data: any
 } & { render(): Render[".md"] };
 };
 "blog": {
-"author-profile-photo-test.md": {
-	id: "author-profile-photo-test.md";
-  slug: "author-profile-photo-test";
+"decoration-inspiration-in-the-reception-or-lobby.md": {
+	id: "decoration-inspiration-in-the-reception-or-lobby.md";
+  slug: "decoration-inspiration-in-the-reception-or-lobby";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
-"how-to-make-your-office-building-more-sustainable-1.md": {
-	id: "how-to-make-your-office-building-more-sustainable-1.md";
-  slug: "how-to-make-your-office-building-more-sustainable-1";
+"how-can-you-make-your-office-building-more-sustainable.md": {
+	id: "how-can-you-make-your-office-building-more-sustainable.md";
+  slug: "how-can-you-make-your-office-building-more-sustainable";
   body: string;
   collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"how-to-make-your-office-building-more-sustainable-CLEANING.md": {
-	id: "how-to-make-your-office-building-more-sustainable-CLEANING.md";
-  slug: "how-to-make-your-office-building-more-sustainable-cleaning";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"how-to-make-your-office-building-more-sustainable-EFFICIENCY.md": {
-	id: "how-to-make-your-office-building-more-sustainable-EFFICIENCY.md";
-  slug: "how-to-make-your-office-building-more-sustainable-efficiency";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"how-to-make-your-office-building-more-sustainable-test-2.md": {
-	id: "how-to-make-your-office-building-more-sustainable-test-2.md";
-  slug: "how-to-make-your-office-building-more-sustainable-test-2";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"how-to-make-your-office-building-more-sustainable-test.md": {
-	id: "how-to-make-your-office-building-more-sustainable-test.md";
-  slug: "how-to-make-your-office-building-more-sustainable-test";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
-"how-to-make-your-office-building-more-sustainable.md": {
-	id: "how-to-make-your-office-building-more-sustainable.md";
-  slug: "how-to-make-your-office-building-more-sustainable";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
+  data: any
 } & { render(): Render[".md"] };
 };
 "faq": {
@@ -268,77 +233,77 @@ declare module 'astro:content' {
   slug: "can-i-have-the-same-office-cleaner-consistently";
   body: string;
   collection: "faq";
-  data: InferEntrySchema<"faq">
+  data: any
 } & { render(): Render[".md"] };
 "can-i-request-a-different-cleaner.md": {
 	id: "can-i-request-a-different-cleaner.md";
   slug: "can-i-request-a-different-cleaner";
   body: string;
   collection: "faq";
-  data: InferEntrySchema<"faq">
+  data: any
 } & { render(): Render[".md"] };
 "how-are-office-cleaners-vetted.md": {
 	id: "how-are-office-cleaners-vetted.md";
   slug: "how-are-office-cleaners-vetted";
   body: string;
   collection: "faq";
-  data: InferEntrySchema<"faq">
+  data: any
 } & { render(): Render[".md"] };
 "how-do-i-pay-for-the-service.md": {
 	id: "how-do-i-pay-for-the-service.md";
   slug: "how-do-i-pay-for-the-service";
   body: string;
   collection: "faq";
-  data: InferEntrySchema<"faq">
+  data: any
 } & { render(): Render[".md"] };
 "how-long-does-office-cleaning-take.md": {
 	id: "how-long-does-office-cleaning-take.md";
   slug: "how-long-does-office-cleaning-take";
   body: string;
   collection: "faq";
-  data: InferEntrySchema<"faq">
+  data: any
 } & { render(): Render[".md"] };
 "what-about-cleaning-materials-and-products.md": {
 	id: "what-about-cleaning-materials-and-products.md";
   slug: "what-about-cleaning-materials-and-products";
   body: string;
   collection: "faq";
-  data: InferEntrySchema<"faq">
+  data: any
 } & { render(): Render[".md"] };
 "what-if-im-dissatisfied-with-the-cleaning-service.md": {
 	id: "what-if-im-dissatisfied-with-the-cleaning-service.md";
   slug: "what-if-im-dissatisfied-with-the-cleaning-service";
   body: string;
   collection: "faq";
-  data: InferEntrySchema<"faq">
+  data: any
 } & { render(): Render[".md"] };
 "what-if-the-cleaner-damages-something.md": {
 	id: "what-if-the-cleaner-damages-something.md";
   slug: "what-if-the-cleaner-damages-something";
   body: string;
   collection: "faq";
-  data: InferEntrySchema<"faq">
+  data: any
 } & { render(): Render[".md"] };
 "what-if-the-cleaner-is-unavailable.md": {
 	id: "what-if-the-cleaner-is-unavailable.md";
   slug: "what-if-the-cleaner-is-unavailable";
   body: string;
   collection: "faq";
-  data: InferEntrySchema<"faq">
+  data: any
 } & { render(): Render[".md"] };
 "what-is-included-in-the-office-cleaning-service.md": {
 	id: "what-is-included-in-the-office-cleaning-service.md";
   slug: "what-is-included-in-the-office-cleaning-service";
   body: string;
   collection: "faq";
-  data: InferEntrySchema<"faq">
+  data: any
 } & { render(): Render[".md"] };
 "will-office-cleaning-disrupt-work.md": {
 	id: "will-office-cleaning-disrupt-work.md";
   slug: "will-office-cleaning-disrupt-work";
   body: string;
   collection: "faq";
-  data: InferEntrySchema<"faq">
+  data: any
 } & { render(): Render[".md"] };
 };
 "sectors": {
@@ -347,56 +312,56 @@ declare module 'astro:content' {
   slug: "architects-firms";
   body: string;
   collection: "sectors";
-  data: InferEntrySchema<"sectors">
+  data: any
 } & { render(): Render[".md"] };
 "corporate-office-buildings.md": {
 	id: "corporate-office-buildings.md";
   slug: "corporate-office-buildings";
   body: string;
   collection: "sectors";
-  data: InferEntrySchema<"sectors">
+  data: any
 } & { render(): Render[".md"] };
 "financial-service-companies.md": {
 	id: "financial-service-companies.md";
   slug: "financial-service-companies";
   body: string;
   collection: "sectors";
-  data: InferEntrySchema<"sectors">
+  data: any
 } & { render(): Render[".md"] };
 "law-firms.md": {
 	id: "law-firms.md";
   slug: "law-firms";
   body: string;
   collection: "sectors";
-  data: InferEntrySchema<"sectors">
+  data: any
 } & { render(): Render[".md"] };
 "media-and-design-agencies.md": {
 	id: "media-and-design-agencies.md";
   slug: "media-and-design-agencies";
   body: string;
   collection: "sectors";
-  data: InferEntrySchema<"sectors">
+  data: any
 } & { render(): Render[".md"] };
 "medical-and-dental.md": {
 	id: "medical-and-dental.md";
   slug: "medical-and-dental";
   body: string;
   collection: "sectors";
-  data: InferEntrySchema<"sectors">
+  data: any
 } & { render(): Render[".md"] };
 "small-offices.md": {
 	id: "small-offices.md";
   slug: "small-offices";
   body: string;
   collection: "sectors";
-  data: InferEntrySchema<"sectors">
+  data: any
 } & { render(): Render[".md"] };
 "technology-companies.md": {
 	id: "technology-companies.md";
   slug: "technology-companies";
   body: string;
   collection: "sectors";
-  data: InferEntrySchema<"sectors">
+  data: any
 } & { render(): Render[".md"] };
 };
 "services": {
@@ -405,91 +370,91 @@ declare module 'astro:content' {
   slug: "air-ducts-and-vents";
   body: string;
   collection: "services";
-  data: InferEntrySchema<"services">
+  data: any
 } & { render(): Render[".md"] };
 "bathrooms.md": {
 	id: "bathrooms.md";
   slug: "bathrooms";
   body: string;
   collection: "services";
-  data: InferEntrySchema<"services">
+  data: any
 } & { render(): Render[".md"] };
 "bins-and-refuse-areas.md": {
 	id: "bins-and-refuse-areas.md";
   slug: "bins-and-refuse-areas";
   body: string;
   collection: "services";
-  data: InferEntrySchema<"services">
+  data: any
 } & { render(): Render[".md"] };
 "curtains-and-blinds.md": {
 	id: "curtains-and-blinds.md";
   slug: "curtains-and-blinds";
   body: string;
   collection: "services";
-  data: InferEntrySchema<"services">
+  data: any
 } & { render(): Render[".md"] };
 "desks-and-furniture.md": {
 	id: "desks-and-furniture.md";
   slug: "desks-and-furniture";
   body: string;
   collection: "services";
-  data: InferEntrySchema<"services">
+  data: any
 } & { render(): Render[".md"] };
 "drains.md": {
 	id: "drains.md";
   slug: "drains";
   body: string;
   collection: "services";
-  data: InferEntrySchema<"services">
+  data: any
 } & { render(): Render[".md"] };
 "floors.md": {
 	id: "floors.md";
   slug: "floors";
   body: string;
   collection: "services";
-  data: InferEntrySchema<"services">
+  data: any
 } & { render(): Render[".md"] };
 "gutters-and-roofs.md": {
 	id: "gutters-and-roofs.md";
   slug: "gutters-and-roofs";
   body: string;
   collection: "services";
-  data: InferEntrySchema<"services">
+  data: any
 } & { render(): Render[".md"] };
 "kitchens.md": {
 	id: "kitchens.md";
   slug: "kitchens";
   body: string;
   collection: "services";
-  data: InferEntrySchema<"services">
+  data: any
 } & { render(): Render[".md"] };
 "lobbies-and-reception-areas.md": {
 	id: "lobbies-and-reception-areas.md";
   slug: "lobbies-and-reception-areas";
   body: string;
   collection: "services";
-  data: InferEntrySchema<"services">
+  data: any
 } & { render(): Render[".md"] };
 "post-construction.md": {
 	id: "post-construction.md";
   slug: "post-construction";
   body: string;
   collection: "services";
-  data: InferEntrySchema<"services">
+  data: any
 } & { render(): Render[".md"] };
 "pressure-cleaning.md": {
 	id: "pressure-cleaning.md";
   slug: "pressure-cleaning";
   body: string;
   collection: "services";
-  data: InferEntrySchema<"services">
+  data: any
 } & { render(): Render[".md"] };
 "windows.md": {
 	id: "windows.md";
   slug: "windows";
   body: string;
   collection: "services";
-  data: InferEntrySchema<"services">
+  data: any
 } & { render(): Render[".md"] };
 };
 "testimonials": {
@@ -498,14 +463,14 @@ declare module 'astro:content' {
   slug: "01-xero";
   body: string;
   collection: "testimonials";
-  data: InferEntrySchema<"testimonials">
+  data: any
 } & { render(): Render[".md"] };
 "02-lorem.md": {
 	id: "02-lorem.md";
   slug: "02-lorem";
   body: string;
   collection: "testimonials";
-  data: InferEntrySchema<"testimonials">
+  data: any
 } & { render(): Render[".md"] };
 };
 
@@ -517,5 +482,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	type ContentConfig = typeof import("../src/content/config");
+	type ContentConfig = never;
 }

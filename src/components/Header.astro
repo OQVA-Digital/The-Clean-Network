@@ -7,7 +7,7 @@ import { TEL, TEL_HREF } from "../consts";
 ---
 
 <div class="stripe">
-    <a href="/contact/" class="announcement">Contact us today for a free quote</a>
+    <a href="/contact/" class="announcement">Contact us today for a <span>free quote</span></a>
 
     <div class="ctnr">
         <a href={`tel:${TEL_HREF}`} class="tel">
@@ -159,28 +159,34 @@ import { TEL, TEL_HREF } from "../consts";
         color: var(--light);
         text-transform: uppercase;
         letter-spacing: 0.15rem;
-        font-size: 1.2rem;
+        font-size: 1.15rem;
         position: relative;
         z-index: 1;
-        text-shadow: -0.1rem 0.1rem var(--dark);
-    }
-
-    .stripe a:hover {
-        filter: brightness(1.1);
-        transition: filter 0.1s ease;
     }
 
     .stripe .announcement {
         position: absolute;
         left: 0;
         height: 100%;
-        padding: 0 clamp(2rem, calc(8vw - 7rem), 4rem);
+        padding: 0 clamp(2rem,calc(8vw - 7rem),4rem) 0 var(--base-width-overflow);
         display: none;
-        background-color: var(--highlight);
+        background-color: var(--dark);
         align-items: center;
-        min-width: 19%;
         text-align: center;
         justify-content: center;
+        color: var(--light);
+        font-weight: 300;
+        border-right: 0.7rem solid var(--highlight);
+    }
+
+    .stripe .announcement:hover {
+        background-color: var(--dark-a);
+    }
+
+    .stripe .announcement span {
+        color: var(--highlight-a);
+        font-weight: 500;
+        margin-left: 0.5rem;
     }
 
     .stripe > .ctnr {
@@ -190,7 +196,7 @@ import { TEL, TEL_HREF } from "../consts";
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: clamp(0rem, calc(9vw - 7rem), 3rem);
+        gap: clamp(0rem,calc(9vw - 7rem),3rem);
     }
 
     .stripe .tel {
@@ -307,34 +313,34 @@ import { TEL, TEL_HREF } from "../consts";
     }
 
     header nav {
-        width: calc(100% - (100% - var(--base-width)) / 2);
-        background-color: var(--light);
-        font-size: clamp(1.6rem,5vw,2.2rem);
-        backdrop-filter: blur(0.5rem);
-        border-radius: 0 0 0 1.4rem;
-        padding: 2rem 2rem 2rem 0;
-        color: var(--primary-a);
-        box-sizing: border-box;
-        position: absolute;
-        overflow-y: scroll;
-        font-weight: 600;
-        max-height: 68vh;
-        bottom: -0.2rem;
-        right: 0;
-        background-image: linear-gradient(-140deg,var(--light),transparent 62%);
-        border-left: 0.1rem solid var(--light);
-        border-bottom: 0.1rem solid var(--light);
-        box-shadow: 0 1.2rem 2.9rem -1.2rem rgb(102 118 135 / 60%);
-        transform: translateY(calc(100% - 1.2rem));
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+    width: calc(100% - (100% - var(--base-width)) / 2);
+    background-color: var(--light-d);
+    font-size: clamp(1.6rem,5vw,2.2rem);
+    border-radius: 0 0 0 1.4rem;
+    padding: 2rem 2rem 2rem 0;
+    color: var(--primary-a);
+    box-sizing: border-box;
+    position: absolute;
+    overflow-y: scroll;
+    font-weight: 600;
+    max-height: 68vh;
+    right: 0;
+    top: calc(var(--header-height) + 0.2rem);
+    border-left: 0.2rem solid #d3e1ff;
+    border-bottom: 0.2rem solid #d3e1ff;
+    transform: scale(0.95);
+    transform-origin: top right;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease,visibility 0.3s ease,transform 0.5s ease;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Camada_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25.5 25.5'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;stroke:%23fff;stroke-miterlimit:10;%7D%3C/style%3E%3C/defs%3E%3Cpolyline class='cls-1' points='25 0 25 25 0 25'/%3E%3C/svg%3E");
+    background-size: clamp(1.2rem,2vw,2rem);
     }
 
     header nav.show {
         opacity: 1;
         visibility: visible;
-        transform: translateY(100%);
+        transform: scale(1);
     }
 
     header nav .cta {
@@ -502,6 +508,17 @@ import { TEL, TEL_HREF } from "../consts";
 
 
 
+    @media screen and (min-width:600px) {
+        .stripe .announcement {
+            display: flex;
+        }
+
+        .stripe > .ctnr {
+            justify-content: right;
+        }
+    }
+
+
 
 
 
@@ -511,14 +528,6 @@ import { TEL, TEL_HREF } from "../consts";
             display: none;
         }
 
-        .stripe .announcement {
-            display: flex;
-        }
-
-        .stripe > .ctnr {
-            justify-content: right;
-        }
-
         .shine_ctnr div {
             background-image: linear-gradient(50deg,transparent 20%,#fff4,transparent 80%);
             animation: shine 0.6s 0.8s linear 1;
@@ -526,6 +535,7 @@ import { TEL, TEL_HREF } from "../consts";
 
         header nav {
             position: relative;
+            top: unset;
             transform: unset;
             overflow: unset;
             background-color: transparent;
