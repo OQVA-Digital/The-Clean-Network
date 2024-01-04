@@ -14,9 +14,9 @@ const posts = (await getCollection('blog')).sort(
 
 export function getStaticPaths() {
   return [
-    {params: {category: 'cleaning'}},
+    // {params: {category: 'cleaning'}},
     {params: {category: 'health-and-environment'}},
-    {params: {category: 'efficiency'}},
+    // {params: {category: 'efficiency'}},
   ];
 }
 
