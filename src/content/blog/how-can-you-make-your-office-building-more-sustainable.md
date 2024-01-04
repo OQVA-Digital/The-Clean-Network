@@ -13,11 +13,11 @@ pubDate: Jan 04 2024
 category: health-and-environment
 heroImage: /images/media/loobies-and-reception-areas.jpg
 ---
-In 2015 researchers found nearly two-thirds of UK millennials wanted to \[work for an
+In 2015 researchers found nearly two-thirds of UK millennials wanted to [work for an
 employer that makes a positive impact](<https://www.theguardian.com/sustainable-business/2015/may/05/millennials-
-employment-employers-values-ethics-jobs>). And businesses scoring highly on sustainability are
-more profitable than competitors over the medium and long term, according to global
-management consultancy \[McKinsey](<https://www.mckinsey.com/~/media/McKinsey/Business%20Functions/Sustainability/Our%
+employment-employers-values-ethics-job>). And businesses scoring highly on sustainability are
+more profitable than competitors over the medium and long term, [according to global
+management consultancy McKinsey](<https://www.mckinsey.com/~/media/McKinsey/Business%20Functions/Sustainability/Our%
 20Insights/Profits%20with%20purpose/Profits%20with%20Purpose.ashx>).
 
 But does a more sustainable office building always involve big spending on major
@@ -29,8 +29,8 @@ certificate in reception. It comes from understanding how well the business is p
 today, and establishing a set of clear, achievable goals.
 
 Start with your office building – after all, buildings generate nearly [80 per cent of London’s
-carbon emissions](<https://www.london.gov.uk/MAYOR%20ANNOUNCES%20PLANS%20FOR%20NEW%20BUIL
-DINGS%20TO%20IMPROVE%20LONDON%20AIR%20QUALITY>), according to the Mayor. It’s important to identify its specific features and
+carbon emissions, according to the Mayor](<https://www.london.gov.uk/MAYOR%20ANNOUNCES%20PLANS%20FOR%20NEW%20BUIL
+DINGS%20TO%20IMPROVE%20LONDON%20AIR%20QUALITY>). It’s important to identify its specific features and
 needs because any changes must work with these.
 
 For example, is the air con system well maintained, could windows be opened, is there scope to boost natural light, and is there underused parking space that could be repurposed for bike racks or electric
@@ -60,10 +60,8 @@ CAN'T FIND: https://www.cdp.net/en
  ]
 
 Don’t forget local authority resources, like [Westminster’s online carbon footprint calculator
-for energy](<https://www.westminster.gov.uk/businesses/support-schemes-businesses/energy-saving-
-westminster-businesses>), waste, transport and supply chain data. It’s part of a [free bespoke energy savings
-plan for local businesses](<https://www.cityoflondon.gov.uk/services/environmental-health/climate-action/climate-
-action-projects/working-with-smes-through-heart-of-the-city>) to identify current emissions, practical actions and cost and
+for energy](https://www.westminster.gov.uk/businesses/support-schemes-businesses/energy-saving-westminster-businesses), waste, transport and supply chain data. It’s part of a [free bespoke energy savings
+plan for local businesses](https://www.cityoflondon.gov.uk/services/environmental-health/climate-action/climate-action-projects/working-with-smes-through-heart-of-the-city) to identify current emissions, practical actions and cost and
 emissions savings. SMEs in the Square Mile can learn how to do this themselves via free
 online modules about sustainability and net zero.
 
