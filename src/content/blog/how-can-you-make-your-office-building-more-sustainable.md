@@ -49,8 +49,7 @@ You can subcontract the task to a third party or invest in sustainability softwa
 it’s still essential to understand the issues. If you opt to DIY there is plenty of information
 and support online. For an overview, [BREEAM ratings](https://bregroup.com/products/breeam/) are a gold standard for buildings’
 environmental impact in 10 areas, including energy, waste, transport, and ecology.
-\[WWF’s sustainable office guide](<https://www.wwf.org.uk/sites/default/files/2020-
-12/Sustainable%20Office%20Guide%20WWF%202020.pdf>) includes a worksheet for calculating emissions, and the
+[WWF’s sustainable office guide](https://www.wwf.org.uk/sites/default/files/2020-12/Sustainable%20Office%20Guide%20WWF%202020.pdf) includes a worksheet for calculating emissions, and the
 [Better Building Partnership Responsible Property Management Toolkit](https://www.betterbuildingspartnership.co.uk/toolkits) provides detailed
 advice and checklists for achieving more sustainable energy and water use, travel, and
 more. The [UK Green Building Council’s Commercial Retrofit Report](https://ukgbc.org/wp-content/uploads/2022/05/Commercial-Retrofit-Report.pdf) provides insights into
@@ -70,10 +69,7 @@ online modules about sustainability and net zero.
 
 Data is a powerful ally. Regularly monitor energy and water usage via bills or meters. Tools
 like BBP’s online calculator can show you how well the building is performing compared to
-other offices, measured by the \[Real Estate Environmental Benchmark](<https://www.betterbuildingspartnership.co.uk/our-priorities/measuring-reporting/real-
-estate-environmental-
-benchmark#:~:text=The%20Real%20Estate%20Environmental%20Benchmark,commercial%
-20property%20in%20the%20UK>).
+other offices, measured by the [Real Estate Environmental Benchmark](https://www.betterbuildingspartnership.co.uk/our-priorities/measuring-reporting/real-estate-environmental-benchmark#:~:text=The%20Real%20Estate%20Environmental%20Benchmark,commercial%20property%20in%20the%20UK).
 
 Auditing waste can also generate sustainability wins; for example, by identifying what
 people throw away most and offering reusable alternatives. [Try London Recycling’s online
@@ -107,13 +103,9 @@ Energy:
 * Switch fluorescent tubes for LED bulbs. LEDs last significantly longer (one 2019 study
   says up to 25,000 hours) because they convert almost all the energy they use into
   light rather than heat. Some suppliers like [299 Lighting](https://www.299lighting.co.uk/en/energy-efficient-lighting) can alter older fittings to take
-  new LED bulbs. But a totally new LED system will allow for smart energy-saving
+  new LED bulbs. But a [totally new LED system](https://link.springer.com/article/10.1007/s12053-018-9662-4?utm_source=getftr&utm_medium=getftr&utm_campaign=getftr_pilot) will allow for smart energy-saving
   features like app-based scheduling, or changing colour temperatures (lumens) to
   react to changing light conditions.
-  \[ LINKS:
-  BAD REQUEST: https://link.springer.com/article/10.1007/s12053-018-9662-
-  4?utm_source=getftr&amp;utm_medium=getftr&amp;utm_campaign=getftr_pilot
-   ]
 * Smart thermostats learn the habits of people working in the building, and adjust the
   heating or aircon so it can work more efficiently (and cheaply).
 * Water: Less water wastage can be achieved by installing fittings that restrict volume, like aerated sink taps and dual or low-flow toilets. JETS claims its vacuum toilets can reduce water consumption by up to 90 per cent. These can use only 1 litre or less for
