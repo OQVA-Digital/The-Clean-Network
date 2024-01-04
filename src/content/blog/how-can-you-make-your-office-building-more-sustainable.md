@@ -14,8 +14,7 @@ category: health-and-environment
 heroImage: /images/media/loobies-and-reception-areas.jpg
 ---
 In 2015 researchers found nearly two-thirds of UK millennials wanted to [work for an
-employer that makes a positive impact](<https://www.theguardian.com/sustainable-business/2015/may/05/millennials-
-employment-employers-values-ethics-job>). And businesses scoring highly on sustainability are
+employer that makes a positive impact](https://www.theguardian.com/sustainable-business/2015/may/05/millennials-employment-employers-values-ethics-job). And businesses scoring highly on sustainability are
 more profitable than competitors over the medium and long term, [according to global
 management consultancy McKinsey](<https://www.mckinsey.com/~/media/McKinsey/Business%20Functions/Sustainability/Our%
 20Insights/Profits%20with%20purpose/Profits%20with%20Purpose.ashx>).
@@ -72,7 +71,7 @@ like BBP’s online calculator can show you how well the building is performing 
 other offices, measured by the [Real Estate Environmental Benchmark](<https://www.betterbuildingspartnership.co.uk/our-priorities/measuring-reporting/real-
 estate-environmental-
 benchmark#:~:text=The%20Real%20Estate%20Environmental%20Benchmark,commercial%
-20property%20in%20the%20UK.>).
+20property%20in%20the%20UK>).
 
 Auditing waste can also generate sustainability wins; for example, by identifying what
 people throw away most and offering reusable alternatives. [Try London Recycling’s online
