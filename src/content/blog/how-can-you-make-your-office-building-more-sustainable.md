@@ -30,7 +30,7 @@ Not necessarily. But a more sustainable office does go much deeper than hanging 
 certificate in reception. It comes from understanding how well the business is performing
 today, and establishing a set of clear, achievable goals.
 
-Start with your office building – after all, buildings generate nearly \[80 per cent of London’s
+Start with your office building – after all, buildings generate nearly [80 per cent of London’s
 carbon emissions, according to the Mayor](<https://www.london.gov.uk/MAYOR%20ANNOUNCES%20PLANS%20FOR%20NEW%20BUIL
 DINGS%20TO%20IMPROVE%20LONDON%20AIR%20QUALITY>). It’s important to identify its specific features and
 needs because any changes must work with these.
