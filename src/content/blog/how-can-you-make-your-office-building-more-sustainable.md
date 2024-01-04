@@ -5,10 +5,14 @@ standFirst: >-
   impact – it’s
 
   increasingly tied into brand image and the ability to attract the right people.
-author: To be Filled
+author: Charles Harris
 tags:
   - Customer Satisfaction
-description: To Be Filled
+description: >-
+  Nowadays, businesses can’t afford to ignore their environmental and social
+  impact – it’s
+
+  increasingly tied into brand image and the ability to attract the right people.
 pubDate: Jan 04 2024
 category: health-and-environment
 heroImage: /images/media/loobies-and-reception-areas.jpg
@@ -47,7 +51,7 @@ You can subcontract the task to a third party or invest in sustainability softwa
 it’s still essential to understand the issues. If you opt to DIY there is plenty of information
 and support online. For an overview, [BREEAM ratings](https://bregroup.com/products/breeam/) are a gold standard for buildings’
 environmental impact in 10 areas, including energy, waste, transport, and ecology.
-[WWF’s sustainable office guide](<https://www.wwf.org.uk/sites/default/files/2020-
+\[WWF’s sustainable office guide](<https://www.wwf.org.uk/sites/default/files/2020-
 12/Sustainable%20Office%20Guide%20WWF%202020.pdf>) includes a worksheet for calculating emissions, and the
 [Better Building Partnership Responsible Property Management Toolkit](https://www.betterbuildingspartnership.co.uk/toolkits) provides detailed
 advice and checklists for achieving more sustainable energy and water use, travel, and
@@ -68,7 +72,7 @@ online modules about sustainability and net zero.
 
 Data is a powerful ally. Regularly monitor energy and water usage via bills or meters. Tools
 like BBP’s online calculator can show you how well the building is performing compared to
-other offices, measured by the [Real Estate Environmental Benchmark](<https://www.betterbuildingspartnership.co.uk/our-priorities/measuring-reporting/real-
+other offices, measured by the \[Real Estate Environmental Benchmark](<https://www.betterbuildingspartnership.co.uk/our-priorities/measuring-reporting/real-
 estate-environmental-
 benchmark#:~:text=The%20Real%20Estate%20Environmental%20Benchmark,commercial%
 20property%20in%20the%20UK>).
