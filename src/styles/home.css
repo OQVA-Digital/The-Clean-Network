@@ -578,7 +578,7 @@ section.locations {
 }
 
 .locations .contact_ctnr {
-    background-color: var(--grey-c);
+    background-color: var(--grey-a);
     color: var(--light);
     padding: 1.5rem 2.5rem;
     width: fit-content;

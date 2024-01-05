@@ -66,6 +66,7 @@ section.intro {
     justify-content: center;
     gap: 0.8rem;
     text-shadow: unset;
+    border: 0.1rem solid var(--light-b);
 }
 
 .intro .cta::before {

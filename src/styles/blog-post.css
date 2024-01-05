@@ -10,3 +10,7 @@
     height: clamp(5rem, 10vw, 7rem);
     font-size: 1rem;
 }
+
+.content_ctnr .main.cta {
+    margin-inline: clamp(2.5rem, 6vmin, 5rem);
+}
