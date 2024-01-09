@@ -46,4 +46,4 @@ Choosing <strong>The Clean Network</strong> means investing in trust, reliabilit
 * Reduces dust and mite build-up - making the office a healthier place to work
 * Improved appearance
 
-We believe in complete transparency, offering competitive pricing without compromising the quality of our services. Our commitment to your satisfaction is reflected in our attention to detail and the care we put into each task. From the initial consultation to the final inspection, we strive to exceed your expectations. <strong>Get a free quote</strong> today and experience the impeccable standards of The Clean Network's blinds and curtains cleaning services. We're here to help you create a cleaner, healthier, and more productive work environment.
+We believe in complete transparency, offering competitive pricing without compromising the quality of our services. Our commitment to your satisfaction is reflected in our attention to detail and the care we put into each task. From the initial consultation to the final inspection, we strive to exceed your expectations.
