@@ -13,6 +13,8 @@ description: A clean, hygienic, and fresh-smelling bathroom is not only a
   environment.
 type: indoor
 image: /images/media/bathroom.jpg
+pricingParagraphIntro: Are you ready to elevate your office bathroom's
+  cleanliness to a whole new level?
 ---
 A clean, hygienic, and fresh-smelling bathroom is not only a pleasure to use but also a reflection of your business's attention to detail and care for its employees and visitors. At <strong>The Clean Network</strong>, we understand the importance of maintaining a clean, healthy, and pleasant working environment. 
 
@@ -41,4 +43,4 @@ Partner with <strong>The Clean Network</strong> for your office bathroom and toi
 
 Whether you're a [small business](https://cleannetwork.co.uk/sectors/small-offices/) or a [large corporate office](https://cleannetwork.co.uk/sectors/corporate-office-buildings/) in <strong>London</strong>, our cleaning services are designed to meet your specific needs. We take pride in offering a personalised, professional, and reliable service. 
 
-Are you ready to elevate your office's cleanliness to a whole new level? <strong>Get a free quote</strong> today for our professional bathroom and toilet cleaning services. Experience the difference that a clean, hygienic, and well-maintained bathroom can make to your working environment. Trust <strong>The Clean Network</strong> to provide you with the highest standard of commercial bathroom cleaning services in London.
+Experience the difference that a clean, hygienic, and well-maintained bathroom can make to your working environment. Trust <strong>The Clean Network</strong> to provide you with the highest standard of commercial bathroom cleaning services in London.
