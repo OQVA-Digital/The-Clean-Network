@@ -12,7 +12,6 @@ collections:
     label: "Service"
     folder: "src/content/services" 
     create: true 
-    slug: "{{documentTitle}}" 
     fields: 
       - {label: "Order", name: "order", widget: "number", required: false}
       - {label: "Document Title", name: "documentTitle", widget: "string", required: false}
@@ -31,7 +30,6 @@ collections:
     label: "Sector"
     folder: "src/content/sectors"
     create: true
-    slug: "{{documentTitle}}"
     fields:
       - {label: "Order", name: "order", widget: "number", required: false}
       - {label: "Document Title", name: "documentTitle", widget: "string", required: false}
