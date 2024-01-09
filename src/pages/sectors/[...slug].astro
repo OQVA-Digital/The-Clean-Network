@@ -185,7 +185,19 @@ import { MIN_SERVICE_HOURS, SERVICE_PRICE } from '../../consts'
                     "@type": "ImageObject",
                     "url": "/logo/tcn-logo-360.png"
                 }
-            }
+            },
+            "offers": {
+                "@type": "Offer",
+                "areaServed": {
+                    "@type": "City",
+                    "name": "London",
+                    "sameAs": "https://en.wikipedia.org/wiki/London"
+                },
+                "availability": "https://schema.org/InStock",
+                "price": `${SERVICE_PRICE}.00`,
+                "priceCurrency": "GBP",
+                "url": `${Astro.url}`
+            },
         }}
     />
 </Layout>

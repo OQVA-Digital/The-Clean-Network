@@ -178,10 +178,17 @@ import { MIN_SERVICE_HOURS, SERVICE_PRICE } from '../../consts'
             "@context": "https://schema.org",
             "@type": "Service",
             "image": `${service.data.image}`,
-            "areaServed": {
-                "@type": "City",
-                "name": "London",
-                "sameAs": "https://en.wikipedia.org/wiki/London"
+            "offers": {
+                "@type": "Offer",
+                "areaServed": {
+                    "@type": "City",
+                    "name": "London",
+                    "sameAs": "https://en.wikipedia.org/wiki/London"
+                },
+                "availability": "https://schema.org/InStock",
+                "price": `${SERVICE_PRICE}.00`,
+                "priceCurrency": "GBP",
+                "url": `${Astro.url}`
             },
         }}
     />
