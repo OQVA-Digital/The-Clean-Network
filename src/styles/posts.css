@@ -111,6 +111,7 @@ h5 {
     margin-block: calc(clamp(10rem, 62vw, 50rem) * -1) clamp(4rem,20vw,12rem);
     background-color: rgb(248 248 255 / 85%);
     backdrop-filter: blur(0.5rem);
+    -webkit-backdrop-filter: blur(0.5rem);
     border-radius: 1.2rem;
     box-sizing: border-box;
     border: 0.1rem solid var(--light-a);
