@@ -1,5 +1,6 @@
 ---
-metaTitle: "Office Blinds & Curtains Cleaning Services in Central London - The Clean Network"
+metaTitle: Office Blinds & Curtains Cleaning Services in Central London - The
+  Clean Network
 metaDescription: Creating a productive and healthy work environment begins with
   a clean and neat office.
 metaKeywords: office blinds cleaning, curtain, commercial, london
@@ -10,6 +11,7 @@ description: Refresh your window coverings with our thorough cleaning services.
   curtain and blind cleaning.
 type: indoor
 image: /images/media/curtains-and-blinds.jpg
+pricingParagraphIntro: Ready for spotless blinds and fresh, clean curtains in your office?
 ---
 Creating a productive and healthy work environment begins with a clean and neat office. It's often easy to overlook the details, like window blinds and curtains, yet they play a vital role in maintaining the overall aesthetics and hygiene of your workspace. At The Clean Network, we understand this, and that's why we offer professional <strong>office blinds cleaning</strong> and curtain maintenance services to businesses in <strong>London</strong>.
 
@@ -44,6 +46,4 @@ Choosing <strong>The Clean Network</strong> means investing in trust, reliabilit
 * Reduces dust and mite build-up - making the office a healthier place to work
 * Improved appearance
 
-We believe in complete transparency, offering competitive pricing without compromising the quality of our services. Our commitment to your satisfaction is reflected in our attention to detail and the care we put into each task. From the initial consultation to the final inspection, we strive to exceed your expectations.
-
-Ready for spotless blinds and fresh, clean curtains in your office? Let's give your workspace the cleanliness it deserves. <strong>Get a free quote</strong> today and experience the impeccable standards of The Clean Network's blinds and curtains cleaning services. We're here to help you create a cleaner, healthier, and more productive work environment.
+We believe in complete transparency, offering competitive pricing without compromising the quality of our services. Our commitment to your satisfaction is reflected in our attention to detail and the care we put into each task. From the initial consultation to the final inspection, we strive to exceed your expectations. <strong>Get a free quote</strong> today and experience the impeccable standards of The Clean Network's blinds and curtains cleaning services. We're here to help you create a cleaner, healthier, and more productive work environment.
