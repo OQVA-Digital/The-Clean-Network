@@ -31,7 +31,7 @@ const posts = (await getCollection('blog')).sort(
 	(a, b) =>  b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
-
+import { FULL_ADDRESS } from '../../consts'
 
 // let postCategory = post.data.category;
 // let postTitle = post.data.title;
@@ -68,7 +68,14 @@ const posts = (await getCollection('blog')).sort(
     <div class="content_ctnr">
         <article class="reveal">
             <div class="over_heading">
-                <div class="author">{post.data.authorImage ? (<img src={post.data.authorImage} alt={`${post.data.author} profile picture`}/>) : "by"} <cite>{post.data.author}</cite></div>
+                <div class="author">
+                    {post.data.authorImage ? (
+                        <img src={post.data.authorImage}
+                        alt={`${post.data.author} image`}
+                        title={`Text by ${post.data.author}`}
+                        draggable="false"/>
+                        ) : "by"} <cite>{post.data.author}</cite>
+                </div>
     
                 <hr/>
 
@@ -223,11 +230,12 @@ const posts = (await getCollection('blog')).sort(
             }],
             "publisher": {
                 "@type": "Organization",
-                "name": "The Clean Network",
+                "name": "Clean Network",
                 "logo": {
                     "@type": "ImageObject",
                     "url": "/logo/tcn-logo-360.png"
-                }
+                },
+                "address": `${FULL_ADDRESS}`
             }
         }}
     />

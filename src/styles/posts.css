@@ -121,7 +121,7 @@ h5 {
 }
 
 .content_ctnr article {
-    font-size: clamp(1.5rem,3.9vmin,1.65rem);
+    font-size: clamp(1.5rem,3.9vmin,1.75rem);
     padding: clamp(3rem, 5vmin, 4rem) clamp(2.5rem, 6vmin, 5rem) 0;
 }
 

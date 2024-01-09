@@ -59,7 +59,7 @@ import { Schema } from "astro-seo-schema"
 									<div class="ctnr">
 										<div class="over_heading">
 
-											<div class="author">{post.data.authorImage ? (<img src={post.data.authorImage} alt={`${post.data.author} profile picture`}/>) : "by"} <cite>{post.data.author}</cite></div>
+											<div class="author">{post.data.authorImage ? (<img src={post.data.authorImage} alt={`${post.data.author} profile picture`} draggable="false"/>) : "by"} <cite>{post.data.author}</cite></div>
 
 											<hr/>
 
@@ -83,7 +83,8 @@ import { Schema } from "astro-seo-schema"
 								</div>
 
 								<a class="hero" href={`/blog/${post.slug}/`}>
-									<img src={post.data.heroImage} alt={post.data.description} loading="lazy"/>
+									<img src={post.data.heroImage} alt={post.data.description} loading="lazy"
+									draggable="false" />
 								</a>
 							</div>
 						</li>

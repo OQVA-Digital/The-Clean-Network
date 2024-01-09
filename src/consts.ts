@@ -1,10 +1,10 @@
 // GENERAL
 
-export const FULL_ADDRESS = "EC2A 4BX 6, 8 Bonhill St, London, UK"
+export const POSTAL_CODE = "EC2A 4BX"
 
 export const STREET = "6, 8 Bonhill St"
 
-export const POSTAL_CODE = "EC2A 4BX"
+export const FULL_ADDRESS = `${POSTAL_CODE} ${STREET}, London, UK`
 
 
 export const TEL = "020 8135 4786"
