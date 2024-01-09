@@ -1,5 +1,6 @@
 ---
-metaTitle: "Commercial Floor & Carpet Cleaning Services in Central London - The Clean Network"
+metaTitle: Commercial Floor & Carpet Cleaning Services in Central London - The
+  Clean Network
 metaDescription: Commercial floor cleaning services are essential to maintain
   the professional appeal and hygiene of your office.
 metaKeywords: commercial floor cleaning services, carpet, office, rugs, hardwood
@@ -13,6 +14,8 @@ description: Everyday foot traffic brings in a myriad of dirt and allergens,
   employees and clients.
 type: indoor
 image: /images/media/floor.jpg
+pricingParagraphIntro: Experience the difference clean floors and carpets can
+  make in your office environment in London.
 ---
 <strong>Commercial floor cleaning services</strong> are essential to maintain the professional appeal and hygiene of your office. If you're in London, look no further than The Clean Network to ensure your office floors always reflect the high standards of your business.
 
@@ -40,5 +43,3 @@ Let's not forget about the <strong>floor mats</strong> that often take the brunt
 * Improved appearance
 
 Choosing The Clean Network for your floor cleaning needs means entrusting the task to a team of professionals who are committed to excellence. We aim to provide a service that not only cleans but also maintains the integrity of your flooring, ensuring a longer lifespan and an impressive appearance for your office space.
-
-Experience the difference a professional floor and carpet cleaning service can make in your office environment in <strong>London</strong>. Reach out to us for a free quote and let us help you maintain a clean and healthy workspace.
