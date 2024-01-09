@@ -12,6 +12,8 @@ description: From start-ups to large tech corporations, we know the specific
   of the industry, tech companies require a meticulous and professional cleaning
   service - that's where we come in.
 image: /images/media/technology-companies.jpg
+pricingParagraphIntro: Discover how The Clean Network can support your
+  technology company’s growth, productivity, and success.
 ---
 We understand that the cleanliness of your <strong>technology company</strong> isn't just about aesthetics. It's about fostering an environment that encourages innovation, productivity, and success.
 
@@ -22,5 +24,3 @@ At The Clean Network, we provide expert <strong>commercial cleaning services</st
 We offer a comprehensive range of services, including, but not limited to, <strong>office cleaning</strong>, [floor and carpet cleaning](https://cleannetwork.co.uk/services/floors/), [furniture and desk cleaning](https://cleannetwork.co.uk/services/desks-and-furniture/), and specialised [cleaning for air vents and ducts](https://cleannetwork.co.uk/services/air-ducts-and-vents/). Each service is carefully executed with the utmost attention to detail, ensuring a clean and healthy environment for your team to create and innovate.
 
 Partnering with us means you can focus on what you do best - pushing the boundaries of technology - while we take care of creating and maintaining a clean, hygienic workspace that mirrors your company's commitment to excellence.
-
-Get in touch with us today for a free quote and discover how our <strong>cleaning services</strong> can support your <strong>technology company's</strong> growth, productivity, and success.
