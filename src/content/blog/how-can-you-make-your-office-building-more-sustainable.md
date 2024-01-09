@@ -6,6 +6,7 @@ standFirst: >-
 
   increasingly tied into brand image and the ability to attract the right people.
 author: Charles Harris
+authorImage: /images/media/charlie-harris.jpg
 tags:
   - Customer Satisfaction
 description: >-
