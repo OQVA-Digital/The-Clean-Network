@@ -1,10 +1,10 @@
 // GENERAL
 
-export const FULL_ADDRESS = "EC1M 4NH St John's Sq, London, UK"
+export const FULL_ADDRESS = "EC2A 4BX 6, 8 Bonhill St, London, UK"
 
-export const STREET = "St John's Sq"
+export const STREET = "6, 8 Bonhill St"
 
-export const POSTAL_CODE = "EC1M 4NH"
+export const POSTAL_CODE = "EC2A 4BX"
 
 
 export const TEL = "020 8135 4786"
@@ -22,6 +22,9 @@ export const BRAND_NAME = 'Clean Network'
 export const GOV_REGISTRY = 'https://find-and-update.company-information.service.gov.uk/company/09308063'
 export const LEGAL_NAME = 'The Clean Works Limited'
 
+
+export const MIN_SERVICE_HOURS = "5"
+export const SERVICE_PRICE="£16+vat"
 
 
 // HOME PAGE

@@ -52,6 +52,9 @@ while (filteredSector[firstRandomPos].data.title == sectorTitle || filteredSecto
     secondRandomPos = Math.floor(Math.random() * filteredSector.length)
     thirdRandomPos = Math.floor(Math.random() * filteredSector.length)
 }
+
+import { MIN_SERVICE_HOURS, SERVICE_PRICE } from '../../consts'
+
 ---
 
 <Layout {...sector.data}>
@@ -71,13 +74,14 @@ while (filteredSector[firstRandomPos].data.title == sectorTitle || filteredSecto
             <div class="post_content">
                 <Content />
 
-                {sector.data.minWeeklyHours && sector.data.hourlyPrice ? (
+                <!-- {sector.data.minWeeklyHours && sector.data.hourlyPrice ? ( -->
                     <PricingCTA
                         intro={sector.data.pricingParagraphIntro}
-                        job={sector.data.title}
-                        minimumHours={sector.data.minWeeklyHours}
-                        price={sector.data.hourlyPrice}/>
-                ) : null}
+                        job="services"
+                        minimumHours={MIN_SERVICE_HOURS}
+                        price={SERVICE_PRICE}
+                        />
+                <!-- ) : null} -->
             </div>
 
             <div class="cta_ctnr">

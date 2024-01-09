@@ -9,7 +9,7 @@ const { intro, job, price, minimumHours } = Astro.props;
         <span set:html={intro}></span>
         {price ? (
             <span>
-                Our <strong>{job.toLowerCase()}</strong> start from a minimum of {minimumHours} <b>hours per week</b> from <b>just £{price} per hour</b>.
+                Our <strong>{job.toLowerCase()}</strong> start from a minimum of <b>{minimumHours} hours per week</b> from <b>just £{price} per hour</b>.
             </span>
         ) : null} 
         <strong>Get in touch with us today for a free quote.</strong>
