@@ -1,5 +1,5 @@
 ---
-metaTitle: "Office Furniture & Desk Cleaning Services in Central London - The Clean Network"
+metaTitle: Office Furniture & Desk Cleaning Services in Central London - The Clean Network
 metaDescription: You’re likely spending more than a third of your day at your
   workspace. We understand how crucial a clean workspace is to your productivity
   and well-being.
@@ -12,6 +12,7 @@ description: Are you aware that your office desk can harbour more germs than a
   to clean all types of office furniture.
 type: indoor
 image: /images/media/desks-and-furniture.jpg
+pricingParagraphIntro: Isn’t it time you gave your workspace the care and attention it deserves?
 ---
 You're likely spending more than a third of your day at your workspace. At <strong>The Clean Network</strong>, we understand how crucial a clean and hygienic workspace is to your productivity and well-being. That's why our <strong>office furniture and desk cleaning services</strong> in <strong>London</strong> go beyond the surface to ensure a deep clean that leaves your workspace feeling fresh and invigorating.
 
@@ -22,5 +23,3 @@ Our experts are trained to handle different <strong>fabrics</strong> and materia
 We use environmentally friendly cleaning products that are tough on dirt and stains but gentle on your furniture and the environment. This means you can enjoy a clean workspace without worrying about harmful chemical residues.
 
 At The Clean Network, we deliver not just a cleaning service, but a promise of reliability, trust, and high standards. We’re confident that once you experience our service, you’ll understand why so many businesses in London choose us for their cleaning needs.
-
-Isn’t it time you gave your workspace the care and attention it deserves? Contact us today and let our team provide you with a free quote for our <strong>office furniture and desk cleaning services</strong>.
