@@ -386,6 +386,13 @@ declare module 'astro:content' {
   collection: "services";
   data: any
 } & { render(): Render[".md"] };
+"commercial-gutter-roof-cleaning-services-in-central-london-the-clean-network.md": {
+	id: "commercial-gutter-roof-cleaning-services-in-central-london-the-clean-network.md";
+  slug: "commercial-gutter-roof-cleaning-services-in-central-london-the-clean-network";
+  body: string;
+  collection: "services";
+  data: any
+} & { render(): Render[".md"] };
 "curtains-and-blinds.md": {
 	id: "curtains-and-blinds.md";
   slug: "curtains-and-blinds";
