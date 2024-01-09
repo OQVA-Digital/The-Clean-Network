@@ -10,6 +10,8 @@ description: When the construction crew leaves, they often leave behind debris,
   that are second to none, ensuring your space is not just clean but gleaming.
 type: indoor
 image: /images/media/post-construction.jpg
+pricingParagraphIntro: Let The Clean Network take care of your post-construction
+  cleaning needs in London.
 ---
 <strong>Post-construction Cleaning Services</strong> are a vital final step before you can fully enjoy your newly constructed or renovated space. The Clean Network is here to make your property shine and ready for its new purpose.
 
@@ -55,5 +57,3 @@ We understand the pressures and challenges that come with construction projects,
 * Handrails and partition walls: cleaned and polished
 
 Why choose us for your <strong>post construction cleaning services</strong>? Because we understand your needs. We know that every detail matters, and we ensure that no stone is left unturned in our quest to provide a spotless environment for you. Our commitment to delivering outstanding results is what makes us a trusted choice in London.
-
-Whether it's a large commercial complex or a small office renovation, we adapt our services to fit your needs, always ensuring we deliver a standard of cleanliness that exceeds your expectations. Let The Clean Network take care of your post-construction cleaning needs in London and experience a service like no other.
