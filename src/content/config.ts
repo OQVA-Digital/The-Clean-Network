@@ -21,9 +21,9 @@ const serviceCollection = defineCollection({
     type: 'content',
     schema: z.object({
         order: z.number().optional(),
-        metaTitle: z.string().optional(),
+        documentTitle: z.string().optional(),
         metaDescription: z.string().optional(),
-        metaKeywords: z.string().optional(),
+        keywords: z.string().optional(),
         title: z.string(),
         description: z.string().optional(),
         type: z.string(),
@@ -37,10 +37,11 @@ const serviceCollection = defineCollection({
 const sectorsCollection = defineCollection({
     type: 'content',
     schema: z.object({
+        
         order: z.number().optional(),
-        metaTitle: z.string().optional(),
+        documentTitle: z.string().optional(),
         metaDescription: z.string().optional(),
-        metaKeywords: z.string().optional(),
+        keywords: z.string().optional(),
         title: z.string(),
         description: z.string().optional(),
         image: z.string().optional(),

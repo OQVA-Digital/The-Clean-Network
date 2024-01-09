@@ -12,12 +12,12 @@ collections:
     label: "Service"
     folder: "src/content/services" 
     create: true 
-    slug: "{{slug}}" 
+    slug: "{{documentTitle}}" 
     fields: 
       - {label: "Order", name: "order", widget: "number", required: false}
-      - {label: "Meta Title", name: "metaTitle", widget: "string", required: false}
+      - {label: "Short Title", name: "documentTitle", widget: "string", required: false}
       - {label: "Meta Description", name: "metaDescription", widget: "string", pattern: ['^.{0,155}$', "155 characters maximum"], required: false}
-      - {label: "Meta Keywords", name: "metaKeywords", widget: "string", pattern: ['^.{0,350}$', "350 characters maximum"], required: false}
+      - {label: "Keywords", name: "keywords", widget: "string", pattern: ['^.{0,350}$', "350 characters maximum"], required: false}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "text", required: false}
       - {label: "ServiceType", name: "type", widget: "select",  options: ["indoor", "external"]}
@@ -31,12 +31,12 @@ collections:
     label: "Sector"
     folder: "src/content/sectors"
     create: true
-    slug: "{{slug}}"
+    slug: "{{documentTitle}}"
     fields:
       - {label: "Order", name: "order", widget: "number", required: false}
-      - {label: "Meta Title", name: "metaTitle", widget: "string", required: false}
+      - {label: "Short Title", name: "documentTitle", widget: "string", required: false}
       - {label: "Meta Description", name: "metaDescription", widget: "string", pattern: ['^.{0,155}$', "155 characters maximum"], required: false}
-      - {label: "Meta Keywords", name: "metaKeywords", widget: "string", pattern: ['^.{0,350}$', "350 characters maximum"], required: false}
+      - {label: "Keywords", name: "keywords", widget: "string", pattern: ['^.{0,350}$', "350 characters maximum"], required: false}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "text", required: false}
       - {label: "Cover Image", name: "image", widget: "image", required: false}

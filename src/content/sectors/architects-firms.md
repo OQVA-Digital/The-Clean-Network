@@ -1,9 +1,9 @@
 ---
-metaTitle: "Office Cleaning Services for Architects in Central London - The Clean Network"
+documentTitle: "Office Cleaning Services for Architects in Central London - The Clean Network"
 metaDescription: Ee understand the unique needs of architects and the importance
   of a clean, organised workspace in sparking creativity and fostering
   productivity.
-metaKeywords: architects offices, cleaning services, london
+keywords: architects offices, cleaning services, london
 title: Architects Office Cleaning
 description: At The Clean Network, we understand the unique needs of architects
   and the importance of a clean, organised workspace in sparking creativity and

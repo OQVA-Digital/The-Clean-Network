@@ -24,7 +24,7 @@ export const LEGAL_NAME = 'The Clean Works Limited'
 
 
 export const MIN_SERVICE_HOURS = "5"
-export const SERVICE_PRICE="16"
+export const SERVICE_PRICE = "16"
 
 
 // HOME PAGE

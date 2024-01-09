@@ -58,7 +58,7 @@ import { MIN_SERVICE_HOURS, SERVICE_PRICE } from '../../consts'
 
 ---
 
-<Layout {...service.data}>
+<Layout title={service.data.documentTitle} description={service.data.metaDescription} keywords={service.data.keywords}>
     <section class="intro">
         <BackBt url={`/services/#${(service.data.title).toLowerCase().replace(/\s+/g, '-')}`} label="Other services"/>
 

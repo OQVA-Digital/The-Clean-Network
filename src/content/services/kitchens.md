@@ -1,9 +1,9 @@
 ---
-metaTitle: Office Kitchen Cleaning Services in Central Central London - The Clean Network
+documentTitle: Office Kitchen Cleaning Services in Central Central London - The Clean Network
 metaDescription: Your office kitchen is more than just a space for meals—it’s a
   gathering point, a place of interaction, and an integral part of your working
   environment.
-metaKeywords: office kitchen cleaning, fridge, london
+keywords: office kitchen cleaning, fridge, london
 title: Office Kitchen Cleaning Services
 description: Maintaining a clean office kitchen has significant benefits—it
   boosts staff morale, enhances productivity, and upholds a professional image

@@ -1,9 +1,9 @@
 ---
-metaTitle: Office Blinds & Curtains Cleaning Services in Central London - The
+documentTitle: Office Blinds & Curtains Cleaning Services in Central London - The
   Clean Network
 metaDescription: Creating a productive and healthy work environment begins with
   a clean and neat office.
-metaKeywords: office blinds cleaning, curtain, commercial, london
+keywords: office blinds cleaning, curtain, commercial, london
 title: Blinds & Curtains Cleaning Services
 description: Refresh your window coverings with our thorough cleaning services.
   We eliminate dust, pollen, and odours from curtains and blinds, revitalising

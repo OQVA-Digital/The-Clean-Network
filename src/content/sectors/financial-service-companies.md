@@ -1,8 +1,8 @@
 ---
-metaTitle: "Office Cleaning Services for Financial Services in Central London - The Clean Network"
+documentTitle: "Office Cleaning Services for Financial Services in Central London - The Clean Network"
 metaDescription: The Clean Network is the trusted name in professional cleaning
   services tailored for financial service companies in London.
-metaKeywords: financial service companies, cleaning services, london
+keywords: financial service companies, cleaning services, london
 title: Financial Service Company Cleaning
 description: In the world of finance, every detail matters. From the crispness
   of a suit to the cleanliness of the office environment, every aspect

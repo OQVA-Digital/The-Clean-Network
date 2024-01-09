@@ -1,10 +1,10 @@
 ---
 order: 1
-metaTitle: Technology Company Cleaning Services in Central London - The Clean Network
+documentTitle: Technology Company Cleaning Services in Central London - The Clean Network
 metaDescription: From start-ups to large tech corporations, we know the specific
   challenges that London's technology companies face when it comes to
   cleanliness and hygiene
-metaKeywords: technology companies, cleaning services, london
+keywords: technology companies, cleaning services, london
 title: Technology Company Cleaning
 description: From start-ups to large tech corporations, we know the specific
   challenges that London's technology companies face when it comes to

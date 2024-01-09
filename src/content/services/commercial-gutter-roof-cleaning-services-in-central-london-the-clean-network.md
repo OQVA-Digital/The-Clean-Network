@@ -4,7 +4,7 @@ metaTitle: Commercial Gutter & Roof Cleaning Services in Central London - The
 metaDescription: The potential damage caused by neglecting your commercial
   building’s gutter and roof system can be catastrophic, both aesthetically and
   financially.
-metaKeywords: commercial gutter cleaning services, roof cleaning, specialist
+keywords: commercial gutter cleaning services, roof cleaning, specialist
   equipment, london
 title: Gutter & Roof Cleaning Services
 description: At The Clean Network, we specialise in commercial gutter cleaning
