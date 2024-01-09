@@ -1,5 +1,5 @@
 ---
-documentTitle: "Commercial Pressure Cleaning Services in Central London - The Clean Network"
+documentTitle: Commercial Pressure Cleaning Services in Central London - The Clean Network
 metaDescription: Discover the transformative power of professional pressure
   cleaning services with The Clean Network.
 keywords: pressure cleaning services, block paving, london
@@ -12,6 +12,8 @@ description: Our pressure cleaning service goes beyond mere aesthetics. It's a
   hygienic.
 type: external
 image: /images/media/pressure-cleaning.jpg
+pricingParagraphIntro: Get your outdoor spaces looking their absolute best with
+  exceptional pressure cleaning from The Clean Network.
 ---
 Discover the transformative power of professional <strong>pressure cleaning services</strong> with The Clean Network. In London, where the urban environment can quickly take a toll on your commercial exteriors, our team of experienced specialists ensures that your business retains its clean, welcoming appearance.
 
@@ -22,5 +24,3 @@ Our pressure cleaning service goes beyond mere aesthetics. It's a matter of heal
 We understand that every client's needs are unique. That's why our pressure cleaning service is tailored to your specific requirements. Whether it's rejuvenating block paving, revitalising parking areas, or restoring exterior walls to their former glory, we've got you covered.
 
 The trust our clients place in us stems from our unwavering commitment to reliability and high standards. When you choose The Clean Network, you're opting for a stress-free experience, underpinned by our consistent communication, transparent pricing, and the peace of mind that comes with knowing you've chosen the best.
-
-Experience the difference today. For exceptional pressure cleaning services in London, look no further than The Clean Network. Get your outdoor spaces looking their absolute best. Your journey towards a cleaner, safer, and more welcoming commercial environment begins with us.
