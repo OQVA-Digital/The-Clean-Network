@@ -22,7 +22,7 @@ collections:
       - {label: "Description", name: "description", widget: "text", required: false}
       - {label: "ServiceType", name: "type", widget: "select",  options: ["indoor", "external"]}
       - {label: "Cover Image", name: "image", widget: "image", required: false}
-      - {label: "Pricing Paragraph Intro", name: "pricingParagraphIntro", widget: "text", required: false}
+      - {label: "Pricing Paragraph Intro", name: "pricingParagraphIntro", widget: "string", required: false}
       # - {label: "Hourly Price (£)", name: "hourlyPrice", widget: "number", required: false}
       # - {label: "Minimum Hours (Weekly)", name: "minWeeklyHours", widget: "number", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
@@ -40,7 +40,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "text", required: false}
       - {label: "Cover Image", name: "image", widget: "image", required: false}
-      - {label: "Pricing Paragraph Intro", name: "pricingParagraphIntro", widget: "text", required: false}
+      - {label: "Pricing Paragraph Intro", name: "pricingParagraphIntro", widget: "string", required: false}
       # - {label: "Hourly Price (£)", name: "hourlyPrice", widget: "number", required: false}
       # - {label: "Minimum Hours (Weekly)", name: "minWeeklyHours", widget: "number", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
