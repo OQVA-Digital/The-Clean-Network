@@ -38,6 +38,4 @@ By choosing <strong>The Clean Network</strong>, you are entrusting your workspac
 
 But we don't just clean. We extend the lifespan of your ventilation systems, helping you avoid costly replacements and unnecessary disruptions to your operations. Our service also helps improve energy efficiency, potentially reducing your utility bills over time.
 
-Invest in a clean, safe, and productive work environment. <strong>The Clean Network</strong> is here to provide you with a seamless and efficient <strong>commercial ductwork cleaning</strong> service, leaving you with more time to focus on what matters most—your business. 
-
-Are you ready to breathe easier and work smarter? Get in touch with us today for a free quote. Experience the difference of <strong>The Clean Network</strong>.
+Invest in a clean, safe, and productive work environment. <strong>The Clean Network</strong> is here to provide you with a seamless and efficient <strong>commercial ductwork cleaning</strong> service, leaving you with more time to focus on what matters most—your business.
