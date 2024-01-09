@@ -1,5 +1,6 @@
 ---
-documentTitle: "Office Cleaning Services for Financial Services in Central London - The Clean Network"
+documentTitle: Office Cleaning Services for Financial Services in Central London
+  - The Clean Network
 metaDescription: The Clean Network is the trusted name in professional cleaning
   services tailored for financial service companies in London.
 keywords: financial service companies, cleaning services, london
@@ -11,6 +12,7 @@ description: In the world of finance, every detail matters. From the crispness
   specialised cleaning service exclusively for financial service companies in
   London.
 image: /images/media/financial-service-companies.jpg
+pricingParagraphIntro: Ready to elevate the cleanliness of your office?
 ---
 The Clean Network is the trusted name in professional <strong>cleaning services</strong> tailored for <strong>financial service companies</strong> in <strong>London</strong>.
 
@@ -22,15 +24,12 @@ Our team of highly trained cleaning professionals is committed to providing a co
 
 What sets us apart is our unwavering dedication to our clients. We take the time to understand your specific needs, the peculiarities of your space, and your schedule to deliver a <strong>cleaning service</strong> that aligns with your business goals. And because we understand the sensitive nature of your work, we ensure confidentiality and discretion in all our services.
 
-
 With The Clean Network, you can expect:
 
-- A cleaning schedule that fits seamlessly into your work routine
-- Thorough cleaning and sanitising of high-touch areas to maintain a healthy environment
-- Specialty cleaning services, including carpet and floor cleaning, window cleaning, and more
-- Respect for your office space and work materials
-- Quick response to special requests or complaints
+* A cleaning schedule that fits seamlessly into your work routine
+* Thorough cleaning and sanitising of high-touch areas to maintain a healthy environment
+* Specialty cleaning services, including carpet and floor cleaning, window cleaning, and more
+* Respect for your office space and work materials
+* Quick response to special requests or complaints
 
 Experience the difference of a clean and well-maintained workspace tailored to the unique needs of <strong>financial service companies</strong>. Choose The Clean Network, where trust, reliability, and high standards meet.
-
-Ready to elevate the cleanliness of your office? Request a free quote today.
