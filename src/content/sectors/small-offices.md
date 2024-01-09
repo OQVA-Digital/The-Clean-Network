@@ -12,7 +12,8 @@ description: The Clean Network is your partner in maintaining an immaculate,
   services tailored to your small office's unique needs.
 image: /images/media/small-offices.jpg
 pricingParagraphIntro: Experience the difference that a clean, orderly, and
-  sanitary office can make to your team’s productivity and morale.
+  sanitary office can make to your team’s productivity and morale. Contact The
+  Clean Network today for a free quote.
 ---
 The Clean Network is your partner in maintaining an immaculate, healthy, and productive <strong>small office</strong> environment in <strong>London</strong>. We understand that your office is more than just a space. It's a place where creativity thrives, where ideas turn into realities, and where your business grows. That's why we're committed to providing professional, reliable, and high-quality <strong>cleaning services</strong> tailored to your <strong>small office's</strong> unique needs.
 
