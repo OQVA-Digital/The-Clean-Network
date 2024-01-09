@@ -14,6 +14,8 @@ description: First impressions matter. When your clients step into your office,
   the moment someone walks in the door.
 type: indoor
 image: /images/media/loobies-and-reception-areas.jpg
+pricingParagraphIntro: Let us help you make a lasting impression with a
+  spotlessly clean lobby and reception area in your office.
 ---
 <strong>First impressions matter.</strong> When your clients step into your office, the cleanliness and freshness of your lobby and reception area set the tone for their entire visit. At The Clean Network, we understand the importance of maintaining a welcoming, immaculate environment that truly reflects the quality and professionalism of your business. We specialise in <strong>lobby and reception area cleaning</strong> services in London, making your business shine from the moment someone walks in the door.
 
@@ -35,5 +37,3 @@ We believe that a clean reception area is more than just a clean space. It's a s
 * Clean and polish rails and handles (incl. entrance door)
 
 Located in the heart of <strong>London</strong>, we understand the needs of a wide range of office environments. Whether you're running a [small startup](https://cleannetwork.co.uk/sectors/small-offices/) or a [large corporate office](https://cleannetwork.co.uk/sectors/corporate-office-buildings/), our team is equipped to handle your cleaning needs with efficiency and discretion. We work around your schedule, ensuring minimal disruption to your daily operations while providing a clean, healthy, and productive working environment.
-
-At The Clean Network, we combine our expertise and dedication to bring you a service that is second to none. Let us help you make a lasting impression with our exceptional <strong>lobby and reception cleaning services</strong>. For a workspace that reflects your professionalism, attention to detail, and high standards, reach out to us today. <strong>Get a free quote</strong> and discover the difference The Clean Network can make in your office environment.
