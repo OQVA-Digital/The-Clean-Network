@@ -8,6 +8,7 @@ standFirst: >-
 
   your reception décor.
 author: Charles Harris
+authorImage: /images/media/charlie-harris.jpg
 tags:
   - Indoor
   - Customer Satisfaction
