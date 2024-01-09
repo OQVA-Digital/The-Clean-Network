@@ -57,7 +57,7 @@ import { MIN_SERVICE_HOURS, SERVICE_PRICE } from '../../consts'
 
 ---
 
-<Layout {...sector.data}>
+<Layout  title={sector.data.documentTitle} description={sector.data.metaDescription} keywords={sector.data.keywords}>
     <section class="intro">
         <BackBt url={`/sectors/#${(sector.data.title).toLowerCase().replace(/\s+/g, '-')}`} label="Other sectors"/>
 
