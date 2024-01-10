@@ -1,8 +1,12 @@
 // GENERAL
 
-export const POSTAL_CODE = "EC2A 4BX"
+// OLD ADDRESS
+// export const POSTAL_CODE = "EC2A 4BX"
+// export const STREET = "6, 8 Bonhill St"
 
-export const STREET = "6, 8 Bonhill St"
+export const POSTAL_CODE = "EC1M 4NH"
+
+export const STREET = "St John's Square"
 
 export const FULL_ADDRESS = `${POSTAL_CODE} ${STREET}, London, UK`
 
