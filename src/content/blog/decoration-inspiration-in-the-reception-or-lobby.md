@@ -92,7 +92,7 @@ Look out for more of a developing trend in commercial buildings: dynamic and int
 
 Commodity trader [Capital.com](http://capital.com/)’s reception area features a huge curved ceiling installation that generates different images of weather, visualising real-life market changes. A driving force behind the concept is affecting people’s mood and creating a more collaborative environment.
 
-Decoration for agile working
+## Decoration for agile working
 
 Rising rents, open plan offices and demand for more flexible working are prompting many businesses to consider new décor ideas in reception so the space can do more. [Rap Interiors](https://www.rapinteriors.co.uk/projects/whitehead-monckton-reception-area-refurbishment-kent/) says with one client, reception furniture was chosen specifically so the space could also work as a valuable break-out area.
 
