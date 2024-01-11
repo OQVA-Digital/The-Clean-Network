@@ -56,9 +56,6 @@ advice and checklists for achieving more sustainable energy and water use, trave
 more. The [UK Green Building Council’s Commercial Retrofit Report](https://ukgbc.org/wp-content/uploads/2022/05/Commercial-Retrofit-Report.pdf) provides insights into
 real-world “light” retrofits and the resulting carbon savings. [Small99](https://small99.co.uk/) provides a tailored (and
 free) carbon reduction plan to small businesses.
-\[LINKS:
-CAN'T FIND: https://www.cdp.net/en
- ]
 
 Don’t forget local authority resources, like [Westminster’s online carbon footprint calculator
 for energy](https://www.westminster.gov.uk/businesses/support-schemes-businesses/energy-saving-westminster-businesses), waste, transport and supply chain data. It’s part of a [free bespoke energy savings
