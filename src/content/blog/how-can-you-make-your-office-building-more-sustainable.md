@@ -1,5 +1,10 @@
 ---
 title: How can you make your office building more sustainable?
+description: >-
+  Nowadays, businesses can’t afford to ignore their environmental and social
+  impact – it’s
+
+  increasingly tied into brand image and the ability to attract the right people.
 standFirst: >-
   Nowadays, businesses can’t afford to ignore their environmental and social
   impact – it’s
@@ -9,11 +14,6 @@ author: Charles Harris
 authorImage: /images/media/charlie-harris.jpg
 tags:
   - Customer Satisfaction
-description: >-
-  Nowadays, businesses can’t afford to ignore their environmental and social
-  impact – it’s
-
-  increasingly tied into brand image and the ability to attract the right people.
 pubDate: Jan 04 2024
 category: health-and-environment
 heroImage: /images/media/loobies-and-reception-areas.jpg
@@ -109,12 +109,9 @@ Energy:
   react to changing light conditions.
 * Smart thermostats learn the habits of people working in the building, and adjust the
   heating or aircon so it can work more efficiently (and cheaply).
-* Water: Less water wastage can be achieved by installing fittings that restrict volume, like aerated sink taps and dual or low-flow toilets. JETS claims its vacuum toilets can reduce water consumption by up to 90 per cent. These can use only 1 litre or less for
+* Water: Less water wastage can be achieved by installing fittings that restrict volume, like aerated sink taps and dual or low-flow toilets.[ JETS](https://www.jetsgroup.com/buildings/green-buildings/breeam-excellent?gclid=EAIaIQobChMI3-PZkPPWggMV14xQBh18-wXBEAAYAiAAEgILHvD) claims its vacuum toilets can reduce water consumption by up to 90 per cent. These can use only 1 litre or less for
   a full flush.
-* \[404: https://www.jetsgroup.com/buildings/green-buildings/breeam-
-  excellent?gclid=EAIaIQobChMI3-PZkPPWggMV14xQBh18-
-  wXBEAAYAiAAEgILHvD_BwE&amp;gclsrc=aw.ds]
-  While it’s a bigger investment, collecting and storing rainwater for non-drinking use
+* While it’s a bigger investment, collecting and storing rainwater for non-drinking use
   can also make a big impact on a building’s water demand. In [Bloomberg’s new
   London HQ](https://www.aqua-lity.co.uk/5757/london-bloomberg-hq), this reportedly led to a 73 per cent reduction.
 * Materials: When scheduling a refurbishment, using recycled and locally sourced materials, like
