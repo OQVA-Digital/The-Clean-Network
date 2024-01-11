@@ -1,8 +1,9 @@
 ---
+order: ""
+documentTitle: Commercial Air Vent & Duct Cleaning Services - The Clean Network
 metaDescription: In the heart of London, maintaining clean and efficient air
   vents and ductwork is not just a requirement—it’s a necessity.
 keywords: commercial ductwork cleaning, air vents, ceilings, london
-documentTitle: Commercial Air Vent & Duct Cleaning Services - The Clean Network
 title: Air Vent & Duct Cleaning Services
 description: An often overlooked aspect of office maintenance, clean air vents
   and ducts are instrumental in maintaining a healthy working environment.
