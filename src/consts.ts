@@ -1,12 +1,11 @@
 // GENERAL
 
-// OLD ADDRESS
-// export const POSTAL_CODE = "EC2A 4BX"
-// export const STREET = "6, 8 Bonhill St"
+export const POSTAL_CODE = "EC2A 4BX"
+export const STREET = "6, 8 Bonhill St"
 
-export const POSTAL_CODE = "EC1M 4NH"
-
-export const STREET = "St John's Square"
+// ALT. ADDRESS
+// export const POSTAL_CODE = "EC1M 4NH"
+// export const STREET = "St John's Square"
 
 export const FULL_ADDRESS = `${POSTAL_CODE} ${STREET}, London, UK`
 
@@ -133,6 +132,26 @@ export const CONTACT_TITLE = 'Contact Us · The Clean Network'
 export const CONTACT_DESCRIPTION = ""
 
 export const CONTACT_KEYWORDS = ""
+
+
+
+
+
+
+
+
+
+// TEAM PAGE
+
+    // META
+
+export const TEAM_TITLE = "Our Team - The Clean Network"
+
+export const TEAM_DESCRIPTION = ""
+
+export const TEAM_KEYWORDS = ""
+
+
 
 
 

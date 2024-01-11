@@ -31,7 +31,7 @@ const posts = (await getCollection('blog')).sort(
 	(a, b) =>  b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
-import { FULL_ADDRESS } from '../../consts'
+import { FULL_ADDRESS, SITE_TITLE } from '../../consts'
 
 // let postCategory = post.data.category;
 // let postTitle = post.data.title;
@@ -50,7 +50,7 @@ import { FULL_ADDRESS } from '../../consts'
 
 ---
 
-<BaseLayout {...post.data}>
+<BaseLayout title={post.data.documentTitle ? post.data.documentTitle : post.data.title}>
     <section class="intro">
         <!-- <BackBt url={`/blog/${post.data.category}#${(post.data.title).toLowerCase().replace(/\s+/g, '-')}`} label="Return to category"/> -->
         <BackBt url="/blog/" label="Return to blog"/>

@@ -1,0 +1,118 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import '../../styles/subpages.css'
+
+import { TEAM_TITLE, TEAM_DESCRIPTION, TEAM_KEYWORDS } from "../../consts";
+---
+
+<BaseLayout title={TEAM_TITLE} description={TEAM_DESCRIPTION} keywords={TEAM_KEYWORDS}>
+    <main>
+        <div class="heading_ctnr default_bg">
+            <div class="content reveal">
+                <h1>Our Team</h1>
+            </div>
+        </div>
+
+        <div class="txt_ctnr">
+            <p><b>We understand that individuals who receive fair treatment and pay give heightened dedication, loyalty, and professionalism.</b></p>
+
+            <p>This commitment to fair pay and career progression opportunities for all our staff ensures the excellent cleaning service we're recognised for, and we seek clients who align with these values.</p>
+            
+            <p>A significant number of our team members have surpassed the five-year mark with us, many evolving into new roles, and <b>we take pride in those who've moved on to seize fresh opportunities</b>, a testament to our investment in their growth.</p>
+
+            <h2>Senior Management Team</h2>
+            
+            <div class="team">
+                <div class="member">
+                    <div class="profile squares_bg">
+                        <p class="name">Ben</p> 
+                        
+                        <p class="role">Director</p>
+                    </div>
+                     
+                    <div class="description">
+                        <p><b>Ben has over 20 years experience serving customers.</b> His first venture was Lucy Hall, a waiting staffing agency for the likes of Selfridges, Harrods and the Albert Hall.</p>
+    
+                        <p>He then successfully exited Lucy Hall to form Clean Network with the simple mantra of <b>good cleaning at affordable prices alongside a happy and well rewarded cleaning team</b>.</p>
+    
+                        <p>Additionally, Ben's barista training ensures he crafts an exceptional cup of coffee.</p>
+                    </div>
+                </div>
+    
+                <div class="member">
+                    <div class="profile squares_bg">
+                        <p class="name">Charlie</p>
+        
+                        <p class="role">Director</p>
+                    </div>
+    
+                    <div class="description">
+                        <p><b>Charlie is a perpetual mover, having called three continents home.</b> Driven by a compulsion to challenge the status quo, he <b>thrives on innovation</b> and values promises kept as much as raising the bar. Beyond his quest for improvement, Charlie is a keen runner with 7 marathons in 7 days challenge imminent early part of 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</BaseLayout>
+
+<style>
+    .team {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .member {
+        border: 0.2rem solid var(--light-a);
+        box-sizing: border-box;
+        border-radius: 0.4rem;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .profile {
+        min-width: clamp(4rem,50vw,12rem);
+        padding: 2rem 3rem 1.6rem;
+        width: 100%;
+        background-color: var(--light-a);
+        position: sticky;
+        top: var(--header-height);
+    }
+
+    .name {
+        font-size: clamp(3rem, 8vw, 3.2rem);
+        font-weight: 500;
+        color: var(--primary-a);
+        margin-bottom: unset;
+        display: inline-block;
+        margin-right: 1rem;
+        line-height: 1;
+    }
+
+    .role {
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: var(--grey);
+        margin-bottom: unset;
+    }
+
+    .description {
+        /* font-size: 2rem; */
+        flex: 1;
+        min-width: clamp(15rem, 50vw, 30rem);
+        padding: 3rem;
+    }
+
+    .description b, .description strong, .description em {
+        color: var(--primary-a);
+        font-weight: 450;
+    }
+
+    @media screen and (min-width:700px) {
+
+        .profile {
+            width:unset;
+        }
+    }
+</style>
