@@ -1,5 +1,15 @@
 ---
+documentTitle: Decorating Ideas for Your Office Reception Area in 2024 - The Clean Network
+metaDescription: Here’s an easy resolution for 2024. Spend a few minutes taking
+  in your office reception or lobby area!
 title: Decoration inspiration in the reception or lobby
+description: >-
+  Here’s an easy resolution for 2024. Spend a few minutes taking in your office
+  reception or
+
+  lobby area – do you feel focused, energised or a bit “meh”? If it’s the last, time to rethink
+
+  your reception décor.
 standFirst: >-
   Here’s an easy resolution for 2024. Spend a few minutes taking in your office
   reception or
@@ -12,13 +22,6 @@ authorImage: /images/media/charlie-harris.jpg
 tags:
   - Indoor
   - Customer Satisfaction
-description: >-
-  Here’s an easy resolution for 2024. Spend a few minutes taking in your office
-  reception or
-
-  lobby area – do you feel focused, energised or a bit “meh”? If it’s the last, time to rethink
-
-  your reception décor.
 pubDate: Jan 04 2024
 category: health-and-environment
 heroImage: /images/media/modern-office-with-plants-visualisation.png
