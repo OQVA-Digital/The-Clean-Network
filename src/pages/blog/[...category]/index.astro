@@ -31,7 +31,7 @@ import '../../../styles/blog-collection.css'
 import { Schema } from "astro-seo-schema"
 ---
 
-<BaseLayout title={category}>
+<BaseLayout title={`${category == 'cleaning' ? "Cleaning" : category == 'health-and-environment' ? "Health & Environment" : category == 'efficiency' ? "Efficiency" : null} - The Clean Network Blog`}>
 
 	<BackBt url={`/blog/`} label="Blog"/>
 
