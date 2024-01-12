@@ -1,4 +1,5 @@
 ---
+order: 1
 documentTitle: Office Blinds & Curtains Cleaning Services in Central London - The
   Clean Network
 metaDescription: Creating a productive and healthy work environment begins with

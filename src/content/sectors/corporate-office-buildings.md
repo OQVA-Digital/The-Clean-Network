@@ -1,4 +1,5 @@
 ---
+order: 1
 documentTitle: Corporate Office Building Cleaning Services in Central London -
   The Clean Network
 metaDescription: Creating a clean and healthy work environment is crucial in

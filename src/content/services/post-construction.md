@@ -1,4 +1,5 @@
 ---
+order: 1
 documentTitle: Commercial Post-construction Cleaning Services - The Clean Network
 metaDescription: Post-construction Cleaning Services are a vital final step
   before you can fully enjoy your newly constructed or renovated space.

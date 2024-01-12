@@ -1,4 +1,5 @@
 ---
+order: 1
 documentTitle: Commercial Bin Cleaning Services in Central London - The Clean Network
 metaDescription: The first impression of your business often begins even before
   anyone steps through the door. Maintaining a clean exterior is essential.

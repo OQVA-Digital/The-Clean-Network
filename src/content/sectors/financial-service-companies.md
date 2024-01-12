@@ -1,4 +1,5 @@
 ---
+order: 1
 documentTitle: Office Cleaning Services for Financial Services in Central London
   - The Clean Network
 metaDescription: The Clean Network is the trusted name in professional cleaning

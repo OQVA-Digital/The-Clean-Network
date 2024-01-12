@@ -1,4 +1,5 @@
 ---
+order: 1
 documentTitle: Office Cleaning Services for Media & Designers in Central London
   - The Clean Network
 metaDescription: We understand that the cleanliness and upkeep of your workspace

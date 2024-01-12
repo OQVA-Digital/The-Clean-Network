@@ -1,4 +1,5 @@
 ---
+order: 1
 documentTitle: Medical & Dental Office Cleaning Services in Central London - The Clean Network
 metaDescription: Our goal is to ensure your environment remains impeccably
   clean, safe, and welcoming for both your staff and patients.

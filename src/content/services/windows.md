@@ -1,4 +1,5 @@
 ---
+order: 1
 documentTitle: Commercial Window Cleaning Services in Central London - The Clean Network
 metaDescription: "With the hustle and bustle of the city, it’s easy for your
   office windows to lose their clarity and shine. This is where The Clean
