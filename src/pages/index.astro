@@ -37,6 +37,7 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
         return a.data.title.localeCompare(b.data.title);
     }
 });
+
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}  keywords={SITE_KEYWORDS}>

@@ -13,7 +13,7 @@ collections:
     folder: "src/content/services" 
     create: true 
     fields: 
-      - {label: "Order", name: "order", widget: "number", required: false}
+      - {label: "Order", name: "order", widget: "number", valueType: string, min: 0, required: false}
       - {label: "Document Title", name: "documentTitle", widget: "string", required: false}
       - {label: "Meta Description", name: "metaDescription", widget: "string", pattern: ['^.{0,155}$', "155 characters maximum"], required: false}
       - {label: "Keywords", name: "keywords", widget: "string", pattern: ['^.{0,350}$', "350 characters maximum"], required: false}
@@ -31,7 +31,7 @@ collections:
     folder: "src/content/sectors"
     create: true
     fields:
-      - {label: "Order", name: "order", widget: "number", required: false}
+      - {label: "Order", name: "order", widget: "number", valueType: string, min: 0, required: false}
       - {label: "Document Title", name: "documentTitle", widget: "string", required: false}
       - {label: "Meta Description", name: "metaDescription", widget: "string", pattern: ['^.{0,155}$', "155 characters maximum"], required: false}
       - {label: "Keywords", name: "keywords", widget: "string", pattern: ['^.{0,350}$', "350 characters maximum"], required: false}
@@ -64,7 +64,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields: 
-      - {label: "Order", name: "order", widget: "number", required: false}
+      - {label: "Order", name: "order", widget: "number", valueType: string, min: 0, required: false}
       - {label: "Icon", name: "icon", widget: "image", required: false}
       - {label: "Title", name: "title", widget: "string"}
 
@@ -94,6 +94,6 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Order", name: "order", widget: "number", required: false}
+      - {label: "Order", name: "order", widget: "number", min: 0, required: false}
       - {label: "Question", name: "title", widget: "text"}
       - {label: "Answer", name: "answer", widget: "text"}
