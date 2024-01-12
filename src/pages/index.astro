@@ -234,16 +234,16 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
 												<img src={testimonials.data.avatar} alt={`${testimonials.data.name}'s avatar'`}/>
 
 												<div class="flex">
-													<p class="name">{testimonials.data.name}</p>
+													<p class="name" set:html={testimonials.data.name}></p>
 
-													<p class="description">{testimonials.data.description}</p>
+													<p class="description" set:html={testimonials.data.description}></p>
 												</div>
 											</div>
 										</div>
 										
 										<div class="content">
 
-											<p class="heading">"{testimonials.data.heading}"</p>
+											<p class="heading" set:html={`"${testimonials.data.heading}"`}></p>
 											
 											<blockquote>
 												{testimonials.data.paragraph01 == "" ? null : (<p set:html={testimonials.data.paragraph01}></p>)}

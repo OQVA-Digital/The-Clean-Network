@@ -59,7 +59,7 @@ import { SITE_KEYWORDS, SERVICES_TITLE, SERVICES_DESCRIPTION, SERVICES_KEYWORDS,
                                                     </a>
                                                 </h3>
     
-                                                <p class="description">{services.data.description}</p>
+                                                <p class="description" set:html={services.data.description}></p>
 
                                                 <a href="/contact/" class="main cta" aria-label="Get a free quote for our cleaning services">Get a free quote</a>
                                             </div>

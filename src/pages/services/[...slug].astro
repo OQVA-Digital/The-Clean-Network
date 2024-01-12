@@ -109,7 +109,7 @@ import { MIN_SERVICE_HOURS, SERVICE_PRICE } from '../../consts'
                                 </a>
 	
                                 {filteredServices[firstRandomPos].data.description ? (
-                                    <p class="description">{filteredServices[firstRandomPos].data.description}</p>
+                                    <p class="description" set:html={filteredServices[firstRandomPos].data.description}></p>
                                 ) : null}
 
                                 <a href={`/services/${filteredServices[firstRandomPos].slug}/`} class="read_more" aria-label=`Read more about ${filteredServices[firstRandomPos].data.title}`>About the service</a>
@@ -131,7 +131,7 @@ import { MIN_SERVICE_HOURS, SERVICE_PRICE } from '../../consts'
                                 </a>
 	
                                 {filteredServices[secondRandomPos].data.description ? (
-                                    <p class="description">{filteredServices[secondRandomPos].data.description}</p>
+                                    <p set:html={filteredServices[secondRandomPos].data.description} class="description"></p>
                                 ) : null}
 
                                 <a href={`/services/${filteredServices[secondRandomPos].slug}/`} class="read_more" aria-label=`Read more about ${filteredServices[secondRandomPos].data.title}`>About the service</a>
@@ -153,7 +153,7 @@ import { MIN_SERVICE_HOURS, SERVICE_PRICE } from '../../consts'
                                 </a>
 	
                                 {filteredServices[thirdRandomPos].data.description ? (
-                                    <p class="description">{filteredServices[thirdRandomPos].data.description}</p>
+                                    <p set:html={filteredServices[thirdRandomPos].data.description} class="description"></p>
                                 ) : null}
 
                                 <a href={`/services/${filteredServices[thirdRandomPos].slug}/`} class="read_more" aria-label=`Read more about ${filteredServices[thirdRandomPos].data.title}`>About the service</a>

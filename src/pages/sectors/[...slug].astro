@@ -104,7 +104,7 @@ import { MIN_SERVICE_HOURS, SERVICE_PRICE } from '../../consts'
                                 </a>
 	
                                 {filteredSector[firstRandomPos].data.description ? (
-                                    <p class="description">{filteredSector[firstRandomPos].data.description}</p>
+                                    <p set:html={filteredSector[firstRandomPos].data.description} class="description"></p>
                                 ) : null}
 
                                 <a href={`/sectors/${filteredSector[firstRandomPos].slug}/`} class="read_more" aria-label=`Read more about ${filteredSector[firstRandomPos].data.title}`>About the sector</a>
@@ -126,7 +126,7 @@ import { MIN_SERVICE_HOURS, SERVICE_PRICE } from '../../consts'
                                 </a>
 	
                                 {filteredSector[secondRandomPos].data.description ? (
-                                    <p class="description">{filteredSector[secondRandomPos].data.description}</p>
+                                    <p set:html={filteredSector[secondRandomPos].data.description} class="description"></p>
                                 ) : null}
 
                                 <a href={`/sectors/${filteredSector[secondRandomPos].slug}/`} class="read_more" aria-label=`Read more about ${filteredSector[secondRandomPos].data.title}`>About the sector</a>
@@ -148,7 +148,7 @@ import { MIN_SERVICE_HOURS, SERVICE_PRICE } from '../../consts'
                                 </a>
 	
                                 {filteredSector[thirdRandomPos].data.description ? (
-                                    <p class="description">{filteredSector[thirdRandomPos].data.description}</p>
+                                    <p set:html={filteredSector[thirdRandomPos].data.description} class="description"></p>
                                 ) : null}
 
                                 <a href={`/sectors/${filteredSector[thirdRandomPos].slug}/`} class="read_more" aria-label=`Read more about ${filteredSector[thirdRandomPos].data.title}`>About the sector</a>
