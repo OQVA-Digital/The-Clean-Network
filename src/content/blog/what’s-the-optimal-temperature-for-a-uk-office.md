@@ -9,11 +9,12 @@ standFirst: Many of us spend a significant part of our waking hours inside an
   concentration and cognition may drop off as the body redirects energy, while
   overheating makes us tired and irritable.
 author: "Charlie Harris "
+authorImage: /images/media/charlie-harris.jpg
 tags:
   - Indoor
 pubDate: Jan 22 2024
 category: health-and-environment
-heroImage: /images/media/charlie-harris.jpg
+heroImage: /images/media/free-photo-of-thermostats-hanging-on-wall.jpeg
 ---
 **What’s the optimal temperature for a UK office?** 
 
