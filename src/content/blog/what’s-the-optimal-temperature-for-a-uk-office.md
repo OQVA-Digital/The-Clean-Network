@@ -4,12 +4,10 @@ description: "Many of us spend a significant part of our waking hours inside an
   office and want to feel healthy and comfortable there. If it’s too cold
   concentration and cognition may drop off as the body redirects energy, while
   overheating makes us tired and irritable. "
-standFirst: In the quest for optimal productivity and well-being within the
-  confines of the office, maintaining a comfortable environment is paramount.
-  Balancing temperature is crucial, as chilly conditions can hinder
-  concentration, diverting energy, while overheating induces fatigue and
-  irritability. Achieving the right atmosphere is key to fostering a healthy and
-  focused workspace.
+standFirst: Many of us spend a significant part of our waking hours inside an
+  office and want to feel healthy and comfortable there. If it’s too cold
+  concentration and cognition may drop off as the body redirects energy, while
+  overheating makes us tired and irritable.
 author: "Charlie Harris "
 tags:
   - Indoor
