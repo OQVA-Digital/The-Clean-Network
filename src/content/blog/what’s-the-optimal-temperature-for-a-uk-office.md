@@ -51,7 +51,7 @@ It’s not just air temperature that affects whether people feel too hot or cold
 
 Letting people adjust their own level of comfort can be as straightforward as relaxing a formal office dress code during a heatwave and providing a cold water dispenser or hot drinks machine. With sustainability in mind, [water coolers that use a fixed supply create less landfill waste and transportation emissions than standard refillable ones, according to University of Pittsburgh researchers](https://www.sustainable.pitt.edu/office-water-coolers).
 
-##### Offering portable heaters, desk fans and air conditioners is another option. The CIBSE says air movement is an important control: simply using a fan to increase it can have the same effect as turning the thermostat down by 2°C.  
+Offering portable heaters, desk fans and air conditioners is another option. The CIBSE says air movement is an important control: simply using a fan to increase it can have the same effect as turning the thermostat down by 2°C.
 
 **Use natural ventilation** 
 
@@ -82,7 +82,7 @@ It’s also essential to set up a regular maintenance schedule for HVAC systems.
 
 **Get professional advice**
 
-### Going further, an independent review by a specialist consultant could identify how to achieve optimal thermal comfort. [Assurity Consulting, for instance, says its service covers workplace humidity, temperature and airflow but also measures the levels of specific gases like CO2](https://www.assurityconsulting.co.uk/knowledge/guides/what-should-the-temperature-be-in-the-workplace).
+Going further, an independent review by a specialist consultant could identify how to achieve optimal thermal comfort. [Assurity Consulting, for instance, says its service covers workplace humidity, temperature and airflow but also measures the levels of specific gases like CO2](https://www.assurityconsulting.co.uk/knowledge/guides/what-should-the-temperature-be-in-the-workplace).
 
 [Refurbishment and maintenance specialist TPG says a typical situation is where a business with a mix of open-plan office, enclosed meeting rooms, a mid-range HVAC system set to automatically stay at 21°C, and workers who report feeling both too hot and too cold](https://www.tpgbuildingfm.co.uk/blog/office-temperature-autumn-winter/). It could be that individual units are “fighting” each other, creating temperature swings.
 
