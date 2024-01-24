@@ -9,7 +9,7 @@ standFirst: In the quest for optimal productivity and well-being within the
   Balancing temperature is crucial, as chilly conditions can hinder
   concentration, diverting energy, while overheating induces fatigue and
   irritability. Achieving the right atmosphere is key to fostering a healthy and
-  focused workspace
+  focused workspace.
 author: "Charlie Harris "
 tags:
   - Indoor
