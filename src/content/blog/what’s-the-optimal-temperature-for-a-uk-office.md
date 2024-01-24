@@ -76,25 +76,18 @@ The HSE says engineering controls are a key consideration. This could mean insta
 
 Rather than a control that individuals can keep adjusting, modern HVAC (heating, ventilation and air conditioning) systems can include programmable thermostats. And smart sensors can constantly monitor conditions including air temperature, humidity and CO2. These can make the office more comfortable and improve energy efficiency. 
 
-For instance, Pressac says its wireless and solar-powered CO2 sensors are easy to fit. These were used in a large multi-business office block in Paddington where the ventilation system was running at full speed all day. The sensors let it respond to the actual number of people in the office (and varying CO2 levels).\
-[LINK   \
-<https://www.pressac.com/case-studies/cavendish-engineers-co2-sensors/>   ]
+For instance, [Pressac says its wireless and solar-powered CO2 sensors are easy to fit](https://www.pressac.com/case-studies/cavendish-engineers-co2-sensors/). These were used in a large multi-business office block in Paddington where the ventilation system was running at full speed all day. The sensors let it respond to the actual number of people in the office (and varying CO2 levels).
 
-It’s also essential to set up a regular maintenance schedule for HVAC systems. A ventilation engineer can check the settings and whether working as designed. The Building Engineering Services Association has a list of accredited members. 
+It’s also essential to set up a regular maintenance schedule for HVAC systems. A ventilation engineer can check the settings and whether working as designed. [The Building Engineering Services Association has a list of accredited members](https://www.thebesa.com/the-besa-book).
 
-\[LINK    <https://www.thebesa.com/the-besa-book>   ]
+**Get professional advice**
 
-Get professional advice
+### Going further, an independent review by a specialist consultant could identify how to achieve optimal thermal comfort. [Assurity Consulting, for instance, says its service covers workplace humidity, temperature and airflow but also measures the levels of specific gases like CO2](https://www.assurityconsulting.co.uk/knowledge/guides/what-should-the-temperature-be-in-the-workplace).
 
-### Going further, an independent review by a specialist consultant could identify how to achieve optimal thermal comfort. Assurity Consulting, for instance, says its service covers workplace humidity, temperature and airflow but also measures the levels of specific gases like CO2.
+[Refurbishment and maintenance specialist TPG says a typical situation is where a business with a mix of open-plan office, enclosed meeting rooms, a mid-range HVAC system set to automatically stay at 21°C, and workers who report feeling both too hot and too cold](https://www.tpgbuildingfm.co.uk/blog/office-temperature-autumn-winter/). It could be that individual units are “fighting” each other, creating temperature swings.
 
-### \[LINK   <https://www.assurityconsulting.co.uk/knowledge/guides/what-should-the-temperature-be-in-the-workplace>  ]
+It suggests establishing a temperature “rule” of 19°C to 23°C and using heat-only and cool- only settings. For example, in colder months the system could be timed to come on before the office opens and off mid-morning, as body and equipment heat builds up.
 
-Refurbishment and maintenance specialist TPG says a typical situation is where a business with a mix of open-plan office, enclosed meeting rooms, a mid-range HVAC system set to automatically stay at 21°C, and workers who report feeling both too hot and too cold. It could be that individual units are “fighting” each other, creating temperature swings.
+**Manage expectations** 
 
-It suggests establishing a temperature “rule” of 19°C to 23°C and using heat-only and cool- only settings. For example, in colder months the system could be timed to come on before the office opens and off mid-morning, as body and equipment heat builds up. \
-\[LINK   <https://www.tpgbuildingfm.co.uk/blog/office-temperature-autumn-winter/>    ]
-
-Manage expectations 
-
-A minority of workers will probably always be more sensitive to temperature. Deciding on the optimal temperature range, clearly communicating it to workers, and encouraging them to report if they’re feeling uncomfortable, helps them to understand the issues involved and that their employer values their comfort.<https://www.cibse.org/knowledge-research/knowledge-portal/ctt8-cibse-top-tips-8-temperature-in-indoor-workplaces-thermal-comfort>
+A minority of workers will probably always be more sensitive to temperature. [Deciding on the optimal temperature range, clearly communicating it to workers, and encouraging them to report if they’re feeling uncomfortable, helps them to understand the issues involved and that their employer values their comfort](https://www.cibse.org/knowledge-research/knowledge-portal/ctt8-cibse-top-tips-8-temperature-in-indoor-workplaces-thermal-comfort).[](https://www.cibse.org/knowledge-research/knowledge-portal/ctt8-cibse-top-tips-8-temperature-in-indoor-workplaces-thermal-comfort)
