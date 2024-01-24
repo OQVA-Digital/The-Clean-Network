@@ -1,9 +1,9 @@
 ---
 title: "What’s the optimal temperature for a UK office? "
-description: "Many of us spend a significant part of our waking hours inside an
+description: Many of us spend a significant part of our waking hours inside an
   office and want to feel healthy and comfortable there. If it’s too cold
   concentration and cognition may drop off as the body redirects energy, while
-  overheating makes us tired and irritable. "
+  overheating makes us tired and irritable.
 standFirst: Many of us spend a significant part of our waking hours inside an
   office and want to feel healthy and comfortable there. If it’s too cold
   concentration and cognition may drop off as the body redirects energy, while
