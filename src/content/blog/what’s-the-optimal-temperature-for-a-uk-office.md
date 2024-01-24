@@ -45,47 +45,34 @@ It’s not just air temperature that affects whether people feel too hot or cold
 
 [The HSE’s downloadable checklist is a handy tool for assessing the level of thermal comfort in an office using six indicators](https://www.hse.gov.uk/temperature/thermal/index.htm#six_factors): air temperature, air speed and movement, humidity, radiant temperature from a heat source, and people’s metabolism and clothing.
 
-It advises using the checklist to ask workers for feedback around each indicator. If this process identifies a problem, it also suggests steps relating to the environment, people’s behaviour, and training and information. The Chartered Institution of Building Services Engineers (CIBSE) also offers practical tips. [LINKS:
+[It advises using the checklist to ask workers for feedback around each indicator](https://www.hse.gov.uk/temperature/employer/managing.htm). If this process identifies a problem, it also suggests steps relating to the environment, people’s behaviour, and training and information. [The Chartered Institution of Building Services Engineers (CIBSE) also offers practical tips](https://www.cibse.org/knowledge-research/knowledge-portal/ctt8-cibse-top-tips-8-temperature-in-indoor-workplaces-thermal-comfort).
 
-<https://www.cibse.org/knowledge-research/knowledge-portal/ctt8-cibse-top-tips-8-temperature-in-indoor-workplaces-thermal-comfort>   
+**Provide personal control**
 
-<https://www.hse.gov.uk/temperature/employer/managing.htm>   ]\
-\
-Provide personal control\
-Letting people adjust their own level of comfort can be as straightforward as relaxing a formal office dress code during a heatwave and providing a cold water dispenser or hot drinks machine. (With sustainability in mind, water coolers that use a fixed supply create less landfill waste and transportation emissions than standard refillable ones, according to University of Pittsburgh researchers.)
-
-\[LINK   <https://www.sustainable.pitt.edu/office-water-coolers/>    ]
+Letting people adjust their own level of comfort can be as straightforward as relaxing a formal office dress code during a heatwave and providing a cold water dispenser or hot drinks machine. With sustainability in mind, [water coolers that use a fixed supply create less landfill waste and transportation emissions than standard refillable ones, according to University of Pittsburgh researchers](https://www.sustainable.pitt.edu/office-water-coolers).
 
 ##### Offering portable heaters, desk fans and air conditioners is another option. The CIBSE says air movement is an important control: simply using a fan to increase it can have the same effect as turning the thermostat down by 2°C.  
 
-Use natural ventilation 
+**Use natural ventilation** 
 
-A cost-free tool for moderating temperature, get more fresh air circulating inside the office by checking that air vents and trickle vents on windows are open, and opening windows and doors (fire doors must be kept shut). In older buildings, windows may have been painted shut. Regular cleaning of key elements like vents and air ducts is essential. 
-
-\[LINK   <https://cleannetwork.co.uk/services/air-ducts-and-vents/>  ]
+A cost-free tool for moderating temperature, get more fresh air circulating inside the office by checking that air vents and trickle vents on windows are open, and opening windows and doors (fire doors must be kept shut). In older buildings, windows may have been painted shut. [Regular cleaning of key elements like vents and air ducts is essential](https://cleannetwork.co.uk/services/air-ducts-and-vents/). 
 
 If people are saying a meeting room is too warm, HSE recommends opening all the doors and windows during breaks – even 10 minutes an hour can help. 
 
-Look at windows\
+**Look at windows**\
 In many modern highly insulated offices with fixed windows the building retains heat to meet energy efficiency targets, which can lead to overheating in summer. Fitting blinds can reduce heat gain and glare, but at the cost of natural light and visibility. Alternatively, thin window films can reduce passive heat gain from solar radiation and can be fitted inside or outside. 
 
-An Italian study of one office building with over 1,000sqm of windows found that exterior film managed to lower the temperature inside by up to 5°C even though the aircon was switched off. 
+[An Italian study of one office building with over 1,000sqm of windows found that exterior film managed to lower the temperature inside by up to 5°C even though the aircon was switched off](https://www.cibsejournal.com/technical/film-studies-retrofitting-window-film/).
 
-\[LINK   <https://www.cibsejournal.com/technical/film-studies-retrofitting-window-film/>    ]
+[Manufacturer 3M provides a useful guide to choosing the most suitable solar film](https://whatwindowfilm.co.uk/how-window-films-work/). For example, the higher the TSER (total solar energy rejected) rating, the less heat is transmitted into the office. A higher U-value indicates better resistance to heat loss, which can keep the interior warmer in winter.
 
-Manufacturer 3M provides a useful guide to choosing the most suitable solar film. For example, the higher the TSER (total solar energy rejected) rating, the less heat is transmitted into the office. A higher U-value indicates better resistance to heat loss, which can keep the interior warmer in winter. 
-
-\[LINK    <https://whatwindowfilm.co.uk/how-window-films-work/>   ]
-
-Adapt the space
+**Adapt the space**
 
 If a significant number of people are still uncomfortable, businesses may need to make further changes like moving workstations further apart, or away from heat sources, reducing heat gain by installing low-energy lights, and insulating heat sources like pipes. 
 
-The HSE says engineering controls are a key consideration. This could mean installing large ceiling fans to boost air movement in bigger offices or bigger air conditioning units to cope with higher air temperatures and humidity. Draughts, smells and stuffiness can indicate poor ventilation. CO2 (carbon dioxide) monitors can help identify the specific source. The HSE has advice on using these in different office spaces. 
+The HSE says engineering controls are a key consideration. This could mean installing large ceiling fans to boost air movement in bigger offices or bigger air conditioning units to cope with higher air temperatures and humidity. Draughts, smells and stuffiness can indicate poor ventilation. CO2 (carbon dioxide) monitors can help identify the specific source. [The HSE has advice on using these in different office spaces](https://www.hse.gov.uk/ventilation/using-co2-monitors.htm#understanding).
 
-\[LINK     <https://www.hse.gov.uk/ventilation/using-co2-monitors.htm#understanding>   ]
-
-Smarter controls
+**Smarter controls**
 
 Rather than a control that individuals can keep adjusting, modern HVAC (heating, ventilation and air conditioning) systems can include programmable thermostats. And smart sensors can constantly monitor conditions including air temperature, humidity and CO2. These can make the office more comfortable and improve energy efficiency. 
 
