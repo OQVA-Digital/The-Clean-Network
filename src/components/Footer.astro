@@ -1,7 +1,24 @@
 ---
+
 import InfoBox from "./InfoBox.astro";
 
 import { FOOTER_DESCRIPTION, STREET, POSTAL_CODE, TEL } from "../consts";
+
+import { getCollection } from 'astro:content';
+
+const locations = (await getCollection('locations')).sort((a, b) => {
+    // Check if both items have an 'order' property
+    if (a.data.order !== undefined && b.data.order !== undefined) {
+        return a.data.order - b.data.order; // Sort by 'order' if both have it
+    } else if (a.data.order !== undefined) {
+        return -1; // 'a' has 'order', but 'b' doesn't, so 'a' comes first
+    } else if (b.data.order !== undefined) {
+        return 1; // 'b' has 'order', but 'a' doesn't, so 'b' comes first
+    } else {
+        // Both 'a' and 'b' don't have 'order', fallback to sorting by 'title'
+        return a.data.addressTitle.localeCompare(b.data.addressTitle);
+    }
+});
 ---
 
 <footer>
@@ -23,18 +40,36 @@ import { FOOTER_DESCRIPTION, STREET, POSTAL_CODE, TEL } from "../consts";
         </div>
 
         <nav>
-            <a href="/"><span></span>Home</a>
-            <a href="/services/"><span></span>Services</a>
-            <a href="/sectors/"><span></span>Sectors</a>
-            <a href="/blog/"><span></span>Blog</a>
-            <a href="/locations/"><span></span>Location</a>
-            <a href="/about/"><span></span>About</a>
-            <a href="/team/"><span></span>Our Team</a>
-            <a href="/FAQ/"><span></span>FAQ</a>
-            <a href="/contact/"><span></span>Contact</a>
-            <a href="/privacy-policy/"><span></span>Privacy Policy</a>
-            <a href="/jobs/"><span></span>Work with us</a>
+            <a href="/">Home</a>
+            <a href="/services/">Services</a>
+            <a href="/sectors/">Sectors</a>
+            <a href="/blog/">Blog</a>
+            <a href="/locations/">Location</a>
+            <a href="/about/">About</a>
+            <a href="/team/">Our Team</a>
+            <a href="/FAQ/">FAQ</a>
+            <a href="/contact/">Contact</a>
+            <a href="/privacy-policy/">Privacy Policy</a>
+            <a href="/jobs/">Work with us</a>
         </nav>
+
+        <div class="locations_nav">
+            <p class="title">Locations</p>
+
+            <div class="list">
+                {
+                    locations.slice(0, 6).map((location) => (
+                    <>
+                    <a href={`/locations/${location.slug}`} aria-label={`Read more about ${location.data.addressTitle}`}>
+                        {location.data.addressTitle}
+                    </a>
+                    </>
+                    ))
+                }
+            </div>
+
+            <a href="/locations/" class="sub_cta">Check All Locations</a>
+        </div>
 
         <div>
             <InfoBox />
@@ -57,7 +92,7 @@ import { FOOTER_DESCRIPTION, STREET, POSTAL_CODE, TEL } from "../consts";
         background-color: var(--dark);
         color: var(--light);
         padding: clamp(4rem, 13vw, 7rem) 0;
-        font-size: clamp(1rem,3.9vmin,1.6rem);
+        font-size: clamp(1rem,3.9vmin,1.5rem);
         line-height: 1.5;
     }
 
@@ -66,7 +101,7 @@ import { FOOTER_DESCRIPTION, STREET, POSTAL_CODE, TEL } from "../consts";
         margin-inline: auto;
         display: flex;
         flex-flow: row wrap;
-        gap: clamp(3rem,10vw,18rem);
+        gap: clamp(3rem,10vmin,18rem) clamp(3rem,10vw,18rem);
     }
 
     footer .content {
@@ -98,7 +133,7 @@ import { FOOTER_DESCRIPTION, STREET, POSTAL_CODE, TEL } from "../consts";
         font-weight: 400;
     }
 
-    footer nav {
+    footer nav, .locations_nav .list {
         display: flex;
         flex-flow: row wrap;
         gap: 0.9rem 2rem;
@@ -106,7 +141,7 @@ import { FOOTER_DESCRIPTION, STREET, POSTAL_CODE, TEL } from "../consts";
         max-width: 35vmax;
     }
 
-    footer nav a {
+    footer nav a, .locations_nav .list a {
         display: flex;
         align-items: center;
         gap:1rem;
@@ -114,7 +149,8 @@ import { FOOTER_DESCRIPTION, STREET, POSTAL_CODE, TEL } from "../consts";
         letter-spacing: 0.06rem;
     }
 
-    footer nav a span {
+    footer nav a::before, .locations_nav .list a::before {
+        content:'';
         display: block;
         border-bottom: 0.5rem solid var(--grey);
         border-right: 0.5rem solid var(--grey);
@@ -124,20 +160,20 @@ import { FOOTER_DESCRIPTION, STREET, POSTAL_CODE, TEL } from "../consts";
         transition: border 0.4s ease;
     }
 
-    footer nav a:hover span {
+    footer nav a:hover::before, .locations_nav .list a:hover::before {
         border-bottom: 0.5rem solid var(--highlight);
         border-right: 0.5rem solid var(--highlight);
         transition: border 0s ease;
     }
 
     .nap_data {
-        opacity: 0.6;
-        font-weight: 300;
+        font-weight: 400;
         font-size: 0.9em;
         letter-spacing: 0.1rem;
         display: flex;
         flex-direction: column;
         gap: 0.4rem;
+        color: var(--grey);
     }
 
     hr {
@@ -147,10 +183,39 @@ import { FOOTER_DESCRIPTION, STREET, POSTAL_CODE, TEL } from "../consts";
         background-color: rgb(248 248 255 / 10%);
     }
 
+    .locations_nav {
+
+    }
+
+    .locations_nav .title {
+        font-weight: 400;
+        font-size: 1.6rem;
+        color: var(--grey);
+    }
+
+    .locations_nav .list {
+        margin-block: 0.9rem 1.8rem;
+    }
+
+    .locations_nav .list a {
+
+    }
+
+    .sub_cta {
+        background-color: var(--dark-a);
+        padding: 0.6rem 1rem;
+        border-radius: 0.3rem;
+        border: 0.1rem solid var(--dark-a);
+    }
+
+    .sub_cta:hover {
+        background-color: var(--dark);
+    }
+
     
 	@media screen and (min-width: 850px) {
 
-        footer nav {
+        footer nav, .locations_nav .list {
             flex-direction: column;
         }
 

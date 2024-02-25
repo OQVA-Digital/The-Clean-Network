@@ -1,0 +1,244 @@
+.map {
+    position: sticky;
+    top:clamp(1rem,16vmin,7.5rem);
+    height: 100vh;
+    height: 100lvh;
+    background-color: var(--light-d);
+    /* position: relative; */
+    border-top: 0.3rem solid var(--light);
+    /* box-shadow: 0 -1rem 3rem -1rem var(--light-b); */
+    background-image: url(/textures/dot-grid.jpg);
+    background-image: image-set(url(/textures/dot-grid.jpg) , url(/textures/dot-grid.webp) );
+    background-size: 40rem;
+}
+
+.heading_ctnr .locations_list {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem 1rem;
+    margin-block: 2rem 1rem;
+}
+
+.heading_ctnr .locations_list li {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--primary-e);
+}
+
+.heading_ctnr .locations_list li a {
+    padding: 0.4rem 1.1rem;
+    background-color: var(--light);
+    border-radius: 0.4rem;
+    border: 0.2rem solid var(--light-a);
+    transition: background-color 0.6s ease, border-color 0.6s ease;
+    -webkit-transition: background-color 0.6s ease, border-color 0.6s ease;
+    -moz-transition: background-color 0.6s ease, border-color 0.6s ease;
+    -ms-transition: background-color 0.6s ease, border-color 0.6s ease;
+    -o-transition: background-color 0.6s ease, border-color 0.6s ease;
+    box-shadow: 0 0.9rem 1.4rem -1.2rem var(--primary-e);
+}
+
+.heading_ctnr .locations_list li a:hover {
+    background-color: var(--light-a);
+    border-color: var(--light);
+    transition: background-color 0.1s ease, border-color 0.1s ease;
+    -webkit-transition: background-color 0.1s ease, border-color 0.1s ease;
+    -moz-transition: background-color 0.1s ease, border-color 0.1s ease;
+    -ms-transition: background-color 0.1s ease, border-color 0.1s ease;
+    -o-transition: background-color 0.1s ease, border-color 0.1s ease;
+}
+
+.heading_ctnr address {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem 1rem;
+    font-size: clamp(1.3rem,3.5vmin,1.5rem);
+    line-height: 1.45;
+    font-weight: 450;
+    color: var(--grey-a);
+    margin-block: 1rem 0;
+    width: fit-content;
+    margin-inline: auto;
+    position: relative;
+    border-radius: 1.5rem;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    -ms-border-radius: 1.5rem;
+    -o-border-radius: 1.5rem;
+}
+
+.heading_ctnr address span {
+    flex:1;
+}
+
+.heading_ctnr address svg {
+    width: 2.5rem;
+    color: var(--primary-a);
+}
+
+.heading_ctnr address b, .heading_ctnr address strong {
+    font-weight: 500;
+}
+
+.map::after {
+    content: "Loading map...";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    z-index: 1;
+    display: inline-block;
+    color: var(--primary-a);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+}
+
+.contact_box_ctnr {
+    color: var(--light);
+    background-color: var(--grey-b);
+    backdrop-filter: blur(0.3rem);
+    width: fit-content;
+    padding: 2rem 3rem;
+    border-radius: 0.6rem;
+}
+
+.iframe_ctnr {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+}
+
+.bottom_info {
+    position: relative;
+    z-index: 2;
+    padding: 4rem 4rem 4rem 4rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.area_covered {
+    font-size: 1.5rem;
+    position: relative;
+    display: flex;
+    gap: 0.8rem;
+    flex-flow: row wrap;
+    font-size: clamp(1.2rem, 3.2vw, 1.3rem);
+    flex: 1;
+    align-items: center;
+    height: fit-content;
+    max-width: 90rem;
+}
+
+.area_covered::before {
+    content: "Next to:";
+    background-color: var(--primary-e);
+    color: var(--light);
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+    border: 0.1rem solid var(--light);
+}
+
+.area_covered li {
+    background-color: rgb(248 248 255 / 65%);
+    color: var(--grey-b);
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+    font-weight: 500;
+    backdrop-filter: blur(0.2rem);
+    -webkit-backdrop-filter: blur(0.2rem);
+    border: 0.1rem solid var(--light-a);
+}
+
+.contact_ctnr {
+    /* box-shadow: 0 -10rem 12rem -7rem var(--light-b); */
+    position: relative;
+}
+
+.component_ctnr {
+    display: flex;
+    transform: translateY(50%);
+    position: relative;
+    z-index: 3;
+}
+
+.location_text {
+    position: relative;
+    background-color: var(--light-d);
+    padding-block: 6rem;
+    box-shadow: 0 -8vmin 10rem 3rem #4d637b9c;
+}
+
+.location_text .content {
+    width: clamp(9rem, 86vw, 101rem);
+    margin-inline: auto;
+    max-width: 100%;
+    font-size: clamp(1rem, 4vw, 1.7rem);
+    line-height: 1.6;
+    color: var(--grey-b);
+    font-weight: 400;
+}
+
+.location_text .content p {
+    margin-bottom: 1rem;
+}
+
+.location_text .content b, .location_text .content strong {
+    font-weight: 450;
+    color: var(--primary-a);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:850px) {
+    .map {
+        /* position: sticky;
+        top:clamp(1rem,16vmin,7.5rem); */
+        border-top: unset;
+    }
+
+    .iframe_ctnr {
+        height: calc(100% - var(--header-height));
+    }
+
+    .contact_box_ctnr {
+        transform:unset;
+    }
+    
+    .bottom_info {
+        flex-flow: row wrap;
+        align-items: flex-end;
+        position: sticky;
+        bottom:0;
+    }
+    
+}

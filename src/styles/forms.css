@@ -71,8 +71,8 @@
     input, textarea, select {
         padding: clamp(0.8rem, 1vw, 1rem);
         border-radius: 0.6rem;
-        border: 0.2rem solid var(--light-a);
-        background-color: var(--light-a);
+        border: 0.2rem solid var(--light-d);
+        background-color: var(--light-d);
         font-size: 1em;
         box-sizing: border-box;
         display: block;
