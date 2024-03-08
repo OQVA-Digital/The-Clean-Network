@@ -10,8 +10,6 @@ import ContactSection from "../../components/ContactSection.astro"
 import InfoBox from '../../components/InfoBox.astro';
 import BackBt from '../../components/BackBt.astro';
 
-import { LOCATIONS_TITLE, LOCATIONS_DESCRIPTION, LOCATIONS_KEYWORDS, LOCATIONS_H1, LOCATIONS_INTRO_DESCRIPTION } from "../../consts";
-
 export async function getStaticPaths() {
     const location = await getCollection("locations");
     return location.map((location) => ({
@@ -27,6 +25,8 @@ const location = Astro.props;
 import BenefitsSection from "../../components/BenefitsSection.astro";
 import LocationIcon from "../../components/svg/Location.astro"
 
+import { TEL, TEL_HREF, EMAIL } from '../../consts'
+
 ---
 
 <BaseLayout title={location.data.documentTitle} description={location.data.metaDescription} keywords={location.data.keywords} endContactSection="false">
@@ -35,10 +35,13 @@ import LocationIcon from "../../components/svg/Location.astro"
         
         <div class="heading_ctnr squares_bg">
             <div class="content reveal">
-                <address>
-                    <LocationIcon/>
-                    <span set:html={location.data.completeAddress}></span>
-                </address>
+
+                {location.data.completeAddress ? (
+                    <address>
+                        <LocationIcon/>
+                        <span set:html={location.data.completeAddress}></span>
+                    </address>
+                ) : ""}
 
                 <h1 set:html={location.data.mainHeading}></h1>
 
@@ -55,18 +58,28 @@ import LocationIcon from "../../components/svg/Location.astro"
         <div class="bottom_info">
             <ul class="area_covered" set:html={location.data.areaCoveredBulletList.map(function(item) {
                 return '<li>' + item + '</li>';
-              })}></ul>
+              })}>
+            <li class="intro">These are some of the areas where we can provide office cleaning services:</li>  
+            </ul>
               
             <div class="contact_box_ctnr">
                 <InfoBox />
             </div>
         </div>
 
-        <section class="location_text">
-            <div class="content" set:html={location.data.panelCopy}></div>
+        <section class="content_panel text">
+            <div class="content" set:html={location.data.panel1Copy}></div>
         </section>
 
         <BenefitsSection/>
+
+        <section class="content_panel cta">
+            <div class="content">
+                <p>To discuss your office cleaning service, contact us on <a href={`tel:${TEL_HREF}`}>{TEL}</a> or <a href=`mailto:${EMAIL}`>{EMAIL}</a> or click below for a free quote.</p>
+
+                <a href="/contact/" class="cta">Get quote</a>
+            </div>
+        </section>
 
         <div class="contact_ctnr">
             <ContactSection/>

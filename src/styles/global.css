@@ -337,7 +337,7 @@ picture img {
     -o-transition: filter 0.1s ease;
 }
 
-.cta {
+a.cta, button.cta {
     display: block;
     padding: clamp(1rem, 4vw, 1.5rem) clamp(1rem, 5vw, 2.5rem);
     border: 0.2rem solid;
@@ -351,12 +351,12 @@ picture img {
     -o-border-radius: 0.4rem;
 }
 
-.cta:hover {
+a.cta:hover, button.cta:hover {
     filter:brightness(1.1);
     transition: filter 0.1s ease;
 }
 
-.cta.light {
+a.cta.light, button.cta.light {
     text-shadow: unset;
 }
 

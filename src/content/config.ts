@@ -98,7 +98,7 @@ const locationsCollection = defineCollection({
         areaCoveredBulletList: z.array(z.string()).optional(),
         mainHeading:z.string().optional(),
         introText:z.string().optional(),
-        panelCopy:z.string().optional(),
+        panel1Copy:z.string().optional(),
         mapEmbed: z.string().optional(),
     }),
 });

@@ -181,7 +181,7 @@ h2::after {
 
 .heading_ctnr h1 {
     font-size: clamp(1rem, 8.5vmin, 5.5rem);
-    color: var(--primary-a);
+    color: var(--primary-e);
     /* max-width: 105rem; */
     margin-inline: auto;
 }
@@ -189,9 +189,9 @@ h2::after {
 .heading_ctnr p {
     display: block;
     margin-inline: auto;
-    width: clamp(9rem, 89vw, 125rem);
-    font-size: clamp(1.5rem,4vmin,1.9rem);
-    line-height: 1.45;
+    width: clamp(9rem, 89vw, 122rem);
+    font-size: clamp(1.5rem, 4vmin, 1.7rem);
+    line-height: 1.5;
     font-weight: 400;
     color: var(--grey-b);
 }

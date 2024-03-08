@@ -128,33 +128,39 @@
 }
 
 .area_covered {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     position: relative;
     display: flex;
     gap: 0.8rem;
     flex-flow: row wrap;
-    font-size: clamp(1.2rem, 3.2vw, 1.3rem);
+    font-size: clamp(1.2rem, 3.5vw, 1.5rem);
     flex: 1;
     align-items: center;
     height: fit-content;
     max-width: 90rem;
+    background-color: var(--light-d);
+    padding: 2rem clamp(2rem, 3vw, 3rem);
+    border-radius: 0.6rem;
+    border: 0.2rem solid var(--light);
+    box-shadow: 0 1rem 2rem -1rem var(--light-b);
 }
 
-.area_covered::before {
-    content: "Next to:";
-    background-color: var(--primary-e);
-    color: var(--light);
-    padding: 0.4rem 0.8rem;
+.area_covered .intro {
     border-radius: 0.3rem;
     -webkit-border-radius: 0.3rem;
     -moz-border-radius: 0.3rem;
     -ms-border-radius: 0.3rem;
     -o-border-radius: 0.3rem;
-    border: 0.1rem solid var(--light);
+    font-weight: 500;
+    color: var(--primary-a);
+    padding: unset;
+    font-size: 1.1em;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    border-color: transparent;
 }
 
 .area_covered li {
-    background-color: rgb(248 248 255 / 65%);
     color: var(--grey-b);
     padding: 0.4rem 0.8rem;
     border-radius: 0.3rem;
@@ -163,9 +169,7 @@
     -ms-border-radius: 0.3rem;
     -o-border-radius: 0.3rem;
     font-weight: 500;
-    backdrop-filter: blur(0.2rem);
-    -webkit-backdrop-filter: blur(0.2rem);
-    border: 0.1rem solid var(--light-a);
+    border:0.2rem solid var(--light);
 }
 
 .contact_ctnr {
@@ -180,30 +184,94 @@
     z-index: 3;
 }
 
-.location_text {
-    position: relative;
-    background-color: var(--light-d);
-    padding-block: 6rem;
+.bottom_info + .content_panel {
     box-shadow: 0 -8vmin 10rem 3rem #4d637b9c;
 }
 
-.location_text .content {
-    width: clamp(9rem, 86vw, 101rem);
+.content_panel {
+    position: relative;
+    background-color: var(--light-d);
+    padding-block: 6rem;
+}
+
+.content_panel .content {
+    width: clamp(9rem, 86vw, 115rem);
     margin-inline: auto;
     max-width: 100%;
-    font-size: clamp(1rem, 4vw, 1.7rem);
     line-height: 1.6;
-    color: var(--grey-b);
     font-weight: 400;
 }
 
-.location_text .content p {
+.content_panel.text .content {
+    font-size: clamp(1rem, 4vw, 1.8rem);
+    color: var(--grey-b);
+}
+
+.content_panel.cta {
+    background-color: var(--primary-e);
+    text-align: center;
+    background-image: url(/images/blur01.jpg);
+    background-image: image-set(url(/images/blur01.webp), url(/images/blur01.jpg));
+    background-size: cover;
+    background-position: center;
+}
+
+.content_panel.cta .content {
+    font-size: clamp(1rem, 5.1vw, 2.8rem);
+    color: var(--light);
+    font-weight: 450;
+}
+
+.content_panel.cta .content p a {
+    background-color: var(--primary-e);
+    text-decoration: unset;
+    padding: 0.2rem 1rem;
+    border-radius: 0.4rem;
+    white-space: nowrap;
+    transition:background-color 0.4s ease;
+    -webkit-transition:background-color 0.4s ease;
+    -moz-transition:background-color 0.4s ease;
+    -ms-transition:background-color 0.4s ease;
+    -o-transition:background-color 0.4s ease;
+}
+
+.content_panel.cta .content p a:hover {
+    background-color: var(--primary-d);
+    transition:background-color 0s ease;
+    -webkit-transition:background-color 0s ease;
+    -moz-transition:background-color 0s ease;
+    -ms-transition:background-color 0s ease;
+    -o-transition:background-color 0s ease;
+}
+
+
+.content_panel.cta a.cta {
+    width: fit-content;
+    margin-inline: auto;
+    padding: 1.5rem 3rem;
+    background-color: var(--light);
+    font-size: clamp(1.5rem, 5vmin, 2rem);
+    margin-top: 2rem;
+    border: unset;
+    color: var(--primary-a);
+    text-shadow: unset;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.content_panel .content p {
     margin-bottom: 1rem;
 }
 
-.location_text .content b, .location_text .content strong {
-    font-weight: 450;
-    color: var(--primary-a);
+.content_panel .content h2 {
+    font-size: clamp(1rem, 9vw, 5rem);
+    color: var(--primary-e);
+    margin-bottom: 1rem;
+}
+
+.content_panel .content b, .content_panel .content strong {
+    font-weight: 500;
+    color: var(--grey-b);
 }
 
 
@@ -241,4 +309,7 @@
         bottom:0;
     }
     
+    .area_covered .intro {
+        margin-bottom: unset;
+    }
 }

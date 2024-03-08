@@ -314,9 +314,9 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "locations": {
-"city-shoreditch.md": {
-	id: "city-shoreditch.md";
-  slug: "city-shoreditch";
+"city-of-london-and-shoreditch.md": {
+	id: "city-of-london-and-shoreditch.md";
+  slug: "city-of-london-and-shoreditch";
   body: string;
   collection: "locations";
   data: InferEntrySchema<"locations">
