@@ -14,6 +14,7 @@ collections:
     folder: "src/content/blog"
     create: true
     slug: "{{slug}}"
+    preview_path: blog/{{slug}}
     fields:
       - {label: "Document Title", name: "documentTitle", widget: "string", required: false}
       - {label: "Meta Description", name: "metaDescription", widget: "string", pattern: ['^.{0,155}$', "155 characters maximum"], required: false}
