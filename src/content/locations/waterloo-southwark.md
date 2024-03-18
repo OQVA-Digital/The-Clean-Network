@@ -1,25 +1,29 @@
 ---
 order: 5
-documentTitle: "Office Cleaning in Waterloo & Southwark - The Clean Network"
+documentTitle: "Waterloo and Southwark Office Cleaning - The Clean Network"
 metaDescription: ""
 keywords: ""
-addressTitle: "Waterloo Southwark"
-completeAddress: "Donec ornare elementum lacus sed varius. Nulla aliquet elementum ultrices."
+addressTitle: "Waterloo and Southwark"
+completeAddress: ""
 areaCoveredBulletList: 
-    - Barbican Center
-    - St. Giles Cripplegate Church
-    - Museum of London
-    - Barbican Station
-    - Barbican Estate
-    - Golden Lane Estate
-    - Smithfield Market
-    - Finsbury Circus Gardens
-mainHeading: "Waterloo & Southwark Office Cleaning"
-introText: "Donec efficitur eros sit amet nisi pulvinar, eu malesuada nunc elementum. Integer convallis dapibus nibh bibendum dapibus. Maecenas tristique velit orci, vel lacinia eros posuere auctor."
-panel1Copy: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lobortis vitae nulla a mattis. <b>Ut eget neque rutrum elit dictum euismod.</b> Vivamus tristique metus at diam malesuada placerat. In consectetur volutpat quam venenatis cursus. <strong>Aliquam semper maximus magna, id malesuada est pharetra congue.</strong> Donec vitae hendrerit risus. Duis massa quam, vulputate in gravida varius, interdum sit amet ligula.</p>
+    - Bankside
+    - Borough Market
+    - London Bridge
+    - South Bank
+    - Waterloo East
+mainHeading: "Waterloo & Southwark"
+introText: "<p>At The Clean Network we believe it’s a privilege to provide <strong>office cleaning services to businesses in one of London’s most creative and culturally rich districts</strong>, where on any given day you can choose between Shakespeare, poetry, street art, cinema, stand-up comedy, cutting-edge theatre, design and art exhibitions, classical and modern music, and more. From internationally respected institutions like the National Theatre and Royal Festival Hall to the vividly graffiti’d “Banksy Tunnel”, Waterloo and the South Bank’s landscape is both brutalist and brightly coloured, and always energised.</p>
 
-<p>Aenean nec sem tempor, venenatis ipsum faucibus, feugiat leo. Proin scelerisque gravida sodales. <b>Phasellus eu magna et est posuere lacinia vitae id lectus. Mauris ullamcorper porttitor tortor at tempor. In finibus erat urna, at dictum tortor elementum nec.</b> Mauris quam erat, suscipit at ultricies eget, hendrerit et augue. Nullam libero nunc, pellentesque a vehicula ut, mattis vel dui. Ut lobortis venenatis nibh eu iaculis. Etiam interdum metus vel faucibus eleifend. Curabitur porta risus lectus, et maximus orci ultricies et. <b>Aenean pretium erat tellus, eget malesuada dui tincidunt at.</b> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</p>
+<p>Only a short walk away, Southwark’s centuries of heritage has yielded both the Globe Theatre and the magnificent post-industrial Tate Modern, while more recent architectural daring added the iconic London Eye, the old City Hall and the colossal “vertical city” that is the Shard to this incredible slice of London’s cityscape. <b>At ground level, visitors and locals flock to Borough Market for incredible food, and the unique bars, shops and galleries of Bermondsey Street.</b></p>
 
-<p>Nunc interdum nibh vitae laoreet finibus. Integer maximus enim eu lacus gravida luctus. <strong>Suspendisse non dignissim libero</strong>. Suspendisse tempor pellentesque est, nec rhoncus tortor auctor id. Integer fermentum leo at justo aliquet, ac molestie est blandit. <strong>Donec facilisis, turpis vel facilisis mattis, est nisl gravida nulla, vitae feugiat mauris urna ut dui.</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae augue a turpis dignissim tristique vitae ac sem. Maecenas facilisis felis enim, ut tristique justo elementum at. Curabitur aliquam eu turpis vel pretium. Quisque sit amet rhoncus nisi. Maecenas eros leo, malesuada ut mi et, facilisis euismod dolor.</p>"
-mapEmbed: "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.6187022976887!2d-0.09636132342258465!3d51.520211009767515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b56fb64b275%3A0xc756e26675d21f40!2sBarbican%20Centre!5e0!3m2!1sen!2sbr!4v1707155976051!5m2!1sen!2sbr' height='100%' width='100%' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
+<p><b>As a valued client in Waterloo and Southwark, you can rely on interior and exterior office cleaning services that are simple and flexible.</b> That means proactive support plus cleaning operatives whose attention to detail ensures a fresh and pleasant environment where your people can focus on what they do best.</p> 
+"
+panel1Copy: "<p>With long experience in office cleaning services, we understand the specific needs of the many different sectors with a presence in Waterloo and Southwark, including property investment, architecture, finance, and tech and software development.</p>
+
+<p><b>Not surprisingly, film and television production, creative design, and marketing and branding are strongly represented.</b> This includes major media corporations like ITV and News Corp UK, based in Bankside’s Blue Fin building. This striking blue-toned is one of many new developments to combine traditional and flexible office space in the area, which now offers many sizeable new builds in addition to its period warehouses and industrial structures and traditional office blocks.</p>
+
+<p>Future plans include a <b>revitalization of City Hall for mixed use</b> and the massive <b>One Waterloo project</b> including significant office space and a new pedestrianised street – The Curve – plus the development of a major life sciences hub for biotech and biomedical specialists.</p>
+
+<p>Our long experience in providing office cleaning services in the West End, Soho and nearby areas means we can handle the specific needs of start-ups, established businesses, and corporates, whatever the sector.</p>"
+mapEmbedSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2483.5973371936807!2d-0.11259928785812706!3d51.50225631096163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTHCsDMwJzA4LjEiTiAwwrAwNiczNi4xIlc!5e0!3m2!1sen!2sbr!4v1710795987897!5m2!1sen!2sbr"
 ---

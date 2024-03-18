@@ -1,25 +1,29 @@
 ---
 order: 3
-documentTitle: "Office Cleaning in Soho & the West End - The Clean Network"
+documentTitle: "Soho and the West End Office Cleaning - The Clean Network"
 metaDescription: ""
 keywords: ""
-addressTitle: "Soho West End"
-completeAddress: "Donec ornare elementum lacus sed varius. Nulla aliquet elementum ultrices."
+addressTitle: "Soho and the West End"
+completeAddress: ""
+mainHeading: "Soho and the West End"
+introText: "<p>At The Clean Network we believe it’s a privilege to provide office cleaning services to businesses in some of London’s liveliest, entertainment-packed districts. As well as tourism meccas of Piccadilly Circus and Leicester Square, the West End is a colourful mosaic of luxe and high street retail brands on Bond Street, Oxford Street and Marylebone High Street and eclectic boutiques on Carnaby Street and Covent Garden Market. Tourists and locals are drawn to the buzz of Chinatown and Soho’s bar and restaurant scene, and cultural opportunities abound, from theatreland to galleries and museums of Bloomsbury.</p>
+
+<p>As a valued client in the West End and Soho, you can rely on interior and exterior office cleaning service that are simple and flexible. That means proactive support plus cleaning operatives whose attention to detail ensures a fresh and pleasant environment where your people can focus on what they do best.</p>"
+panel1Copy: "<h2>Where & who for</h2>
+
+<p>The Clean Network is able to support a range of businesses across the West End, from Mayfair over to Covent Garden and Holborn. Elegant converted period houses are a hallmark of these areas but there are also plenty of purpose-built office blocks and smart, modern co-working spaces. Landmark new developments include Lucent, set behind the world-famous Piccadilly Lights and the mixed-use Soho Place complex above Tottenham Court Road with its sky garden.</p>
+
+<p>Media, entertainment and creative sectors have long been well represented in Soho, while tech and IT are growing their presence. More recently the area has seen a noticeable increase in financial companies including private capital and hedge fund specialists. In contrast, Bloomsbury has a concentration of academic expertise in its world-beating universities and institutions like the British Museum and the Royal College of Physicians.</p>
+
+<p>Proximity to the Royal Courts of Justice mean legal firms proliferate around Holborn, while Marylebone is well known for private medical specialists in Harley Street. But throughout these neighbourhoods the supply of co-working offices has generated a highly varied business community.</p>
+
+<p>Our long experience in providing office cleaning services in the West End, Soho and nearby areas means we can handle the specific needs of start-ups, established businesses, and corporates, whatever the sector. 
+</p>"
 areaCoveredBulletList: 
-    - Barbican Center
-    - St. Giles Cripplegate Church
-    - Museum of London
-    - Barbican Station
-    - Barbican Estate
-    - Golden Lane Estate
-    - Smithfield Market
-    - Finsbury Circus Gardens
-mainHeading: "Soho & the West End Office Cleaning"
-introText: "Donec efficitur eros sit amet nisi pulvinar, eu malesuada nunc elementum. Integer convallis dapibus nibh bibendum dapibus. Maecenas tristique velit orci, vel lacinia eros posuere auctor."
-panel1Copy: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lobortis vitae nulla a mattis. <b>Ut eget neque rutrum elit dictum euismod.</b> Vivamus tristique metus at diam malesuada placerat. In consectetur volutpat quam venenatis cursus. <strong>Aliquam semper maximus magna, id malesuada est pharetra congue.</strong> Donec vitae hendrerit risus. Duis massa quam, vulputate in gravida varius, interdum sit amet ligula.</p>
-
-<p>Aenean nec sem tempor, venenatis ipsum faucibus, feugiat leo. Proin scelerisque gravida sodales. <b>Phasellus eu magna et est posuere lacinia vitae id lectus. Mauris ullamcorper porttitor tortor at tempor. In finibus erat urna, at dictum tortor elementum nec.</b> Mauris quam erat, suscipit at ultricies eget, hendrerit et augue. Nullam libero nunc, pellentesque a vehicula ut, mattis vel dui. Ut lobortis venenatis nibh eu iaculis. Etiam interdum metus vel faucibus eleifend. Curabitur porta risus lectus, et maximus orci ultricies et. <b>Aenean pretium erat tellus, eget malesuada dui tincidunt at.</b> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</p>
-
-<p>Nunc interdum nibh vitae laoreet finibus. Integer maximus enim eu lacus gravida luctus. <strong>Suspendisse non dignissim libero</strong>. Suspendisse tempor pellentesque est, nec rhoncus tortor auctor id. Integer fermentum leo at justo aliquet, ac molestie est blandit. <strong>Donec facilisis, turpis vel facilisis mattis, est nisl gravida nulla, vitae feugiat mauris urna ut dui.</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae augue a turpis dignissim tristique vitae ac sem. Maecenas facilisis felis enim, ut tristique justo elementum at. Curabitur aliquam eu turpis vel pretium. Quisque sit amet rhoncus nisi. Maecenas eros leo, malesuada ut mi et, facilisis euismod dolor.</p>"
-mapEmbed: "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.6187022976887!2d-0.09636132342258465!3d51.520211009767515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b56fb64b275%3A0xc756e26675d21f40!2sBarbican%20Centre!5e0!3m2!1sen!2sbr!4v1707155976051!5m2!1sen!2sbr' height='100%' width='100%' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
+    - Bloomsbury
+    - Covent Garden
+    - Holborn
+    - Marylebone
+    - Mayfair
+mapEmbedSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d9932.296100911115!2d-0.13742672698990901!3d51.51185790332307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTHCsDMwJzQyLjYiTiAwwrAwNyczNy43Ilc!5e0!3m2!1sen!2sbr!4v1710787962896!5m2!1sen!2sbr"
 ---

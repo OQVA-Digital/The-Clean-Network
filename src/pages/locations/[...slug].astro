@@ -24,6 +24,7 @@ const location = Astro.props;
 
 import BenefitsSection from "../../components/BenefitsSection.astro";
 import LocationIcon from "../../components/svg/Location.astro"
+import CTASection1 from '../../components/CTASection1.astro'
 
 import { TEL, TEL_HREF, EMAIL } from '../../consts'
 
@@ -52,7 +53,9 @@ import { TEL, TEL_HREF, EMAIL } from '../../consts'
         <div class="map">
             <noscript>You need to enable JavaScript on your browser to see this content.</noscript>
             
-            <div class="iframe_ctnr" set:html={location.data.mapEmbed}></div>
+            <div class="iframe_ctnr">
+                <iframe src={location.data.mapEmbedSrc} width='100%' height='100%' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>
+            </div>
         </div>
 
         <div class="bottom_info">
@@ -71,15 +74,9 @@ import { TEL, TEL_HREF, EMAIL } from '../../consts'
             <div class="content" set:html={location.data.panel1Copy}></div>
         </section>
 
-        <BenefitsSection/>
+        <BenefitsSection type="locations"/>
 
-        <section class="content_panel cta">
-            <div class="content">
-                <p>To discuss your office cleaning service, contact us on <a href={`tel:${TEL_HREF}`}>{TEL}</a> or <a href=`mailto:${EMAIL}`>{EMAIL}</a> or click below for a free quote.</p>
-
-                <a href="/contact/" class="cta">Get quote</a>
-            </div>
-        </section>
+        <CTASection1/>
 
         <div class="contact_ctnr">
             <ContactSection/>

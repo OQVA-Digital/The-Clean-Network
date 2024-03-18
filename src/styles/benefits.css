@@ -3,7 +3,7 @@
 .benefits {
     position: relative;
     background-color: var(--light);
-    padding: clamp(3rem, 15vmin, 11rem) 0 clamp(3rem, 11vmin, 7rem);
+    padding: clamp(3rem, 15vmin, 7rem) 0 clamp(3rem, 11vmin, 8rem);
     color: var(--grey-a);
     font-size: clamp(1.5rem, 4vmin, 2.2rem);
 }
@@ -43,6 +43,9 @@
 }
 
 .benefits .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: clamp(27rem, 69vw, 33rem);
     text-align: center;
     padding: 3rem 2.5rem 2.5rem;
@@ -152,7 +155,7 @@
 
 @media screen and (min-width: 850px) {
     .benefits .bullets {
-        gap: 2rem;
+        gap: 4rem 3rem;
     }
 
     .benefits .box {
@@ -160,7 +163,6 @@
         width: unset;
         min-width: clamp(22rem, 16vw, 30rem);
         max-width: 33rem;
-        display: flex;
         flex-direction: column;
         justify-content: center;
         padding-block: clamp(1rem, 1.8vw, 3rem);

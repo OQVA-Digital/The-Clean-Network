@@ -24,5 +24,5 @@ areaCoveredBulletList:
     - Old Street
     - Shoreditch 
     - St Paul’s
-mapEmbed: "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.6187022976887!2d-0.09636132342258465!3d51.520211009767515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b56fb64b275%3A0xc756e26675d21f40!2sBarbican%20Centre!5e0!3m2!1sen!2sbr!4v1707155976051!5m2!1sen!2sbr' height='100%' width='100%' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
+mapEmbedSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2482.471394185416!2d-0.08270090938835158!3d51.522913236910526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTHCsDMxJzIyLjUiTiAwwrAwNCc0MC4yIlc!5e0!3m2!1sen!2sbr!4v1710785598964!5m2!1sen!2sbr"
 ---

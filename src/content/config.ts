@@ -68,6 +68,7 @@ const testimonialsCollection = defineCollection({
 const benefitcsCollection = defineCollection({
     type: 'content',
     schema: z.object({
+        type: z.string().optional(),
         order: z.number().optional(),
         icon: z.string().optional(),
         title: z.string(),
@@ -99,7 +100,7 @@ const locationsCollection = defineCollection({
         mainHeading:z.string().optional(),
         introText:z.string().optional(),
         panel1Copy:z.string().optional(),
-        mapEmbed: z.string().optional(),
+        mapEmbedSrc: z.string().optional(),
     }),
 });
 

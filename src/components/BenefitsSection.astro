@@ -18,6 +18,8 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
     }
 });
 
+const { type } = Astro.props;
+
 ---
 
 
@@ -25,17 +27,24 @@ const benefits = (await getCollection('benefits')).sort((a, b) => {
     <div class="ctnr">
         <h3>Why the Clean Network</h3>
 
-        <p>{benefits.length} reasons to choose the <b>Clean Network</b> cleaning services:</p>
+        
+
+        <p>Reasons to choose the <b>Clean Network</b> cleaning services:</p>
 
         <div class="bullets">
             {
-                benefits.map((benefits) => (
+                benefits.map((benefit) => (
                     <>
-                        <div class="box squares_bg reveal_interval01">
-                            {benefits.data.icon == "" ? "" : (<img src={benefits.data.icon} class="icon" alt={`${(benefits.data.title).replace( /(<([^>]+)>)/ig, '')} icon`}/>)}
-                            
-                            <h4 set:html={benefits.data.title}class="title"></h4>
-                        </div>
+                    {
+                        benefit.data.type == type ? (
+                            <div class="box squares_bg reveal_interval01">
+                                {benefit.data.icon == "" ? "" : (<img src={benefit.data.icon} class="icon" alt={`${(benefit.data.title).replace( /(<([^>]+)>)/ig, '')} icon`}/>)}
+                                
+                                <h4 set:html={benefit.data.title}class="title"></h4>
+                            </div>
+                        ) : ""
+                        
+                    }
                     </>
                 ))
             }

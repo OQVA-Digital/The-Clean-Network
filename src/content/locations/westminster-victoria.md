@@ -1,25 +1,25 @@
 ---
 order: 4
-documentTitle: "Office Cleaning in Westminster & Victoria - The Clean Network"
+documentTitle: "Victoria and Westminster Office Cleaning - The Clean Network"
 metaDescription: ""
 keywords: ""
-addressTitle: "Westminster Victoria"
-completeAddress: "Donec ornare elementum lacus sed varius. Nulla aliquet elementum ultrices."
+addressTitle: "Westminster and Victoria"
+completeAddress: ""
 areaCoveredBulletList: 
-    - Barbican Center
-    - St. Giles Cripplegate Church
-    - Museum of London
-    - Barbican Station
-    - Barbican Estate
-    - Golden Lane Estate
-    - Smithfield Market
-    - Finsbury Circus Gardens
-mainHeading: "Westminster & Victoria Office Cleaning"
-introText: "Donec efficitur eros sit amet nisi pulvinar, eu malesuada nunc elementum. Integer convallis dapibus nibh bibendum dapibus. Maecenas tristique velit orci, vel lacinia eros posuere auctor."
-panel1Copy: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lobortis vitae nulla a mattis. <b>Ut eget neque rutrum elit dictum euismod.</b> Vivamus tristique metus at diam malesuada placerat. In consectetur volutpat quam venenatis cursus. <strong>Aliquam semper maximus magna, id malesuada est pharetra congue.</strong> Donec vitae hendrerit risus. Duis massa quam, vulputate in gravida varius, interdum sit amet ligula.</p>
+    - Belgravia 
+    - Green Park
+    - Hyde Park
+    - Pimlico
+    - St James’s
 
-<p>Aenean nec sem tempor, venenatis ipsum faucibus, feugiat leo. Proin scelerisque gravida sodales. <b>Phasellus eu magna et est posuere lacinia vitae id lectus. Mauris ullamcorper porttitor tortor at tempor. In finibus erat urna, at dictum tortor elementum nec.</b> Mauris quam erat, suscipit at ultricies eget, hendrerit et augue. Nullam libero nunc, pellentesque a vehicula ut, mattis vel dui. Ut lobortis venenatis nibh eu iaculis. Etiam interdum metus vel faucibus eleifend. Curabitur porta risus lectus, et maximus orci ultricies et. <b>Aenean pretium erat tellus, eget malesuada dui tincidunt at.</b> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</p>
+mainHeading: "Westminster & Victoria"
+introText: "<p>At <b>The Clean Network</b> we believe it’s a privilege to provide office cleaning services to businesses in Westminster, one of London’s most prestigious and visited areas. Not only home to historic landmarks including the official royal residence Buckingham Palace, ancient Westminster Abbey and Big Ben (the Elizabeth Tower’s clock), it’s also the country’s political heart, as site of the Houses of Parliament, 10 Downing Street and key government departments.</p>
 
-<p>Nunc interdum nibh vitae laoreet finibus. Integer maximus enim eu lacus gravida luctus. <strong>Suspendisse non dignissim libero</strong>. Suspendisse tempor pellentesque est, nec rhoncus tortor auctor id. Integer fermentum leo at justo aliquet, ac molestie est blandit. <strong>Donec facilisis, turpis vel facilisis mattis, est nisl gravida nulla, vitae feugiat mauris urna ut dui.</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae augue a turpis dignissim tristique vitae ac sem. Maecenas facilisis felis enim, ut tristique justo elementum at. Curabitur aliquam eu turpis vel pretium. Quisque sit amet rhoncus nisi. Maecenas eros leo, malesuada ut mi et, facilisis euismod dolor.</p>"
-mapEmbed: "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.6187022976887!2d-0.09636132342258465!3d51.520211009767515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b56fb64b275%3A0xc756e26675d21f40!2sBarbican%20Centre!5e0!3m2!1sen!2sbr!4v1707155976051!5m2!1sen!2sbr' height='100%' width='100%' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
+<p>In Victoria, technically within the borough of Westminster (one of London’s biggest boroughs), there’s constant activity around its namesake station, which connects southern England to central London and the world via Gatwick Airport. Significant regeneration has also elevated this neighbourhood to serious work-and-live destination level, with plenty of shops, restaurants, bars and international street food at Victoria Market Halls, in addition to its hugely popular theatres.</p>
+
+<p>As a valued client in the Westminster, Victoria and neighbouring areas, you can rely on <strong>interior and exterior office cleaning services</strong> that are simple and flexible. That means proactive support plus cleaning operatives whose attention to detail ensures a fresh and pleasant environment where your people can focus on what they do best.</p>"
+panel1Copy: "<p><strong>The Clean Network supports organisations based around Westminster, Victoria and neighbouring areas.</strong> As chosen provider of office cleaning services for start-ups to established businesses across diverse sectors, we can support the wide range of businesses operating here – whether from the repurposed grand Georgian townhouses and terraces so characteristic of Belgravia, Mayfair and St James’s (and where global several corporates like BAE Systems and BP and Rio Tinto have chosen to locate) to large-scale new developments.</p>
+
+<p>The latter group includes milestones like the striking glass Cardinal Place and the asymmetric Nova complex, which have helped to rejuvenate Victoria via mixed office, retail and leisure space. Not forgetting the many flexible <b>co-working opportunities in modernised period buildings</b>, older purpose-built office blocks and new builds that are bringing younger business and new activities to these areas.</p>"
+mapEmbedSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d9935.601665435155!2d-0.15198472700307084!3d51.4966949077124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTHCsDI5JzQ4LjEiTiAwwrAwOCczMC4xIlc!5e0!3m2!1sen!2sbr!4v1710790682282!5m2!1sen!2sbr"
 ---

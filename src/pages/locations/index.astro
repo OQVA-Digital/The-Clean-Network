@@ -9,6 +9,7 @@ import '../../styles/locations.css'
 import ContactSection from "../../components/ContactSection.astro"
 import InfoBox from '../../components/InfoBox.astro';
 import BenefitsSection from '../../components/BenefitsSection.astro';
+import CTASection1 from '../../components/CTASection1.astro'
 
 import { LOCATIONS_TITLE, LOCATIONS_DESCRIPTION, LOCATIONS_KEYWORDS, LOCATIONS_H1, LOCATIONS_INTRO_DESCRIPTION } from "../../consts";
 
@@ -59,11 +60,13 @@ const locations = (await getCollection('locations')).sort((a, b) => {
             </div>
             
             <div class="iframe_ctnr">
-                <iframe width="100%" height="100%" title="The Clean Network Location map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.4890261846244!2d-0.08541909999999998!3d51.52258979999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761caefea868c7%3A0x2f921afb71cd76e2!2s6-8%20Bonhill%20St%2C%20London%20EC2A%204BX%2C%20UK!5e0!3m2!1sen!2sbr!4v1704802091222!5m2!1sen!2sbr"></iframe>
+                <iframe width="100%" height="100%" title="The Clean Network Location map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/d/u/0/embed?mid=1SDs6anXFA77WaU50JTYDnjubQ8z2yho&ehbc=2E312F&noprof=1"></iframe>
             </div>
         </div>
 
-        <BenefitsSection/>
+        <BenefitsSection type="locations"/>
+
+        <CTASection1/>
 
         <div class="contact_ctnr">
             <ContactSection/>
@@ -73,32 +76,14 @@ const locations = (await getCollection('locations')).sort((a, b) => {
 
 <style>
     .map {
-        height: 100vh;
-        height: 100lvh;
+        /* height: 55vh;
+        height: 55lvh;
         background-color: var(--light-d);
         border-top: 0.3rem solid var(--light);
         /* box-shadow: 0 -1rem 3rem -1rem var(--light-b); */
-        background-image: url(/textures/dot-grid.jpg);
+        /* background-image: url(/textures/dot-grid.jpg);
         background-image: image-set(url(/textures/dot-grid.jpg) , url(/textures/dot-grid.webp) );
-        background-size: 40rem;
-    }
-
-    .map::after {
-        content: "Loading map...";
-        position: absolute;
-        inset: 0;
-        margin: auto;
-        z-index: 1;
-        display: inline-block;
-        color: var(--primary-a);
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-        font-size: 1.8rem;
-        text-transform: uppercase;
-        font-weight: 400;
-        letter-spacing: 0.2rem;
+        background-size: 40rem; */
     }
 
     .contact_box_ctnr {
@@ -148,7 +133,6 @@ const locations = (await getCollection('locations')).sort((a, b) => {
         .iframe_ctnr {
             border: 0.8rem solid var(--light);
             box-sizing: border-box;
-            height: calc(100% - var(--header-height));
         }
 
         .contact_box_ctnr {

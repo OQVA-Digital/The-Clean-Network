@@ -1,25 +1,25 @@
 ---
 order: 6
-documentTitle: "Office Cleaning in Lambeth & Vauxhall - The Clean Network"
+documentTitle: "Lambeth and Vauxhall Office Cleaning - The Clean Network"
 metaDescription: ""
 keywords: ""
-addressTitle: "Lambeth Vauxhall"
-completeAddress: "Donec ornare elementum lacus sed varius. Nulla aliquet elementum ultrices."
+addressTitle: "Lambeth and Vauxhall"
+completeAddress: ""
 areaCoveredBulletList: 
-    - Barbican Center
-    - St. Giles Cripplegate Church
-    - Museum of London
-    - Barbican Station
-    - Barbican Estate
-    - Golden Lane Estate
-    - Smithfield Market
-    - Finsbury Circus Gardens
+    - Battersea
+    - Brixton
+    - Nine Elms
+    - South Lambeth
 mainHeading: "Lambeth & Vauxhall Office Cleaning"
-introText: "Donec efficitur eros sit amet nisi pulvinar, eu malesuada nunc elementum. Integer convallis dapibus nibh bibendum dapibus. Maecenas tristique velit orci, vel lacinia eros posuere auctor."
-panel1Copy: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lobortis vitae nulla a mattis. <b>Ut eget neque rutrum elit dictum euismod.</b> Vivamus tristique metus at diam malesuada placerat. In consectetur volutpat quam venenatis cursus. <strong>Aliquam semper maximus magna, id malesuada est pharetra congue.</strong> Donec vitae hendrerit risus. Duis massa quam, vulputate in gravida varius, interdum sit amet ligula.</p>
+introText: "<p>At The Clean Network we believe it’s a privilege to provide office cleaning services to businesses in some of London’s fastest-evolving areas. The relocation of the American embassy to Nine Elms has driven investment and regeneration on a huge scale in an area from Vauxhall to the landmark Battersea Power Station conversion, boosted by the Northern Line’s extension to two new stations. The goal is to create 18,00 new jobs and homes over the next 15 years.</p>
 
-<p>Aenean nec sem tempor, venenatis ipsum faucibus, feugiat leo. Proin scelerisque gravida sodales. <b>Phasellus eu magna et est posuere lacinia vitae id lectus. Mauris ullamcorper porttitor tortor at tempor. In finibus erat urna, at dictum tortor elementum nec.</b> Mauris quam erat, suscipit at ultricies eget, hendrerit et augue. Nullam libero nunc, pellentesque a vehicula ut, mattis vel dui. Ut lobortis venenatis nibh eu iaculis. Etiam interdum metus vel faucibus eleifend. Curabitur porta risus lectus, et maximus orci ultricies et. <b>Aenean pretium erat tellus, eget malesuada dui tincidunt at.</b> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;</p>
+<p><b>Vauxhall sits within Lambeth, one of London’s biggest boroughs.</b> It embraces other popular and vibrant live-and-work destinations, notably Clapham and Brixton, with rich cultural heritage and arts and music amenities.</p>
 
-<p>Nunc interdum nibh vitae laoreet finibus. Integer maximus enim eu lacus gravida luctus. <strong>Suspendisse non dignissim libero</strong>. Suspendisse tempor pellentesque est, nec rhoncus tortor auctor id. Integer fermentum leo at justo aliquet, ac molestie est blandit. <strong>Donec facilisis, turpis vel facilisis mattis, est nisl gravida nulla, vitae feugiat mauris urna ut dui.</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae augue a turpis dignissim tristique vitae ac sem. Maecenas facilisis felis enim, ut tristique justo elementum at. Curabitur aliquam eu turpis vel pretium. Quisque sit amet rhoncus nisi. Maecenas eros leo, malesuada ut mi et, facilisis euismod dolor.</p>"
-mapEmbed: "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.6187022976887!2d-0.09636132342258465!3d51.520211009767515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b56fb64b275%3A0xc756e26675d21f40!2sBarbican%20Centre!5e0!3m2!1sen!2sbr!4v1707155976051!5m2!1sen!2sbr' height='100%' width='100%' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
+<p><strong>As a valued client in Vauxhall and Lambeth, you can rely on interior and exterior office cleaning services that are simple and flexible.</strong> That means proactive support plus cleaning operatives whose attention to detail ensures a fresh and pleasant environment where your people can focus on what they do best.</p>"
+panel1Copy: "<p>Major employers include publishing giant Penguin Random House and Apple, which in 2023 opened its new UK head office at Battersea Power Station’s former boiler house, constructed around a dramatic atrium.</p>
+
+<p>Mixed-used spaces are increasingly important in Lambeth, according to its council, as a way to <b>support established and start-up businesses in growth sectors like creative and digital, life sciences and low-carbon industries.</b> IT and management consultancy, architectural and engineering businesses are already key sectors here.</p>
+
+<p><strong>Our long experience in providing office cleaning services we can handle the specific needs of start-ups, established businesses, and corporates, whatever the sector and type of office space.</strong></p>"
+mapEmbedSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d9937.112623626237!2d-0.12898672700907998!3d51.48976290971876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTHCsDI5JzIzLjEiTiAwwrAwNycwNy4zIlc!5e0!3m2!1sen!2sbr!4v1710801152980!5m2!1sen!2sbr"
 ---
