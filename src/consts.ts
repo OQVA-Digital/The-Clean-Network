@@ -234,7 +234,7 @@ export const LOCATIONS_KEYWORDS = ""
 
     // CONTENT
 
-export const LOCATIONS_H1 = "Our Locations"
+export const LOCATIONS_H1 = "Our Location"
 
 export const LOCATIONS_INTRO_DESCRIPTION = "Centrally located in the <b>City of London</b>, we're just a call away from providing your space with the professional cleaning service it deserves. <b>We’d be happy to come over and provide you with a quote.</b> Or feel free to drop by our office too."
 

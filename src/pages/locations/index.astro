@@ -1,31 +1,14 @@
 ---
-import { getCollection } from 'astro:content';
-
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
 import '../../styles/subpages.css'
-import '../../styles/locations.css'
 
 import ContactSection from "../../components/ContactSection.astro"
 import InfoBox from '../../components/InfoBox.astro';
-import BenefitsSection from '../../components/BenefitsSection.astro';
 
 import { LOCATIONS_TITLE, LOCATIONS_DESCRIPTION, LOCATIONS_KEYWORDS, LOCATIONS_H1, LOCATIONS_INTRO_DESCRIPTION } from "../../consts";
-
-const locations = (await getCollection('locations')).sort((a, b) => {
-    // Check if both items have an 'order' property
-    if (a.data.order !== undefined && b.data.order !== undefined) {
-        return a.data.order - b.data.order; // Sort by 'order' if both have it
-    } else if (a.data.order !== undefined) {
-        return -1; // 'a' has 'order', but 'b' doesn't, so 'a' comes first
-    } else if (b.data.order !== undefined) {
-        return 1; // 'b' has 'order', but 'a' doesn't, so 'b' comes first
-    } else {
-        // Both 'a' and 'b' don't have 'order', fallback to sorting by 'title'
-        return a.data.addressTitle.localeCompare(b.data.addressTitle);
-    }
-});
 ---
+
 
 <BaseLayout title={LOCATIONS_TITLE} description={LOCATIONS_DESCRIPTION} keywords={LOCATIONS_KEYWORDS} endContactSection="false">
     <main>
@@ -34,20 +17,10 @@ const locations = (await getCollection('locations')).sort((a, b) => {
                 <h1 set:html={LOCATIONS_H1}></h1>
 
                 <p set:html={LOCATIONS_INTRO_DESCRIPTION}></p>
-            
-                <ul class="locations_list">
-                    {
-                        locations.map((location) => (
-                        <>
-                        <li class="reveal_interval01">
-                            <a href={`/locations/${location.slug}`} aria-label={`Read more about ${location.data.addressTitle}`}>
-                                {location.data.addressTitle}
-                            </a>
-                        </li>
-                        </>
-                        ))
-                    }
-                </ul>
+                
+                <!-- <div class="component_ctnr">
+                    <MapSwitch/>
+                </div> -->
             </div>
         </div>
 
@@ -63,8 +36,6 @@ const locations = (await getCollection('locations')).sort((a, b) => {
             </div>
         </div>
 
-        <BenefitsSection/>
-
         <div class="contact_ctnr">
             <ContactSection/>
         </div>
@@ -76,6 +47,7 @@ const locations = (await getCollection('locations')).sort((a, b) => {
         height: 100vh;
         height: 100lvh;
         background-color: var(--light-d);
+        position: relative;
         border-top: 0.3rem solid var(--light);
         /* box-shadow: 0 -1rem 3rem -1rem var(--light-b); */
         background-image: url(/textures/dot-grid.jpg);
@@ -124,6 +96,7 @@ const locations = (await getCollection('locations')).sort((a, b) => {
     }
 
     .contact_ctnr {
+        box-shadow: 0 -10rem 12rem -7rem var(--light-b);
         position: relative;
     }
 

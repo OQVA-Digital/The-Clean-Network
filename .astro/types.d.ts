@@ -226,13 +226,6 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"what’s-the-optimal-temperature-for-a-uk-office.md": {
-	id: "what’s-the-optimal-temperature-for-a-uk-office.md";
-  slug: "whats-the-optimal-temperature-for-a-uk-office";
-  body: string;
-  collection: "blog";
-  data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] };
 };
 "faq": {
 "can-i-have-the-same-office-cleaner-consistently.md": {
@@ -311,50 +304,6 @@ declare module 'astro:content' {
   body: string;
   collection: "faq";
   data: InferEntrySchema<"faq">
-} & { render(): Render[".md"] };
-};
-"locations": {
-"city-of-london-and-shoreditch.md": {
-	id: "city-of-london-and-shoreditch.md";
-  slug: "city-of-london-and-shoreditch";
-  body: string;
-  collection: "locations";
-  data: InferEntrySchema<"locations">
-} & { render(): Render[".md"] };
-"kings-cross-islington.md": {
-	id: "kings-cross-islington.md";
-  slug: "kings-cross-islington";
-  body: string;
-  collection: "locations";
-  data: InferEntrySchema<"locations">
-} & { render(): Render[".md"] };
-"lambeth-vauxhall.md": {
-	id: "lambeth-vauxhall.md";
-  slug: "lambeth-vauxhall";
-  body: string;
-  collection: "locations";
-  data: InferEntrySchema<"locations">
-} & { render(): Render[".md"] };
-"soho-west-end.md": {
-	id: "soho-west-end.md";
-  slug: "soho-west-end";
-  body: string;
-  collection: "locations";
-  data: InferEntrySchema<"locations">
-} & { render(): Render[".md"] };
-"waterloo-southwark.md": {
-	id: "waterloo-southwark.md";
-  slug: "waterloo-southwark";
-  body: string;
-  collection: "locations";
-  data: InferEntrySchema<"locations">
-} & { render(): Render[".md"] };
-"westminster-victoria.md": {
-	id: "westminster-victoria.md";
-  slug: "westminster-victoria";
-  body: string;
-  collection: "locations";
-  data: InferEntrySchema<"locations">
 } & { render(): Render[".md"] };
 };
 "sectors": {
@@ -533,5 +482,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = typeof import("./../src/content/config.js");
+	type ContentConfig = typeof import("../src/content/config");
 }

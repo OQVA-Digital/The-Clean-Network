@@ -39,6 +39,7 @@ const serviceCollection = defineCollection({
 const sectorsCollection = defineCollection({
     type: 'content',
     schema: z.object({
+        
         order: z.number().optional(),
         documentTitle: z.string().optional(),
         metaDescription: z.string().optional(),
@@ -86,23 +87,6 @@ const faqCollection = defineCollection({
     }),
 });
 
-const locationsCollection = defineCollection({
-    type: 'content',
-    schema: z.object({
-        order: z.number().optional(),
-        documentTitle: z.string().optional(),
-        metaDescription: z.string().optional(),
-        keywords: z.string().optional(),
-        addressTitle: z.string().optional(),
-        completeAddress: z.string().optional(),
-        areaCoveredBulletList: z.array(z.string()).optional(),
-        mainHeading:z.string().optional(),
-        introText:z.string().optional(),
-        panel1Copy:z.string().optional(),
-        mapEmbed: z.string().optional(),
-    }),
-});
-
 export const collections = {
     'services': serviceCollection,
     'sectors': sectorsCollection,
@@ -110,5 +94,4 @@ export const collections = {
     'benefits': benefitcsCollection,
     'blog': blogCollection,
     'faq': faqCollection,
-    'locations': locationsCollection,
 };
