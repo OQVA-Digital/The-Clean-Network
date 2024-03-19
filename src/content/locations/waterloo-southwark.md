@@ -18,7 +18,9 @@ introText: "<p>At The Clean Network we believe it’s a privilege to provide <st
 
 <p><b>As a valued client in Waterloo and Southwark, you can rely on interior and exterior office cleaning services that are simple and flexible.</b> That means proactive support plus cleaning operatives whose attention to detail ensures a fresh and pleasant environment where your people can focus on what they do best.</p> 
 "
-panel1Copy: "<p>With long experience in office cleaning services, we understand the specific needs of the many different sectors with a presence in Waterloo and Southwark, including property investment, architecture, finance, and tech and software development.</p>
+panel1Copy: "<h2>Where & who for</h2>
+
+<p>With long experience in office cleaning services, we understand the specific needs of the many different sectors with a presence in Waterloo and Southwark, including property investment, architecture, finance, and tech and software development.</p>
 
 <p><b>Not surprisingly, film and television production, creative design, and marketing and branding are strongly represented.</b> This includes major media corporations like ITV and News Corp UK, based in Bankside’s Blue Fin building. This striking blue-toned is one of many new developments to combine traditional and flexible office space in the area, which now offers many sizeable new builds in addition to its period warehouses and industrial structures and traditional office blocks.</p>
 

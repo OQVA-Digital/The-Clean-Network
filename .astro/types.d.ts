@@ -175,6 +175,27 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"benefits": {
+"backed-by-exceptional-customer-service.md": {
+	id: "backed-by-exceptional-customer-service.md";
+  slug: "backed-by-exceptional-customer-service";
+  body: string;
+  collection: "benefits";
+  data: InferEntrySchema<"benefits">
+} & { render(): Render[".md"] };
+"built-on-20-years-experience.md": {
+	id: "built-on-20-years-experience.md";
+  slug: "built-on-20-years-experience";
+  body: string;
+  collection: "benefits";
+  data: InferEntrySchema<"benefits">
+} & { render(): Render[".md"] };
+"carried-out-by-uniformed.md": {
+	id: "carried-out-by-uniformed.md";
+  slug: "carried-out-by-uniformed";
+  body: string;
+  collection: "benefits";
+  data: InferEntrySchema<"benefits">
+} & { render(): Render[".md"] };
 "consistently-good-cleaning.md": {
 	id: "consistently-good-cleaning.md";
   slug: "consistently-good-cleaning";
@@ -185,6 +206,13 @@ declare module 'astro:content' {
 "environmental-innovators.md": {
 	id: "environmental-innovators.md";
   slug: "environmental-innovators";
+  body: string;
+  collection: "benefits";
+  data: InferEntrySchema<"benefits">
+} & { render(): Render[".md"] };
+"environmentally-aware.md": {
+	id: "environmentally-aware.md";
+  slug: "environmentally-aware";
   body: string;
   collection: "benefits";
   data: InferEntrySchema<"benefits">
@@ -203,9 +231,30 @@ declare module 'astro:content' {
   collection: "benefits";
   data: InferEntrySchema<"benefits">
 } & { render(): Render[".md"] };
+"flexible-and-bespoke.md": {
+	id: "flexible-and-bespoke.md";
+  slug: "flexible-and-bespoke";
+  body: string;
+  collection: "benefits";
+  data: InferEntrySchema<"benefits">
+} & { render(): Render[".md"] };
 "peace-of-mind.md": {
 	id: "peace-of-mind.md";
   slug: "peace-of-mind";
+  body: string;
+  collection: "benefits";
+  data: InferEntrySchema<"benefits">
+} & { render(): Render[".md"] };
+"provided-by-an-ethical-employer.md": {
+	id: "provided-by-an-ethical-employer.md";
+  slug: "provided-by-an-ethical-employer";
+  body: string;
+  collection: "benefits";
+  data: InferEntrySchema<"benefits">
+} & { render(): Render[".md"] };
+"value-for-money.md": {
+	id: "value-for-money.md";
+  slug: "value-for-money";
   body: string;
   collection: "benefits";
   data: InferEntrySchema<"benefits">

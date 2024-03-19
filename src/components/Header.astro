@@ -318,6 +318,7 @@ import { TEL, TEL_HREF } from "../consts";
 
     header nav {
     width: calc(100% - (100% - var(--base-width)) / 2);
+    max-width: 32rem;
     background-color: var(--light-d);
     font-size: clamp(1.6rem,5vw,2.2rem);
     border-radius: 0 0 0 1.4rem;
@@ -538,6 +539,7 @@ import { TEL, TEL_HREF } from "../consts";
         }
 
         header nav {
+            max-width: unset;
             position: relative;
             top: unset;
             transform: unset;

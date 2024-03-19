@@ -1,11 +1,13 @@
 .map {
-    position: relative;
-    height: 55vh;
-    height: 55lvh;
+    position: sticky;
+    height: 100vh;
+    height: 100lvh;
     background-color: var(--light-d);
     border-top: 0.3rem solid var(--light);
     background-image: image-set(url(/textures/dot-grid.jpg), url(/textures/dot-grid.webp));
     background-size: 40rem;
+    top:clamp(1rem,16vmin,7.5rem);
+    border-top: unset;
 }
 
 .map::after {
@@ -36,7 +38,7 @@
 }
 
 .heading_ctnr .locations_list li {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 500;
     color: var(--primary-e);
 }
@@ -131,6 +133,11 @@
     height: 100%;
 }
 
+.general.map {
+    max-height: 55vh;
+    max-height:55lvh;
+}
+
 .bottom_info {
     position: relative;
     z-index: 2;
@@ -139,6 +146,8 @@
     flex-flow: column wrap;
     justify-content: space-between;
     gap: 1.5rem;
+    margin-top: -60vh;
+    background-color: var(--light);
 }
 
 .area_covered {
@@ -184,6 +193,7 @@
     -o-border-radius: 0.3rem;
     font-weight: 500;
     border:0.2rem solid var(--light);
+    user-select: none;
 }
 
 .contact_ctnr {
@@ -204,8 +214,10 @@
 
 .content_panel {
     position: relative;
-    background-color: var(--light-d);
     padding-block: 6rem;
+    background-color: rgb(230 238 255 / 62%);
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
 }
 
 .content_panel .content {
@@ -303,9 +315,6 @@
 
 @media screen and (min-width:850px) {
     .map {
-        position: sticky;
-        top:clamp(1rem,16vmin,7.5rem);
-        border-top: unset;
     }
 
     .iframe_ctnr {
@@ -319,10 +328,11 @@
     .bottom_info {
         flex-flow: row wrap;
         align-items: flex-end;
-        position: absolute;
-        transform: translateY(-100%);
+        position: relative;
         width: 95%;
         box-sizing: border-box;
+        /* margin-top: unset; */
+        background-color: transparent;
     }
     
     .area_covered .intro {
@@ -335,5 +345,8 @@
         box-shadow: 0 1rem 2rem -1rem var(--light-b);
         backdrop-filter: blur(1rem);
         -webkit-backdrop-filter: blur(1rem);
+    }
+
+    .content_panel {
     }
 }

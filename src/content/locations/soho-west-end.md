@@ -6,19 +6,18 @@ keywords: ""
 addressTitle: "Soho and the West End"
 completeAddress: ""
 mainHeading: "Soho and the West End"
-introText: "<p>At The Clean Network we believe it’s a privilege to provide office cleaning services to businesses in some of London’s liveliest, entertainment-packed districts. As well as tourism meccas of Piccadilly Circus and Leicester Square, the West End is a colourful mosaic of luxe and high street retail brands on Bond Street, Oxford Street and Marylebone High Street and eclectic boutiques on Carnaby Street and Covent Garden Market. Tourists and locals are drawn to the buzz of Chinatown and Soho’s bar and restaurant scene, and cultural opportunities abound, from theatreland to galleries and museums of Bloomsbury.</p>
+introText: "<p>At <strong>The Clean Network</strong> we believe it’s a privilege to provide office cleaning services to businesses in some of London’s liveliest, entertainment-packed districts. As well as tourism meccas of <strong>Piccadilly Circus and Leicester Square</strong>, the West End is a colourful mosaic of luxe and high street retail brands on <strong>Bond Street, Oxford Street and Marylebone High Street</strong> and eclectic boutiques on Carnaby Street and Covent Garden Market. Tourists and locals are drawn to the buzz of Chinatown and Soho’s bar and restaurant scene, and cultural opportunities abound, from theatreland to galleries and museums of Bloomsbury.</p>
 
-<p>As a valued client in the West End and Soho, you can rely on interior and exterior office cleaning service that are simple and flexible. That means proactive support plus cleaning operatives whose attention to detail ensures a fresh and pleasant environment where your people can focus on what they do best.</p>"
+<p>As a valued client in the West End and Soho, <strong>you can rely on interior and exterior office cleaning service that are simple and flexible.</strong> That means proactive support plus cleaning operatives whose attention to detail ensures a fresh and pleasant environment where your people can focus on what they do best.</p>"
 panel1Copy: "<h2>Where & who for</h2>
 
-<p>The Clean Network is able to support a range of businesses across the West End, from Mayfair over to Covent Garden and Holborn. Elegant converted period houses are a hallmark of these areas but there are also plenty of purpose-built office blocks and smart, modern co-working spaces. Landmark new developments include Lucent, set behind the world-famous Piccadilly Lights and the mixed-use Soho Place complex above Tottenham Court Road with its sky garden.</p>
+<p><strong>The Clean Network is able to support a range of businesses across the West End, from Mayfair over to Covent Garden and Holborn.</strong> Elegant converted period houses are a hallmark of these areas but there are also plenty of purpose-built office blocks and smart, modern co-working spaces. Landmark new developments include Lucent, set behind the world-famous Piccadilly Lights and the mixed-use Soho Place complex above Tottenham Court Road with its sky garden.</p>
 
-<p>Media, entertainment and creative sectors have long been well represented in Soho, while tech and IT are growing their presence. More recently the area has seen a noticeable increase in financial companies including private capital and hedge fund specialists. In contrast, Bloomsbury has a concentration of academic expertise in its world-beating universities and institutions like the British Museum and the Royal College of Physicians.</p>
+<p><b>Media, entertainment and creative sectors have long been well represented in Soho, while tech and IT are growing their presence.</b> More recently the area has seen a noticeable increase in financial companies including private capital and hedge fund specialists. In contrast, Bloomsbury has a concentration of academic expertise in its world-beating universities and institutions like the British Museum and the Royal College of Physicians.</p>
 
 <p>Proximity to the Royal Courts of Justice mean legal firms proliferate around Holborn, while Marylebone is well known for private medical specialists in Harley Street. But throughout these neighbourhoods the supply of co-working offices has generated a highly varied business community.</p>
 
-<p>Our long experience in providing office cleaning services in the West End, Soho and nearby areas means we can handle the specific needs of start-ups, established businesses, and corporates, whatever the sector. 
-</p>"
+<p>Our long experience in providing <strong>office cleaning services in the West End, Soho and nearby areas</strong> means we can handle the specific needs of start-ups, established businesses, and corporates, whatever the sector.</p>"
 areaCoveredBulletList: 
     - Bloomsbury
     - Covent Garden

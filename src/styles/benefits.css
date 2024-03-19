@@ -161,7 +161,7 @@
     .benefits .box {
         flex: 1;
         width: unset;
-        min-width: clamp(22rem, 16vw, 30rem);
+        min-width: clamp(22rem, 15vw, 30rem);
         max-width: 33rem;
         flex-direction: column;
         justify-content: center;

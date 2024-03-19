@@ -25,11 +25,14 @@ const { type } = Astro.props;
 
 <section class="benefits scroll_margin_top" id="why-the-clean-network">
     <div class="ctnr">
-        <h3>Why the Clean Network</h3>
 
-        
+        {type != "locations" ? (
+            <h3>Why the Clean Network</h3>
 
-        <p>Reasons to choose the <b>Clean Network</b> cleaning services:</p>
+            <p>Reasons to choose the <b>Clean Network</b> cleaning services:</p>
+        ) : (
+            <h3>Our office cleaning services are:</h3>
+        )}
 
         <div class="bullets">
             {

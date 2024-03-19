@@ -16,7 +16,9 @@ introText: "<p>At The Clean Network we believe it’s a privilege to provide off
 <p><b>Vauxhall sits within Lambeth, one of London’s biggest boroughs.</b> It embraces other popular and vibrant live-and-work destinations, notably Clapham and Brixton, with rich cultural heritage and arts and music amenities.</p>
 
 <p><strong>As a valued client in Vauxhall and Lambeth, you can rely on interior and exterior office cleaning services that are simple and flexible.</strong> That means proactive support plus cleaning operatives whose attention to detail ensures a fresh and pleasant environment where your people can focus on what they do best.</p>"
-panel1Copy: "<p>Major employers include publishing giant Penguin Random House and Apple, which in 2023 opened its new UK head office at Battersea Power Station’s former boiler house, constructed around a dramatic atrium.</p>
+panel1Copy: "<h2>Where & who for</h2>
+
+<p>Major employers include publishing giant Penguin Random House and Apple, which in 2023 opened its new UK head office at Battersea Power Station’s former boiler house, constructed around a dramatic atrium.</p>
 
 <p>Mixed-used spaces are increasingly important in Lambeth, according to its council, as a way to <b>support established and start-up businesses in growth sectors like creative and digital, life sciences and low-carbon industries.</b> IT and management consultancy, architectural and engineering businesses are already key sectors here.</p>
 
