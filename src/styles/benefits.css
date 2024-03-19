@@ -1,0 +1,174 @@
+
+
+.benefits {
+    position: relative;
+    background-color: var(--light);
+    padding: clamp(3rem, 15vmin, 8rem) 0 clamp(3rem, 11vmin, 9rem);
+    color: var(--grey-a);
+    font-size: clamp(1.5rem, 4vmin, 2.2rem);
+}
+
+.benefits>.ctnr {
+    width: var(--base-width);
+    margin-inline: auto;
+    max-width: 100%;
+}
+
+.benefits h3 {
+    margin-inline: auto;
+    font-size: clamp(2rem, 7vmin, 4rem);
+    text-align: center;
+    font-weight: 600;
+    width: fit-content;
+    padding: 0.4rem 1rem;
+    margin-bottom: 1rem;
+    color: var(--primary-a);
+}
+
+.benefits h3 + p {
+    padding: 0 1rem;
+    text-align: center;
+    width: var(--base-width);
+    margin-inline: auto;
+    font-size: 2rem;
+}
+
+.benefits .bullets {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 3.5rem clamp(1.8rem, 3vw, 4rem);
+    margin-block: clamp(3rem, 11vw, 6rem) clamp(3rem, 4vw, 3.5rem);
+}
+
+.benefits .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(27rem, 69vw, 33rem);
+    text-align: center;
+    padding: 3rem 2.5rem 2.5rem;
+    border-radius: 1.2rem;
+    background-color: var(--light-d);
+    border:0.2rem solid var(--light-d);
+    position: relative;
+    box-sizing: border-box;
+    transition: background-color 0.4s ease;
+    -webkit-transition: background-color 0.4s ease;
+    -moz-transition: background-color 0.4s ease;
+    -ms-transition: background-color 0.4s ease;
+    -o-transition: background-color 0.4s ease;
+}
+
+/* .benefits .box:nth-child(odd) {
+    right: 0.5rem;
+}
+
+.benefits .box:nth-child(even) {
+    left: 0.5rem;
+} */
+
+.benefits .box:hover {
+    background-color: var(--light);
+    transition: background-color 0.06s ease;
+    -webkit-transition: background-color 0.06s ease;
+    -moz-transition: background-color 0.06s ease;
+    -ms-transition: background-color 0.06s ease;
+    -o-transition: background-color 0.06s ease;
+}
+
+.benefits .box .icon {
+    width: clamp(2rem, 11vw, 4.2rem);
+    height: clamp(2rem, 8vw, 3rem);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    transform: translateY(-50%);
+}
+
+.benefits .box .title {
+    font-size: clamp(1.6rem, 4vw, 1.8rem);
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.benefits .box .title b {
+    font-weight: 500;
+    color: var(--primary-a);
+}
+
+.benefits .box p {
+    font-size: clamp(1.2rem, 3.8vmin, 1.6rem);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.benefits .box > .ctnr {
+    margin-inline: clamp(2rem, 5vw, 4rem);
+    background-color: var(--light-a);
+    position: relative;
+    padding: 3rem;
+    border-radius: 1.2rem;
+    color: var(--dark-a);
+}
+
+.benefits .main.cta {
+    display: block;
+    margin-inline: auto;
+    width: fit-content;
+    margin-top: 3rem;
+    background-color: var(--primary-a);
+    color: var(--light);
+    text-shadow: unset;
+    border: 0.2rem solid var(--primary-d);
+    width: clamp(9rem, 89vw, 37rem);
+    box-sizing: border-box;
+    position: sticky;
+    bottom: 2rem;
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+}
+
+.benefits h3 + p b, .benefits h3 + p strong {
+    font-weight: 550;
+    color: var(--primary-e);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 850px) {
+    .benefits .bullets {
+        gap: 4rem 3rem;
+    }
+
+    .benefits .box {
+        flex: 1;
+        width: unset;
+        min-width: clamp(22rem, 15vw, 30rem);
+        max-width: 33rem;
+        flex-direction: column;
+        justify-content: center;
+        padding-block: clamp(1rem, 1.8vw, 3rem);
+    }
+
+    .benefits .main.cta {
+        position: static;
+    }
+}
