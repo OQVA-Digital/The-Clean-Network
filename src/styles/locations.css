@@ -146,7 +146,7 @@
     flex-flow: column wrap;
     justify-content: space-between;
     gap: 1.5rem;
-    margin-top: -60vh;
+    margin-top: -50vh;
     background-color: var(--light);
 }
 
@@ -207,10 +207,6 @@
     position: relative;
     z-index: 3;
 }
-
-/* .bottom_info + .content_panel {
-    box-shadow: 0 -8vmin 10rem 3rem #4d637b9c;
-} */
 
 .content_panel {
     position: relative;
@@ -331,8 +327,8 @@
         position: relative;
         width: 95%;
         box-sizing: border-box;
-        /* margin-top: unset; */
         background-color: transparent;
+        margin-top: -65vh;
     }
     
     .area_covered .intro {
