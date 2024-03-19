@@ -298,7 +298,7 @@
     margin-top: 2rem;
     border: unset;
     color: var(--primary-a);
-    text-shadow: unset;
+    text-shadow: none;
     font-weight: 600;
     line-height: 1;
 }
