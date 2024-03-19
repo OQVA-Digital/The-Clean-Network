@@ -261,6 +261,13 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "blog": {
+"5-ways-to-develop-an-esg-strategy.md": {
+	id: "5-ways-to-develop-an-esg-strategy.md";
+  slug: "5-ways-to-develop-an-esg-strategy";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "decoration-inspiration-in-the-reception-or-lobby.md": {
 	id: "decoration-inspiration-in-the-reception-or-lobby.md";
   slug: "decoration-inspiration-in-the-reception-or-lobby";
@@ -275,9 +282,23 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
+"office-health-and-safety-guidelines-a-handy-checklist.md": {
+	id: "office-health-and-safety-guidelines-a-handy-checklist.md";
+  slug: "office-health-and-safety-guidelines-a-handy-checklist";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "what’s-the-optimal-temperature-for-a-uk-office.md": {
 	id: "what’s-the-optimal-temperature-for-a-uk-office.md";
   slug: "whats-the-optimal-temperature-for-a-uk-office";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
+"why-soft-hard-fm-services-can-be-crucial-for-your-business.md": {
+	id: "why-soft-hard-fm-services-can-be-crucial-for-your-business.md";
+  slug: "why-soft-hard-fm-services-can-be-crucial-for-your-business";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
@@ -363,48 +384,6 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "locations": {
-"city-of-london-and-shoreditch.md": {
-	id: "city-of-london-and-shoreditch.md";
-  slug: "city-of-london-and-shoreditch";
-  body: string;
-  collection: "locations";
-  data: InferEntrySchema<"locations">
-} & { render(): Render[".md"] };
-"kings-cross-islington.md": {
-	id: "kings-cross-islington.md";
-  slug: "kings-cross-islington";
-  body: string;
-  collection: "locations";
-  data: InferEntrySchema<"locations">
-} & { render(): Render[".md"] };
-"lambeth-vauxhall.md": {
-	id: "lambeth-vauxhall.md";
-  slug: "lambeth-vauxhall";
-  body: string;
-  collection: "locations";
-  data: InferEntrySchema<"locations">
-} & { render(): Render[".md"] };
-"soho-west-end.md": {
-	id: "soho-west-end.md";
-  slug: "soho-west-end";
-  body: string;
-  collection: "locations";
-  data: InferEntrySchema<"locations">
-} & { render(): Render[".md"] };
-"waterloo-southwark.md": {
-	id: "waterloo-southwark.md";
-  slug: "waterloo-southwark";
-  body: string;
-  collection: "locations";
-  data: InferEntrySchema<"locations">
-} & { render(): Render[".md"] };
-"westminster-victoria.md": {
-	id: "westminster-victoria.md";
-  slug: "westminster-victoria";
-  body: string;
-  collection: "locations";
-  data: InferEntrySchema<"locations">
-} & { render(): Render[".md"] };
 };
 "sectors": {
 "architects-firms.md": {
