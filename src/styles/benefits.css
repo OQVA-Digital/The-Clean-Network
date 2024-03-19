@@ -3,7 +3,7 @@
 .benefits {
     position: relative;
     background-color: var(--light);
-    padding: clamp(3rem, 15vmin, 7rem) 0 clamp(3rem, 11vmin, 8rem);
+    padding: clamp(3rem, 15vmin, 8rem) 0 clamp(3rem, 11vmin, 9rem);
     color: var(--grey-a);
     font-size: clamp(1.5rem, 4vmin, 2.2rem);
 }
@@ -18,7 +18,7 @@
     margin-inline: auto;
     font-size: clamp(2rem, 7vmin, 4rem);
     text-align: center;
-    font-weight: 500;
+    font-weight: 600;
     width: fit-content;
     padding: 0.4rem 1rem;
     margin-bottom: 1rem;
