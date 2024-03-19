@@ -1,0 +1,58 @@
+---
+
+import '../styles/benefits.css'
+
+import { getCollection } from "astro:content";
+
+const benefits = (await getCollection('benefits')).sort((a, b) => {
+    // Check if both items have an 'order' property
+    if (a.data.order !== undefined && b.data.order !== undefined) {
+        return a.data.order - b.data.order; // Sort by 'order' if both have it
+    } else if (a.data.order !== undefined) {
+        return -1; // 'a' has 'order', but 'b' doesn't, so 'a' comes first
+    } else if (b.data.order !== undefined) {
+        return 1; // 'b' has 'order', but 'a' doesn't, so 'b' comes first
+    } else {
+        // Both 'a' and 'b' don't have 'order', fallback to sorting by 'title'
+        return a.data.title.localeCompare(b.data.title);
+    }
+});
+
+const { type } = Astro.props;
+
+---
+
+
+<section class="benefits scroll_margin_top" id="why-the-clean-network">
+    <div class="ctnr">
+
+        {type != "locations" ? (
+            <h3>Why the Clean Network</h3>
+
+            <p>Reasons to choose the <b>Clean Network</b> cleaning services:</p>
+        ) : (
+            <h3>Our office cleaning services are:</h3>
+        )}
+
+        <div class="bullets">
+            {
+                benefits.map((benefit) => (
+                    <>
+                    {
+                        benefit.data.type == type ? (
+                            <div class="box squares_bg reveal_interval01">
+                                {benefit.data.icon == "" ? "" : (<img src={benefit.data.icon} class="icon" alt={`${(benefit.data.title).replace( /(<([^>]+)>)/ig, '')} icon`}/>)}
+                                
+                                <h4 set:html={benefit.data.title}class="title"></h4>
+                            </div>
+                        ) : ""
+                        
+                    }
+                    </>
+                ))
+            }
+        </div>
+    </div>
+        
+    <a href="/contact/" class="main cta" aria-label="Get a free quote">Get a Free Quote</a>
+</section>
