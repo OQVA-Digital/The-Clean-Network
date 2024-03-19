@@ -49,7 +49,7 @@ import { TEL, TEL_HREF } from "../consts";
                         <div>
                             <a href="/services/#indoor" class="heading indoor icon">Indoor Cleaning</a>
 
-                            <hr />
+                            <hr/>
 
                             {
                                 services.map((services) => (
@@ -130,7 +130,7 @@ import { TEL, TEL_HREF } from "../consts";
 
                 <a href="/blog/">Blog</a>
 
-                <a href="/locations/">Location</a>
+                <a href="/locations/">Locations</a>
                 
                 <a href="/about/">About</a>
                 
@@ -318,6 +318,7 @@ import { TEL, TEL_HREF } from "../consts";
 
     header nav {
     width: calc(100% - (100% - var(--base-width)) / 2);
+    max-width: 32rem;
     background-color: var(--light-d);
     font-size: clamp(1.6rem,5vw,2.2rem);
     border-radius: 0 0 0 1.4rem;
@@ -534,10 +535,11 @@ import { TEL, TEL_HREF } from "../consts";
 
         .shine_ctnr div {
             background-image: linear-gradient(50deg,transparent 20%,#fff4,transparent 80%);
-            animation: shine 0.6s 0.8s linear 1;
+            animation: shine 1s 0.4s linear 1;
         }
 
         header nav {
+            max-width: unset;
             position: relative;
             top: unset;
             transform: unset;
