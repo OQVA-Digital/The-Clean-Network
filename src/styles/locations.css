@@ -1,13 +1,20 @@
+.flex_map_ctnr {
+    display: flex;
+    flex-flow: row wrap;
+}
+ 
 .map {
+    flex: 1;
     position: sticky;
-    height: 100vh;
-    height: 100lvh;
+    height: 62vh;
+    height: 62lvh;
     background-color: var(--light-d);
     border-top: 0.3rem solid var(--light);
     background-image: image-set(url(/textures/dot-grid.jpg), url(/textures/dot-grid.webp));
     background-size: 40rem;
     top:clamp(1rem,16vmin,7.5rem);
     border-top: unset;
+    min-width: clamp(10rem, 55vw, 60rem);
 }
 
 .map::after {
@@ -28,13 +35,30 @@
     letter-spacing: 0.2rem;
 }
 
+.heading_ctnr {
+    flex: 1;
+    min-width: clamp(10rem, 55vw, 60rem);
+    padding: clamp(2rem, 14vw, 9rem) 0;
+}
+
+.main.heading_ctnr {
+    padding-block: clamp(2rem, 14vw, 13rem);
+}
+
+.heading_ctnr .content {
+    width: unset;
+    max-width: clamp(10rem, 86vw, 66rem);
+}
+
+
 .heading_ctnr .locations_list {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-    gap: 2rem 1rem;
+    gap: clamp(2rem, 2vw, 2.4rem) clamp(1rem, 2vw, 1.6rem);
     margin-block: 2rem 1rem;
+    max-width: 65rem;
 }
 
 .heading_ctnr .locations_list li {
@@ -53,7 +77,7 @@
     -moz-transition: background-color 0.6s ease, border-color 0.6s ease;
     -ms-transition: background-color 0.6s ease, border-color 0.6s ease;
     -o-transition: background-color 0.6s ease, border-color 0.6s ease;
-    box-shadow: 0 0.9rem 1.4rem -1.2rem var(--primary-e);
+    box-shadow: 0 0.9rem 1.4rem -1.2rem var(--light-b);
 }
 
 .heading_ctnr .locations_list li a:hover {
@@ -139,15 +163,14 @@
 }
 
 .bottom_info {
-    position: relative;
+    position: absolute;
+    bottom: 0;
     z-index: 2;
     padding: 4rem 4rem 4rem 4rem;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
     gap: 1.5rem;
-    margin-top: -50vh;
-    background-color: var(--light);
 }
 
 .area_covered {
@@ -210,10 +233,9 @@
 
 .content_panel {
     position: relative;
-    padding-block: 6rem;
-    background-color: rgb(230 238 255 / 62%);
-    backdrop-filter: blur(1rem);
-    -webkit-backdrop-filter: blur(1rem);
+    padding-block: clamp(5rem, 5vw, 8rem);
+    background-color: var(--primary-a);
+
 }
 
 .content_panel .content {
@@ -226,7 +248,7 @@
 
 .content_panel.text .content {
     font-size: clamp(1.5rem, 4vmin, 1.7rem);
-    color: var(--grey-b);
+    color:var(--light-d);
 }
 
 .content_panel.cta {
@@ -286,14 +308,16 @@
 }
 
 .content_panel .content h2 {
-    font-size: clamp(1rem, 9vw, 5rem);
-    color: var(--primary-e);
+    font-size: clamp(1rem, 9.5vw, 6rem);
+    color: var(--light-a);
     margin-bottom: 1rem;
+    line-height: 1.1;
+    font-weight: 700;
 }
 
 .content_panel .content b, .content_panel .content strong {
-    font-weight: 500;
-    color: var(--grey-b);
+    font-weight: 600;
+    color: var(--light-d);
 }
 
 
@@ -310,7 +334,14 @@
 
 
 @media screen and (min-width:850px) {
-    .map {
+    .map, .general.map {
+        height: unset;
+        max-height: calc(100vh - var(--header-height));
+        min-width: clamp(10rem, 20vw, 50rem);
+        border-left: 0.6rem solid var(--light);
+        box-shadow: 0rem 0 10rem -2rem var(--light-b);
+        position: sticky;
+        top: var(--header-height);
     }
 
     .iframe_ctnr {
@@ -320,15 +351,39 @@
     .contact_box_ctnr {
         transform:unset;
     }
+    .heading_ctnr p {
+        text-align: left;
+        margin-inline: unset;
+    }
+    
+    .heading_ctnr {
+        min-width: clamp(10rem, 20vw, 50rem);
+        padding-left: var(--base-width-overflow);
+    }
+
+    .heading_ctnr h1 {
+        text-align: left;
+        margin-inline: unset;
+    }
+
+    .heading_ctnr .locations_list {
+        justify-content: left;
+    }
+
+    .heading_ctnr .content {
+        max-width: clamp(35rem, 40vw, 66rem);
+        margin-inline: 0;
+    }
     
     .bottom_info {
         flex-flow: row wrap;
         align-items: flex-end;
-        position: relative;
         width: 95%;
         box-sizing: border-box;
         background-color: transparent;
-        margin-top: -65vh;
+        position: sticky;
+        bottom: 0;
+        margin-top: calc(clamp(0rem, 21vw, 22rem)* -1);
     }
     
     .area_covered .intro {
