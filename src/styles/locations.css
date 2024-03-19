@@ -42,7 +42,7 @@
 }
 
 .main.heading_ctnr {
-    padding-block: clamp(2rem, 14vw, 13rem);
+    padding-block: clamp(2rem, 14vw, 16rem);
 }
 
 .heading_ctnr .content {
@@ -337,7 +337,7 @@
     .map, .general.map {
         height: unset;
         max-height: calc(100vh - var(--header-height));
-        min-width: clamp(10rem, 20vw, 50rem);
+        min-width: clamp(10rem, calc(70vw - 30rem), 90rem);
         border-left: 0.6rem solid var(--light);
         box-shadow: 0rem 0 10rem -2rem var(--light-b);
         position: sticky;
@@ -371,7 +371,7 @@
     }
 
     .heading_ctnr .content {
-        max-width: clamp(35rem, 40vw, 66rem);
+        max-width: clamp(35rem, 40vw, 56rem);
         margin-inline: 0;
     }
     

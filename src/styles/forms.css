@@ -53,8 +53,12 @@ form {
     flex-direction: column;
     gap: clamp(1.5rem, 2vw, 2rem);
     font-size: 1.45rem;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     width: 100%;
+    padding: clamp(3rem, 9vw, 5rem) clamp(3rem, 9vw, 5rem) 9rem;
+    box-sizing: border-box;
+    overflow: auto;
+    height: 100%;
 }
 
 form p {
