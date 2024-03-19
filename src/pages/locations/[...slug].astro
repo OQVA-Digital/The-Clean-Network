@@ -1,0 +1,87 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+import '../../styles/subpages.css'
+import '../../styles/locations.css'
+
+import ContactSection from "../../components/ContactSection.astro"
+import InfoBox from '../../components/InfoBox.astro';
+import BackBt from '../../components/BackBt.astro';
+
+export async function getStaticPaths() {
+    const location = await getCollection("locations");
+    return location.map((location) => ({
+        params: { slug: location.slug },
+        props: location,
+    }));
+}
+
+type Props = CollectionEntry<"locations">;
+
+const location = Astro.props;
+
+import BenefitsSection from "../../components/BenefitsSection.astro";
+import LocationIcon from "../../components/svg/Location.astro"
+import CTASection1 from '../../components/CTASection1.astro'
+
+import { TEL, TEL_HREF, EMAIL } from '../../consts'
+
+---
+
+<BaseLayout title={location.data.documentTitle} description={location.data.metaDescription} keywords={location.data.keywords} endContactSection="false">
+    <main>
+        <BackBt label="Back to Locations" url="../locations/"/>
+        
+        <div class="flex_map_ctnr">
+            <div class="heading_ctnr squares_bg">
+                <div class="content reveal">
+    
+                    {location.data.completeAddress ? (
+                        <address>
+                            <LocationIcon/>
+                            <span set:html={location.data.completeAddress}></span>
+                        </address>
+                    ) : ""}
+    
+                    <h1 set:html={location.data.mainHeading}></h1>
+    
+                    <p set:html={location.data.introText}></p>
+                      
+                    <div class="contact_box_ctnr">
+                        <InfoBox />
+                    </div>
+                </div>
+            </div>
+    
+            <div class="map reveal">
+                <noscript>You need to enable JavaScript on your browser to see this content.</noscript>
+                
+                <div class="iframe_ctnr">
+                    <iframe src={location.data.mapEmbedSrc} width='100%' height='100%' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>
+                </div>
+
+                <div class="bottom_info">
+                    <ul class="area_covered" set:html={location.data.areaCoveredBulletList.map(function(item) {
+                        return '<li>' + item + '</li>';
+                      })}>
+                    <li class="intro">These are some of the areas where we can provide office cleaning services:</li>  
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <section class="content_panel text">
+            <div class="content" set:html={location.data.panel1Copy}></div>
+        </section>
+
+        <BenefitsSection type="locations"/>
+
+        <CTASection1/>
+
+        <div class="contact_ctnr">
+            <ContactSection/>
+        </div>
+    </main>
+</BaseLayout>
