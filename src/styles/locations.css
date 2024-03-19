@@ -251,7 +251,7 @@
     color:var(--light-d);
 }
 
-.content_panel.cta {
+.content_panel.invite {
     background-color: var(--primary-e);
     text-align: center;
     background-image: url(/images/blur01.jpg);
@@ -260,13 +260,13 @@
     background-position: center;
 }
 
-.content_panel.cta .content {
+.content_panel.invite .content {
     font-size: clamp(1rem, 5.1vw, 2.8rem);
     color: var(--light);
     font-weight: 450;
 }
 
-.content_panel.cta .content p a {
+.content_panel.invite .content p a {
     background-color: var(--primary-e);
     text-decoration: unset;
     padding: 0.2rem 1rem;
@@ -279,7 +279,7 @@
     -o-transition:background-color 0.4s ease;
 }
 
-.content_panel.cta .content p a:hover {
+.content_panel.invite .content p a:hover {
     background-color: var(--primary-d);
     transition:background-color 0s ease;
     -webkit-transition:background-color 0s ease;
@@ -289,7 +289,7 @@
 }
 
 
-.content_panel.cta a.cta {
+.content_panel.invite a.cta {
     width: fit-content;
     margin-inline: auto;
     padding: 1.5rem 3rem;
@@ -298,7 +298,7 @@
     margin-top: 2rem;
     border: unset;
     color: var(--primary-a);
-    text-shadow: unset;
+    text-shadow: none;
     font-weight: 600;
     line-height: 1;
 }
