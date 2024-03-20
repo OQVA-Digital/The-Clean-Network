@@ -384,6 +384,48 @@ declare module 'astro:content' {
 } & { render(): Render[".md"] };
 };
 "locations": {
+"city-of-london-and-shoreditch.md": {
+	id: "city-of-london-and-shoreditch.md";
+  slug: "city-of-london-and-shoreditch";
+  body: string;
+  collection: "locations";
+  data: InferEntrySchema<"locations">
+} & { render(): Render[".md"] };
+"kings-cross-islington.md": {
+	id: "kings-cross-islington.md";
+  slug: "kings-cross-islington";
+  body: string;
+  collection: "locations";
+  data: InferEntrySchema<"locations">
+} & { render(): Render[".md"] };
+"lambeth-vauxhall.md": {
+	id: "lambeth-vauxhall.md";
+  slug: "lambeth-vauxhall";
+  body: string;
+  collection: "locations";
+  data: InferEntrySchema<"locations">
+} & { render(): Render[".md"] };
+"soho-west-end.md": {
+	id: "soho-west-end.md";
+  slug: "soho-west-end";
+  body: string;
+  collection: "locations";
+  data: InferEntrySchema<"locations">
+} & { render(): Render[".md"] };
+"waterloo-southwark.md": {
+	id: "waterloo-southwark.md";
+  slug: "waterloo-southwark";
+  body: string;
+  collection: "locations";
+  data: InferEntrySchema<"locations">
+} & { render(): Render[".md"] };
+"westminster-victoria.md": {
+	id: "westminster-victoria.md";
+  slug: "westminster-victoria";
+  body: string;
+  collection: "locations";
+  data: InferEntrySchema<"locations">
+} & { render(): Render[".md"] };
 };
 "sectors": {
 "architects-firms.md": {

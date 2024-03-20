@@ -31,18 +31,18 @@ import { TEL, TEL_HREF, EMAIL } from '../../consts'
 
 <BaseLayout title={location.data.documentTitle} description={location.data.metaDescription} keywords={location.data.keywords} endContactSection="false">
     <main>
-        <BackBt label="Back to Locations" url="../locations/"/>
+        <BackBt label="Back to Locations" url="/locations"/>
         
         <div class="flex_map_ctnr">
             <div class="heading_ctnr squares_bg">
                 <div class="content reveal">
     
-                    {location.data.completeAddress ? (
+                    <!-- {location.data.completeAddress ? (
                         <address>
                             <LocationIcon/>
                             <span set:html={location.data.completeAddress}></span>
                         </address>
-                    ) : ""}
+                    ) : ""} -->
     
                     <h1 set:html={location.data.mainHeading}></h1>
     
